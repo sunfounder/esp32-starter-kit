@@ -1,4 +1,4 @@
-1.6 (Optional) MicroPython Basic Syntax
+6. (Optional) MicroPython Basic Syntax
 =======================================
 
 

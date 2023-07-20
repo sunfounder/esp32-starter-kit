@@ -26,7 +26,7 @@ The potentiometer is a resistive element with 3 terminals, the 2 side pins are c
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
-* :ref:`cpn_potentiometer`
+* :ref:`cpn_pot`
 
 
 Programming

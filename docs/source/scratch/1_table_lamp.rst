@@ -27,10 +27,11 @@ Follow the diagram below to build the circuit on the breadboard.
 
 Since the anode of the LED (the longer pin) is connected to pin26 through a 220Ω resistor, and the cathode of the LED is connected to GND, you can light up the LED by giving pin 9 a high level.
 
-.. image:: img/circuit/led_circuit.png
+.. image:: img/circuit/1_hello_led_bb.png
 
-* :ref:`cpn_uno`
+* :ref:`cpn_esp32_extension`
 * :ref:`cpn_breadboard`
+* :ref:`cpn_wires`
 * :ref:`cpn_led`
 * :ref:`cpn_resistor`
 

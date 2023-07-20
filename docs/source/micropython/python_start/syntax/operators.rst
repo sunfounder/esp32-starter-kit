@@ -68,7 +68,7 @@ You can use arithmetic operators to do some common mathematical operations.
 8
 2
 15
-1.666667
+6.66667
 2
 125
 1

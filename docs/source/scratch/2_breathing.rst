@@ -23,11 +23,12 @@ This project uses the same circuit as the previous project :ref:`sh_table_lamp`,
 
 The PWM signal range is 0-255, on the ESP32 board, 2, 5, 12~15, 18, 19, 21, 22, 25, 26 and 27 can output PWM signal.
 
-.. image:: img/circuit/led_circuit.png
+.. image:: img/circuit/1_hello_led_bb.png
 
-    
-* :ref:`cpn_uno`
+
+* :ref:`cpn_esp32_extension`
 * :ref:`cpn_breadboard`
+* :ref:`cpn_wires`
 * :ref:`cpn_led`
 * :ref:`cpn_resistor`
 

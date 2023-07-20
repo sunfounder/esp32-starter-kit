@@ -2,92 +2,27 @@
 
 For MicroPython User
 ======================
-In this section, you will learn the history of MicroPython, how to install MicroPython in Pico W, the basic syntax, and a dozen interesting and practical projects to help you learn MicroPython quickly.
 
-We recommend that you read the chapters in order.
-
-
-**1. Get Started**
-
-.. toctree::
-    :maxdepth: 2
-
-    python_start/introduction_micropython
-    python_start/install_thonny
-    python_start/install_micropython_to_pico
-    python_start/upload_libraries
-    python_start/quick_guide_thonny
+This chapter is a comprehensive guide tailored specifically for users who prefer working with MicroPython. 
+It covers various topics, including getting started with MicroPython, working with displays, generating sounds, 
+controlling actuators, utilizing sensors, and exploring fun projects. 
+This chapter provides MicroPython users with the necessary knowledge and resources to effectively use 
+this kit and unleash their creativity in building exciting projects.
 
 
-**2. Displays**
+Here is the complete code package for the ESP32 Ultimate Kit. You can click on the following link to download it:
+
+* :download:`SunFounder ESP32 Ultimate Kit <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`
+
+Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    py_led
-    py_fade
-    py_rgb
-    py_74hc595_led
-    py_74hc595_7seg
-    py_lcd
-    py_rgb_strip
+    python_start/get_start
+    basic_projects/basic_projects
+    iot_projects/iot_projects
+    car_projects/car_projects
 
-
-**3. Sounds**
-
-.. toctree::
-    :maxdepth: 2
-
-    py_ac_buz
-    py_pa_buz
-
-**4. Actuators**
-
-.. toctree::
-    :maxdepth: 2
-
-    py_motor
-    py_pump
-    py_servo
-
-**5. Sensors**
-
-.. toctree::
-    :maxdepth: 2
-
-    py_button
-    py_tilt
-    py_avoid
-    py_line_track
-    py_pir
-    py_transistor
-    py_photoresistor
-    py_pot
-    py_moisture
-    py_thermistor
-    py_joystick
-    py_ultrasonic
-    py_dht11
-    py_irremote
-
-**6. Funny Projects**
-
-.. toctree::
-    :maxdepth: 2
-
-    py_fruit_piano
-    py_flowing_light
-    py_light_theremin
-    py_reversing_aid
-    py_pot_light
-    py_electronic_dice
-    py_game_guess_number
-    py_plant_monitor
-
-**7. IoT Projects**
-
-
-
-**8. Car Projects**
 
 

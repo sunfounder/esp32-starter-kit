@@ -5,5 +5,6 @@ FAQ
     :maxdepth: 2
 
     blynk_mobile
-    burn_firmware
-    add_libraries_ar
+    format_sd_card
+
+

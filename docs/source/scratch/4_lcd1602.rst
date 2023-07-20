@@ -21,10 +21,11 @@ You Will Learn
 Build the Circuit
 ---------------------
 
-.. image:: img/circuit/lcd1602_circuit.png
+.. image:: img/circuit/2.6_i2clcd1602_bb.png
 
-* :ref:`cpn_uno`
-* :ref:`cpn_i2c_lcd1602`
+* :ref:`cpn_esp32_extension`
+* :ref:`cpn_wires`
+* :ref:`cpn_lcd`
 
 Programming
 ------------------

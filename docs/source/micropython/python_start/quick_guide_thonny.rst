@@ -1,4 +1,4 @@
-1.5 Quick Guide on Thonny
+5. Quick Guide on Thonny
 ==================================
 
 .. _open_run_code_py:
@@ -6,29 +6,33 @@
 Open and Run Code Directly
 ---------------------------------------------
 
-The code section in the projects tells you exactly which code is used, so double-click on the ``.py`` file with the serial number in the ``esp32-ultimate-kit\micropython\codes/`` path to open it. 
+The code section in the projects tells you exactly which code is used, so double-click on the ``.py`` file with the serial number in the ``esp32-ultimate-kit-main\micropython\codes\`` path to open it. 
 
-However, you must first download the package and upload the library, as described in :ref:`add_libraries_py`.
+However, you must first download the package and upload the libraries, as described in :ref:`add_libraries_py`.
 
 #. Open code.
 
-    For example, ``2.1_hello_led.py``.
+    For example, ``1.1_hello_led.py``.
 
     If you double click on it, a new window will open on the right. You can open more than one code at the same time.
 
-    |mps_open_code|
+    .. image:: img/quick_guide1.png
+
+#. Plug the esp32 into your computer with a micro USB cable.
+
+    .. image:: img/plugin_esp32.png
 
 #. Select correct interpreter
 
-    Use a micro USB cable to connect the Pico W to your computer and select the "MicroPython (ESP32).COMxx" interpreter.
+    Select the "MicroPython (ESP32).COMxx" interpreter.
 
-    |mps_sec_inter|
+    .. image:: img/sec_inter.png
 
 #. Run the code
 
     To run the script, click the **Run current script** button or press F5.
 
-    |mps_run_it|
+    .. image:: img/quick_guide2.png
 
     If the code contains any information that needs to be printed, it will appear in the Shell; otherwise, only the following information will appear.
 
@@ -36,9 +40,10 @@ However, you must first download the package and upload the library, as describe
 
         .. code-block::
 
-            MicroPython vx.xx on xxxx-xx-xx; Raspberry Pi Pico W  With RP2040
+            MicroPython v1.19.1 on 2022-06-18; ESP32 module with ESP32
 
             Type "help()" for more information.
+
             >>> %Run -c $EDITOR_CONTENT
 
     * The first line shows the version of MicroPython, the date, and your device information.
@@ -49,7 +54,7 @@ However, you must first download the package and upload the library, as describe
 
 #. Stop running
 
-    |mps_stop_it|
+    .. image:: img/quick_guide3.png
 
     To stop the running code, click the **Stop/Restart backend** button. The **%RUN -c $EDITOR_CONTENT** command will disappear after stopping.
 
@@ -57,17 +62,17 @@ However, you must first download the package and upload the library, as describe
 
     You can save changes made to the open example by pressing **Ctrl+S** or clicking the **Save** button on Thonny.
 
-    The code can be saved as a separate file within the Raspberry Pi Pico W by clicking on **File** -> **Save As**.
+    The code can be saved as a separate file within the **MicroPython drive(ESP32)** by clicking on **File** -> **Save As**.
 
-    |mps_save_as|
+    .. image:: img/quick_guide4.png
 
-    Select **Raspberry Pi Pico**.
+    Select **MicroPython drive**.
 
-    |mps_sec_pico|
+    .. image:: img/quick_guide5.png
+        
+    Then click **OK** after entering the file name and extension **.py**. On the MicroPython drive, you will see your saved file.
 
-    Then click **OK** after entering the file name and extension **.py**. On the Raspberry Pi Pico W drive, you will see your saved file.
-
-    |mps_sec_name|
+    .. image:: img/quick_guide6.png
 
     .. note::
         Regardless of what name you give your code, it's best to describe what type of code it is, and not give it a meaningless name like ``abc.py``.
@@ -84,49 +89,41 @@ The code is shown directly in the code section. You can copy it to Thonny and ru
 
     Open Thonny IDE, click **New** button to create a new blank file.
 
-    |mps_new_file|
+    .. image:: img/quick_guide7.png
 
 #. Copy code
 
     Copy the code from the project to the Thonny IDE.
 
-    |mps_copy_file|
+    .. image:: img/quick_guide8.png
+
+#. Plug the esp32 into your computer with a micro USB cable.
+
+    .. image:: img/plugin_esp32.png
 
 #. Select correct interpreter
 
-    Plug the Pico W into your computer with a micro USB cable and select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner.
+    Select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner.
 
-    |mps_sec_inter|
+    .. image:: img/sec_inter.png
 
-#. Run and save the code
+#. Run the code
 
-    You need click **Run Current Script** or simply press F5 to run it. If your code has not been saved, a window will pop up asking to save to **This computer** or **Raspberry Pi Pico**.
+    You need click **Run Current Script** or simply press ``F5`` to run it.
 
-    |mps_where_save|
+    .. image:: img/quick_guide9.png
 
-    .. note::
-        Thonny saves your program on the Raspberry Pi Pico W hen you tell him to, so if you unplug the Pico W and plug it into someone else's computer, your program remains intact.
+    If the code contains any information that needs to be printed, it will appear in the Shell; otherwise, only the following information will appear.
 
-    Click OK after selecting the location, naming the file and adding the extension **.py**.
+    Click **View** -> **Edit** to open the Shell window if it doesn't appear on your Thonny.
 
-    |mps_sec_name|
+        .. code-block::
 
-    .. note::
-        Regardless of what name you give your code, it's best to describe what type of code it is, and not give it a meaningless name like ``abc.py``.
-        When you save the code as ``main.py``, it will run automatically when the power is turned on.
+            MicroPython v1.19.1 on 2022-06-18; ESP32 module with ESP32
 
-    Once your program is saved, it will run automatically and you will see the following information in the Shell area.
+            Type "help()" for more information.
 
-    Click **View** -> **Edit** to open the Shell window if it does not appear on your Thonny.
-
-
-    .. code-block::
-
-        MicroPython vx.xx.x on xxxx-xx-xx; Raspberry Pi Pico W With RP2040
-
-        Type "help()" for more information.
-        >>> %Run -c $EDITOR_CONTENT
-
+            >>> %Run -c $EDITOR_CONTENT
 
     * The first line shows the version of MicroPython, the date, and your device information.
     * The second line prompts you to enter "help()" to get some help.
@@ -136,14 +133,28 @@ The code is shown directly in the code section. You can copy it to Thonny and ru
 
 #. Stop running
 
-    |mps_stop_it|
+    .. image:: img/quick_guide3.png
 
     To stop the running code, click the **Stop/Restart backend** button. The **%RUN -c $EDITOR_CONTENT** command will disappear after stopping.
+
+#. Save or save as
+
+    You can save the code by pressing **Ctrl+S** or clicking the **Save** button on Thonny. In the pop-up window, select the location where you want to save the file.
+
+    .. image:: img/quick_guide5.png
+        
+    Then click **OK** or **Save** after entering the file name and extension **.py**.
+
+    .. image:: img/quick_guide6.png
+
+    .. note::
+        Regardless of what name you give your code, it's best to describe what type of code it is, and not give it a meaningless name like ``abc.py``.
+        When you save the code as ``main.py``, it will run automatically when the power is turned on.
 
 #. Open file
 
     Here are two ways to open a saved code file.
 
-    * The first method is to click the open icon on the Thonny toolbar, just like when you save a program, you will be asked if you want to open it from **this computer** or **Raspberry Pi Pico**, for example, click **Raspberry Pi Pico** and you will see a list of all the programs you have saved on the Pico W.
-    * The second is to open the file preview directly by clicking **View**->**File**-> and then double-clicking on the corresponding ``.py`` file to open it.
+    * The first method is to click the open icon on the Thonny toolbar, just like when you save a program, you will be asked if you want to open it from **this computer** or **MicroPython device**, for example, click **MicroPython device** and you will see a list of all the programs you have saved on the ESP32.
+    * The second is to open the file preview directly by clicking **View** -> **Files** -> and then double-clicking on the corresponding ``.py`` file to open it.
 

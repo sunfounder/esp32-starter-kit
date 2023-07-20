@@ -1,0 +1,86 @@
+.. _ar_shiftout:
+
+1.4 Microchip - 74HC595
+===========================
+
+Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
+
+Imagine triggering this project and witnessing a mesmerizing flow of light, as if a sparkling rainbow is jumping between the 8 LEDs. Each LED will light up one by one and quickly fade away, while the next LED continues to shine, creating a gorgeous and dynamic effect.
+
+By cleverly utilizing the 74HC595 chip, we can control the on and off states of multiple LEDs to achieve the flowing effect. This chip has multiple output pins that can be connected in series to control the sequence of LED illumination. Moreover, thanks to the chip's expandability, we can easily add more LEDs to the flowing display, creating even more spectacular effects.
+
+**Available Pins**
+
+Here is a list of available pins on the ESP32 board for this project.
+
+.. list-table::
+    :widths: 5 20 
+
+    * - Available Pins
+      - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
+
+
+**Schematic**
+
+.. image:: ../../img/circuit/circuit_2.4_74hc595_led.png
+    :width: 600
+
+* When MR (pin10) is high level and CE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. 
+* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. 
+* There is a serial shift input pin (DS), a serial output pin (Q7') and an asynchronous reset button (low level) in the memory register. 
+* The memory register outputs a Bus with a parallel 8-bit and in three states. 
+* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+
+**Wiring**
+
+.. image:: ../../img/wiring/2.4_74hc595_bb.png
+    :width: 800
+
+* :ref:`cpn_esp32_extension`
+* :ref:`cpn_breadboard`
+* :ref:`cpn_wires`
+* :ref:`cpn_resistor`
+* :ref:`cpn_led`
+* :ref:`cpn_74hc595`
+
+**Code**
+
+.. note::
+
+    * Open the ``1.4_74hc595.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\1.4_74hc595``.
+    * Or copy this code into **Arduino IDE**.
+    
+.. raw:: html
+
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/024e20bb-f9c6-4baf-bb27-cdf49eb91e9e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+When you finish uploading the codes to the ESP32 board, you can see the LEDs turning on one after another.
+
+**How it works?**
+
+#. Declare an array, store several 8 bit binary numbers that are used to change the working state of the eight LEDs controlled by 74HC595. 
+
+    .. code-block:: arduino
+
+        int datArray[] = {B00000000, B00000001, B00000011, B00000111, B00001111, B00011111, B00111111, B01111111, B11111111};
+
+#. ``loop()`` function.
+
+    .. code-block:: arduino
+
+        void loop()
+            {
+                for(int num = 0; num <10; num++)
+                {
+                    digitalWrite(STcp,LOW); //Set ST_CP and hold low for as long as you are transmitting
+                    shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
+                    digitalWrite(STcp,HIGH); //pull the ST_CPST_CP to save the data
+                    delay(1000);
+                }
+            }
+
+
+    * Iterates through the ``datArray[]``, sequentially sending the binary values to the shift register.
+    * The ``digitalWrite(STcp, LOW)`` and ``digitalWrite(STcp, HIGH)`` commands latch the data into the storage register.
+    * ``shiftOut()`` function sends the binary values from ``datArray[]`` to the shift register using the data pin (DS) and shift register clock pin (SHcp). ``MSBFIRST`` means to move from high bits.
+    * Then create a 1-second pause between each LED pattern update.

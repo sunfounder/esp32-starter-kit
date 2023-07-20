@@ -1,4 +1,4 @@
-.. _cpn_potentiometer:
+.. _cpn_pot:
 
 Potentiometer
 ===============

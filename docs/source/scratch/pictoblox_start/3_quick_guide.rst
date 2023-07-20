@@ -7,9 +7,8 @@ Now let's learn how to use PictoBlox in two modes.
 
 Also build a simple circuit to make this LED blink in 2 different modes.
 
-.. image:: img/1_led.jpg
-    :width: 500
-    :align: center
+.. image:: ./img/1_hello_led_bb.png
+
 
 .. _stage_mode:
 
@@ -46,7 +45,7 @@ At the same time, ESP32 related palettes, such as ESP32, Actuators, etc., will a
 
 **2. Upload Firmware**
 
-Since we’re going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
+Since we're going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
 
 After waiting for a while, the upload success message will appear.
 
@@ -72,7 +71,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-ultimate-kit\scratch``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
+Then go to the path of ``esp32-ultimate-kit-main\scratch``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
 
 .. image:: img/0_stage.png
 
@@ -144,7 +143,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-ultimate-kit\scratch``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
+Then go to the path of ``esp32-ultimate-kit-main\scratch``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
 
 .. image:: img/0_upload.png
 

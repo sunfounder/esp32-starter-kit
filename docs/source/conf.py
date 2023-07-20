@@ -94,6 +94,9 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 rst_epilog = """
 
+.. |link_thonny| raw:: html
+
+    <a href="https://thonny.org/" target="_blank">Thonny</a>
 
 .. |link_download_arduino| raw:: html
 
@@ -127,6 +130,29 @@ rst_epilog = """
 
     <a href="https://www.uuidgenerator.net/version4" target="_blank">Online UUID Generator</a>
 
+.. |link_hivemq| raw:: html
+
+    <a href="https://www.hivemq.com/demos/websocket-client/" target="_blank">HiveMQ Web Client</a>
+
+.. |link_openweather| raw:: html
+
+    <a href="https://openweathermap.org/" target="_blank">OpenWeather</a>
+
+.. |link_discord_server| raw:: html
+
+    <a href="https://discord.com/invite/G7Q5UjDT7K" target="_blank">Discord Server</a>
+
+.. |link_cheerlights| raw:: html
+
+    <a href="https://cheerlights.com/" target="_blank">@CheerLights</a>
+
+.. |link_adafruit_io| raw:: html
+
+    <a href="https://io.adafruit.com/" target="_blank">Adafruit IO</a>
+
+.. |link_botfather| raw:: html
+
+    <a href="https://t.me/botfather" target="_blank">BotFather</a>
 
 
 """
@@ -135,14 +161,7 @@ rst_epilog = """
 
 rst_epilog += """
 
-.. |link_kepler_kit| raw:: html
 
-    <a href="https://www.sunfounder.com/collections/raspberry-pi-kit-for-beginner-1/products/sunfounder-raspberry-pi-pico-w-ultimate-starter-kit" target="_blank">Kepler Kit</a>
-
-.. |link_picow_buy| raw:: html
-
-    <a href="https://www.sunfounder.com/products/raspberry-pi-pico-w" target="_blank">BUY</a>
-    
 .. |link_led_buy| raw:: html
 
     <a href="https://www.sunfounder.com/products/500pcs-5-colors-x-100pcs-5mm-leds-with-white-red-yellow-green-blue-colors-kit-box" target="_blank">BUY</a>

@@ -14,8 +14,7 @@ Below is the introduction to each component, which contains the operating princi
 .. toctree::
     :maxdepth: 1
 
-    component_uno
-    component_esp8266
+    component_esp32_extension
 
 
 
@@ -29,6 +28,7 @@ Below is the introduction to each component, which contains the operating princi
     component_resistor
     component_capacitor
     component_wires
+    component_transistor
 
 **Chip**
 
@@ -48,6 +48,7 @@ Below is the introduction to each component, which contains the operating princi
     component_rgb_led
     component_7_segment
     component_i2c_lcd
+    component_ws2812
 
 
 **Sound**
@@ -65,7 +66,7 @@ Below is the introduction to each component, which contains the operating princi
     component_tt_motor
     component_servo
     component_pump
-    component_l298n_module
+    component_l9110_module
 
 
 **Controller**
@@ -74,6 +75,7 @@ Below is the introduction to each component, which contains the operating princi
     :maxdepth: 1
 
     component_button
+    component_tilt_switch
     component_reed
     component_potentiometer
     component_joystick_module
@@ -89,7 +91,8 @@ Below is the introduction to each component, which contains the operating princi
     component_photoresistor
     component_thermistor
     component_dht11
-    component_track_module
+    component_pir_module
+    component_line_track_module
     component_moisture_module
     component_avoidance_module
     component_ultrasonic_module

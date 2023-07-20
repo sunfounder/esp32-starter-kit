@@ -27,10 +27,6 @@ Now let's start the journey of discovery!
     pictoblox_start/2_introduce
     pictoblox_start/3_quick_guide
 
-    
-
-    4_lcd1602
-
 **2. Projects**
 
 The following projects are written in order of programming difficulty, it is recommended to read these books in order.
@@ -50,6 +46,7 @@ But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
     1_table_lamp
     2_breathing
     3_colorful_ball
+    4_lcd1602
     5_moving_mouse
     6_doorbell
     7_temperature

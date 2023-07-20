@@ -25,10 +25,11 @@ An RGB LED packages three LEDs of red, green, and blue into a transparent or sem
 .. image:: img/4_rgb.png
     :width: 300
 
-.. image:: img/circuit/rgb_circuit.png
+.. image:: img/circuit/3_color_ball_bb.png
 
-* :ref:`cpn_uno`
+* :ref:`cpn_esp32_extension`
 * :ref:`cpn_breadboard`
+* :ref:`cpn_wires`
 * :ref:`cpn_rgb`
 * :ref:`cpn_resistor`
 
