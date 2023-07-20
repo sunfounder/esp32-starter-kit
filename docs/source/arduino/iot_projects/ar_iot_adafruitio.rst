@@ -63,7 +63,7 @@ We will write an Arduino program that uses the DHT11 sensor to send temperature 
 
 #. Build the circuit. 
 
-    DHT11 接GPIO13 and the LED 接 GPIO15.
+    .. image:: ../../img/wiring/iot_6_adafruit_io_bb.png
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 

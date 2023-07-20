@@ -188,6 +188,9 @@ Bluetooth module TX connects to Arduino RX
 Bluetooth module RX connects to Arduino TX
 Here’s how your circuit should look:
 
+#. Build the circuit. 
+
+    .. image:: ../../img/wiring/iot_10_bluetooth_led_bb.png
 
 
 Launching the App

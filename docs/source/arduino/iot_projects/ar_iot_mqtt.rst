@@ -13,8 +13,8 @@ In this project, we explore the implementation of MQTT by building a circuit tha
     .. note:: 
         When establishing a connection to WiFi, only the 36, 39, 34, 35, 32, 33 pins can be employed for analog reading. Please ensure the thermistor is connected to these designated pins.
 
-    LED接4，按键接14（一端接14，14同端接10K电阻接GND，另外一端接3.3V），热敏电阻接36，
-    
+    .. image:: ../../img/wiring/iot_4_matt_bb.png
+
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 
     .. image:: img/plugin_esp32.png

@@ -18,7 +18,7 @@ By building this project, you will gain hands-on experience in web development, 
 
 #. Build the circuit.
 
-    .. image:: img/3_custom_server.png
+    .. image:: ../../img/wiring/iot_3_html_led_bb.png
     
     * :ref:`cpn_esp32_extension`
     * :ref:`cpn_breadboard`

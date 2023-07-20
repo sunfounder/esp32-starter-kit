@@ -1,30 +1,17 @@
-SunFounder 3 in 1 IoT/Smart Car/Learning Kit
+SunFounder ESP32 Ultimate Kit
 ==================================================
 
-.. image:: img/3in_kit.png
-    :width: 800
-
-模拟引脚：以下不能用
-2,4,13,15 上拉 47K
-26,27,33上拉4.7K
-32下拉10K
-以下能用：
-36，39，34，35，25，14，12
+.. image:: img/esp32_ultimate_kit.png
 
 
-When you bought a learning kit online, did it come with a simple PDF or booklet with only the steps to build the project?
+Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
 
-Or maybe you want to build your own smart car, but the ones you find online are pricey and complicated？
+Whether you're keen on basic electronics, IoT integrations, or even car projects, this kit has it all. For MicroPython enthusiasts, we provide a structured introduction to MicroPython, complete with IDE setups and basic syntax lessons. Arduino users are not left behind, with a dedicated section on getting started with Arduino, and a suite of basic projects to jumpstart the learning process.
 
-Or have you seen useful and interesting IoT projects made by others, but have no idea where to start?
+For the creatives, there's a delightful section on integrating with Scratch, allowing for a blend of programming and storytelling. Each project in the kit is meticulously outlined, ensuring you understand the objectives, the circuit assembly, and the programming aspects.
 
-All these problems can be solved with our 3 in 1 ultimate kit.
+With a myriad of game projects, practical applications, and troubleshooting FAQs, this kit promises an enriching learning experience for all. Dive in and let the ESP32 adventure begin!
 
-In the 3-in-1 ultimate kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
-
-In addition, the kit also provides 30+ Scratch programming projects for younger students and enthusiasts, so beginners don't need any programming experience to write and make their own creations!
-
-Come on! Start programing Arduino with confidence from zero to hero!
 
 If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
 
@@ -51,7 +38,7 @@ The steps are as follows.
     :align: center
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
     components/component_list
     micropython/for_micropython_user

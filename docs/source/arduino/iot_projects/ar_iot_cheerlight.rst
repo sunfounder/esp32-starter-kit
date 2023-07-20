@@ -13,11 +13,7 @@ In this case, we also utilize MQTT, but instead of publishing our own messages, 
 
 #. Build the circuit.
 
-    rgb灯条连接在IO13.
-
-    .. note:: 
-        When establishing a connection to WiFi, only the 36, 39, 34, 35, 32, 33 pins can be employed for analog reading. Please ensure the thermistor is connected to these designated pins.
-
+    .. image:: ../../img/wiring/iot_5_cheerlight_bb.png
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 

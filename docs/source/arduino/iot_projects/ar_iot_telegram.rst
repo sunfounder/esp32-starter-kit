@@ -46,7 +46,8 @@ As anyone can interact with the bot you've created, there's a risk of informatio
 
 #. Build the circuit.
 
-
+    .. image:: ../../img/wiring/iot_7_cam_telegram_bb.png
+        
 #. Open the code.
 
     * Open the ``iot_7_cam_telegram.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_7_cam_telegram`` directory, or copy the code into the Arduino IDE.
