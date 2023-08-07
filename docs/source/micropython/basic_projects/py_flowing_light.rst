@@ -1,4 +1,6 @@
-5.2 Flowing Light
+.. _py_flowing_light:
+
+6.2 Flowing Light
 =================================
 
 Have you ever wanted to add some fun and interactive element to your living space? 
@@ -21,7 +23,8 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     :width: 800
     
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_avoid`
 * :ref:`cpn_wires`
 * :ref:`cpn_ws2812`
@@ -30,7 +33,7 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 
 .. note::
 
-    * Open the ``5.2_flowing_led.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.2_flowing_led.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
     

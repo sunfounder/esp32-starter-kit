@@ -1,4 +1,4 @@
-2. Camera Web Server
+8.2 Camera Web Server
 =============================
 
 This project combines the ESP32 board with a camera module to stream high-quality video over a local network. 
@@ -17,20 +17,22 @@ Enhance your surveillance or live streaming capabilities with the versatile ESP3
     .. raw:: html
 
         <video loop autoplay muted style = "max-width:100%">
-            <source src="_static/video/plugin_camera.mp4" type="video/mp4">
+            <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Open the code.
 
     * Open the ``iot_2_camera_server.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_2_camera_server`` directory, or copy the code into the Arduino IDE.
-    * Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
     .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
 
 #. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.

@@ -1,6 +1,6 @@
 .. _ar_fruit_piano:
 
-5.1 Fruit Piano
+6.1 Fruit Piano
 ====================
 
 Have you ever wanted to play the piano but couldn't afford one? Or maybe you just want to have some fun with diy a fruit piano? Well, this project is for you! 
@@ -61,7 +61,8 @@ The result is a simple and affordable way to enjoy the experience of playing the
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
 * :ref:`cpn_buzzer`
@@ -72,7 +73,7 @@ The result is a simple and affordable way to enjoy the experience of playing the
 
 .. note::
 
-    * You can open the file ``5.1_fruit_piano.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.1_fruit_piano`` directly.
+    * You can open the file ``6.1_fruit_piano.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.1_fruit_piano`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

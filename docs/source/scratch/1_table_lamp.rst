@@ -29,7 +29,8 @@ Since the anode of the LED (the longer pin) is connected to pin26 through a 220Î
 
 .. image:: img/circuit/1_hello_led_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_led`

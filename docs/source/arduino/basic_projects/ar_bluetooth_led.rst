@@ -1,4 +1,4 @@
-6.2 Bluetooth Control RGB LED
+7.2 Bluetooth Control RGB LED
 =================================
 
 This project is an extension of a previous project(:ref:`ar_bluetooth`), adding RGB LED configurations and custom commands such as "led_off", "red", "green", etc. These commands allow the RGB LED to be controlled by sending commands from a mobile device using LightBlue.
@@ -16,13 +16,14 @@ This project is an extension of a previous project(:ref:`ar_bluetooth`), adding 
 
     .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-    * :ref:`cpn_esp32_extension`
+    * :ref:`cpn_esp32_wroom_32e`
+    * :ref:`cpn_esp32_camera_extension`
     * :ref:`cpn_breadboard`
     * :ref:`cpn_wires`
     * :ref:`cpn_resistor`
     * :ref:`cpn_rgb`
 
-#. Open the ``6.2_bluetooth_rgb_led.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\6.2_bluetooth_rgb_led`` directory, or copy the code into the Arduino IDE.
+#. Open the ``7.2_bluetooth_rgb_led.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\7.2_bluetooth_rgb_led`` directory, or copy the code into the Arduino IDE.
 
     .. raw:: html
          

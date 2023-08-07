@@ -46,47 +46,46 @@ But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
     1_table_lamp
     2_breathing
     3_colorful_ball
-    4_lcd1602
-    5_moving_mouse
-    6_doorbell
-    7_temperature
-    8_alarm_clock
-    9_dht11
-    11_rotating_fan
-    12_light_ball
-    13_shooting
-    14_balloon
-    15_star_crossed
-    16_apple
-    17_parrot
-    18_brick
-    19_fish
-    20_tap_tile
-    21_protect_heart
-    22_dragon
+    4_moving_mouse
+    5_doorbell
+    6_temperature
+    7_alarm_clock
+    8_dht11
+    9_rotating_fan
+    10_light_ball
+    11_shooting
+    12_balloon
+    13_star_crossed
+    14_apple
+    15_parrot
+    16_brick
+    17_fish
+    18_tap_tile
+    19_protect_heart
+    20_dragon
 
-.. _sh_car:
+.. .. _sh_car:
 
-**3. Play Car with Scratch**
+.. **3. Play Car with Scratch**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+.. The following projects are written in order of programming difficulty, it is recommended to read these books in order.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+.. In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
+.. Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
 
-Once the download is complete, unzip it. Refer to :ref:`upload_mode` to run individual scripts directly.
+.. Once the download is complete, unzip it. Refer to :ref:`upload_mode` to run individual scripts directly.
 
 
-.. toctree::
-    :maxdepth: 1
+.. .. toctree::
+..     :maxdepth: 1
 
-    car/1_test
-    car/2_movement
-    car/3_line_track
-    car/4_follow_your_hand
-    car/5_obstacle_avoidance
-    car/6_follow2
-    car/7_avoid2
+..     car/1_test
+..     car/2_movement
+..     car/3_line_track
+..     car/4_follow_your_hand
+..     car/5_obstacle_avoidance
+..     car/6_follow2
+..     car/7_avoid2
 
 

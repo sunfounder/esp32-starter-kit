@@ -1,6 +1,6 @@
-.. _ar_temp:
+.. _ar_thermistor:
 
-4.10 Thermometer
+5.10 Thermometer
 ===========================
 
 A thermistor is a temperature sensor that exhibits a strong dependence on temperature, and it can be classified into two types: Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC). The resistance of an NTC thermistor decreases with increasing temperature, while the resistance of a PTC thermistor increases with increasing temperature.
@@ -48,7 +48,8 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
     * The thermistor is black and marked 103.
     * The color ring of the 10K ohm resistor is red, black, black, red and brown.
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -59,8 +60,8 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
 
 .. note::
 
-    * You can open the file ``4.10_thermistor.ino`` under the path of ``euler-kit/arduino/4.10_thermistor``. 
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``5.10_thermistor.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.10_thermistor``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
 .. raw:: html
 
@@ -83,9 +84,9 @@ Here is the relation between the resistance and temperature:
 
     * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
     * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``273.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``273.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``3950``. 
+    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``373.15 + degree Celsius``. 
+    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``373.15+25``.
+    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``4950``. 
     * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
 
     Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
@@ -99,8 +100,8 @@ You can also display the calculated Celsius and Fahrenheit temperatures on the I
 
 .. note::
 
-    * You can open the file ``4.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
-    * Or copy this code into **Arduino IDE**.
+    * You can open the file ``5.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 
 .. raw:: html

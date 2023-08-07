@@ -1,6 +1,6 @@
 .. _py_photoresistor:
 
-4.7 Feel the Light
+5.7 Feel the Light
 =============================
 
 The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
@@ -40,7 +40,8 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -51,7 +52,7 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
 .. note::
 
-    * Open the ``4.7_feel_the_light.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.7_feel_the_light.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

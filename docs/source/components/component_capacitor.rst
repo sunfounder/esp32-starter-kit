@@ -26,9 +26,4 @@ There are 103 or 104 label on the ceramic capacitors, which represent the capaci
 
     1F=10^3mF=10^6uF=10^9nF=10^12pF
 
-**Example**
-
-* :ref:`sh_doorbell` (Scratch Project)
-* :ref:`sh_eat_apple` (Scratch Project)
-* :ref:`sh_fishing` (Scratch Project)
 

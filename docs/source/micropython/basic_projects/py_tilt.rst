@@ -1,6 +1,6 @@
 .. _py_tilt:
 
-4.2 Tilt It！
+5.2 Tilt It！
 ==========================
 The tilt switch is a simple yet effective 2-pin device that contains a metal ball in its center. When the switch is in an upright position, the two pins are electrically connected, allowing current to flow through. However, when the switch is tilted or tilted at a certain angle, the metal ball moves and breaks the electrical connection between the pins.
 
@@ -70,7 +70,8 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
 
 .. image:: ../../img/wiring/5.2_tilt_switch_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -81,7 +82,7 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
 
 .. note::
 
-    * Open the ``4.2_tilt_switch.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.2_tilt_switch.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

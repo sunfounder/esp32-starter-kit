@@ -3,26 +3,32 @@
 L9110 Motor Drive Module
 =============================
 
-The L9110 motor driver module is capable of simultaneously driving two motors. It contains two independent L9110S driver chips, with each channel having a continuous current output capability of 800mA.
+The L9110 motor driver module is adept at driving two motors in tandem. It houses a pair of independent L9110S driver chips, 
+each channel boasting a steady current output of up to 800mA.
 
-This module has a wide voltage range from 2.5V to 12V, allowing it to be compatible with both 3.3V and 5V microcontrollers.
+Spanning a voltage range from 2.5V to 12V, the module comfortably pairs with both 3.3V and 5V microcontrollers.
 
-The L9110 motor driver module provides a convenient and efficient solution for controlling motors in various applications. Its dual-channel design allows independent control of two motors, making it suitable for projects requiring the control of multiple motors simultaneously.
+Serving as a streamlined solution, the L9110 motor driver module facilitates motor control across a spectrum of applications. 
+Thanks to its dual-channel architecture, it enables the independent orchestration of two motors—ideal for projects where dual motor 
+operations are paramount.
 
-With its high continuous current output capability, the L9110 motor driver module can effectively drive small to medium-sized motors, enabling the implementation of various robotic, automation, and motor control projects. Its wide voltage range adds versatility, ensuring compatibility with different power supply configurations.
+Given its potent continuous current output, this module confidently powers motors from the petite to the moderately sized, 
+paving the way for diverse robotic, automation, and motor-centric endeavors. Its expansive voltage range further injects adaptability, aligning with varied power supply setups.
 
-The module is designed to be easy to use, with accessible input and output terminals for connecting to microcontrollers or other control devices. It also incorporates protective features such as overcurrent and overtemperature protection, enhancing the safety and reliability of motor operations.
+Designed with user-friendliness in mind, the module offers intuitive input and output terminals, simplifying connections to microcontrollers 
+or akin control devices. Plus, it doesn't skimp on safety—integrated overcurrent and overtemperature safeguards bolster the trustworthiness 
+and security of motor operations.
 
-.. image:: img/xx.jpg
-    :width: 400
+.. image:: img/l9110s.jpg
+    :width: 600
     :align: center
 
-* B-1A & B-1B: Input pins for controlling the spinning direction of Motor B.
-* A-1A & A-1B: Input pins for controlling the spinning direction of Motor A.
-* B-OUT1 & B-OUT2: Output pins for Motor B.
-* A-OUT1 & A-OUT2: Output pins for Motor A.
-* VCC: Power input pin (2.5V-12V).
-* GND: Ground pin.
+* **B-1A & B-1B**: Input pins for controlling the spinning direction of Motor B.
+* **A-1A & A-1B**: Input pins for controlling the spinning direction of Motor A.
+* **0A & OB(A)**: Output pins of Motor A.
+* **0A & OB(B)**: Output pins of Motor B.
+* **VCC**: Power input pin (2.5V-12V).
+* **GND**: Ground pin.
 
 **Features**
 
@@ -89,13 +95,11 @@ This truth table shows the different states of Motor A based on the values of in
       - 1
       - Stop
 
-
 **Example**
 
-* :ref:`ar_motor` (Learning Project)
-* :ref:`car_move` (Car Project)
-* :ref:`car_speed` (Car Project)
-* :ref:`iot_car` (IoT Project)
-* :ref:`sh_test` (Scratch Project)
-
+* :ref:`ar_motor` (Arduino Project)
+* :ref:`ar_pump` (Arduino Project)
+* :ref:`py_motor` (MicroPython Project)
+* :ref:`py_pump` (MicroPython Project)
+* :ref:`sh_rotating_fan` (Scratch Project)
 

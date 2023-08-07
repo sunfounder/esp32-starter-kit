@@ -40,7 +40,8 @@ If you want to know more about potentiometer, refer to: `Potentiometer - Wikiped
 
 **Example**
 
-* :ref:`ar_potentiometer` (Learning Project)
+* :ref:`ar_potentiometer` (Arduino Project)
+* :ref:`py_potentiometer` (MicroPython Project)
 * :ref:`sh_moving_mouse` (Scratch Project)
 * :ref:`sh_breakout_clone` (Scratch Project)
 

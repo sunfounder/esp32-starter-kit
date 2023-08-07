@@ -1,6 +1,6 @@
 .. _ar_rgb_strip:
 
- 1.7 RGB LED Strip
+2.7 RGB LED Strip
 ======================
 
 In this project, we will delve into the mesmerizing world of driving WS2812 LED strips and bring a vibrant display of colors to life. With the ability to individually control each LED on the strip, we can create captivating lighting effects that will dazzle the senses.
@@ -38,7 +38,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/2.7_rgb_strip_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_ws2812`
@@ -48,8 +49,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * You can open the file ``1.7_rgb_strip.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\1.7_rgb_strip``. Or copy this code into **Arduino IDE**.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * You can open the file ``2.7_rgb_strip.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\2.7_rgb_strip``. Or copy this code into **Arduino IDE**.
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``Adafruit NeoPixel`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/rgb_strip_lib.png

@@ -1,6 +1,6 @@
 .. _ar_servo:
 
-3.3 Swinging Servo
+4.3 Swinging Servo
 ======================
 A Servo is a type of position-based device known for its ability to maintain specific angles and deliver precise rotation. This makes it highly desirable for control systems that demand consistent angle adjustments. It's not surprising that Servos have found extensive use in high-end remote-controlled toys, from airplane models to submarine replicas and sophisticated remote-controlled robots.
 
@@ -33,7 +33,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/4.3_swinging_servo_bb.png
 
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_servo`
 
@@ -41,8 +42,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``3.3_servo.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\3.3_servo``. Or copy this code into **Arduino IDE**.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Open the ``4.3_servo.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.3_servo``. Or copy this code into **Arduino IDE**.
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``ESP32Servo`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/servo_lib.png

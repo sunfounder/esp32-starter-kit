@@ -1,4 +1,7 @@
-5.6 Plant Monitor
+
+.. _ar_plant_monitor:
+
+6.6 Plant Monitor
 ===============================
 
 Welcome to the Plant Monitor project! 
@@ -17,13 +20,17 @@ using a button to water the plant when needed.
 
 IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
 
+.. note::
+
+  * **IO12** needs to be connected to the L9110 module after ESP32 starts up normally because the input pins of the L9110 module have a 10K pull-down resistor, which can prevent ESP32 from booting correctly.
 
 **Wiring**
 
 .. image:: ../../img/wiring/6.8_plant_monitor_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_dht11`
@@ -40,9 +47,9 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 .. note::
 
-    * You can open the file ``5.6_plant_monitor.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.6_plant_monitor``. 
-    * Or copy this code into **Arduino IDE**.
-    * The ``LiquidCrystal_I2C`` and  ``dht`` libraries are used here, refer to :ref:`install_libraries_ar` for a tutorial to install.
+    * You can open the file ``6.6_plant_monitor.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.6_plant_monitor``. 
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
 
 
 .. raw:: html

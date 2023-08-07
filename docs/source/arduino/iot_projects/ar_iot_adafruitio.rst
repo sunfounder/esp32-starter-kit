@@ -1,4 +1,6 @@
-6. Temperature and Humidity Monitoring with Adafruit IO
+.. _ar_adafruit_io:
+
+8.6 Temperature and Humidity Monitoring with Adafruit IO
 =============================================================
 
 In this project, we will guide you on how to use a popular IoT platform. There are many free (or low-cost) platforms available online for programming enthusiasts. Some examples are Adafruit IO, Blynk, Arduino Cloud, ThingSpeak, and so on. The usage of these platforms is quite similar. Here, we will be focusing on Adafruit IO.
@@ -67,15 +69,17 @@ We will write an Arduino program that uses the DHT11 sensor to send temperature 
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Open the code.
 
     * Open the ``iot_6_adafruit_io.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_6_adafruit_io`` directory, or copy the code into the Arduino IDE.
-    * Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``Adafruit_MQTT Library`` and ``DHT sensor library`` are used here, you can install them from the **Library Manager**.
 
     .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/4cf6ad03-250e-4fe9-aa04-0ca73b997843/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
 #. Find the following lines and replace ``<SSID>`` and ``<PASSWORD>`` with the specific details of your WiFi network.

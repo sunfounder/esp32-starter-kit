@@ -1,6 +1,6 @@
 .. _py_servo:
 
-3.3 Swinging Servo
+4.3 Swinging Servo
 ===================
 
 A Servo is a type of position-based device known for its ability to maintain specific angles and deliver precise rotation. This makes it highly desirable for control systems that demand consistent angle adjustments. It's not surprising that Servos have found extensive use in high-end remote-controlled toys, from airplane models to submarine replicas and sophisticated remote-controlled robots.
@@ -34,7 +34,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/4.3_swinging_servo_bb.png
 
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_servo`
 
@@ -42,7 +43,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``3.3_swinging_servo.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``4.3_swinging_servo.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

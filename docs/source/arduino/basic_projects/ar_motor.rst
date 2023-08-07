@@ -1,6 +1,6 @@
-.. _ar_state_change:
+.. _ar_motor:
 
-3.1 Motor
+4.1 Motor
 ===========================
 
 In this engaging project, we'll explore how to drive a motor using the L9110 module.
@@ -18,8 +18,11 @@ Here is a list of available pins on the ESP32 board for this project.
     :widths: 5 20 
 
     * - Available Pins
-      - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
+      - IO13, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
+.. note::
+
+  * **IO12** needs to be connected to the L9110 module after ESP32 starts up normally because the input pins of the L9110 module have a 10K pull-down resistor, which can prevent ESP32 from booting correctly.
 
 
 **Schematic**
@@ -52,7 +55,8 @@ Here is the truth table of Motor B:
 
 .. image:: ../../img/wiring/4.1_motor_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_tt_motor`
 * :ref:`cpn_l9110`
@@ -63,8 +67,8 @@ Here is the truth table of Motor B:
 
 .. note::
 
-    * Open the ``3.1_motor.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\3.1_motor``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``4.1_motor.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.1_motor``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     
 .. raw:: html
@@ -82,8 +86,8 @@ In addition to simply making the motor rotate clockwise and counterclockwise, yo
 
 .. note::
 
-    * Open the ``3.1_motor_pwm.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\3.1_motor_pwm``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``4.1_motor_pwm.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.1_motor_pwm``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     
 .. raw:: html

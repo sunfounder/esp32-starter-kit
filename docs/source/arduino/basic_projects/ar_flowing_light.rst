@@ -1,4 +1,6 @@
-5.2 Flowing Light
+.. _ar_flowing_light:
+
+6.2 Flowing Light
 =======================
 
 Have you ever wanted to add some fun and interactive element to your living space? 
@@ -20,7 +22,8 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_avoid`
 * :ref:`cpn_wires`
 * :ref:`cpn_ws2812`
@@ -30,7 +33,7 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 
 .. note::
 
-    * You can open the file ``5.2_flowing_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.2_flowing_led`` directly.
+    * You can open the file ``6.2_flowing_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.2_flowing_led`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

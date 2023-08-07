@@ -27,7 +27,8 @@ An RGB LED packages three LEDs of red, green, and blue into a transparent or sem
 
 .. image:: img/circuit/3_color_ball_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_rgb`
@@ -73,7 +74,7 @@ So the code to make the RGB LED light yellow is as follows.
 .. image:: img/4_yellow.png
 
 
-When the Ball sprite (yellow ball) is clicked, we set pin 13 high (red LED on), pin 12 high (green LED on) and pin 14 low (blue LED off) so that the RGB LED will light yellow.
+When the Ball sprite (yellow ball) is clicked, we set pin 27 high (red LED on), pin 26 high (green LED on) and pin 25 low (blue LED off) so that the RGB LED will light yellow.
 
 You can write codes to other sprites in the same way to make the RGB LEDs light up in the corresponding colors.
 

@@ -1,6 +1,6 @@
-.. _py_irremote:
+.. _py_receiver:
 
-4.14 IR Remote Control
+5.14 IR Remote Control
 ================================
 
 An infrared receiver is a component that receives infrared signals and can independently detect and output signals compatible with TTL level. It is similar in size to a regular plastic-packaged transistor and is commonly used in various applications such as infrared remote control and infrared transmission.
@@ -29,7 +29,8 @@ When you press a button on the remote control, the infrared receiver detects the
 
 .. image:: ../../img/wiring/5.14_ir_receiver_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_receiver`
@@ -38,7 +39,7 @@ When you press a button on the remote control, the infrared receiver detects the
 
 .. note::
 
-    * Open the ``4.14_ir_receiver.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.14_ir_receiver.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
     * Here, you need to utilize the libraries found in the ``ir_rx`` folder. Please ensure they have been uploaded to the ESP32. For a comprehensive tutorial, refer to :ref:`add_libraries_py`.

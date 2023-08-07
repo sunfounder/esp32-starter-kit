@@ -1,6 +1,6 @@
 .. _py_joystick:
 
-4.11 Toggle the Joystick
+5.11 Toggle the Joystick
 ================================
 
 If you play a lot of video games, then you should be very familiar with the Joystick.
@@ -52,7 +52,8 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 .. image:: ../../img/wiring/5.11_joystick_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_joystick`
 
@@ -60,7 +61,7 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 .. note::
 
-    * Open the ``4.11_joystick.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.11_joystick.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 .. code-block:: python

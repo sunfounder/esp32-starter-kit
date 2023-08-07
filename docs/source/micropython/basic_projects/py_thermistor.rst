@@ -1,7 +1,7 @@
-.. _py_temp:
+.. _py_thermistor:
 
 
-4.10 Temperature Sensing
+5.10 Temperature Sensing
 ===========================
 
 A thermistor is a temperature sensor that exhibits a strong dependence on temperature, and it can be classified into two types: Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC). The resistance of an NTC thermistor decreases with increasing temperature, while the resistance of a PTC thermistor increases with increasing temperature.
@@ -49,7 +49,8 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
     * The thermistor is black and marked 103.
     * The color ring of the 10K ohm resistor is red, black, black, red and brown.
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -59,7 +60,7 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
 
 .. note::
 
-    * Open the ``4.10_thermistor.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.10_thermistor.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 
@@ -118,9 +119,9 @@ Here is the relation between the resistance and temperature:
 
     * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
     * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``273.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``273.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``3950``. 
+    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``373.15 + degree Celsius``. 
+    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``373.15+25``.
+    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``4950``. 
     * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
 
     Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
@@ -136,7 +137,7 @@ You can also display the calculated Celsius and Fahrenheit temperatures on the I
 
 .. note::
 
-    * Open the ``4.10_thermistor_lcd.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.10_thermistor_lcd.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
     * Here you need to use the library called ``lcd1602.py``, please check if it has been uploaded to ESP32, for a detailed tutorial refer to :ref:`add_libraries_py`.

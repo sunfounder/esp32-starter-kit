@@ -1,6 +1,6 @@
 .. _ar_tilt:
 
-4.2 Tilt It！
+5.2 Tilt It！
 ==========================
 
 The tilt switch is a simple yet effective 2-pin device that contains a metal ball in its center. When the switch is in an upright position, the two pins are electrically connected, allowing current to flow through. However, when the switch is tilted or tilted at a certain angle, the metal ball moves and breaks the electrical connection between the pins.
@@ -71,7 +71,8 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
 
 .. image:: ../../img/wiring/5.2_tilt_switch_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -82,8 +83,8 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
 
 .. note::
 
-   * You can open the file ``4.2_tilt_switch.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\4.2_tilt_switch``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``5.2_tilt_switch.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.2_tilt_switch``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
 .. raw:: html
 

@@ -1,6 +1,6 @@
-.. _py_pot:
+.. _py_potentiometer:
 
-4.8 Turn the Knob
+5.8 Turn the Knob
 ===========================
 A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
 
@@ -39,7 +39,8 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -51,7 +52,7 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. note::
 
-    * Open the ``4.8_turn_the_knob.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.8_turn_the_knob.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

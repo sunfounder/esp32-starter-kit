@@ -1,6 +1,6 @@
 .. _py_dht11:
 
-4.13 Temperature - Humidity
+5.13 Temperature - Humidity
 =======================================
 The DHT11 is a temperature and humidity sensor commonly used for environmental measurements. It is a digital sensor that communicates with a microcontroller to provide temperature and humidity readings.
 
@@ -29,7 +29,8 @@ By reading the data provided by the sensor, we can obtain the current temperatur
 
 .. image:: ../../img/wiring/5.13_dht11_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_dht11`
@@ -38,7 +39,7 @@ By reading the data provided by the sensor, we can obtain the current temperatur
 
 .. note::
 
-    * Open the ``4.13_dht11.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.13_dht11.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 .. code-block:: python
@@ -81,7 +82,7 @@ You can also display the temperature and humidity on the I2C LCD1602.
 
 .. note::
 
-    * Open the ``4.13_dht11_lcd.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.13_dht11_lcd.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
     * Here you need to use the library called ``lcd1602.py``, please check if it has been uploaded to ESP32, for a detailed tutorial refer to :ref:`add_libraries_py`.
 

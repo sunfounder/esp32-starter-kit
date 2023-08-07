@@ -1,6 +1,6 @@
 .. _py_fruit_piano:
 
-5.1 Fruit Piano
+6.1 Fruit Piano
 ============================
 
 Have you ever wanted to play the piano but couldn't afford one? Or maybe you just want to have some fun with diy a fruit piano? Well, this project is for you! 
@@ -61,7 +61,8 @@ The result is a simple and affordable way to enjoy the experience of playing the
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
 * :ref:`cpn_buzzer`
@@ -73,7 +74,7 @@ The result is a simple and affordable way to enjoy the experience of playing the
 
 .. note::
 
-    * Open the ``5.1_fruit_piano.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.1_fruit_piano.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

@@ -1,6 +1,6 @@
 .. _install_micropython_on_esp32:
 
-3. Install MicroPython on the ESP32(Important)
+1.3 Install MicroPython on the ESP32(Important)
 ==================================================
 
 #. Download the |link_esp32_micropython_download| from the MicroPython official website and then download the latest version of the firmware.

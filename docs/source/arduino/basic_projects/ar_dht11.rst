@@ -1,7 +1,7 @@
 .. _ar_dht11:
 
 
-4.13 Temperature - Humidity
+5.13 Temperature - Humidity
 =======================================
 
 The DHT11 is a temperature and humidity sensor commonly used for environmental measurements. It is a digital sensor that communicates with a microcontroller to provide temperature and humidity readings.
@@ -31,7 +31,8 @@ By reading the data provided by the sensor, we can obtain the current temperatur
 
 .. image:: ../../img/wiring/5.13_dht11_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_dht11`
@@ -40,8 +41,8 @@ By reading the data provided by the sensor, we can obtain the current temperatur
 
 .. note::
 
-    * Open the ``4.13_dht11.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.13_dht11``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``5.13_dht11.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.13_dht11``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``DHT sensor library`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/dht_lib.png
@@ -102,6 +103,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             Serial.print(temperture);
             Serial.println(" *C");
         }
+
     * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
     * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
     * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.
@@ -113,8 +115,11 @@ You can also display the temperature and humidity on the I2C LCD1602.
 
 .. note::
 
-    * You can open the file ``4.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
-    * Or copy this code into **Arduino IDE**.
+    * You can open the file ``5.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
 
 .. raw:: html
+
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb46ba7e-0a09-4805-87ab-f733e23eb920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    

@@ -1,6 +1,6 @@
 .. _ar_joystick:
 
-4.11 Toggle the Joystick
+5.11 Toggle the Joystick
 ================================
 If you play a lot of video games, then you should be very familiar with the Joystick.
 It is usually used to move the character around, rotate the screen, etc.
@@ -37,7 +37,8 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 .. image:: ../../img/wiring/5.11_joystick_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_joystick`
 
@@ -45,8 +46,8 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 .. note::
 
-    * Open the ``4.11_joystick.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.11_joystick``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``5.11_joystick.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.11_joystick``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     
 .. raw:: html

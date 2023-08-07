@@ -1,6 +1,6 @@
 .. _py_motor:
 
-3.1 Small Fan
+4.1 Small Fan
 =======================
 
 In this engaging project, we'll explore how to drive a motor using the L9110 module.
@@ -20,6 +20,9 @@ Here is a list of available pins on the ESP32 board for this project.
     * - Available Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
+.. note::
+
+  * **IO12** needs to be connected to the L9110 module after ESP32 starts up normally because the input pins of the L9110 module have a 10K pull-down resistor, which can prevent ESP32 from booting correctly.
 
 
 **Schematic**
@@ -52,7 +55,8 @@ Here is the truth table of Motor B:
 
 .. image:: ../../img/wiring/4.1_motor_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_tt_motor`
 * :ref:`cpn_l9110`
@@ -62,7 +66,7 @@ Here is the truth table of Motor B:
 
 .. note::
 
-    * Open the ``3.1_motor_turn.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``4.1_motor_turn.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 
@@ -116,7 +120,7 @@ In addition to simply making the motor rotate clockwise and counterclockwise, yo
 
 .. note::
 
-    * Open the ``3.1_motor_turn_pwm.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``4.1_motor_turn_pwm.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

@@ -1,6 +1,6 @@
 .. _ar_pump:
 
-3.2 Pumping
+4.2 Pumping
 ===================
 In this intriguing project, we will delve into controlling a water pump using the L9110 motor driver module. Known for its compactness and effectiveness, the L9110 module is a common choice in robotics and mechatronics projects for controlling DC motors.
 
@@ -14,8 +14,11 @@ Here is a list of available pins on the ESP32 board for this project.
     :widths: 5 20 
 
     * - Available Pins
-      - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
+      - IO13, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
+.. note::
+
+  * **IO12** needs to be connected to the L9110 module after ESP32 starts up normally because the input pins of the L9110 module have a 10K pull-down resistor, which can prevent ESP32 from booting correctly.
 
 **Schematic**
 
@@ -47,7 +50,8 @@ Here is the truth table of pump:
 
 .. image:: ../../img/wiring/4.2_pump_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_pump`
 * :ref:`cpn_l9110`
@@ -56,8 +60,8 @@ Here is the truth table of pump:
 
 .. note::
 
-   * You can open the file ``3.2_pump.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\3.2_pump``. 
-   * Or copy this code into **Arduino IDE**.
+  * You can open the file ``4.2_pump.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\4.2_pump``. 
+ * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html
 

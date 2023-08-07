@@ -3,7 +3,7 @@
 Transistor
 ============
 
-|img_NPN&PNP|
+.. image:: img/npn_pnp.png
 
 Transistor is a semiconductor device that controls current by current. It functions by amplifying weak signal to larger amplitude signal and is also used for non-contact switch. 
 
@@ -17,7 +17,7 @@ Based on the semiconductor type, transistors can be divided into two groups, the
 .. note::
     s8550 is PNP transistor and the s8050 is the NPN one, They look very similar, and we need to check carefully to see their labels.
 
-|img_transistor_symbol|
+.. image:: img/transistor_symbol.png
 
 When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
 
@@ -27,7 +27,7 @@ When a High level signal goes through an NPN transistor, it is energized. But a 
 
 Put the label side facing us and the pins facing down. The pins from left to right are emitter(e), base(b), and collector(c).
 
-|img_ebc|
+.. image:: img/ebc.png
 
 .. note::
     * The base is the gate controller device for the larger electrical supply. 
@@ -42,19 +42,9 @@ Put the label side facing us and the pins facing down. The pins from left to rig
 
 **Example**
 
-* :ref:`py_transistor` (For MicroPython User)
-* :ref:`py_relay` (For MicroPython User)
-* :ref:`py_ac_buz` (For MicroPython User)
-* :ref:`py_pa_buz` (For MicroPython User)
-* :ref:`py_light_theremin` (For MicroPython User)
-* :ref:`py_alarm_lamp` (For MicroPython User)
-* :ref:`py_music_player` (For MicroPython User)
-* :ref:`py_fruit_piano` (For MicroPython User)
-* :ref:`py_reversing_aid` (For MicroPython User)
-* :ref:`ar_ac_buz` (For Arduino User)
-* :ref:`ar_pa_buz` (For Arduino User)
-* :ref:`ar_transistor` (For Arduino User)
-* :ref:`ar_relay` (For Arduino User)
-* :ref:`per_service_bell` (For Piper Make User)
-* :ref:`per_reversing_system` (For Piper Make User)
-* :ref:`per_reaction_game` (For Piper Make User)
+* :ref:`ar_transistor` (Arduino Project)
+* :ref:`ar_ac_buz` (Arduino Project)
+* :ref:`ar_fruit_piano` (Arduino Project)
+* :ref:`py_transistor` (MicroPython Project)
+* :ref:`py_pa_buz` (MicroPython Project)
+* :ref:`py_light_theremin` (MicroPython Project)

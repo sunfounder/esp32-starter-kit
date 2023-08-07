@@ -37,8 +37,10 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
 * **Potentiometer**: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
 
 
-
 **Example**
 
-* :ref:`ar_lcd1602` (Learning Project)
-* :ref:`ar_serial_read` (Learning Project)
+* :ref:`ar_lcd1602` (Arduino Project)
+* :ref:`ar_guess_number` (Arduino Project)
+* :ref:`py_lcd1602` (MicroPython Project)
+* :ref:`py_guess_number` (MicroPython Project)
+

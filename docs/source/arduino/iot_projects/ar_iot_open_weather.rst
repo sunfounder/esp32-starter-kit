@@ -1,4 +1,4 @@
-1. Real-time Weather From @OpenWeatherMap
+8.1 Real-time Weather From @OpenWeatherMap
 ====================================================
 
 The IoT Open Weather Display project utilizes the ESP32 board and an I2C LCD1602 module to create a weather information display that retrieves data from the OpenWeatherMap API. 
@@ -38,17 +38,20 @@ This project serves as an excellent introduction to working with APIs, Wi-Fi con
     .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
         :width: 800
 
-    * :ref:`cpn_esp32_extension`
+    * :ref:`cpn_esp32_wroom_32e`
+    * :ref:`cpn_esp32_camera_extension`
     * :ref:`cpn_wires`
     * :ref:`cpn_lcd`
 
 #. Open the code.
 
     * Open the ``iot_1_open_weather.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_1_open_weather`` directory, or copy the code into the Arduino IDE.
-    * Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``LiquidCrystal I2C``  and ``Arduino_JSON`` libraries are used here, you can install them from the **Library Manager**.
 
     .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/71b196ce-8a84-4577-af76-43988c7d3f80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
          
 
 #. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.

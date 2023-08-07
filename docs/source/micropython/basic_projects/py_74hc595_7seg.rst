@@ -1,6 +1,6 @@
-.. _py_74hc_7seg:
+.. _py_7_segment:
 
-1.5 Number Display
+2.5 Number Display
 =======================
 
 Welcome to this fascinating project! In this project, we will explore the enchanting world of displaying numbers from 0 to 9 on a seven-segment display.
@@ -24,7 +24,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. image:: ../../img/circuit/circuit_2.5_74hc595_7_segment.png
 
-Here the wiring principle is basically the same as :ref:`py_74hc_led`, the only difference is that Q0-Q7 are connected to the a ~ g pins of the 7 Segment Display.
+Here the wiring principle is basically the same as :ref:`py_74hc595`, the only difference is that Q0-Q7 are connected to the a ~ g pins of the 7 Segment Display.
 
 .. list-table:: Wiring
     :widths: 15 25
@@ -54,7 +54,8 @@ Here the wiring principle is basically the same as :ref:`py_74hc_led`, the only 
 
 .. image:: ../../img/wiring/2.5_segment_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -65,7 +66,7 @@ Here the wiring principle is basically the same as :ref:`py_74hc_led`, the only 
 
 .. note::
 
-    * Open the ``1.5_number_display.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``2.5_number_display.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 .. code-block:: python

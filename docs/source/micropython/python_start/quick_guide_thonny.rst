@@ -1,4 +1,4 @@
-5. Quick Guide on Thonny
+1.5 Quick Guide on Thonny
 ==================================
 
 .. _open_run_code_py:
@@ -20,7 +20,7 @@ However, you must first download the package and upload the libraries, as descri
 
 #. Plug the esp32 into your computer with a micro USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Select correct interpreter
 
@@ -99,7 +99,7 @@ The code is shown directly in the code section. You can copy it to Thonny and ru
 
 #. Plug the esp32 into your computer with a micro USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Select correct interpreter
 

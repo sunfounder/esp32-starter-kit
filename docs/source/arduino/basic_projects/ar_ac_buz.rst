@@ -1,6 +1,6 @@
-.. _ar_beep:
+.. _ar_ac_buz:
 
-2.1 Beep
+3.1 Beep
 ==================
 This is a simple project to make an active buzzer beep quickly four times every second.
 
@@ -40,7 +40,8 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -53,8 +54,8 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 .. note::
 
-   * You can open the file ``2.1_beep.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\2.1_beep``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``3.1_beep.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\3.1_beep``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html
     

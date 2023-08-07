@@ -1,6 +1,6 @@
 .. _py_rgb_strip:
 
-1.7 RGB LED Strip
+2.7 RGB LED Strip
 ======================
 
 In this project, we will delve into the mesmerizing world of driving WS2812 LED strips and bring a vibrant display of colors to life. With the ability to individually control each LED on the strip, we can create captivating lighting effects that will dazzle the senses.
@@ -38,7 +38,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/2.7_rgb_strip_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_ws2812`
@@ -48,7 +49,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``1.7_rgb_strip.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``2.7_rgb_strip.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
     
@@ -109,7 +110,7 @@ We can randomly generate colors and make a colorful flowing light.
 
 .. note::
 
-    * Open the ``1.7_rgb_strip_random.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Open the ``2.7_rgb_strip_random.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 
 .. code-block:: python

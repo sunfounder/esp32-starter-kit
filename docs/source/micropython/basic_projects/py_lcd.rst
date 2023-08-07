@@ -1,6 +1,6 @@
-.. _py_lcd:
+.. _py_lcd1602:
 
-1.6 Display Characters
+2.6 Display Characters
 ==================================================
 
 Now, we will explore the fascinating world of character display using the I2C LCD1602 module.
@@ -34,7 +34,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_lcd`
 
@@ -43,7 +44,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``1.6_liquid_crystal_display.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``2.6_liquid_crystal_display.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
     * The ``lcd1602.py`` library is used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
 

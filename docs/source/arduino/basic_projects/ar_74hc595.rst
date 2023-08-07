@@ -1,6 +1,6 @@
-.. _ar_shiftout:
+.. _ar_74hc595:
 
-1.4 Microchip - 74HC595
+2.4 Microchip - 74HC595
 ===========================
 
 Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
@@ -36,7 +36,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/2.4_74hc595_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -47,8 +48,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``1.4_74hc595.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\1.4_74hc595``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``2.4_74hc595.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\2.4_74hc595``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
 .. raw:: html
 

@@ -1,6 +1,6 @@
 .. _ar_color_gradient:
 
-5.5 Color Gradient
+6.5 Color Gradient
 ==============================================
 Are you ready to experience a world of color? This project will take you on a magical journey where you can control an 
 RGB LED and achieve smooth color transitions. Whether you're looking to add some color to your home decor or 
@@ -9,7 +9,7 @@ seeking a fun programming project, this project has got you covered. Let's dive 
 
 **Schematic**
 
-.. image:: ../../img/circuit/circuit_6.5_color_gradient.png
+.. image:: ../../img/circuit/circuit_6.5_color_gradient_ar.png
 
 
 **Wiring**
@@ -22,7 +22,8 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. image:: ../../img/wiring/6.5_color_rgb_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_pot`
@@ -34,8 +35,8 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. note::
 
-   * You can open the file ``5.5_color_gradient.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.5_color_gradient``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``6.5_color_gradient.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.5_color_gradient``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
 .. raw:: html
     

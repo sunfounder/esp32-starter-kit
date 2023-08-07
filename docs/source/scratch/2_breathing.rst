@@ -26,7 +26,8 @@ The PWM signal range is 0-255, on the ESP32 board, 2, 5, 12~15, 18, 19, 21, 22, 
 .. image:: img/circuit/1_hello_led_bb.png
 
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_led`

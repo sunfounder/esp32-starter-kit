@@ -1,6 +1,6 @@
-.. _py_74hc_led:
+.. _py_74hc595:
 
-1.4 Microchip - 74HC595
+2.4 Microchip - 74HC595
 ===========================
 
 Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
@@ -36,7 +36,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/2.4_74hc595_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -47,7 +48,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``1.4_microchip_74hc595.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``2.4_microchip_74hc595.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

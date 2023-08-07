@@ -1,6 +1,6 @@
 .. _ar_pa_buz:
 
-2.2 Custom Tone
+3.2 Custom Tone
 ==========================================
 
 We have used active buzzer in the previous project, this time we will use passive buzzer.
@@ -43,7 +43,8 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -56,8 +57,8 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 .. note::
 
-    * Open the ``2.2_custom_tone.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\2.2_custom_tone``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``3.2_custom_tone.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\3.2_custom_tone``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
 .. raw:: html
 
@@ -122,6 +123,7 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
 #. In the ``loop()`` function, play the sequence of 7 notes with a brief pause between each note and a 1-second pause before repeating the sequence.
 
     .. code-block:: arduino
+
         void loop() {
             for (int i = 0; i < 7; i++) {
                 playFrequency(frequencies[i], 300); // Play each note for 300ms

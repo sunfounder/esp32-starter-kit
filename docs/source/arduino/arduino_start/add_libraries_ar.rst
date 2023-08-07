@@ -1,7 +1,7 @@
 
 .. _add_libraries_ar:
 
-4. Install libraries (Important)
+1.4 Install libraries (Important)
 ======================================
 
 A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.

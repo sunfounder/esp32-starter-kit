@@ -1,4 +1,4 @@
-5. CherryLight
+8.5 CherryLight
 ===============================
 CheerLights is a global network of synchronized lights that can be controlled by anyone.
 
@@ -17,15 +17,19 @@ In this case, we also utilize MQTT, but instead of publishing our own messages, 
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Open the code.
 
     * Open the ``iot_5_cheerlights.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_5_cheerlights`` directory, or copy the code into the Arduino IDE.
-    * Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``PubSubClient`` and ``Adafruit_NeoPixel`` libraries are used here, you can install them from the **Library Manager**.
 
         .. image:: img/mqtt_lib.png
+
+    .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/4fc7b0ff-db8e-4bf3-ad34-d68c1857794b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 #. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
 

@@ -1,6 +1,6 @@
 .. _ar_bluetooth:
 
-6.1 Bluetooth
+7.1 Bluetooth
 ===================
 
 This project provides a guide to develop a simple Bluetooth Low Energy (BLE) serial communication application 
@@ -39,7 +39,7 @@ Here are the step-by-step instructions to set up Bluetooth communication between
 
     .. image:: img/bluetooth_lightblue.png
 
-#. Open the ``6.1_bluetooth.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\6.1_bluetooth`` directory, or copy the code into the Arduino IDE.
+#. Open the ``7.1_bluetooth.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\7.1_bluetooth`` directory, or copy the code into the Arduino IDE.
 
     .. raw:: html
         

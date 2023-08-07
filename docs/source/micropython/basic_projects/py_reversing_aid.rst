@@ -2,7 +2,7 @@
 
 .. _py_reversing_aid:
 
-5.4 Reversing Aid
+6.4 Reversing Aid
 ======================
 
 Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
@@ -25,8 +25,11 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
 **Wiring**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
+    :width: 800
+    :align: center
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_resistor`
 * :ref:`cpn_wires`
@@ -39,7 +42,7 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
 
 .. note::
 
-    * Open the ``5.4_reversing_aid.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.4_reversing_aid.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

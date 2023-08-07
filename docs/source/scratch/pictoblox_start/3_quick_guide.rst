@@ -7,7 +7,14 @@ Now let's learn how to use PictoBlox in two modes.
 
 Also build a simple circuit to make this LED blink in 2 different modes.
 
-.. image:: ./img/1_hello_led_bb.png
+.. image:: ../img/circuit/1_hello_led_bb.png
+
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
+* :ref:`cpn_breadboard`
+* :ref:`cpn_wires`
+* :ref:`cpn_led`
+* :ref:`cpn_resistor`
 
 
 .. _stage_mode:

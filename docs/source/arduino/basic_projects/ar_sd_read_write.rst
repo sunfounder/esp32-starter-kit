@@ -1,6 +1,6 @@
 .. _ar_sd_write:
 
-6.4 SD Card Write and Read
+7.4 SD Card Write and Read
 ===========================
 This project demonstrates the core capabilities of using an SD card with the ESP32 microcontroller. 
 It showcases essential operations such as mounting the SD card, creating a file, writing data to the file, 
@@ -11,18 +11,18 @@ applications, making this project a crucial stepping stone in understanding and 
 
 #. Before connecting the USB cable, insert the SD card into the SD card slot of the extension board.
 
-    .. image:: img/insert_sd.png
+    .. image:: ../../img/insert_sd.png
 
 #. Connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Select the appropriate port and board in the Arduino IDE and upload the code to your ESP32.
 
     .. note::
 
-        * Open the ``6.4_sd_read_write.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\6.4_sd_read_write``.
-        * Or copy this code into **Arduino IDE**.
+        * Open the ``7.4_sd_read_write.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\7.4_sd_read_write``.
+        * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
     .. raw:: html
 

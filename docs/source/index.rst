@@ -38,11 +38,11 @@ The steps are as follows.
     :align: center
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
     components/component_list
-    micropython/for_micropython_user
     arduino/for_arduino_user
+    micropython/for_micropython_user
     scratch/play_with_scratch
     faq/faq
     thank-learning

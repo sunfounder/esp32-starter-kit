@@ -1,4 +1,6 @@
-7. ESP Camera with Telegram Bot
+.. _iot_telegram:
+
+8.7 ESP Camera with Telegram Bot
 ====================================
 
 In this project, we'll demonstrate how to integrate the ESP32 with your favorite messaging application. For this demonstration, we're using Telegram.
@@ -40,7 +42,7 @@ As anyone can interact with the bot you've created, there's a risk of informatio
     .. raw:: html
 
         <video loop autoplay muted style = "max-width:100%">
-            <source src="_static/video/plugin_camera.mp4" type="video/mp4">
+            <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -51,10 +53,12 @@ As anyone can interact with the bot you've created, there's a risk of informatio
 #. Open the code.
 
     * Open the ``iot_7_cam_telegram.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_7_cam_telegram`` directory, or copy the code into the Arduino IDE.
-    * Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``UniversalTelegramBot`` and ``ArduinoJson`` libraries are used here, you can install them from the **Library Manager**.
 
     .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/d7c439b0-fca3-4648-9714-900a2859740c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
 #. Locate and modify the following lines with your WiFi details, replacing ``<SSID>`` and ``<PASSWORD>``:

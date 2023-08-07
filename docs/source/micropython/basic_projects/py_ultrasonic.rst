@@ -1,6 +1,6 @@
 .. _py_ultrasonic:
 
-4.12 Measuring Distance
+5.12 Measuring Distance
 ======================================
 
 The ultrasonic module is used for distance measurement or object detection. In this project, we will program the module to obtain obstacle distances. By sending ultrasonic pulses and measuring the time it takes for them to bounce back, we can calculate distances. This enables us to implement distance-based actions or obstacle avoidance behaviors.
@@ -31,7 +31,8 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 .. image:: ../../img/wiring/5.12_ultrasonic_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_ultrasonic`
 
@@ -39,7 +40,7 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 .. note::
 
-    * Open the ``4.12_ultrasonic.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.12_ultrasonic.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

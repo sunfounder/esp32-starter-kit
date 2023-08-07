@@ -1,6 +1,6 @@
 .. _ar_rgb:
 
-1.3 Colorful Light
+2.3 Colorful Light
 ==============================================
 
 In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
@@ -39,7 +39,8 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -52,8 +53,8 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. note::
 
-   * You can open the file ``1.3_rgb_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\1.3_rgb_led``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``2.3_rgb_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\2.3_rgb_led``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
 .. raw:: html
     

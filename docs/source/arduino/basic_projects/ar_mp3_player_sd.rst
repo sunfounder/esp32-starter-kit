@@ -1,6 +1,6 @@
 .. _ar_mp3_player_sd:
 
-6.5 MP3 Player with SD Card Support
+7.5 MP3 Player with SD Card Support
 ==============================================
 
 Welcome to the exciting world of music with your ESP32! This project brings the power of audio processing to your fingertips, making your ESP32 not just an amazing microcontroller for computing but also your personalized music player. Imagine walking into your room and having your favorite track playing right from this tiny device. That's the power we're bringing to your hands today.
@@ -15,7 +15,7 @@ Welcome to the exciting world of music with your ESP32! This project brings the 
 
 #. Insert the SD card into the SD card slot of the extension board.
 
-    .. image:: img/insert_sd.png
+    .. image:: ../../img/insert_sd.png
 
 #. Build the circuit.
 
@@ -27,10 +27,17 @@ Welcome to the exciting world of music with your ESP32! This project brings the 
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
+    * :ref:`cpn_esp32_wroom_32e`
+    * :ref:`cpn_esp32_camera_extension`
+    * :ref:`cpn_breadboard`
+    * :ref:`cpn_wires`
+    * :ref:`cpn_resistor`
+    * :ref:`cpn_audio_speaker`
+
 
 #. Connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Modify the code.
 
@@ -38,8 +45,8 @@ Welcome to the exciting world of music with your ESP32! This project brings the 
 
     .. note::
 
-        * Open the ``6.5_mp3_player_sd.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\6.5_mp3_player_sd``. Or copy this code into **Arduino IDE**.
-        * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+        * Open the ``7.5_mp3_player_sd.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\7.5_mp3_player_sd``. Or copy this code into **Arduino IDE**.
+       * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
         * The ``ESP8266Audio`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
         
 

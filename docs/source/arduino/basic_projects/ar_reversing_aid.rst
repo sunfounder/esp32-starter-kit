@@ -1,6 +1,6 @@
 .. _ar_reversing_aid:
 
-5.3 Reversing Aid
+6.3 Reversing Aid
 ===================
 Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
 
@@ -23,7 +23,8 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_resistor`
 * :ref:`cpn_wires`
@@ -37,9 +38,9 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
 
 .. note::
 
-    * You can open the file ``5.3_reversing_aid.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.3_reversing_aid`` directly.
-    * Or copy this code into **Arduino IDE**.
-    * The ``LiquidCrystal_I2C`` library is used here, refer to :ref:`install_libraries_ar` for a tutorial to install.
+    * You can open the file ``6.3_reversing_aid.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.3_reversing_aid`` directly.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 
 
 .. raw:: html

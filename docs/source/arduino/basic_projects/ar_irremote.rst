@@ -1,6 +1,6 @@
 .. _ar_receiver:
 
-4.14 IR Receiver
+5.14 IR Receiver
 =========================
 An infrared receiver is a component that receives infrared signals and can independently detect and output signals compatible with TTL level. It is similar in size to a regular plastic-packaged transistor and is commonly used in various applications such as infrared remote control and infrared transmission.
 
@@ -28,7 +28,8 @@ When you press a button on the remote control, the infrared receiver detects the
 
 .. image:: ../../img/wiring/5.14_ir_receiver_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_receiver`
@@ -37,8 +38,8 @@ When you press a button on the remote control, the infrared receiver detects the
 
 .. note::
 
-    * Open the ``4.14_ir_receiver.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.14_ir_receiver``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``5.14_ir_receiver.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.14_ir_receiver``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``IRremoteESP8266`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/receiver_lib.png

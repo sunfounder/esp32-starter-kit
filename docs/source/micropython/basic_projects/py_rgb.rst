@@ -1,6 +1,6 @@
 .. _py_rgb:
 
-1.3 Colorful Light
+2.3 Colorful Light
 ==============================================
 
 In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
@@ -31,7 +31,7 @@ The PWM pins pin27, pin26 and pin25 control the Red, Green and Blue pins of the 
 
 **Wiring**
 
-.. image:: ../../../components/img/rgb_pin.jpg
+.. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
@@ -39,7 +39,8 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -49,7 +50,7 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. note::
 
-    * Open the ``1.3_colorful_light.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``2.3_colorful_light.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 
@@ -99,7 +100,7 @@ You can also set the color you want with the following code with the familiar co
 
 .. note::
 
-    * Open the ``1.3_colorful_light_rgb.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``2.3_colorful_light_rgb.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

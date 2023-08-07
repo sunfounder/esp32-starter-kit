@@ -29,6 +29,10 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
 
 **Example**
 
-* :ref:`ar_dht11` (Learning Project)
-* :ref:`iot_home` (IoT Project)
-* :ref:`iot_plant` (IoT Project)
+* :ref:`ar_dht11` (Arduino Project)
+* :ref:`ar_plant_monitor` (Arduino Project)
+* :ref:`ar_adafruit_io` (Arduino Project)
+* :ref:`py_dht11` (MicroPython Project)
+* :ref:`py_plant_monitor` (MicroPython Project)
+
+

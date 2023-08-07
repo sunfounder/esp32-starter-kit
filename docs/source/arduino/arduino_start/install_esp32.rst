@@ -1,4 +1,4 @@
-3. Install the ESP32 board(Important)
+1.3 Install the ESP32 board(Important)
 ===========================================
 
 To program the ESP32 microcontroller, we need to install the ESP32 board package in the Arduino IDE. Follow the step-by-step guide below:

@@ -3,7 +3,7 @@
 WS2812 RGB 8 LEDs Strip
 ============================
 
-|img_ws2812|
+.. image:: img/ws2812b.png
 
 The WS2812 RGB 8 LEDs Strip is composed of 8 RGB LEDs. 
 Only one pin is required to control all the LEDs. Each RGB LED has a WS2812 chip, which can be controlled independently. 
@@ -44,15 +44,12 @@ LED with low driving voltage, environmental protection and energy saving, high b
 e is large, good consistency, low power, long life and other advantages. The control chip integrated in LED
 above becoming more simple circuit, small volume, convenient installation.
 
-.. Example
-.. -------------------
-
-.. :ref:`RGB LED Strip`
 
 
 **Example**
 
-* :ref:`py_neopixel` (For MicroPython User)
-* :ref:`py_music_player` (For MicroPython User)
-* :ref:`ar_neopixel` (For Arduino User)
-* :ref:`per_flowing_leds` (For Piper Make User)
+* :ref:`ar_rgb_strip` (Arduino Project)
+* :ref:`ar_flowing_light` (Arduino Project)
+* :ref:`py_rgb_strip` (MicroPython Project)
+* :ref:`py_flowing_light` (MicroPython Project)
+* :ref:`py_color_gradient` (MicroPython Project)

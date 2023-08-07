@@ -1,6 +1,6 @@
 .. _ar_line_track:
 
-4.4 Detect the Line
+5.4 Detect the Line
 ===================================
 
 The line-tracking module is used to detect the presence of black areas on the ground, such as black lines taped with electrical tape.
@@ -50,7 +50,8 @@ When the line tracking module detects a black line, IO14 returns a high level. O
     :align: center
     :width: 600
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_line_track`
 
@@ -59,8 +60,8 @@ When the line tracking module detects a black line, IO14 returns a high level. O
 
 .. note::
 
-   * You can open the file ``4.4_detect_the_line.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\4.4_detect_the_line``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``5.4_detect_the_line.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.4_detect_the_line``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html
 

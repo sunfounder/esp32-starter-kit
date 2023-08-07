@@ -1,6 +1,6 @@
 .. _ar_blink:
 
-1.1 Hello, LED! 
+2.1 Hello, LED! 
 =======================================
 
 Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
@@ -25,7 +25,8 @@ This circuit works on a simple principle, and the current direction is shown in 
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -35,8 +36,8 @@ This circuit works on a simple principle, and the current direction is shown in 
 
 .. note::
 
-   * You can open the file ``1.1_hello_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\1.1_hello_led``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``2.1_hello_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\2.1_hello_led``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html
 

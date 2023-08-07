@@ -1,6 +1,6 @@
 .. _ar_fading:
 
-1.2 Fading
+2.2 Fading
 =================
 
 In the previous project, we controlled the LED by turning it on and off using digital output. In this project, we will create a breathing effect on the LED by utilizing Pulse Width Modulation (PWM). PWM is a technique that allows us to control the brightness of an LED or the speed of a motor by varying the duty cycle of a square wave signal.
@@ -24,7 +24,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This project is the same circuit as the first project :ref:`py_led`, but the signal type is different. The first project is to output digital high and low levels (0&1) directly from pin26 to make the LED light up or turn off, this project is to output PWM signal from pin26 to control the brightness of the LED.
+This project is the same circuit as the first project :ref:`ar_blink`, but the signal type is different. The first project is to output digital high and low levels (0&1) directly from pin26 to make the LED light up or turn off, this project is to output PWM signal from pin26 to control the brightness of the LED.
 
 
 
@@ -32,7 +32,8 @@ This project is the same circuit as the first project :ref:`py_led`, but the sig
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -42,8 +43,8 @@ This project is the same circuit as the first project :ref:`py_led`, but the sig
 
 .. note::
 
-   * You can open the file ``1.2_fading_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\1.2_fading_led``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``2.2_fading_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\2.2_fading_led``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html
 

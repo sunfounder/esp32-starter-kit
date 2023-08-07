@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 import sphinx_rtd_theme
 
-project = 'SunFounder 3in1 Kit'
-copyright = '2022, SunFounder'
+project = 'SunFounder ESP32 Ultimate Kit'
+copyright = '2023, SunFounder'
 author = 'www.sunfounder.com'
 
 
@@ -39,6 +39,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+html_static_path = ['_static']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -47,6 +48,8 @@ exclude_patterns = []
 #
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+
 
 
 # SunFounder logo
@@ -153,6 +156,51 @@ rst_epilog = """
 .. |link_botfather| raw:: html
 
     <a href="https://t.me/botfather" target="_blank">BotFather</a>
+
+.. |link_appinventor| raw:: html
+
+    <a href="http://appinventor.mit.edu/" target="_blank">MIT App Inventor</a>
+
+.. |link_appinventor_login| raw:: html
+
+    <a href="http://ai2.appinventor.mit.edu" target="_blank">login portal</a>
+
+.. |link_blynk_virtualWrite| raw:: html
+
+    <a href="https://docs.blynk.io/en/blynk-library-firmware-api/virtual-pins#blynk.virtualwrite-vpin-value" target="_blank">Blynk.virtualWrite()</a> 
+
+.. |link_blynk_timer_intro| raw:: html
+
+    <a href="https://docs.blynk.io/en/legacy-platform/legacy-articles/keep-your-void-loop-clean" target="_blank">Why we use Blynk timer?</a> 
+
+.. |link_blynk_quickstart| raw:: html
+
+    <a href="https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/quickstart-device-code-overview" target="_blank">Blynk Quickstart</a> 
+
+.. |link_blynk_doc| raw:: html
+
+    <a href="https://docs.blynk.io/" target="_blank">Blynk Documentation</a> 
+
+.. |link_blynk_syncing| raw:: html
+
+    <a href="https://docs.blynk.io/en/blynk-library-firmware-api/state-syncing#for-hardware" target="_blank">Blynk - State Syncing</a> 
+
+.. |link_blynk_write| raw:: html
+
+    <a href="https://docs.blynk.io/en/getting-started/using-virtual-pins-to-control-physical-devices#the-blynk_write-vpin-function" target="_blank">Blynk - BLYNK_WRITE()</a>     
+
+.. |link_blynk| raw:: html
+
+    <a href="https://blynk.io/" target="_blank">BLYNK</a>     
+
+.. |link_blynk_logEvent| raw:: html
+
+    <a href="https://docs.blynk.io/en/getting-started/events-tutorial#use-blynk.logevent-firmware-api" target="_blank">Blynk.logEvent()</a> 
+
+.. |link_esp32_datasheet| raw:: html
+
+    <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf" target="_blank">ESP32-WROOM-32E Datasheet</a> 
+
 
 
 """

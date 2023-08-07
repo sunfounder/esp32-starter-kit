@@ -1,6 +1,6 @@
 .. _ar_button:
 
-4.1 Reading Button Value
+5.1 Reading Button Value
 ==============================================
 In this interactive project, we'll venture into the realm of button controls and LED manipulation.
 
@@ -66,7 +66,8 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
     
     A four-pin button is designed in an H shape. When the button is not pressed, the left and right pins are disconnected, and current cannot flow between them. However, when the button is pressed, the left and right pins are connected, creating a pathway for current to flow.
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -77,8 +78,8 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
 
 .. note::
 
-   * You can open the file ``4.1_button.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\4.1_button``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``5.1_button.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.1_button``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html
 

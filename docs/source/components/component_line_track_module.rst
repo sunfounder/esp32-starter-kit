@@ -46,6 +46,6 @@ Similarly, when it shines on a white surface, the reflected light will become mo
 
 **Example**
 
-* :ref:`ar_line_track` (Learning Project)
-* :ref:`follow_the_line` (Car Project)
+* :ref:`ar_line_track` (Arduino Project)
+* :ref:`py_line_track` (MicroPython Project)
 * :ref:`sh_protect_heart` (Scratch Project)

@@ -38,8 +38,6 @@ Choosing different modes by using the jumper cap.
 
 **Example**
 
-* :ref:`2.2.7_c` (C Project)
-* :ref:`2.2.7_py` (Python Project)
-* :ref:`4.1.4 Automatic Capture Camera` (Python Project)
-* :ref:`1.5 Wake up the Owl` (Scratch Project)
-
+* :ref:`ar_pir` (Arduino Project)
+* :ref:`iot_telegram` (Arduino Project)
+* :ref:`py_pir` (MicroPython Project)

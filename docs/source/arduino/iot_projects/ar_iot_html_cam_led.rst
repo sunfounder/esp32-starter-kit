@@ -1,4 +1,4 @@
-3. Custom Video Streaming Web Server
+8.3 Custom Video Streaming Web Server
 ========================================
 
 The Custom Video Streaming Web Server project offers an opportunity to learn how to create a web page from scratch and customize it to play video streams. Additionally, you can incorporate interactive buttons, such as ON and OFF, to control the LED's brightness.
@@ -12,7 +12,7 @@ By building this project, you will gain hands-on experience in web development, 
     .. raw:: html
 
         <video loop autoplay muted style = "max-width:100%">
-            <source src="_static/video/plugin_camera.mp4" type="video/mp4">
+            <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -20,7 +20,8 @@ By building this project, you will gain hands-on experience in web development, 
 
     .. image:: ../../img/wiring/iot_3_html_led_bb.png
     
-    * :ref:`cpn_esp32_extension`
+    * :ref:`cpn_esp32_wroom_32e`
+    * :ref:`cpn_esp32_camera_extension`
     * :ref:`cpn_breadboard`
     * :ref:`cpn_wires`
     * :ref:`cpn_resistor`
@@ -28,14 +29,16 @@ By building this project, you will gain hands-on experience in web development, 
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Open the code.
 
     * Open the ``iot_3_html_cam_led.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_3_html_cam_led`` directory, or copy the code into the Arduino IDE.
-    * Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
  
     .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/a5e33c30-63dc-4987-94c3-89bc6a599e24/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 #. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
 
@@ -60,4 +63,4 @@ By building this project, you will gain hands-on experience in web development, 
 
 #. Insert a battery into the expansion board and remove the USB cable. Now you can place the device anywhere you desire within the Wi-Fi range.
 
-    .. image:: img/plugin_battery.png
+    .. image:: ../../img/plugin_battery.png

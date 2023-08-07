@@ -1,6 +1,6 @@
 .. _ar_lcd1602:
 
-1.6 Display Characters
+2.6 Display Characters
 ===============================
 
 Now, we will explore the fascinating world of character display using the I2C LCD1602 module.
@@ -34,7 +34,8 @@ Here is a list of available pins on the ESP32 board for this project.
 .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_lcd`
 
@@ -42,8 +43,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``1.6_lcd1602.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\1.6_lcd1602``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``2.6_lcd1602.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\2.6_lcd1602``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/lcd_lib.png

@@ -1,6 +1,6 @@
 .. _py_button:
 
-4.1 Reading Button Value
+5.1 Reading Button Value
 ==============================================
 
 In this interactive project, we'll venture into the realm of button controls and LED manipulation.
@@ -68,7 +68,8 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
     
     A four-pin button is designed in an H shape. When the button is not pressed, the left and right pins are disconnected, and current cannot flow between them. However, when the button is pressed, the left and right pins are connected, creating a pathway for current to flow.
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -79,7 +80,7 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
 
 .. note::
 
-    * Open the ``4.1_read_button_value.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.1_read_button_value.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

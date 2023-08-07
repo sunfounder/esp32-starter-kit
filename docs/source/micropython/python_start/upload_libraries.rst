@@ -1,7 +1,7 @@
 
 .. _add_libraries_py:
 
-4. Upload the Libraries (Important)
+1.4 Upload the Libraries (Important)
 ======================================
 
 In some projects, you will need additional libraries. So here we upload these libraries to ESP32 first, and then we can run the code directly later.

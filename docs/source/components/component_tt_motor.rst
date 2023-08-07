@@ -33,8 +33,6 @@ Note that these are very basic motors with no built-in encoder, speed control or
 
 **Example**
 
-* :ref:`ar_motor` (Learning Project)
-* :ref:`car_move` (Car Project)
-* :ref:`car_speed` (Car Project)
-* :ref:`iot_car` (IoT Project)
-* :ref:`sh_test` (Scratch Project)
+* :ref:`ar_motor` (Arduino Project)
+* :ref:`py_motor` (MicroPython Project)
+* :ref:`sh_rotating_fan` (Scratch Project)

@@ -1,254 +1,154 @@
-10. Android App – RGB LED with Arduino and Bluetooth
-=======================================================
+.. _iot_bluetooth_app:
 
-In this project you’re going to build an Android app to control the color of an RGB LED with a smartphone via Bluetooth.
+8.10 Android Application - RGB LED Operation via Arduino and Bluetooth
+=======================================================================
 
-You’re going to build the Android app using a free web based software called MIT App Inventor 2. This is a great project to learn how to interface the Arduino with a smartphone.
+The objective of this project is to develop an Android application capable of manipulating the hue of an RGB LED through a smartphone using Bluetooth technology.
 
+This Android application will be constructed utilizing a complimentary web-based platform known as MIT App Inventor 2. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
 
+.. raw:: html
 
-If you’re not familiar with RGB LEDs, read the following post: How do RGB LEDs work?
-
-Download Android Apps for Arduino with MIT App Inventor 2
-
-Parts Required
-Here’s a complete list of the parts required for this project:
-
-
-
-Arduino UNO – read Best Arduino Starter Kits
-Bluetooth module HC-04 or HC-05 or HC-06 
-RGB LED (common anode)
-3 x 220Ohm resistor 
-Breadboard
-Jumper wires
-Additionally, you also need a smartphone with bluetooth.
-
-You can use the preceding links or go directly to MakerAdvisor.com/tools to find all the parts for your projects at the best price!
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../../_static/video/10_ble_app.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 
+**1. Creation of the Android Application**
 
-Creating the Android App
-The Android App will be created using a free web application called MIT App Inventor. MIT App Inventor is a great place to get started with Android development, because it allows you to build simple apps with drag-n-drop.
+The Android application will be fashioned using a free web application known as |link_appinventor|. 
+MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
+features allowing for the creation of simplistic applications.
 
-You need a Google account to sign up for MIT App Inventor and here’s the login page: http://ai2.appinventor.mit.edu.
+Now, let's begin.
 
-After login in go to Projects >Import project (.aia) from my computer and upload the .aia file. Click here to download the .aia file.
+#. Here is the login page: http://ai2.appinventor.mit.edu. You will require a Google account to register with MIT App Inventor.
 
-import
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``control_rgb_led.aia`` file located in the path ``esp32-ultimate-kit-main\c\codes\iot_10_bluetooth_app_inventor``.
 
-After uploading the .aia file. You’ll see the application on the MIT App Inventor Software.
+   .. image:: img/10_ble_app_inventor1.png
 
-Designer
-With MIT App Inventor you have 2 main sections: designer and blocks.
+#. Upon uploading the ``.aia`` file, you will see the application on the **MIT App Inventor** software. This is a pre-configured template. You can modify this template after you have familiarized yourself with **MIT App Inventor** through the following steps.
 
-The designer is what gives you the ability to add buttons, add text, add screens and edit the overall app look. Int the App Inventor software the app looks like this:
+   .. image:: img/10_ble_app_inventor2.png
 
+#. In **MIT App Inventor**, you have 2 primary sections: the **Designer** and the **Blocks**.
 
+   .. image:: img/10_ble_app_inventor3.png
 
-The app looks different in the software and in your smartphone. This is the how the app looks in our smartphone:
+#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
 
-
-
-Blocks
-Then, you have the blocks section. The blocks sections is what allows to create custom functionality for your app, so when you press the buttons it actually does something with that information. These are the blocks for this app (click on the image to zoom):
-
-
-
-Installing the App
-To install the app in your smartphone, go to the Build tab.build
-
-You can either generate a QR code that you can scan with your smartphone and automatically install the app in your smartphone.
-Or you can download the .apk file, connect your smartphone to your computer and move the .apk file to the phone.
-Simply follow the installation wizard to install the App and it’s done!
-
-Code
-Download or copy the following code to your Arduino IDE, and upload it to your Arduino board. Make sure you have the right Board and COM port selected.
-
-Note: before uploading the code, make sure you have the TX and RX pins disconnected from the bluetooth module!
-
-/*
- * Rui Santos 
- * Complete Project Details https://randomnerdtutorials.com
- */
-
-#define max_char 12
-char message[max_char];    // stores you message
-char r_char;               // reads each character
-byte index = 0;            // defines the position into your array
-int i;
-
-int redPin = 11;     // Red RGB pin -> D11
-int greenPin = 10;   // Green RGB pin -> D10
-int bluePin = 9;     // Blue RGB pin -> D9
-
-int redValue = 255;     // Red RGB pin -> D11
-int greenValue = 255;   // Green RGB pin -> D10
-int blueValue = 255;     // Blue RGB pin -> D9
-
-String redTempValue;     // Red RGB pin -> D11
-String greenTempValue;   // Green RGB pin -> D10
-String blueTempValue;     // Blue RGB pin -> D9
-
-int flag = 0;
-char currentColor;  
-
-void setup() {
-  pinMode(redPin,OUTPUT);
-  pinMode(bluePin,OUTPUT);
-  pinMode(greenPin, OUTPUT);
-  // initialize serial communication at 9600 bits per second:
-  Serial.begin(9600);
-}
-
-void loop() {
-  //while is reading the message 
-  while(Serial.available() > 0){
-    flag = 0;
-    //the message can have up to 12 characters 
-    if(index < (max_char-1)){         
-      r_char = Serial.read();      // Reads a character
-      message[index] = r_char;     // Stores the character in message array
-      if(r_char=='R'){
-         currentColor = 'R';
-         redTempValue = "";
-      }
-      else if(r_char=='G'){
-         currentColor = 'G';
-         greenTempValue = "";
-      }
-      else if(r_char=='B'){
-         currentColor = 'B';
-         blueTempValue = "";
-      }
-      if(currentColor == 'R' && r_char!='R'){
-         redTempValue += r_char;
-      }
-      else if(currentColor == 'G' && r_char!='G'){
-         greenTempValue += r_char;
-      }
-      else if(currentColor == 'B' && r_char!='B'){
-         blueTempValue += r_char;
-      }
-      index++;                     // Increment position
-      message[index] = '\0';       // Delete the last position
-   }
+   .. image:: img/10_ble_app_inventor2.png
    
- }
- 
- if(flag == 0){
-   analogWrite(redPin, 255-redTempValue.toInt());
-   analogWrite(greenPin, 255-greenTempValue.toInt());
-   analogWrite(bluePin, 255-blueTempValue.toInt());
-   /*Serial.print('R');
-   Serial.println(redTempValue);
-   Serial.print('G');
-   Serial.println(greenTempValue);
-   Serial.print('B');
-   Serial.println(blueTempValue);
-   Serial.print("MESSAGE ");*/
-   Serial.println(message);
-   flag=1;
-       for(i=0; i<12; i++){
-      message[i] = '\0';
-    } 
-    //resests the index
-    index=0;  
- }
 
-}
-Sponsored by Vivint Home Security
-Which home security system do experts recommend?
-Experts love Vivint. Why? Vivint gives you professional protection from break-ins while being incredibly easy to use. Get yours today!
+#. Subsequently, you have the **Blocks** section. The **Blocks** section facilitates the creation of bespoke functions for your application.
 
-Learn More
+   .. image:: img/10_ble_app_inventor5.png
+
+#. To install the application on a smartphone, navigate to the **Build** tab.
+
+   .. image:: img/10_ble_app_inventor6.png
+
+   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation.
+   * If you wish to upload this app to **Google Play** or another app marketplace, you can generate a ``.aab`` file.
 
 
+**2. Upload the code**
 
-View raw code
+#. Build the circuit.
 
-Schematics
-Follow the schematic diagram in the following figure to wire your circuit.
+   .. image:: ../../components/img/rgb_pin.jpg
+      :width: 200
+      :align: center
 
+   The RGB LED comprises 4 pins: the elongated pin is the common cathode pin, typically connected to GND; the pin to the left of the longest pin represents Red; and the two pins on the right symbolize Green and Blue.
 
+   .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-Sponsored by Vivint Home Security
-Which home security system do experts recommend?
-Experts love Vivint. Why? Vivint gives you professional protection from break-ins while being incredibly easy to use. Get yours today!
+   * :ref:`cpn_esp32_wroom_32e`
+   * :ref:`cpn_esp32_camera_extension`
+   * :ref:`cpn_breadboard`
+   * :ref:`cpn_wires`
+   * :ref:`cpn_resistor`
+   * :ref:`cpn_rgb`
 
-Learn More
+#. Subsequently, connect the ESP32-WROOM-32E to your computer using a USB cable.
 
+   .. image:: ../../img/plugin_esp32.png
 
+#. Open the ``iot_10_bluetooth_app_inventor.ino`` file situated in the ``esp32-ultimate-kit-main\c\codes\iot_10_bluetooth_app_inventor`` directory, or copy the code into the Arduino IDE.
 
-Note: If you’re using an RGB LED common cathode, you need to connect the longer lead to GND.
+   .. raw:: html
 
-Important: Here’s the bluetooth module connections to the Arduino:
+      <iframe src=https://create.arduino.cc/editor/sunfounder01/07622bb5-31eb-4a89-b6f2-085f3332051f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Bluetooth module TX connects to Arduino RX
-Bluetooth module RX connects to Arduino TX
-Here’s how your circuit should look:
+#. Upon selecting the appropriate board (**ESP32 Dev Module**) and port, click the **Upload** button.
 
-#. Build the circuit. 
+**3. App and ESP32 Connection**
 
-    .. image:: ../../img/wiring/iot_10_bluetooth_led_bb.png
+Ensure that the application created earlier is installed on your smartphone.
 
+#. Initially, activate **Bluetooth** on your smartphone.
 
-Launching the App
-If you haven’t generated the .apk file in a previous step, you can click here to download the .apk file (which is the Android App installation file). Move that file to your smartphone and open it. Follow the installation wizard to install the app.
+   .. image:: img/10_ble_mobile1.png
+      :width: 500
+      :align: center
 
-Turn on your smartphone’s Bluetooth.
+#. Navigate to the **Bluetooth settings** on your smartphone and find **ESP32RGB**.
 
-screenshot_2016-10-09-15-14-52-copy
-
-Make sure you pair your smartphone with the bluetooth module – search for paired devices in your smartphone’s bluetooth settings.
-
-Then, open the newly installed app. Tap on the Connect bluetooth button to connect via bluetooth to the arduino bluetooth module.
-
-
-
-Select your Bluetooth module (it should be named linvor).
-
-
-
-Now, it’s ready to use!
-
-Demonstration
-Here’s your app in action. Move the sliders and click on CHANGE COLOR to set your RGB LED color to the selected color.
+   .. image:: img/10_ble_mobile2.png
+      :width: 500
+      :align: center
 
 
+#. After clicking it, agree to the **Pair** request in the pop-up window.
 
+   .. image:: img/10_ble_mobile3.png
+      :width: 500
+      :align: center
 
+#. Now open the recently installed **Control_RGB_LED** APP.
 
-Troubleshooting
-1.  I can’t upload code to my Arduino board.
+   .. image:: img/10_ble_mobile4.png
+      :align: center
 
-Check if you have the TX and RX cables from the bluetooth module disconnected.
+#. In the APP, click on **Connect Bluetooth** to establish a connection between the APP and ESP32.
 
-When you’re uploading code to your Arduino you should disconnect the TX and RX cables from the bluetooth module. These pins are needed for serial communication between the Arduino and your computer.
+   .. image:: img/10_ble_mobile5.png
+      :width: 500
+      :align: center
 
- 2. I can’t find my bluetooth module device.
+#. Select the ``xx.xx.xx.xx.xx.xx ESP32RGB`` that comes up. if you changed ``SerialBT.begin("ESP32RGB");`` in the code, then just select the name of your setting.
 
-Make sure you have paired your smartphone with your bluetooth module. Go to your bluetooth settings and search for the available devices. Your bluetooth module device should appear (it’s often called: linvor, HC-06, HC-04, HC-05 …). Pair with it. If it asks for a password, it’s 1234.
+   .. image:: img/10_ble_mobile6.png
+      :width: 500
+      :align: center
 
-3. The app doesn’t interact with the Arduino.
+#. If you have been waiting for a while and still can't see any device names, it may be that this APP is not allowed to scan surrounding devices. In this case, you need to adjust the settings manually.
 
-If your Android app is connected to your bluetooth module, it should display the “Connected” message (as shown below). Otherwise, press the “Connect Bluetooth” to establish a bluetooth communication.
+   * Long press the APP icon and click on the resulting **APP Info**. If you have another method to access this page, follow that.
 
+      .. image:: img/10_ble_mobile8.png
+         :width: 500
+         :align: center
 
+   * Navigate to the **Permissions** page.
 
-Double-check your bluetooth module connections:
+      .. image:: img/10_ble_mobile9.png
+         :width: 500
+         :align: center
 
-Bluetooth module TX connects to Arduino RX
-Bluetooth module RX connects to Arduino TX
-4. My bluetooth module is asking for a password.
+   * Locate **Nearby devices**, and select **Always** to allow this APP to scan for nearby devices.
 
-If your bluetooth module asks for a password, type 1234.
+      .. image:: img/10_ble_mobile10.png
+         :width: 500
+         :align: center
 
-Wrapping up
-In this project you learned how to control the color of an RGB LED with an Android App built with the MIT App Inventor 2 software.
+   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
 
-Now, feel free to change how the app looks and give it more functionalities.
+#. Upon successful connection, you will automatically return to the main page, where it will display connected. Now you can adjust the RGB values and change the color of the RGB display by pressing the **Change Color** button.
 
-If you like this project, make sure you check our latest course: Android Apps for Arduino with MIT App Inventor 2.
-
-
+   .. image:: img/10_ble_mobile7.png
+      :width: 500
+      :align: center

@@ -22,7 +22,8 @@ Here is the electronic symbol of photoresistor.
 **Example**
 
 
-* :ref:`ar_photoresistor` (Learning Project)
-* :ref:`iot_home` (IoT Project)
-* :ref:`iot_plant` (IoT Project)
+* :ref:`ar_photoresistor` (Arduino Project)
+* :ref:`ar_plant_monitor` (Arduino Project)
+* :ref:`py_photoresistor` (MicroPython Project)
+* :ref:`py_plant_monitor` (MicroPython Project)
 

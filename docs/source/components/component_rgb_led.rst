@@ -4,28 +4,60 @@ RGB LED
 =================
 
 .. image:: img/rgb_led.png
-    :width: 100
-    
+    :width: 200
+    :align: center
+
 RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
 
-.. image:: img/rgb_light.png
-    :width: 600
+**Features**
 
-RGB LEDs can be categorized into common anode and common cathode ones. In this kit, the latter is used. The **common cathode**, or CC, means to connect the cathodes of the three LEDs. After you connect it with GND and plug in the three pins, the LED will flash the corresponding color. 
+* Color: Tri-Color (Red/Green/Blue)
+* Common Cathode
+* 5mm Clear Round Lens
+* Forward Voltage: Red: DC 2.0 - 2.2V; Blue&Green: DC 3.0 - 3.2V (IF=20mA) 
+* 0.06 Watts DIP RGB LED
+* Luminance Brighter Up To +20%
+* Viewing Angle: 30°
 
-Its circuit symbol is shown as figure.
+**Common Anode and Common Cathode**
 
-.. image:: img/rgb_symbol.png
-    :width: 300
+RGB LEDs can be categorized into common anode and common cathode ones. 
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Touch its plastic shell and you will find a cut. The pin closest to the cut is the first pin, marked as Red, then GND, Green and Blue in turn. 
+* In a common cathode RGB LED, all three LEDs share a negative connection (cathode).
+* In a common anode RGB LED, the three LEDs share a positive connection (anode).
+
+.. image:: img/rgb_cc_ca.jpg
+
+.. note::
+    We use the common cathode one.
+
+**RGB LED Pins**
+
+An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Place the RGB LEDs as shown, so that the longest lead is second from the left. Then the pin numbers of the RGB LEDs should be Red, GND, Green and Blue.
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
+You can also use the multimeter to select Diode Test mode, and then connect as shown below to measure the color of each pin.
+
+.. image:: img/rgb_test.png
+
+**Mix colors**
+
+To generate additional colors, you can combine the three colors at different intensities. To adjust the intensity of each LED, you can use a PWM signal.
+
+Because the LEDs are so close to each other, our eyes see the result of the color combination rather than the three colors individually.
+
+Check out the table below to see how the colors are combined. It will give you an idea of how the color mixing chart works and how different colors are produced.
+
+.. image:: img/rgb_mix.png
+
+
+
 **Example**
 
-* :ref:`ar_rgb` (Learning Project)
-* :ref:`ar_threshold` (Learning Project)
+* :ref:`ar_rgb` (Arduino Project)
+* :ref:`ar_color_gradient` (Arduino Project)
+* :ref:`py_rgb` (MicroPython Project)
 * :ref:`sh_colorful_ball` (Scratch Project)
 

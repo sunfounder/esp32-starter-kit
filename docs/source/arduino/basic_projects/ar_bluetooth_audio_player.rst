@@ -1,7 +1,7 @@
 
 .. _bluetooth_audio_player:
 
-6.3 Bluebooth Audio Player
+7.3 Bluebooth Audio Player
 ==============================
 
 The aim of the project is to provide a simple solution for playing audio from a Bluetooth-enabled 
@@ -30,10 +30,17 @@ or noise during playback.
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
+    * :ref:`cpn_esp32_wroom_32e`
+    * :ref:`cpn_esp32_camera_extension`
+    * :ref:`cpn_breadboard`
+    * :ref:`cpn_wires`
+    * :ref:`cpn_resistor`
+    * :ref:`cpn_audio_speaker`
+
 #. Open the code.
 
-    * Open the ``6.3_bluetooth_audio_player.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\6.3_bluetooth_audio_player``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``7.3_bluetooth_audio_player.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\7.3_bluetooth_audio_player``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``ESP32-A2DP`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
 
     .. raw:: html

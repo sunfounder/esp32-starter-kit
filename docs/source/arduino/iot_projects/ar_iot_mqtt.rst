@@ -1,4 +1,6 @@
-4. IoT Communication with MQTT
+.. _ar_iot_mqtt:
+
+8.4 IoT Communication with MQTT
 =======================================
 
 This project focuses on utilizing MQTT, a popular communication protocol in the Internet of Things (IoT) domain. MQTT enables IoT devices to exchange data using a publish/subscribe model, where devices communicate through topics.
@@ -17,17 +19,19 @@ In this project, we explore the implementation of MQTT by building a circuit tha
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Open the code.
 
     * Open the ``iot_4_mqtt.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_4_mqtt`` directory, or copy the code into the Arduino IDE.
-    * Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``PubSubClient`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/mqtt_lib.png
  
     .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/e45a4bd6-9b35-47f0-af5e-92d802004087/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 #. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
 

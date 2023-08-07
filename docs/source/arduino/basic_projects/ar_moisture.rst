@@ -1,6 +1,6 @@
 .. _ar_moisture:
 
-4.9 Measure Soil Moisture
+5.9 Measure Soil Moisture
 ==========================
 This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture.
 
@@ -40,7 +40,8 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 .. image:: ../../img/wiring/5.9_moisture_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_soil_moisture`
 
@@ -48,8 +49,8 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 .. note::
 
-    * Open the ``4.9_moisture.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.9_moisture``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``5.9_moisture.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.9_moisture``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     
 .. raw:: html

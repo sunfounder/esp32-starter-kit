@@ -1,6 +1,6 @@
-.. _ar_ir_obstacle:
+.. _py_ir_obstacle:
 
-4.3 Detect the Obstacle
+5.3 Detect the Obstacle
 ===================================
 
 This module is commonly installed on the car and robot to judge the
@@ -43,7 +43,8 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
 
 .. image:: ../../img/wiring/5.3_avoid_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_avoid`
 * :ref:`cpn_wires`
 
@@ -52,7 +53,7 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
 
 .. note::
 
-    * Open the ``4.3_avoid.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.3_avoid.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

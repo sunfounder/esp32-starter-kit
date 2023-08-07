@@ -1,7 +1,9 @@
-5.6 Electronic Dice
+.. _py_dice:
+
+6.6 Electronic Dice
 ================================
 
-This project builds upon the :ref:`py_74hc_7seg` project by adding a button to control the digit displayed on the seven-segment display.
+This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
 
 When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
 
@@ -12,7 +14,7 @@ This cycle continues each time the button is pressed.
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`py_74hc595_7seg` project by adding a button to control the digit displayed on the seven-segment display.
+This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
 
 The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
 
@@ -21,7 +23,8 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_74hc595`
@@ -32,7 +35,7 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. note::
 
-    * Open the ``5.6_electronic_dice.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.6_electronic_dice.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

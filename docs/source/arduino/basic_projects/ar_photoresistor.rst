@@ -1,6 +1,6 @@
 .. _ar_photoresistor:
 
-4.7 Feel the Light
+5.7 Feel the Light
 ===========================
 
 The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
@@ -40,7 +40,8 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -50,8 +51,8 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
 .. note::
 
-    * Open the ``4.7_feel_the_light.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.7_feel_the_light``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``5.7_feel_the_light.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.7_feel_the_light``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     
 .. raw:: html
@@ -66,6 +67,6 @@ The stronger the current ambient brightness, the larger the value displayed on t
 
     Default is 12 bits (range from 0 to 4096) for all chips except ESP32S3 where default is 13 bits (range from 0 to 8192).
 
-    You can add ``analogReadResolution(10);`` to ``setup()`` function to set a different resolution, such as ``10``.
+    You can add ``analogReadResolution(10);`` to ``setup()`` function to set a different resolution, such as ``20``.
 
     

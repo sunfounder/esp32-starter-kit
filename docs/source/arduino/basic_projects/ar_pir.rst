@@ -1,6 +1,6 @@
 .. _ar_pir:
 
-4.5 Detect Human Movement
+5.5 Detect Human Movement
 ========================================
 
 Passive infrared sensor (PIR sensor) is a common sensor that can measure infrared (IR) light emitted by objects in its field of view.
@@ -61,7 +61,8 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
 
 .. image:: ../../img/wiring/5.5_pir_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -72,8 +73,8 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
 
 .. note::
 
-   * You can open the file ``4.5_pir.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\4.5_pir``. 
-   * Or copy this code into **Arduino IDE**.  
+   * You can open the file ``5.5_pir.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.5_pir``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.  
 
 .. raw:: html
 

@@ -1,6 +1,6 @@
 .. _py_transistor:
 
-4.6 Two Kinds of Transistors
+5.6 Two Kinds of Transistors
 ==========================================
 This kit is equipped with two types of transistors, S8550 and S8050, the former is PNP and the latter is NPN. They look very similar, and we need to check carefully to see their labels.
 When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
@@ -82,7 +82,8 @@ The only difference you will notice between this circuit and the previous one is
 
 .. image:: ../../img/wiring/5.6_s8550_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -94,7 +95,7 @@ The only difference you will notice between this circuit and the previous one is
 
 .. note::
 
-    * Open the ``4.6_transistor.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.6_transistor.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

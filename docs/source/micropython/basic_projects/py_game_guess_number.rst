@@ -1,6 +1,6 @@
 .. _py_guess_number:
 
-5.7 Guess Number
+6.7 Guess Number
 ==============================
 
 Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
@@ -22,7 +22,8 @@ until finally, someone hits the jackpot and wins the game!
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_receiver`
@@ -32,7 +33,7 @@ until finally, someone hits the jackpot and wins the game!
 
 .. note::
 
-    * Open the ``5.7_game_guess_number.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.7_game_guess_number.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
     * The ``lcd1602.py`` and ``ir_rx`` libraries are used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
 
@@ -203,6 +204,7 @@ The following is a detailed analysis of part of the code.
 #. Initialize the guessing game variables.
 
     .. code-block:: python
+    
         lower = 0
         upper = 99
         pointValue = int(urandom.uniform(lower, upper))

@@ -1,6 +1,6 @@
 .. _ar_guess_number:
 
-5.7 Guess Number
+6.7 Guess Number
 ==================
 Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
 
@@ -21,7 +21,8 @@ until finally, someone hits the jackpot and wins the game!
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_receiver`
@@ -32,8 +33,8 @@ until finally, someone hits the jackpot and wins the game!
 
 .. note::
 
-    * You can open the file ``5.7_guess_number.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.7_guess_number`` directly.
-    * The ``LiquidCrystal_I2C`` and  ``IRremoteESP8266`` libraries are used here, refer to :ref:`install_libraries_ar` for a tutorial to install.
+    * You can open the file ``6.7_guess_number.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.7_guess_number`` directly.
+    * The ``LiquidCrystal_I2C`` and  ``IRremoteESP8266`` libraries are used here, refer to :ref:`install_lib_man` for a tutorial to install.
 
 
 .. raw:: html

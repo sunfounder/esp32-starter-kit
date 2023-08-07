@@ -1,6 +1,6 @@
 .. _py_pir:
 
-4.5 Detect Human Movement
+5.5 Detect Human Movement
 ========================================
 
 Passive infrared sensor (PIR sensor) is a common sensor that can measure infrared (IR) light emitted by objects in its field of view.
@@ -61,7 +61,8 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
 
 .. image:: ../../img/wiring/5.5_pir_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -72,7 +73,7 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
 
 .. note::
 
-    * Open the ``4.5_detect_human_movement.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.5_detect_human_movement.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 
@@ -114,9 +115,14 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
 When the script is running, the LED will light up for 5 seconds and then go off when the PIR module detects someone passing.
 
 .. note::
+
     The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
 
-    |img_PIR_TTE|
+    .. image:: ../../components/img/PIR_TTE.png
+        :width: 300
+        :align: center
+
+
 
 
 **How it work?**

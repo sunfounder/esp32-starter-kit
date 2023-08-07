@@ -1,6 +1,6 @@
 .. _py_line_track:
 
-4.4 Detect the Line
+5.4 Detect the Line
 ===================================
 
 The line-tracking module is used to detect the presence of black areas on the ground, such as black lines taped with electrical tape.
@@ -46,7 +46,8 @@ When the line tracking module detects a black line, IO14 returns a high level. O
     :align: center
     :width: 600
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_line_track`
 
@@ -55,7 +56,7 @@ When the line tracking module detects a black line, IO14 returns a high level. O
 
 .. note::
 
-    * Open the ``4.4_detect_the_line.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.4_detect_the_line.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

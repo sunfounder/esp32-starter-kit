@@ -1,6 +1,6 @@
 .. _py_moisture:
 
-4.9 Measure Soil Moisture
+5.9 Measure Soil Moisture
 ==========================
 
 This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture.
@@ -41,7 +41,8 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 .. image:: ../../img/wiring/5.9_moisture_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
 * :ref:`cpn_soil_moisture`
 
@@ -50,7 +51,7 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 .. note::
 
-    * Open the ``4.9_moisture.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``5.9_moisture.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

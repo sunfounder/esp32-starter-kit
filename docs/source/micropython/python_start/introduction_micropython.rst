@@ -1,4 +1,4 @@
-1. Introduction of MicroPython
+1.1 Introduction of MicroPython
 ======================================
 
 MicroPython is a software implementation of a programming language largely compatible with Python 3, written in C, that is optimized to run on a microcontroller.[3][4]

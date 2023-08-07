@@ -1,4 +1,4 @@
-6.6 Take Photo SD
+7.6 Take Photo SD
 ============================
 
 This document describes a project that involves taking a photo using the ESP32-CAM and saving it to an SD card. 
@@ -16,27 +16,27 @@ It is also important to ensure that the SD card is properly mounted before savin
 
 #. Then, remove the card reader and insert the SD card into the expansion board.
 
-    .. image:: img/insert_sd.png
+    .. image:: ../../img/insert_sd.png
 
 #. Now, plug in the camera.
 
     .. raw:: html
 
-    <video loop autoplay muted style = "max-width:100%">
-        <source src="_static/video/plugin_camera.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <video loop autoplay muted style = "max-width:100%">
+            <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
 #. Connect ESP32-WROOM-32E to the computer using the USB cable.
 
-    .. image:: img/plugin_esp32.png
+    .. image:: ../../img/plugin_esp32.png
 
 #. Open the code.
 
     .. note::
 
-        * Open the ``6.6_take_photo_sd.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\6.6_take_photo_sd``.
-        * Or copy this code into **Arduino IDE**.
+        * Open the ``7.6_take_photo_sd.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\7.6_take_photo_sd``.
+        * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
     .. raw:: html
 

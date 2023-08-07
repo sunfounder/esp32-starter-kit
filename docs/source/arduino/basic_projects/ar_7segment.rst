@@ -1,6 +1,6 @@
-.. _ar_segment:
+.. _ar_7_segment:
 
-1.5 7 Segment Display
+2.5 7 Segment Display
 ===================================
 
 Welcome to this fascinating project! In this project, we will explore the enchanting world of displaying numbers from 0 to 9 on a seven-segment display.
@@ -24,7 +24,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. image:: ../../img/circuit/circuit_2.5_74hc595_7_segment.png
 
-Here the wiring principle is basically the same as :ref:`py_74hc_led`, the only difference is that Q0-Q7 are connected to the a ~ g pins of the 7 Segment Display.
+Here the wiring principle is basically the same as :ref:`ar_74hc595`, the only difference is that Q0-Q7 are connected to the a ~ g pins of the 7 Segment Display.
 
 .. list-table:: Wiring
     :widths: 15 25
@@ -54,7 +54,8 @@ Here the wiring principle is basically the same as :ref:`py_74hc_led`, the only 
 
 .. image:: ../../img/wiring/2.5_segment_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -66,8 +67,8 @@ Here the wiring principle is basically the same as :ref:`py_74hc_led`, the only 
 
 .. note::
 
-    * Open the ``1.5_7segment.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\1.5_7segment``.
-    * Or copy this code into **Arduino IDE**.
+    * Open the ``2.5_7segment.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\2.5_7segment``.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
 .. raw:: html
 

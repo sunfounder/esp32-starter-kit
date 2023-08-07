@@ -1,4 +1,4 @@
-2. Introduce of Arduino IDE
+1.2 Introduce of Arduino IDE
 =================================
 
 .. image:: img/sp_ide_2.png

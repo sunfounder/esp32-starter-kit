@@ -1,6 +1,6 @@
 .. _py_light_theremin:
 
-5.3 Light Theremin
+6.3 Light Theremin
 =========================
 
 Theremin is an electronic musical instrument that does not require physical contact. Based on the position of the player's hand, it produces different tones.
@@ -28,7 +28,8 @@ the buzzer to produce a melody as you wave your hand over the photoresistor.
 
 .. image:: ../../img/wiring/6.3_theremin_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_resistor`
 * :ref:`cpn_wires`
@@ -41,7 +42,7 @@ the buzzer to produce a melody as you wave your hand over the photoresistor.
 
 .. note::
 
-    * Open the ``5.3_light_theremin.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.3_light_theremin.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

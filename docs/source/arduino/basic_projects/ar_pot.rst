@@ -1,6 +1,6 @@
 .. _ar_potentiometer:
 
-4.8 Turn the Knob
+5.8 Turn the Knob
 ===================
 
 A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
@@ -40,7 +40,8 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
-* :ref:`cpn_esp32_extension`
+* :ref:`cpn_esp32_wroom_32e`
+* :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
@@ -52,8 +53,8 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. note::
 
-   * You can open the file ``4.8_pot.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\4.8_pot``. 
-   * Or copy this code into **Arduino IDE**.
+   * You can open the file ``5.8_pot.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.8_pot``. 
+   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html
      
@@ -91,8 +92,7 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
         }
 
     * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcSetup()`` function is called to set up the PWM channel with the specified frequency and resolution, 
-    and the ``ledcAttachPin()`` function is called to associate the specified LED pin with the PWM channel.
+    * The ``ledcSetup()`` function is called to set up the PWM channel with the specified frequency and resolution, and the ``ledcAttachPin()`` function is called to associate the specified LED pin with the PWM channel.
 
 #. Main loop (executed repeatedly) in the loop() function.
 
