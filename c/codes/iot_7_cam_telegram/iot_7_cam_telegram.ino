@@ -18,17 +18,18 @@
 #include <Wire.h>
 //#include "SparkFunBME280.h"
 
-// Replace with your network credentials
-const char* ssid = "MakerStarsHall";
-const char* password = "sunfounder";
+
+// Replace the next variables with your SSID/Password combination
+const char* ssid = "<SSID>";
+const char* password = "<PASSWORD>";
 
 // Use @myidbot to find out the chat ID of an individual or a group
 // Also note that you need to click "start" on a bot before it can
 // message you
-String chatId = "253411145";
+String chatId = "<CHATID>";
 
 // Initialize Telegram BOT
-String BOTtoken = "5883584234:AAEazAg2A5yKa9fcoiGEGd7qllbtmR9wnrw";
+String BOTtoken = "<BOTTOKEN>";
 
 bool sendPhoto = false;
 

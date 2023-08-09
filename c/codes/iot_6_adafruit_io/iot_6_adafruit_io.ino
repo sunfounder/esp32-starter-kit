@@ -27,8 +27,8 @@
 
 /************************* WiFi Access Point *********************************/
 
-#define WLAN_SSID "MakerStarsHall"
-#define WLAN_PASS "sunfounder"
+#define WLAN_SSID "<SSID>"
+#define WLAN_PASS "<PASSWORD>"
 
 /************************* Adafruit.io Setup *********************************/
 

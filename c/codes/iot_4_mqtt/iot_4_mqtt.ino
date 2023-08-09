@@ -8,8 +8,8 @@
 //#include <Wire.h>
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "MakerStarsHall";
-const char* password = "sunfounder";
+const char* ssid = "<SSID>";
+const char* password = "<PASSWORD>";
 
 // Add your MQTT Broker address, example:
 const char* mqtt_server = "broker.hivemq.com";

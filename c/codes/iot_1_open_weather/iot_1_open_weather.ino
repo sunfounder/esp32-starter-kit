@@ -16,16 +16,16 @@
 
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "MakerStarsHall";
-const char* password = "sunfounder";
+const char* ssid = "<SSID>";
+const char* password = "<PASSWORD>";
 
 // Your Domain name with URL path or IP address with path
-String openWeatherMapApiKey = "732eb03c08055fa2f8ddc2364253919b";
+String openWeatherMapApiKey = "<openWeatherMapApiKey>";
 
 // Replace with your country code and city
 // Fine the country code by https://openweathermap.org/find
-String city = "Shenzhen";
-String countryCode = "CN";
+String city = "<CITY>";
+String countryCode = "<COUNTRY CODE>";
 
 // THE DEFAULT TIMER IS SET TO 10 SECONDS FOR TESTING PURPOSES
 // For a final application, check the API call limits per hour/minute to avoid getting blocked/banned

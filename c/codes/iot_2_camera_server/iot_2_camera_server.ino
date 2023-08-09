@@ -31,11 +31,9 @@
 
 #include "camera_pins.h"
 
-// ===========================
-// Enter your WiFi credentials
-// ===========================
-const char* ssid = "MakerStarsHall";
-const char* password = "sunfounder";
+// Replace the next variables with your SSID/Password combination
+const char* ssid = "<SSID>";
+const char* password = "<PASSWORD>";
 
 void startCameraServer();
 void setupLedFlash(int pin);
