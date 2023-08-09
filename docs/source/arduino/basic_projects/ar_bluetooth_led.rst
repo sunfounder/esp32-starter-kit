@@ -23,7 +23,7 @@ This project is an extension of a previous project(:ref:`ar_bluetooth`), adding 
     * :ref:`cpn_resistor`
     * :ref:`cpn_rgb`
 
-#. Open the ``7.2_bluetooth_rgb_led.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\7.2_bluetooth_rgb_led`` directory, or copy the code into the Arduino IDE.
+#. Open the ``7.2_bluetooth_rgb_led.ino`` file located in the ``esp32-starter-kit-main\c\codes\7.2_bluetooth_rgb_led`` directory, or copy the code into the Arduino IDE.
 
     .. raw:: html
          

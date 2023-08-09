@@ -67,7 +67,7 @@ Here is the truth table of Motor B:
 
 .. note::
 
-    * Open the ``4.1_motor.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.1_motor``.
+    * Open the ``4.1_motor.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.1_motor``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     
@@ -86,7 +86,7 @@ In addition to simply making the motor rotate clockwise and counterclockwise, yo
 
 .. note::
 
-    * Open the ``4.1_motor_pwm.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.1_motor_pwm``.
+    * Open the ``4.1_motor_pwm.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.1_motor_pwm``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     

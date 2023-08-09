@@ -39,7 +39,7 @@ Some libraries are not available through the **Library Manager** and need to be 
 
    .. image:: img/a2dp_add_zip.png
 
-#. Navigate to the directory where the library files are located, such as the ``esp32-ultimate-kit\c\libraries`` folder, and select the desired library file, like ``ESP32-A2DP.zip``. Then, click **Open**.
+#. Navigate to the directory where the library files are located, such as the ``esp32-starter-kit\c\libraries`` folder, and select the desired library file, like ``ESP32-A2DP.zip``. Then, click **Open**.
 
    .. image:: img/a2dp_choose.png
 

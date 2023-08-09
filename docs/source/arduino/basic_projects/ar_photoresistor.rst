@@ -51,7 +51,7 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
 .. note::
 
-    * Open the ``5.7_feel_the_light.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.7_feel_the_light``.
+    * Open the ``5.7_feel_the_light.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.7_feel_the_light``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     

@@ -42,8 +42,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``4.3_servo.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\4.3_servo``. Or copy this code into **Arduino IDE**.
-   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Open the ``4.3_servo.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.3_servo``. Or copy this code into **Arduino IDE**.
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``ESP32Servo`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/servo_lib.png

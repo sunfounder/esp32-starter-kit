@@ -9,7 +9,7 @@ In some projects, you will need additional libraries. So here we upload these li
 #. Download the relevant code from the link below.
 
 
-   * :download:`SunFounder ESP32 Ultimate Kit <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`
+   * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
 
 #. Open Thonny IDE and plug the ESP32 into your computer with a micro USB cable and click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
@@ -20,7 +20,7 @@ In some projects, you will need additional libraries. So here we upload these li
 
     .. image:: img/th_files.png
 
-#. Switch the path to the folder where you downloaded the `code package <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_ before, and then go to the ``esp32-ultimate-kit-main\micropython\libs`` folder.
+#. Switch the path to the folder where you downloaded the `code package <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ before, and then go to the ``esp32-starter-kit-main\micropython\libs`` folder.
 
     .. image:: img/th_path.png
 

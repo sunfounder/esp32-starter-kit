@@ -54,7 +54,7 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 .. note::
 
-   * You can open the file ``3.1_beep.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\3.1_beep``. 
+   * You can open the file ``3.1_beep.ino`` under the path of ``esp32-starter-kit-main\c\codes\3.1_beep``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html

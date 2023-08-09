@@ -25,7 +25,7 @@ Now, let's begin.
 
 #. Here is the login page: http://ai2.appinventor.mit.edu. You will require a Google account to register with MIT App Inventor.
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``control_rgb_led.aia`` file located in the path ``esp32-ultimate-kit-main\c\codes\iot_10_bluetooth_app_inventor``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``control_rgb_led.aia`` file located in the path ``esp32-starter-kit-main\c\codes\iot_10_bluetooth_app_inventor``.
 
    .. image:: img/10_ble_app_inventor1.png
 
@@ -77,7 +77,7 @@ Now, let's begin.
 
    .. image:: ../../img/plugin_esp32.png
 
-#. Open the ``iot_10_bluetooth_app_inventor.ino`` file situated in the ``esp32-ultimate-kit-main\c\codes\iot_10_bluetooth_app_inventor`` directory, or copy the code into the Arduino IDE.
+#. Open the ``iot_10_bluetooth_app_inventor.ino`` file situated in the ``esp32-starter-kit-main\c\codes\iot_10_bluetooth_app_inventor`` directory, or copy the code into the Arduino IDE.
 
    .. raw:: html
 

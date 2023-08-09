@@ -52,7 +52,7 @@ As anyone can interact with the bot you've created, there's a risk of informatio
         
 #. Open the code.
 
-    * Open the ``iot_7_cam_telegram.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_7_cam_telegram`` directory, or copy the code into the Arduino IDE.
+    * Open the ``iot_7_cam_telegram.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_7_cam_telegram`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``UniversalTelegramBot`` and ``ArduinoJson`` libraries are used here, you can install them from the **Library Manager**.
 

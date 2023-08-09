@@ -35,7 +35,7 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. note::
 
-   * You can open the file ``6.5_color_gradient.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.5_color_gradient``. 
+   * You can open the file ``6.5_color_gradient.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.5_color_gradient``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
 .. raw:: html

@@ -6,7 +6,7 @@
 Open and Run Code Directly
 ---------------------------------------------
 
-The code section in the projects tells you exactly which code is used, so double-click on the ``.py`` file with the serial number in the ``esp32-ultimate-kit-main\micropython\codes\`` path to open it. 
+The code section in the projects tells you exactly which code is used, so double-click on the ``.py`` file with the serial number in the ``esp32-starter-kit-main\micropython\codes\`` path to open it. 
 
 However, you must first download the package and upload the libraries, as described in :ref:`add_libraries_py`.
 

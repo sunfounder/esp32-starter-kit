@@ -68,7 +68,7 @@ After waiting for a while, the upload success message will appear.
 
 * Open and run the script directly
 
-Of course, you can open the scripts directly to run them, but please download them from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_ first.
+Of course, you can open the scripts directly to run them, but please download them from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ first.
 
 You can click on **File** in the top right corner and then choose **Open**.
 
@@ -78,7 +78,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-ultimate-kit-main\scratch``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
+Then go to the path of ``esp32-starter-kit-main\scratch``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
 
 .. image:: img/0_stage.png
 
@@ -150,7 +150,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-ultimate-kit-main\scratch``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
+Then go to the path of ``esp32-starter-kit-main\scratch``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
 
 .. image:: img/0_upload.png
 

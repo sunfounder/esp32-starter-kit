@@ -43,7 +43,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``2.6_lcd1602.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\2.6_lcd1602``.
+    * Open the ``2.6_lcd1602.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.6_lcd1602``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 

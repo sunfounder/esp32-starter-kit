@@ -78,7 +78,7 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
 
 .. note::
 
-   * You can open the file ``5.1_button.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.1_button``. 
+   * You can open the file ``5.1_button.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.1_button``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html

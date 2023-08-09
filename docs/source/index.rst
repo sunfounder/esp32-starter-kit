@@ -1,4 +1,4 @@
-SunFounder ESP32 Ultimate Kit
+SunFounder ESP32 Starter Kit
 ==================================================
 
 .. image:: img/esp32_ultimate_kit.png
@@ -6,7 +6,7 @@ SunFounder ESP32 Ultimate Kit
 
 Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
 
-Whether you're keen on basic electronics, IoT integrations, or even car projects, this kit has it all. For MicroPython enthusiasts, we provide a structured introduction to MicroPython, complete with IDE setups and basic syntax lessons. Arduino users are not left behind, with a dedicated section on getting started with Arduino, and a suite of basic projects to jumpstart the learning process.
+Whether you're keen on basic electronics, IoT integrations, this kit has it all. For MicroPython enthusiasts, we provide a structured introduction to MicroPython, complete with IDE setups and basic syntax lessons. Arduino users are not left behind, with a dedicated section on getting started with Arduino, and a suite of basic projects to jumpstart the learning process.
 
 For the creatives, there's a delightful section on integrating with Scratch, allowing for a blend of programming and storytelling. Each project in the kit is meticulously outlined, ensuring you understand the objectives, the circuit assembly, and the programming aspects.
 

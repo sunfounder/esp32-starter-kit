@@ -73,7 +73,7 @@ The result is a simple and affordable way to enjoy the experience of playing the
 
 .. note::
 
-    * You can open the file ``6.1_fruit_piano.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.1_fruit_piano`` directly.
+    * You can open the file ``6.1_fruit_piano.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.1_fruit_piano`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

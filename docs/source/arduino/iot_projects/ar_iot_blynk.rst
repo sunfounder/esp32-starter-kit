@@ -192,7 +192,7 @@ Lastly, don't forget to save your template.
         :width: 700
         :align: center
 
-#. Open the ``iot_9_intrusion_alert_system.ino`` file, which is located in the ``esp32-ultimate-kit-main\c\codes\iot_9_intrusion_alert_system`` directory. You can also copy its content into the Arduino IDE.
+#. Open the ``iot_9_intrusion_alert_system.ino`` file, which is located in the ``esp32-starter-kit-main\c\codes\iot_9_intrusion_alert_system`` directory. You can also copy its content into the Arduino IDE.
 
     .. raw:: html
 

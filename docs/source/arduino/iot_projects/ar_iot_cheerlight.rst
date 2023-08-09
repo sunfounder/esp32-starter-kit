@@ -21,7 +21,7 @@ In this case, we also utilize MQTT, but instead of publishing our own messages, 
 
 #. Open the code.
 
-    * Open the ``iot_5_cheerlights.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_5_cheerlights`` directory, or copy the code into the Arduino IDE.
+    * Open the ``iot_5_cheerlights.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_5_cheerlights`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``PubSubClient`` and ``Adafruit_NeoPixel`` libraries are used here, you can install them from the **Library Manager**.
 

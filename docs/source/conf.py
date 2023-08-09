@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 import sphinx_rtd_theme
 
-project = 'SunFounder ESP32 Ultimate Kit'
+project = 'SunFounder ESP32 Starter Kit'
 copyright = '2023, SunFounder'
 author = 'www.sunfounder.com'
 

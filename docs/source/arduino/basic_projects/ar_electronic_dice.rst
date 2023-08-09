@@ -33,7 +33,7 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. note::
 
-    * Open the ``6.4_electronic_dice.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\6.4_electronic_dice``.
+    * Open the ``6.4_electronic_dice.ino`` file under the path of ``esp32-starter-kit-main\c\codes\6.4_electronic_dice``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     

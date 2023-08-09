@@ -33,7 +33,7 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 
 .. note::
 
-    * You can open the file ``6.2_flowing_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.2_flowing_led`` directly.
+    * You can open the file ``6.2_flowing_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.2_flowing_led`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

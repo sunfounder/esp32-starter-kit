@@ -49,7 +49,7 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 .. note::
 
-    * Open the ``5.9_moisture.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.9_moisture``.
+    * Open the ``5.9_moisture.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.9_moisture``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     

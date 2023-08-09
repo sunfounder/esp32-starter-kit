@@ -33,7 +33,7 @@ until finally, someone hits the jackpot and wins the game!
 
 .. note::
 
-    * Open the ``6.7_game_guess_number.py`` file located in the ``esp32-ultimate-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.7_game_guess_number.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
     * The ``lcd1602.py`` and ``ir_rx`` libraries are used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
 

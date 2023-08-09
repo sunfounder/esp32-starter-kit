@@ -10,9 +10,9 @@ This chapter provides MicroPython users with the necessary knowledge and resourc
 this kit and unleash their creativity in building exciting projects.
 
 
-Here is the complete code package for the ESP32 Ultimate Kit. You can click on the following link to download it:
+Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
 
-* :download:`SunFounder ESP32 Ultimate Kit <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`
+* :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
 Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
 

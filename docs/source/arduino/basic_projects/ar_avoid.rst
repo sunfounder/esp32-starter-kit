@@ -52,7 +52,7 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
 
 .. note::
 
-   * You can open the file ``5.3.detect_the_obstacle.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.3.detect_the_obstacle``. 
+   * You can open the file ``5.3.detect_the_obstacle.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.3.detect_the_obstacle``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html

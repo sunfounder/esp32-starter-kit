@@ -60,7 +60,7 @@ When the line tracking module detects a black line, IO14 returns a high level. O
 
 .. note::
 
-   * You can open the file ``5.4_detect_the_line.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.4_detect_the_line``. 
+   * You can open the file ``5.4_detect_the_line.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.4_detect_the_line``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html

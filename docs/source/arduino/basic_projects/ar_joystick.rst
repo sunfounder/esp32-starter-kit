@@ -46,7 +46,7 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 .. note::
 
-    * Open the ``5.11_joystick.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.11_joystick``.
+    * Open the ``5.11_joystick.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.11_joystick``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
     

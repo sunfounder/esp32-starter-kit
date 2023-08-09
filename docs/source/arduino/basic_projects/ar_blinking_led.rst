@@ -36,7 +36,7 @@ This circuit works on a simple principle, and the current direction is shown in 
 
 .. note::
 
-   * You can open the file ``2.1_hello_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\2.1_hello_led``. 
+   * You can open the file ``2.1_hello_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.1_hello_led``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html

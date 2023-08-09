@@ -23,7 +23,7 @@ In this project, we explore the implementation of MQTT by building a circuit tha
 
 #. Open the code.
 
-    * Open the ``iot_4_mqtt.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_4_mqtt`` directory, or copy the code into the Arduino IDE.
+    * Open the ``iot_4_mqtt.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_4_mqtt`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``PubSubClient`` library is used here, you can install it from the **Library Manager**.
 

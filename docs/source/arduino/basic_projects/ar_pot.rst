@@ -53,7 +53,7 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. note::
 
-   * You can open the file ``5.8_pot.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\5.8_pot``. 
+   * You can open the file ``5.8_pot.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.8_pot``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
    
 .. raw:: html

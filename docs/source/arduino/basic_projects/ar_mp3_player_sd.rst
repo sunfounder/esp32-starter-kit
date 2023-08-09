@@ -45,8 +45,8 @@ Welcome to the exciting world of music with your ESP32! This project brings the 
 
     .. note::
 
-        * Open the ``7.5_mp3_player_sd.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\7.5_mp3_player_sd``. Or copy this code into **Arduino IDE**.
-       * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+        * Open the ``7.5_mp3_player_sd.ino`` file under the path of ``esp32-starter-kit-main\c\codes\7.5_mp3_player_sd``. Or copy this code into **Arduino IDE**.
+        * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
         * The ``ESP8266Audio`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
         
 

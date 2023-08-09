@@ -41,7 +41,7 @@ By reading the data provided by the sensor, we can obtain the current temperatur
 
 .. note::
 
-    * Open the ``5.13_dht11.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.13_dht11``.
+    * Open the ``5.13_dht11.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.13_dht11``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``DHT sensor library`` library is used here, you can install it from the **Library Manager**.
 

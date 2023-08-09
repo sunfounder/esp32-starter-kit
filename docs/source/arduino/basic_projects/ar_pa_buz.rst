@@ -57,7 +57,7 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 .. note::
 
-    * Open the ``3.2_custom_tone.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\3.2_custom_tone``.
+    * Open the ``3.2_custom_tone.ino`` file under the path of ``esp32-starter-kit-main\c\codes\3.2_custom_tone``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
 .. raw:: html

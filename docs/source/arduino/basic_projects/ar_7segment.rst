@@ -67,7 +67,7 @@ Here the wiring principle is basically the same as :ref:`ar_74hc595`, the only d
 
 .. note::
 
-    * Open the ``2.5_7segment.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\2.5_7segment``.
+    * Open the ``2.5_7segment.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.5_7segment``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
 .. raw:: html

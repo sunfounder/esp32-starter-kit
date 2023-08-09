@@ -38,7 +38,7 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
 
 .. note::
 
-    * You can open the file ``6.3_reversing_aid.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.3_reversing_aid`` directly.
+    * You can open the file ``6.3_reversing_aid.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.3_reversing_aid`` directly.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 

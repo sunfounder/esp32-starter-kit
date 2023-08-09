@@ -33,7 +33,7 @@ The following projects are written in order of programming difficulty, it is rec
 
 In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
+Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
 
 Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
 
@@ -64,28 +64,5 @@ But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
     19_protect_heart
     20_dragon
 
-.. .. _sh_car:
-
-.. **3. Play Car with Scratch**
-
-.. The following projects are written in order of programming difficulty, it is recommended to read these books in order.
-
-.. In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
-
-.. Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-ultimate-kit/archive/refs/heads/main.zip>`_.
-
-.. Once the download is complete, unzip it. Refer to :ref:`upload_mode` to run individual scripts directly.
-
-
-.. .. toctree::
-..     :maxdepth: 1
-
-..     car/1_test
-..     car/2_movement
-..     car/3_line_track
-..     car/4_follow_your_hand
-..     car/5_obstacle_avoidance
-..     car/6_follow2
-..     car/7_avoid2
 
 

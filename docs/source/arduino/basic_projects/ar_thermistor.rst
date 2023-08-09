@@ -60,7 +60,7 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
 
 .. note::
 
-    * Open the ``5.10_thermistor.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.10_thermistor``.
+    * Open the ``5.10_thermistor.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.10_thermistor``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
 .. raw:: html

@@ -33,7 +33,7 @@ until finally, someone hits the jackpot and wins the game!
 
 .. note::
 
-    * You can open the file ``6.7_guess_number.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\6.7_guess_number`` directly.
+    * You can open the file ``6.7_guess_number.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.7_guess_number`` directly.
     * The ``LiquidCrystal_I2C`` and  ``IRremoteESP8266`` libraries are used here, refer to :ref:`install_lib_man` for a tutorial to install.
 
 

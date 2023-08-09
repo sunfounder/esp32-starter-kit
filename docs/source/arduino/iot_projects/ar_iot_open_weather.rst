@@ -45,7 +45,7 @@ This project serves as an excellent introduction to working with APIs, Wi-Fi con
 
 #. Open the code.
 
-    * Open the ``iot_1_open_weather.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\iot_1_open_weather`` directory, or copy the code into the Arduino IDE.
+    * Open the ``iot_1_open_weather.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_1_open_weather`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     * The ``LiquidCrystal I2C``  and ``Arduino_JSON`` libraries are used here, you can install them from the **Library Manager**.
 

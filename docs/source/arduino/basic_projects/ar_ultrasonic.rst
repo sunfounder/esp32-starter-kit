@@ -39,7 +39,7 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 .. note::
 
-    * Open the ``5.12_ultrasonic.ino`` file under the path of ``esp32-ultimate-kit-main\c\codes\5.12_ultrasonic``.
+    * Open the ``5.12_ultrasonic.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
     
 .. raw:: html

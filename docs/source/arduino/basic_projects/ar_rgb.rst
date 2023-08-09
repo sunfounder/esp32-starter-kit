@@ -53,7 +53,7 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. note::
 
-   * You can open the file ``2.3_rgb_led.ino`` under the path of ``esp32-ultimate-kit-main\c\codes\2.3_rgb_led``. 
+   * You can open the file ``2.3_rgb_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.3_rgb_led``. 
    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
 
 .. raw:: html

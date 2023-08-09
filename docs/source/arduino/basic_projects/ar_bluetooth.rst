@@ -39,7 +39,7 @@ Here are the step-by-step instructions to set up Bluetooth communication between
 
     .. image:: img/bluetooth_lightblue.png
 
-#. Open the ``7.1_bluetooth.ino`` file located in the ``esp32-ultimate-kit-main\c\codes\7.1_bluetooth`` directory, or copy the code into the Arduino IDE.
+#. Open the ``7.1_bluetooth.ino`` file located in the ``esp32-starter-kit-main\c\codes\7.1_bluetooth`` directory, or copy the code into the Arduino IDE.
 
     .. raw:: html
         
