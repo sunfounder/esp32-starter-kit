@@ -5,8 +5,8 @@
 #define DHTPIN 13     // Set the pin connected to the DHT11 data pin
 #define MOIS_PIN 14 // Soil mOisture module
 #define LIGHT_PIN 35 // Photoresistor
-#define B_1A 27 // Pump pin
-#define B_1B 26 // Pump pin
+#define motor1A 27 // Pump pin
+#define motor2A 26 // Pump pin
 #define BUTTON 32 // Button
 
 #define DHTTYPE DHT11  // DHT 11
@@ -28,8 +28,8 @@ void setup() {
   lcd.clear();
 
   // initialize digital pin as an output.
-  pinMode(B_1A, OUTPUT);
-  pinMode(B_1B, OUTPUT);
+  pinMode(motor1A, OUTPUT);
+  pinMode(motor2A, OUTPUT);
 
   pinMode(BUTTON, INPUT);
 }
@@ -74,12 +74,12 @@ void loop() {
   Serial.println(digitalRead(BUTTON));
   if (digitalRead(BUTTON) == HIGH) {
     // Turn on water pump if button is pressed
-    digitalWrite(B_1A, HIGH);
-    digitalWrite(B_1B, LOW);
+    digitalWrite(motor1A, HIGH);
+    digitalWrite(motor2A, LOW);
   } else {
     // Turn off water pump if button is not pressed
-    digitalWrite(B_1A, LOW);
-    digitalWrite(B_1B, LOW);
+    digitalWrite(motor1A, LOW);
+    digitalWrite(motor2A, LOW);
   }
 
   delay(2000);

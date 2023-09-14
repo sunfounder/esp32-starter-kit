@@ -18,6 +18,9 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 <a id="update"></a>
 ## Update:
 2023-08-09:
+ - change the B_1A to motor1A
+ -  chane the B_1B to motor2A
+2023-08-09:
  - change the name from esp32 ultimate kit to esp32 starter kit
 
 <a id="trouble"></a>

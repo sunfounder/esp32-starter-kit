@@ -17,21 +17,21 @@ photoresistor.atten(ADC.ATTN_11DB)
 # Button and pump
 button = Pin(32, Pin.IN)
 
-B_1A = Pin(27, Pin.OUT)
-B_1B = Pin(26, Pin.OUT)
+motor1A = Pin(27, Pin.OUT)
+motor2A = Pin(26, Pin.OUT)
 
 # I2C LCD1602 setup
 lcd = LCD()
 
 # Rotate the pump
 def rotate():
-    B_1A.value(1)
-    B_1B.value(0)
+    motor1A.value(1)
+    motor2A.value(0)
 
 # Stop the pump
 def stop():
-    B_1A.value(0)
-    B_1B.value(0)
+    motor1A.value(0)
+    motor2A.value(0)
 
 button_state = False
 
