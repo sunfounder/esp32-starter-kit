@@ -17,9 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 import sphinx_rtd_theme
+import time  ###
 
 project = 'SunFounder ESP32 Starter Kit'
-copyright = '2023, SunFounder'
+copyright = f'{time.localtime().tm_year}, SunFounder'  ###
 author = 'www.sunfounder.com'
 
 

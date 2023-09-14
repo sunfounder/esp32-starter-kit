@@ -11,7 +11,7 @@ In this project, we will be using an ESP32 board to create a system that helps u
 
 **Schematic**
 
-.. image:: ../../img/circuit/circuit_6.8_plant_monitor.png
+.. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
 The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
 Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
@@ -20,13 +20,10 @@ using a button to water the plant when needed.
 
 IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
 
-.. note::
-
-  * **IO12** needs to be connected to the L9110 module after ESP32 starts up normally because the input pins of the L9110 module have a 10K pull-down resistor, which can prevent ESP32 from booting correctly.
 
 **Wiring**
 
-.. image:: ../../img/wiring/6.8_plant_monitor_bb.png
+.. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
 
 * :ref:`cpn_esp32_wroom_32e`
@@ -36,7 +33,7 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 * :ref:`cpn_dht11`
 * :ref:`cpn_lcd`
 * :ref:`cpn_pump`
-* :ref:`cpn_l9110`
+* :ref:`cpn_l293d`
 * :ref:`cpn_button`
 * :ref:`cpn_photoresistor`
 * :ref:`cpn_resistor`

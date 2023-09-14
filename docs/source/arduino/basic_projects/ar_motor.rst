@@ -3,11 +3,11 @@
 4.1 Motor
 ===========================
 
-In this engaging project, we'll explore how to drive a motor using the L9110 module.
+In this engaging project, we'll explore how to drive a motor using the L293D.
 
-The L9110 is a compact motor driver module that is frequently used in robotics and mechatronics projects due to its simplicity and effectiveness. It's capable of controlling two DC motors or a single stepper motor.
+The L293D is a versatile integrated circuit (IC) commonly used for motor control in electronics and robotics projects. It can drive two motors in both forward and reverse directions, making it a popular choice for applications requiring precise motor control.
 
-By the end of this captivating project, you will have gained a thorough understanding of how digital signals and PWM signals can effectively be utilized to control motors. This invaluable knowledge will prove to be a solid foundation for your future endeavors in robotics and mechatronics. Buckle up and get ready to dive into the exciting world of motor control with the L9110 module!
+By the end of this captivating project, you will have gained a thorough understanding of how digital signals and PWM signals can effectively be utilized to control motors. This invaluable knowledge will prove to be a solid foundation for your future endeavors in robotics and mechatronics. Buckle up and get ready to dive into the exciting world of motor control with the L293D!
 
 
 **Available Pins**
@@ -20,46 +20,22 @@ Here is a list of available pins on the ESP32 board for this project.
     * - Available Pins
       - IO13, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-.. note::
-
-  * **IO12** needs to be connected to the L9110 module after ESP32 starts up normally because the input pins of the L9110 module have a 10K pull-down resistor, which can prevent ESP32 from booting correctly.
-
 
 **Schematic**
 
-.. image:: ../../img/circuit/circuit_4.1_motor.png
+.. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
-Here is the truth table of Motor B:
 
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * - B-1A
-      - B-1B
-      - The state of Motor B
-    * - 1
-      - 0
-      - Rotate clockwise
-    * - 0
-      - 1
-      - Rotate counterclockwise
-    * - 0
-      - 0
-      - Brake
-    * - 1
-      - 1
-      - Stop
     
 **Wiring**
 
-.. image:: ../../img/wiring/4.1_motor_bb.png
+.. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 
 * :ref:`cpn_esp32_wroom_32e`
 * :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_wires`
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_l9110`
+* :ref:`cpn_motor`
+* :ref:`cpn_l293d`
 
 
 

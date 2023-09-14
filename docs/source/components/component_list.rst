@@ -4,7 +4,9 @@ Components List and Introduction
 
 After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
 
-
+.. image:: img/components_list.jpg
+    :width: 800
+    
 Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
 
 **Control Board**
@@ -34,7 +36,7 @@ Below is the introduction to each component, which contains the operating princi
     :maxdepth: 1
 
     component_74hc595
-
+    component_l293d
 
 
 **Display**
@@ -62,10 +64,10 @@ Below is the introduction to each component, which contains the operating princi
 .. toctree::
     :maxdepth: 1
 
-    component_tt_motor
+    component_motor
     component_servo
     component_pump
-    component_l9110_module
+
 
 
 **Controller**

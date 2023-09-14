@@ -10,7 +10,7 @@ In this project, we will be using an ESP32 board to create a system that helps u
 
 **Schematic**
 
-.. image:: ../../img/circuit/circuit_6.8_plant_monitor.png
+.. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
 The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
 Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
@@ -22,7 +22,7 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 **Wiring**
 
-.. image:: ../../img/wiring/6.8_plant_monitor_bb.png
+.. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
 
 * :ref:`cpn_esp32_wroom_32e`
@@ -32,7 +32,7 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 * :ref:`cpn_dht11`
 * :ref:`cpn_lcd`
 * :ref:`cpn_pump`
-* :ref:`cpn_l9110`
+* :ref:`cpn_l293d`
 * :ref:`cpn_button`
 * :ref:`cpn_photoresistor`
 * :ref:`cpn_resistor`
@@ -68,21 +68,21 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
       # Button and pump
       button = Pin(32, Pin.IN)
 
-      B_1A = Pin(27, Pin.OUT)
-      B_1B = Pin(26, Pin.OUT)
+      motor1A = Pin(27, Pin.OUT)
+      motor2A = Pin(26, Pin.OUT)
 
       # I2C LCD1602 setup
       lcd = LCD()
 
       # Rotate the pump
       def rotate():
-      B_1A.value(1)
-      B_1B.value(0)
+      motor1A.value(1)
+      motor2A.value(0)
 
       # Stop the pump
       def stop():
-      B_1A.value(0)
-      B_1B.value(0)
+      motor1A.value(0)
+      motor2A.value(0)
 
       button_state = False
 

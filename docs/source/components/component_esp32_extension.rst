@@ -171,7 +171,6 @@ Here's the pinout table for the left-side pins:
         There are some specific constraints:
 
         * **IO33** is connected to a 4.7K pull-up resistor and a filtering capacitor, which prevents it from driving the WS2812 RGB Strip.
-        * **IO12** needs to be connected to the L9110 module after ESP32 starts up normally because the input pins of the L9110 module have a 10K pull-down resistor, which can prevent ESP32 from booting correctly.
 
 Interface Insertion Guide
 -------------------------------

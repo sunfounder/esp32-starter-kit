@@ -18,6 +18,10 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 <a id="update"></a>
 ## Update:
 2023-08-09:
+ - Replace the TT motor with a 3V motor, and update the corresponding description and diagram.
+ - Replace the L9110 module with the L293D, and update the corresponding description and diagram.
+
+2023-08-09:
  - change the name from esp32 ultimate kit to esp32 starter kit
 
 <a id="trouble"></a>

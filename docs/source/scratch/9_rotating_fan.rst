@@ -24,8 +24,8 @@ Build the Circuit
 * :ref:`cpn_esp32_wroom_32e`
 * :ref:`cpn_esp32_camera_extension`
 * :ref:`cpn_breadboard`
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_l9110` 
+* :ref:`cpn_motor`
+* :ref:`cpn_l293d` 
 
 Programming
 ------------------
