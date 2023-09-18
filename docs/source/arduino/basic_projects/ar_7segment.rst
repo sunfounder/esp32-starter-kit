@@ -53,6 +53,7 @@ Here the wiring principle is basically the same as :ref:`ar_74hc595`, the only d
 
 
 .. image:: ../../img/wiring/2.5_segment_bb.png
+    :width: 800
 
 * :ref:`cpn_esp32_wroom_32e`
 * :ref:`cpn_esp32_camera_extension`
@@ -63,7 +64,6 @@ Here the wiring principle is basically the same as :ref:`ar_74hc595`, the only d
 * :ref:`cpn_74hc595`
 
 **Code**
-
 
 .. note::
 

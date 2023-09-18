@@ -22,6 +22,11 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 **Wiring**
 
+.. note::
+
+    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+
+
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
 

@@ -29,6 +29,10 @@ Here is a list of available pins on the ESP32 board for this project.
     
 **Wiring**
 
+.. note:: 
+
+    Since the motor requires a relatively high current, it is necessary to first insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply. 
+
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 
 * :ref:`cpn_esp32_wroom_32e`
