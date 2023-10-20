@@ -50,6 +50,7 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
     * You can open the file ``6.6_plant_monitor.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.6_plant_monitor``. 
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
 
 

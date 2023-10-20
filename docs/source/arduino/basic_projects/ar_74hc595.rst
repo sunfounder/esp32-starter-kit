@@ -50,6 +50,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
     * Open the ``2.4_74hc595.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.4_74hc595``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     
 .. raw:: html
 

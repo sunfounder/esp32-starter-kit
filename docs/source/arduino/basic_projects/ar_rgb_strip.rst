@@ -51,6 +51,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
     * You can open the file ``2.7_rgb_strip.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.7_rgb_strip``. Or copy this code into **Arduino IDE**.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     * The ``Adafruit NeoPixel`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/rgb_strip_lib.png

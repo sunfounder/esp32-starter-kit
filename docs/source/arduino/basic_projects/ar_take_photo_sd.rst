@@ -37,6 +37,7 @@ It is also important to ensure that the SD card is properly mounted before savin
 
         * Open the ``7.6_take_photo_sd.ino`` file under the path of ``esp32-starter-kit-main\c\codes\7.6_take_photo_sd``.
         * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+        * :ref:`unknown_com_port`
 
     .. raw:: html
 

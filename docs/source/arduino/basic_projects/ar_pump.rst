@@ -43,6 +43,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
   * You can open the file ``4.2_pump.ino`` under the path of ``esp32-starter-kit-main\c\codes\4.2_pump``. 
   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+  * :ref:`unknown_com_port`
    
 .. raw:: html
 

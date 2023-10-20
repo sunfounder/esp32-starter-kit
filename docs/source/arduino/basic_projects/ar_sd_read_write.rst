@@ -23,6 +23,7 @@ applications, making this project a crucial stepping stone in understanding and 
 
         * Open the ``7.4_sd_read_write.ino`` file under the path of ``esp32-starter-kit-main\c\codes\7.4_sd_read_write``.
         * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+        * :ref:`unknown_com_port`
 
     .. raw:: html
 

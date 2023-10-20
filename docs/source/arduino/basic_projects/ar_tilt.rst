@@ -83,8 +83,9 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
 
 .. note::
 
-   * You can open the file ``5.2_tilt_switch.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.2_tilt_switch``. 
-   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * You can open the file ``5.2_tilt_switch.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.2_tilt_switch``. 
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
 
 .. raw:: html
 

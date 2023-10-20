@@ -41,6 +41,7 @@ or noise during playback.
 
     * Open the ``7.3_bluetooth_audio_player.ino`` file under the path of ``esp32-starter-kit-main\c\codes\7.3_bluetooth_audio_player``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     * The ``ESP32-A2DP`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
 
     .. raw:: html

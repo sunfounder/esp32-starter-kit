@@ -90,7 +90,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_light_theremin
     basic_projects/py_reversing_aid
     basic_projects/py_color_gradient
-    basic_projects/py_electronic_dice
+    basic_projects/py_digital_dice
     basic_projects/py_game_guess_number
     basic_projects/py_plant_monitor
 

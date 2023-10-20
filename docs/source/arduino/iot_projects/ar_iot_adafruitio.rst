@@ -75,6 +75,7 @@ We will write an Arduino program that uses the DHT11 sensor to send temperature 
 
     * Open the ``iot_6_adafruit_io.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_6_adafruit_io`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     * The ``Adafruit_MQTT Library`` and ``DHT sensor library`` are used here, you can install them from the **Library Manager**.
 
     .. raw:: html

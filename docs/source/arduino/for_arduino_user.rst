@@ -79,7 +79,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_fruit_piano
     basic_projects/ar_flowing_light
     basic_projects/ar_reversing_aid
-    basic_projects/ar_electronic_dice
+    basic_projects/ar_digital_dice
     basic_projects/ar_color_gradient
     basic_projects/ar_plant_monitor
     basic_projects/ar_guess_number

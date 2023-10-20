@@ -29,6 +29,7 @@ Enhance your surveillance or live streaming capabilities with the versatile ESP3
 
     * Open the ``iot_2_camera_server.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_2_camera_server`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
 
     .. raw:: html
 

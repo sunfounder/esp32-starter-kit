@@ -1,6 +1,6 @@
 .. _ar_dice:
 
-6.4 Electronic Dice
+6.4 Digital Dice
 =============================
 
 This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
@@ -33,8 +33,9 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. note::
 
-    * Open the ``6.4_electronic_dice.ino`` file under the path of ``esp32-starter-kit-main\c\codes\6.4_electronic_dice``.
+    * Open the ``6.4_digital_dice.ino`` file under the path of ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     
     
 .. raw:: html

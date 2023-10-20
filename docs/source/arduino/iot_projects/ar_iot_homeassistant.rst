@@ -18,6 +18,15 @@ This project will guide you in setting up a video stream web server for the ESP3
 
 **1. Configuration in ESP Home**
 
+#. First plug in the camera.
+
+    .. raw:: html
+
+        <video loop autoplay muted style = "max-width:100%">
+            <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
 #. Connect your ESP32 to the host where you've installed the Home Assistant system (e.g., if installed on a Raspberry Pi, connect to the Pi).
 
     .. image:: ../../img/plugin_esp32.png

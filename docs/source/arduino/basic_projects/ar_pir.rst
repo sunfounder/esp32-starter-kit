@@ -73,8 +73,9 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
 
 .. note::
 
-   * You can open the file ``5.5_pir.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.5_pir``. 
-   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.  
+    * You can open the file ``5.5_pir.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.5_pir``. 
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`  
 
 .. raw:: html
 

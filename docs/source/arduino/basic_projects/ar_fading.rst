@@ -43,8 +43,9 @@ This project is the same circuit as the first project :ref:`ar_blink`, but the s
 
 .. note::
 
-   * You can open the file ``2.2_fading_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.2_fading_led``. 
-   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * You can open the file ``2.2_fading_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.2_fading_led``. 
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
    
 .. raw:: html
 

@@ -1,6 +1,6 @@
 .. _py_dice:
 
-6.6 Electronic Dice
+6.6 Digital Dice
 ================================
 
 This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
@@ -35,7 +35,7 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. note::
 
-    * Open the ``6.6_electronic_dice.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
+    * Open the ``6.6_digital_dice.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
 
 

@@ -1,4 +1,4 @@
-8.5 CherryLight
+8.5 CheerLights
 ===============================
 CheerLights is a global network of synchronized lights that can be controlled by anyone.
 
@@ -23,6 +23,7 @@ In this case, we also utilize MQTT, but instead of publishing our own messages, 
 
     * Open the ``iot_5_cheerlights.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_5_cheerlights`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     * The ``PubSubClient`` and ``Adafruit_NeoPixel`` libraries are used here, you can install them from the **Library Manager**.
 
         .. image:: img/mqtt_lib.png

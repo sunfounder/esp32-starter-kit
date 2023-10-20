@@ -62,6 +62,7 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
 
     * Open the ``5.10_thermistor.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.10_thermistor``.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
 
 .. raw:: html
 
@@ -102,6 +103,7 @@ You can also display the calculated Celsius and Fahrenheit temperatures on the I
 
     * You can open the file ``5.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
     * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 
 .. raw:: html

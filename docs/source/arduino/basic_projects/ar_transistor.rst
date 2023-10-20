@@ -96,8 +96,9 @@ The only difference you will notice between this circuit and the previous one is
 
 .. note::
 
-   * You can open the file ``5.6_transistor.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.6_transistor``. 
-   * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * You can open the file ``5.6_transistor.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.6_transistor``. 
+    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
    
 .. raw:: html
 

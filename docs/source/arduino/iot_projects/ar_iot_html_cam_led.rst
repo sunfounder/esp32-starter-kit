@@ -35,6 +35,7 @@ By building this project, you will gain hands-on experience in web development, 
 
     * Open the ``iot_3_html_cam_led.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_3_html_cam_led`` directory, or copy the code into the Arduino IDE.
     * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * :ref:`unknown_com_port`
  
     .. raw:: html
 
