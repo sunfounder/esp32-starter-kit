@@ -1,7 +1,7 @@
 
 .. _bluetooth_audio_player:
 
-7.3 Bluebooth Audio Player
+7.3 Bluetooth Audio Player
 ==============================
 
 The aim of the project is to provide a simple solution for playing audio from a Bluetooth-enabled 
