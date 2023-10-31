@@ -3,6 +3,44 @@
 
 This project is an extension of a previous project(:ref:`ar_bluetooth`), adding RGB LED configurations and custom commands such as "led_off", "red", "green", etc. These commands allow the RGB LED to be controlled by sending commands from a mobile device using LightBlue.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_rgb`
+        - |link_rgb_led_buy|
 
 **Operation Steps**
 
@@ -15,13 +53,6 @@ This project is an extension of a previous project(:ref:`ar_bluetooth`), adding 
     The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
 
     .. image:: ../../img/wiring/2.3_color_light_bb.png
-
-    * :ref:`cpn_esp32_wroom_32e`
-    * :ref:`cpn_esp32_camera_extension`
-    * :ref:`cpn_breadboard`
-    * :ref:`cpn_wires`
-    * :ref:`cpn_resistor`
-    * :ref:`cpn_rgb`
 
 #. Open the ``7.2_bluetooth_rgb_led.ino`` file located in the ``esp32-starter-kit-main\c\codes\7.2_bluetooth_rgb_led`` directory, or copy the code into the Arduino IDE.
 

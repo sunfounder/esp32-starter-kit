@@ -4,6 +4,38 @@
 This document describes a project that involves taking a photo using the ESP32-CAM and saving it to an SD card. 
 The aim of the project is to provide a simple solution for capturing images using the ESP32-CAM and storing them on an SD card.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+
+
 **Related Precautions**
 
 When using the ESP32-CAM, it is important to note that the GPIO 0 pin must be connected to GND to upload a sketch. 

@@ -5,6 +5,40 @@ The IoT Open Weather Display project utilizes the ESP32 board and an I2C LCD1602
 
 This project serves as an excellent introduction to working with APIs, Wi-Fi connectivity, and data display on an LCD module using the ESP32 board. With the IoT Open Weather Display, you can conveniently access real-time weather updates at a glance, making it an ideal solution for home or office environments.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_lcd`
+        - |link_i2clcd1602_buy|
 
 **Get OpenWeather API keys**
 
@@ -37,11 +71,6 @@ This project serves as an excellent introduction to working with APIs, Wi-Fi con
 
     .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
         :width: 800
-
-    * :ref:`cpn_esp32_wroom_32e`
-    * :ref:`cpn_esp32_camera_extension`
-    * :ref:`cpn_wires`
-    * :ref:`cpn_lcd`
 
 #. Open the code.
 

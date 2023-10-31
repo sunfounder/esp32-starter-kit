@@ -210,6 +210,15 @@ rst_epilog = """
 
 rst_epilog += """
 
+.. |link_esp32_starter_kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">ESP32 Starter Kit</a>
+
+
+
+.. |link_esp32_wroom_32e_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/esp-wroom-32-esp32-esp-32s-development-board" target="_blank">BUY</a>    
 
 .. |link_led_buy| raw:: html
 
@@ -307,9 +316,28 @@ rst_epilog += """
 
     <a href="https://www.sunfounder.com/products/rfid-kit-blue" target="_blank">BUY</a>
 
-
 .. |link_pir_buy| raw:: html
 
     <a href="https://www.sunfounder.com/products/hcsr501-human-sensor" target="_blank">BUY</a>
 
+.. |link_avoid_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/ir-obstacle-avoidance-sensor-module" target="_blank">BUY</a> 
+
+.. |link_line_track_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/tracking-sensor-module" target="_blank">BUY</a> 
+
+.. |link_soil_moisture_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/capacitive-soil-moisture-sensor-module" target="_blank">BUY</a>  
+
+.. |link_joystick_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/dual-axis-button-joystick-module-ps2-game" target="_blank">BUY</a> 
+
+.. |link_dht11_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/dht11-temperature-and-humidity-sensor-module" target="_blank">BUY</a> 
+        
 """

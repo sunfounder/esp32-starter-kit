@@ -9,6 +9,45 @@ With PWM, instead of simply turning the LED on or off, we will be adjusting the 
 
 By using the PWM capabilities of the ESP32 WROOM 32E, we can achieve smooth and precise control over the LED's brightness. This breathing effect adds a dynamic and visually appealing element to your projects, creating an eye-catching display or ambiance.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+
 **Available Pins**
 
 Here is a list of available pins on the ESP32 board for this project.
@@ -32,12 +71,6 @@ This project is the same circuit as the first project :ref:`ar_blink`, but the s
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_led`
 
 **Code**
 

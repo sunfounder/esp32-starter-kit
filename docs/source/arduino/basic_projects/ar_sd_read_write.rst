@@ -7,6 +7,38 @@ It showcases essential operations such as mounting the SD card, creating a file,
 and listing all files within the root directory. These operations form the basis of many data logging and storage 
 applications, making this project a crucial stepping stone in understanding and utilizing the ESP32's built-in SDMMC host peripheral.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+
+
 **Operating Steps**
 
 #. Before connecting the USB cable, insert the SD card into the SD card slot of the extension board.

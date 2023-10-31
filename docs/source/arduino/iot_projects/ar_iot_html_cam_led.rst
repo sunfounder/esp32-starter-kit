@@ -5,6 +5,45 @@ The Custom Video Streaming Web Server project offers an opportunity to learn how
 
 By building this project, you will gain hands-on experience in web development, HTML, CSS, and JavaScript. You will learn how to create a responsive web page that can display video streams in real-time. Moreover, you will discover how to integrate interactive buttons to control the LED's state, providing a dynamic user experience.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+
 **How to do?**
 
 #. First plug in the camera.
@@ -19,13 +58,6 @@ By building this project, you will gain hands-on experience in web development, 
 #. Build the circuit.
 
     .. image:: ../../img/wiring/iot_3_html_led_bb.png
-    
-    * :ref:`cpn_esp32_wroom_32e`
-    * :ref:`cpn_esp32_camera_extension`
-    * :ref:`cpn_breadboard`
-    * :ref:`cpn_wires`
-    * :ref:`cpn_resistor`
-    * :ref:`cpn_led`
 
 #. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
 

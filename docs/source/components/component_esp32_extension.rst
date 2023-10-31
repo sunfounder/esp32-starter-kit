@@ -91,8 +91,7 @@ Refer to following table for a detailed boot-mode configuration by strapping pin
 .. image:: img/esp32_strapping.png
 
 * FE: falling-edge, RE: rising-edge
-* Firmware can configure register bits to change the settings of "Voltage of Internal
-* LDO (VDD_SDIO)" and "Timing of SDIO Slave", after booting.
+* Firmware can configure register bits to change the settings of "Voltage of Internal LDO (VDD_SDIO)" and "Timing of SDIO Slave", after booting.
 * The module integrates a 3.3 V SPI flash, so the pin MTDI cannot be set to 1 when the module is powered up.
 
 .. _cpn_esp32_camera_extension:
