@@ -1,38 +1,35 @@
 .. _cpn_dht11:
 
-DHT11 Humiture Sensor
+DHT11 湿温度センサー
 =============================
 
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. 
-The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+デジタル温湿度センサDHT11は、温度と湿度の較正済みデジタル信号出力を持つ複合センサーです。
+この製品は、専用のデジタルモジュール収集技術と温湿度検知技術を採用しており、高い信頼性と優れた長期安定性を確保しています。
 
-The sensor includes a resistive sense of wet component and an NTC temperature measurement device, and is connected with a high-performance 8-bit microcontroller. 
+このセンサーには、抵抗湿度検知部品とNTC温度測定デバイスが含まれており、高性能の8ビットマイクロコントローラーと接続されています。
 
-
-Only three pins are available for use: VCC, GND, and DATA. 
-The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. 
-Then the host receives the answer signal and begins to receive 40-bit humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+使用できるピンは3つだけです：VCC、GND、およびDATA。
+通信プロセスは、DATAラインがDHT11に開始信号を送信することから始まり、DHT11はその信号を受信し、応答信号を返します。
+その後、ホストは応答信号を受信し、40ビットの湿温度データを受信し始めます（8ビットの湿度整数 + 8ビットの湿度小数 + 8ビットの温度整数 + 8ビットの温度小数 + 8ビットのチェックサム）。
 
 .. image:: img/dht11.png
 
-**Features**
+**特徴**
 
-    #. Humidity measurement range: 20 - 90%RH
-    #. Temperature measurement range: 0 - 60℃
-    #. Output digital signals indicating temperature and humidity
-    #. Working voltage:DC 5V; PCB size: 2.0 x 2.0 cm
-    #. Humidity measurement accuracy: ±5%RH
-    #. Temperature measurement accuracy: ±2℃
+    #. 湿度測定範囲: 20 - 90%RH
+    #. 温度測定範囲: 0 - 60℃
+    #. 温度と湿度を示すデジタル信号の出力
+    #. 動作電圧:DC 5V; PCBサイズ: 2.0 x 2.0 cm
+    #. 湿度測定精度: ±5%RH
+    #. 温度測定精度: ±2℃
 
+* `DHT11 データシート <http://wiki.sunfounder.cc/images/c/c7/DHT11_datasheet.pdf>`_
 
-* `DHT11 Datasheet <http://wiki.sunfounder.cc/images/c/c7/DHT11_datasheet.pdf>`_
+**例**
 
-**Example**
-
-* :ref:`ar_dht11` (Arduino Project)
-* :ref:`ar_plant_monitor` (Arduino Project)
-* :ref:`ar_adafruit_io` (Arduino Project)
-* :ref:`py_dht11` (MicroPython Project)
-* :ref:`py_plant_monitor` (MicroPython Project)
-
+* :ref:`ar_dht11` (Arduinoプロジェクト)
+* :ref:`ar_plant_monitor` (Arduinoプロジェクト)
+* :ref:`ar_adafruit_io` (Arduinoプロジェクト)
+* :ref:`py_dht11` (MicroPythonプロジェクト)
+* :ref:`py_plant_monitor` (MicroPythonプロジェクト)
 

@@ -1,36 +1,34 @@
 .. _ar_color_gradient:
 
-6.5 Color Gradient
+6.5 カラーグラデーション
 ==============================================
-Are you ready to experience a world of color? This project will take you on a magical journey where you can control an 
-RGB LED and achieve smooth color transitions. Whether you're looking to add some color to your home decor or 
-seeking a fun programming project, this project has got you covered. Let's dive into this colorful world together!
+色彩の世界を体験する準備はできていますか？このプロジェクトでは、RGB LEDを制御し、滑らかな色の遷移を実現することができます。自宅の装飾に色を加えたい方や、楽しいプログラミングプロジェクトを探している方にもぴったりです。さあ、このカラフルな世界に一緒に飛び込みましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キットを一式購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,41 +44,41 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.5_color_gradient_ar.png
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
-The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+RGB LEDには4本のピンがあります。一番長いピンが共通カソードピンで、通常はGNDに接続されます。最も長いピンの隣の左ピンが赤、右側の2ピンが緑と青です。
 
 .. image:: ../../img/wiring/6.5_color_rgb_bb.png
 
-**Code**
+**コード**
 
 
 .. note::
 
-    * You can open the file ``6.5_color_gradient.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.5_color_gradient``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ファイル ``6.5_color_gradient.ino`` をパス ``esp32-starter-kit-main\c\codes\6.5_color_gradient`` から開いてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/a8402b92-8884-4ba0-b09c-e596e97e0af8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-This project uses an RGB LED and a potentiometer to create a color mixing effect. The potentiometer is used to adjust the hue value of the LED, which is then converted into RGB values using a color conversion function. The RGB values are then used to update the color of the LED.
+このプロジェクトでは、RGB LEDとポテンショメータを使用して色混合効果を作り出します。ポテンショメータはLEDの色相値を調整するために使用され、その色相値は色変換関数を使用してRGB値に変換されます。そして、RGB値を使用してLEDの色を更新します。
 
-**How it works?**
+**どのように動作するのか？**
 
-This project builds upon the :ref:`ar_rgb` project by adding a potentiometer to adjust the hue value of the LED. The hue value is then converted to RGB values using a color conversion function.
+このプロジェクトは、 :ref:`ar_rgb` プロジェクトに基づいており、LEDの色相値を調整するためのポテンショメータを追加しています。色相値は色変換関数を使用してRGB値に変換されます。
 
-#. In the loop function, read the value of the potentiometer and convert it to a hue value (0-360).
+#. ループ関数内で、ポテンショメータの値を読み取り、色相値（0-360）に変換します。
 
     .. code-block:: arduino
 
@@ -88,7 +86,7 @@ This project builds upon the :ref:`ar_rgb` project by adding a potentiometer to 
         float hueValue = (float) knobValue / 4095.0;
         int hue = (int) (hueValue * 360);
 
-#. Convert the hue value to RGB values using the ``HUEtoRGB()`` function, and update the LED with the new color values.
+#. ``HUEtoRGB()`` 関数を使用して色相値をRGB値に変換し、新しい色値でLEDを更新します。
 
     .. code-block:: arduino
 
@@ -96,7 +94,7 @@ This project builds upon the :ref:`ar_rgb` project by adding a potentiometer to 
         HUEtoRGB(hue, &red, &green, &blue);
         setColor(red, green, blue);
 
-#. The ``setColor()`` function sets the value of the red, green, and blue channels using the ``LEDC`` library.
+#. ``setColor()`` 関数は ``LEDC`` ライブラリを使用して赤、緑、青チャンネルの値を設定します。
 
     .. code-block:: arduino
 
@@ -106,7 +104,7 @@ This project builds upon the :ref:`ar_rgb` project by adding a potentiometer to 
             ledcWrite(blueChannel, blue);
         }
     
-#. The ``HUEtoRGB`` function converts a hue value to RGB values using the HSL color model.
+#. ``HUEtoRGB`` 関数は、HSLカラーモデルを使用して色相値をRGB値に変換します。
 
     .. code-block:: arduino
 

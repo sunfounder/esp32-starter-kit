@@ -1,40 +1,40 @@
 .. _sh_eat_apple:
 
-2.14 GAME - Eat Apple
+2.14 GAME - リンゴを食べる
 ==============================
 
-In this project, we play a game that uses button to control Beetle to eat apple.
+このプロジェクトでは、ボタンを使ってビートルがリンゴを食べるゲームをします。
 
-When the green flag is clicked, press the button and Beetle will rotate, press the button again and Beetle stops running and goes forward at that angle. You need to control the angle of Beetle so that it moves forward without touching the black line on the map until it eats the apple. If it touches the black line, the game is over.
+緑の旗をクリックしたら、ボタンを押してビートルが回転し、再びボタンを押すとビートルがその角度で前進を停止します。ビートルの角度を制御して、地図上の黒線に触れずにリンゴを食べるまで前進させる必要があります。黒線に触れたらゲームオーバーです。
 
 .. image:: img/14_apple.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -49,95 +49,92 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+回路の構築
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+ボタンは4ピンデバイスで、ボタンが押されると、ピン1がピン2に、ピン3がピン4に接続され、4ピンが接続されて回路が閉じます。
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+次の図に従って回路を組み立てます。
 
-* Connect one of the pins on the left side of the button to pin14, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* ボタン左側のピンの一つをピン14に接続し、ピン14はプルダウン抵抗と0.1uF (104) のコンデンサ（ジッタを消去し、ボタンが動作時に安定したレベルを出力するため）に接続されます。
+* 抵抗とコンデンサの他端をGNDに接続し、ボタン右側のピンを5Vに接続します。
 
 .. image:: img/circuit/6_doorbel_bb.png
 
-Programming
+プログラミング
 ------------------
-The effect we want to achieve is to use the button to control the direction of the **Beetle** sprite to move forward and eat the apple without touching the black line on the **Maze** backdrop, which will switch the backdrop when eaten.
+達成したい効果は、ボタンを使って **Beetle** スプライトの方向を制御し、 **Maze** の背景の黒線に触れることなく前進してリンゴを食べ、食べると背景が切り替わることです。
 
-Now add the relevant backdrops and sprites.
+今、関連する背景とスプライトを追加しましょう。
 
-**1. Adding backdrops and sprites**
 
-Add a **Maze** backdrop via the **Choose a backdrop** button.
+**1. 背景とスプライトの追加**
+
+**Choose a backdrop** ボタンから **Maze** の背景を追加します。
 
 .. image:: img/14_backdrop.png
 
-Delete the default sprite, then select the **Beetle** sprite.
+デフォルトのスプライトを削除し、 **Beetle** スプライトを選択します。
 
 .. image:: img/14_sprite.png
 
-Place the **Beetle** sprite at the entrance of the **Maze** backdrop, remembering the x,y coordinate values at this point, and resize the sprite to 40%.
+**Beetle** スプライトを **Maze** の背景の入口に置き、この時点でのx,y座標値を覚えておき、スプライトのサイズを40%に調整します。
 
 .. image:: img/14_sprite1.png
 
-**2. Draw a backdrop**
+**2. 背景の描画**
 
-Now it's time to simply draw a backdrop with the WIN! character appearing on it.
+次に、WIN!と表示される背景を描くだけの簡単な作業です。
 
-First click on the backdrop thumbnail to go to the **Backdrops** page and click on the blank backdrop1.
+まず背景サムネイルをクリックして **Backdrops** ページに移動し、空白のbackdrop1をクリックします。
 
 .. image:: img/14_paint_back.png
     :width: 800
 
-Now start drawing, you can refer to the picture below to draw, or you can draw a backdrop on your own, as long as the expression is winning.
+今から描き始めますが、以下の写真を参考に描くことも、勝利を表現していれば自分で背景を描いても構いません。
 
-* Using the **Circle** tool, draw an ellipse with the color set to red and no outline.
-* Then use the **Text** tool, write the character \"WIN!\", set the character color to black, and adjust the size and position of the character.
-* Name the backdrop as **Win**.
+* **Circle** ツールを使用して、赤色でアウトラインのない楕円を描きます。
+* その後、 **Text** ツールを使って「WIN!」という文字を書き、文字色を黒に設定し、文字のサイズと位置を調整します。
+* この背景の名前を **Win** にします。
 
 .. image:: img/14_win.png
 
-**3. Scripting for the backdrop**
+**3. 背景のスクリプト化**
 
-The backdrop needs to be switched to **Maze** every time the game starts.
+ゲームがスタートするたびに、背景を **Maze** に切り替える必要があります。
 
 .. image:: img/14_switchback.png
 
-**4. Writing scripts for the sprite Beetle**
+**4. スプライトビートルのスクリプト作成**
 
-Now write a script for the sprite **Beetle** to be able to move forward and turn direction under the control of a button. The workflow is as follows.
+次に、ボタンの制御下で **Beetle** スプライトが前に進み、方向を変えることができるスクリプトを書きます。ワークフローは以下の通りです。
 
-* When the green flag is clicked, set the **Beetle** angle to 90, and the position to (-134, -134), or replace it with the coordinate value of your own placed position. Create the variable **flag** and set the initial value to -1.
+* 緑の旗がクリックされたら、 **Beetle** の角度を90に設定し、位置を(-134, -134)に設定します。または、自分で置いた位置の座標値に置き換えてください。変数 **flag** を作成し、初期値を-1に設定します。
 
 .. image:: img/14_bee1.png
 
-Next, in the [forever] block, four [if] blocks are used to determine various possible scenarios.
+次に、[forever]ブロック内で、さまざまな可能性のあるシナリオを判断するために4つの[if]ブロックを使用します。
 
-* If the button is 1 (pressed), use the [`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_] block to toggle the value of the variable **flag** between 0 and 1 (alternating between 0 for this press and 1 for the next press).
+* ボタンが1（押された）の場合、[`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_]ブロックを使用して変数 **flag** の値を0と1（この押しで0、次の押しで1）との間で切り替えます。
 
 .. image:: img/14_bee2.png
 
-* If flag=0 (this button press), let the **Beetle** sprite turn clockwise. Then determine if flag is equal to 1 (button pressed again), the **Beetle** sprite moves forward. Otherwise, it keeps turning clockwise.
+* flag=0（このボタン押し）の場合、 **Beetle** スプライトが時計回りに回転させます。その後、flagが1に等しいか（再びボタンが押されたか）を判断し、等しい場合は **Beetle** スプライトが前に進みます。それ以外の場合は、引き続き時計回りに回転します。
 
 .. image:: img/14_bee3.png
 
-* If the Beetle sprite touches black (the black line on the **Maze** backdrop), the game ends and the script stops running.
+* ビートルスプライトが黒（ **Maze** の背景にある黒い線）に触れた場合、ゲームは終了し、スクリプトの実行が停止します。
 
 .. note::
     
-    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the color of the black line on the stage. If you choose a black arbitrarily, this [Touch color] block will not work.
+    [Touch color]ブロックの色エリアをクリックし、その後スポイトツールを選択してステージ上の黒い線の色を取ります。任意の黒を選んだ場合、この[Touch color]ブロックは機能しません。
 
 
 .. image:: img/14_bee5.png
 
-* If Beetle touches red (Also use the straw tool to pick up the red color of the apple), the backdrop will be switched to **Win**, which means the game succeeds and stops the script from running.
+* ビートルが赤に触れる場合（リンゴの赤色もストローツールで取ります）、背景を **Win** に切り替え、ゲームが成功し、スクリプトの実行が停止します。
 
 
 .. image:: img/14_bee4.png
-
-
-
-

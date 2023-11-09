@@ -1,40 +1,40 @@
 .. _sh_breakout_clone:
 
-2.16 GAME - Breakout Clone
-============================
+2.16 GAME - ブレイクアウトクローン
+==================================
 
-Here we use the potentiometer to play a Breakout Clone game.
+ここではポテンショメータを使用してブレイクアウトクローンゲームをプレイします。
 
-After clicking the green flag, you need to use the potentiometer to control the paddle on the stage to catch the ball so that it can go up and hit the bricks, all the bricks disappear then the game is won, if you don't catch the ball, the game is lost.
+緑の旗をクリックした後、ポテンショメータを使用してステージ上のパドルを制御し、ボールをキャッチして上に行き、レンガを打つようにします。全てのレンガが消えればゲームに勝利し、ボールをキャッチしなければゲームは失敗します。
 
 .. image:: img/17_brick.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入するのが間違いなく便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+また、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,102 +47,96 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-Build the Circuit
+回路の構築
 -----------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to pin35. After the conversion by the ADC converter of the esp32 board, the value range is 0-4095.
+ポテンショメータは3端子の抵抗要素で、両側の端子は5VとGNDに接続され、中央の端子はpin35に接続されます。esp32ボードのADCコンバータによる変換後、値の範囲は0-4095です。
 
 .. image:: img/circuit/5_moving_mouse_bb.png
 
-Programming
+プログラミング
 ------------------
 
-There are 3 sprites on the stage.
+ステージには3つのスプライトがあります。
 
-**1. Paddle sprite**
+**1. パドルスプライト**
 
-The effect to be achieved by the **Paddle** is that the initial position is in the middle of the bottom of the stage, and it is controlled by a potentiometer to move it to the left or to the right.
+**Paddle** によって達成されるべき効果は、初期位置がステージの底の中央にあり、ポテンショメータによって左または右に動かすことができます。
 
-* Delete the default sprite, use the **Choose a Sprite** button to add the **Paddle** sprite, and set its x and y to (0, -140).
+* デフォルトのスプライトを削除し、 **Choose a Sprite** ボタンを使用して **Paddle** スプライトを追加し、そのxとyを(0, -140)に設定します。
 
     .. image:: img/17_padd1.png
 
-* Go to the **Costumes** page, remove the Outline and change its color to dark gray.
+* **Costumes** ページに移動し、アウトラインを削除し、色をダークグレーに変更します。
 
     .. image:: img/17_padd3.png
 
 
-* Now script the **Paddle** sprite to set its initial position to (0, -140) when the green flag is clicked, and read the value of pin35 (potentiometer) into the variable **a0**. Since the **Paddle** sprite moves from left to right on the stage at x-coordinates -195~195, you need to use the [map] block to map the variable **a0** range 0~4095 to -195~195. 
+* 緑の旗がクリックされたときに初期位置を(0, -140)に設定し、pin35（ポテンショメータ）の値を変数 **a0** に読み込むように **Paddle** スプライトをスクリプト化します。 **Paddle** スプライトはステージ上でx座標-195〜195の間で左右に動きますので、変数 **a0** の範囲0〜4095を-195〜195にマップする[map]ブロックを使用する必要があります。
 
     .. image:: img/17_padd2.png
 
-* Now you can rotate the potentiometer to see if the **Paddle** can move left and right on the stage.
-
-**2. Ball sprite**
-
-The effect of the ball sprite is that it moves around the stage and bounces when it touches the edge; it bounces down if it touches the block above the stage; it bounces up if it touches the Paddle sprite during its fall; if it doesn't, the script stops running and the game ends.
+* これで、ポテンショメータを回して **Paddle** がステージ上で左右に動くかどうかを確認できます。
 
 
-* Add **Ball** sprite.
+**2. ボールスプライト**
+
+ボールスプライトの効果は、ステージ上を動き回り、端に触れたら跳ね返り、ステージ上のブロックに触れたら下に跳ね返り、落ちる途中でパドルスプライトに触れたら上に跳ね返ることです。触れなかった場合、スクリプトの実行が停止し、ゲームが終了します。
+
+* **Ball** スプライトを追加します。
 
     .. image:: img/17_ball1.png
 
-* When the green flag is clicked, set the angle of the **Ball** sprite to 45° and set the initial position to (0, -120).
+* 緑の旗がクリックされたら、 **Ball** スプライトの角度を45度に設定し、初期位置を(0, -120)に設定します。
 
     .. image:: img/17_ball2.png
 
-* Now let the **Ball** sprite move around the stage and bounce when it touches the edge, and you can click on the green flag to see the effect.
+* 今、 **Ball** スプライトがステージ上を動き回り、端に触れると跳ね返るようにし、緑の旗をクリックして効果を確認します。
 
     .. image:: img/17_ball3.png
 
-* When the **Ball** sprite touches the **Paddle** sprite, do a reflection. The easy way to do this is to let the angle be directly inverted, but then you'll find that the path of the ball is completely fixed, which is too boring. Therefore, we use the center of the two sprites to calculate and make the ball bounce in the opposite direction of the center of the baffle.
+* **Ball** スプライトが **Paddle** スプライトに触れたときは反射させます。簡単な方法は角度を直接反転させることですが、そうするとボールの軌道が完全に固定されてしまい、つまらなくなってしまいます。そのため、2つのスプライトの中心を計算して、バッフルの中心の反対方向にボールを跳ね返すようにします。
 
     .. image:: img/17_ball4.png
 
     .. image:: img/17_ball6.png
 
-* When the **Ball** sprite falls to the edge of the stage, the script stops running and the game ends.
+* **Ball** スプライトがステージの端に落ちたら、スクリプトの実行が停止し、ゲームが終了します。
 
     .. image:: img/17_ball5.png
 
 
-**3. Block1 sprite**
+**3. ブロック1スプライト**
 
-The **Block1** sprite is to appear with the effect of cloning 4x8 of itself above the stage in a random color, and deleting a clone if it is touched by the **Ball** sprite.
+**Block1** スプライトは、ステージ上に自身のクローンをランダムな色で4x8生成し、 **Ball** スプライトに触れたらクローンを削除する効果を持っています。
 
-The **Block1** sprite is not available in the **PictoBlox** library, you need to draw it yourself or modify it with an existing sprite. Here we are going to modify it with the **Button3** sprite.
+**Block1** スプライトは **PictoBlox** ライブラリにはないため、自分で描くか既存のスプライトを変更する必要があります。ここでは **Button3** スプライトを変更して使用します。
 
-* After adding the **Button3** sprite, go to the **Costumes** page. Now delete **button-a** first, then reduce both the width and height of **button-b**, and change the sprite name to **Block1**, as shown in the following image.
+* **Button3** スプライトを追加した後、 **Costumes** ページに移動します。まず **button-a** を削除し、次に **button-b** の幅と高さを縮小し、スプライト名を **Block1** に変更します。以下の画像のように。
 
     .. note::
 
-        * For the width of **Block1**, you can probably simulate it on the screen to see if you can put down 8 in a row, if not, then reduce the width appropriately.
-        * In the process of shrinking the **Block1** sprite, you need to keep the center point in the middle of the sprite.
+        * **Block1** の幅については、スクリーン上でシミュレートして8つ並べることができるかどうかを確認できます。できなければ適宜幅を縮小してください。
+        * **Block1** スプライトを縮小する過程で、スプライトの中心点が中央にあることを保つ必要があります。
 
     .. image:: img/17_bri2.png
 
-* Now create 2 variables first, **block** to store the number of blocks and **roll** to store the number of rows.
+* まず2つの変数を作成します。 **block** はブロックの数を、 **roll** は列の数を格納するためです。
 
     .. image:: img/17_bri3.png
 
-* We need to make a clone of the **Block1** sprite, so that it displays from left to right, top to bottom, one by one, 4x8 in total, with random colors.
+* **Block1** スプライトのクローンを作成する必要があります。これにより、左から右、上から下にかけて、ランダムな色で合計4x8の一つ一つが表示されます。
 
     .. image:: img/17_bri4.png
 
-* After the script is written, click on the green flag and look at the display on the stage, if it is too compact or too small, you can change the size.
+* スクリプトを書いた後、緑の旗をクリックしてステージ上の表示を見ます。もし密集しすぎていたり小さすぎたりしたら、サイズを変更できます。
 
     .. image:: img/17_bri5.png
 
-* Now write the trigger event. If the cloned **Block1** sprite touches the **Ball** sprite, delete the clone and broadcast the message **crush**.
+* トリガーイベントを書きます。クローンされた **Block1** スプライトが **Ball** スプライトに触れたら、クローンを削除し、メッセージ **crush** を送信します。
 
     .. image:: img/17_bri6.png
 
-* Back to the **Ball** sprite, when the broadcast **crush** is received (the **Ball** sprite touches the clone of **Block1** sprite), the **Ball** is popped from the opposite direction.
+* **Ball** スプライトに戻り、放送された **crush** を受け取ったとき（ **Ball** スプライトが **Block1** スプライトのクローンに触れる）、 **Ball** は反対方向に飛び出します。
 
     .. image:: img/17_ball7.png
-
-
-
-
-
-

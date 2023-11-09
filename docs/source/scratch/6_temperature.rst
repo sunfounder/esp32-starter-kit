@@ -1,38 +1,38 @@
 .. _sh_low_temperature:
 
-2.6 Low Temperature Alarm
+2.6 低温アラーム
 =========================
 
-In this project, we will make a low temperature alarm system, when the temperature is below the threshold, the **Snowflake** sprite will appear on the stage.
+このプロジェクトでは、温度が閾値以下になると、ステージ上に **Snowflake** スプライトが現れる低温アラームシステムを作ります。
 
 .. image:: img/9_tem.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,56 +47,56 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- Thermistor working principle
-- Multivariable and Subtractive Operations
+- サーミスターの原理
+- 複数変数と減算操作
 
-Build the Circuit
+回路の構築
 -----------------------
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors, and there are two types of resistors, PTC (resistance increases as temperature increases) and PTC (resistance decreases as temperature increases).
+サーミスターは、標準の抵抗器よりも温度に強く依存する抵抗器であり、PTC（温度が上がると抵抗が上がる）とPTC（温度が上がると抵抗が下がる）の2種類があります。
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
-One end of the thermistor is connected to GND, the other end is connected to pin35, and a 10K resistor is connected in series to 5V.
+サーミスターの一端をGNDに、もう一端をピン35に接続し、10K抵抗を5Vに直列に接続します。
 
-The NTC thermistor is used here, so when the temperature rises, the resistance of the thermistor decreases, the voltage division of pin35 decreases, and the value obtained from pin35 decreases, and vice versa increases.
+ここで使用されるNTCサーミスターは、温度が上昇するとサーミスターの抵抗が下がり、ピン35の電圧分割が下がり、ピン35から得られる値が下がり、逆に上がります。
 
 .. image:: img/circuit/7_low_temp_bb.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Select a sprite**
+**1. スプライトを選択**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **Snowflake** in the search box, and then click to add it.
+デフォルトのスプライトを削除し、スプライトエリアの右下にある **Choose a Sprite** ボタンをクリックし、検索ボックスに **Snowflake** と入力してからクリックして追加します。
 
 .. image:: img/9_snow.png
 
-**2. Create 2 variables**
+**2. 2つの変数を作成**
 
-Create two variables, **before** and **current**, to store the value of pin35 in different cases.
+**before** と **current** の2つの変数を作成し、異なるケースのピン35の値を保存します。
 
 .. image:: img/9_va.png
 
-**3. Read the value of pin35**
+**3. ピン35の値を読む**
 
-When the green flag is clicked, the value of pin35 is read and stored in the variable **before**.
+緑の旗がクリックされたら、ピン35の値を読み取って変数 **before** に保存します。
 
 .. image:: img/9_before.png
 
-**4. Read the value of pin35 again**
+**4. ピン35の値を再度読む**
 
-In [forever], read the value of pin35 again and store it in the variable **current**.
+[forever]でピン35の値を再度読み取り、変数 **current** に保存します。
 
 .. image:: img/9_current.png
 
-**5. Determining temperature changes**
+**5. 温度変化を判断する**
 
-Using the [if else] block, determine if the current value of pin35 is 200 greater than before, which represents a decrease in temperature. At this point let **Snowflake** sprite show, otherwise hide.
+[if else] ブロックを使用して、ピン35の現在の値がbeforeより200以上かどうかを判断し、温度が下がったことを表します。この場合は **Snowflake** スプライトを表示し、そうでない場合は隠します。
 
-* [-] & [>]: subtraction and comparison operators from **Operators** platette.
+* [-] & [>]: **Operators** パレットからの減算および比較演算子。
 
 .. image:: img/9_show.png

@@ -1,7 +1,7 @@
-Lists
+リスト
 ===================
 
-Lists are used to store multiple items in a single variable, and are created using square brackets:
+リストは、複数のアイテムを単一の変数で格納するために使用され、角括弧を使って作成されます：
 
 .. code-block:: python
 
@@ -9,8 +9,8 @@ Lists are used to store multiple items in a single variable, and are created usi
     print(B_list)
 
 
-List items are changeable, ordered, and allow duplicate values.
-The list items are indexed, with the first item having index [0], the second item having index [1], and so on.
+リストのアイテムは変更可能で、順序があり、重複した値を許可します。
+リストアイテムはインデックス付けされ、最初のアイテムがインデックス[0]、2番目のアイテムがインデックス[1]などです。
 
 .. code-block:: python
 
@@ -28,7 +28,7 @@ Blue
 ['Red', 'Blue', 'Purple', 'Blue']
 
 
-A list can contain different data types:
+リストは異なるデータ型を含むことができます：
 
 .. code-block:: python
 
@@ -39,9 +39,9 @@ A list can contain different data types:
 ['Banana', 255, False, 3.14]
 
 
-List Length
+リストの長さ
 ------------------
-To determine how many items are in the list, use the len() function.
+リスト内のアイテム数を確認するには、len()関数を使用します。
 
 .. code-block:: python
 
@@ -51,10 +51,10 @@ To determine how many items are in the list, use the len() function.
 >>> %Run -c $EDITOR_CONTENT
 4
 
-Check List items
+リストアイテムの確認
 -----------------------
 
-Print the second item of the list:
+リストの2番目のアイテムを出力します：
 
 .. code-block:: python
 
@@ -64,7 +64,7 @@ Print the second item of the list:
 >>> %Run -c $EDITOR_CONTENT
 [255]
 
-Print the last one item of the list:
+リストの最後のアイテムを出力します：
 
 .. code-block:: python
 
@@ -74,7 +74,7 @@ Print the last one item of the list:
 >>> %Run -c $EDITOR_CONTENT
 [3.14]
 
-Print the second, third item:
+2番目と3番目のアイテムを出力します：
 
 .. code-block:: python
 
@@ -85,9 +85,9 @@ Print the second, third item:
 [255, False]
 
 
-Change List Items
+リストアイテムの変更
 ----------------------
-Change the second, third item:
+2番目と3番目のアイテムを変更します：
 
 .. code-block:: python
 
@@ -98,7 +98,7 @@ Change the second, third item:
 >>> %Run -c $EDITOR_CONTENT
 ['Banana', True, 'Orange', 3.14]
 
-Change the second value by replacing it with two values:
+2番目の値を2つの値で置き換えて変更します：
 
 .. code-block:: python
 
@@ -110,10 +110,10 @@ Change the second value by replacing it with two values:
 ['Banana', True, 'Orange', False, 3.14]
 
 
-Add List Items
--------------------
+リストアイテムの追加
+----------------------
 
-Using the append() method to add an item:
+append()メソッドを使用してアイテムを追加します：
 
 .. code-block:: python
 
@@ -124,7 +124,7 @@ Using the append() method to add an item:
 >>> %Run -c $EDITOR_CONTENT
 ['Red', 'Blue', 'Green', 'Orange']
 
-Insert an item as the second position:
+2番目の位置にアイテムを挿入します：
 
 .. code-block:: python
 
@@ -137,10 +137,10 @@ Insert an item as the second position:
 
 
 
-Remove List Items
+リストアイテムの削除
 -----------------------
 
-The remove() method removes the specified item.
+remove()メソッドは指定されたアイテムを削除します。
 
 .. code-block:: python
 
@@ -151,7 +151,7 @@ The remove() method removes the specified item.
 >>> %Run -c $EDITOR_CONTENT
 ['Red', 'Green']
 
-The pop() method removes the specified index. If you do not specify the index, the pop() method removes the last item.
+pop()メソッドは指定されたインデックスを削除します。インデックスを指定しない場合、pop()メソッドは最後のアイテムを削除します。
 
 .. code-block:: python
 
@@ -167,7 +167,7 @@ The pop() method removes the specified index. If you do not specify the index, t
 'Orange'
 ['Banana', False, 3.14, True]
 
-The ``del`` keyword also removes the specified index:
+``del`` キーワードも指定されたインデックスを削除します：
 
 .. code-block:: python
 
@@ -178,7 +178,7 @@ The ``del`` keyword also removes the specified index:
 >>> %Run -c $EDITOR_CONTENT
 ['Red', 'Green']
 
-The clear() method empties the list. The list still remains, but it has no content.
+clear()メソッドはリストを空にします。リストは残りますが、内容はありません。
 
 .. code-block:: python
 

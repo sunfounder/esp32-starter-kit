@@ -1,37 +1,37 @@
 .. _iot_telegram:
 
-8.7 ESP Camera with Telegram Bot
+8.7 ESPカメラとTelegramボット
 ====================================
 
-In this project, we'll demonstrate how to integrate the ESP32 with your favorite messaging application. For this demonstration, we're using Telegram.
+このプロジェクトでは、お気に入りのメッセージングアプリケーションとESP32を統合する方法をデモンストレーションします。今回はTelegramを使用します。
 
-Create a Telegram Bot, allowing you to control your circuit from anywhere, capture photos, and manage the flash. Moreover, whenever someone passes by your device, it will snap a new photo and send a notification to your Telegram account.
+Telegramボットを作成し、どこからでも回路を制御したり、写真を撮影したり、フラッシュを管理することができます。さらに、誰かがデバイスのそばを通るたびに、新しい写真を撮影してTelegramアカウントに通知を送信します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入することは非常に便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,62 +48,61 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Creating a Telegram Bot**
+**Telegramボットの作成**
 
-#. Head to **Google Play** or the **App Store** and download and install **Telegram**.
+#. **Google Play** または **App Store** にアクセスして **Telegram** をダウンロードしてインストールします。
 
-#. Search for ``botfather`` in the **Telegram** app, and once it appears, click on it to open. or you can directly access this link: t.me/botfather.
+#. **Telegram** アプリで ``botfather`` を検索し、表示されたらクリックして開きます。または、このリンクに直接アクセスします：t.me/botfather。
 
     .. image:: img/sp230515_135927.png
 
-#. Upon opening, you'll be presented with a chat window. Send the command ``/start``.
+#. 開くと、チャットウィンドウが表示されます。コマンド ``/start`` を送信します。
 
     .. image:: img/sp230515_140149.png
 
-#. Enter ``/newbot`` and follow the provided instructions to create your bot. Once successful, the BotFather will provide you with the access link and API for your new bot.
+#. ``/newbot`` と入力し、指示に従ってボットを作成します。成功すると、BotFatherは新しいボットのアクセスリンクとAPIを提供します。
 
     .. image:: img/sp230515_140830.png
 
-**Authorizing Telegram Users**
+**Telegramユーザーの承認**
 
-As anyone can interact with the bot you've created, there's a risk of information leakage. To address this, we want the bot to only respond to authorized users.
+誰でも作成したボットとやりとりできるため、情報が漏洩するリスクがあります。これに対処するため、承認されたユーザーにのみボットが応答するようにしたいと考えています。
 
-#. In your **Telegram** account, search for ``IDBot`` or open the link: t.me/myidbot.
+#. **Telegram** アカウントで ``IDBot`` を検索するか、リンクを開きます：t.me/myidbot。
 
     .. image:: img/sp230515_144241.png
 
-#. Send the command ``/getid``. Save the provided ID for later use in our program.
+#. コマンド ``/getid`` を送信します。後でプログラムで使用するために、提供されたIDを保存します。
 
     .. image:: img/sp230515_144614.png
 
-**Upload the Code**
+**コードのアップロード**
 
-#. First plug in the camera.
+#. まずカメラを接続します。
 
     .. raw:: html
 
         <video loop autoplay muted style = "max-width:100%">
             <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            お使いのブラウザーはビデオタグをサポートしていません。
         </video>
 
-#. Build the circuit.
+#. 回路を組み立てます。
 
     .. image:: ../../img/wiring/iot_7_cam_telegram_bb.png
         
-#. Open the code.
+#. コードを開きます。
 
-    * Open the ``iot_7_cam_telegram.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_7_cam_telegram`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\iot_7_cam_telegram`` ディレクトリにある ``iot_7_cam_telegram.ino`` ファイルを開くか、Arduino IDEにコードをコピーします。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``UniversalTelegramBot`` and ``ArduinoJson`` libraries are used here, you can install them from the **Library Manager**.
+    * ここでは ``UniversalTelegramBot`` と ``ArduinoJson`` ライブラリを使用しており、 **Library Manager** からインストールできます。
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/d7c439b0-fca3-4648-9714-900a2859740c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
-#. Locate and modify the following lines with your WiFi details, replacing ``<SSID>`` and ``<PASSWORD>``:
+#. 次の行を見つけて、あなたのWiFiの詳細に ``<SSID>`` と ``<PASSWORD>`` を置き換えます。
 
     .. code-block::  Arduino
 
@@ -111,7 +110,7 @@ As anyone can interact with the bot you've created, there's a risk of informatio
         const char* ssid = "<SSID>";
         const char* password = "<PASSWORD>";
 
-5. Update the next line, replacing ``<CHATID>`` with your Telegram ID, which you obtained from @IDBot.
+5. 次の行を更新し、@IDBotから取得したTelegram IDで ``<CHATID>`` を置き換えます。
 
     .. code-block:: Arduino
 
@@ -120,15 +119,15 @@ As anyone can interact with the bot you've created, there's a risk of informatio
         // message you
         String chatId = "<CHATID>";
 
-#. Update the next line, substituting ``<BOTTOKEN>`` with the token of your Telegram BOT, which was provided by @BotFather.
+#. 次の行を更新し、@BotFatherから提供されたTelegram BOTのトークンで ``<BOTTOKEN>`` を置き換えます。
 
     .. code-block:: Arduino
 
         // Initialize Telegram BOT
         String BOTtoken = "<BOTTOKEN>";
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
-#. Open the Serial Monitor. If an IP address is printed, this indicates successful execution. 
+#. 正しいボード（ESP32 Dev Module）とポートを選択した後、 **アップロード** ボタンをクリックします。
+#. シリアルモニターを開きます。IPアドレスが表示されれば、正常に実行されたことを意味します。
 
     .. code-block::
 
@@ -136,6 +135,7 @@ As anyone can interact with the bot you've created, there's a risk of informatio
         ESP32-CAM IP Address: 192.168.18.76
         Init Done!
 
-#. Now, you can interact with your ESP32 via Telegram.
+#. これで、Telegramを通じてESP32とやり取りすることができます。
 
     .. image:: img/sp230515_161237.png
+

@@ -1,39 +1,39 @@
 .. _py_dice:
 
-6.6 Digital Dice
+6.6 デジタルダイス
 ================================
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+このプロジェクトは、 :ref:`py_7_segment` プロジェクトを基にして、セブンセグメントディスプレイに表示される数字を制御するボタンを追加します。
 
-When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
+ボタンを押すと、7セグメントディスプレイは1から6までの数字をスクロールし、ボタンを離すとランダムな数字が表示されます。
 
-This cycle continues each time the button is pressed.
+このサイクルはボタンを押すたびに続きます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,28 +50,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+このプロジェクトは、 :ref:`py_7_segment` プロジェクトを基にして、セブンセグメントディスプレイに表示される数字を制御するボタンを追加するものです。
 
-The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
+ボタンは外部のプルアップまたはプルダウン抵抗なしでIO13に直接接続されています。IO13には47Kの内部プルアップ抵抗があり、追加の外部抵抗が不要です。
 
-
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.6_digital_dice.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``6.6_digital_dice.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。それから、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 .. code-block:: python
 
@@ -141,9 +137,10 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
             num = random.randint(1, 6)
             time.sleep_ms(10) # Adjust this value to control the display refresh rate
         
-While the program is running, pressing the button will make the 7-segment display scroll and randomly display a number between 1 and 6. 
+プログラムが実行中の間、ボタンを押すと7セグメントディスプレイがスクロールして1から6の間のランダムな数字を表示します。
 
-Upon pressing the button again, the 7-segment display will stop and reveal a specific number. Press the button once more, and the 7-segment display will resume scrolling through the digits.
+ボタンを再度押すと、7セグメントディスプレイは停止し、特定の数字を表示します。もう一度ボタンを押すと、7セグメントディスプレイは数字をスクロールし続けます。
+
 
 
 

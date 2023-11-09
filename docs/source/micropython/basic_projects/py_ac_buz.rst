@@ -1,34 +1,34 @@
 .. _py_ac_buz:
 
-3.1 Beep
+3.1 ビープ音
 ==================
-This is a simple project to make an active buzzer beep quickly four times every second.
+これは、アクティブブザーを毎秒4回速くビープ音を鳴らすシンプルなプロジェクトです。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,50 +45,46 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+IO14の出力が高いと、1Kの電流制限抵抗（トランジスタを保護するため）を経由して、S8050（NPNトランジスタ）が導通し、ブザーが鳴ります。
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
+S8050（NPNトランジスタ）の役割は、電流を増幅してブザーの音を大きくすることです。実際には、ブザーを直接IO14に接続しても問題ありませんが、ブザーの音が小さくなることがわかります。
 
-**Wiring**
+**配線図**
 
-
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+キットには2種類のブザーが含まれています。
+アクティブブザーを使用する必要があります。それらを裏返すと、シールドされた背面（露出したPCBではない方）が必要なものです。
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+ブザーは動作時にトランジスタを使用する必要がありますが、ここではS8050（NPNトランジスタ）を使用します。
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``3.1_beep.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``3.1_beep.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。 
 
 .. code-block:: python
 
@@ -115,5 +111,5 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 
 
-When the script is running, the buzzer will beep quickly four times every second.
+スクリプトが実行されると、ブザーは毎秒4回速くビープ音を鳴らします。
 

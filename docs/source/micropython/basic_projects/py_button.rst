@@ -1,37 +1,37 @@
 .. _py_button:
 
-5.1 Reading Button Value
+5.1 ボタンの値の読み取り
 ==============================================
 
-In this interactive project, we'll venture into the realm of button controls and LED manipulation.
+この対話型プロジェクトでは、ボタン制御とLED操作の領域に挑戦します。
 
-The concept is straightforward yet effective. We'll be reading the state of a button. When the button is pressed down, it registers a high voltage level, or 'high state'. This action will then trigger an LED to light up.
+コンセプトはシンプルですが効果的です。ボタンの状態を読み取ります。ボタンが押されると、高電圧レベル、つまり「ハイ状態」として登録されます。このアクションによってLEDが点灯します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,11 +48,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
@@ -62,59 +62,58 @@ You can also buy them separately from the links below.
         *   - For Output
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **条件付き使用ピン（入力）**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
-
+    以下のピンには内蔵のプルアップまたはプルダウン抵抗があり、 **入力ピンとして使用する場合** に外部抵抗器は必要ありません：
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - 条件付き使用ピン
+            - 説明
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - 47Kの抵抗器でプルアップし、デフォルトで値をハイにします。
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - 4.7Kの抵抗器でプルアップし、デフォルトで値をハイにします。
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - 1Kの抵抗器でプルダウンし、デフォルトで値をローにします。
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイスの起動時に特定のブートモードを決定するために使用される特別なセットのピンです
+    （つまり、電源オンリセット）。
 
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    一般的に、 **入力ピンとして使用することは推奨されません**。これらのピンを使用したい場合は、ブートプロセスへの潜在的な影響を考慮してください。詳細については、:ref:`esp32_strapping` セクションを参照してください。
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.1_button.png
 
-To ensure proper functionality, connect one side of the button pin to 3.3V and the other side to IO14. When the button is pressed, IO14 will be set to high, causing the LED to light up. When the button is released, IO14 will return to its suspended state, which may be either high or low. To ensure a stable low level when the button is not pressed, IO14 should be connected to GND through a 10K pull-down resistor.
+適切な機能を確保するために、ボタンピンの片側を3.3Vに、もう片側をIO14に接続します。ボタンが押されるとIO14がハイに設定され、LEDが点灯します。ボタンが放されるとIO14は中断状態に戻り、これはハイでもローでもありえます。ボタンが押されていないときに安定したローレベルを保証するために、IO14は10Kのプルダウン抵抗器を介してGNDに接続されるべきです。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.1_button_bb.png
 
 .. note::
     
-    A four-pin button is designed in an H shape. When the button is not pressed, the left and right pins are disconnected, and current cannot flow between them. However, when the button is pressed, the left and right pins are connected, creating a pathway for current to flow.
+    4ピンボタンはH形状で設計されています。ボタンが押されていないとき、左右のピンは切断され、電流はそれらの間を流れません。しかし、ボタンが押されると、左右のピンが接続され、電流が流れる経路が作成されます。
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.1_read_button_value.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.1_read_button_value.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。
 
 
 
@@ -132,9 +131,10 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
         if button.value() == 1:
             # Turn on the LED by setting its value to 1
             led.value(1)
-    #         time.sleep(0.5)
+            # time.sleep(0.5)
         else:
             # Turn off the LED
             led.value(0)
 
-During script execution, the LED lights up when you press the button and goes out when you release it.
+スクリプト実行中は、ボタンを押すとLEDが点灯し、放すと消えます。
+

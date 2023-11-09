@@ -1,39 +1,39 @@
 .. _py_servo:
 
-4.3 Swinging Servo
+4.3 スイングサーボ
 ===================
 
-A Servo is a type of position-based device known for its ability to maintain specific angles and deliver precise rotation. This makes it highly desirable for control systems that demand consistent angle adjustments. It's not surprising that Servos have found extensive use in high-end remote-controlled toys, from airplane models to submarine replicas and sophisticated remote-controlled robots.
+サーボは位置ベースのデバイスの一種で、特定の角度を維持し、正確な回転を行う能力で知られています。これにより、一貫した角度調整を必要とする制御システムに非常に望ましいものとなっています。サーボが、飛行機モデルから潜水艦のレプリカ、洗練されたリモートコントロールロボットに至るまで、高級遠隔制御玩具に広く使用されているのは驚くことではありません。
 
-In this intriguing adventure, we'll challenge ourselves to manipulate the Servo in a unique way - by making it sway! This project offers a brilliant opportunity to dive deeper into the dynamics of Servos, sharpening your skills in precise control systems and offering a deeper understanding of their operation.
+この魅力的な冒険では、サーボを独自の方法で操作することに挑戦します - スイングさせることによってです！このプロジェクトは、サーボのダイナミクスをより深く掘り下げ、正確な制御システムのスキルを磨き、その操作に関するより深い理解を得る絶好の機会を提供します。
 
-Are you ready to make the Servo dance to your tunes? Let's embark on this exciting journey!
+サーボを自分の曲に合わせて踊らせる準備はできましたか？このエキサイティングな旅に出発しましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,38 +44,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_4.3_servo.png
 
-**Wiring**
+**配線図**
 
-* Orange wire is signal and connected to IO25.
-* Red wire is VCC and connected to 5V.
-* Brown wire is GND and connected to GND.
+* オレンジ色の線はシグナルで、IO25に接続されています。
+* 赤色の線はVCCで、5Vに接続されています。
+* 茶色の線はGNDで、GNDに接続されています。
 
 .. image:: ../../img/wiring/4.3_swinging_servo_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``4.3_swinging_servo.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``4.3_swinging_servo.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。 
 
 .. code-block:: python
 
@@ -112,21 +109,18 @@ Here is a list of available pins on the ESP32 board for this project.
             time.sleep_ms(20)
 
 
-When running this code, the servo will continuously sweep back and forth between 0 and 180 degrees.
+このコードを実行すると、サーボは0度から180度までの間を絶えず往復するようにスウィープします。
 
+**どのように動作するのか？**
 
-**How it works?**
-
-
-#. Import the necessary libraries: ``machine`` for controlling the microcontroller's hardware, and ``time`` for adding delays.
-
+#. マイクロコントローラーのハードウェアを制御するための ``machine`` ライブラリと、遅延を追加するための ``time`` ライブラリをインポートします。
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Create a PWM (Pulse Width Modulation) object on Pin 25 and set its frequency to 50 Hz, which is common for servo.
+#. ピン25にPWM（パルス幅変調）オブジェクトを作成し、サーボに一般的な50 Hzにその周波数を設定します。
 
     .. code-block:: python
 
@@ -136,14 +130,14 @@ When running this code, the servo will continuously sweep back and forth between
         # Set the frequency of the PWM signal to 50 Hz, common for servos
         servo.freq(50)
 
-#. Define an ``interval_mapping`` function to map values from one range to another. This will be used to convert the angle to the appropriate pulse width and duty cycle.
+#. ある範囲から別の範囲に値をマッピングする ``interval_mapping`` 関数を定義します。これは、角度を適切なパルス幅とデューティサイクルに変換するために使用されます。
 
     .. code-block:: python
 
         def interval_mapping(x, in_min, in_max, out_min, out_max):
             return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
-#. Define a ``servo_write`` function that takes a PWM object and an angle as inputs. It calculates the pulse width and duty cycle based on the given angle, and then sets the PWM output accordingly.
+#. PWMオブジェクトと角度を入力として受け取る ``servo_write`` 関数を定義します。与えられた角度に基づいてパルス幅とデューティサイクルを計算し、それに応じてPWM出力を設定します。
 
     .. code-block:: python
         
@@ -153,12 +147,12 @@ When running this code, the servo will continuously sweep back and forth between
             duty = int(interval_mapping(pulse_width, 0, 20, 0, 1023))     # Calculate the duty cycle
             pin.duty(duty) # Set the duty cycle of the PWM signal
 
-    * In this function, ``interval_mapping()`` is called to map the angle range 0 ~ 180 to the pulse width range 0.5 ~ 2.5ms.
-    * Why is it 0.5~2.5? This is determined by the working mode of the :ref:`Servo`. 
-    * Next, convert the pulse width from period to duty. 
-    * Since ``duty()`` cannot have decimals when used (the value cannot be a float type), we used ``int()`` to force the duty to be converted to an int type.
+    * この関数では、 ``interval_mapping()`` を呼び出して、角度の範囲0〜180をパルス幅の範囲0.5〜2.5msにマッピングします。
+    * なぜ0.5~2.5msなのか？これは :ref:`サーボ` の動作モードによって決まります。
+    * 次に、パルス幅を周期からデューティに変換します。
+    * ``duty()`` は使用時に小数を持つことができない（値がfloat型であってはならない）ため、 ``int()`` を使用してデューティをint型に変換しました。
 
-#. Create an infinite loop with two nested loops.
+#. 二つのネストしたループを持つ無限ループを作成します。
 
     .. code-block:: python
 
@@ -173,5 +167,5 @@ When running this code, the servo will continuously sweep back and forth between
                 servo_write(servo, angle)
                 time.sleep_ms(20)
     
-    * The first nested loop iterates through angles from 0 to 180 degrees, and the second nested loop iterates through angles from 180 to 0 degrees in reverse.
-    * In each iteration, the ``servo_write`` function is called with the current angle, and a delay of 20 milliseconds is added.
+    * 最初のネストしたループは0度から180度までの角度を反復し、二番目のネストしたループは180度から0度までの角度を逆順で反復します。
+    * 各反復で、 ``servo_write`` 関数が現在の角度で呼び出され、20ミリ秒の遅延が追加されます。

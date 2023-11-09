@@ -5,79 +5,71 @@
 
 .. image:: img/74HC595.png
 
-Do you ever find yourself wanting to control a lot of LEDs, or just need more I/O pins to control buttons, sensors, and servos all at once? Well, you can connect a few sensors to Arduino pins, but you will soon start to run out of pins on the Arduino.
+ArduinoのピンやLEDをたくさんコントロールしたい時、またはボタン、センサー、サーボを同時にコントロールするためのI/Oピンが足りない時、どうしますか？Arduinoにはセンサーを数つ接続できますが、すぐにピンが不足することがあります。
 
-The solution is to use "shift registers". Shift registers allow you to expand the number of I/O pins you can use from the Arduino (or any microcontroller). The 74HC595 shift register  is one of the most famous.
+その解決策は「シフトレジスタ」を使用することです。シフトレジスタを使用すると、Arduino（または任意のマイクロコントローラ）から使用できるI/Oピンの数を増やすことができます。74HC595シフトレジスタは、その中でも特に有名です。
 
-The  74HC595 basically controls eight independent output pins and uses only three input pins. If you need more than eight additional I/O lines, you can easily cascade any number of shift registers and create a large number of I/O lines. All this is done by so-called shifting.
+74HC595は基本的に独立した8つの出力ピンをコントロールし、入力ピンは3つしか使用しません。8つ以上のI/Oラインが必要な場合、任意の数のシフトレジスタを簡単にカスケード接続して、多くのI/Oラインを作成できます。これは所謂のシフト動作によって行われます。
 
+**特徴**
 
-**Features**
+* 8ビット シリアルイン、パラレルアウト シフト
+* 動作電圧範囲：2 V から 6 V
+* 高電流3状態出力は、最大15LSTTL負荷まで駆動可能
+* 低消費電力、最大ICC = 80-µA
+* 典型的なtPD = 14 ns
+* 5 Vでの出力駆動±6-mA
+* 最大入力電流1 µA
+* シフトレジスタは直接クリアが可能
 
-* 8-Bit serial-in, parallel-out shift
-* Wide operating voltage range of 2 V to 6 V
-* High-current 3-state outputs can drive up to 15LSTTL loads
-* Low power consumption, 80-µA max ICC
-* Typical tPD = 14 ns
-* ±6-mA output drive at 5 V
-* Low input current of 1 µA max
-* Shift register has direct clear
-
-**Pins of 74HC595 and their functions:**
+**74HC595のピンとその機能:**
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7'**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7**: 8ビットの並列データ出力ピン。8つのLEDや7セグメントディスプレイの8ピンを直接制御可能。
+* **Q7'**: シリーズ出力ピン。複数の74HC595をシリーズ接続する際に、別の74HC595のDSに接続。
+* **MR**: リセットピン。低レベルでアクティブ。
+* **SHcp**: シフトレジスタの時系列入力。上昇エッジで、シフトレジスタ内のデータが1ビットずつ移動。例：Q1のデータがQ2に移動。下降エッジでは、シフトレジスタのデータは変更されません。
+* **STcp**: ストレージレジスタの時系列入力。上昇エッジで、シフトレジスタのデータがメモリレジスタに移動。
+* **CE**: 出力有効ピン。低レベルでアクティブ。
+* **DS**: シリアルデータ入力ピン
+* **VCC**: 正の供給電圧。
+* **GND**: グラウンド。
 
-**Functional Diagram**
+**機能図**
 
 .. image:: img/74hc595_functional_diagram.png
 
+**動作原理**
 
-**Working Principle**
+MR（ピン10）が高レベルで、OE（ピン13）が低レベルのとき、
+データはSHcpの上昇エッジで入力され、STcpの上昇エッジを通ってメモリレジスタに移動します。
 
-When MR (pin10) is high level and OE (pin13) is low level, 
-data is input in the rising edge of SHcp and goes to the memory register through the rising edge of STcp. 
+* シフトレジスタ
 
-
-* Shift Register
-
-    * Suppose, we want to input the binary data 1110 1110 into the shift register of the 74hc595.
-    * The data is input from bit 0 of the shift register.
-    * Whenever the shift register clock is a rising edge, the bits in the shift register are shifted one step. For example, bit 7 accepts the previous value in bit 6, bit 6 gets the value of bit 5, etc.
-
+    * 例として、74hc595のシフトレジスタにバイナリデータ1110 1110を入力する場合。
+    * データはシフトレジスタのビット0から入力されます。
+    * シフトレジスタクロックが上昇エッジの場合、シフトレジスタ内のビットが1ステップシフトされます。例：ビット7はビット6の前の値を受け入れ、ビット6はビット5の値を取得します。
 
 .. image:: img/74hc595_shift.png
 
-* Storage Register
+* ストレージレジスタ
 
-    * When the storage register is in the rising edge state, the data of the shift register will be transferred to the storage register.
-    * The storage register is directly connected to the 8 output pins, Q0 ~ Q7 will be able to receive a byte of data. 
-    * The so-called storage register means that the data can exist in this register and will not disappear with one output. 
-    * The data will remain valid and unchanged as long as the 74HC595 is powered on continuously. 
-    * When new data comes, the data in the storage register will be overwritten and updated.
+    * ストレージレジスタが上昇エッジ状態にあるとき、シフトレジスタのデータがストレージレジスタに転送されます。
+    * ストレージレジスタは8つの出力ピンに直接接続されているため、Q0〜Q7は1バイトのデータを受け取ることができます。
+    * いわゆるストレージレジスタとは、このレジスタにデータが存在して、1回の出力で消失しないことを意味します。
+    * 74HC595が連続して電源が入っている限り、データは有効で変更されずに残ります。
+    * 新しいデータが入ると、ストレージレジスタ内のデータが上書きされて更新されます。
 
 .. image:: img/74hc595_storage.png
 
-**Example**
+**例**
 
-* :ref:`ar_74hc595` (Arduino Project)
-* :ref:`ar_7_segment` (Arduino Project)
-* :ref:`ar_dice` (Arduino Project)
-* :ref:`py_74hc595` (MicroPython Project)
-* :ref:`py_7_segment` (MicroPython Project)
-* :ref:`py_dice` (MicroPython Project)
-
-
-
-
+* :ref:`ar_74hc595` (Arduinoプロジェクト)
+* :ref:`ar_7_segment` (Arduinoプロジェクト)
+* :ref:`ar_dice` (Arduinoプロジェクト)
+* :ref:`py_74hc595` (MicroPythonプロジェクト)
+* :ref:`py_7_segment` (MicroPythonプロジェクト)
+* :ref:`py_dice` (MicroPythonプロジェクト)
 

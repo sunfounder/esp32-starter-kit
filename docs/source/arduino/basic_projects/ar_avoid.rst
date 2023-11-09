@@ -1,37 +1,35 @@
 .. _ar_ir_obstacle:
 
-5.3 Detect the Obstacle
+5.3 障害物の検出
 ===================================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+このモジュールは一般的に車やロボットに設置され、前方の障害物の有無を判定するために使用されます。また、携帯型デバイスや自動水栓などにも広く利用されています。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると大変便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -43,49 +41,48 @@ You can also buy them separately from the links below.
         - |link_avoid_buy|
 
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトにおいてESP32ボードで利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力用）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイス起動時（電源オン時のリセット）に特定のブートモードを決定するために使用される特別なピンのセットです。
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    一般的に、これらのピンを入力用として使用することは **お勧めできません**。これらのピンを使用する場合は、ブートプロセスへの影響を考慮してください。詳細は :ref:`esp32_strapping` セクションを参照してください。
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.3_avoid.png
 
-When the obstacle avoidance module does not detect any obstacles, IO14 returns a high level. However, when it detects an obstacle, it returns a low level. You can adjust the blue potentiometer to modify the detection distance of this module.
+障害物回避モジュールが障害物を検出しない場合、IO14はハイレベルを返します。しかし、障害物を検出するとローレベルを返します。このモジュールの検出距離は青色のポテンショメータを調整して変更することができます。
 
-**Wiring**
+**配線図**
 
 
 .. image:: ../../img/wiring/5.3_avoid_bb.png
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``5.3.detect_the_obstacle.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.3.detect_the_obstacle``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ファイル ``5.3.detect_the_obstacle.ino`` をパス ``esp32-starter-kit-main\c\codes\5.3.detect_the_obstacle`` から開くことができます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
    
 .. raw:: html
@@ -93,4 +90,4 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b0f22caa-3c77-4dc1-9a33-20ff23d04a5e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After the code is uploaded successfully, if the IR obstacle avoidance module detects something blocking in front of it, "0" will appear on the serial monitor, otherwise "1" will be displayed.
+コードが正常にアップロードされた後、IR障害物回避モジュールが何かを検出してブロックしている場合は、シリアルモニターに「0」が表示されます。それ以外の場合は「1」が表示されます。

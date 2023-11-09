@@ -1,40 +1,40 @@
 .. _sh_doorbell:
 
-2.5 Doorbell
+2.5 ドアベル
 ======================
 
-Here, we will use the button and the bell on the stage to make a doorbell.
+ここでは、ステージ上のボタンとベルを使用してドアベルを作ります。
 
-After the green flag is clicked, you can press the button and the bell on the stage will make a sound.
+緑の旗がクリックされた後、ボタンを押すとステージ上のベルが音を出します。
 
 .. image:: img/7_doorbell.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -49,59 +49,58 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- How the button work
-- Reading digital pin and ranges
-- Creating a conditional loop
-- Adding a backdrop
-- Playing sound
+- ボタンの仕組み
+- デジタルピンの読み取りと範囲
+- 条件付きループの作成
+- 背景の追加
+- 音の再生
 
-Build the Circuit
+回路の構築
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+ボタンは4ピンのデバイスで、ピン1とピン2、ピン3とピン4が接続されており、ボタンを押すと4ピンが接続され、回路が閉じます。
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
-* Connect one of the pins on the left side of the button to pin14, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* ボタンの左側のピンの一つをピン14に接続し、プルダウン抵抗と0.1uF（104）キャパシタ（ジッターを除去し、ボタン作動時に安定したレベルを出力するため）に接続します。
+* 抵抗とキャパシタの他端をGNDに、ボタンの右側のピンの一つを5Vに接続します。
 
 .. image:: img/circuit/6_doorbel_bb.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Add a Backdrop**
+**1. 背景を追加**
 
-Click the **Choose a Backdrop** button in the lower right corner.
+スプライトエリアの右下にある **Choose a Backdrop** ボタンをクリックします。
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 1**.
+**Bedroom 1** を選択します。
 
 .. image:: img/7_bedroom2.png
 
-**2. Select the sprite**
+**2. スプライトを選択**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+デフォルトのスプライトを削除し、スプライトエリアの右下にある **Choose a Sprite** ボタンをクリックし、検索ボックスに **bell** と入力してからクリックして追加します。
 
 .. image:: img/7_sprite.png
 
-Then select the **bell** sprite on the stage and move it to the right position.
+次に、ステージ上の **bell** スプライトを選択し、適切な位置に移動します。
 
 .. image:: img/7_doorbell.png
 
-**3. Press the button and the bell makes a sound**
+**3. ボタンを押してベルを鳴らす**
 
+[if then]を使用して条件文を作成し、ピン14の読み取り値が1（キーが押された）に等しい場合、 **xylo1** の音を再生します。
 
-Use [if then] to make a conditional statement that when the value of the pin14 read is equal to 1 (the key is pressed), the sound **xylo1** will be played.
-
-* [read status of digital pin]: This block is from the **ESP32** palette and used to read the value of a digital pin, the result is 0 or 1.
-* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: This block is a control block and from **Control** palette. If its boolean condition is true, the blocks held inside it will run, and then the script involved will continue. If the condition is false, the scripts inside the block will be ignored. The condition is only checked once; if the condition turns to false while the script inside the block is running, it will keep running until it has finished.
-* [play sound until done]: This block is from the Sound palette, used to play specific sounds.
+* [read status of digital pin]: このブロックは **ESP32** パレットからで、デジタルピンの値を読み取るために使用されます。結果は0または1です。
+* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: このブロックは制御ブロックで、 **Control** パレットから来ています。そのブール条件が真の場合、内部のブロックが実行され、関連するスクリプトが続行されます。条件が偽の場合、ブロック内のスクリプトは無視されます。条件は一度だけチェックされます。ブロック内のスクリプトが実行中に条件が偽に変わった場合でも、完了するまで実行され続けます。
+* [play sound until done]: このブロックはSoundパレットからで、特定の音を再生するために使用されます。
 
 .. image:: img/7_bell.png

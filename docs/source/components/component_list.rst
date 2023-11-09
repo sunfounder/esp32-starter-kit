@@ -1,15 +1,14 @@
-Components List and Introduction
+部品リストと紹介
 ====================================
 
-
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+パッケージを開封した後、部品の数量が製品の説明と一致しているか、そしてすべての部品が良好な状態であるか確認してください。
 
 .. image:: img/components_list.jpg
     :width: 800
     
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+以下は各部品の紹介です。これには、部品の動作原理と対応するプロジェクトが含まれています。
 
-**Control Board**
+**制御ボード**
 
 .. toctree::
     :maxdepth: 1
@@ -19,7 +18,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Basic**
+**基本**
 
 .. toctree::
     :maxdepth: 1
@@ -30,7 +29,7 @@ Below is the introduction to each component, which contains the operating princi
     component_wires
     component_transistor
 
-**Chip**
+**チップ**
 
 .. toctree::
     :maxdepth: 1
@@ -39,7 +38,7 @@ Below is the introduction to each component, which contains the operating princi
     component_l293d
 
 
-**Display**
+**ディスプレイ**
 
 .. toctree::
     :maxdepth: 1
@@ -51,7 +50,7 @@ Below is the introduction to each component, which contains the operating princi
     component_ws2812
 
 
-**Sound**
+**音**
 
 .. toctree::
     :maxdepth: 1
@@ -59,7 +58,7 @@ Below is the introduction to each component, which contains the operating princi
     component_buzzer
     component_audio_speaker
 
-**Driver**
+**ドライバ**
 
 .. toctree::
     :maxdepth: 1
@@ -70,7 +69,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Controller**
+**コントローラ**
 
 .. toctree::
     :maxdepth: 1
@@ -83,7 +82,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Sensor**
+**コントローラ**
 
 .. toctree::
     :maxdepth: 1

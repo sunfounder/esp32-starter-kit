@@ -1,40 +1,40 @@
 .. _sh_breathing_led:
 
-2.2 Breathing LED
+2.2 ブレシングLED
 ========================
 
-Now use another method to control the brightness of the LED. Unlike the previous project, here the brightness of the LED is made to slowly diminish until it disappears.
+今回は別の方法でLEDの明るさを制御します。前のプロジェクトとは異なり、ここではLEDの明るさが徐々に減少し、最終的には消えるようにしています。
 
-When the sprite on the stage is clicked, the brightness of the LED slowly increases and then goes out instantly.
+ステージ上のスプライトをクリックすると、LEDの明るさが徐々に増加し、その後すぐに消灯します。
 
 .. image:: img/3_ap.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -49,65 +49,66 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- Set the output value of the PWM pin
-- Create variables
-- Change the brightness of the sprite
+- PWMピンの出力値を設定する
+- 変数を作成する
+- スプライトの明るさを変える
 
-Build the Circuit
+回路の構築
 -----------------------
 
-This project uses the same circuit as the previous project :ref:`sh_table_lamp`, but instead of using HIGH/LOW to make the LEDs light up or turn off, this project uses the `PWM - Wikipedia <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_ signal to slowly light up or dim down the LED.
+このプロジェクトは前のプロジェクト :ref:`sh_table_lamp` と同じ回路を使用しますが、LEDを点灯させたり消したりするためにHIGH/LOWを使用する代わりに、 `PWM - Wikipedia <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_ シグナルを使用してLEDをゆっくりと点灯させたり暗くしたりします。
 
-The PWM signal range is 0-255, on the ESP32 board, 2, 5, 12~15, 18, 19, 21, 22, 25, 26 and 27 can output PWM signal.
+PWM信号の範囲は0-255で、ESP32ボードでは、2, 5, 12~15, 18, 19, 21, 22, 25, 26, 27がPWM信号を出力することができます。
 
 .. image:: img/circuit/1_hello_led_bb.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Select a sprite**
+**1. スプライトの選択**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **button3** in the search box, and then click to add it.
+デフォルトのスプライトを削除し、スプライトエリアの右下隅にある **Choose a Sprite** ボタンをクリックし、検索ボックスに **button3** を入力してからクリックして追加します。
 
 .. image:: img/3_sprite.png
 
-**2. Creating a variable**.
+**2. 変数の作成**。
 
-Create a variable called **pwm** to store the value of the pwm change.
+**pwm** という名前の変数を作成して、pwmの変化の値を格納します。
 
-Click on the **Variables** palette and select **Make a Variable**.
+**Variables** パレットで **Make a Variable** を選択します。
 
 .. image:: img/3_ap_va.png
 
-Enter the name of the variable, it can be any name, but it is recommended to describe its function. The data type is number and For all sprites.
+変数の名前を入力します。任意の名前でかまいませんが、その機能を説明することをお勧めします。データタイプは数値で、すべてのスプライト用です。
 
 .. image:: img/3_ap_pwm.png
 
-Once created, you will see **pwm** inside the **Variables** palette and in the checked state, which means this variable will appear on the stage. You can try unchecking it to see if pwm is still present on the stage.
+作成すると、 **Variables** パレット内に **pwm** が表示され、チェック状態になります。これは、この変数がステージ上に表示されることを意味します。チェックを外すと、ステージ上にpwmがまだ存在するかどうかを確認できます。
 
 .. image:: img/3_ap_0.png
 
-**3. Set the initial state**
+**3. 初期状態の設定**
 
-When the **button3** sprite is clicked, switch the costume to **button-b** (clicked state), and set the initial value of the variable **pwm** to 0.
+**button3** スプライトがクリックされたとき、コスチュームを **button-b** （クリック状態）に切り替え、変数 **pwm** の初期値を0に設定します。
 
-* [set pwm to 0]: from **Variables** palette, used to set the value of the variable.
+* [set pwm to 0]: **Variables** パレットから、変数の値を設定するために使用します。
 
 .. image:: img/3_ap_brightness.png
 
-**4. Make the LED brighter and brighter**
+**4. LEDを徐々に明るくする**
 
-Since the range of pwm is 255, so by [repeat] block, the variable **pwm** is accumulated to 255 by 5, and then put into [set PWM pin] block, so you can see the LED slowly light up.
+pwmの範囲が255であるため、[repeat]ブロックにより、変数 **pwm** を5ずつ255まで蓄積し、[set PWM pin]ブロックに入れると、LEDがゆっくりと点灯するのが見えます。
 
-* [change pwm by 5]: from **Variables** palette, let the variable change a specific number each time. It can be a positive or negative number, positive is increasing each time, negative is decreasing each time, for example, here the variable pwm is increased by 5 each time.
-* [set PWM pin]: from the **ESP32** palette, used to set the output value of the pwm pin.
+* [change pwm by 5]: **Variables** パレットから、毎回特定の数だけ変数を変更するために使用します。プラスまたはマイナスの数値が可能で、プラスは毎回増加、マイナスは毎回減少を意味します。例えば、ここでは変数pwmが毎回5ずつ増加します。
+* [set PWM pin]: **ESP32** パレットから、pwmピンの出力値を設定するために使用します。
 
 .. image:: img/3_ap_1.png
 
 
-Finally, switch the costume of button3 back to **button-a** and make the PWM pin value 0, so that the LED will light up slowly and then turn off again.
+最後に、button3のコスチュームを **button-a** に戻し、PWMピンの値を0にすることで、LEDがゆっくりと点灯してから再び消灯します。
 
 .. image:: img/3_ap_2.png
+

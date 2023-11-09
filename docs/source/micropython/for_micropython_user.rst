@@ -1,22 +1,19 @@
 .. _micropython_user:
 
-For MicroPython User
-======================
+MicroPythonユーザーのために
+=============================
 
-This chapter is a comprehensive guide tailored specifically for users who prefer working with MicroPython. 
-It covers various topics, including getting started with MicroPython, working with displays, generating sounds, 
-controlling actuators, utilizing sensors, and exploring fun projects. 
-This chapter provides MicroPython users with the necessary knowledge and resources to effectively use 
-this kit and unleash their creativity in building exciting projects.
+この章は、MicroPythonを好んで使用するユーザーに特化して作られた包括的なガイドです。
+MicroPythonの入門から、ディスプレイの操作、音の生成、アクチュエータの制御、センサーの利用、楽しいプロジェクトの探求に至るまで、様々なトピックを網羅しています。
+この章は、MicroPythonユーザーに必要な知識とリソースを提供し、キットを効果的に使いこなし、エキサイティングなプロジェクトを創造するための創造力を解き放つ手助けとなります。
 
+こちらはESP32スターターキットの完全なコードパッケージです。以下のリンクをクリックしてダウンロードしてください：
 
-Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
+* :download:`SunFounder ESP32スターターキット <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-* :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+ダウンロードが完了したら、ファイルを解凍し、該当するソフトウェアで関連するサンプルコードやプロジェクトファイルを開きます。これにより、キットが提供するすべてのコードとリソースを閲覧し、利用することができます。
 
-Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
-
-**1. Get Started**
+**1. はじめに**
 
 .. toctree::
     :maxdepth: 1
@@ -29,7 +26,7 @@ Once the download is complete, unzip the file and open the relevant example code
     python_start/syntax/micropython_basic_syntax
 
 
-**2. Displays**
+**2. ディスプレイ**
 
 .. toctree::
     :maxdepth: 2
@@ -43,7 +40,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_rgb_strip
 
 
-**3. Sounds**
+**3. サウンド**
 
 .. toctree::
     :maxdepth: 2
@@ -51,7 +48,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_ac_buz
     basic_projects/py_pa_buz
 
-**4. Actuators**
+**4. アクチュエーター**
 
 .. toctree::
     :maxdepth: 2
@@ -60,7 +57,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_pump
     basic_projects/py_servo
 
-**5. Sensors**
+**5. センサー**
 
 .. toctree::
     :maxdepth: 2
@@ -80,7 +77,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_dht11
     basic_projects/py_irremote
 
-**6. Funny Projects**
+**6. おもしろプロジェクト**
 
 .. toctree::
     :maxdepth: 2

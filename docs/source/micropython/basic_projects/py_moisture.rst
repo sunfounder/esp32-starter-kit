@@ -1,37 +1,37 @@
 .. _py_moisture:
 
-5.9 Measure Soil Moisture
+5.9 土壌水分を測定する
 ==========================
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture.
+この容量性土壌水分センサーは市場に出回っているほとんどの抵抗型センサーとは異なり、容量性誘導の原理を用いて土壌の水分を検出します。
 
-By visually reading the values from the soil moisture sensor, we can gather information about the moisture level in the soil. This information is useful for various applications, such as automatic irrigation systems, plant health monitoring, or environmental sensing projects.
+土壌水分センサーからの値を視覚的に読み取ることで、土壌の水分レベルに関する情報を収集できます。この情報は、自動灌漑システム、植物の健康監視、環境センシングプロジェクトなど、様々なアプリケーションに有用です。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,45 +42,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **ストラッピングピン**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    以下のピンはストラッピングピンで、電源オンまたはリセット時のESP32の起動プロセスに影響します。しかし、ESP32が正常に起動した後は、通常のピンとして使用できます。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO0, IO12
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.9_soil_moisture.png
 
-By inserting the module into the soil and watering it, the value read on I35 will decrease.
+モジュールを土壌に挿入し、水やりをすると、I35で読み取られる値が減少します。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.9_moisture_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.9_moisture.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.9_moisture.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 
 
@@ -105,6 +105,6 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 
 
-When the script runs, you will see the soil moisture value in the Shell.
+スクリプトを実行すると、土壌の水分値がシェルに表示されます。
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+モジュールを土壌に挿入し、水やりをすると、土壌水分センサーの値は小さくなります。

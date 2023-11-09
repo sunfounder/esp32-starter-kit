@@ -1,38 +1,36 @@
-SunFounder ESP32 Starter Kit
+SunFounder ESP32 スターターキット
 ==================================================
 
 .. image:: img/esp32_ultimate_kit.png
 
+ESP32ラーニングキットへようこそ！この包括的なキットは、ESP32マイクロコントローラの多機能な世界を初心者から熟練開発者まで深く探ることを目的として設計されています。中心にはESP32 WROOM 32Eがあり、LED、センサー、モーターなどの付属部品が豊富に揃っているので、さまざまなプロジェクトを探索できます。
 
-Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
+基本的な電子工作からIoTの統合まで、このキットには全てが備わっています。MicroPythonの愛好者のために、MicroPythonの構造化された導入から、IDEのセットアップや基本的な文法のレッスンまで提供しています。Arduinoユーザーも忘れられておらず、Arduinoを始めるための専用セクションや基本プロジェクトのスイートが含まれていて、学習プロセスをスタートできます。
 
-Whether you're keen on basic electronics, IoT integrations, this kit has it all. For MicroPython enthusiasts, we provide a structured introduction to MicroPython, complete with IDE setups and basic syntax lessons. Arduino users are not left behind, with a dedicated section on getting started with Arduino, and a suite of basic projects to jumpstart the learning process.
+クリエイティブな方には、Scratchとの統合に関する楽しいセクションがあり、プログラミングとストーリーテリングの融合を実現します。キット内の各プロジェクトは綿密に概説されており、目的、回路の組み立て、プログラミングの側面を理解することを確実にします。
 
-For the creatives, there's a delightful section on integrating with Scratch, allowing for a blend of programming and storytelling. Each project in the kit is meticulously outlined, ensuring you understand the objectives, the circuit assembly, and the programming aspects.
+多数のゲームプロジェクト、実用的なアプリケーション、トラブルシューティングのFAQを備えたこのキットは、全てのユーザーに豊かな学習経験を約束します。ESP32の冒険を始めてみましょう！
 
-With a myriad of game projects, practical applications, and troubleshooting FAQs, this kit promises an enriching learning experience for all. Dive in and let the ESP32 adventure begin!
+ご質問や他の興味深いアイディアがあれば、service@sunfounder.comまでメールをお送りください。
 
+**表示言語について**
 
-If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
+英語に加えて、このコースの他の言語に取り組んでいます。協力に興味がある方はservice@sunfounder.comまでご連絡ください。ご協力いただいた方には無料で製品を提供いたします。
+それまでは、Google Translateを使用して英語をお求めの言語に変換することをおすすめします。
 
-**About the display language**
+手順は以下の通りです。
 
-In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
-In the meantime, we recommend using Google Translate to convert English to the language you want to see.
-
-The steps are as follows.
-
-* In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
+* このコースのページで、右クリックして **Translate to xx** を選択します。現在の言語が望むものでない場合は、後で変更できます。
 
 .. image:: img/translate1.png
     :align: center
 
-* There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
+* 右上隅に言語のポップアップが表示されます。メニューボタンをクリックして **choose another language** します。
 
 .. image:: img/translate2.png
     :align: center
 
-* Select the language from the inverted triangle box, and then click **Done**.
+* 反転した三角形のボックスから言語を選択し、 **Done** をクリックします。
 
 .. image:: img/translate3.png
     :align: center
@@ -40,8 +38,7 @@ The steps are as follows.
 .. toctree::
     :maxdepth: 2
 
-
-    About this Kit <self>
+    このキットについて <self>
     components/component_list
     arduino/for_arduino_user
     micropython/for_micropython_user
@@ -49,7 +46,7 @@ The steps are as follows.
     faq/faq
     thank-learning
 
-Copyright Notice
+著作権に関する通知
 -----------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+このマニュアルに含まれるテキスト、画像、コードなど全ての内容はSunFounder社が所有しています。関連する規定や著作権法のもとで、著者や関連する権利保持者の合法的権利を侵害することなく、個人的な学習、調査、楽しみ、またはその他の非営利目的のためにのみ使用する必要があります。許可なく商業的利益のためにこれらを使用する個人や組織に対して、会社は法的措置を取る権利を留保します。

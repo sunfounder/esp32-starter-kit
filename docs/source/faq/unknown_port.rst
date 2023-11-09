@@ -1,25 +1,24 @@
-
 .. _unknown_com_port:
 
-Always displaying "Unknown COMxx"?
+"Unknown COMxx"が常に表示されますか？
 -------------------------------------------
 
-When plugging the ESP32 into the computer, the Arduino IDE often displays ``Unknown COMxx``. Why does this happen?
+ESP32をコンピュータに接続すると、Arduino IDEはよく ``Unknown COMxx`` と表示します。これはなぜでしょうか？
 
 .. image:: img/unknown_device.png
 
-This is because the USB driver for ESP32 is different from the regular Arduino Boards. The Arduino IDE can't automatically recognize this board. 
+これは、ESP32のUSBドライバが通常のArduinoボードとは異なるためです。Arduino IDEはこのボードを自動的に認識することができません。
 
-In such a scenario, you need to manually select the correct board by following these steps:
+このような状況では、以下の手順に従って正しいボードを手動で選択する必要があります：
 
-#. Click on **"Select the other board and port"**.
+#. **Select the other board and port** をクリックします。
 
     .. image:: img/unknown_select.png
 
-#. In the search, type **"esp32 dev module"**, then select the board that appears. Afterward, select the correct port and click **OK**.
+#. 検索窓に **esp32 dev module** と入力し、表示されるボードを選択します。その後、正しいポートを選択し、 **OK** をクリックします。
 
     .. image:: img/unknown_board.png
 
-#. Now, you should be able to see your board and port in this quick view window.
+#. これで、クイックビューウィンドウでボードとポートを確認することができるはずです。
 
     .. image:: img/unknown_correct.png

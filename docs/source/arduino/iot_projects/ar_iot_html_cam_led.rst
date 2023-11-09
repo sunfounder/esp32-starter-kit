@@ -1,35 +1,35 @@
-8.3 Custom Video Streaming Web Server
-========================================
+8.3 カスタムビデオストリーミングウェブサーバー
+===============================================
 
-The Custom Video Streaming Web Server project offers an opportunity to learn how to create a web page from scratch and customize it to play video streams. Additionally, you can incorporate interactive buttons, such as ON and OFF, to control the LED's brightness.
+カスタムビデオストリーミングウェブサーバープロジェクトは、ウェブページをゼロから作成し、ビデオストリームを再生するためのカスタマイズ方法を学ぶ機会を提供します。さらに、LEDの明るさを制御するためのONとOFFのようなインタラクティブなボタンを取り入れることができます。
 
-By building this project, you will gain hands-on experience in web development, HTML, CSS, and JavaScript. You will learn how to create a responsive web page that can display video streams in real-time. Moreover, you will discover how to integrate interactive buttons to control the LED's state, providing a dynamic user experience.
+このプロジェクトを構築することで、ウェブ開発、HTML、CSS、JavaScriptの実践経験を得ることができます。リアルタイムでビデオストリームを表示できるレスポンシブなウェブページを作成する方法を学びます。さらに、インタラクティブなボタンを統合してLEDの状態を制御し、ダイナミックなユーザーエクスペリエンスを提供する方法を発見します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが確かに便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,9 +44,9 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**How to do?**
+**どのように実行しますか？**
 
-#. First plug in the camera.
+#. まずカメラを接続します。
 
     .. raw:: html
 
@@ -55,25 +55,25 @@ You can also buy them separately from the links below.
             Your browser does not support the video tag.
         </video>
 
-#. Build the circuit.
+#. 回路を組み立てます。
 
     .. image:: ../../img/wiring/iot_3_html_led_bb.png
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. 次に、USBケーブルを使ってESP32-WROOM-32Eをコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Open the code.
+#. コードを開きます。
 
-    * Open the ``iot_3_html_cam_led.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_3_html_cam_led`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\iot_3_html_cam_led`` ディレクトリにある ``iot_3_html_cam_led.ino`` ファイルを開くか、Arduino IDEにコードをコピーします。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
  
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/a5e33c30-63dc-4987-94c3-89bc6a599e24/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
+#. 次の行を見つけて、あなたの ``<SSID>`` と ``<PASSWORD>`` で修正してください。
 
     .. code-block::  Arduino
 
@@ -81,19 +81,20 @@ You can also buy them separately from the links below.
         const char* ssid = "<SSID>";
         const char* password = "<PASSWORD>";
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
+#. 正しいボード（ESP32 Dev Module）とポートを選択した後、 **アップロード** ボタンをクリックします。
 
-#. You will see a successful WiFi connection message and the assigned IP address in the Serial Monitor.
+#. シリアルモニタで成功したWiFi接続のメッセージと割り当てられたIPアドレスが表示されます。
 
     .. code-block:: 
 
         WiFi connected
         Camera Stream Ready! Go to: http://192.168.18.77
 
-#. Enter the IP address in your web browser. You will be directed to the web page shown below, where you can use the customized ON and OFF buttons to control the LED.
+#. WebブラウザでIPアドレスを入力します。下記のウェブページが表示され、カスタマイズされたONとOFFボタンを使用してLEDを制御できます。
 
     .. image:: img/sp230510_180503.png 
 
-#. Insert a battery into the expansion board and remove the USB cable. Now you can place the device anywhere you desire within the Wi-Fi range.
+#. バッテリーを拡張ボードに挿入し、USBケーブルを取り外します。これで、Wi-Fi範囲内であればどこにでもデバイスを設置できます。
 
     .. image:: ../../img/plugin_battery.png
+

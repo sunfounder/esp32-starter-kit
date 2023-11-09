@@ -1,50 +1,48 @@
 .. _cpn_transistor:
 
-Transistor
+トランジスタ
 ============
 
 .. image:: img/npn_pnp.png
 
-Transistor is a semiconductor device that controls current by current. It functions by amplifying weak signal to larger amplitude signal and is also used for non-contact switch. 
+トランジスタは、電流によって電流を制御する半導体デバイスです。微弱な信号を大きな振幅の信号に増幅する機能を持ち、非接触スイッチとしても使用されます。
 
-A transistor is a three-layer structure composed of P-type and N-type semiconductors. They form the three regions internally. The thinner in the middle is the base region; the other two are both N-type or P-type ones - the smaller region with intense majority carriers is the emitter region, when the other one is the collector region. This composition enables the transistor to be an amplifier. 
-From these three regions, three poles are generated respectively, which are base (b), emitter (e), and collector (c). They form two P-N junctions, namely, the emitter junction and collection junction. The direction of the arrow in the transistor circuit symbol indicates that of the emitter junction. 
+トランジスタは、P型およびN型の半導体から成る3層の構造です。これらは内部で三つの領域を形成しています。中央の薄い部分がベース領域、残りの2つ（どちらもN型またはP型）のうち、多数キャリアが集中している小さい方がエミッタ領域、もう一方がコレクタ領域です。この構成により、トランジスタは増幅器として動作します。
+これら3つの領域からは、それぞれベース(b)、エミッタ(e)、コレクタ(c)の三つの極が生成されます。これらは2つのP-N接合、すなわち、エミッタ接合およびコレクタ接合を形成します。トランジスタの回路記号の矢印の方向は、エミッタ接合の方向を示しています。
 
-* `P-N junction - Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
+* `P-N接合 - Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
 
-Based on the semiconductor type, transistors can be divided into two groups, the NPN and PNP ones. From the abbreviation, we can tell that the former is made of two N-type semiconductors and one P-type and that the latter is the opposite. See the figure below. 
+半導体の種類に基づいて、トランジスタはNPN型とPNP型の2つのグループに分けられます。略語から、前者は2つのN型半導体と1つのP型でできており、後者はその逆であることがわかります。以下の図を参照してください。
 
 .. note::
-    s8550 is PNP transistor and the s8050 is the NPN one, They look very similar, and we need to check carefully to see their labels.
+    s8550はPNP型のトランジスタで、s8050はNPN型です。外見は非常に似ているため、ラベルをよく確認する必要があります。
 
 .. image:: img/transistor_symbol.png
 
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+高レベルの信号がNPNトランジスタを通過すると、それは励起されます。しかし、PNP型は低レベルの信号が必要です。両方のタイプのトランジスタは、この実験のように非接触スイッチとして頻繁に使用されます。
 
+* `S8050 トランジスタ データシート <https://components101.com/asset/sites/default/files/component_datasheet/S8050%20Transistor%20Datasheet.pdf>`_
+* `S8550 トランジスタ データシート <https://www.mouser.com/datasheet/2/149/SS8550-118608.pdf>`_
 
-* `S8050 Transistor Datasheet <https://components101.com/asset/sites/default/files/component_datasheet/S8050%20Transistor%20Datasheet.pdf>`_
-* `S8550 Transistor Datasheet <https://www.mouser.com/datasheet/2/149/SS8550-118608.pdf>`_
-
-Put the label side facing us and the pins facing down. The pins from left to right are emitter(e), base(b), and collector(c).
+ラベル面を自分に向けて、ピンを下にして置きます。左から右に、エミッタ(e)、ベース(b)、コレクタ(c)の順になります。
 
 .. image:: img/ebc.png
 
 .. note::
-    * The base is the gate controller device for the larger electrical supply. 
-    * In the NPN transistor, the collector is the larger electrical supply and the emitter is the outlet for that supply, the PNP transistor is just the opposite.
-
+    * ベースは、より大きな電気供給のためのゲートコントローラデバイスです。
+    * NPNトランジスタでは、コレクタが大きな電気供給で、エミッタがその供給の出口です。PNPトランジスタはその逆です。
 
 .. Example
 .. -------------------
 
-.. :ref:`Two Kinds of Transistors`
+.. :ref:`二つの種類のトランジスタ`
 
+**例**
 
-**Example**
+* :ref:`ar_transistor` (Arduinoプロジェクト)
+* :ref:`ar_ac_buz` (Arduinoプロジェクト)
+* :ref:`ar_fruit_piano` (Arduinoプロジェクト)
+* :ref:`py_transistor` (MicroPythonプロジェクト)
+* :ref:`py_pa_buz` (MicroPythonプロジェクト)
+* :ref:`py_light_theremin` (MicroPythonプロジェクト)
 
-* :ref:`ar_transistor` (Arduino Project)
-* :ref:`ar_ac_buz` (Arduino Project)
-* :ref:`ar_fruit_piano` (Arduino Project)
-* :ref:`py_transistor` (MicroPython Project)
-* :ref:`py_pa_buz` (MicroPython Project)
-* :ref:`py_light_theremin` (MicroPython Project)

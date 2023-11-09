@@ -1,39 +1,39 @@
 .. _ar_74hc595:
 
-2.4 Microchip - 74HC595
-===========================
+2.4 マイクロチップ - 74HC595
+===============================
 
-Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
+このエキサイティングなプロジェクトへようこそ！このプロジェクトでは、74HC595チップを使用して8つのLEDの流れるような表示を制御します。
 
-Imagine triggering this project and witnessing a mesmerizing flow of light, as if a sparkling rainbow is jumping between the 8 LEDs. Each LED will light up one by one and quickly fade away, while the next LED continues to shine, creating a gorgeous and dynamic effect.
+このプロジェクトを起動すると、8つのLED間で飛び交うかのような魅惑的な光の流れが目の前に広がります。一つ一つのLEDが順に点灯し、すぐに消えていく間に、次のLEDが輝き続け、美しくダイナミックな効果を生み出します。
 
-By cleverly utilizing the 74HC595 chip, we can control the on and off states of multiple LEDs to achieve the flowing effect. This chip has multiple output pins that can be connected in series to control the sequence of LED illumination. Moreover, thanks to the chip's expandability, we can easily add more LEDs to the flowing display, creating even more spectacular effects.
+74HC595チップを巧みに利用することで、複数のLEDのオン/オフ状態を制御し、流れるような効果を実現できます。このチップには複数の出力ピンがあり、LEDの点灯順序を制御するために直列に接続できます。さらに、チップの拡張性により、流れる表示にさらに多くのLEDを簡単に追加し、より壮観な効果を作り出すことができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+もちろん、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,57 +51,57 @@ You can also buy them separately from the links below.
         - |link_74hc595_buy|
 
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトでESP32ボードに利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.4_74hc595_led.png
     :width: 600
 
-* When MR (pin10) is high level and CE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. 
-* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. 
-* There is a serial shift input pin (DS), a serial output pin (Q7') and an asynchronous reset button (low level) in the memory register. 
-* The memory register outputs a Bus with a parallel 8-bit and in three states. 
-* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+* MR（ピン10）がハイレベルで、CE（ピン13）がローレベルのとき、SHcpの立ち上がりエッジでデータが入力され、SHcpの立ち上がりエッジを通してメモリレジスタに移動します。
+* 2つのクロックを接続すると、シフトレジスタはメモリレジスタよりも常に1パルス早くなります。
+* メモリレジスタには、シリアルシフト入力ピン（DS）、シリアル出力ピン（Q7'）、非同期リセットボタン（ローレベル）があります。
+* メモリレジスタは、3状態の並列8ビットバスを出力します。
+* OEが有効（ローレベル）のとき、メモリレジスタのデータがバス（Q0 ～ Q7）に出力されます。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/2.4_74hc595_bb.png
     :width: 800
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``2.4_74hc595.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.4_74hc595``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\2.4_74hc595`` のパスの下にある ``2.4_74hc595.ino`` ファイルを開きます。
+    * ボード（ESP32 Dev Module）を選択し、適切なポートを選んだ後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/024e20bb-f9c6-4baf-bb27-cdf49eb91e9e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When you finish uploading the codes to the ESP32 board, you can see the LEDs turning on one after another.
+コードをESP32ボードにアップロードすると、LEDが次々と点灯するのを見ることができます。
 
-**How it works?**
+**どのように動作するのか？**
 
-#. Declare an array, store several 8 bit binary numbers that are used to change the working state of the eight LEDs controlled by 74HC595. 
+#. 74HC595で制御される8つのLEDの作業状態を変更するために使用されるいくつかの8ビットバイナリ数値を格納するために配列を宣言します。
 
     .. code-block:: arduino
 
         int datArray[] = {B00000000, B00000001, B00000011, B00000111, B00001111, B00011111, B00111111, B01111111, B11111111};
 
-#. ``loop()`` function.
+#. ``loop()`` 関数。
 
     .. code-block:: arduino
 
@@ -117,7 +117,8 @@ When you finish uploading the codes to the ESP32 board, you can see the LEDs tur
             }
 
 
-    * Iterates through the ``datArray[]``, sequentially sending the binary values to the shift register.
-    * The ``digitalWrite(STcp, LOW)`` and ``digitalWrite(STcp, HIGH)`` commands latch the data into the storage register.
-    * ``shiftOut()`` function sends the binary values from ``datArray[]`` to the shift register using the data pin (DS) and shift register clock pin (SHcp). ``MSBFIRST`` means to move from high bits.
-    * Then create a 1-second pause between each LED pattern update.
+    * ``datArray[]`` を反復し、バイナリ値をシフトレジスタに順次送信します。
+    * ``digitalWrite(STcp, LOW)`` と ``digitalWrite(STcp, HIGH)`` の命令でデータがストレージレジスタにラッチされます。
+    * ``shiftOut()`` 関数は、データピン（DS）とシフトレジスタクロックピン（SHcp）を使用して、 ``datArray[]`` からバイナリ値をシフトレジスタに送信します。 ``MSBFIRST`` は高ビットから移動することを意味します。
+    * LEDパターンの更新間に1秒の一時停止を作ります。
+

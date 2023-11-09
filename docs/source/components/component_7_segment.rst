@@ -1,79 +1,75 @@
-
 .. _cpn_7_segment:
 
-7-segment Display
-======================
+7セグメントディスプレイ
+=========================
 
 .. image:: img/7_segment.png
     :width: 200
     :align: center
 
-A 7-segment display is an 8-shaped component which packages 7 LEDs. Each LED is called a segment - when energized, one segment forms part of a numeral to be displayed.
+7セグメントディスプレイは、7つのLEDをパッケージングした8の形をした部品です。各LEDはセグメントと呼ばれ、エネルギーを供給すると表示する数字の一部となります。
 
-* Each of the LEDs in the display is given a positional segment with one of its connection pins led out from the rectangular plastic package.
-* These LED pins are labeled from "a" through to "g" representing each individual LED.
-* The other LED pins are connected together forming a common pin.
-* So by forward biasing the appropriate pins of the LED segments in a particular order, some segments will brighten and others stay dim, thus showing the corresponding character on the display. 
+* ディスプレイ内の各LEDには位置セグメントが割り当てられ、その接続ピンの一つが長方形のプラスチックパッケージから引き出されています。
+* これらのLEDピンは"a"から"g"までラベルが付けられ、各LEDを表しています。
+* 他のLEDピンは共通ピンを形成するために接続されています。
+* したがって、特定の順序でLEDセグメントの適切なピンに順方向のバイアスをかけると、一部のセグメントが明るくなり、他のセグメントは暗くなり、ディスプレイに対応する文字が表示されます。
 
-**Features**
+**特徴**
 
-* Size: 19 x 12.7 x 13.8mm(LxWxH, include the pin)
-* Screen: 0.56''
-* Color: red
-* Common Cathode
-* Forward Voltage: 1.8V
-* 10 pins
-* Pitch: standard 0.1" (2.54mm)
+* サイズ: 19 x 12.7 x 13.8mm（LxWxH、ピンを含む）
+* スクリーン: 0.56''
+* 色: 赤
+* 共通カソード
+* 順方向電圧: 1.8V
+* 10ピン
+* ピッチ: 標準0.1" (2.54mm)
 
-**Common Cathode (CC) or Common Anode (CA)**
+**共通カソード（CC）または共通アノード（CA）**
 
-There are two types of pin connection: Common Cathode (CC) and Common Anode (CA). 
-As the name suggests, a CC display has all the cathodes of the 7 LEDs connected when a CA display has all the anodes of the 7 segments connected.
+ピンの接続には2つのタイプがあります：共通カソード（CC）と共通アノード（CA）。
+名前が示すように、CCディスプレイは7つのLEDのカソードが接続されているのに対し、CAディスプレイは7セグメントのアノードがすべて接続されています。
 
-
-* Common Cathode 7-Segment Display
+* 共通カソード7セグメントディスプレイ
 
 .. image:: img/segment_cathode.png
     :width: 500
 
-* Common Anode 7-Segment Display
+* 共通アノード7セグメントディスプレイ
 
 .. image:: img/segment_anode.png
     :width: 500
 
-**How to Know CC or CA?**
+**CCかCAかを知る方法は？**
 
-Usually there will be label on the side of the 7-segment display, xxxAx or xxxBx. Generally speaking xxxAx stands for common cathode and xxxBx stands for common anode.
+通常、7セグメントディスプレイの側面には、xxxAxまたはxxxBxというラベルがあります。一般的に、xxxAxは共通カソードを示し、xxxBxは共通アノードを示しています。
 
 .. image:: img/7_segment.png
     :width: 250
 
 .. image:: img/7_segment_bs.png
 
-You can also use a multimeter to check the 7-segment display if there is no label. Set the multimeter to diode test mode and connect the black lead to the middle pin of the 7-segment display, and the red lead to any other pin except the middle one. The 7-segment display is common cathode if a segment lights up.
+ラベルがない場合、マルチメータを使用して7セグメントディスプレイをチェックすることもできます。マルチメータをダイオードテストモードに設定し、ブラックリードを7セグメントディスプレイの中央ピンに接続し、赤いリードを中央以外の任意のピンに接続します。セグメントが点灯すると、7セグメントディスプレイは共通カソードです。
 
-You swap the red and black meter heads if there is no segment lit. When a segment is lit, it indicates a common anode.
-
+セグメントが点灯していない場合は、赤と黒のメーターヘッドを交換します。セグメントが点灯すると、共通アノードを示しています。
 
 .. image:: img/7_segment_test.JPG
     :width: 600
 
+**表示コード**
 
-**Display Codes** 
-
-To help you get to know how 7-segment displays(Common Cathode) display Numbers, we have drawn the following table. 
-Numbers are the number 0-F displayed on the 7-segment display; (DP) GFEDCBA refers to the corresponding LED set to 0 or 1.
+7セグメントディスプレイ（共通カソード）が数字をどのように表示するかを知るために、次の表を描きました。
+数字は7セグメントディスプレイ上に表示される数字0-Fです。 (DP) GFEDCBAは、対応するLEDを0または1に設定します。
 
 .. image:: img/segment_code.png
 
-For example, 01011011 means that DP, F and C are set to 0, while others are set to 1. Therefore, the number 2 is displayed on the 7-segment display.
+例えば、01011011は、DP、F、Cが0に設定され、他は1に設定されていることを意味します。したがって、数字2が7セグメントディスプレイに表示されます。
 
 .. image:: img/7segment_2.png
 
+**例**
 
-**Example**
+* :ref:`ar_7_segment` (Arduinoプロジェクト)
+* :ref:`ar_dice` (Arduinoプロジェクト)
+* :ref:`py_7_segment` (MicroPythonプロジェクト)
+* :ref:`py_dice` (MicroPythonプロジェクト)
 
-* :ref:`ar_7_segment` (Arduino Project)
-* :ref:`ar_dice` (Arduino Project)
-* :ref:`py_7_segment` (MicroPython Project)
-* :ref:`py_dice` (MicroPython Project)

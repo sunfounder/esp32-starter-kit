@@ -1,36 +1,36 @@
 .. _ar_moisture:
 
-5.9 Measure Soil Moisture
+5.9 土壌湿度の測定
 ==========================
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture.
+この静電容量型土壌湿度センサーは、市場に出ている抵抗型センサーとは異なり、静電容量誘導の原理を利用して土壌の湿度を検出します。
 
-By visually reading the values from the soil moisture sensor, we can gather information about the moisture level in the soil. This information is useful for various applications, such as automatic irrigation systems, plant health monitoring, or environmental sensing projects.
+土壌湿度センサーからの値を視覚的に読み取ることで、土壌の湿度レベルに関する情報を収集できます。この情報は、自動灌漑システム、植物の健康監視、環境センシングプロジェクトなど、さまざまな用途に役立ちます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一括購入するのは非常に便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -41,45 +41,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトでESP32ボード上で利用可能なピンの一覧です。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **ストラッピングピン**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    以下のピンはストラッピングピンであり、ESP32の電源オンまたはリセット時の起動プロセスに影響します。しかし、ESP32が正常に起動した後は、通常のピンとして使用できます。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO0, IO12
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.9_soil_moisture.png
 
-By inserting the module into the soil and watering it, the value read on I35 will decrease.
+モジュールを土に挿入し、水をやると、I35で読み取る値が下がります。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.9_moisture_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.9_moisture.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.9_moisture``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.9_moisture`` のパス下にある ``5.9_moisture.ino`` ファイルを開きます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
     
@@ -88,6 +88,6 @@ By inserting the module into the soil and watering it, the value read on I35 wil
     <iframe src=https://create.arduino.cc/editor/sunfounder01/431302c2-3579-4be6-8142-c91d28757004/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
+コードが正常にアップロードされると、シリアルモニターが土壌の湿度値を出力します。
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+モジュールを土に挿入し、水をやることで、土壌湿度センサーの値は小さくなります。

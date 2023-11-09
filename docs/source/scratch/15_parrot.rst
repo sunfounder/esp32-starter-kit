@@ -1,41 +1,41 @@
 .. _sh_parrot:
 
-2.15 GAME - Flappy Parrot
+2.15 GAME - フラッピーパロット
 ==============================
 
-Here we use the ultrasonic module to play a flappy parrot game.
+ここでは超音波モジュールを使ってフラッピーパロットゲームを楽しんでいます。
 
-After the script runs, the green bamboo will slowly move from the right to the left at a random height. Now place your hand on top of the ultrasonic module, if the distance between your hand and the ultrasonic module is less than 10, the parrot will fly upwards, otherwise it will fall downwards.
-You need to control the distance between your hand and the ultrasonic module so that the Parrot can avoid the green bamboo (Paddle), if it touches it, the game is over.
+スクリプト実行後、緑の竹がゆっくりとランダムな高さで右から左へ移動します。超音波モジュールの上に手を置き、手と超音波モジュールとの距離が10未満の場合、パロットは上昇し、それ以外の場合は下降します。
+手と超音波モジュールとの距離をコントロールして、パロットが緑の竹（パドル）を避けられるようにしてください。もし触れたら、ゲームオーバーです。
 
 .. image:: img/15_parrot.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入するのが確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+また、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,75 +46,73 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-Build the Circuit
+回路の構築
 -----------------------
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+超音波センサーモジュールは、超音波を使って対象物までの距離を測定する機器です。
+2つのプローブがあります。一つは超音波を送信し、もう一つは受信して送受信時間を距離に変換し、装置と障害物との距離を検出します。
 
-Now build the circuit according to the following diagram.
+以下の図に従って回路を構築してください。
 
 .. image:: img/circuit/16_flappy_parrot_bb.png
 
-Programming
+プログラミング
 ------------------
 
-The effect we want to achieve is to use the ultrasonic module to control the flight height of the sprite **Parrot**, while avoiding the **Paddle** sprite.
+目指す効果は、超音波モジュールを使ってスプライト **Parrot** の飛行高度を制御し、 **Paddle** スプライトを避けることです。
 
 
-**1. Add a sprite**
 
-Delete the default sprite, and use the **Choose a Sprite** button to add the **Parrot** sprite. Set its size to 50%, and move its position to the left center.
+**1. スプライトの追加**
+
+デフォルトのスプライトを削除し、 **Choose a Sprite** ボタンを使用して **Parrot** スプライトを追加します。そのサイズを50%に設定し、位置を左の中央に移動します。
 
 .. image:: img/15_sprite.png
 
-Now add the **Paddle** sprite, set its size to 150%, set its angle to 180, and move its initial position to the top right corner.
+次に **Paddle** スプライトを追加し、サイズを150%に設定、角度を180に設定し、初期位置を右上の隅に移動します。
 
 .. image:: img/15_sprite1.png
 
-Go to the **Costumes** page of the **Paddle** sprite and remove the Outline.
+**Paddle** スプライトの **Costumes** ページに移動し、アウトラインを削除します。
 
 .. image:: img/15_sprite2.png
 
-**2. Scripting for the Parrot Sprite**
+**2. パロットスプライトのスクリプティング**
 
-Now script the **Parrot** sprite, which is in flight and the flight altitude is determined by the detection distance of the ultrasonic module.
+超音波モジュールの検出距離によって飛行高度が決定される飛行中の **Parrot** スプライトのスクリプトを作成します。
 
-
-* When the green flag is clicked, switch the costume every 0.2s so that it is always in flight.
+* 緑の旗がクリックされたら、常に飛行中であるようにコスチュームを0.2秒ごとに切り替えます。
 
 .. image:: img/15_parr1.png
 
-* Read the value of the ultrasonic module and store it in the variable **distance** after rounding it with the [round] block.
-
+* 超音波モジュールの値を読み取り、[round]ブロックで四捨五入してから変数 **distance** に格納します。
 
 .. image:: img/15_parr2.png
 
-* If the ultrasonic detection distance is less than 10cm, let the y coordinate increase by 50, the **Parrot** sprite will fly upwards. Otherwise, the y-coordinate value is decreased by 40, **Parrot** will fall down.
+* 超音波検出距離が10cm未満の場合は、y座標を50増やし、 **Parrot** スプライトが上昇します。それ以外の場合は、y座標の値を40減らし、 **Parrot** は落下します。
 
 .. image:: img/15_parr3.png
 
-* If the **Parrot** sprite touches the **Paddle** sprite, the game ends and the script stops running.
+* **Parrot** スプライトが **Paddle** スプライトに触れると、ゲームが終了し、スクリプトの実行が停止します。
 
 .. image:: img/15_parr4.png
 
+**3. パドルスプライトのスクリプティング**
 
-**3. Scripting for the Paddle sprite**
+ステージ上でランダムに出現する必要がある **Paddle** スプライトのスクリプトを書きます。
 
-Now write the script for the **Paddle** sprite, which needs to appear randomly on the stage.
-
-* Hide the sprite **Paddle** when the green flag is clicked, and clone itself at the same time. The [`create clone of <https://en.scratch-wiki.info/wiki/Create_Clone_of_()_(block)>`_] block is a control block and a stack block. It creates a clone of the sprite in the argument. It can also clone the sprite it is running in, creating clones of clones, recursively.
+* 緑の旗がクリックされたら **Paddle** スプライトを隠し、同時に自分自身のクローンを作成します。[`create clone of <https://en.scratch-wiki.info/wiki/Create_Clone_of_()_(block)>`_] ブロックは、コントロールブロックでありスタックブロックです。引数のスプライトのクローンを作成します。実行中のスプライトもクローンすることができ、クローンのクローンを再帰的に作成します。
 
 .. image:: img/15_padd.png
 
-* When **Paddle** is presented as a clone, its position is 220 (rightmost) for the x-coordinate and its y-coordinate at (-125 to 125) random (height random).
+* **Paddle** がクローンとして提示されると、x座標は220（最も右）であり、y座標はランダム（高さランダム）で-125から125になります。
 
 .. image:: img/15_padd1.png
 
-* Use the [repeat] block to make its x coordinate value slowly decrease, so you can see the clone of the **Paddle** sprite slowly move from the right to the left until it disappears.
+* [repeat]ブロックを使用して、x座標の値をゆっくりと減少させ、 **Paddle** スプライトのクローンが右から左へゆっくりと移動し、消えるまで見えるようにします。
 
 .. image:: img/15_padd2.png
 
-* Re-clone a new **Paddle** sprite and delete the previous clone.
+* 新しい **Paddle** スプライトを再クローンし、前のクローンを削除します。
 
 .. image:: img/15_padd3.png

@@ -1,39 +1,39 @@
 .. _py_receiver:
 
-5.14 IR Remote Control
+5.14 赤外線リモコン
 ================================
 
-An infrared receiver is a component that receives infrared signals and can independently detect and output signals compatible with TTL level. It is similar in size to a regular plastic-packaged transistor and is commonly used in various applications such as infrared remote control and infrared transmission.
+赤外線受信機は、赤外線信号を受信し、TTLレベルに対応した信号を独立して検出・出力するコンポーネントです。サイズは通常のプラスチック製トランジスタと似ており、赤外線リモコンや赤外線伝送など様々なアプリケーションに使用されています。
 
-In this project, we will use an infrared receiver to detect signals from a remote control. When a button on the remote control is pressed and the infrared receiver receives the corresponding signal, it can decode the signal to determine which button was pressed. By decoding the received signal, we can identify the specific key or command associated with it.
+このプロジェクトでは、赤外線受信機を使用してリモコンからの信号を検出します。リモコンのボタンを押すと、赤外線受信機が対応する信号を受信し、どのボタンが押されたかを判断するための信号をデコードできます。受信した信号をデコードすることで、それに関連する特定のキーやコマンドを識別できます。
 
-The infrared receiver allows us to incorporate remote control functionality into our project, enabling us to interact with and control devices using infrared signals.
+赤外線受信機を使用することで、私たちのプロジェクトにリモコン機能を組み込むことができ、赤外線信号を使用してデバイスと対話し、制御することが可能になります。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,34 +46,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - |link_receiver_buy|
 
-**Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO13, IO12, IO14, IO27, IO26, IO25, IO15, IO0, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.14_receiver.png
 
-When you press a button on the remote control, the infrared receiver detects the signal, and you can use an infrared library to decode it. This decoding process allows you to obtain the key value associated with the button press.
+リモコンのボタンを押すと、赤外線受信機が信号を検出し、赤外線ライブラリを使用してデコードすることができます。このデコードプロセスにより、ボタン押下に関連するキー値を取得できます。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.14_ir_receiver_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.14_ir_receiver.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.14_ir_receiver.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
-    * Here, you need to utilize the libraries found in the ``ir_rx`` folder. Please ensure they have been uploaded to the ESP32. For a comprehensive tutorial, refer to :ref:`add_libraries_py`.
+    * ここでは、 ``ir_rx`` フォルダにあるライブラリを使用する必要があります。ESP32にアップロードされていることを確認してください。包括的なチュートリアルについては :ref:`add_libraries_py` を参照してください。
+
 
 .. code-block:: python
 
@@ -150,14 +151,14 @@ When you press a button on the remote control, the infrared receiver detects the
     except KeyboardInterrupt:
         ir.close()  # Close the receiver
 
-When the program is running, press the key on the remote control, the value and name of the key will appear in the Shell.
+プログラムが実行されている間、リモコンのキーを押すと、キーの値と名前がシェルに表示されます。
 
 .. note::
-    The new remote control features a plastic tab at the end to insulate the battery inside. To power up the remote when using it, simply remove this plastic piece.
+    新しいリモコンには、内部の電池を絶縁するためのプラスチックタブが端に付いています。リモコンを使用する際には、このプラスチック片を取り除くだけでリモコンの電源が入ります。
 
-**How it works?**
+**どのように動作するのか？**
 
-#. While this program may appear somewhat complex at first glance, it actually accomplishes the fundamental functions of the IR receiver using just a few lines of code.
+#. このプログラムは一見複雑に見えるかもしれませんが、実際には赤外線受信機の基本的な機能をいくつかのコード行で実現しています。
 
 
     .. code-block:: python
@@ -177,14 +178,14 @@ When the program is running, press the key on the remote control, the value and 
 
         ir = NEC_8(pin_ir, callback)  # Instantiate receiver
 
-    * In this code, an ``ir`` object is instantiated, allowing it to read the signals captured by the IR receiver at any given moment.
-    * The resulting information is then stored in the ``data`` variable within the callback function.
+    * このコードでは、 ``ir`` オブジェクトがインスタンス化され、任意の時点で赤外線受信機によってキャプチャされた信号を読み取ることができます。
+    * 結果として得られる情報はコールバック関数内の ``data`` 変数に格納されます。
 
-        * `Callback Function - Wikipedia <https://en.wikipedia.org/wiki/Callback_(computer_programming)>`_
+        * `コールバック関数 - Wikipedia <https://en.wikipedia.org/wiki/Callback_(computer_programming)>`_
 
-    * If the IR receiver receives duplicate values (e.g., when a button is pressed and held down), the ``data`` will be less than 0, and this ``data`` needs to be filtered out.
+    * 赤外線受信機が重複した値を受信した場合（例えば、ボタンを押したままの場合）、 ``data`` は0未満になります。この ``data`` はフィルタリングする必要があります。
 
-    * Otherwise, the ``data`` would be a usable value, albeit in an unreadable code. The ``decodeKeyValue(data)`` function is then utilized to decode it into a more comprehensible format.
+    * それ以外の場合は、 ``data`` は使用可能な値ですが、読み取り不可能なコードであるため、 ``decodeKeyValue(data)`` 関数を使用してより理解しやすい形式にデコードします。
 
         .. code-block:: python
 
@@ -199,7 +200,7 @@ When the program is running, press the key on the remote control, the value and 
                 ...
 
 
-#. Next, we incorporate several debug functions into the program. While these functions are essential, they are not directly related to the desired outcome we aim to achieve.
+#. 次に、いくつかのデバッグ機能をプログラムに組み込みます。これらの機能は不可欠ですが、目指す結果とは直接関連していません。
 
     .. code-block:: python
 
@@ -207,7 +208,7 @@ When the program is running, press the key on the remote control, the value and 
 
         ir.error_function(print_error) # Show debug information
 
-#. Lastly, we use an empty loop for the main program and implement a try-except structure to ensure the program exits with the ``ir`` object properly terminated.
+#. 最後に、メインプログラムに空のループを使用し、try-except構造を実装して、プログラムが ``ir`` オブジェクトを適切に終了して終了することを保証します。
 
     .. code-block:: python
 
@@ -217,4 +218,4 @@ When the program is running, press the key on the remote control, the value and 
         except KeyboardInterrupt:
             ir.close()
 
-    * `Try Statement - Python Docs <https://docs.python.org/3/reference/compound_stmts.html?#the-try-statement>`_
+    * `Try文 - Pythonドキュメント <https://docs.python.org/3/reference/compound_stmts.html?#the-try-statement>`_

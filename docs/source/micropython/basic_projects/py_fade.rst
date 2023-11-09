@@ -1,39 +1,39 @@
 .. _py_fading:
 
-2.2 Fading LED
+2.2 LEDのフェード効果
 ===================================
 
-In the previous project, we controlled the LED by turning it on and off using digital output. In this project, we will create a breathing effect on the LED by utilizing Pulse Width Modulation (PWM). PWM is a technique that allows us to control the brightness of an LED or the speed of a motor by varying the duty cycle of a square wave signal.
+前回のプロジェクトでは、デジタル出力を使ってLEDの点灯と消灯を制御しました。今回のプロジェクトでは、パルス幅変調（PWM）を利用してLEDに呼吸効果を作り出します。PWMは、正方形波信号のデューティサイクルを変化させることで、LEDの明るさやモーターの速度を制御する技術です。
 
-With PWM, instead of simply turning the LED on or off, we will be adjusting the amount of time the LED is on versus the amount of time it is off within each cycle. By rapidly switching the LED on and off at varying intervals, we can create the illusion of the LED gradually brightening and dimming, simulating a breathing effect.
+PWMを使うことで、単にLEDをオンまたはオフにするのではなく、各サイクル内でLEDがオンになる時間とオフになる時間の割合を調整します。LEDを高速にオンとオフを繰り返すことで、LEDが徐々に明るくなったり暗くなったりする錯覚を作り出し、呼吸のような効果をシミュレートします。
 
-By using the PWM capabilities of the ESP32 WROOM 32E, we can achieve smooth and precise control over the LED's brightness. This breathing effect adds a dynamic and visually appealing element to your projects, creating an eye-catching display or ambiance.
+ESP32 WROOM 32EのPWM機能を使用することで、LEDの明るさを滑らかで正確に制御することができます。この呼吸効果はプロジェクトにダイナミックで視覚的に魅力的な要素を加え、目を引くディスプレイや雰囲気を作り出します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入すると便利ですが、こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,32 +48,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードにある利用可能なピンのリストはこちらです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This project is the same circuit as the first project :ref:`py_blink`, but the signal type is different. The first project is to output digital high and low levels (0&1) directly from pin26 to make the LED light up or turn off, this project is to output PWM signal from pin26 to control the brightness of the LED.
+このプロジェクトは最初のプロジェクト :ref:`py_blink` と同じ回路ですが、信号の種類が異なります。最初のプロジェクトではpin26から直接デジタルの高低レベル（0&1）を出力してLEDを点灯または消灯させますが、このプロジェクトではpin26からPWM信号を出力してLEDの明るさを制御します。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``2.2_fading_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``2.2_fading_led.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。その後、「現在のスクリプトを実行」をクリックするかF5キーを押して実行します。
+    * 右下の角にある「MicroPython (ESP32).COMxx」インタープリターを選択してください。 
 
 .. code-block:: python
 
@@ -96,27 +96,26 @@ This project is the same circuit as the first project :ref:`py_blink`, but the s
             time.sleep(0.01)
 
 
-The LED will gradually become brighter as the code runs.
+コードが実行されると、LEDは徐々に明るくなります。
 
-**How it works?**
+**どのように動作するのか？**
 
-Overall, this code demonstrates how to use PWM signals to control the brightness of an LED.
+このコードは、PWM信号を使用してLEDの明るさを制御する方法を示しています。
 
-
-#. It imports two modules, ``machine`` and ``time``. The ``machine`` module provides low-level access to the microcontroller's hardware, while the ``time`` module provides functions for time-related operations.
+#. ``machine`` と ``time`` の2つのモジュールをインポートします。  ``machine`` モジュールはマイクロコントローラのハードウェアに低レベルでアクセスするためのものであり、 ``time`` モジュールは時間に関連する操作のための関数を提供します。
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Then initializes a ``PWM`` object for controlling the LED connected to pin 26 and sets the frequency of the PWM signal to 1000 Hz.
+#. 次に、ピン26に接続されたLEDを制御するための ``PWM`` オブジェクトを初期化し、PWM信号の周波数を1000 Hzに設定します。
 
     .. code-block:: python
 
         led = PWM(Pin(26), freq=1000)
 
-#. Fade the LED in and out using a loop: The outer ``while True`` loop runs indefinitely. Two nested ``for`` loops are used to gradually increase and decrease the LED's brightness. The duty cycle ranges from 0 to 1023, representing a 0% to 100% duty cycle.
+#. ループを使用してLEDを徐々に明るくしたり暗くしたりします：外側の ``while True`` ループは無限に実行されます。2つのネストされた ``for`` ループを使用して、LEDの明るさを徐々に増減します。デューティサイクルは0から1023の範囲で、0％から100％のデューティサイクルを表します。
 
     .. code-block:: python
 
@@ -139,8 +138,8 @@ Overall, this code demonstrates how to use PWM signals to control the brightness
                 time.sleep(0.01)
 
 
-    * ``range()``: Create a sequence of integers from 0 to 1023. 
-    * The duty cycle of the PWM signal is set to each value in the sequence using the ``duty()`` method of the ``PWM`` object. 
-    * ``time.sleep()``: Pause the execution of the program for 10 milliseconds between each iteration of the loop, creating a gradual increase in brightness over time.
+    * ``range()``: 0から1023までの整数のシーケンスを作成します。
+    * ``PWM`` オブジェクトの ``duty()`` メソッドを使用して、シーケンスの各値にPWM信号のデューティサイクルを設定します。
+    * ``time.sleep()``: ループの各反復の間にプログラムの実行を10ミリ秒間一時停止し、時間の経過とともに徐々に明るさを増加させます。
 
     

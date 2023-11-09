@@ -1,38 +1,37 @@
 .. _cpn_tt_motor:
 
-TT Motor
+TTモーター
 ==============
-
 
 .. image:: img/tt_motor.jpg
     :width: 400
     :align: center
 
-This is a TT DC gearbox motor with a gear ratio of 1:48, it comes with 2 x 200mm wires with 0.1" male connectors that fit into a breadboard. Perfect for plugging into a breadboard or terminal block.
+これはギア比1:48のTT DCギアボックスモーターで、ブレッドボードに適合する0.1インチのオスコネクタを備えた2 x 200mmのワイヤーが付属しています。ブレッドボードや端子ブロックに直接差し込むのに最適です。
 
-You can power these motors with 3 ~ 6VDC, but of course, they will go a little faster at higher voltages.
+これらのモーターは3〜6VDCで駆動することができますが、もちろん、電圧が高いと少し速くなります。
 
-Note that these are very basic motors with no built-in encoder, speed control or position feedback. The voltage goes in and the spin comes out. There will be variation from motor to motor, so if you need precise motion, you'll need a separate feedback system.
+これらは非常に基本的なモーターで、内蔵エンコーダ、速度制御、位置フィードバックはありません。電圧が入力され、回転が出力されます。モーターごとに若干の変動があるため、正確な動きが必要な場合は、別のフィードバックシステムが必要になります。
 
-**Technical Details**
+**技術詳細**
 
-* Rated Voltage: 3~6V
-* Continuous No-Load Current: 150mA +/- 10%
-* Min. Operating Speed (3V): 90+/- 10% RPM
-* Min. Operating Speed (6V): 200+/- 10% RPM
-* Stall Torque (3V): 0.4kg.cm
-* Stall Torque (6V): 0.8kg.cm
-* Gear Ratio: 1:48
-* Body Dimensions: 70 x 22 x 18mm
-* Wires Length: 200mm & 28 AWG
-* Weight: 30.6g
+* 定格電圧: 3〜6V
+* 無負荷電流: 150mA +/- 10%
+* 最小動作速度 (3V): 90+/- 10% RPM
+* 最小動作速度 (6V): 200+/- 10% RPM
+* ストールトルク (3V): 0.4kg.cm
+* ストールトルク (6V): 0.8kg.cm
+* ギア比: 1:48
+* 本体の寸法: 70 x 22 x 18mm
+* ワイヤー長: 200mm & 28 AWG
+* 重量: 30.6g
 
-**Dimensional Drawing**
+**寸法図**
 
 .. image:: img/motor_size.jpg
 
-**Example**
+**例**
 
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Arduinoプロジェクト)
+* :ref:`py_motor` (MicroPythonプロジェクト)
+* :ref:`sh_rotating_fan` (Scratchプロジェクト)

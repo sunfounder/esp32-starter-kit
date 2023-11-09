@@ -1,34 +1,34 @@
 .. _ar_ultrasonic:
 
-5.12 Measuring Distance
+5.12 距離の測定
 ======================================
-The ultrasonic module is used for distance measurement or object detection. In this project, we will program the module to obtain obstacle distances. By sending ultrasonic pulses and measuring the time it takes for them to bounce back, we can calculate distances. This enables us to implement distance-based actions or obstacle avoidance behaviors.
+超音波モジュールは、距離測定や物体検出に使用されます。このプロジェクトでは、障害物までの距離を測定するためにモジュールをプログラムします。超音波パルスを送信し、それが反射して戻ってくるまでの時間を測定することで、距離を算出できます。これにより、距離に基づいた行動や障害物回避行動を実装することが可能になります。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入することは確かに便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -39,38 +39,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+こちらは、このプロジェクトのためにESP32ボードで利用可能なピンのリストです。
 
-    Here is a list of available pins on the ESP32 board for this project.
+.. list-table::
+    :widths: 5 20
 
-    .. list-table::
-        :widths: 5 20
+    *   - 入力用
+        - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
+    *   - 出力用
+        - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-        *   - For Input
-            - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
-            - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
-
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.12_ultrasonic.png
 
-The ESP32 sends a set of square wave signals to the Trig pin of the ultrasonic sensor every 10 seconds. This prompts the ultrasonic sensor to emit a 40kHz ultrasound signal outward. If there is an obstacle in front, the ultrasound waves will be reflected back.
+ESP32は10秒ごとに超音波センサーのTrigピンに一連の方形波信号を送信します。これにより、超音波センサーから40kHzの超音波信号が外向きに放出されます。前方に障害物がある場合、超音波波は反射して戻ります。
 
-By recording the time it takes from sending to receiving the signal, dividing it by 2, and multiplying it by the speed of light, you can determine the distance to the obstacle.
+信号を送信してから受信するまでの時間を記録し、2で割って光速を掛けることにより、障害物までの距離を特定できます。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.12_ultrasonic_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.12_ultrasonic.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.12_ultrasonic`` のパスの下にある ``5.12_ultrasonic.ino`` ファイルを開いてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **Upload** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
 .. raw:: html
@@ -79,17 +77,17 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 
 
-After the code is successfully uploaded, the serial monitor will print out the distance between the ultrasonic sensor and the obstacle ahead.
+コードが正常にアップロードされると、シリアルモニターは超音波センサーと前方の障害物との間の距離を出力します。
 
-**How it works?**
+**どのように動作するのか？**
 
-About the application of ultrasonic sensor, we can directly check the subfunction.
+超音波センサーの応用については、サブファンクションを直接チェックしてください。
 
 .. code-block:: arduino
 
     float readSensorData(){// ...}
 
-* The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal every 2us.
+* 超音波モジュールの ``trigPin`` は、2usごとに10usの方形波信号を発信します。
 
     .. code-block:: arduino
 
@@ -103,17 +101,18 @@ About the application of ultrasonic sensor, we can directly check the subfunctio
         digitalWrite(trigPin, LOW);
 
 
-* The ``echoPin`` receives a high level signal if there is an obstacle within the range and use the ``pulseIn()`` function to record the time from sending to receiving.
+* 障害物が範囲内にある場合、 ``echoPin`` は高レベルの信号を受信し、送信から受信までの時間を ``pulseIn()`` 関数で記録します。
 
     .. code-block:: arduino
 
         unsigned long microsecond = pulseIn(echoPin, HIGH);
 
-* The speed of sound is 340 meters per second, which is equivalent to 29 microseconds per centimeter. By measuring the time it takes for a square wave to travel to an obstacle and return, we can calculate the distance traveled by dividing the total time by 2. This gives us the distance of the obstacle from the source of the sound wave.
+* 音速は秒速340メートルで、これはセンチメートルあたり29マイクロ秒に相当します。障害物までの方形波の往復の時間を測定し、その合計時間を2で割ることで、音波源から障害物までの距離を計算できます。
 
     .. code-block:: arduino
 
         float distance = microsecond / 29.00 / 2;  
 
 
-Note that the ultrasonic sensor will pause the program when it is working, which may cause some lagging when writing complex projects.
+超音波センサーは動作している間プログラムを一時停止するため、複雑なプロジェクトを書いているときにいくらかの遅延を引き起こす可能性があります。
+

@@ -1,37 +1,37 @@
 .. _py_photoresistor:
 
-5.7 Feel the Light
+5.7 光を感じる
 =============================
 
-The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
+フォトレジスタは、ポテンショメータと同様に、アナログ入力によく使用されるデバイスです。受ける光の強度に基づいて抵抗値が変化します。強い光にさらされると、フォトレジスタの抵抗は減少し、光の強度が低下すると抵抗は増加します。
 
-By reading the value of the photoresistor, we can gather information about the ambient light conditions. This information can be used for tasks such as controlling the brightness of an LED, adjusting the sensitivity of a sensor, or implementing light-dependent actions in a project.
+フォトレジスタの値を読むことで、周囲の光の条件に関する情報を収集できます。この情報は、LEDの明るさを制御したり、センサーの感度を調整したり、プロジェクトで光依存のアクションを実装したりするなどのタスクに使用できます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,47 +46,46 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **ストラッピングピン**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    以下のピンはストラッピングピンで、電源オンまたはリセット時のESP32の起動プロセスに影響します。しかし、ESP32が正常に起動した後は、通常のピンとして使用できます。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO0, IO12
 
-**Schematic**
+
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.7_photoresistor.png
 
-As the light intensity increases, the resistance of the light-dependent resistor (LDR) decreases, resulting in a decrease in the value read on I35.
+光の強度が増すにつれて、光依存抵抗器（LDR）の抵抗値が減少し、その結果I35で読み取られる値が減少します。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.7_feel_the_light.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.7_feel_the_light.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 .. code-block:: python
 
@@ -107,19 +106,20 @@ As the light intensity increases, the resistance of the light-dependent resistor
         time.sleep(0.05)
 
 
-After the program runs, the Shell prints out the photoresistor values. You can shine a flashlight on it or cover it up with your hand to see how the value will change.
+プログラムが実行された後、シェルはフォトレジスタの値を出力します。懐中電灯で照らしたり手で覆ったりして、値がどのように変化するかを確認できます。
 
 
-* ``atten(photoresistor.ATTN_11DB)``: Configure the ADC attenuation to 11dB for full range.
+* ``atten(photoresistor.ATTN_11DB)``: ADCの減衰を11dBに設定して全範囲をカバーします。
 
-    To read voltages above the reference voltage, apply input attenuation with the atten keyword argument. 
+    参照電圧以上の電圧を読み取るためには、attenキーワード引数で入力減衰を適用してください。
 
-    Valid values (and approximate linear measurement ranges) are:
+    有効な値（およびおおよその線形測定範囲）は以下の通りです：
 
-    * ADC.ATTN_0DB: No attenuation (100mV - 950mV)
-    * ADC.ATTN_2_5DB: 2.5dB attenuation (100mV - 1250mV)
-    * ADC.ATTN_6DB: 6dB attenuation (150mV - 1750mV)
-    * ADC.ATTN_11DB: 11dB attenuation (150mV - 2450mV)
+    * ADC.ATTN_0DB: 減衰なし（100mV - 950mV）
+    * ADC.ATTN_2_5DB: 2.5dBの減衰（100mV - 1250mV）
+    * ADC.ATTN_6DB: 6dBの減衰（150mV - 1750mV）
+    * ADC.ATTN_11DB: 11dBの減衰（150mV - 2450mV）
 
-* `machine.ADC - MicroPython Docs <https://docs.micropython.org/en/latest/esp32/quickref.html#adc-analog-to-digital-conversion>`_
+* `machine.ADC - MicroPythonドキュメント <https://docs.micropython.org/en/latest/esp32/quickref.html#adc-analog-to-digital-conversion>`_
+
 

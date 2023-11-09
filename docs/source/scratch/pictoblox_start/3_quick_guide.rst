@@ -1,34 +1,34 @@
 .. _sh_guide:
 
-1.3 Quick Guide on PictoBlox
+1.3 PictoBloxのクイックガイド
 ====================================
 
-Required Components
+必要な部品
 -----------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入するのが確実に便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -43,185 +43,186 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-Now let's learn how to use PictoBlox in two modes.
+さて、PictoBloxの2つのモードの使用方法を学びましょう。
 
-Also build a simple circuit to make this LED blink in 2 different modes.
+また、このLEDを2つの異なるモードで点滅させるための簡単な回路も組み立てます。
 
 .. image:: ../img/circuit/1_hello_led_bb.png
 
 .. _stage_mode:
 
-Stage Mode
+ステージモード
 ---------------
 
-**1. Connect to ESP32 Board**
+**1. ESP32ボードに接続する**
 
-Connect your ESP32 board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+ESP32ボードをUSBケーブルでコンピュータに接続します。通常、コンピュータは自動的にボードを認識し、最終的にCOMポートを割り当てます。
 
-Open PictoBlox, the Python programming interface will open by default. And we need to switch to the Blocks interface.
+PictoBloxを開くと、デフォルトでPythonプログラミングインターフェイスが開きます。そして、私たちはブロックインターフェイスに切り替える必要があります。
 
 .. image:: img/0_choose_blocks.png
 
-Then you will see the top right corner for mode switching. The default is Stage mode, where Tobi is standing on the stage.
+すると、モード切替のための右上の角にあるオプションが見えます。デフォルトはステージモードで、Tobiがステージの上に立っています。
 
 .. image:: img/1_stage_upload.png
 
-Click **Board** in the upper right navigation bar to select the board.
+右上のナビゲーションバーの **Board** をクリックしてボードを選択します。
 
 .. image:: img/1_board.png
 
-For example, choose **ESP32**.
+例えば、 **ESP32** を選択します。
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+接続ウィンドウがポップアップして、接続するポートを選択します。接続が完了するとホームページに戻ります。使用中に接続が切れた場合は、 **Connect** をクリックして再接続することもできます。
 
 .. image:: img/1_connect.png
 
-At the same time, ESP32 related palettes, such as ESP32, Actuators, etc., will appear in the **Block Palette**.
+同時に、 **Block Palette** にESP32関連のパレット、例えばESP32、アクチュエーターなどが表示されます。
 
 .. image:: img/1_arduino_uno.png
 
-**2. Upload Firmware**
 
-Since we're going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
+**2. ファームウェアのアップロード**
 
-After waiting for a while, the upload success message will appear.
+ステージモードで作業を行うため、ボードにファームウェアをアップロードする必要があります。これにより、ボードとコンピュータ間のリアルタイム通信が保証されます。ファームウェアのアップロードは一度きりのプロセスです。アップロードするには、アップロードファームウェアボタンをクリックします。
+
+しばらく待つと、アップロード成功のメッセージが表示されます。
 
 .. note::
 
-    If you are using this board in PictoBlox for the first time, or if this board was previously uploaded with the Arduino IDE. Then you need to tap **Upload Firmware** before you can use it.
+    このボードをPictoBloxで初めて使用する場合、または以前にArduino IDEでアップロードしたことがある場合は、使用する前に **Upload Firmware** する必要があります。
 
 
 .. image:: img/1_firmware.png
 
 
-**3. Programming**
+**3. プログラミング**
 
-* Open and run the script directly
+* スクリプトを直接開いて実行する
 
-Of course, you can open the scripts directly to run them, but please download them from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ first.
+もちろん、スクリプトを直接開いて実行することもできますが、まず `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ からダウンロードしてください。
 
-You can click on **File** in the top right corner and then choose **Open**.
+右上の **File** をクリックしてから、 **Open** を選択します。
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+**Open from Computer** を選択します。
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-starter-kit-main\scratch``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
+``esp32-starter-kit-main\scratch`` のパスに移動し、 **1. Stage Mode.sb3** を開きます。 `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ から必要なコードをダウンロードしたことを確認してください。
 
 .. image:: img/0_stage.png
 
-Click directly on the script to run it, some projects are click on the green flag or click on the sprite.
+スクリプトを直接クリックして実行します。一部のプロジェクトでは、緑の旗をクリックするか、スプライトをクリックします。
 
 .. image:: img/1_more.png
 
-* Program step by step
+* ステップバイステップでプログラムする
 
-You can also write the script step by step by following these steps.
+これらのステップに従ってスクリプトをステップバイステップで書くこともできます。
 
-Click on the **ESP32** palette.
+**ESP32** パレットをクリックします。
 
 .. image:: img/1_arduino_uno.png
 
-The LED is controlled by the digital pin 26 (only 2 states, HIGH or LOW), so drag the [set digital pin out as] block to the script area.
+LEDはデジタルピン26（HIGHまたはLOWの2つの状態のみ）によって制御されるため、[set digital pin out as] ブロックをスクリプトエリアにドラッグします。
 
-Since the default state of the LED is lit, now set pin 23 to LOW and click on this block and you will see the LED go off.
+LEDのデフォルト状態は点灯しているので、今はピン23をLOWに設定し、このブロックをクリックするとLEDが消えるのを見ることができます。
 
-* [set digital pin out as]: Set the digital pin to (HIGH/LOW) level.
+* [set digital pin out as]: デジタルピンを（HIGH/LOW）レベルに設定します。
 
 .. image:: img/1_digital.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+連続して点滅するLEDの効果を見るためには、 **Control** パレットの [Wait 1 seconds] と [forever] ブロックを使用する必要があります。これらのブロックを書いた後でクリックすると、黄色いハローが表示され、実行中であることを意味します。
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless manually paused.
+* [Wait 1 seconds]: **Control** パレットから、2つのブロック間の時間間隔を設定するために使用されます。
+* [forever]: **Control** パレットから、手動で一時停止しない限りスクリプトが実行し続けることを可能にします。
 
 .. image:: img/1_more.png
 
 .. _upload_mode:
 
-Upload Mode
----------------
+アップロードモード
+---------------------
 
-**1. Connect to ESP32 Board**
+**1. ESP32ボードの接続**
 
-Connect your ESP32 board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+USBケーブルでESP32ボードをコンピュータに接続します。通常、コンピュータは自動的にボードを認識し、最終的にCOMポートを割り当てます。
 
-Open PictoBlox and click **Board** in the top right navigation bar to select the board.
+PictoBloxを開き、右上のナビゲーションバーの **Board** をクリックしてボードを選択します。
 
 .. image:: img/1_board.png
 
-For example, choose **ESP32**.
+例えば、 **ESP32** を選択します。
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+接続ウィンドウがポップアップし、接続するポートを選択します。接続が完了するとホームページに戻ります。使用中に接続が切れた場合は、 **Connect** をクリックして再接続できます。
 
 .. image:: img/1_connect.png
 
-At the same time, ESP32 related palettes, such as ESP32, Actuators, etc., will appear in the **Block Palette**.
+同時に、 **Block Palette** にESP32関連のパレットが表示されます。
 
 .. image:: img/1_upload_uno.png
 
-After selecting Upload mode, the stage will switch to the original code area.
+アップロードモードを選択すると、ステージが元のコードエリアに切り替わります。
 
 .. image:: img/1_upload.png
 
-**2. Programming**
+**2. プログラミング**
 
-* Open and run the script directly
+* スクリプトを直接開いて実行する
 
-You can click on **File** in the top right corner.
+右上の **File** をクリックします。
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+**Open from Computer** を選択します。
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-starter-kit-main\scratch``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
+``esp32-starter-kit-main\scratch`` のパスに移動し、 **1. Upload Mode.sb3** を開きます。 `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ から必要なコードをダウンロードしたことを確認してください。
 
 .. image:: img/0_upload.png
 
-Finally, click the **Upload Code** button.
+最後に、 **Upload Code** ボタンをクリックします。
 
 .. image:: img/1_upload_code.png
 
 
-* Program step by step
+* ステップバイステップでプログラムする
 
-You can also write the script step by step by following these steps.
+これらのステップに従ってスクリプトをステップバイステップで書くこともできます。
 
-Click on the **ESP32** palette.
+**ESP32** パレットをクリックします。
 
 .. image:: img/1_upload_uno.png
 
-Drag [when ESP32 starts up] to the script area, which is required for every script.
+スクリプトエリアに[when ESP32 starts up]をドラッグします。これはすべてのスクリプトに必要です。
 
 .. image:: img/1_uno_starts.png
 
-The LED is controlled by the digital pin26 (only 2 states HIGH or LOW), so drag the [set digital pin out as]  block to the script area.
+LEDはデジタルピン26（HIGHまたはLOWの2つの状態のみ）によって制御されるため、[set digital pin out as] ブロックをスクリプトエリアにドラッグします。
 
-Since the default state of the LED is lit, now set pin26 to LOW and click on this block and you will see the LED go off.
+LEDのデフォルト状態が点灯しているので、今はピン26をLOWに設定し、このブロックをクリックするとLEDが消えるのが見えます。
 
-* [set digital pin out as]: Set the digital pin to (HIGH/LOW) level.
+* [set digital pin out as]: デジタルピンを（HIGH/LOW）レベルに設定します。
 
 .. image:: img/1_upload_digital.png
 
-At this point you will see the code appear on the right side, if you want to edit this code, then you can turn Edit mode on.
+ここで右側にコードが表示されます。このコードを編集したい場合は、編集モードをオンにします。
 
 .. image:: img/1_upload1.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+連続して点滅するLEDの効果を見るためには、 **Control** パレットの [Wait 1 seconds] と [forever] ブロックを使用する必要があります。これらのブロックを書いた後でクリックすると、黄色いハローが表示され、実行中であることを意味します。
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless the power is off.
+* [Wait 1 seconds]: **Control** パレットから、2つのブロック間の時間間隔を設定するために使用されます。
+* [forever]: **Control** パレットから、電源がオフにならない限りスクリプトが実行し続けることを可能にします。
 
 .. image:: img/1_upload_more.png
 
-Finally, click the **Upload Code** button.
+最後に、 **Upload Code** ボタンをクリックします。
 
 .. image:: img/1_upload_code.png

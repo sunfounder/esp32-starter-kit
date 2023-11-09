@@ -1,77 +1,69 @@
-
 .. _cpn_breadboard:
 
-Breadboard
+ブレッドボード
 ==============
 
-**What is a "solderless" breadboard?**
+**「はんだ不要」ブレッドボードとは？**
 
 .. image:: img/breadboard.png
     :width: 600
     :align: center
 
-A breadboard is a rectangular plastic board with many small holes in it. These small holes allow you to easily insert electronic components to build circuits. Technically speaking, these breadboards are known as solderless breadboards because they do not require soldering to make connections.
+ブレッドボードは、多くの小さな穴がある長方形のプラスチック板です。これらの小さな穴により、電子部品を簡単に挿入して回路を組むことができます。技術的には、これらのブレッドボードは接続を作るのにはんだ付けが不要なため、「はんだ不要」ブレッドボードとして知られています。
 
-**Features**
+**特徴**
 
-* Size: 163 x 54 x 8 mm
-* 830 tie points breadboards: 630 tie-point ic-circuit area plus 2x100 tie-point distribution strips providing 4 power rails.
-* Wire size: Suitable for 20-29 AWG wires.
-* Material: ABS Plastic Panel, Tin Plated Phosphor Bronze Contact Sheet.
-* Voltage / Current: 300V/3-5A.
-* With Self-Adhesive Tape on the Back
+* サイズ: 163 x 54 x 8 mm
+* 830接点のブレッドボード: 630接点のIC回路エリアと、4つの電源レールを提供する2x100接点の分配ストリップ。
+* ワイヤーサイズ: 20-29 AWGのワイヤーに適しています。
+* 材料: ABSプラスチックパネル、錫メッキリン青銅コンタクトシート。
+* 電圧/電流: 300V/3-5A。
+* 裏面に自己粘着テープ付き
 
-**What is in the breadboard?**
+**ブレッドボードの中には何がありますか？**
 
 .. image:: img/breadboard_internal.png
     :width: 600
     :align: center
 
-The inside of the breadboard is made up of rows of small metal clips. When you insert the leads of a component into the holes of the breadboard, one of the clips catches it. Some breadboards are actually made of clear plastic, so you can see the clips inside.
+ブレッドボードの内部は小さな金属クリップの列で構成されています。ブレッドボードの穴に部品のリードを挿入すると、そのクリップの1つがそれをキャッチします。透明なプラスチックで作られているブレッドボードもあり、内部のクリップを見ることができます。
 
-**What do the letters and numbers on a breadboard mean?**
+**ブレッドボード上の文字や数字は何を意味しますか？**
 
 .. image:: img/breadboard_internal2.png
     :width: 500
     :align: center
 
-Most breadboards have some numbers, letters and plus and minus signs on them. Although the labels will vary from breadboard to breadboard, the function is basically the same. These labels allow you to find the corresponding holes more quickly when building your circuit.
+ほとんどのブレッドボードには、数字、文字、プラス記号、マイナス記号があります。ラベルはブレッドボードによって異なりますが、機能は基本的に同じです。これらのラベルにより、回路を組み立てる際に、対応する穴をより迅速に見つけることができます。
 
-The row numbers and column letters help you to precisely locate the holes on the breadboard, for example, hole "C12" is where column C intersects row 12.
+行番号と列の文字は、ブレッドボード上の穴の正確な位置を特定するのに役立ちます。例えば、穴「C12」は、列Cと行12が交差する位置にあります。
 
-
-**What do the colored lines and plus and minus signs mean?**
+**色付きの線やプラス記号、マイナス記号は何を意味しますか？**
 
 .. image:: img/breadboard_internal3.png
     :width: 500
     :align: center
 
-The sides of the breadboard are usually distinguished by red and blue (or other colors), as well as plus and minus signs, and are usually used to connect to the power supply, known as the power bus.
+ブレッドボードの両側は、通常、赤と青（またはその他の色）で区別され、プラス記号とマイナス記号があり、電源供給に接続するために使用されることが多く、これは電源バスとして知られています。
 
-When building a circuit, it is common to connect the negative terminal to the blue (-) column and the positive terminal to the red (+) column.
+回路を組む際、マイナス端子を青色の(-)列に、プラス端子を赤色の(+)列に接続することが一般的です。
 
-
-**How are the holes connected?**
+**穴はどのように接続されていますか？**
 
 .. image:: img/breadboard_internal4.png
     :width: 500
     :align: center
 
-As shown in the diagram, each set of five holes in the middle section, columns A-E or F-J, is electrically connected. This means, for example, that hole A1 is electrically connected to holes B1, C1, D1 and E1.
+図に示されているように、中央部の各5つの穴のセット、列A-EまたはF-Jは電気的に接続されています。これは、例えば、穴A1が穴B1、C1、D1、E1に電気的に接続されていることを意味します。
 
-It is not connected to hole A2 because that hole is in a different row with a separate set of metal clips. It is also not connected to holes F1, G1, H1, I1 or J1 because they are located in the other "half" of the breadboard - the clips are not connected across the middle gap.
+それは穴A2には接続されていません。なぜなら、その穴は異なる行にあり、別の金属クリップのセットがあるからです。また、F1、G1、H1、I1、J1の穴にも接続されていません。なぜなら、それらはブレッドボードの「もう一方の半分」に位置しており、中央の隙間を挟んでクリップは接続されていないからです。
 
-Unlike the middle section, which is grouped by five holes, the buses on sides are electrically connected separately. For example, the column marked blue (-) is electrically connected as a whole, and the column marked red (+) is also electrically connected.
+中央部は5つの穴でグループ化されているのに対し、側面のバスはそれぞれ別々に電気的に接続されています。例えば、青(-)でマークされた列は全体として電気的に接続されており、赤(+)でマークされた列も同様に電気的に接続されています。
 
-**Which electronic parts are compatible with breadboards?**
+**どの電子部品がブレッドボードと互換性がありますか？**
 
 .. image:: img/breadboard_pins.jpg
     :width: 600
     :align: center
 
-Many electronic components have long metal legs called leads. Almost all components with leads will work with a breadboard. Components such as resistors, capacitors, switches, diodes, etc. can be inserted in any of the rows, but ICs need to be arranged across the middle gap.
-
-
-
-
-
+多くの電子部品は、リードと呼ばれる長い金属の脚を持っています。リードを持つほぼすべての部品はブレッドボードで使用することができます。抵抗器、コンデンサ、スイッチ、ダイオードなどの部品は、任意の行に挿入できますが、ICは中央の隙間を跨いで配置する必要があります。

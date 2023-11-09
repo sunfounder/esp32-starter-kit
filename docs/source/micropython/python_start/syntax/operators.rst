@@ -1,45 +1,45 @@
-Operators
+演算子
 ============
-Operators are used to perform operations on variables and values.
+演算子は、変数と値に対して操作を行うために使用されます。
 
-* :ref:`Arithmetic operators`
+* :ref:`算術演算子`
 
-* :ref:`Assignment operators`
+* :ref:`代入演算子`
 
-* :ref:`Comparison operators`
+* :ref:`比較演算子`
 
-* :ref:`Logical operators`
+* :ref:`論理演算子`
 
-* :ref:`Identity operators`
+* :ref:`同一性演算子`
 
-* :ref:`Membership operators`
+* :ref:`メンバーシップ演算子`
 
-* :ref:`Bitwise operators`
+* :ref:`ビット演算子`
 
-Arithmetic Operators
+算術演算子
 ----------------------
-You can use arithmetic operators to do some common mathematical operations.
+算術演算子を使用して、一般的な数学的操作を行うことができます。
 
 .. list-table:: 
     :widths: 10 30
     :header-rows: 1
 
-    *   - Operator
-        - Name
+    *   - 演算子
+        - 名前
     *   - `+`
-        - Addition
+        - 足し算
     *   - `-`
-        - Subtraction
+        - 引き算
     *   - `*`
-        - Multiplication
+        - 掛け算
     *   - `/`
-        - Division
+        - 割り算
     *   - `%`
-        - Modulus
+        - 剰余
     *   - `**`
-        - Exponentiation
+        - 累乗
     *   - `//`
-        - Floor division
+        - 切り捨て除算
 
 
 
@@ -77,18 +77,18 @@ You can use arithmetic operators to do some common mathematical operations.
 15
 >>> 
 
-Assignment operators
+代入演算子
 ---------------------
 
-Assignment operators can used to assign values to variables.
+代入演算子は、変数に値を代入するために使用できます。
 
 .. list-table:: 
     :widths: 10 30 30
     :header-rows: 1
 
-    *   - Operator
-        - Example
-        - Same As
+    *   - オペレーター
+        - 例
+        - と同じ
     *   - `=`
         - a = 6
         - a =6
@@ -142,28 +142,29 @@ Assignment operators can used to assign values to variables.
 36
 >>> 
 
-Comparison Operators
+比較演算子
 ------------------------
-Comparison operators are used to compare two values.
+比較演算子は 2 つの値を比較するために使用されます。
 
 .. list-table:: 
     :widths: 10 30
     :header-rows: 1
 
-    *   - Operator
-        - Name
+    *   - オペレーター
+        - 名前
     *   - ==
-        - Equal
+        - 等しい
     *   - !=
-        - Not equal
+        - 等しくない
     *   - <
-        - Less than
+        - より小さい
     *   - >
-        - Greater than
+        - より大きい
     *   - >=
-        - Greater than or equal to
+        - 以上
     *   - <=
-        - Less than or equal to
+        - 以下
+
 
 
 
@@ -179,25 +180,25 @@ Comparison operators are used to compare two values.
 False
 >>> 
 
-Return **False**, beause the **a** is less than the **b**.
+**False** を返します。なぜなら、 **a** は **b** より小さいからです。
 
-Logical Operators
+論理演算子
 -----------------------
 
-Logical operators are used to combine conditional statements.
+論理演算子は条件文を組み合わせるために使用されます。
 
 .. list-table:: 
     :widths: 10 30
     :header-rows: 1
 
-    *   - Operator
-        - Description
+    *   - 演算子
+        - 説明
     *   - and
-        - Returns True if both statements are true
+        - 両方の文が真であればTrueを返す
     *   - or
-        - Returns True if one of the statements is true
+        - 一方の文が真であればTrueを返す
     *   - not
-        - Reverse the result, returns False if the result is true
+        - 結果を反転させ、結果が真であればFalseを返す
 
 .. code-block:: python
 
@@ -208,21 +209,21 @@ Logical operators are used to combine conditional statements.
 True
 >>> 
 
-Identity Operators
+同一性演算子
 ------------------------
 
-Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.
+同一性演算子は、オブジェクトが等しいかではなく、実際に同じオブジェクトで、同じメモリ位置にあるかどうかを比較するために使用されます。
 
 .. list-table:: 
     :widths: 10 30
     :header-rows: 1
 
-    *   - Operator
-        - Description
+    *   - 演算子
+        - 説明
     *   - is
-        - Returns True if both variables are the same object
+        - 両方の変数が同じオブジェクトであればTrueを返す
     *   - is not
-        - Returns True if both variables are not the same object
+        - 両方の変数が同じオブジェクトでなければTrueを返す
 
 .. code-block:: python
 
@@ -245,20 +246,20 @@ False
 True
 >>> 
 
-Membership Operators
+メンバーシップ演算子
 ----------------------
-Membership operators are used to test if a sequence is presented in an object.
+メンバーシップ演算子は、シーケンスがオブジェクト内に存在するかどうかをテストするために使用されます。
 
 .. list-table:: 
     :widths: 10 30
     :header-rows: 1
 
-    *   - Operator
-        - Description
+    *   - 演算子
+        - 説明
     *   - in
-        - Returns True if a sequence with the specified value is present in the object
+        - 指定された値のシーケンスがオブジェクトに存在する場合はTrueを返す
     *   - not in
-        - Returns True if a sequence with the specified value is not present in the object
+        - 指定された値のシーケンスがオブジェクトに存在しない場合はTrueを返す
 
 .. code-block:: python
 
@@ -270,36 +271,37 @@ Membership operators are used to test if a sequence is presented in an object.
 True
 >>> 
 
-Bitwise Operators
+
+ビット演算子
 ------------------------
 
-Bitwise operators are used to compare (binary) numbers.
+ビット演算子は、（バイナリ）数値を比較するために使用されます。
 
 .. list-table:: 
     :widths: 10 20 50
     :header-rows: 1
 
-    *   - Operator
-        - Name
-        - Description
+    *   - 演算子
+        - 名前
+        - 説明
     *   - &
         - AND
-        - Sets each bit to 1 if both bits are 1
+        - 両方のビットが1の場合、各ビットを1に設定
     *   - |
         - OR
-        - Sets each bit to 1 if one of two bits is 1
+        - 二つのビットのうち一方が1の場合、各ビットを1に設定
     *   - ^
         - XOR
-        - Sets each bit to 1 if only one of two bits is 1
+        - 二つのビットのうち一方だけが1の場合、各ビットを1に設定
     *   - ~
         - NOT
-        - Inverts all the bits
+        - すべてのビットを反転
     *   - <<
-        - Zero fill left shift
-        - Shift left by pushing zeros in from the right and let the leftmost bits fall off
+        - ゼロ埋め左シフト
+        - 右からゼロを押し込んで左シフトし、最左ビットを落とす
     *   - >>
-        - Signed right shift
-        - Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+        - 符号付き右シフト
+        - 最左ビットのコピーを左から押し込んで右シフトし、最右ビットを落とす
 
 .. code-block:: python
 

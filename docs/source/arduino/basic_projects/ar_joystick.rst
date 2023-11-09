@@ -1,42 +1,41 @@
 .. _ar_joystick:
 
-5.11 Toggle the Joystick
+5.11 ジョイスティックの切り替え
 ================================
-If you play a lot of video games, then you should be very familiar with the Joystick.
-It is usually used to move the character around, rotate the screen, etc.
+ビデオゲームをよくプレイするなら、ジョイスティックに非常に馴染みがあるでしょう。
+キャラクターを動かしたり、画面を回転させたりするのに普通使用されます。
 
-The principle behind Joystick's ability to allow the computer to read our actions is very simple.
-It can be thought of as consisting of two potentiometers that are perpendicular to each other.
-These two potentiometers measure the analog value of the joystick vertically and horizontally, resulting in a value (x,y) in a planar right-angle coordinate system.
+コンピュータが私たちの動作を読み取ることができるジョイスティックの原理は非常にシンプルです。
+これは互いに直交する二つのポテンショメーターで構成されていると考えることができます。
+これら二つのポテンショメーターは、ジョイスティックの縦と横のアナログ値を測定し、平面直角座標系の値(x,y)を結果として得ます。
 
+このキットのジョイスティックには、押された時にアクティブになるデジタル入力もあります。
 
-The joystick of this kit also has a digital input, which is activated when the joystick is pressed.
+**必要な部品**
 
-**Required Components**
+このプロジェクトには以下のコンポーネントが必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入することは非常に便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,36 +46,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    以下はこのプロジェクトでESP32ボードに利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 15
 
-        *   - For Analog Input
+        *   - アナログ入力用
             - IO14, IO25, I35, I34, I39, I36
-        *   - For Digital Input
+        *   - デジタル入力用
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
             
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.11_joystick.png
 
-The SW (Z-axis) pin is connected to IO33, which has a built-in 4.7K pull-up resistor. Therefore, when the SW button is not pressed, it will output a high level. When the button is pressed, it will output a low level.
+SW（Z軸）ピンはIO33に接続されており、内蔵4.7Kプルアップ抵抗器があります。そのため、SWボタンが押されていない場合は、高レベルを出力します。ボタンが押された場合は、低レベルを出力します。
 
-I34 and I35 will change their values as you manipulate the joystick. The range of values is from 0 to 4095.
+ジョイスティックを操作すると、I34とI35の値が変わります。値の範囲は0から4095です。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.11_joystick_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.11_joystick.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.11_joystick``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.11_joystick`` のパスの下にある ``5.11_joystick.ino`` ファイルを開いてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **Upload** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
     
@@ -85,7 +84,7 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
     <iframe src=https://create.arduino.cc/editor/sunfounder01/a2065d70-d207-4e51-b03e-ffd2a26597ef/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Open the serial monitor after the code has been uploaded successfully to see the x,y,z values of the joystick.
+コードが正常にアップロードされた後、シリアルモニターを開いて、ジョイスティックのx,y,z値を確認してください。
 
-* The x-axis and y-axis values are analog values that vary from 0 to 4095.
-* The Z-axis is a digital value with a status of 1 or 0 ( when pressed, it is 0 ).
+* x軸とy軸の値は0から4095までのアナログ値です。
+* Z軸は1または0のデジタル値です（押された時は0です）。

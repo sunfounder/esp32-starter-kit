@@ -3,40 +3,40 @@
 2.13 GAME - Star-Crossed
 ==========================
 
-In the next projects, we will play some fun mini-games in PictoBlox.
+PictoBloxで、いくつかの楽しいミニゲームをプレイします。
 
-Here we use Joystick module to play a Star-Crossed game.
+ここでは、ジョイスティックモジュールを使用して、スタークロストゲームをプレイします。
 
-After the script is run, stars will appear randomly on the stage, you need to use Joystick to control Rocketship to avoid the stars, if you touch it, the game will be over.
+スクリプトが実行されると、星がステージ上にランダムに出現します。ジョイスティックを使ってロケットシップを制御し、星を避けなければなりません。もし星に触れたら、ゲームオーバーになります。
 
 .. image:: img/16_rocket.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入するのが便利ですが、以下のリンクからも個別に購入できます。
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,82 +47,82 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- How Joystick module works
-- Set the x and y coordinates of the sprite
+- ジョイスティックモジュールの仕組み
+- スプライトのxとy座標の設定方法
 
-Build the Circuit
+回路の構築
 -----------------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots.
+ジョイスティックは、基部でピボットするスティックからなる入力デバイスで、その角度や方向を制御しているデバイスに報告します。ジョイスティックは、ビデオゲームやロボットを制御するためによく使用されます。
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick's position on two axes - the X-axis (left to right) and the Y-axis (up and down).
+コンピュータに完全な動きの範囲を伝えるために、ジョイスティックは2軸 - X軸（左右）とY軸（上下）でスティックの位置を測定する必要があります。
 
-The motion coordinates of the joystick are shown in the following figure.
+ジョイスティックの動作座標は以下の図に示されています。
 
 .. note::
 
-    * The x coordinate is from left to right, the range is 0-4095.
-    * y coordinate is from top to bottom, range is 0-4095.
+    * x座標は左から右へ、範囲は0-4095です。
+    * y座標は上から下へ、範囲は0-4095です。
 
 .. image:: img/16_joystick.png
 
 
-Now build the circuit according to the following diagram.
+以下の図に従って回路を構築してください。
 
 .. image:: img/circuit/14_star_crossed_bb.png
 
-Programming
+
+プログラミング
 ------------------
-The whole script is to achieve the effect that when the green flag is clicked, the **Stars** sprite moves in a curve on the stage and you need to use the joystick to move the **Rocketship**, so that it will not be touched by the **Star** sprite.
+このスクリプトは、緑の旗がクリックされた時に、 **Stars** スプライトがステージ上をカーブを描いて動き、ジョイスティックを使って **Rocketship** を動かし、 **Stars** スプライトに触れないようにする効果を実現することです。
 
-**1. Add sprites and backdrops**
+**1. スプライトとバックドロップの追加**
 
-Delete the default sprite, and use the **Choose a Sprite** button to add the **Rocketship** sprite and the **Star** sprite. Note that the **Rocket** sprite size is set to 50%.
+デフォルトのスプライトを削除し、 **Choose a Sprite** ボタンを使用して **Rocketship** スプライトと **Star** スプライトを追加します。 **Rocket** スプライトのサイズは50%に設定されていることに注意してください。
 
 .. image:: img/16_sprite.png
 
-Now add the **Stars** backdrop by **Choose a Backdrop**.
+今度は **Stars** のバックドロップを **Choose a Backdrop** で追加します。
 
 .. image:: img/16_sprite1.png
 
-**2. Scripting for Rocketship**
+**2. ロケットシップのためのスクリプティング**
 
-The **Rocketship** sprite is to achieve the effect that it will appear at a random position and then be controlled by the joystick to move it up, down, left, and right.
+**Rocketship** スプライトは、ランダムな位置に現れてからジョイスティックによって上下左右に動かされる効果を実現することです。
 
-The workflow is as follows.
+ワークフローは以下の通りです。
 
-* When the green flag is clicked, have the sprite go to a random location and create 2 variables **x** and **y**, which store the values read from pin33 (VRX of Joystick) and pin35 (VRY of Joystick), respectively. You can let the script run, toggling the joystick up and down, left and right, to see the range of values for x and y.
+* 緑の旗がクリックされたとき、スプライトをランダムな位置に移動させ、2つの変数 **x** と **y** を作成します。これらはそれぞれピン33（ジョイスティックのVRX）とピン35（ジョイスティックのVRY）から読み取った値を格納します。スクリプトを実行させ、ジョイスティックを上下左右に動かして、xとyの値の範囲を確認できます。
 
 .. image:: img/16_roc2.png
 
-* The value of pin33 is in the range 0-4095 (the middle is about 1800). Use ``x-1800>200`` to determine if Joystick is toggling to the right, and if so, make the x coordinate of the sprite +30 (to move the sprite to the right).
+* ピン33の値は0-4095の範囲で（中間は約1800です）。 ``x-1800>200`` を使用して、ジョイスティックが右にトグルされているかを判断し、そうであれば、スプライトのx座標を+30にします（スプライトを右に動かすため）。
 
 .. image:: img/16_roc3.png
 
-* If the Joystick is toggled to the left, let the x coordinate of the sprite be -30 (let the sprite move to the left).
+* ジョイスティックが左にトグルされた場合は、スプライトのx座標を-30にします（スプライトを左に動かします）。
 
 .. image:: img/16_roc4.png
 
-* Since the Joystick's y coordinate is from up (0) to down (4095), and the sprite's y coordinate is from down to up. So in order to move the Joystick upwards and the sprite upwards, the y-coordinate must be -30 in the script.
+* ジョイスティックのy座標は上（0）から下（4095）であり、スプライトのy座標は下から上になります。そのため、ジョイスティックを上に動かし、スプライトも上に動かすためには、スクリプト内でy座標を-30にする必要があります。
 
 .. image:: img/16_roc5.png
 
-* If the joystick is flicked down, the y-coordinate of the sprite is +30.
-
+* ジョイスティックを下にフリックした場合、スプライトのy座標は+30です。
 
 .. image:: img/16_roc6.png
 
-**3. Scripting for Star**
+**3. 星のためのスクリプティング**
 
-The effect to be achieved by the **Star** sprite is to appear at a random location, and if it hits **Rocketship**, the script stops running and the game ends.
+**Star** スプライトが達成する効果は、ランダムな位置に現れ、 **Rocketship** にぶつかった場合はスクリプトの実行を停止し、ゲームが終了することです。
 
-* When the green flag is clicked and the sprite goes to a random location, the [turn degrees] block is to make the **Star** sprite move forward with a bit of an angle change so you can see that it is moving in a curve and if on edge, bounce.
+* 緑の旗がクリックされてスプライトがランダムな位置に移動したとき、[turn degrees]ブロックは **Star** スプライトが少し角度を変えて前に進むようにするので、カーブを描いて動いているように見えますし、端に当たったら跳ね返ります。
 
 .. image:: img/16_star1.png
 
-* If the sprite touches the **Rocketship** sprite while it's moving, stop the script from running.
+* 動いている間にスプライトが **Rocketship** スプライトに触れた場合、スクリプトの実行を停止します。
 
 .. image:: img/16_star2.png

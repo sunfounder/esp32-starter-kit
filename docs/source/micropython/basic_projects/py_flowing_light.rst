@@ -1,37 +1,37 @@
 .. _py_flowing_light:
 
-6.2 Flowing Light
+6.2 流れる光
 =================================
 
-Have you ever wanted to add some fun and interactive element to your living space? 
-This project involves creating a running light using WS2812 LED strip and a obstacle avoidance module. 
-The running light changes direction when an obstacle is detected, making it an exciting addition to your home or office decor.
+あなたの居間に楽しさとインタラクティブな要素を加えたいと思ったことはありませんか？
+このプロジェクトでは、WS2812 LEDストリップと障害物回避モジュールを使用して走行する光を作ります。
+障害物が検出されると光の方向が変わり、家やオフィスの装飾にエキサイティングな追加をすることができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,29 +44,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic Diagram**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.2_flowing_led.png
     :align: center
 
-The WS2812 LED strip is composed of a series of individual LEDs that can be programmed to display different colors and patterns. 
-In this project, the strip is set up to display a running light that moves in a particular direction and 
-changes direction when an obstacle is detected by the obstacle avoidance module.
+WS2812 LEDストリップは、異なる色やパターンを表示できる一連の個別LEDで構成されています。
+このプロジェクトでは、ストリップは特定の方向に動く走行光を表示するように設定されており、
+障害物回避モジュールによって障害物が検出されると方向が変わります。
 
-
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.2_flowing_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``6.2_flowing_led.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
-    
 .. code-block:: python
 
       from machine import Pin
@@ -124,4 +122,4 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
                   pixels[i] = (0, 0, 0)
                   time.sleep_ms(100)
 
-LEDs on the RGB Strip light up one by one when the script runs. As soon as an object is placed in front of the obstacle avoidance module, the LEDs on the RGB Strip light up one by one in the opposite direction.
+スクリプトが実行されると、RGB ストリップの LED が 1 つずつ点灯します。 障害物回避モジュールの前に物体が置かれるとすぐに、RGB ストリップ上の LED が反対方向に 1 つずつ点灯します。

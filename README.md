@@ -17,6 +17,9 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 
 <a id="update"></a>
 ## Update:
+2023-11-09:
+- First release of Japanese version.
+
 2023-10-31:
 - Add electronic component purchase link.
 

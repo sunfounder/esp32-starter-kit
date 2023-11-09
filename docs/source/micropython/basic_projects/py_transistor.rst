@@ -1,37 +1,37 @@
 .. _py_transistor:
 
-5.6 Two Kinds of Transistors
+5.6 トランジスタの二種類
 ==========================================
-This kit is equipped with two types of transistors, S8550 and S8050, the former is PNP and the latter is NPN. They look very similar, and we need to check carefully to see their labels.
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+このキットには、二種類のトランジスタ、S8550とS8050が装備されており、前者がPNP型で、後者がNPN型です。外見はとても似ているため、ラベルを注意深く確認する必要があります。
+Highレベルの信号がNPNトランジスタを通ると、エネルギーが供給されます。しかし、PNP型はLowレベルの信号で制御が必要です。これらのトランジスタは、この実験のように、非接触型スイッチで頻繁に使用されます。
 
-Let's use LED and button to understand how to use transistor!
+トランジスタの使用方法を理解するために、LEDとボタンを使いましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,87 +50,81 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - 入力用
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - 出力用
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-* **Conditional Usage Pins (Input)**
+* **条件付き使用ピン（入力）**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
-
+    以下のピンは内蔵のプルアップまたはプルダウン抵抗があるため、 **入力ピンとして使用する場合** 
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - 条件付き使用ピン
+            - 説明
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - 47Kの抵抗でプルアップし、デフォルト値を高にします。
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - 4.7Kの抵抗でプルアップし、デフォルト値を高にします。
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - 1Kの抵抗でプルダウンし、デフォルト値を低にします。
 
-* **Strapping Pins (Input)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+* **ストラッピングピン（入力用）**
 
-    
-    
+    ストラッピングピンは、デバイスの起動時（つまり、電源オンリセット時）に特定のブートモードを決定するために使用される特別なピンのセットです。
+
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
-            - IO5, IO0, IO2, IO12, IO15 
-    
+        *   - ストラッピングピン
+            - IO5, IO0, IO2, IO12, IO15
 
-    
-
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    一般に、これらを入力ピンとして使用することは **推奨されません**。これらのピンを使用したい場合は、ブートプロセスへの影響を考慮してください。詳細は :ref:`esp32_strapping` セクションを参照してください。
 
 
 
-**Way to connect NPN (S8050) transistor**
+**NPN（S8050）トランジスタの接続方法**
 
 .. image:: ../../img/circuit/circuit_5.6_S8050.png
 
-In this circuit, when the button is pressed, IO14 is high.
+この回路では、ボタンを押すとIO14が高くなります。
 
-By programming IO26 to output **high**, after a 1k current limiting resistor (to protect the transistor), the S8050 (NPN transistor) is allowed to conduct, thus allowing the LED to light up.
+IO26をプログラムして **high** を出力することで、1kの電流制限抵抗（トランジスタを保護するため）を経て、S8050（NPNトランジスタ）が導通し、LEDが点灯します。
 
 
 .. image:: ../../img/wiring/5.6_s8050_bb.png
 
-**Way to connect PNP(S8550) transistor**
+**PNP（S8550）トランジスタの接続方法**
 
 .. image:: ../../img/circuit/circuit_5.6_S8550.png
 
-In this circuit, IO14 is low by the default and will change to high when the button is pressed.
+この回路では、IO14はデフォルトで低く、ボタンを押すと高くなります。
 
-By programming IO26 to output **low**, after a 1k current limiting resistor (to protect the transistor), the S8550 (PNP transistor) is allowed to conduct, thus allowing the LED to light up.
+IO26をプログラムして **low** を出力することで、1kの電流制限抵抗（トランジスタを保護するため）を経て、S8550（PNPトランジスタ）が導通し、LEDが点灯します。
 
-The only difference you will notice between this circuit and the previous one is that in the previous circuit the cathode of the LED is connected to the **collector** of the **S8050 (NPN transistor)**, while this one is connected to the **emitter** of the **S8550 (PNP transistor)**.
+この回路と前の回路の唯一の違いは、前の回路ではLEDのカソードが **S8050（NPNトランジスタ）** の **コレクタ** に接続されているのに対し、この回路では **エミッタ** に接続されていることです。
 
 .. image:: ../../img/wiring/5.6_s8550_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.6_transistor.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.6_transistor.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 
 
@@ -154,9 +148,9 @@ The only difference you will notice between this circuit and the previous one is
 
 
 
-Two types of transistors can be controlled using the same code. 
-When we press the button, the ESP32 will send a high-level signal to the transistor; 
-when we release it, it will send a low-level signal.
+二種類のトランジスタは同じコードを使用して制御できます。
+ボタンを押すと、ESP32はトランジスタに高レベルの信号を送ります。
+それを放すと、低レベルの信号を送ります。
 
-* The circuit using the S8050 (NPN transistor) will light up when the button is pressed, indicating that it is in a high-level conduction state;
-* The circuit using the S8550 (PNP transistor) will light up when the button is released, indicating that it is in a low-level conduction state.
+* S8050（NPNトランジスタ）を使用した回路は、ボタンを押すと点灯し、高レベル導通状態であることを示します。
+* S8550（PNPトランジスタ）を使用した回路は、ボタンを放すと点灯し、低レベル導通状態であることを示します。

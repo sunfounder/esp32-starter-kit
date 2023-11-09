@@ -1,41 +1,41 @@
 .. _ar_rgb:
 
-2.3 Colorful Light
+2.3 カラフルライト
 ==============================================
 
-In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
+このプロジェクトでは、RGB LEDを使用した加法色混合の魅力的な世界について探求します。
 
-RGB LED combines three primary colors, namely Red, Green, and Blue, into a single package. These three LEDs share a common cathode pin, while each anode pin controls the intensity of the corresponding color.
+RGB LEDは、赤、緑、青の三原色を一つのパッケージに組み合わせています。これら三つのLEDは共通のカソードピンを共有し、各アノードピンが対応する色の強度を制御します。
 
-By varying the electrical signal intensity applied to each anode, we can create a wide range of colors. For example, mixing high-intensity red and green light will result in yellow light, while combining blue and green light will produce cyan.
+各アノードに加える電気信号の強度を変えることで、幅広い色を作り出すことができます。たとえば、高強度の赤と緑の光を混ぜると黄色の光が、青と緑の光を混ぜるとシアンが生成されます。
 
-Through this project, we will explore the principles of additive color mixing and unleash our creativity by manipulating the RGB LED to display captivating and vibrant colors.
+このプロジェクトを通じて、加法色混合の原理を学び、RGB LEDを操作して魅力的で活発な色を表示させることで、私たちの創造力を解き放ちます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,43 +51,43 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+こちらは、このプロジェクトのためにESP32ボード上で利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.3_rgb.png
 
-The PWM pins pin27, pin26 and pin25 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+PWMピンのpin27、pin26、pin25はそれぞれRGB LEDの赤、緑、青のピンを制御し、共通カソードピンをGNDに接続します。これにより、異なるPWM値をこれらのピンに重ねて特定の色をRGB LEDに表示させることができます。
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
-The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+RGB LEDには4つのピンがあります：長いピンが共通のカソードピンで、通常はGNDに接続されています。最も長いピンの隣の左側のピンが赤で、右側の二つのピンが緑と青です。
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
 
-**Code**
+**コード**
 
-Here, we can choose our favorite color in drawing software (such as paint) and display it with RGB LED.
+ここでは、お好きな色を描画ソフト（たとえばペイント）で選び、RGB LEDで表示させます。
 
 .. note::
 
-    * You can open the file ``2.3_rgb_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.3_rgb_led``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\2.3_rgb_led`` のパスの下にあるファイル ``2.3_rgb_led.ino`` を開けます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
 
 .. raw:: html
@@ -97,12 +97,12 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. image:: img/edit_colors.png
 
-Write the RGB value into ``color_set()``, you will be able to see the RGB light up the colors you want.
+``color_set()`` にRGB値を書き込むと、ご希望の色をRGB LEDで点灯させることができます。
 
 
-**How it works?**
+**どのように動作するのか？**
 
-#. Define the GPIO pins, the PWM channels and the frequency (in Hz) and resolution (in bits).
+#. GPIOピン、PWMチャネル、周波数（Hz）、解像度（ビット）を定義します。
 
     .. code-block:: arduino
 
@@ -121,7 +121,7 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
         const int resolution = 8;
 
 
-#. The ``setup()`` function initializes the PWM channels with the specified frequency and resolution, and then attaches the LED pins to their corresponding PWM channels.
+#. ``setup()`` 関数では、指定された周波数と解像度でPWMチャネルを初期化し、その後、LEDピンを対応するPWMチャネルにアタッチします。
 
     .. code-block:: arduino
 
@@ -137,22 +137,22 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
             ledcAttachPin(bluePin, blueChannel);
         }
     
-    Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
+    ここでは |link_ledc| （LED制御）ペリフェラルを使用しており、主にLEDの輝度を制御するために設計されていますが、他の目的でPWM信号を生成するためにも使用できます。
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
+    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: この関数はLEDCチャネルの周波数と解像度を設定するために使用されます。LEDCチャネルに設定された ``frequency`` を返します。0が返された場合はエラーが発生し、LEDCチャネルは設定されませんでした。
             
-        * ``channel`` select LEDC channel to config.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
+        * ``channel`` LEDCチャネルの選択。
+        * ``freq`` PWMの周波数の選択。
+        * ``resolution_bits`` LEDCチャネルの解像度の選択。範囲は1-14ビット（ESP32の場合は1-20ビット）です。
 
 
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
+    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: この関数はピンをLEDCチャネルにアタッチするために使用されます。
 
-        * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
+        * ``pin`` GPIOピンの選択。
+        * ``chan`` LEDCチャネルの選択。
 
 
-#. The ``loop()`` function cycles through various colors (red, green, blue, yellow, purple, and cyan) with one-second intervals between each color change.
+#. ``loop()`` 関数は、各色（赤、緑、青、黄色、紫、シアン）を順に切り替え、各色の変更間に1秒のインターバルを設けています。
 
     .. code-block:: arduino
 
@@ -172,7 +172,7 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
         }
 
 
-#. The ``setColor()`` function sets the desired color by writing the appropriate duty cycle values to each PWM channel. The function takes in three integer arguments for red, green, and blue color values.
+#. ``setColor()`` 関数は、それぞれのPWMチャネルに適切なデューティサイクル値を書き込むことにより、希望の色を設定します。この関数は赤、緑、青の色の値を整数で3つ受け取ります。
 
     .. code-block:: arduino
 
@@ -183,12 +183,7 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
             ledcWrite(blueChannel, blue);
         }
     
-    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: This function is used to set duty for the LEDC channel.
+    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: この関数はLEDCチャネルのデューティを設定するために使用されます。
         
-        * ``chan`` select the LEDC channel for writing duty.
-        * ``duty`` select duty to be set for selected channel.
-
-
-
-
-
+        * ``chan`` デューティを書き込むLEDCチャネルの選択。
+        * ``duty`` 選択されたチャネルに設定するデューティ。

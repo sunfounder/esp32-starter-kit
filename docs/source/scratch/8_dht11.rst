@@ -1,39 +1,39 @@
 .. _sh_humiture:
 
-2.8 Read Temperature and Humidity
+2.8 温度と湿度の読み取り
 =================================================
 
-Previous projects have been using stage mode, but some functions are only available in upload mode, such as serial communication function. 
-In this project, we will print the temperature and humidity of the DHT11 using the Serial Monitor in :ref:`upload_mode`.
+これまでのプロジェクトではステージモードを使用してきましたが、シリアル通信機能など、アップロードモードでのみ利用可能な機能があります。
+このプロジェクトでは、 :ref:`アップロードモード` のシリアルモニターを使用して、DHT11の温度と湿度を印刷します。
 
 .. image:: img/11_serial.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,62 +46,60 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_dht11_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- Get the temperature and humidity from the DHT11 module
-- Serial Monitor for :ref:`upload_mode`
-- Add extension
+- DHT11モジュールから温度と湿度を取得する
+- :ref:`アップロードモード` のシリアルモニター
+- 拡張機能の追加
 
-Build the Circuit
+回路の構築
 -----------------------
 
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity.
+デジタル温度と湿度センサーDHT11は、校正されたデジタル信号出力を持つ温度と湿度の複合センサーです。
 
-Now build the circuit according to the following diagram.
+以下の図に従って回路を組み立てます。
 
 .. image:: img/circuit/9_dht11_bb.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Adding Extensions**
+**1. 拡張機能の追加**
 
-Switch to **Upload** mode, click the **Add Extension** button in the bottom left corner, then select **Communication** to add it, and it will appear at the end of the palette area.
+**Upload** モードに切り替え、左下隅の **Add Extension** ボタンをクリックしてから、 **Communication** を選択して追加します。すると、パレットエリアの最後に表示されます。
 
 .. image:: img/11_addcom.png
 
-**2. Initializing the ESP32 and Serial Monitor**
+**2. ESP32とシリアルモニターの初期化**
 
-In **Upload** mode, start ESP32 and then set the serial port baud rate.
+**Upload** モードでESP32を起動し、その後シリアルポートのボーレートを設定します。
 
-* [when ESP32 Starts up]: In **Upload** mode, start ESP32.
-* [set serial baud rate to]: From the **Communications** palette, used to set the baud rate of serial port 0, default is 115200. If you are using Mega2560, then you can choose to set baud rate in serial port 0~2.
+* [when ESP32 Starts up]: **Upload** モードでESP32を起動します。
+* [set serial baud rate to]: **Communications** パレットから、シリアルポート0のボーレートを設定するために使用します。デフォルトは115200です。Mega2560を使用している場合は、シリアルポート0〜2のボーレートを設定することができます。
 
 .. image:: img/11_init.png
 
-**3. Read temperature and humidity**
+**3. 温度と湿度を読み取る**
 
-Create 2 variables **tem** and **humi** to store the temperature and humidity respectively, the code will appear on the right side while you drag and drop the block.
+**tem** と **humi** という2つの変数を作成し、それぞれ温度と湿度を格納します。ブロックをドラッグアンドドロップすると、コードが右側に表示されます。
 
 .. image:: img/11_readtem.png
 
-**4. Print them on the Serial Monitor**
+**4. シリアルモニターに表示する**
 
-Write the read temperature and humidity to the Serial Monitor. To avoid transferring too fast and causing PictoBlox to jam, use the [wait seconds] block, to add some time interval for the next print.
+読み取った温度と湿度をシリアルモニターに書き込みます。PictoBloxがジャムを起こす原因となる過度な速度での転送を避けるために、[wait seconds]ブロックを使用し、次の印刷のための時間間隔を設けます。
 
 .. image:: img/11_writeserial.png
 
-**5. Uploading code**
+**5. コードをアップロードする**
 
-Unlike the **Stage** mode, the code in **Upload** mode needs to be uploaded to the ESP32 board using the **Upload Code** button to see the effect. This also allows you to unplug the USB cable and still have the program running.
+**Stage** モードとは異なり、 **Upload** モードのコードは、効果を確認するために **Upload Code** ボタンを使用してESP32ボードにアップロードする必要があります。これにより、USBケーブルを抜いてもプログラムが実行され続けます。
 
 .. image:: img/11_upload.png
 
-**6. Turn on the serial monitor**
+**6. シリアルモニターを開く**
 
-Now open the **Serial Monitor** to see the temperature and humidity.
+今、 **Serial Monitor** を開いて温度と湿度を確認しましょう。
 
 .. image:: img/11_serial.png
-
-

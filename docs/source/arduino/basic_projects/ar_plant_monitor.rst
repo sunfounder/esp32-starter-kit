@@ -1,37 +1,37 @@
 .. _ar_plant_monitor:
 
-6.6 Plant Monitor
+6.6 植物モニタリングシステム
 ===============================
 
-Welcome to the Plant Monitor project! 
+植物モニタリングシステムプロジェクトへようこそ！
 
-In this project, we will be using an ESP32 board to create a system that helps us take care of our plants. With this system, we can monitor the temperature, humidity, soil moisture, and light levels of our plants, and ensure that they are getting the care and attention they need to thrive.
+このプロジェクトでは、ESP32ボードを使用して植物のケアを支援するシステムを作成します。このシステムにより、植物の温度、湿度、土壌の水分、光のレベルを監視し、植物が健やかに育つために必要なケアと注意を確実に提供できます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット一式を購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,35 +58,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
-The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
-Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
-measure the light level. The readings from these sensors are displayed on an LCD screen, and a water pump can be controlled 
-using a button to water the plant when needed.
+このシステムでは、DHT11センサーを使用して周囲環境の温度と湿度を測定します。また、土壌水分モジュールは土の水分レベルを、フォトレジスターは光のレベルを測定するために使用されます。これらのセンサーからの読み取り値はLCD画面に表示され、ボタンを使って必要に応じて水やりをするための水ポンプを制御できます。
 
-IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
+IO32は内部に1Kのプルダウン抵抗を持ち、デフォルトでは低論理レベルです。ボタンが押されるとVCC（高電圧）への接続が確立し、IO32に高論理レベルが現れます。
 
 
-**Wiring**
+**配線図**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    ここでは、まずバッテリーを挿入し、その後拡張ボード上のスイッチをON位置にスライドしてバッテリー供給を活性化することをお勧めします。
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``6.6_plant_monitor.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.6_plant_monitor``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ファイル ``6.6_plant_monitor.ino`` を ``esp32-starter-kit-main\c\codes\6.6_plant_monitor`` のパスの下で開けます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
+    * ここでは ``LiquidCrystal_I2C`` と ``DHT sensor library`` ライブラリを使用します。これらは **Library Manager** からインストールできます。
 
 
 .. raw:: html
@@ -94,9 +91,10 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
     <iframe src=https://create.arduino.cc/editor/sunfounder01/52f54c4d-ad8c-49c4-816a-2a55a247d425/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-* After uploading the code, the I2C LCD1602 alternately displays temperature and humidity, as well as soil moisture and light intensity analog values, with a 2-second interval.
-* The water pump is controlled using a button press. To water the plants, hold down the button, and release it to stop watering.
+* コードをアップロードした後、I2C LCD1602は温度と湿度、土壌の水分および光強度のアナログ値を2秒間隔で交互に表示します。
+* 水ポンプはボタンプレスを使用して制御されます。植物に水をやるためには、ボタンを押し続けて、止めるためには手を離します。
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    コードと配線が正しくてもLCDに何も表示されない場合は、背面のポテンショメータを調整してコントラストを高めることができます。
+

@@ -1,43 +1,43 @@
 .. _py_joystick:
 
-5.11 Toggle the Joystick
-================================
+5.11 ジョイスティックの切り替え
+===================================
 
-If you play a lot of video games, then you should be very familiar with the Joystick.
-It is usually used to move the character around, rotate the screen, etc.
+ビデオゲームをよくプレイする人なら、ジョイスティックに非常に慣れているはずです。
+キャラクターを動かしたり、画面を回転させたりするのに通常使用されます。
 
-The principle behind Joystick's ability to allow the computer to read our actions is very simple.
-It can be thought of as consisting of two potentiometers that are perpendicular to each other.
-These two potentiometers measure the analog value of the joystick vertically and horizontally, resulting in a value (x,y) in a planar right-angle coordinate system.
+コンピュータが私たちのアクションを読み取ることを可能にするジョイスティックの原理は非常にシンプルです。
+それは互いに垂直な二つのポテンショメータから成り立っていると考えることができます。
+これら二つのポテンショメータは、ジョイスティックの垂直方向と水平方向のアナログ値を測定し、平面直角座標系での値（x, y）を結果として出力します。
 
 
-The joystick of this kit also has a digital input, which is activated when the joystick is pressed.
+このキットのジョイスティックには、ジョイスティックが押されたときにアクティブになるデジタル入力もあります。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,50 +48,50 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 15
 
-        *   - For Analog Input
+        *   - アナログ入力用
             - IO14, IO25, I35, I34, I39, I36
-        *   - For Digital Input
+        *   - デジタル入力用
             - IO13, IO14, IO27, IO26, IO25, IO33, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイスの起動時に特定のブートモードを決定するために使用される特別なピンのセットです
+    （つまり、電源オンリセット）。
 
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    一般に、これらを入力ピンとして使用することは **推奨されません**。これらのピンを使用したい場合は、ブートプロセスへの影響を考慮してください。詳細は :ref:`esp32_strapping` セクションを参照してください。
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.11_joystick.png
 
-The SW (Z-axis) pin is connected to IO33, which has a built-in 4.7K pull-up resistor. Therefore, when the SW button is not pressed, it will output a high level. When the button is pressed, it will output a low level.
+SW（Z軸）ピンはIO33に接続されており、内蔵の4.7Kプルアップ抵抗があります。そのため、SWボタンが押されていない時は、高レベルを出力します。ボタンが押されると、低レベルを出力します。
 
-I34 and I35 will change their values as you manipulate the joystick. The range of values is from 0 to 4095.
+I34とI35は、ジョイスティックを操作するとその値が変わります。値の範囲は0から4095です。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.11_joystick_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.11_joystick.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.11_joystick.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。 
 
 .. code-block:: python
 
@@ -111,7 +111,7 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
         print(f"X:{xValue}, Y:{yValue}, Button:{btnValue}")
         time.sleep(0.1)
 
-When the program runs, the Shell prints out the x, y, and button values of joystick.
+プログラムを実行すると、シェルはジョイスティックのx、y、ボタンの値を出力します。
 
 .. code-block:: 
 
@@ -124,7 +124,7 @@ When the program runs, the Shell prints out the x, y, and button values of joyst
     X:1924, Y:1776, Button:0
 
 
-* The x-axis and y-axis values are analog values that vary from 0 to 4095.
-* The button is a digital value with a status of 1(release) or 0(press).
+* x軸とy軸の値は、0から4095まで変化するアナログ値です。
+* ボタンはデジタル値で、1（リリース）または0（プレス）の状態を持ちます。
 
     .. image:: img/joystick_direction.png

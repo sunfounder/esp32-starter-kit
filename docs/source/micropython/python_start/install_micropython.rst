@@ -1,28 +1,28 @@
 .. _install_micropython_on_esp32:
 
-1.3 Install MicroPython on the ESP32(Important)
+1.3 ESP32にMicroPythonをインストールする(重要)
 ==================================================
 
-#. Download the |link_esp32_micropython_download| from the MicroPython official website and then download the latest version of the firmware.
+#. MicroPythonの公式ウェブサイトから |link_esp32_micropython_download| をダウンロードし、その後で最新バージョンのファームウェアをダウンロードします。
 
     .. image:: img/dowload_micropython_uf2.png
 
-#. Click on the bottom right corner of Thonny IDE, select **"MicroPython(ESP32).COMXX"** from the pop-up menu, and then select **"Configure interpreter"**.
+#. Thonny IDEの右下隅をクリックし、ポップアップメニューから **「MicroPython(ESP32).COMXX」** を選択し、 **「Configure interpreter」** を選択します。
 
     .. image:: img/install_micropython1.png
 
-#. Click **"Install or Update MicroPython"** in the new pop-up window.
+#. 新しいポップアップウィンドウで **「Install or Update MicroPython」** をクリックします。
 
     .. image:: img/install_micropython2.png
 
-#. Select the correct port and the firmware you downloaded earlier, and click **"Install"**.
+#. 正しいポートと先ほどダウンロードしたファームウェアを選択し、 **「Install」** をクリックします。
 
     .. image:: img/install_micropython3.png
 
-#. After a successful installation, you can close this page.
+#. インストールが成功した後、このページを閉じることができます。
 
     .. image:: img/install_micropython4.png
 
-#. When you return to the Thonny homepage, you will see MicroPython version and ESP32-related prompts, instead of red error prompts.
+#. Thonnyのホームページに戻ると、赤いエラープロンプトの代わりにMicroPythonのバージョンとESP32関連のプロンプトが表示されます。
 
     .. image:: img/install_micropython5.png

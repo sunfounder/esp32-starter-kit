@@ -1,37 +1,37 @@
 .. _ar_rgb_strip:
 
-2.7 RGB LED Strip
+2.7 RGB LEDストリップ
 ======================
 
-In this project, we will delve into the mesmerizing world of driving WS2812 LED strips and bring a vibrant display of colors to life. With the ability to individually control each LED on the strip, we can create captivating lighting effects that will dazzle the senses.
+このプロジェクトでは、WS2812 LEDストリップの駆動と、鮮やかな色彩の展示を目指します。ストリップ上の各LEDを個別に制御する能力により、視覚を魅了するライティングエフェクトを作り出すことができます。
 
-Furthermore, we have included an exciting extension to this project, where we will explore the realm of randomness. By introducing random colors and implementing a flowing light effect, we can create a mesmerizing visual experience that captivates and enchants.
+さらに、このプロジェクトにはランダム性の世界を探求するというワクワクする拡張機能を含んでいます。ランダムな色を導入し、流れるような光のエフェクトを実装することで、見る者を魅了する幻想的なビジュアル体験を創出します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    * - コンポーネントの紹介
+      - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,45 +42,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.7_ws2812.png
     :width: 500
     :align: center
 
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+こちらはこのプロジェクトのためのESP32ボード上で利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
 .. note::
 
-    IO33 is not available for this project.
+    IO33はこのプロジェクトでは使用できません。
 
-    The WS2812 LED strip is a type of LED strip that requires a precise pulse-width modulation (PWM) signal. The PWM signal has precise requirements in both time and voltage. For instance, a "0" bit for the WS2812 corresponds to a high-level pulse of about 0.4 microseconds, while a "1" bit corresponds to a high-level pulse of about 0.8 microseconds. This means the strip needs to receive high-frequency voltage changes.
+    WS2812 LEDストリップは、正確なパルス幅変調（PWM）信号を要求するタイプのLEDストリップです。PWM信号は時間と電圧の両方で厳密な要求があります。例えば、WS2812の「0」ビットは約0.4マイクロ秒のハイレベルパルスに対応し、「1」ビットは約0.8マイクロ秒のハイレベルパルスに対応します。これは、ストリップが高周波の電圧変化を受け取る必要があることを意味します。
 
-    However, with a 4.7K pull-up resistor and a 100nf pull-down capacitor on IO33, a simple low-pass filter is created. This type of circuit "smooths out" high-frequency signals, because the capacitor needs some time to charge and discharge when it receives voltage changes. Therefore, if the signal changes too quickly (i.e., is high-frequency), the capacitor will not be able to keep up. This results in the output signal becoming blurred and unrecognizable to the strip.
+    しかし、IO33に4.7Kのプルアップ抵抗と100nfのプルダウンコンデンサーをつけると、簡単なローパスフィルターが作成されます。このタイプの回路は、コンデンサーが電圧変化を受けたときに充電と放電をする時間が必要なため、高周波信号を「平滑化」します。そのため、信号があまりにも速く変化する（つまり、高周波である）場合、コンデンサーは追い付けず、結果として出力信号がぼやけて、ストリップに認識不可能になります。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/2.7_rgb_strip_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``2.7_rgb_strip.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.7_rgb_strip``. Or copy this code into **Arduino IDE**.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\2.7_rgb_strip`` のパスの下にあるファイル ``2.7_rgb_strip.ino`` を開くか、このコードを **Arduino IDE** にコピーしてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``Adafruit NeoPixel`` library is used here, you can install it from the **Library Manager**.
+    * ここでは ``Adafruit NeoPixel`` ライブラリが使用されています。これは **Library Manager** からインストールできます。
 
         .. image:: img/rgb_strip_lib.png
 
@@ -89,44 +89,44 @@ Here is a list of available pins on the ESP32 board for this project.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/bccd25f6-4e3e-45e2-b9f5-76a1b0866794/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-When the code is successfully uploaded, the LEDs on the strip will sequentially turn on with a yellow color and then turn off, creating a simple chasing effect.
+コードが正常にアップロードされると、ストリップのLEDが順に黄色で点灯し、次に消灯し、単純なチェイス効果を作り出します。
 
 
-**How it works?**
+**どのように動作するのか？**
 
 
-#. Include the Adafruit NeoPixel library: This line imports the Adafruit NeoPixel library so that the sketch can use its functions and classes to control the LED strip.
+#. Adafruit NeoPixelライブラリを含める：この行はAdafruit NeoPixelライブラリをインポートし、LEDストリップを制御するためにその関数やクラスをスケッチで使用できるようにします。
 
     .. code-block:: arduino
 
         #include <Adafruit_NeoPixel.h> // Include the Adafruit NeoPixel library
 
-#. Define constants for the LED strip.
+#. LEDストリップのための定数を定義します。
 
     .. code-block:: arduino
 
         #define LED_PIN 13 // NeoPixel LED strip
         #define NUM_LEDS 8 // Number of LEDs
 
-#. Create an instance of the Adafruit_NeoPixel class.
+#. Adafruit_NeoPixelクラスのインスタンスを作成します。
 
     .. code-block:: arduino
 
        // Create an instance of the Adafruit_NeoPixel class
         Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
 
-    This line creates an instance of the ``Adafruit_NeoPixel`` class called ``strip`` and configures it with the number of LEDs, the pin connected to the LED strip, and the signal parameters (GRB color order and 800 kHz data rate).
+    この行は ``Adafruit_NeoPixel`` クラスの ``strip`` というインスタンスを作成し、LEDの数、LEDストリップに接続されたピン、および信号パラメータ（GRBカラーオーダーと800 kHzのデータレート）で設定します。
 
 
     * ``Adafruit_NeoPixel (uint16_t n, int16_t p = 6, neoPixelType t = NEO_GRB + NEO_KHZ800)``	
 
-    NeoPixel constructor when length, pin and pixel type are known at compile-time. Ruturn Adafruit_NeoPixel object. Call the ``begin()`` function before use.
+    長さ、ピン、ピクセルタイプがコンパイル時に既知の場合のNeoPixelコンストラクタ。Adafruit_NeoPixelオブジェクトを返します。使用前に ``begin()`` 関数を呼び出してください。
 
-        * ``n``: Number of NeoPixels in strand.
-        * ``p``: Arduino pin number which will drive the NeoPixel data in.
-        * ``t``: Pixel type - add together ``NEO_*`` constants defined in ``Adafruit_NeoPixel.h``, for example ``NEO_GRB+NEO_KHZ800`` for NeoPixels expecting an 800 KHz (vs 400 KHz) data stream with color bytes expressed in green, red, blue order per pixel.
+        * ``n``: ストランド内のNeoPixelの数。
+        * ``p``: NeoPixelデータを駆動するArduinoピン番号。
+        * ``t``: ピクセルタイプ - ``Adafruit_NeoPixel.h`` で定義された ``NEO_*`` 定数を加算します。例えば ``NEO_GRB+NEO_KHZ800`` は、800 KHz（対400 KHz）データストリームを期待するNeoPixelと、ピクセルごとに緑、赤、青の順番で表現されるカラーバイトのためです。
 
-#. Initialize the WS2812 RGB strip and sets the initial color of the strip to black (off).
+#. WS2812 RGBストリップを初期化し、ストリップの初期色を黒（オフ）に設定します。
 
     .. code-block:: arduino
 
@@ -135,34 +135,35 @@ When the code is successfully uploaded, the LEDs on the strip will sequentially 
             strip.show(); // Set initial color to black
         }
 
-    * ``void begin (void)``: Configure NeoPixel pin for output.
-    * ``void show (void)``: Transmit pixel data in RAM to NeoPixels.
+    * ``void begin (void)``: NeoPixelピンを出力用に設定します。
+    * ``void show (void)``: RAM内のピクセルデータをNeoPixelsに送信します。
 
-#. In the ``loop()`` function, the LEDs on the strip will sequentially turn on with a yellow color and then turn off, creating a simple chasing effect.
+#. ``loop()`` 関数では、LEDストリップ上のLEDが順に黄色で点灯し、その後消灯します。これによりシンプルな追跡効果が作成されます。
 
     .. code-block:: arduino
 
         void loop() {
-        // Turn on LEDs one by one
-        for (int i = 0; i < NUM_LEDS; i++) {
-            strip.setPixelColor(i, 100, 45, 0); // Set the color of the i-th LED to red
-            strip.show(); // Update the LED strip with the new colors
-            delay(100); // Wait for 100 milliseconds
-        }
-        
-        // Turn off LEDs one by one
-        for (int i = 0; i < NUM_LEDS; i++) {
-            strip.setPixelColor(i, 0, 0, 0); // Set the color of the i-th LED to black (turn it off)
-            strip.show(); // Update the LED strip with the new colors
-            delay(100); // Wait for 100 milliseconds
-        }
+            // Turn on LEDs one by one
+            for (int i = 0; i < NUM_LEDS; i++) {
+                strip.setPixelColor(i, 100, 45, 0); // Set the color of the i-th LED to red
+                strip.show(); // Update the LED strip with the new colors
+                delay(100); // Wait for 100 milliseconds
+            }
+            
+            // Turn off LEDs one by one
+            for (int i = 0; i < NUM_LEDS; i++) {
+                strip.setPixelColor(i, 0, 0, 0); // Set the color of the i-th LED to black (turn it off)
+                strip.show(); // Update the LED strip with the new colors
+                delay(100); // Wait for 100 milliseconds
+            }
         }
 
     * ``void setPixelColor (uint16_t n, uint8_t r, uint8_t g, uint8_t b)``
 
-    Set a pixel's color using separate red, green and blue components. If using RGBW pixels, white will be set to 0.
+    赤、緑、青のそれぞれの成分を使用してピクセルの色を設定します。RGBWピクセルを使用する場合、白は0に設定されます。
 
-        * ``n``: Pixel index, starting from 0.
-        * ``r``: Red brightness, 0 = minimum (off), 255 = maximum.
-        * ``g``: Green brightness, 0 = minimum (off), 255 = maximum.
-        * ``b``: Blue brightness, 0 = minimum (off), 255 = maximum.
+        * ``n``: ピクセルのインデックスで、0から始まります。
+        * ``r``: 赤の明るさで、0は最小（オフ）、255は最大です。
+        * ``g``: 緑の明るさで、0は最小（オフ）、255は最大です。
+        * ``b``: 青の明るさで、0は最小（オフ）、255は最大です。
+

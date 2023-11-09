@@ -1,37 +1,35 @@
 .. _py_color_gradient:
 
-6.5 Color Gradient
-=====================
+6.5 カラーグラデーション
+=========================
 
-Are you ready to experience a world of color? This project will take you on a magical journey where you can control an 
-LED strip and achieve smooth color transitions. Whether you're looking to add some color to your home decor or 
-seeking a fun programming project, this project has got you covered. Let's dive into this colorful world together!
+色彩の世界を体験する準備はできましたか？このプロジェクトでは、LEDストリップをコントロールして滑らかな色の変化を実現する魔法のような旅に出かけます。家の装飾に色を加えたい場合でも、楽しいプログラミングプロジェクトを探している場合でも、このプロジェクトはあなたをサポートします。さあ、このカラフルな世界に一緒に飛び込みましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,23 +44,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.5_color_gradient.png
 
-This project uses an LED strip and a potentiometer to create a color mixing effect. The potentiometer is used to adjust the hue value of the LED, which is then converted into RGB values using a color conversion function. The RGB values are then used to update the color of the LED.
+このプロジェクトでは、LEDストリップとポテンショメータを使用して色の混合効果を作り出します。ポテンショメータはLEDの色相値を調整するために使用され、その後、色変換関数を使用してRGB値に変換されます。そして、そのRGB値を使ってLEDの色を更新します。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.5_color_strip_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.5_color_gradient.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``6.5_color_gradient.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。それから、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
+
 
 .. code-block:: python
     
@@ -133,4 +132,4 @@ This project uses an LED strip and a potentiometer to create a color mixing effe
 
 
 
-As the code runs, slowly rotate the potentiometer and you will see the color of the RGB Strip fade from red to purple.
+コードの実行中にポテンショメータをゆっくりと回転させると、RGB ストリップの色が赤から紫にフェードしていくのがわかります。

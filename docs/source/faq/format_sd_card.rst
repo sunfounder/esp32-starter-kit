@@ -1,43 +1,43 @@
 .. _format_sd_card:
 
-How to format the SD card?
+SDカードをフォーマットする方法は？
 ====================================
 
-The steps to ensure your SD card is formatted correctly may vary depending on your operating system. Here are simple steps on how to format an SD card in Windows, MacOS, and Linux:
+使用しているオペレーティングシステムによって、SDカードを正しくフォーマットする手順が異なる場合があります。以下は、Windows、MacOS、LinuxでSDカードをフォーマットするための簡単な手順です。
 
 **Windows**
 
-   #. Insert your SD card into the computer, then open "My Computer" or "This PC." Right-click on your SD card and select "Format."
+   #. コンピュータにSDカードを挿入し、「マイコンピュータ」または「このPC」を開きます。SDカード上で右クリックし、「フォーマット」を選択します。
 
         .. image:: img/sd_format_win1.png
 
-   #. In the file system drop-down menu, select the desired file system (usually choose FAT32, or for SD cards larger than 32GB, you may need to choose exFAT). Check "Quick Format" and then click "Start".
+   #. ファイルシステムのドロップダウンメニューから、希望するファイルシステムを選択します（通常はFAT32を選択し、32GB以上のSDカードの場合はexFATを選択する必要があります）。"クイックフォーマット"をチェックし、"開始"をクリックします。
 
         .. image:: img/sd_format_win2.png
 
 **MacOS**
    
-   #. Insert your SD card into the computer. Open the "Disk Utility" application (can be found in the "Utilities" folder).
+   #. コンピュータにSDカードを挿入します。"ディスクユーティリティ"アプリケーションを開きます（"ユーティリティ"フォルダ内にあります）。
 
         .. image:: img/sd_format_mac1.png
     
-   #. Select your SD card from the list on the left and then click "Erase".
+   #. 左側のリストからSDカードを選択し、"消去"をクリックします。
 
         .. image:: img/sd_format_mac2.png
 
-   #. From the format drop-down menu, choose your desired file system (usually choose MS-DOS (FAT) for FAT32, or ExFAT for SD cards larger than 32GB) and then click "Erase".
+   #. フォーマットのドロップダウンメニューから、希望するファイルシステムを選択します（通常はMS-DOS (FAT)をFAT32用に、32GB以上のSDカードの場合はExFATを選択します）。次に"消去"をクリックします。
 
         .. image:: img/sd_format_mac3.png
 
-   #. Finally, wait for the formatting to complete.
+   #. 最後に、フォーマットが完了するのを待ちます。
 
         .. image:: img/sd_format_mac3.png
 
 **Linux**
 
-   * First, insert your SD card and then open a terminal.
-   * Type ``lsblk`` and find your SD card's name in the device list (e.g., it may be ``sdb``).
-   * Use the ``umount`` command to unmount the SD card, like ``sudo umount /dev/sdb*``.
-   * Use the ``mkfs`` command to format the SD card. For example, ``sudo mkfs.vfat /dev/sdb1`` will format the SD card to a FAT32 file system (for SD cards larger than 32GB, you might need to use ``mkfs.exfat``).
+   * SDカードを挿入した後、ターミナルを開きます。
+   * ``lsblk`` と入力し、デバイスリストでSDカードの名前を探します（例：``sdb``）。
+   * ``umount`` コマンドを使用してSDカードをアンマウントします。例： ``sudo umount /dev/sdb*``。
+   * ``mkfs`` コマンドを使用してSDカードをフォーマットします。例えば、 ``sudo mkfs.vfat /dev/sdb1`` でSDカードをFAT32ファイルシステムにフォーマットします（32GB以上のSDカードの場合は、 ``mkfs.exfat`` を使用する必要があります）。
 
-Before formatting your SD card, make sure to back up any important data on the SD card, as the formatting operation will erase all files on the SD card.
+SDカードをフォーマットする前に、SDカード上の重要なデータをバックアップしてください。フォーマット操作はSDカード上のすべてのファイルを消去します。

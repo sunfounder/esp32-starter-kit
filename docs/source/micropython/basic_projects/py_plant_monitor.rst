@@ -1,37 +1,37 @@
 .. _py_plant_monitor:
 
-6.8 Plant Monitor
+6.8 植物モニター
 ===============================
 
-Welcome to the Plant Monitor project! 
+植物モニタープロジェクトへようこそ！
 
-In this project, we will be using an ESP32 board to create a system that helps us take care of our plants. With this system, we can monitor the temperature, humidity, soil moisture, and light levels of our plants, and ensure that they are getting the care and attention they need to thrive.
+このプロジェクトでは、ESP32ボードを使って、私たちの植物の世話を助けるシステムを作ります。このシステムを使えば、植物の温度、湿度、土壌の水分、そして光のレベルを監視し、植物が栄えるために必要なケアと注意を確実に提供できます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,36 +58,31 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
-The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
-Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
-measure the light level. The readings from these sensors are displayed on an LCD screen, and a water pump can be controlled 
-using a button to water the plant when needed.
+このシステムは、DHT11センサーを使用して周囲環境の温度と湿度レベルを測定します。
+一方、土壌水分モジュールは土壌の水分レベルを、フォトレジスターは光のレベルを測定するために使用されます。
+これらのセンサーからの読み取り値はLCDスクリーンに表示され、必要に応じて植物に水をやるための水ポンプはボタンを使って制御することができます。
 
-IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
+IO32には1Kの内部プルダウン抵抗があり、デフォルトではロジックレベルが低いです。ボタンを押すと、VCC（高電圧）への接続が確立され、IO32上でロジックレベルが高くなります。
 
-
-**Wiring**
+**配線図**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
-
+    ここでは、バッテリーを挿入してから、拡張ボード上のスイッチをON位置にスライドさせてバッテリー供給を有効にすることをお勧めします。
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.8_plant_monitor.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``6.8_plant_monitor.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。それから、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 .. code-block:: python
 
@@ -194,9 +189,9 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 
 
-* When the code is running, the I2C LCD1602 alternately displays temperature and humidity, as well as soil moisture and light intensity analog values, with a 2-second interval.
-* Press the button to start the water pump, and press it again to stop the water pump.
+* コードが実行中の場合、I2C LCD1602は温度と湿度を交互に表示し、土壌の水分と光の強度のアナログ値を2秒間隔で表示します。
+* ボタンを押して水ポンプを起動し、もう一度押して水ポンプを停止します。
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    コードと配線が正しいにも関わらず、LCDに何も表示されない場合は、背面のポテンショメータを調整してコントラストを上げることができます。

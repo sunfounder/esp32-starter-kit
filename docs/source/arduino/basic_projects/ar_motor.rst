@@ -1,39 +1,39 @@
 .. _ar_motor:
 
-4.1 Motor
+4.1 モーター
 ===========================
 
-In this engaging project, we'll explore how to drive a motor using the L293D.
+このプロジェクトでは、L293Dを使ってモーターを駆動する方法について探求します。
 
-The L293D is a versatile integrated circuit (IC) commonly used for motor control in electronics and robotics projects. It can drive two motors in both forward and reverse directions, making it a popular choice for applications requiring precise motor control.
+L293Dは、電子工作やロボットプロジェクトのモーター制御によく使用される汎用性の高い集積回路（IC）です。前進・後進の両方向に2つのモーターを駆動することができ、精密なモーター制御を要するアプリケーションで好まれて使用されます。
 
-By the end of this captivating project, you will have gained a thorough understanding of how digital signals and PWM signals can effectively be utilized to control motors. This invaluable knowledge will prove to be a solid foundation for your future endeavors in robotics and mechatronics. Buckle up and get ready to dive into the exciting world of motor control with the L293D!
+この魅力的なプロジェクトを終えるころには、デジタル信号とPWM信号を使ってモーターを効果的に制御する方法について、徹底的な理解を得ることができるでしょう。この貴重な知識は、ロボティクスやメカトロニクスの分野での将来の取り組みにおいて、確かな基盤となるはずです。準備を整えて、L293Dを使ったモーター制御のエキサイティングな世界に飛び込む準備をしましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+また、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,39 +48,39 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトでESP32ボードで利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
 
     
-**Wiring**
+**配線図**
 
 .. note:: 
 
-  Since the motor requires a relatively high current, it is necessary to first insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply. 
+  モーターは比較的高い電流が必要なので、最初にバッテリーを差し込み、拡張ボード上のスイッチをON位置にスライドしてバッテリー供給を有効にする必要があります。
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``4.1_motor.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.1_motor``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\4.1_motor`` のパス下にある ``4.1_motor.ino`` ファイルを開きます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
     
@@ -90,17 +90,17 @@ Here is a list of available pins on the ESP32 board for this project.
 
 
 
-Once the code is successfully uploaded, you will observe the motor rotating clockwise for one second, then counter-clockwise for one second, followed by a two-second pause. This sequence of actions will continue in an endless loop.
+コードが正常にアップロードされると、モーターが1秒間時計回りに回転し、次に1秒間反時計回りに回転し、その後2秒間停止するという動作を無限ループで続けることが観察できます。
 
 
-**Learn More**
+**さらに学ぶ**
 
-In addition to simply making the motor rotate clockwise and counterclockwise, you can also control the speed of the motor's rotation by using pulse-width modulation (PWM) on the control pin, as shown below.
+モーターを単に時計回りや反時計回りに回転させるだけでなく、以下に示すように、制御ピンにパルス幅変調（PWM）を使用してモーターの回転速度を制御することもできます。
 
 .. note::
 
-    * Open the ``4.1_motor_pwm.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.1_motor_pwm``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\4.1_motor_pwm`` のパス下にある ``4.1_motor_pwm.ino`` ファイルを開きます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
     
@@ -109,10 +109,11 @@ In addition to simply making the motor rotate clockwise and counterclockwise, yo
   <iframe src=https://create.arduino.cc/editor/sunfounder01/32c262fd-9975-4137-9973-8b62d7240fee/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-The previous code directly sets the two pins of the motor to high or low voltage levels to control the motor's rotation and stopping.
+前述のコードでは、モーターの2つのピンを高電圧または低電圧に直接設定して、モーターの回転と停止を制御しています。
 
-Here we use the |link_ledc| (LED control) peripheral to generate PWM signals to control the motor's speed. Through two ``for`` loops, the duty cycle of channel A is increased or decreased from 0 to 255 while keeping channel B at 0.
+ここでは、 |link_ledc| （LEDコントロール）周辺機器を使用してPWM信号を生成し、モーターの速度を制御します。2つの ``for`` ループを通じて、チャンネルAのデューティサイクルを0から255まで増やしたり、チャンネルBを0に保ったまま減らしたりします。
 
-This way, you can observe the motor gradually increasing its speed to 255, then decreasing to 0, infinitely looping like this.
+この方法では、モーターの速度が徐々に255まで増加し、その後0まで減少し、このように無限ループするのが観察できます。
 
-If you want the motor to rotate in the opposite direction, simply swap the values of channel A and channel B.
+モーターを逆方向に回転させたい場合は、単純にチャンネルAとチャンネルBの値を交換してください。
+

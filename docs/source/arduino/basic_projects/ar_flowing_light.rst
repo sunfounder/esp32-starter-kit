@@ -1,37 +1,37 @@
 .. _ar_flowing_light:
 
-6.2 Flowing Light
+6.2 流れる光
 =======================
 
-Have you ever wanted to add some fun and interactive element to your living space? 
-This project involves creating a running light using WS2812 LED strip and a obstacle avoidance module. 
-The running light changes direction when an obstacle is detected, making it an exciting addition to your home or office decor.
+あなたの居住空間に楽しさとインタラクティブな要素を加えたいと思ったことはありませんか？
+このプロジェクトでは、WS2812 LEDストリップと障害物回避モジュールを使用して走行光を作成します。
+障害物が検出されると走行光の方向が変わり、家やオフィスの装飾にエキサイティングな追加をすることができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入することは非常に便利です。リンクはこちらです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,31 +44,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic Diagram**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.2_flowing_led.png
     :align: center
 
-The WS2812 LED strip is composed of a series of individual LEDs that can be programmed to display different colors and patterns. 
-In this project, the strip is set up to display a running light that moves in a particular direction and 
-changes direction when an obstacle is detected by the obstacle avoidance module.
+WS2812 LEDストリップは、異なる色やパターンを表示するようにプログラムできる一連の個別LEDで構成されています。
+このプロジェクトでは、ストリップは特定の方向に動く走行光を表示するように設定され、
+障害物回避モジュールによって障害物が検出されたときに方向が変わります。
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``6.2_flowing_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.2_flowing_led`` directly.
-    * Or copy this code into Arduino IDE.
+    * ``esp32-starter-kit-main\c\codes\6.2_flowing_led`` のパスの下にあるファイル ``6.2_flowing_led.ino`` を直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ff625cb6-2efd-436a-9b59-5dd967191338/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-This project extends the functionality of the :ref:`ar_rgb_strip` project by adding the ability to display random colors on the LED strip. 
-Additionally, an obstacle avoidance module has been included to dynamically change the direction of the running light.
+このプロジェクトは、:ref:`ar_rgb_strip` プロジェクトの機能を拡張し、LEDストリップにランダムな色を表示する機能を追加しています。
+さらに、障害物回避モジュールが含まれており、走行光の方向を動的に変更できます。
+

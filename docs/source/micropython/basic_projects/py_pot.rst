@@ -1,34 +1,34 @@
 .. _py_potentiometer:
 
-5.8 Turn the Knob
+5.8 ノブを回す
 ===========================
-A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
+ポテンショメータは、回路内の抵抗を調整するために一般的に使用される3端子デバイスです。ノブやスライドレバーが特徴で、これを動かすことでポテンショメータの抵抗値を変化させることができます。このプロジェクトでは、日常生活で使われるデスクランプのように、LEDの明るさを制御するために使用します。ポテンショメータの位置を調整することで、回路内の抵抗を変え、それによりLEDを流れる電流を調節し、その明るさを変更します。これにより、デスクランプのようなカスタマイズ可能で調整可能な照明体験を作り出すことができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,47 +45,47 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO14, IO25, I35, I34, I39, I36
 
-* **Strapping Pins**
+* **ストラッピングピン**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    以下のピンはストラッピングピンで、電源オンまたはリセット時のESP32の起動プロセスに影響します。しかし、ESP32が正常に起動した後は、通常のピンとして使用できます。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO0, IO12
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.8_potentiometer.png
 
-When you rotate the potentiometer, the value of I35 will change. By programming, you can use the value of I35 to control the brightness of the LED. Therefore, as you rotate the potentiometer, the brightness of the LED will also change accordingly.
+ポテンショメータを回すと、I35の値が変わります。プログラミングにより、I35の値を使用してLEDの明るさを制御できます。そのため、ポテンショメータを回すと、LEDの明るさもそれに応じて変わります。
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
-**Code**
+**コード**
 
 
 .. note::
 
-    * Open the ``5.8_turn_the_knob.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.8_turn_the_knob.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 
 
@@ -121,7 +121,8 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
         # Wait for 0.5 seconds before taking the next reading
         time.sleep(0.5)
 
-With this script run, the LED brightness changes as the potentiometer is rotated, while the analog value and voltage at this point are displayed in the Shell.
+このスクリプトを実行すると、ポテンショメータを回すとLEDの明るさが変わり、その時点でのアナログ値と電圧がシェルに表示されます。
 
-* `machine.ADC - MicroPython Docs <https://docs.micropython.org/en/latest/esp32/quickref.html#adc-analog-to-digital-conversion>`_
+* `machine.ADC - MicroPythonドキュメント <https://docs.micropython.org/en/latest/esp32/quickref.html#adc-analog-to-digital-conversion>`_
+
 

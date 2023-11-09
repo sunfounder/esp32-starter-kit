@@ -1,51 +1,48 @@
 .. _cpn_line_track:
 
-Line Tracking Module
+ライントラッキングモジュール
 ================================
 
 .. image:: img/line_track.png
     :width: 400
     :align: center
 
-* S: Usually low level, high level when the black line is detected.
-* V+：Power supply, 3.3v~5V
-* G: Ground
+* S: 通常は低レベルですが、黒い線が検出されると高レベルになります。
+* V+：電源供給、3.3v〜5V
+* G: グラウンド
 
-This is a 1-channel Line Tracking module which, as the name suggests, tracks black lines on a white background or white lines against a black background.
+このモジュールは1チャンネルのライントラッキングモジュールで、名前が示す通り、白い背景上の黒い線、または黒い背景に対する白い線を追跡します。
 
 .. image:: img/tcrt5000.jpg
     :width: 200
     :align: center
 
-The module uses a TCRT500 infrared sensor, which consists of an infrared LED (blue) and a photosensitive triplet (black).
+このモジュールは、TCRT5000赤外線センサーを使用しており、赤外線LED（青）と感光性トリプレット（黒）で構成されています。
 
-* The blue infrared LED, when powered on, emits infrared light that is invisible to the human eye.
-* The black phototransistor, which is used to receive infrared light, has an internal resistor whose resistance varies with the infrared light received; the more infrared light received, the lower its resistance decreases and vice versa.
+* 青い赤外線LEDは、電源がオンのとき、人の目には見えない赤外線を放射します。
+* 黒いフォトトランジスタは、赤外線を受信するために使用され、受信した赤外線の量に応じて内部抵抗が変動します。赤外線を多く受信すると、その抵抗は減少し、逆もまた然りです。
 
-There is a LM393 comparator on the module, which is used to compare the voltage of the phototransistor with the set voltage (adjusted by potentiometer), if it is greater than the set voltage, the output is 1; otherwise the output is 0.
+モジュールにはLM393コンパレータがあり、これはフォトトランジスタの電圧と設定電圧（ポテンショメータで調整）を比較するために使用されます。設定電圧よりも大きい場合、出力は1となり、そうでない場合は0となります。
 
-Therefore, when the infrared emitter tube shines on a black surface, because the black will absorb light, the photosensitive transistor receives less infrared light, its resistance will increase (voltage increase), after LM393 comparator, the output high level.
+したがって、赤外線発光管が黒い表面に照らされると、黒は光を吸収するため、感光性トランジスタは赤外線を少なく受け取り、その抵抗は増加します（電圧増加）。LM393コンパレータを通過すると、出力は高レベルとなります。
 
-Similarly, when it shines on a white surface, the reflected light will become more and the resistance of the photosensitive transistor will decrease (voltage decreases); therefore, the comparator outputs a low level and the indicator LED lights up.
-
-
+同様に、白い表面に照らされると、反射光が増え、感光性トランジスタの抵抗が減少します（電圧減少）。したがって、コンパレータは低レベルを出力し、インジケータLEDが点灯します。
 
 * `TCRT5000 <https://www.vishay.com/docs/83760/tcrt5000.pdf>`_
 
-**Features**
+**特長**
 
-* Using infrared emission sensor TCRT5000
-* Detection distance: 1-8mm, focal length of 2.5mm
-* Comparator output signal clean, good waveform, driving capacity greater than 15mA
-* Using potentiometer for sensitivity adjustment
-* Operating voltage: 3.3V-5V
-* Digital output: 0 (white) and 1 (black)
-* Uses wide voltage LM393 comparator.
-* Size: 42mmx10mm
+* 赤外線放射センサーTCRT5000を使用
+* 検出距離: 1-8mm、焦点距離2.5mm
+* コンパレータ出力信号はクリアで、波形が良好で、駆動容量は15mA以上
+* 感度調整のためのポテンショメータを使用
+* 動作電圧: 3.3V-5V
+* デジタル出力: 0（白）および1（黒）
+* 広い電圧のLM393コンパレータを使用。
+* サイズ: 42mmx10mm
 
+**例**
 
-**Example**
-
-* :ref:`ar_line_track` (Arduino Project)
-* :ref:`py_line_track` (MicroPython Project)
-* :ref:`sh_protect_heart` (Scratch Project)
+* :ref:`ar_line_track` (Arduinoプロジェクト)
+* :ref:`py_line_track` (MicroPythonプロジェクト)
+* :ref:`sh_protect_heart` (Scratchプロジェクト)

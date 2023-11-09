@@ -1,41 +1,41 @@
 .. _py_rgb:
 
-2.3 Colorful Light
+2.3 カラフルライト
 ==============================================
 
-In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
+このプロジェクトでは、RGB LEDを使用して加法色混合の魅力的な世界について探ります。
 
-RGB LED combines three primary colors, namely Red, Green, and Blue, into a single package. These three LEDs share a common cathode pin, while each anode pin controls the intensity of the corresponding color.
+RGB LEDは、赤、緑、青の3つの基本色を一つのパッケージに組み合わせています。これら3つのLEDは共通のカソードピンを共有しており、各アノードピンが対応する色の強度を制御します。
 
-By varying the electrical signal intensity applied to each anode, we can create a wide range of colors. For example, mixing high-intensity red and green light will result in yellow light, while combining blue and green light will produce cyan.
+各アノードに適用される電気信号の強度を変えることで、幅広い色を作り出すことができます。例えば、高強度の赤色光と緑色光を混ぜると黄色光になり、青色と緑色の光を組み合わせるとシアンが生まれます。
 
-Through this project, we will explore the principles of additive color mixing and unleash our creativity by manipulating the RGB LED to display captivating and vibrant colors.
+このプロジェクトを通じて、加法色混合の原理を探求し、RGB LEDを操作して魅力的で生き生きとした色を表示することで、私たちの創造性を解き放ちます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入すると便利ですが、こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,42 +51,40 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードにある利用可能なピンのリストはこちらです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.3_rgb.png
 
-The PWM pins pin27, pin26 and pin25 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+PWMピンのpin27、pin26、pin25は、それぞれRGB LEDの赤、緑、青のピンを制御し、共通カソードピンをGNDに接続します。これにより、異なるPWM値をこれらのピンに重ねて特定の色をRGB LEDに表示させることができます。
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
-The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+RGB LEDには4本のピンがあります。長いピンは共通のカソードピンで、通常GNDに接続されます。最長のピンの隣の左ピンは赤、右側の2本のピンは緑と青です。
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``2.3_colorful_light.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``2.3_colorful_light.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。その後、「現在のスクリプトを実行」をクリックするかF5キーを押して実行します。
+    * 右下の角にある「MicroPython (ESP32).COMxx」インタープリターを選択してください。 
 
 .. code-block:: python
 
@@ -125,17 +123,16 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
         set_color(1023, 0, 1023) # purple
         time.sleep(1)
 
-When the script runs, you will see the RGB LEDs display red, green, blue and purple, and so on.
+スクリプトを実行すると、RGB LEDが赤、緑、青、紫などの色を表示します。
 
-**Learn More**
+**詳細を知る**
 
-You can also set the color you want with the following code with the familiar color values of 0~255.
+以下のコードで、0～255の馴染みのある色値を使って、任意の色を設定することもできます。
 
 .. note::
 
-    * Open the ``2.3_colorful_light_rgb.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``2.3_colorful_light_rgb.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。その後、「現在のスクリプトを実行」をクリックするかF5キーを押して実行します。
+    * 右下の角にある「MicroPython (ESP32).COMxx」インタープリターを選択してください。
 
 
 .. code-block:: python
@@ -183,17 +180,9 @@ You can also set the color you want with the following code with the familiar co
         set_color(255, 0, 255) # purple
         time.sleep(1)
 
-This code is based on the previous example, but it maps color values from 0 to 255 to a duty cycle range of 0 to 1023.
+このコードは前の例に基づいていますが、0から255の色値を0から1023のデューティサイクル範囲にマッピングします。
 
-* The ``interval_mapping`` function is a utility function that maps a value from one range to another. It takes five arguments: the input value, the minimum and maximum values of the input range, and the minimum and maximum values of the output range. It returns the input value mapped to the output range.
-
-    .. code-block:: python
-
-        def color_to_duty(rgb_value):
-            rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
-            return rgb_value
-
-* The ``color_to_duty`` function takes an integer RGB value (e.g. 255,0,255) and maps it to a duty cycle value suitable for the PWM pins. The input RGB value is first mapped from the range 0-255 to the range 0-1023 using the ``interval_mapping`` function. The output of ``interval_mapping`` is then returned as the duty cycle value.
+* ``interval_mapping`` 関数は、ある範囲から別の範囲への値をマッピングするユーティリティ関数です。入力値、入力範囲の最小値と最大値、出力範囲の最小値と最大値の5つの引数を取ります。入力値を出力範囲にマッピングした値を返します。
 
     .. code-block:: python
 
@@ -201,7 +190,15 @@ This code is based on the previous example, but it maps color values from 0 to 2
             rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
             return rgb_value
 
-* The ``color_set`` function takes three integer arguments: the red, green, and blue values for the LED. These values are passed to ``color_to_duty`` to obtain the duty cycle values for the PWM pins. The duty cycle values are then set for the corresponding pins using the ``duty`` method.
+* ``color_to_duty`` 関数は、整数RGB値（例：255,0,255）を取り、PWMピンに適したデューティサイクル値にマッピングします。入力RGB値は最初に ``interval_mapping`` 関数を使用して0-255の範囲から0-1023の範囲にマッピングされます。その後、 ``interval_mapping`` の出力がデューティサイクル値として返されます。
+
+    .. code-block:: python
+
+        def color_to_duty(rgb_value):
+            rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
+            return rgb_value
+
+* ``color_set`` 関数は、LEDの赤、緑、青の値を表す3つの整数引数を取ります。これらの値は ``color_to_duty`` に渡されて、PWMピンのデューティサイクル値を取得します。デューティサイクル値は、 ``duty`` メソッドを使用して対応するピンに設定されます。
 
     .. code-block:: python
 
@@ -209,6 +206,3 @@ This code is based on the previous example, but it maps color values from 0 to 2
             red.duty(color_to_duty(red_value))
             green.duty(color_to_duty(green_value))
             blue.duty(color_to_duty(blue_value))
-
-
-

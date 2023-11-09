@@ -1,9 +1,9 @@
-For Loops
+Forループ
 ============
 
-The `for` loop can traverse any sequence of items, such as a list or a string.
+`for` ループは、リストや文字列など、任意の項目のシーケンスをトラバースすることができます。
 
-The syntax format of for loop is as follows:
+forループの構文フォーマットは以下の通りです：
 
 .. code-block:: python
 
@@ -11,16 +11,13 @@ The syntax format of for loop is as follows:
         Body of for
 
 
-Here, `val` is a variable that gets the value of the item in the sequence in each iteration.
+ここで、 `val` は各イテレーションでシーケンス内の項目の値を取得する変数です。
 
-The loop continues until we reach the last item in the sequence. Use indentation to separate the body of the `for` loop from the rest of the code.
+ループはシーケンスの最後の項目に到達するまで続きます。本体をコードの残りの部分から分離するためにインデントを使用します。
 
-**Flowchart of for Loop**
+**forループのフローチャート**
 
 .. image:: img/for_loop.png
-
-
-
 
 .. code-block:: python
 
@@ -35,10 +32,10 @@ The loop continues until we reach the last item in the sequence. Use indentation
 >>> %Run -c $EDITOR_CONTENT
 The sum is 10
 
-The break Statement
+Break文
 -------------------------
 
-With the break statement we can stop the loop before it has looped through all the items:
+break文を使えば、全ての項目をループする前にループを停止させることができます：
 
 
 
@@ -56,10 +53,10 @@ With the break statement we can stop the loop before it has looped through all t
 >>> %Run -c $EDITOR_CONTENT
 The sum is 6
 
-The continue Statement
+Continue文
 --------------------------------------------
 
-With the `continue` statement we can stop the current iteration of the loop, and continue with the next:
+`continue` 文を使えば、ループの現在のイテレーションを停止し、次のイテレーションで続行することができます：
 
 
 
@@ -77,18 +74,18 @@ With the `continue` statement we can stop the current iteration of the loop, and
 2
 4
 
-The range() function
+range()関数
 --------------------------------------------
 
-We can use the range() function to generate a sequence of numbers. range(6) will produce numbers between 0 and 5 (6 numbers).
+range()関数を使って一連の数値を生成することができます。range(6)は0から5の間の数値を生成します（6つの数値）。
 
-We can also define start, stop and step size as range(start, stop, step_size). If not provided, step_size defaults to 1.
+また、range(start, stop, step_size)として開始、停止、ステップサイズを定義することもできます。指定されていない場合、step_sizeはデフォルトで1になります。
 
-In a sense of range, the object is "lazy" because when we create the object, it does not generate every number it "contains". However, this is not an iterator because it supports in, len and __getitem__ operations.
+rangeの意味では、オブジェクトは「怠惰」です。なぜなら、オブジェクトを作成しても、それが「含む」すべての数値を生成しないからです。しかし、これはin、len、__getitem__操作をサポートしているため、イテレータではありません。
 
-This function will not store all values ​​in memory; it will be inefficient. So it will remember the start, stop, step size and generate the next number during the journey.
+この関数はすべての値をメモリに格納しません。それは非効率的です。したがって、開始、停止、ステップサイズを覚えておいて、進行中に次の数値を生成します。
 
-To force this function to output all items, we can use the function list().
+この関数にすべての項目を出力させるには、list()関数を使用することができます。
 
 
 
@@ -108,10 +105,7 @@ range(0, 6)
 [2, 3, 4, 5]
 [2, 4, 6, 8]
 
-
-We can use `range()` in a `for` loop to iterate over a sequence of numbers. It can be combined with the len() function to use the index to traverse the sequence.
-
-
+`range()` を `for` ループ内で使用して数値のシーケンスを繰り返すことができます。len()関数と組み合わせてインデックスを使用してシーケンスをトラバースすることもできます。
 
 .. code-block:: python
 
@@ -125,16 +119,14 @@ I like pear
 I like apple
 I like grape
 
-Else in For Loop
+ForループでのElse
 --------------------------------
 
-The `for` loop can also have an optional `else` block. If the items in the sequence used for the loop are exhausted, the `else` part is executed.
+`for` ループにはオプショナルな `else` ブロックも持たせることができます。ループに使用されるシーケンスの項目が使い果たされた場合、 `else` 部分が実行されます。
 
-The `break` keyword can be used to stop the `for` loop. In this case, the `else` part will be ignored.
+`break` キーワードを使用して `for` ループを停止させることができます。この場合、 `else` 部分は無視されます。
 
-Therefore, if no interruption occurs, the `else` part of the `for` loop will run.
-
-
+したがって、中断が発生しなければ、 `for` ループの `else` 部分が実行されます。
 
 .. code-block:: python
 
@@ -151,9 +143,7 @@ Therefore, if no interruption occurs, the `else` part of the `for` loop will run
 4
 Finished
 
-The else block will NOT be executed if the loop is stopped by a break statement.
-
-
+ループがbreak文で停止された場合、elseブロックは実行されません。
 
 .. code-block:: python
 
@@ -167,4 +157,3 @@ The else block will NOT be executed if the loop is stopped by a break statement.
 >>> %Run -c $EDITOR_CONTENT
 0
 1
-

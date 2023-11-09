@@ -1,37 +1,37 @@
 .. _py_pir:
 
-5.5 Detect Human Movement
+5.5 人の動きを検出する
 ========================================
 
-Passive infrared sensor (PIR sensor) is a common sensor that can measure infrared (IR) light emitted by objects in its field of view.
-Simply put, it will receive infrared radiation emitted from the body, thereby detecting the movement of people and other animals.
-More specifically, it tells the main control board that someone has entered your room.
+受動赤外線センサー（PIRセンサー）は、視野内の物体から放出される赤外線（IR）光を測定する一般的なセンサーです。
+簡単に言えば、体から放出される赤外線を受け取り、人やその他の動物の動きを検出します。
+より具体的には、誰かがあなたの部屋に入ったことをメインコントロールボードに伝えます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,68 +48,64 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - 入力用
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - 出力用
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 .. note::
     
-    IO32 cannot be used **as input pin** in this project because it is internally connected to a 1K pull-down resistor, which sets its default value to 0.
+    このプロジェクトでは、内部で1Kのプルダウン抵抗器に接続されているため、IO32は **入力ピンとして使用できません**。デフォルトの値は0に設定されています。
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイスの起動時に特定のブートモードを決定するために使用される特別なセットのピンです
+    （つまり、電源オンリセット）。
 
     
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
     
-
     
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    一般的に、 **入力ピンとして使用することは推奨されません**。これらのピンを使用したい場合は、ブートプロセスへの潜在的な影響を考慮してください。詳細については、 :ref:`esp32_strapping` セクションを参照してください。
 
-
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.5_pir.png
 
-When the PIR module detects motion, IO14 will go high, and the LED will be lit. Otherwise, when no motion is detected, IO14 will be low, and the LED will turn off.
+PIRモジュールが動きを検出すると、IO14がハイになり、LEDが点灯します。動きが検出されない場合、IO14はローになり、LEDは消灯します。
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    PIRモジュールには感度を調整するポテンショメーターと検出距離を調整するポテンショメーターが2つあります。PIRモジュールをより良く動作させるためには、両方を反時計回りに最後まで回す必要があります。
 
     .. image:: ../../components/img/PIR_TTE.png
         :width: 300
         :align: center
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.5_pir_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.5_detect_human_movement.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.5_detect_human_movement.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。
+ 
 .. code-block:: python
 
     import machine
@@ -144,11 +140,11 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
             led.value(0)  # Turn off the LED
             motion_detected_flag = False
 
-When the script is running, the LED will light up for 5 seconds and then go off when the PIR module detects someone passing.
+スクリプトが実行されると、PIRモジュールが誰かを検出するとLEDが5秒間点灯し、その後消灯します。
 
 .. note::
 
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    PIRモジュールには2つのポテンショメータがあります：1つは感度を、もう1つは検出距離を調整します。PIRモジュールをより良く機能させるためには、両方を反時計回りに最後まで回す必要があります。
 
     .. image:: ../../components/img/PIR_TTE.png
         :width: 300
@@ -157,14 +153,14 @@ When the script is running, the LED will light up for 5 seconds and then go off 
 
 
 
-**How it work?**
+**どのように動作するのか？**
 
 
-This code sets up a simple motion detection system using a PIR sensor and an LED. When motion is detected, the LED will turn on for 5 seconds. 
+このコードはPIRセンサーとLEDを使用したシンプルな動作検出システムを設定します。動作が検出されると、LEDが5秒間点灯します。
 
-Here's a breakdown of the code:
+コードの詳細は以下の通りです：
 
-#. Define the interrupt handler function that will be executed when motion is detected:
+#. 動きが検出されたときに実行される割り込みハンドラ関数を定義します：
 
     .. code-block:: python
 
@@ -173,25 +169,25 @@ Here's a breakdown of the code:
             print("Motion detected!")
             motion_detected_flag = True
 
-#. Attach the interrupt to the PIR sensor pin, with the trigger set to "rising" (i.e., when the pin goes from low to high voltage):
+#. PIRセンサーピンに割り込みをアタッチし、トリガーを"rising"（つまり、ピンが低電圧から高電圧に変わるとき）に設定します：
 
     .. code-block:: python
 
         pir_sensor.irq(trigger=machine.Pin.IRQ_RISING, handler=motion_detected)
 
-    This sets up an interrupt on the ``pir_sensor`` pin, which is connected to the PIR motion sensor.
+    これにより、PIRモーションセンサーに接続された ``pir_sensor`` ピンに割り込みが設定されます。
 
-    Here's a detailed explanation of the parameters:
+    パラメータの詳細な説明は以下の通りです：
 
-    * ``trigger=machine.Pin.IRQ_RISING``: This parameter sets the trigger condition for the interrupt. In this case, the interrupt will be triggered on a rising edge. A rising edge is when the voltage on the pin changes from a low state (0V) to a high state (typically 3.3V or 5V, depending on your hardware). For a PIR motion sensor, when motion is detected, the output pin usually goes from low to high, making the rising edge an appropriate trigger condition.
+    * ``trigger=machine.Pin.IRQ_RISING``: このパラメータは割り込みのトリガー条件を設定します。この場合、割り込みは立ち上がりエッジでトリガーされます。立ち上がりエッジとは、ピンの電圧が低状態（0V）から高状態（ハードウェアによって異なりますが、通常は3.3Vまたは5V）に変わるときです。PIRモーションセンサーの場合、動作が検出されると、出力ピンは通常低から高になるため、立ち上がりエッジは適切なトリガー条件です。
 
-    * ``handler=motion_detected``: This parameter specifies the function that will be executed when the interrupt is triggered. In this case, the ``motion_detected`` function is provided as the interrupt handler. This function will be called automatically when the interrupt condition (rising edge) is detected on the ``pir_sensor`` pin.
+    * ``handler=motion_detected``: このパラメータは割り込みがトリガーされたときに実行される関数を指定します。この場合は、``motion_detected`` 関数が割り込みハンドラとして提供されています。この関数は ``pir_sensor`` ピンで割り込み条件（立ち上がりエッジ）が検出されたときに自動的に呼び出されます。
 
-    So, this line of code configures the PIR sensor to call the ``motion_detected`` function whenever motion is detected by the sensor, due to the output pin going from a low to a high state.
+    したがって、このコード行は、センサーによって動作が検出されるたびに、出力ピンが低状態から高状態に変わるため、``motion_detected`` 関数を呼び出すようPIRセンサーを設定します。
 
 
 
-#. In the main loop, if the ``motion_detected_flag`` is set to ``True``, the LED will be turned on for 5 seconds and then turned off. The flag is then reset to ``False`` to wait for the next motion event.
+#. メインループでは、 ``motion_detected_flag`` が ``True`` に設定されている場合、LEDが5秒間点灯してから消灯します。次の動作イベントを待つためにフラグは再び ``False`` にリセットされます。
 
     .. code-block:: python
 

@@ -1,24 +1,23 @@
 .. _play_with_scratch:
 
-Play with Scratch
+Scratchで遊ぼう
 ========================
 
-Besides programming on the Arduino IDE or Thonny IDE, we can also use graphical programming.
+Arduino IDEやThonny IDEでのプログラミングのほかに、グラフィカルプログラミングを使用することもできます。
 
-Here we recommend programming with Scratch, but the official Scratch is currently only compatible with Raspberry Pi, so we have partnered with a company, STEMPedia, who has developed a Scratch 3 based graphical programming software for many boards - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
+ここではScratchでのプログラミングを推奨しますが、公式のScratchは現在Raspberry Piとのみ互換性があります。そのため、STEMPediaという会社がパートナーシップを組み、Arduino Uno、Mega、Nano、ESP32、Microbit、そしてSTEMPedia自家製のメインボードなど、多くのボード用のScratch 3ベースのグラフィカルプログラミングソフトウェア `PictoBlox <https://thestempedia.com/product/pictoblox/>`_ を開発しました。
 
 .. image:: img/1_pictoblox.png
 
-It keeps the basic functions of Scratch 3, but also adds control boards, such as Arduino Uno, Mega, Nano, ESP32, Microbit and STEAMPedia homemade main boards, which can use external sensors, robots to control the sprites on the stage, with strong hardware interaction capabilities.
+これはScratch 3の基本機能を保持しつつ、外部センサーやロボットを使ってステージ上のスプライトを制御することができ、ハードウェアとの強い相互作用機能を追加しています。
 
-In addition, it has AI and machine learning, even if you do not have much programming foundation, you can learn and use these popular and high-tech.
+さらに、AIや機械学習も搭載しており、プログラミングの基礎があまりなくても、これらの人気がありハイテクな技術を学び使うことができます。
 
-Just drag and drop the Scratch coding blocks and make cool games, animations, interactive projects, and even control robots the way you want!
+Scratchのコーディングブロックをドラッグ＆ドロップして、クールなゲーム、アニメーション、インタラクティブなプロジェクトを作ったり、ロボットを自由に制御したりしましょう！
 
+さあ、発見の旅を始めましょう！
 
-Now let's start the journey of discovery!
-
-**1. Get Started**
+**1. はじめに**
 
 .. toctree::
     :maxdepth: 2
@@ -27,18 +26,17 @@ Now let's start the journey of discovery!
     pictoblox_start/2_introduce
     pictoblox_start/3_quick_guide
 
-**2. Projects**
+**2. プロジェクト**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+以下のプロジェクトは、プログラミングの難易度順に記載されており、順番に読むことをお勧めします。
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+各プロジェクトには、回路の組み立て方やプログラミングのステップバイステップの方法が非常に詳しく記載されています。
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
+もちろん、スクリプトを直接開いて実行することもできますが、 `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ から関連資料をダウンロードしていることを確認する必要があります。
 
-Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
+ダウンロードが完了したら、ファイルを解凍してください。個々のスクリプトを直接実行するには :ref:`stage_mode` を参照してください。
 
-But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
-
+しかし、:ref:`sh_humiture` は :ref:`upload_mode` を使用しています。
 
 .. toctree::
     :maxdepth: 1

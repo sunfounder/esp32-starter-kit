@@ -1,38 +1,38 @@
 .. _py_dht11:
 
-5.13 Temperature - Humidity
+5.13 温湿度計測
 =======================================
-The DHT11 is a temperature and humidity sensor commonly used for environmental measurements. It is a digital sensor that communicates with a microcontroller to provide temperature and humidity readings.
+DHT11は、環境測定に一般的に使用される温湿度センサーです。これはデジタルセンサーであり、マイクロコントローラーと通信して温度と湿度の読み取りを提供します。
 
-In this project, we will be reading the DHT11 sensor and printing out the temperature and humidity values it detects.
+このプロジェクトでは、DHT11センサーを読み取り、検出した温度と湿度の値を出力します。
 
-By reading the data provided by the sensor, we can obtain the current temperature and humidity values in the environment. These values can be used for real-time monitoring of environmental conditions, weather observations, indoor climate control, humidity reports, and more.
+センサーから提供されるデータを読み取ることで、環境の現在の温度と湿度の値を取得できます。これらの値は、環境条件のリアルタイムモニタリング、天気観測、室内の気候制御、湿度レポートなどに使用できます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,32 +45,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_dht11_buy|
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.13_dht11.png
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.13_dht11_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.13_dht11.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.13_dht11.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 .. code-block:: python
 
@@ -101,20 +101,19 @@ You can also buy them separately from the links below.
             time.sleep(1)
 
 
-When the code is running, you will see the Shell continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+コードが実行されているとき、シェルが連続して温度と湿度を出力するのを見ることができます。プログラムが安定して実行されると、これら二つの値はより正確になっていきます。
 
+**もっと学ぶ**
 
-**Learn More**
-
-You can also display the temperature and humidity on the I2C LCD1602.
+I2C LCD1602に温度と湿度を表示することもできます。
 
 .. image:: ../../img/wiring/5.13_dht11_lcd_bb.png
 
 .. note::
 
-    * Open the ``5.13_dht11_lcd.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * Here you need to use the library called ``lcd1602.py``, please check if it has been uploaded to ESP32, for a detailed tutorial refer to :ref:`add_libraries_py`.
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.13_dht11_lcd.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
+    * ここでは ``lcd1602.py`` というライブラリを使用する必要があります。ESP32にアップロードされているかどうかを確認してください。詳しいチュートリアルは :ref:`add_libraries_py` を参照してください。
 
 
 .. code-block:: python

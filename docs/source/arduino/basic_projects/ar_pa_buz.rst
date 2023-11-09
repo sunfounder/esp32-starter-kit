@@ -1,40 +1,40 @@
 .. _ar_pa_buz:
 
-3.2 Custom Tone
+3.2 カスタムトーン
 ==========================================
 
-We have used active buzzer in the previous project, this time we will use passive buzzer.
+前回のプロジェクトではアクティブブザーを使用しましたが、今回はパッシブブザーを使います。
 
-Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used.
-But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as "doh, re, mi, fa, sol, la, ti".
+アクティブブザーと同様に、パッシブブザーも電磁誘導の現象を利用して動作します。違いは、パッシブブザーには発振源がないため、直流信号を使ってもビープ音は鳴りません。
+しかし、これによりパッシブブザーは自分の発振周波数を調整でき、「ド、レ、ミ、ファ、ソ、ラ、シ」といった異なる音符を出すことができます。
 
-Let the passive buzzer emit a melody!
+パッシブブザーにメロディを鳴らしてみましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入することは非常に便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,70 +51,70 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードで利用可能なピンのリストはこちらです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+IO14の出力がハイの場合、1Kの電流制限抵抗を経てS8050（NPNトランジスタ）が導通し、ブザーが鳴ります。
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
+S8050（NPNトランジスタ）の役割は電流を増幅し、ブザーの音を大きくすることです。実際には、ブザーを直接IO14に接続することもできますが、ブザーの音が小さいことがわかるでしょう。
 
-**Wiring**
+**配線図**
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+キットには2種類のブザーが含まれています。
+私たちが必要とするのはアクティブブザーです。裏返すと、密封された背面（露出したPCBではない）が見えるはずです。
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+ブザーの動作にはトランジスタが必要で、ここではS8050（NPNトランジスタ）を使用します。
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``3.2_custom_tone.ino`` file under the path of ``esp32-starter-kit-main\c\codes\3.2_custom_tone``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\3.2_custom_tone`` のパスの下にある ``3.2_custom_tone.ino`` ファイルを開きます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/09a319a6-6861-40e1-ba1b-e7027bc0383d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, you will hear the passive buzzer play a sequence of 7 musical notes.
+コードが正常にアップロードされると、パッシブブザーが7つの音符のシーケンスを演奏するのが聞こえます。
 
 
-**How it works?**
+**どのように動作するのか？**
 
-#. Define constants for the buzzer pin and PWM resolution.
+#. ブザーピンとPWM解像度のための定数を定義します。
 
     .. code-block:: arduino
 
         const int buzzerPin = 14; //buzzer pin
         const int resolution = 8; 
 
-#. Define an array containing the frequencies of the 7 musical notes in Hz.
+#. 7つの音階の周波数をHzで含む配列を定義します。
 
     .. code-block:: arduino
 
         int frequencies[] = {262, 294, 330, 349, 392, 440, 494};
 
-#. Create a function to play a given frequency on the buzzer for a specified duration.
+#. 指定した周波数を指定した期間、ブザーで鳴らすための関数を作成します。
 
     .. code-block:: arduino
 
@@ -124,14 +124,14 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
             ledcWriteTone(0, 0); // Stop the buzzer
         }
     
-    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: This function is used to setup the LEDC channel to 50 % PWM tone on selected frequency.
+    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: この関数は、選択された周波数で50% PWM音をLEDCチャネルに設定するために使用されます。
 
-        * ``chan`` select LEDC channel.
-        * ``freq`` select frequency of pwm signal.
+        * ``chan`` LEDCチャネルの選択。
+        * ``freq`` PWM信号の周波数の選択。
 
-    This function will return ``frequency`` set for channel. If ``0`` is returned, error occurs and ledc cahnnel was not configured.
+    この関数はチャネルの設定 ``frequency`` を返します。 ``0`` が返された場合、エラーが発生しLEDCチャネルが設定されませんでした。
 
-#. Configure the PWM channel and attach the buzzer pin in the ``setup()`` function.
+#. ``setup()`` 関数内でPWMチャネルを設定し、ブザーピンをアタッチします。
 
     .. code-block:: arduino
 
@@ -140,19 +140,18 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
             ledcAttachPin(buzzerPin, 0); // Attach the buzzer pin to the PWM channel
         }
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
+    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: この関数はLEDCチャネルの周波数と解像度を設定するために使用されます。LEDCチャネルに設定された周波数を返します。0が返された場合、エラーが発生しLEDCチャネルが設定されませんでした。
             
-        * ``channel`` select LEDC channel to config.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
+        * ``channel`` 設定するLEDCチャネルの選択。
+        * ``freq`` PWMの周波数の選択。
+        * ``resolution_bits`` LEDCチャネルの解像度を選択。範囲は1-14ビット（ESP32の場合は1-20ビット）。
 
+    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: この関数はピンをLEDCチャネルにアタッチするために使用されます。
 
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
+        * ``pin`` GPIOピンの選択。
+        * ``chan`` LEDCチャネルの選択。
 
-        * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
-
-#. In the ``loop()`` function, play the sequence of 7 notes with a brief pause between each note and a 1-second pause before repeating the sequence.
+#. ``loop()`` 関数内で、各音符の間に短い休止を置き、シーケンスを繰り返す前に1秒間の休止を置いて、7つの音階を順に鳴らします。
 
     .. code-block:: arduino
 

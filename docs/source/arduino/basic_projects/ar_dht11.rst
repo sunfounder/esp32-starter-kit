@@ -1,39 +1,39 @@
 .. _ar_dht11:
 
-5.13 Temperature - Humidity
+5.13 温度・湿度センサー
 =======================================
 
-The DHT11 is a temperature and humidity sensor commonly used for environmental measurements. It is a digital sensor that communicates with a microcontroller to provide temperature and humidity readings.
+DHT11は、環境測定用によく使われる温度・湿度センサーです。このデジタルセンサーは、温度と湿度の値を提供するためにマイクロコントローラと通信します。
 
-In this project, we will be reading the DHT11 sensor and printing out the temperature and humidity values it detects.
+このプロジェクトでは、DHT11センサーからのデータを読み取り、検出された温度と湿度の値を表示します。
 
-By reading the data provided by the sensor, we can obtain the current temperature and humidity values in the environment. These values can be used for real-time monitoring of environmental conditions, weather observations, indoor climate control, humidity reports, and more.
+センサーから提供されたデータを読むことにより、現在の環境の温度と湿度の値を得ることができます。これらの値は、環境のリアルタイムモニタリング、天気観測、室内の気候制御、湿度レポートなどに使用できます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入することは確かに便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,34 +46,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_dht11_buy|
 
-* **Available Pins**
+**利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+こちらは、このプロジェクトのためにESP32ボードで利用可能なピンのリストです。
 
-    .. list-table::
-        :widths: 5 20
+.. list-table::
+    :widths: 5 20
 
-        *   - Available Pins
-            - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
+    *   - 利用可能なピン
+        - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.13_dht11.png
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.13_dht11_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.13_dht11.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.13_dht11``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.13_dht11`` のパスの下にある ``5.13_dht11.ino`` ファイルを開いてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``DHT sensor library`` library is used here, you can install it from the **Library Manager**.
+    * ここでは ``DHT sensor library`` ライブラリが使用されています。 **Library Manager** からインストールできます。
 
         .. image:: img/dht_lib.png
 
@@ -81,11 +81,12 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95bef6dc-a4db-4315-9308-6663b77ddfa0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+コードが正常にアップロードされた後、シリアルモニターには温度と湿度が連続して表示され、プログラムが安定して実行されるにつれて、これらの値はより正確になっていきます。
 
-**How it works?**
 
-#.  Includes the ``DHT.h`` library, which provides functions to interact with the DHT sensors. Then, set the pin and type for the DHT sensor.
+**どのように動作するのか？**
+
+1. ``DHT.h`` ライブラリをインクルードし、DHTセンサーとのインタラクションに必要な機能を提供します。次に、DHTセンサーのピンとタイプを設定します。
 
     .. code-block:: arduino
 
@@ -96,7 +97,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
 
         DHT dht(DHTPIN, DHTTYPE);
 
-#. Initializes serial communication at a baud rate of 115200 and initializes the DHT sensor.
+2. シリアル通信をボーレート115200で初期化し、DHTセンサーを初期化します。
 
     .. code-block:: arduino
 
@@ -106,7 +107,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             dht.begin();
         }
 
-#. In the ``loop()`` function, read temperature and humidity values from the DHT11 sensor, and print them to the serial monitor.
+3. ``loop()`` 関数内で、DHT11センサーから温度と湿度の値を読み取り、それらをシリアルモニターに出力します。
 
     .. code-block:: arduino
 
@@ -134,23 +135,24 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             Serial.println(" *C");
         }
 
-    * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
-    * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
-    * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.
+    * ``dht.readHumidity()`` 関数は、DHTセンサーから湿度値を読み取るために呼び出されます。
+    * ``dht.readTemperature()`` 関数は、温度値を読み取るために呼び出されます。
+    * ``isnan()`` 関数は、読み取り値が有効かどうかをチェックするために使用されます。湿度または温度の値がNaN（数値ではない）の場合、センサーからの読み取りが失敗したことを示し、エラーメッセージが出力されます。
 
-**Learn More**
+**さらに学ぶ**
 
-You can also display the temperature and humidity on the I2C LCD1602.
+I2C LCD1602にも温度と湿度を表示できます。
 
 
 .. note::
 
-    * You can open the file ``5.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``euler-kit/arduino/5.10_thermistor_lcd`` のパスの下にある ``5.10_thermistor_lcd.ino`` ファイルを開いてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
+    * ここでは ``LiquidCrystal_I2C`` と ``DHT sensor library`` ライブラリが使用されています。 **Library Manager** からインストールできます。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fb46ba7e-0a09-4805-87ab-f733e23eb920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
     

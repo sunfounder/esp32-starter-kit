@@ -1,40 +1,40 @@
 .. _ar_reversing_aid:
 
-6.3 Reversing Aid
-===================
-Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
+6.3 バックアップ支援
+======================
+想像してみてください：車に乗っていて、狭い駐車スペースにバックで入るところです。当プロジェクトを使えば、あなたの車の後部に取り付けられた超音波モジュールがデジタルアイとして機能します。リバースギアに入れると、このモジュールが活動を開始し、あなたの後ろの障害物から跳ね返る超音波パルスを発します。
 
-The magic happens when these pulses return to the module. It swiftly calculates the distance between your car and the objects, transforming this data into real-time visual feedback displayed on a vibrant LCD screen. You'll witness dynamic, color-coded indicators depicting the proximity of obstacles, ensuring you have a crystal-clear understanding of the surrounding environment.
+魔法のようなことが起こります。これらのパルスがモジュールに戻ると、モジュールは迅速にあなたの車と物体との距離を計算し、このデータをリアルタイムの視覚フィードバックに変換し、鮮やかなLCD画面に表示します。動的なカラーコード付きインジケーターが障害物の近接を描き、周囲環境をクリスタルクリアに理解できるようになります。
 
-But we didn't stop there. To immerse you further into this driving experience, we incorporated a lively buzzer. As your car inches closer to an obstacle, the buzzer's tempo intensifies, creating an auditory symphony of warnings. It's like having a personal orchestra guiding you through the complexities of reverse parking.
+しかし、私たちはそこで止まりませんでした。あなたをさらに運転体験に没入させるために、生き生きとしたブザーを組み込みました。車が障害物に近づくにつれて、ブザーのテンポは激しくなり、警告の交響曲を奏でます。それは、バック駐車の複雑さをナビゲートする個人オーケストラを持っているようなものです。
 
-This innovative project combines cutting-edge technology with an interactive user interface, making your reversing experience safe and stress-free. With the ultrasonic module, LCD display, and lively buzzer working harmoniously, you'll feel empowered and confident while maneuvering in tight spaces, leaving you free to focus on the joy of driving.
+この革新的なプロジェクトは、最先端の技術とインタラクティブなユーザーインターフェイスを組み合わせており、あなたのバック駐車を安全でストレスフリーなものにします。超音波モジュール、LCDディスプレイ、活気のあるブザーが調和して動作し、狭いスペースでの操縦時にあなたを力強く自信を持たせ、運転の喜びに集中させます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入することは間違いなく便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -55,51 +55,49 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.4_reversing_aid.png
     :width: 800
     :align: center
 
 
-The ultrasonic sensor in the project emits high-frequency sound waves and measures the time it takes for the waves to bounce back after hitting an object. By analyzing this data, the distance between the sensor and the object can be calculated. To provide a warning when the object is too close, a buzzer is used to produce an audible signal. Additionally, the measured distance is displayed on an LCD screen for easy visualization.
+プロジェクトにおける超音波センサーは、高周波の音波を発し、物体にぶつかって跳ね返ってくるまでの時間を測定します。このデータを分析することで、センサーと物体との距離が計算できます。物体が近すぎる場合の警告として、聴覚信号を発するブザーが使用されます。さらに、測定された距離は簡単な可視化のためにLCD画面に表示されます。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
 
-**Code**
 
+**コード**
 
 .. note::
 
-    * You can open the file ``6.3_reversing_aid.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.3_reversing_aid`` directly.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ファイル ``6.3_reversing_aid.ino`` をパス ``esp32-starter-kit-main\c\codes\6.3_reversing_aid`` から直接開くことができます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
-
+    * ここでは ``LiquidCrystal I2C`` ライブラリが使用されています。 **Library Manager** からインストールできます。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c06deba0-36fd-4f17-8290-c7a39202e089/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+コードが正常にアップロードされた後、LCDに現在検出されている距離が表示されます。そして、ブザーは距離に応じて音の周波数を変更します。
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    コードと配線が正しくてもLCDに何も表示されない場合は、背面のポテンショメータを調整してコントラストを上げてください。
 
+**どのように動作するのか？**
 
-**How it works?**
+このコードは、物体間の距離を測定し、LCDディスプレイとブザーを通じてフィードバックを提供する簡単な距離測定装置を作成するのに役立ちます。
 
-This code helps us create a simple distance measuring device that can measure the distance between objects and provide feedback through an LCD display and a buzzer.
+``loop()`` 関数にはプログラムの主なロジックが含まれており、連続して実行されます。 ``loop()`` 関数をもう少し詳しく見てみましょう。
 
-The ``loop()`` function contains the main logic of the program and runs continuously. Let's take a closer look at the ``loop()`` function.
+#. 距離を読み取り、パラメータを更新するループ
 
-#. Loop to read distance and update parameters
-
-    In the ``loop``, the code first reads the distance measured by the ultrasonic module and updates the interval parameter based on the distance. 
+    ``loop`` 内では、まず超音波モジュールによって測定された距離を読み取り、その距離に基づいて間隔パラメータを更新します。
 
     .. code-block:: arduino
 
@@ -117,9 +115,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             intervals = 2000;
         }
 
-#. Check if it's time to beep
+#. ビープ音を鳴らすタイミングをチェック
 
-    The code calculates the difference between the current time and the previous beep time, and if the difference is greater than or equal to the interval time, it triggers the buzzer and updates the previous beep time.
+    コードは、現在の時刻と前回のビープ音の時刻との差を計算し、その差が間隔時間以上であればブザーを鳴らし、前回のビープ音の時刻を更新します。
 
     .. code-block:: arduino
 
@@ -130,9 +128,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             previousMillis = currentMillis;
         }
 
-#. Update LCD display
+#. LCDディスプレイを更新
 
-    The code clears the LCD display and then displays "Dis:" and the current distance in centimeters on the first line.
+    コードはLCDディスプレイをクリアし、その後、1行目に「Dis:」と現在の距離（センチメートル）を表示します。
 
     .. code-block:: arduino
 
@@ -143,8 +141,3 @@ The ``loop()`` function contains the main logic of the program and runs continuo
         lcd.print(" cm");
 
         delay(100);
-
-
-
-
-

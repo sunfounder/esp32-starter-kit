@@ -1,37 +1,35 @@
 .. _py_ir_obstacle:
 
-5.3 Detect the Obstacle
+5.3 障害物の検出
 ===================================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+このモジュールは一般に、前方に障害物があるかどうかを判断するために車やロボットに取り付けられています。また、ハンドヘルドデバイス、水道の蛇口などにも広く使用されています。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,48 +40,47 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_avoid_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイスの起動時に特定のブートモードを決定するために使用される特別なセットのピンです
+    （つまり、電源オンリセット）。
    
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    一般的に、 **入力ピンとして使用することは推奨されません**。これらのピンを使用したい場合は、ブートプロセスへの潜在的な影響を考慮してください。詳細については、 :ref:`esp32_strapping` セクションを参照してください。
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.3_avoid.png
 
-When the obstacle avoidance module does not detect any obstacles, IO14 returns a high level. However, when it detects an obstacle, it returns a low level. You can adjust the blue potentiometer to modify the detection distance of this module.
+障害物回避モジュールが障害物を検出しない場合、IO14はハイレベルを返します。しかし、障害物を検出した場合は、ローレベルを返します。青色のポテンショメータを調整して、このモジュールの検出距離を変更できます。
 
-**Wiring**
-
+**配線図**
 
 .. image:: ../../img/wiring/5.3_avoid_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.3_avoid.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.3_avoid.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。
 
 
 
@@ -101,4 +98,4 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
         time.sleep(0.1)
 
 
-While the program is running, if the IR obstacle avoidance module detects an obstacle in front of it, the value "0" will be shown on the Serial Monitor, otherwise, the value "1" will be shown.
+プログラムが実行中の場合、IR障害物回避モジュールが前方に障害物を検出すると、シリアルモニターに「0」が表示されます。それ以外の場合は「1」が表示されます。

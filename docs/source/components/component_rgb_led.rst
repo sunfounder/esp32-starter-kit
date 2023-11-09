@@ -7,57 +7,55 @@ RGB LED
     :width: 200
     :align: center
 
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+RGB LEDは様々な色の光を放射します。RGB LEDは赤、緑、青の3つのLEDを透明または半透明のプラスチックシェルにパッケージングします。3つのピンの入力電圧を変更してそれらを重ね合わせることで、さまざまな色を表示することができ、統計によれば16,777,216の異なる色を作成することができます。
 
-**Features**
+**特徴**
 
-* Color: Tri-Color (Red/Green/Blue)
-* Common Cathode
-* 5mm Clear Round Lens
-* Forward Voltage: Red: DC 2.0 - 2.2V; Blue&Green: DC 3.0 - 3.2V (IF=20mA) 
-* 0.06 Watts DIP RGB LED
-* Luminance Brighter Up To +20%
-* Viewing Angle: 30°
+* 色: トリカラー (赤/緑/青)
+* 共通カソード
+* 5mm クリアラウンドレンズ
+* 順方向電圧: 赤: DC 2.0 - 2.2V; 青&緑: DC 3.0 - 3.2V (IF=20mA)
+* 0.06 ワット DIP RGB LED
+* 輝度は最大+20%増
+* 視野角: 30°
 
-**Common Anode and Common Cathode**
+**共通アノードと共通カソード**
 
-RGB LEDs can be categorized into common anode and common cathode ones. 
+RGB LEDは、共通アノードと共通カソードの2種類に分類されます。
 
-* In a common cathode RGB LED, all three LEDs share a negative connection (cathode).
-* In a common anode RGB LED, the three LEDs share a positive connection (anode).
+* 共通カソードのRGB LEDでは、3つのLEDがすべて負の接続（カソード）を共有しています。
+* 共通アノードのRGB LEDでは、3つのLEDが共通の正の接続（アノード）を共有しています。
 
 .. image:: img/rgb_cc_ca.jpg
 
 .. note::
-    We use the common cathode one.
+    我々は共通カソードを使用します。
 
-**RGB LED Pins**
+**RGB LEDのピン**
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Place the RGB LEDs as shown, so that the longest lead is second from the left. Then the pin numbers of the RGB LEDs should be Red, GND, Green and Blue.
+RGB LEDには4つのピンがあり、最も長いものはGND、残りのピンは赤、緑、青です。最も長いリードが左から2番目になるようにRGB LEDを配置します。次に、RGB LEDのピン番号は赤、GND、緑、青となります。
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-You can also use the multimeter to select Diode Test mode, and then connect as shown below to measure the color of each pin.
+また、マルチメーターを使用してダイオードテストモードを選択し、下の図のように接続して各ピンの色を測定することもできます。
 
 .. image:: img/rgb_test.png
 
-**Mix colors**
+**色の混合**
 
-To generate additional colors, you can combine the three colors at different intensities. To adjust the intensity of each LED, you can use a PWM signal.
+追加の色を生成するには、3つの色を異なる強度で組み合わせることができます。各LEDの強度を調整するには、PWM信号を使用できます。
 
-Because the LEDs are so close to each other, our eyes see the result of the color combination rather than the three colors individually.
+LEDが互いに非常に近接しているため、私たちの目は3つの色を個別にではなく、色の組み合わせの結果として認識します。
 
-Check out the table below to see how the colors are combined. It will give you an idea of how the color mixing chart works and how different colors are produced.
+以下の表を参照して、色がどのように組み合わせられるかを確認してください。これにより、色の混合チャートの動作や、さまざまな色がどのように生成されるかについての考え方が得られます。
 
 .. image:: img/rgb_mix.png
 
+**例**
 
-
-**Example**
-
-* :ref:`ar_rgb` (Arduino Project)
-* :ref:`ar_color_gradient` (Arduino Project)
-* :ref:`py_rgb` (MicroPython Project)
-* :ref:`sh_colorful_ball` (Scratch Project)
+* :ref:`ar_rgb` (Arduinoプロジェクト)
+* :ref:`ar_color_gradient` (Arduinoプロジェクト)
+* :ref:`py_rgb` (MicroPythonプロジェクト)
+* :ref:`sh_colorful_ball` (Scratchプロジェクト)
 

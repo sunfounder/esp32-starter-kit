@@ -1,47 +1,39 @@
-
 .. _bluetooth_audio_player:
 
 7.3 Bluetooth Audio Player
 ==============================
 
-The aim of the project is to provide a simple solution for playing audio from a Bluetooth-enabled 
-device using the built-in DAC of the ESP32.
+このプロジェクトの目的は、ESP32の内蔵DACを使ってBluetooth対応デバイスから音声を再生するシンプルな解決策を提供することです。
 
-The project involves the use of the ``ESP32-A2DP`` library to receive audio data 
-from a Bluetooth-enabled device. The received audio data is then transmitted to the internal 
-DAC of the ESP32 using the I2S interface. The I2S interface is configured to operate in master mode, 
-transmit mode, and DAC built-in mode. The audio data is then played back through the speaker connected to the DAC.
+このプロジェクトでは、 ``ESP32-A2DP`` ライブラリを使用してBluetooth対応デバイスから音声データを受信します。受信した音声データは、I2Sインターフェイスを使用してESP32の内部DACに送信されます。I2Sインターフェイスは、マスターモード、トランスミットモード、DAC内蔵モードで動作するように設定されます。その後、DACに接続されたスピーカーから音声データが再生されます。
 
-When using the internal DAC of the ESP32, it is important to note that the output voltage level is limited to 1.1V. 
-Therefore, it is recommended to use an external amplifier to boost the output voltage level to the desired level. 
-It is also important to ensure that the audio data is in the correct format and sample rate to prevent distortion 
-or noise during playback.
+ESP32の内部DACを使用する場合、出力電圧レベルは1.1Vに限定されていることに注意が必要です。そのため、出力電圧レベルを望ましいレベルまで増幅するために外部アンプを使用することを推奨します。また、再生時に歪みやノイズが発生しないように、音声データが正しい形式とサンプルレートであることを確認することも重要です。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを買うのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+または、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -57,41 +49,41 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Operating Steps**
+**操作手順**
 
-#. Build the circuit.
+#. 回路を組み立てます。
 
-    As this is a mono amplifier, you can connect IO25 to the L or R pin of the audio amplifier module.
+    これはモノラルアンプなので、オーディオアンプモジュールのLまたはRピンにIO25を接続できます。
 
-    The 10K resistor is used to reduce high-frequency noise and lower the audio volume. It forms an RC low-pass filter with the parasitic capacitance of the DAC and audio amplifier. This filter decreases the amplitude of high-frequency signals, effectively reducing high-frequency noise. So, adding the 10K resistor makes the music sound softer and eliminates unwanted high-frequency noise.
+    10K抵抗は、高周波ノイズを低減し、オーディオのボリュームを下げるために使用されます。これはDACとオーディオアンプの寄生容量とRCローパスフィルタを形成し、高周波信号の振幅を減少させ、高周波ノイズを効果的に減少させます。そのため、10K抵抗を追加すると音楽がより柔らかく聞こえ、望ましくない高周波ノイズを排除します。
 
-    If your SD card's music is already soft, you can remove or replace the resistor with a smaller value.
+    SDカードの音楽が既に十分に柔らかい場合は、抵抗を取り外すか、小さい値の抵抗に置き換えることができます。
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
-#. Open the code.
+#. コードを開きます。
 
-    * Open the ``7.3_bluetooth_audio_player.ino`` file under the path of ``esp32-starter-kit-main\c\codes\7.3_bluetooth_audio_player``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\7.3_bluetooth_audio_player`` のパスの下にある ``7.3_bluetooth_audio_player.ino`` ファイルを開きます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``ESP32-A2DP`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
+    * ここでは ``ESP32-A2DP`` ライブラリを使用しています。インストールのチュートリアルについては :ref:`install_lib_man` を参照してください。
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/7bb7d6dd-72d4-4529-bb42-033b38558347/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
-#. After selecting the correct board and port, click on the Upload button.
+#. 正しいボードとポートを選択した後、アップロードボタンをクリックします。
 
-#. Once the code is uploaded successfully, turn on the Bluetooth-enabled device and search for available devices, then connect to the ``ESP32_Bluetooth``.
+#. コードのアップロードが成功したら、Bluetooth対応デバイスをオンにして利用可能なデバイスを検索し、 ``ESP32_Bluetooth`` に接続します。
 
     .. image:: img/connect_bluetooth.png
 
-#. Play audio on the device and the audio should be played through the speaker connected to the ESP32.
+#. デバイスで音声を再生すると、ESP32に接続されたスピーカーから音声が出力されるはずです。
 
 
-**Code Explanation**
+**コードの説明**
 
-#. The code starts by including the ``BluetoothA2DPSink.h`` library, which is used to receive audio data from the Bluetooth-enabled device. The ``BluetoothA2DPSink`` object is then created and configured with the I2S interface settings. 
+#. このコードは、Bluetooth対応デバイスからのオーディオデータを受信するために使用される ``BluetoothA2DPSink.h`` ライブラリを含めることから始まります。そして、I2Sインターフェースの設定で ``BluetoothA2DPSink`` オブジェクトが作成され、構成されます。
 
     .. code-block:: arduino
 
@@ -99,8 +91,7 @@ You can also buy them separately from the links below.
 
         BluetoothA2DPSink a2dp_sink;
 
-
-#. In the setup function, the code initializes an ``i2s_config_t struct`` with the desired configuration for the I2S (Inter-IC Sound) interface. 
+#. setup関数内では、I2S（Inter-IC Sound）インターフェース用の望ましい構成で ``i2s_config_t struct`` が初期化されます。
 
     .. code-block:: arduino
 
@@ -117,12 +108,13 @@ You can also buy them separately from the links below.
             .use_apll = false
         };
 
-        a2dp_sink.set_i2s_config(i2s_config);  
-        a2dp_sink.start("ESP32_Bluetooth");  
+        a2dp_sink.set_i2s_config(i2s_config);
+         a2dp_sink.start("ESP32_Bluetooth");
 
         }
 
-    * The I2S interface is used to transfer digital audio data between devices. 
-    * The configuration includes the ``I2S mode``, ``sample rate``, ``bits per sample``, ``channel format``, ``communication format``, ``interrupt allocation flags``, ``DMA buffer count``, ``DMA buffer length``, and whether to use the APLL (Audio PLL) or not.
-    * The ``i2s_config_t struct`` is then passed as an argument to the ``set_i2s_config`` function of the ``BluetoothA2DPSink`` object to configure the I2S interface for audio playback.
-    * The ``start`` function of the ``BluetoothA2DPSink`` object is called to start the Bluetooth audio sink and begin playing audio through the built-in DAC.
+    * I2Sインターフェースは、デバイス間でデジタルオーディオデータを転送するために使用されます。
+    * 構成には ``I2S mode``、 ``sample rate``、 ``bits per sample``、 ``channel format``、 ``communication format``、 ``interrupt allocation flags``、 ``DMA buffer count``、 ``DMA buffer length``、およびAPLL（オーディオPLL）を使用するかどうかが含まれます。
+    * この ``i2s_config_t struct`` は、オーディオ再生用のI2Sインターフェースを設定するために ``BluetoothA2DPSink`` オブジェクトの ``set_i2s_config`` 関数に引数として渡されます。
+    * ``BluetoothA2DPSink`` オブジェクトの ``start`` 関数が呼び出され、Bluetoothオーディオシンクが開始され、内蔵DACを通じてオーディオの再生が始まります。
+

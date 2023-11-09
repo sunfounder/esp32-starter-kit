@@ -1,42 +1,41 @@
 .. _py_guess_number:
 
-6.7 Guess Number
+6.7 数当てゲーム
 ==============================
 
-Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
+運試しに挑戦してみませんか？自分の直感を試して、正しい番号を当てられるか見てみたいですか？それなら、この数当てゲームがぴったりです！
 
-With this project, you can play a fun and exciting game of chance.
+このプロジェクトでは、運と勘を試す楽しくワクワクするゲームを楽しむことができます。
 
-Using an IR remote control, players input numbers between 0 and 99 to try and guess the randomly generated lucky point number. 
-The system displays the player's input number on an LCD screen, along with upper and lower limit tips to help guide the 
-player towards the right answer. With every guess, players get closer to the lucky point number, 
-until finally, someone hits the jackpot and wins the game!
+IRリモコンを使用して、プレイヤーは0から99までの数字を入力し、ランダムに生成されたラッキーポイントの数字を当てます。
+システムはプレイヤーが入力した数字をLCDスクリーンに表示し、上限と下限のヒントを提供して正しい答えに導きます。
+推測するごとに、プレイヤーはラッキーポイントの数字に近づき、最終的に誰かがジャックポットを当ててゲームに勝利します！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -52,22 +51,23 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.7_guess_number.png
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.7_game_guess_number.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * The ``lcd1602.py`` and ``ir_rx`` libraries are used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``6.7_game_guess_number.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。それから、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
+    * ここでは ``lcd1602.py`` と ``ir_rx`` ライブラリを使用します。ESP32にアップロードされているか確認してください。チュートリアルについては :ref:`add_libraries_py` を参照してください。
+
 
 .. code-block:: python
 
@@ -220,20 +220,20 @@ You can also buy them separately from the links below.
 
 
 
-* When the code runs, a secret number is produced but not displayed on the LCD, and what you need to do is to guess it. 
-* Press the number you guessed on the remote control, then press the ``+`` key to confirm.
-* Simultaneously, the range shown on the I2C LCD1602 will decrease, and you must press the appropriate number based on this new range.
-* If you got the lucky number luckily or unluckily, there will appear ``GAME OVER!``.
+* コードが実行されると、秘密の数字が生成されますが、LCDには表示されません。あなたが行うべきことは、それを推測することです。
+* リモコンで推測した数字を押し、 ``+`` キーを押して確認します。
+* 同時に、I2C LCD1602に表示される範囲が狭まり、この新しい範囲に基づいて適切な数字を押す必要があります。
+* 幸運にも不運にも正解の数字を押すと、 ``GAME OVER!`` と表示されます。
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    コードと配線が正しくてもLCDに内容が表示されない場合は、背面のポテンショメータを調整してコントラストを上げることができます。
 
-**How it works?**
+**どのように機能するのか？**
 
-The following is a detailed analysis of part of the code.
+以下は、コードの一部の詳細な分析です。
 
-#. Initialize the guessing game variables.
+#. 数当てゲームの変数を初期化します。
 
     .. code-block:: python
     
@@ -243,11 +243,11 @@ The following is a detailed analysis of part of the code.
         count = 0
 
 
-    * ``lower`` and ``upper`` bounds for the secret number.
-    * The secret number (``pointValue``) randomly generated between ``lower`` and ``upper`` bounds.
-    * The user's current guess (``count``).
+    * 秘密の数字のための ``lower`` と ``upper`` の境界値。
+    * ``lower`` と ``upper`` の境界値の間でランダムに生成される秘密の数字（ ``pointValue`` ）。
+    * ユーザーの現在の推測（ ``count`` ）。
 
-#. This function resets the guessing game values and generates a new secret number.
+#. この関数は数当てゲームの値をリセットし、新しい秘密の数字を生成します。
 
     .. code-block:: python
     
@@ -260,7 +260,7 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
 
-#. This function displays the current game status on the LCD screen.
+#. この関数は現在のゲームの状態をLCD画面に表示します。
 
     .. code-block:: python
 
@@ -276,10 +276,10 @@ The following is a detailed analysis of part of the code.
             lcd.message(string)
             return
 
-    * If the game is over (``result=True``), it shows ``GAME OVER!`` and the secret number.
-    * Otherwise, it shows the current guess (``count``) and the current guessing range (``lower`` to ``upper``)
+    * ゲームが終了した場合（ ``result=True`` ）、 ``GAME OVER!`` と秘密の数字を表示します。
+    * それ以外の場合、現在の推測（ ``count`` ）と現在の推測範囲（ ``lower`` から ``upper``）を表示します。
 
-#. This function processes the user's current guess (``count``) and updates the guessing range.
+#. この関数はユーザーの現在の推測（ ``count`` ）を処理し、推測範囲を更新します。
 
     .. code-block:: python
 
@@ -296,11 +296,11 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
     
-    * If the current guess (``count``) is higher than the secret number, the upper bound is updated.
-    * If the current guess (``count``) is lower than the secret number, the lower bound is updated.
-    * If the current guess (``count``) is equal to the secret number, the function returns ``True`` (game over).
+    * 現在の推測（ ``count`` ）が秘密の数字より高い場合、上限が更新されます。
+    * 現在の推測（ ``count`` ）が秘密の数字より低い場合、下限が更新されます。
+    * 現在の推測（ ``count`` ）が秘密の数字と等しい場合、関数は ``True`` （ゲーム終了）を返します。
 
-#. This function processes the key press events received from the IR remote.
+#. IRリモコンから受け取ったキー押下イベントを処理する関数です。
 
     .. code-block:: python
 
@@ -322,11 +322,11 @@ The following is a detailed analysis of part of the code.
                 count = count * 10 + int(key) if count * 10 + int(key) <= 99 else count
                 lcd_show(False)
 
-    * If the ``Power`` key is pressed, the game is reset.
-    * If the ``+`` key is pressed, the current guess (``count``) is processed and the game status is updated.
-    * If a digit key is pressed, the current guess (``count``) is updated with the new digit.
+    * ``Power`` キーが押されると、ゲームがリセットされます。
+    * ``+`` キーが押されると、現在の推測（ ``count`` ）が処理され、ゲームの状態が更新されます。
+    * 数字キーが押されると、現在の推測（ ``count`` ）が新しい数字で更新されます。
 
-#. This callback function is triggered when the IR receiver receives
+#. IRレシーバーが信号を受信するとトリガーされるコールバック関数です。
 
     .. code-block:: python
 

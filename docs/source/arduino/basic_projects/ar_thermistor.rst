@@ -1,39 +1,39 @@
 .. _ar_thermistor:
 
-5.10 Thermometer
+5.10 サーミスター温度計
 ===========================
 
-A thermistor is a temperature sensor that exhibits a strong dependence on temperature, and it can be classified into two types: Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC). The resistance of an NTC thermistor decreases with increasing temperature, while the resistance of a PTC thermistor increases with increasing temperature.
+サーミスターは、温度によって抵抗値が大きく変わる温度センサーで、NTC（負温度係数）タイプとPTC（正温度係数）タイプの二種類に分けられます。NTCサーミスターの抵抗値は温度が上がるにつれて減少し、PTCサーミスターの抵抗値は温度が上がるにつれて増加します。
 
-In this project, we will be using an NTC thermistor. By connecting the NTC thermistor to an analog input pin of the ESP32 microcontroller, we can measure its resistance, which is directly proportional to the temperature.
+このプロジェクトではNTCサーミスターを使用します。NTCサーミスターをESP32マイクロコントローラのアナログ入力ピンに接続することで、抵抗値を測定し、これが直接温度に比例します。
 
-By incorporating the NTC thermistor and performing the necessary calculations, we can accurately measure the temperature and display it on the I2C LCD1602 module. This project enables real-time temperature monitoring and provides a visual interface for temperature display.
+NTCサーミスターを取り入れ、必要な計算を行うことで、温度を正確に測定し、I2C LCD1602モジュールに表示することができます。このプロジェクトはリアルタイムで温度監視を行い、温度表示のための視覚的インターフェースを提供します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一括購入するのは非常に便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -49,51 +49,51 @@ You can also buy them separately from the links below.
         - |link_thermistor_buy|
 
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトでESP32ボード上で利用可能なピンの一覧です。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **ストラッピングピン**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    以下のピンはストラッピングピンであり、ESP32の電源オンまたはリセット時の起動プロセスに影響します。しかし、ESP32が正常に起動した後は、通常のピンとして使用できます。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO0, IO12
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.10_thermistor.png
 
-When the temperature rises, the resistance of the thermistor decreases, causing the value read on I35 to decrease. Additionally, by using a formula, you can convert the analog value into temperature and then print it out.
+温度が上がると、サーミスターの抵抗値が減少し、I35で読み取る値も下がります。さらに、式を使ってアナログ値を温度に変換し、それを表示します。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.10_thermistor_bb.png
 
 
 .. note::
-    * The thermistor is black and marked 103.
-    * The color ring of the 10K ohm resistor is red, black, black, red and brown.
+    * サーミスターは黒色で、103と記されています。
+    * 10Kオーム抵抗のカラーリングは赤、黒、黒、赤、茶です。
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.10_thermistor.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.10_thermistor``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.10_thermistor`` のパスの下にある ``5.10_thermistor.ino`` ファイルを開いてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックしてください。
     * :ref:`unknown_com_port`
 
 .. raw:: html
@@ -101,42 +101,42 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d0407e3b-cd1e-4f5e-a7b6-391da394339b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is successfully uploaded, the Serial Monitor will print out the Celsius and Fahrenheit temperatures.
+コードが正常にアップロードされると、シリアルモニターに摂氏と華氏の温度が表示されます。
 
-**How it works?**
+**どのように動作するのか？**
 
-Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius. 
+各サーミスターには通常の抵抗値があります。ここでは25度摂氏で測定される10kオームです。
 
-When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. 
+温度が上がると、サーミスターの抵抗値が下がります。その後、A/Dアダプターによって電圧データがデジタル量に変換されます。
 
-The temperature in Celsius or Fahrenheit is output via programming. 
+摂氏または華氏の温度は、プログラミングを介して出力されます。
 
-Here is the relation between the resistance and temperature: 
+ここに抵抗値と温度との関係があります：
 
-    **RT =RN expB(1/TK - 1/TN)** 
+    **RT = RN expB(1/TK - 1/TN)**
 
-    * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
-    * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``373.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``373.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``4950``. 
-    * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
+    * **RT** は、温度が **TK** のときのNTCサーミスターの抵抗値です。
+    * **RN** は、定格温度TN下のNTCサーミスターの抵抗値です。ここでは、RNの数値は10kです。
+    * **TK** はケルビン温度で、単位はKです。ここでは、 **TK** の数値は ``摂氏度+373.15`` です。
+    * **TN** は定格ケルビン温度で、単位もKです。ここでは、TNの数値は ``373.15+25`` です。
+    * **B(beta)** はNTCサーミスターの材料定数で、熱感応指数とも呼ばれ、数値は ``4950`` です。
+    * **exp** は指数関数の略で、底数 ``e`` は自然数で、約2.7に等しいです。
 
-    Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
+    この式 ``TK=1/(ln(RT/RN)/B+1/TN)`` を変換すると、ケルビン温度から273.15を引いたものが摂氏度になります。
 
-    This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+    この関係は経験式です。温度と抵抗が有効範囲内にあるときのみ正確です。
 
-**Learn More**
+**もっと学ぶ**
 
-You can also display the calculated Celsius and Fahrenheit temperatures on the I2C LCD1602.
+計算された摂氏と華氏の温度をI2C LCD1602にも表示させることができます。
 
 
 .. note::
 
-    * You can open the file ``5.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``euler-kit/arduino/5.10_thermistor_lcd`` のパスの下にある ``5.10_thermistor_lcd.ino`` ファイルを開いてください。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックしてください。
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * ここでは ``LiquidCrystal I2C`` ライブラリを使用しています。 **Library Manager** からインストールできます。
 
 .. raw:: html
 

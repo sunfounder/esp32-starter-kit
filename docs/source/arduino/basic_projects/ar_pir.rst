@@ -1,37 +1,37 @@
 .. _ar_pir:
 
-5.5 Detect Human Movement
+5.5 人間の動きを検出する
 ========================================
 
-Passive infrared sensor (PIR sensor) is a common sensor that can measure infrared (IR) light emitted by objects in its field of view.
-Simply put, it will receive infrared radiation emitted from the body, thereby detecting the movement of people and other animals.
-More specifically, it tells the main control board that someone has entered your room.
+受動赤外線センサー（PIRセンサー）は、視野内の物体から放出される赤外線（IR）を測定する一般的なセンサーです。
+簡単に言うと、人体から放出される赤外線を受け取り、人や他の動物の動きを検出します。
+より具体的には、誰かがあなたの部屋に入ったことをメインコントロールボードに知らせます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,77 +48,71 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトでESP32ボードにて利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - 入力用
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - 出力用
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 .. note::
     
-    IO32 cannot be used **as input pin** in this project because it is internally connected to a 1K pull-down resistor, which sets its default value to 0.
+    IO32は内部に1Kプルダウン抵抗が接続されているため、このプロジェクトでは **入力ピンとして使用できません**。デフォルト値が0に設定されます。
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力用）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイスの起動時（電源オンリセット時）に特定のブートモードを決定するための特別なピンセットです。
 
-    
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
     
 
-    
-
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    通常、これらのピンを入力ピンとして使用することは **お勧めできません**。これらのピンを使用する場合は、ブートプロセスに与える影響を考慮してください。詳細は :ref:`esp32_strapping` セクションを参照してください。
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.5_pir.png
 
-When the PIR module detects motion, IO14 will go high, and the LED will be lit. Otherwise, when no motion is detected, IO14 will be low, and the LED will turn off.
+PIRモジュールが動きを検出すると、IO14が高くなり、LEDが点灯します。動きが検出されない場合、IO14は低くなり、LEDは消灯します。
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    PIRモジュールには2つのポテンショメータがあります。一つは感度を、もう一つは検出距離を調整します。PIRモジュールをより良く機能させるために、両方を反時計回りに最後まで回してください。
 
     .. image:: ../../components/img/PIR_TTE.png
         :width: 300
         :align: center
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.5_pir_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``5.5_pir.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.5_pir``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
-    * :ref:`unknown_com_port`  
+    * パス ``esp32-starter-kit-main\c\codes\5.5_pir`` の下にあるファイル ``5.5_pir.ino`` を開いてください。
+    * ボード（ESP32 Dev Module）を選択し、適切なポートを指定した後、 **アップロード** ボタンをクリックしてください。
+    * :ref:`unknown_com_port`
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8b5f0cc8-b732-4ed2-b68e-bb7d0a73a1b8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code has been uploaded successfully, the LED will light up and then go off when the PIR module detects someone passing.
+コードが正常にアップロードされた後、PIRモジュールが誰かの通過を検出すると、LEDが点灯し、その後消えます。
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    PIRモジュールには2つのポテンショメータがあります。一つは感度を、もう一つは検出距離を調整します。PIRモジュールをより良く機能させるために、両方を反時計回りに最後まで回してください。
 
     .. image:: img/pir_back.png
-
-
 

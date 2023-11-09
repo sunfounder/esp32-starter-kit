@@ -1,39 +1,39 @@
 .. _py_lcd1602:
 
-2.6 Display Characters
+2.6 文字の表示
 ==================================================
 
-Now, we will explore the fascinating world of character display using the I2C LCD1602 module.
+ここでは、I2C LCD1602モジュールを使用した文字表示の魅力的な世界を探究します。
 
-Through this project, we will learn how to initialize the LCD module, set the desired display parameters, and send character data to be displayed on the screen. We can showcase custom messages, display sensor readings, or create interactive menus. The possibilities are endless!
+このプロジェクトを通じて、LCDモジュールの初期化、表示パラメータの設定、そして画面に表示する文字データの送信方法を学びます。カスタムメッセージのショーケース、センサー読み取りの表示、インタラクティブなメニューの作成など、可能性は無限大です！
 
-By mastering the art of character display on the I2C LCD1602, we will unlock new avenues for communication and information display in our projects. Let's dive into this exciting journey and bring our characters to life on the LCD screen
+I2C LCD1602で文字表示の技術をマスターすることで、プロジェクトでのコミュニケーションと情報表示の新たな道を開くことになります。このワクワクする旅に飛び込んで、LCDスクリーンにキャラクターを生き生きとさせましょう。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,38 +44,38 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 15
     :header-rows: 1
 
-    *   - Available Pins
-        - Usage Description
+    *   - 利用可能なピン
+        - 使用説明
 
     *   - IO21
         - SDA
     *   - IO22
         - SCL
     
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.6_lcd.png
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``2.6_liquid_crystal_display.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * The ``lcd1602.py`` library is used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``2.6_liquid_crystal_display.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。
+    * ここでは ``lcd1602.py`` ライブラリを使用しています。ESP32にアップロードされているか確認してください。チュートリアルについては :ref:`add_libraries_py` を参照してください。
 
 .. code-block:: python
 
@@ -102,38 +102,36 @@ Here is a list of available pins on the ESP32 board for this project.
     lcd.clear()
 
 
-After the script runs, you will be able to see two lines of text will appear on the LCD screen in turn and then disappear.
-
+スクリプトを実行した後、LCDスクリーンには2行のテキストが順番に表示され、その後消えます。
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    コードと配線が正しいにもかかわらず、LCDが内容を表示しない場合は、背面のポテンショメータを調整してコントラストを上げてください。
 
+**どのように動作するのか？**
 
-**How it works?**
+``lcd1602`` ライブラリでは、lcd1602の関連機能をLCDクラスに統合しています。
 
-In the ``lcd1602`` library, we integrate the relevant functions of lcd1602 into the LCD class.
-
-#. Import ``lcd1602`` module.
+#. ``lcd1602`` モジュールをインポートします。
 
     .. code-block:: python
 
         from lcd1602 import LCD    
 
-#. Declare an object of the ``LCD`` class and name it ``lcd``.
+#. ``LCD`` クラスのオブジェクトを宣言し、 ``lcd`` と名付けます。
 
     .. code-block:: python
 
         lcd = LCD()
 
-#. This statement will display the text on the LCD. It should be noted that the argument must be a string type. If we want to pass an integer or float, we must use the forced conversion statement ``str()``.
+#. この文は、テキストをLCDに表示します。引数は文字列型である必要があります。整数や浮動小数点数を渡したい場合は、強制変換文 ``str()`` を使用する必要があります。
 
     .. code-block:: python
 
         lcd.message(string)
 
 
-#. If you call this statement multiple times, lcd will superimpose the texts. This requires the use of the following statement to clear the display.
+#. この文を複数回呼び出すと、lcdはテキストを重ね合わせます。これには、表示をクリアするための以下の文を使用する必要があります。
 
     .. code-block:: python
 

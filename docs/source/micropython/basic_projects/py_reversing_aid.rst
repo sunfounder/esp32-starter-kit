@@ -1,41 +1,41 @@
 .. _py_reversing_aid:
 
-6.4 Reversing Aid
+6.4 リバースエイド
 ======================
 
-Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
+想像してみてください：狭い駐車スペースに車をバックで入れようとしています。このプロジェクトでは、あなたの車の後部に取り付けられた超音波モジュールがデジタルアイとして機能します。リバースギアに入れると、モジュールが活動を開始し、後ろの障害物に跳ね返る超音波パルスを放出します。
 
-The magic happens when these pulses return to the module. It swiftly calculates the distance between your car and the objects, transforming this data into real-time visual feedback displayed on a vibrant LCD screen. You'll witness dynamic, color-coded indicators depicting the proximity of obstacles, ensuring you have a crystal-clear understanding of the surrounding environment.
+これらのパルスがモジュールに戻ってくるときに魔法が起きます。それは迅速にあなたの車と物体の間の距離を計算し、このデータを鮮やかなLCDスクリーンに表示されるリアルタイムの視覚フィードバックに変換します。障害物の接近を色分けして示す動的なインジケータを目の当たりにし、周囲の環境をクリスタルクリアに理解できます。
 
-But we didn't stop there. To immerse you further into this driving experience, we incorporated a lively buzzer. As your car inches closer to an obstacle, the buzzer's tempo intensifies, creating an auditory symphony of warnings. It's like having a personal orchestra guiding you through the complexities of reverse parking.
+しかし、私たちはそこで止まりませんでした。さらに没入するドライビング体験を提供するために、活発なブザーを取り入れました。あなたの車が障害物に近づくにつれて、ブザーのテンポが強まり、警告のオーケストラを作り出します。それはまるで個人的なオーケストラが逆駐車の複雑さをナビゲートしてくれるようなものです。
 
-This innovative project combines cutting-edge technology with an interactive user interface, making your reversing experience safe and stress-free. With the ultrasonic module, LCD display, and lively buzzer working harmoniously, you'll feel empowered and confident while maneuvering in tight spaces, leaving you free to focus on the joy of driving.
+この革新的なプロジェクトは、最先端の技術とインタラクティブなユーザーインターフェースを組み合わせており、リバース時の経験を安全でストレスフリーにします。超音波モジュール、LCDディスプレイ、活発なブザーが調和して動作し、狭いスペースでの操作時に自信と力を感じさせ、運転の喜びに集中させてくれます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -56,27 +56,26 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.4_reversing_aid.png
     :width: 800
     :align: center
 
+プロジェクトで使用される超音波センサーは、高周波の音波を発し、物体に当たって跳ね返ってくるまでの時間を測定します。このデータを分析することで、センサーと物体の間の距離を計算できます。物体があまりにも近い場合に警告を提供するために、聴覚信号を生成するためにブザーが使用されます。さらに、測定された距離は簡単な視覚化のためにLCD画面に表示されます。
 
-The ultrasonic sensor in the project emits high-frequency sound waves and measures the time it takes for the waves to bounce back after hitting an object. By analyzing this data, the distance between the sensor and the object can be calculated. To provide a warning when the object is too close, a buzzer is used to produce an audible signal. Additionally, the measured distance is displayed on an LCD screen for easy visualization.
-
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.4_reversing_aid.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``6.4_reversing_aid.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。 
 
 .. code-block:: python
 
@@ -183,10 +182,10 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
             previousMills = currentMills
 
 
-* When the script is running, the ultrasonic module will continuously detect the distance of obstacles in front of it, and display the distance on the Shell and I2C LCD1602. 
-* As the obstacle gets closer, the beeping frequency of the buzzer will become more rapid.
-* The ``ultrasonic_thread()`` function runs in a separate thread so that it can update the distance measurement continuously without blocking the main loop.
+* スクリプトが実行されている間、超音波モジュールは前方の障害物の距離を連続的に検出し、その距離をシェルとI2C LCD1602に表示します。
+* 障害物が近づくにつれて、ブザーのビープ音の頻度が速くなります。
+* ``ultrasonic_thread()`` 関数は別のスレッドで実行されるため、メインループをブロックすることなく、距離測定を連続的に更新することができます。
 
-.. note:: 
+.. note::
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    コードと配線が正しくてもLCDに内容が表示されない場合は、背面のポテンショメータを調整してコントラストを上げることができます。

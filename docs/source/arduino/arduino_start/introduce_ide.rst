@@ -1,44 +1,44 @@
-1.2 Introduce of Arduino IDE
+1.2 Arduino IDEの紹介
 =================================
 
 .. image:: img/sp_ide_2.png
 
-1. **Verify**: Compile your code. Any syntax problem will be prompted with errors.
+1. **検証(Verify)**: コードをコンパイルします。構文の問題がある場合は、エラーとして提示されます。
 
-2. **Upload**: Upload the code to your board. When you click the button, the RX and TX LEDs on the board will flicker fast and won't stop until the upload is done.
+2. **アップロード(Upload)**: コードをボードにアップロードします。このボタンをクリックすると、ボード上のRXとTXのLEDが高速で点滅し、アップロードが完了するまで止まりません。
 
-3. **Debug**: For line-by-line error checking.
+3. **デバッグ(Debug)**: 一行ごとのエラーチェックのために。
 
-4. **Select Board**: Quick setup board and port.
+4. **ボードの選択(Select Board)**: ボードとポートのクイック設定。
 
-5. **Serial Plotter**: Check the change of reading value.
+5. **シリアルプロッター(Serial Plotter)**: 読取値の変化をチェックします。
 
-6. **Serial Monitor**: Click the button and a window will appear. It receives the data sent from your control board. It is very useful for debugging.
+6. **シリアルモニター(Serial Monitor)**: ボタンをクリックするとウィンドウが開きます。コントロールボードから送信されたデータを受信します。デバッグにとても便利です。
 
-7. **File**: Click the menu and a drop-down list will appear, including file creating, opening, saving, closing, some parameter configuring, etc.
+7. **ファイル(File)**: メニューをクリックすると、ファイルの新規作成、開く、保存、閉じる、パラメータの設定などを含むドロップダウンリストが表示されます。
 
-8. **Edit**: Click the menu. On the drop-down list, there are some editing operations like **Cut**, **Copy**, **Paste**, **Find**, and so on, with their corresponding shortcuts.
+8. **編集(Edit)**: メニューをクリックします。ドロップダウンリストには、 **切り取り(Cut)**、 **コピー(Copy)**、 **貼り付け(Paste)**、 **検索(Find)** などの編集操作とそれに対応するショートカットがあります。
 
-9. **Sketch**: Includes operations like **Verify**, **Upload**, **Add** files, etc. More important function is **Include Library** - where you can add libraries.
+9. **スケッチ(Sketch)**: **検証(Verify)**、 **アップロード(Upload)**、ファイルの **追加(Add)** などの操作を含みます。より重要な機能は **ライブラリをインクルード(Include Library)** で、ここでライブラリを追加できます。
 
-10. **Tool**: Includes some tools - the most frequently used Board (the board you use) and Port (the port your board is at). Every time you want to upload the code, you need to select or check them.
+10. **ツール(Tool)**: いくつかのツールを含み、最も頻繁に使用されるのはボード（使用するボード）とポート（ボードが接続されるポート）です。コードをアップロードするたびに、これらを選択または確認する必要があります。
 
-11. **Help**: If you're a beginner, you may check the options under the menu and get the help you need, including operations in IDE, introduction information, troubleshooting, code explanation, etc.
+11. **ヘルプ(Help)**: 初心者の場合は、メニューの下にあるオプションを確認し、IDEの操作、紹介情報、トラブルシューティング、コード説明など、必要なヘルプを得ることができます。
 
-12. **Output Bar**: Switch the output tab here.
+12. **出力バー(Output Bar)**: ここで出力タブを切り替えます。
 
-13. **Output Window**: Print information.
+13. **出力ウィンドウ(Output Window)**: 情報を印刷します。
 
-14. **Board and Port**: Here you can preview the board and port selected for code upload. You can select them again by **Tools** -> **Board** / **Port** if any is incorrect.
+14. **ボードとポート(Board and Port)**: ここでコードアップロードに選択されたボードとポートをプレビューできます。間違っている場合は、 **ツール(Tools)** -> **ボード(Board)** / **ポート(Port)** で再選択できます。
 
-15. The editing area of the IDE. You can write code here.
+15. IDEの編集エリア。ここでコードを記述できます。
 
-16. **Sketchbook**: For managing sketch files.
+16. **スケッチブック(Sketchbook)**: スケッチファイルを管理するために。
 
-17. **Board Manager**: For managing board driver.
+17. **ボードマネージャ(Board Manager)**: ボードドライバーを管理するために。
 
-18. **Library Manager**: For managing your library files.
+18. **ライブラリマネージャ(Library Manager)**: ライブラリファイルを管理するために。
 
-19. **Debug**: Help debugging code.
+19. **デバッグ(Debug)**: コードのデバッグを助けます。
 
-20. **Search**: Search the codes from your sketches.
+20. **検索(Search)**: スケッチからコードを検索します。

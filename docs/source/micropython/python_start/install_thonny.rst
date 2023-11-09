@@ -1,19 +1,20 @@
 .. _thonny_ide:
 
-1.2 Install Thonny IDE
+1.2 Thonny IDEのインストール
 =======================================
 
-Before you can start to program ESP32 with MicroPython, you need an integrated development environment (IDE), here we recommend Thonny. Thonny comes with Python 3.7 built in, just one simple installer is needed and you're ready to learn programming.
+MicroPythonを使ってESP32をプログラミングする前に、統合開発環境（IDE）が必要です。ここではThonnyをお勧めします。ThonnyはPython 3.7が組み込まれており、シンプルなインストーラーで準備完了です。これでプログラミング学習ができます。
 
-#. You can download it by visiting the |link_thonny| website. Once open the page, you will see a light gray box in the upper right corner, click on the link that applies to your operating system.
+#. |link_thonny| のウェブサイトを訪れてダウンロードできます。ページを開くと右上に薄灰色のボックスが表示されるので、お使いのオペレーティングシステムに適用されるリンクをクリックしてください。
 
     .. image:: img/download_thonny.png
 
 
-#. The installers have been signed with a new certificate which hasn't built up its reputation yet. You may need to click through your browser warning (e.g. choose "Keep" instead of "Discard" in Chrome) and Windows Defender warning (**More info** ⇒ **Run anyway**).
+#. インストーラーはまだ評判を築いていない新しい証明書で署名されています。ブラウザの警告をクリックスルーする必要があるかもしれません（例えばChromeでは「破棄」の代わりに「保持」を選択）や、Windows Defenderの警告(**More info** ⇒ **Run anyway**)。
 
     .. image:: img/install_thonny1.png
 
-#. Next, click **Next** and **Install** to finish installing Thonny.
+#. 次に、 **Next** と **Install** をクリックしてThonnyのインストールを完了させます。
 
     .. image:: img/install_thonny6.png
+

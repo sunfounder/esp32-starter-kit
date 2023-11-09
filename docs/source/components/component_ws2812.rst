@@ -1,55 +1,50 @@
 .. _cpn_ws2812:
 
-WS2812 RGB 8 LEDs Strip
+WS2812 RGB 8 LED ストリップ
 ============================
 
 .. image:: img/ws2812b.png
 
-The WS2812 RGB 8 LEDs Strip is composed of 8 RGB LEDs. 
-Only one pin is required to control all the LEDs. Each RGB LED has a WS2812 chip, which can be controlled independently. 
-It can realize 256-level brightness display and complete true color display of 16,777,216 colors. 
-At the same time, the pixel contains an intelligent digital interface data latch signal shaping amplifier drive circuit, 
-and a signal shaping circuit is built in to effectively ensure the color height of the pixel point light Consistent.
+WS2812 RGB 8 LEDストリップは、8つのRGB LEDで構成されています。
+LED全体を制御するのに必要なピンは1つだけです。各RGB LEDには、独立して制御できるWS2812チップがあります。
+256段階の輝度表示と16,777,216色の完全な真のカラー表示を実現することができます。
+同時に、ピクセルにはインテリジェントなデジタルインターフェースのデータラッチシグナル整形増幅ドライブ回路が含まれており、
+効果的にピクセルポイントの色の高さを一貫して保つための信号整形回路が内蔵されています。
 
-It is flexible, can be docked, bent, and cut at will, and the back is equipped with adhesive tape, which can be fixed on the uneven surface at will, and can be installed in a narrow space.
+柔軟であり、ドッキング、曲げ、自由に切断することができ、裏面には接着テープが装備されているため、凹凸のある表面に自由に固定することができ、狭いスペースに取り付けることができます。
 
-**Features**
+**特徴**
 
-* Work Voltage: DC5V
-* IC: One IC drives one RGB LED
-* Consumption: 0.3w each LED
-* Working Temperature: -15-50
-* Color: Full color RGB
-* RGB Type：5050RGB（Built-in IC WS2812B）
-* Light Strip Thickness: 2mm
-* Each LED can be controlled individually
+* 動作電圧: DC5V
+* IC: 1つのICは1つのRGB LEDを駆動します
+* 消費電力: 0.3w毎のLED
+* 動作温度: -15-50
+* 色: フルカラーRGB
+* RGBタイプ：5050RGB（内蔵IC WS2812B）
+* ライトストリップの厚さ: 2mm
+* 各LEDは個別に制御できます
 
-**WS2812B Introdction**
+**WS2812Bの紹介**
 
-* `WS2812B Datasheet <https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf>`_
+* `WS2812Bのデータシート <https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf>`_
 
-WS2812B is a intelligent control LED light source that the control circuit and RGB chip are integrated in
-a package of 5050 components. It internal include intelligent digital port data latch and signal reshaping ampli
-fication drive circuit. Also include a precision internal oscillator and a 12V voltage programmable constant curr
-e-nt control part, effectively ensuring the pixel point light color height consistent.
+WS2812Bは、制御回路とRGBチップが5050のコンポーネントのパッケージ内に統合されているインテリジェントなLED光源です。内部には、インテリジェントなデジタルポートデータラッチおよび信号再整形増幅
+ドライブ回路が組み込まれています。また、高精度の内部オシレーターと12V電圧プログラマブル定電流制御部を内蔵しており、効果的にピクセルポイントの光色の高さを一貫して保つことができます。
 
-The data transfer protocol use single NZR communication mode. After the pixel power-on reset, the DIN
-port receive data from controller, the first pixel collect initial 24bit data then sent to the internal data latch,
-the other data which reshaping by the internal signal reshaping amplification circuit sent to the next cascade
-pixel through the DO port. After transmission for each pixel，the signal to reduce 24bit. pixel adopt auto resha
--ping transmit technology, making the pixel cascade number is not limited the signal transmission, only depend
-on the speed of signal transmission.
+データ転送プロトコルは、単一のNZR通信モードを使用します。ピクセルが電源投入リセットされた後、DIN
+ポートはコントローラからデータを受信し、最初のピクセルは初期の24ビットデータを収集して内部データラッチに送信します。
+内部信号再整形増幅回路によって再整形された他のデータは、DOポートを通じて次のカスケード
+ピクセルに送信されます。各ピクセルの転送後、信号は24ビット減少します。ピクセルは自動再整
+形送信技術を採用し、ピクセルのカスケード数は信号伝送の速度にのみ依存しています。
 
-LED with low driving voltage, environmental protection and energy saving, high brightness, scattering angl
-e is large, good consistency, low power, long life and other advantages. The control chip integrated in LED
-above becoming more simple circuit, small volume, convenient installation.
+低駆動電圧のLEDは、環境にやさしくエネルギー節約型で、明るさ、散乱
+角度が大きく、一貫性が良好で、消費電力が低く、寿命が長いなどの特長があります。LED内に統合された制御チップ
+を使用することで、回路がさらにシンプルになり、ボリュームが小さくなり、取り付けが便利になります。
 
+**例**
 
-
-**Example**
-
-* :ref:`ar_rgb_strip` (Arduino Project)
-* :ref:`ar_flowing_light` (Arduino Project)
-* :ref:`py_rgb_strip` (MicroPython Project)
-* :ref:`py_flowing_light` (MicroPython Project)
-* :ref:`py_color_gradient` (MicroPython Project)
+* :ref:`ar_rgb_strip` (Arduinoプロジェクト)
+* :ref:`ar_flowing_light` (Arduinoプロジェクト)
+* :ref:`py_rgb_strip` (MicroPythonプロジェクト)
+* :ref:`py_flowing_light` (MicroPythonプロジェクト)
+* :ref:`py_color_gradient` (MicroPythonプロジェクト)

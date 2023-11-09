@@ -1,37 +1,37 @@
 .. _ar_tilt:
 
-5.2 Tilt It！
+5.2 傾けて操作！
 ==========================
 
-The tilt switch is a simple yet effective 2-pin device that contains a metal ball in its center. When the switch is in an upright position, the two pins are electrically connected, allowing current to flow through. However, when the switch is tilted or tilted at a certain angle, the metal ball moves and breaks the electrical connection between the pins.
+傾斜スイッチはシンプルで効果的な2ピンデバイスで、その中心に金属球が含まれています。スイッチが垂直の位置にあるときは、2本のピンが電気的に接続されており、電流が流れます。しかし、スイッチが傾いたり特定の角度で傾けられたりすると、金属球が移動しピン間の電気的接続を断ちます。
 
-In this project, we will utilize the tilt switch to control the illumination of an LED. By positioning the switch in a way that triggers the tilt action, we can toggle the LED on and off based on the switch's orientation. 
+このプロジェクトでは、傾斜スイッチを使用してLEDの照明を制御します。スイッチを傾動動作を引き起こすように配置することで、スイッチの向きに基づいてLEDをオン/オフ切り替えることができます。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - 名称
+        - このキットに含まれるアイテム
+        - リンク
+    *   - ESP32 スターターキット
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,75 +48,74 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt`
         - \-
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトのためにESP32ボードで利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - 入力用
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - 出力用
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **条件付き利用ピン（入力）**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
+    以下のピンには内蔵のプルアップまたはプルダウン抵抗があり、 **入力ピンとして使用する場合** 外部の抵抗は必要ありません。
 
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - 条件付き利用ピン
+            - 説明
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - 47Kの抵抗でプルアップして高い値がデフォルトになります。
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - 4.7Kの抵抗でプルアップして高い値がデフォルトになります。
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - 1Kの抵抗でプルダウンして低い値がデフォルトになります。
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイス起動時（電源オンリセット時）に特定のブートモードを決定するために使用される特別なセットのピンです。
 
     
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
     
 
     
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    一般的に、 **入力ピンとして使用することは推奨されません**。これらのピンを使用する場合は、ブートプロセスへの影響を考慮してください。詳細は、:ref:`esp32_strapping` セクションを参照してください。
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.2_tilt.png
 
-When the tilt switch is in an upright position, IO14 will be set to high, resulting in the LED being lit. Conversely, when the tilt switch is tilted, IO14 will be set to low, causing the LED to turn off.
+傾斜スイッチが垂直な位置にある場合、IO14が高く設定され、その結果LEDが点灯します。反対に、傾斜スイッチが傾いている場合、IO14は低く設定され、LEDが消えます。
 
-The purpose of the 10K resistor is to maintain a stable low state for IO14 when the tilt switch is in a tilted position.
+10K抵抗の目的は、傾斜スイッチが傾いている位置にあるときにIO14が安定した低状態を維持することです。
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.2_tilt_switch_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``5.2_tilt_switch.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.2_tilt_switch``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.2_tilt_switch`` のパスの下にあるファイル ``5.2_tilt_switch.ino`` を開くことができます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
 
 .. raw:: html
@@ -125,6 +124,4 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
     
 
 
-After code upload successfully, the LED will be turned on when the switch is upright, and turned off when the switch is tilted.
-
-
+コードのアップロードが成功した後、スイッチが垂直な位置にあるときにLEDが点灯し、傾いたときには消灯します。

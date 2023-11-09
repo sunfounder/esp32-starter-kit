@@ -1,35 +1,34 @@
 .. _cpn_motor:
 
-DC Motor
+DCモータ
 ===================
 
 .. image:: img/image114.jpeg
     :align: center
 
-This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
+これは3VのDCモータです。2つの端子のそれぞれに高レベルと低レベルを供給すると、回転します。
 
-* **Size**: 25*20*15MM
-* **Operation Voltage**: 1-6V
-* **Free-run Current** (3V): 70m
-* **A Free-run Speed** (3V): 13000RPM
-* **Stall Current** (3V): 800mA
-* **Shaft Diameter**: 2mm
+* **サイズ**: 25*20*15MM
+* **動作電圧**: 1-6V
+* **無負荷電流** (3V): 70m
+* **無負荷速度** (3V): 13000RPM
+* **停止電流** (3V): 800mA
+* **シャフト直径**: 2mm
 
-Direct current (DC) motor is a continuous actuator that converts electrical energy into mechanical energy. DC motors make rotary pumps, fans, compressors, impellers, and other devices work by producing continuous angular rotation.
+直流（DC）モータは、電気エネルギーを機械エネルギーに変換する連続アクチュエータです。DCモータは、連続的な角回転を生成することにより、ロータリーポンプ、ファン、圧縮機、インペラーなどの装置を動作させます。
 
-A DC motor consists of two parts, the fixed part of the motor called the **stator** and the internal part of the motor called the **rotor** (or **armature** of a DC motor) that rotates to produce motion.
-The key to generating motion is to position the armature within the magnetic field of the permanent magnet (whose field extends from the north pole to the south pole). The interaction of the magnetic field and the moving charged particles (the current-carrying wire generates the magnetic field) produces the torque that rotates the armature.
+DCモータは、 **stator** と呼ばれるモータの固定部分と、モーションを生み出すために回転するモータの内部部分、すなわち **rotor** （またはDCモータの **アーマチュア** ）の2つの部分で構成されています。
+モーションを生成する鍵は、永久磁石の磁場内（その場が北極から南極まで広がる）にアーマチュアを配置することです。この磁場と動く荷電粒子の相互作用（電流を流すワイヤが磁場を生成する）によってアーマチュアを回転させるトルクが生じます。
 
 .. image:: img/motor_sche.png
     :align: center
 
-Current flows from the positive terminal of the battery through the circuit, through the copper brushes to the commutator, and then to the armature.
-But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
-This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
+電流はバッテリーの正の端子から回路を通って、銅のブラシを通り、コミュテータを経てアーマチュアに流れます。
+しかし、コミュテータには2つの隙間があるため、この流れは完全な回転の途中で逆転します。
+この連続的な逆転は、バッテリーからのDC電源をACに変換することで、アーマチュアが回転を維持するための正しい方向と正しいタイミングでトルクを受け取ることができるようにします。
 
+**例**
 
-**Example**
-
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Arduinoプロジェクト)
+* :ref:`py_motor` (MicroPythonプロジェクト)
+* :ref:`sh_rotating_fan` (Scratchプロジェクト)

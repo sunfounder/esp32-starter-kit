@@ -1,37 +1,37 @@
 .. _ar_line_track:
 
-5.4 Detect the Line
+5.4 ライン検出
 ===================================
 
-The line-tracking module is used to detect the presence of black areas on the ground, such as black lines taped with electrical tape.
+ライン追跡モジュールは、電気テープで貼られた黒線のような地面の黒いエリアの存在を検出するために使用されます。
 
-Its emitter emits appropriate infrared light into the ground, which is relatively absorbed and weakly reflected by black surfaces. The opposite is true for white surfaces. If reflected light is detected, the ground is currently indicated as white. If it is not detected, it is indicated as black.
+その発光体は地面に適切な赤外線を放射し、黒い面はそれを吸収し反射が弱まります。白い面の場合はその逆です。反射光が検出された場合、その部分は白とみなされます。検出されない場合は黒とみなされます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入するととても便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,59 +42,53 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_line_track`
         - |link_line_track_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトでESP32ボードにて利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **ストラッピングピン（入力用）**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    ストラッピングピンは、デバイスの起動時（電源オンリセット時）に特定のブートモードを決定するための特別なピンセットです。
 
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO5, IO0, IO2, IO12, IO15 
-    
 
-    
+    通常、これらのピンを入力ピンとして使用することは **お勧めできません**。これらのピンを使用する場合は、ブートプロセスに与える影響を考慮してください。詳細は :ref:`esp32_strapping` セクションを参照してください。
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
-
-
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.4_line.png
 
-When the line tracking module detects a black line, IO14 returns a high level. On the other hand, when it detects a white line, IO14 returns a low level. You can adjust the blue potentiometer to modify the sensitivity of this module's detection.
+ライン追跡モジュールが黒い線を検出した場合、IO14はハイレベルを返します。白い線を検出した場合、IO14はローレベルを返します。このモジュールの感度を変更するには、青いポテンショメータを調整してください。
 
-
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.4_line_bb.png
     :align: center
     :width: 600
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``5.4_detect_the_line.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.4_detect_the_line``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.4_detect_the_line`` パスの下にあるファイル ``5.4_detect_the_line.ino`` を開いてください。
+    * ボード（ESP32 Dev Module）を選択し、適切なポートを指定した後、 **アップロード** ボタンをクリックしてください。
     * :ref:`unknown_com_port`
    
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fc7f3fe9-179a-4a3a-acbf-a4014faf3920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-If the line tracking module detects a black line after the code has been uploaded successfully, "Black" will be shown in the Serial Monitor. Otherwise, "White" will be printed.
+コードが正常にアップロードされた後、ライン追跡モジュールが黒い線を検出すると、シリアルモニターに「Black」と表示されます。それ以外の場合は「White」と表示されます。

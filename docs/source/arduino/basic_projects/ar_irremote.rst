@@ -1,38 +1,38 @@
 .. _ar_receiver:
 
-5.14 IR Receiver
+5.14 赤外線受信機
 =========================
-An infrared receiver is a component that receives infrared signals and can independently detect and output signals compatible with TTL level. It is similar in size to a regular plastic-packaged transistor and is commonly used in various applications such as infrared remote control and infrared transmission.
+赤外線受信機は、赤外線信号を受信し、TTLレベルと互換性のある信号を独立して検出・出力することができる部品です。一般的なプラスチックパッケージのトランジスタと同じサイズで、赤外線リモコンや赤外線伝送など、様々な応用に利用されています。
 
-In this project, we will use an infrared receiver to detect signals from a remote control. When a button on the remote control is pressed and the infrared receiver receives the corresponding signal, it can decode the signal to determine which button was pressed. By decoding the received signal, we can identify the specific key or command associated with it.
+このプロジェクトでは、リモコンからの信号を検出するために赤外線受信機を使用します。リモコンのボタンを押すと、赤外線受信機が対応する信号を受信し、どのボタンが押されたかを判断するために信号をデコードします。受信した信号をデコードすることで、それに関連する特定のキーまたはコマンドを識別することができます。
 
-The infrared receiver allows us to incorporate remote control functionality into our project, enabling us to interact with and control devices using infrared signals.
+赤外線受信機を用いることで、プロジェクトにリモコン機能を組み込み、赤外線信号を使用してデバイスを操作したり、対話することが可能になります。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのが便利です。以下がリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+個別に以下のリンクから購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    * - コンポーネントの紹介
+      - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,34 +46,34 @@ You can also buy them separately from the links below.
         - |link_receiver_buy|
 
 
-**Available Pins**
+**利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    このプロジェクトにおいてESP32ボード上で利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
-            - IO13, IO12, IO14, IO27, IO26, IO25, IO15, IO0, IO5, IO18, IO19, IO21, IO22, IO23
+        * - 利用可能なピン
+          - IO13, IO12, IO14, IO27, IO26, IO25, IO15, IO0, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.14_receiver.png
 
-When you press a button on the remote control, the infrared receiver detects the signal, and you can use an infrared library to decode it. This decoding process allows you to obtain the key value associated with the button press.
+リモコンのボタンを押すと、赤外線受信機が信号を検出し、赤外線ライブラリを使用してデコードできます。このデコードプロセスにより、ボタンプレスに関連するキー値を取得できます。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.14_ir_receiver_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.14_ir_receiver.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.14_ir_receiver``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.14_ir_receiver`` のパスの下にある ``5.14_ir_receiver.ino`` ファイルを開きます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
-    * The ``IRremoteESP8266`` library is used here, you can install it from the **Library Manager**.
+    * ここでは ``IRremoteESP8266`` ライブラリを使用しています。 **Library Manager** からインストールできます。
 
         .. image:: img/receiver_lib.png
 
@@ -81,16 +81,15 @@ When you press a button on the remote control, the infrared receiver detects the
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/463c8894-00bd-4035-a81c-cad99a7f3731/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, press the different keys on the remote control and you will see the names of these keys appear in the serial monitor.
+コードが正常にアップロードされた後、リモコンの異なるキーを押すと、そのキーの名前がシリアルモニターに表示されます。
 
 .. note::
-    * The ``IRremoteESP8266`` library includes implementations for many different infrared protocols and devices, so the size of the library is relatively large. When the compiler has to process more code, the compilation time will also increase accordingly. Please be patient and wait for the compilation to finish.
-    * The new remote control features a plastic tab at the end to insulate the battery inside. To power up the remote when using it, simply remove this plastic piece.
+    * ``IRremoteESP8266`` ライブラリには多くの異なる赤外線プロトコルとデバイスの実装が含まれているため、ライブラリのサイズは比較的大きいです。コンパイラがより多くのコードを処理する必要があると、コンパイル時間もそれに応じて長くなります。コンパイルが終了するまで、辛抱強くお待ちください。
+    * 新しいリモコンには、内蔵されている電池を絶縁するためのプラスチックタブが端にあります。リモコンを使用する際には、このプラスチック片を取り外すだけです。
 
+**どのように動作するのか？**
 
-**How it works?**
-
-#. This code uses the ``IRremoteESP8266`` library to receive infrared (IR) signals using an IR receiver module.
+#. このコードでは ``IRremoteESP8266`` ライブラリを使用して赤外線（IR）信号を赤外線受信モジュールを用いて受信します。
 
     .. code-block:: arduino
 
@@ -106,7 +105,7 @@ After the code is uploaded successfully, press the different keys on the remote 
         // Create a decode_results object
         decode_results results;
     
-#. In the ``setup()`` function, serial communication is started at a baud rate of 115200, and the IR receiver is enabled using ``irrecv.enableIRIn()``.
+#. ``setup()`` 関数では、シリアル通信を115200のボーレートで開始し、 ``irrecv.enableIRIn()`` を使用してIRレシーバを有効にします。
 
     .. code-block:: arduino
 
@@ -118,7 +117,7 @@ After the code is uploaded successfully, press the different keys on the remote 
             irrecv.enableIRIn();
         }
 
-#. When you press a key on the remote control, the serial monitor will print the key name if it is received by the IR receiver.
+#. リモコンのキーを押すと、IRレシーバが信号を受信した場合にシリアルモニタにキー名が表示されます。
 
     .. code-block:: arduino
 
@@ -134,12 +133,12 @@ After the code is uploaded successfully, press the different keys on the remote 
             }
         }
 
-    * Firstly, check if an IR signal is received using the ``irrecv.decode()`` function. 
-    * If a signal is received, then call the ``decodeKeyValue()`` function to decode the value of the signal. 
-    * If the signal is successfully decoded, the decoded value is printed to the serial monitor using ``Serial.println()``.
-    * Finally, ``irrecv.resume()`` is called to continue to receive the next signal.
+    * 最初に、 ``irrecv.decode()`` 関数を使ってIR信号が受信されたかどうかを確認します。
+    * 信号が受信された場合は、 ``decodeKeyValue()`` 関数を呼び出して信号の値をデコードします。
+    * 信号が正常にデコードされた場合は、 ``Serial.println()`` を使用してシリアルモニタにデコードされた値が出力されます。
+    * 最後に、 ``irrecv.resume()`` を呼び出して次の信号の受信を続けます。
 
-#. The ``decodeKeyValue()`` function takes the decoded value of the IR signal as an argument and returns a string representing the key pressed on the remote control. 
+#. ``decodeKeyValue()`` 関数は、IR信号のデコードされた値を引数として取り、リモコンの押されたキーに対応する文字列を返します。
 
     .. code-block:: arduino
 
@@ -155,5 +154,5 @@ After the code is uploaded successfully, press the different keys on the remote 
                 case 0xFF7A85:
                 ...
 
-    * The function uses a switch statement to match the decoded value with the corresponding key and returns the string representation of the key. 
-    * If the decoded value does not match any known key, the function returns the string "ERROR".
+    * この関数はswitch文を使ってデコードされた値を対応するキーと照合し、そのキーの文字列表現を返します。
+    * デコードされた値が既知のキーに一致しない場合、関数は文字列 "ERROR" を返します。

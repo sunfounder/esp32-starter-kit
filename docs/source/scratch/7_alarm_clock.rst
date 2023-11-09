@@ -1,38 +1,38 @@
 .. _sh_light_alarm:
 
-2.7 Light Alarm Clock
-======================
+2.7 光で制御する目覚まし時計
+=============================
 
-In life, there are various kinds of time alarm clocks. Now let's make a light-controlled alarm clock. When morning comes, the brightness of light increases and this light-controlled alarm clock will remind you that it's time to get up.
+日常生活には様々な種類のアラーム時計がありますが、今回は光を感知して作動するアラーム時計を作ってみましょう。朝になり光の明るさが増すと、この光で制御するアラーム時計が時間になったことを知らせてくれます。
 
 .. image:: img/10_clock.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,55 +47,54 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- Photoresistor working principle
-- Stopping sound playback and stopping scripts from running
+- フォトレジスタの原理
+- 音声再生の停止とスクリプトの実行停止
 
-Build the Circuit
+回路の構築
 -----------------------
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+フォトレジスタまたはフォトセルは、光によって変化する可変抵抗器です。光の強さが増すとフォトレジスタの抵抗値は減少します。
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
-Connect one end of the photoresistor to 5V, the other end to pin35, and connect a 10K resistor in series with GND at this end.
+フォトレジスタの一端を5Vに、もう一端をピン35に接続し、この端に10Kの抵抗をGNDと直列に接続します。
 
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by pin35 becomes larger.
+したがって、光の強度が増すとフォトレジスタの抵抗値は減少し、10K抵抗の分圧は増加し、ピン35から得られる値は大きくなります。
 
 .. image:: img/circuit/8_light_alarm_bb.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Select a sprite**
+**1. スプライトを選択**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+デフォルトのスプライトを削除し、スプライトエリアの右下にある **Choose a Sprite** ボタンをクリックし、検索ボックスに **bell** を入力してからクリックして追加します。
 
 .. image:: img/10_sprite.png
 
-**2. Read the value of pin35**
+**2. ピン35の値を読む**
 
-Create two variables **before** and **current**. When green flag is clicked, read the value of pin35 and store it in variable **before** as a reference value. In [forever], read the value of pin35 again, store it in the variable **current**.
+**before** と **current** の2つの変数を作成します。緑の旗がクリックされたとき、ピン35の値を読み取り、基準値として変数 **before** に保存します。[forever]では、ピン35の値を再度読み取り、変数 **current** に保存します。
 
 .. image:: img/10_reada0.png
 
-**3. Make a sound**
+**3. 音を鳴らす**
 
-When the value of current pin35 is greater than the previous 50, which represents the current light intensity is greater than the threshold, then let the sprite make a sound.
+現在のピン35の値が前回の50よりも大きい場合、つまり現在の光の強度が閾値よりも大きいことを表すため、スプライトに音を出させます。
 
 .. image:: img/10_sound.png
 
-**4. Turning the sprite**
+**4. スプライトを回転させる**
 
-Use [turn block] to make the **bell** sprite turn left and right to achieve the alarm effect.
+[turn block]を使用して、 **bell** スプライトが左右に回転し、アラーム効果を実現します。
 
 .. image:: img/10_turn.png
 
-**5. stop all**
+**5. すべてを止める**
 
-Stops the alarm when it has been ringing for a while.
+アラームがしばらく鳴り続けた後に停止します。
 
 .. image:: img/10_stop.png
-

@@ -1,40 +1,40 @@
 .. _sh_colorful_ball:
 
-2.3 Colorful Balls
+2.3 カラフルボール
 =====================
 
-In this project, we will make the RGB LEDs display different colors.
+このプロジェクトでは、RGB LEDを使用して異なる色を表示します。
 
-Clicking on different colored balls on the stage area will cause the RGB LED to light up in different colors.
+ステージエリアの異なる色のボールをクリックすると、RGB LEDが異なる色で点灯します。
 
 .. image:: img/4_color.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -49,82 +49,79 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_rgb`
         - |link_rgb_led_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- The principle of RGB LED
-- Copy sprites and select different costumes
-- Three primary colors superimposed
+- RGB LEDの原理
+- スプライトのコピーと異なるコスチュームの選択
+- 三原色の重ね合わせ
 
 
-Build the Circuit
+回路の構築
 ---------------------
 
-An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors.
+RGB LEDは、赤、緑、青の3つのLEDを透明または半透明のプラスチックシェルに封入したものです。3つのピンに入力される電圧を変えて重ね合わせることで、様々な色を表示できます。統計によると、16,777,216色の異なる色を作り出すことができます。
 
 .. image:: img/4_rgb.png
     :width: 300
 
 .. image:: img/circuit/3_color_ball_bb.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Select sprite**
+**1. スプライトの選択**
 
 
-Delete the default sprite, then choose the **Ball** sprite.
+デフォルトのスプライトを削除し、その後 **Ball** スプライトを選びます。
 
 .. image:: img/4_ball.png
 
-And duplicate it 5 times.
+そして、それを5回複製します。
 
 .. image:: img/4_duplicate_ball.png
 
-Choose different costumes for these 5 **Ball** sprites and move them to the corresponding positions.
+これら5つの **Ball** スプライトに異なるコスチュームを選び、それぞれの位置に移動させます。
 
 .. note::
 
-    **Ball3** sprite costume color needs to be manually changed to red.
+    **Ball3** スプライトのコスチュームの色は、手動で赤に変更する必要があります。
 
 .. image:: img/4_rgb1.png
     :width: 800
 
-**2. Make RGB LEDs light up in the appropriate color**
+**2. 適切な色でRGB LEDを点灯させる**
 
-Before understanding the code, we need to understand the `RGB color model <https://en.wikipedia.org/wiki/RGB_color_model>`_.
+コードを理解する前に、 `RGBカラーモデル <https://en.wikipedia.org/wiki/RGB_color_model>`_ を理解する必要があります。
 
-The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors. 
+RGBカラーモデルは、赤、緑、青の光をさまざまな方法で組み合わせて広い範囲の色を再現する加法色モデルです。
 
-Additive color mixing: adding red to green yields yellow; adding green to blue yields cyan; adding blue to red yields magenta; adding all three primary colors together yields white.
+加法色混合：赤に緑を加えると黄色になり、緑に青を加えるとシアンになり、青に赤を加えるとマゼンタになり、3つの原色をすべて加えると白になります。
 
 .. image:: img/4_rgb_addition.png
   :width: 400
 
-So the code to make the RGB LED light yellow is as follows.
+したがって、RGB LEDが黄色に点灯するコードは以下の通りです。
 
 .. image:: img/4_yellow.png
 
 
-When the Ball sprite (yellow ball) is clicked, we set pin 27 high (red LED on), pin 26 high (green LED on) and pin 25 low (blue LED off) so that the RGB LED will light yellow.
+ステージのボールスプライト（黄色いボール）をクリックすると、ピン27をハイ（赤色LED点灯）、ピン26をハイ（緑色LED点灯）そしてピン25をロー（青色LED消灯）に設定することで、RGB LEDは黄色に点灯します。
 
-You can write codes to other sprites in the same way to make the RGB LEDs light up in the corresponding colors.
+他のスプライトに対しても同様の方法でコードを書くことで、RGB LEDを対応する色で点灯させることができます。
 
-**3. Ball2 sprite (light blue)**
+**3. ボール2スプライト（水色）**
 
 .. image:: img/4_blue.png
 
-**4. Ball3 sprite (red)**
+**4. ボール3スプライト（赤）**
 
 .. image:: img/4_red.png
 
-**5. Ball4 sprite (green)**
+**5. ボール4スプライト（緑）**
 
 .. image:: img/4_green.png
 
-**6. Ball5 sprite (purple)**
+**6. ボール5スプライト（紫）**
 
 .. image:: img/4_purple.png
-
-
-

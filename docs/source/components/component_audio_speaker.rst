@@ -1,47 +1,44 @@
 .. _cpn_audio_speaker:
 
-Audio Module and Speaker
-===========================
+オーディオモジュールとスピーカー
+================================
 
-**Audio Amplifier Module**
+**オーディオアンプモジュール**
 
 .. image:: img/audio_module.jpg
     :width: 500
     :align: center
 
-Audio Amplifier Module contains a HXJ8002 audio power amplifier chip. This chip is a power amplifier with low power supply, that can provide 3W average audio power for a 3Ω BTL load with low harmonic distortion (under 10% threshold distortion at 1KHz) from a 5V DC power supply. This chip can amplify audio signals without any coupling capacitors or bootstrap capacitors.
+オーディオアンプモジュールには、HXJ8002オーディオパワーアンプチップが含まれています。このチップは低電源のパワーアンプで、5V DC電源から3Ω BTL負荷に対して平均3Wのオーディオパワーを低調波歪（1KHzでの歪みのしきい値が10%未満）で提供することができます。このチップは、結合キャパシタやブートストラップキャパシタを使用せずにオーディオ信号を増幅することができます。
 
-The module can be supplied by a 2.0V up to 5.5V DC with 10mA operating current (0.6uA for typical standby current) power source and produce a powerful amplified sound into a 3Ω, 4Ω, or 8Ω impedance speaker. This module has an improved pop and clicks circuitry for reducing significantly the transition nose at the powering on and off moment. Tiny size besides high efficiency and low power supplying make it applicable in widely portable and battery-powered projects and microcontrollers.  
-
+このモジュールは、2.0Vから5.5V DCの電源で供給され、10mAの動作電流（典型的なスタンバイ電流は0.6uA）を使用して、3Ω、4Ω、8Ωのインピーダンスを持つスピーカーにパワフルな増幅音を生成することができます。このモジュールには、電源のオン/オフ時の遷移ノイズを大幅に減少させるための改良されたポップとクリック回路があります。その小さなサイズと高効率、低電源供給は、広範なポータブルおよび電池駆動プロジェクトやマイクロコントローラでの利用を可能にします。
 
 * **IC**: HXJ8002
-* **Input Voltage**: 2V ~ 5.5V
-* **Standby Mode Current**: 0.6uA (typical value)
-* **Output Power**: 3W (3Ω load) , 2.5W (4Ω load) , 1.5W (8Ω load)
-* **Output Speaker Impedance**: 3Ω, 4Ω, 8Ω
-* **Size**: 19.8mm x 14.2mm
+* **入力電圧**: 2V ~ 5.5V
+* **スタンバイモード電流**: 0.6uA（典型値）
+* **出力電力**: 3W (3Ω 負荷), 2.5W (4Ω 負荷), 1.5W (8Ω 負荷)
+* **出力スピーカーインピーダンス**: 3Ω, 4Ω, 8Ω
+* **サイズ**: 19.8mm x 14.2mm
 
-**Speaker**
+**スピーカー**
 
 .. image:: img/speaker_pic.png
     :width: 300
     :align: center
 
-* **Size**: 20x30x7mm
-* **Impedance**：8ohm
-* **Rate Input Power**: 1.5W 
-* **Max Input Power**: 2.0W
-* **Wire Length**: 10cm
+* **サイズ**: 20x30x7mm
+* **インピーダンス**：8ohm
+* **定格入力電力**: 1.5W 
+* **最大入力電力**: 2.0W
+* **ワイヤ長**: 10cm
 
 .. image:: img/2030_speaker.png
 
-The size chart is as follows：
+以下はサイズチャートです：
 
 * :download:`2030 Speaker Datasheet <https://github.com/sunfounder/sf-pdf/raw/master/datasheet/2030-speaker-datasheet.pdf>`
 
+**例**
 
-**Example**
-
-* :ref:`ar_mp3_player_sd` (Arduino Project)
-* :ref:`bluetooth_audio_player` (Arduino Project)
-
+* :ref:`ar_mp3_player_sd` (Arduinoプロジェクト)
+* :ref:`bluetooth_audio_player` (Arduinoプロジェクト)

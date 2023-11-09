@@ -1,35 +1,35 @@
 .. _ar_potentiometer:
 
-5.8 Turn the Knob
+5.8 ノブを回す
 ===================
 
-A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
+ポテンショメータは、回路の抵抗を調節するために一般的に使用される3端子デバイスです。これにはノブまたはスライディングレバーが備えられており、ポテンショメータの抵抗値を変化させることができます。このプロジェクトでは、日常生活のデスクランプのように、LEDの明るさを制御するためにそれを活用します。ポテンショメータの位置を調整することにより、回路の抵抗を変更し、それによってLEDを流れる電流を調節し、その明るさを適宜調整することができます。これにより、デスクランプのようなカスタマイズ可能で調節可能な照明体験を作り出すことができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入するのは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+また、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,59 +46,59 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO14, IO25, I35, I34, I39, I36
 
-* **Strapping Pins**
+* **ストラッピングピン**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    以下のピンはストラッピングピンであり、電源オンまたはリセット時のESP32の起動プロセスに影響を与えます。しかし、ESP32が正常に起動した後、通常のピンとして使用できます。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO0, IO12
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.8_potentiometer.png
 
-When you rotate the potentiometer, the value of I35 will change. By programming, you can use the value of I35 to control the brightness of the LED. Therefore, as you rotate the potentiometer, the brightness of the LED will also change accordingly.
+ポテンショメータを回すと、I35の値が変わります。プログラミングにより、I35の値を使用してLEDの明るさを制御できます。そのため、ポテンショメータを回すと、LEDの明るさもそれに応じて変化します。
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
-**Code**
+**コード**
 
 
 .. note::
 
-    * You can open the file ``5.8_pot.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.8_pot``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\5.8_pot`` のパスの下にあるファイル ``5.8_pot.ino`` を開くことができます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
    
 .. raw:: html
      
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aadce2e7-fd5d-4608-a557-f1e4d07ba795/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, rotate the potentiometer and you will see the brightness of the LED change accordingly. At the same time you can see the analog and voltage values of the potentiometer in the serial monitor.
+コードが正常にアップロードされた後、ポテンショメータを回すと、LEDの明るさがそれに応じて変わるのが見えます。同時に、シリアルモニタでポテンショメータのアナログ値と電圧値を確認できます。
 
 
-**How it works?**
+**どのように動作するのか？**
 
-#. Define constants for pin connections and PWM settings.
+#. ピン接続とPWM設定のための定数を定義します。
 
     .. code-block:: arduino
 
@@ -110,9 +110,9 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
         const int resolution = 12; // PWM resolution (bits)
         const int channel = 0; // PWM channel
 
-    Here the PWM resolution is set to 12 bits and the range is 0-4095.
+    ここではPWMの解像度を12ビットに設定し、範囲は0-4095になります。
 
-#. Configure the system in the ``setup()`` function.
+#. ``setup()`` 関数でシステムを構成します。
 
     .. code-block:: arduino
 
@@ -124,10 +124,10 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             ledcAttachPin(ledPin, channel);
         }
 
-    * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcSetup()`` function is called to set up the PWM channel with the specified frequency and resolution, and the ``ledcAttachPin()`` function is called to associate the specified LED pin with the PWM channel.
+    * ``setup()`` 関数では、ボーレート115200でシリアル通信を開始します。
+    * 指定された周波数と解像度でPWMチャンネルを設定するために ``ledcSetup()`` 関数が呼び出され、指定されたLEDピンをPWMチャンネルに関連付けるために ``ledcAttachPin()`` 関数が呼び出されます。
 
-#. Main loop (executed repeatedly) in the loop() function.
+#. ``loop()`` 関数のメインループ（繰り返し実行される）。
 
     .. code-block:: arduino
 
@@ -147,9 +147,9 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             delay(100);
         }
 
-    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: This function is used to get ADC value for a given pin/ADC channel in millivolts.
+    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: この関数は指定されたピン/ADCチャンネルのADC値をミリボルト単位で取得するために使用されます。
 
-        * ``pin`` GPIO pin to read analog value.
+        * ``pin`` アナログ値を読むGPIOピン。
 
-    The potentiometer value is directly used as the PWM duty cycle for controlling the LED brightness via the ``ledcWrite()`` function, as the range of values is also from 0 to 4095.
+    ポテンショメータの値は ``ledcWrite()`` 関数を通じてLEDの明るさを制御するPWMデューティサイクルとして直接使用されます。値の範囲も0から4095です。
 

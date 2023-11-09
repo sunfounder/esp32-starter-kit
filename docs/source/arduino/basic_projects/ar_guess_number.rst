@@ -1,41 +1,40 @@
 .. _ar_guess_number:
 
-6.7 Guess Number
+6.7 数当てゲーム
 ==================
-Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
+運試しをしたいですか？直感を試して、正しい番号を当てられるかどうか確かめたいですか？それなら、数当てゲームがぴったりです！
 
-With this project, you can play a fun and exciting game of chance.
+このプロジェクトでは、偶然性の高い楽しいゲームを楽しむことができます。
 
-Using an IR remote control, players input numbers between 0 and 99 to try and guess the randomly generated lucky point number. 
-The system displays the player's input number on an LCD screen, along with upper and lower limit tips to help guide the 
-player towards the right answer. With every guess, players get closer to the lucky point number, 
-until finally, someone hits the jackpot and wins the game!
+IRリモコンを使用して、プレイヤーは0から99の間の数字を入力し、ランダムに生成される幸運なポイントナンバーを当てます。
+システムはLCDスクリーンにプレイヤーの入力した数字を表示し、上限と下限のヒントを提供して正解に導きます。
+推測するたびに、プレイヤーは幸運なポイントナンバーに近づき、ついに誰かがジャックポットを当ててゲームに勝利します！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キットを一式揃えると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,43 +49,40 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.7_guess_number.png
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``6.7_guess_number.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.7_guess_number`` directly.
-    * The ``LiquidCrystal_I2C`` and  ``IRremoteESP8266`` libraries are used here, refer to :ref:`install_lib_man` for a tutorial to install.
-
+    * ``6.7_guess_number.ino`` ファイルを ``esp32-starter-kit-main\c\codes\6.7_guess_number`` のパスで直接開けます。
+    * こちらでは ``LiquidCrystal_I2C`` と ``IRremoteESP8266`` ライブラリーを使用しています。インストール方法は :ref:`install_lib_man` を参照してください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2e4217f5-c1b7-4859-a34d-d791bbc5e57a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-    
-* After the code is successfully uploaded, press any number button on the remote control to start the game.
-* Input a number using the number buttons on the remote control. To input a single digit, you need to press the **cycle** key to confirm.
-* The system will show the input number and the upper and lower limit tips on the LCD screen.
-* Keep guessing until you correctly guess the lucky point number.
-* After a successful guess, the system will show a success message and generate a new lucky point number.
+* コードが正常にアップロードされた後、リモコンの任意の数字ボタンを押してゲームを開始します。
+* リモコンの数字ボタンを使用して数字を入力します。1桁の数字を入力するには、 **サイクル** キーを押して確認する必要があります。
+* システムは、入力された数字と上下限のヒントをLCDスクリーンに表示します。
+* 幸運なポイントナンバーを正確に当てるまで推測を続けます。
+* 正しい数字を当てると、システムは成功メッセージを表示し、新しい幸運なポイントナンバーを生成します。
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    コードと配線が正しいにもかかわらず、LCDが何も表示されない場合は、背面のポテンショメーターを調整してコントラストを高めることができます。
 
 
-**How it works?**
+**どのように動作するのか？**
 
-#. In the ``setup()`` function, the I2C LCD screen and IR receiver are initialized. Then call the ``initNewValue()`` function to generate a new random lucky number, and a welcome message is displayed on the LCD screen.
+#. ``setup()`` 関数では、I2C LCD画面とIR受信機が初期化されます。次に ``initNewValue()`` 関数を呼び出して新しいランダムな幸運の番号を生成し、LCD画面に歓迎メッセージが表示されます。
 
     .. code-block:: arduino
 
@@ -105,7 +101,7 @@ You can also buy them separately from the links below.
             initNewValue();
         }
 
-#. In the ``loop`` function, the code waits for a signal from the IR receiver. When a signal is received, the ``decodeKeyValue`` function is called to decode the signal and get the corresponding button value.
+#. ``loop`` 関数では、IR受信機からの信号を待ちます。信号が受信された場合には、 ``decodeKeyValue`` 関数が呼び出されて信号をデコードし、対応するボタンの値を取得します。
 
     .. code-block:: arduino
 
@@ -141,7 +137,8 @@ You can also buy them separately from the links below.
         }
         }
 
-    * Depending on the button value, the appropriate function is called. If a number button is pressed, the ``count`` variable is updated, and the ``detectPoint`` function is called to detect if the input number is correct. The ``lcdShowInput`` function is called to show the input number and the upper and lower limit tips on the LCD screen.
-    * If the ``POWER`` button is pressed, the ``initNewValue`` function is called to generate a new lucky point number and show the welcome message on the LCD screen.
-    * If the ``CYCLE`` button is pressed, the ``detectPoint`` function is called to detect if the input number is correct. The ``lcdShowInput`` function is called to show the input number and the upper and lower limit tips on the LCD screen.
+    * ボタンの値に応じて、適切な関数が呼び出されます。数字ボタンが押された場合は、 ``count`` 変数が更新され、 ``detectPoint`` 関数が呼び出されて入力された番号が正しいかどうかを検出します。 ``lcdShowInput`` 関数が呼び出され、LCD画面に入力された番号と上下限のヒントが表示されます。
+    * ``POWER`` ボタンが押された場合は、 ``initNewValue`` 関数が呼び出されて新しい幸運のポイント番号を生成し、LCD画面に歓迎メッセージを表示します。
+    * ``CYCLE`` ボタンが押された場合は、 ``detectPoint`` 関数が呼び出されて入力された番号が正しいかどうかを検出します。 ``lcdShowInput`` 関数が呼び出され、LCD画面に入力された番号と上下限のヒントが表示されます。
+
 

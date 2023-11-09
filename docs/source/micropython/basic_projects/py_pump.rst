@@ -1,37 +1,37 @@
 .. _py_pump:
 
-4.2 Pumping
+4.2 ポンピング
 =======================
 
-In this intriguing project, we will delve into controlling a water pump using the L293D.
+この興味深いプロジェクトでは、L293Dを使用して水ポンプを制御する方法について掘り下げていきます。
 
-In the realm of water pump control, things are a bit simpler compared to controlling other motors. The beauty of this project lies in its simplicity - there's no need to worry about the direction of rotation. Our primary goal is to successfully activate the water pump and keep it running.
+水ポンプ制御の領域では、他のモーターを制御するよりも少し単純です。このプロジェクトの美しさはそのシンプルさにあります - 回転の方向について心配する必要はありません。私たちの主な目標は、水ポンプを成功させて稼働させ続けることです。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,36 +46,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
 
-**Wiring**
+**配線図**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
-
+    バッテリーを挿入し、拡張ボード上のスイッチをON位置にスライドしてバッテリー供給をアクティブにすることを推奨します。
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``4.2_pumping.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``4.2_pumping.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。
 
 
 
@@ -110,5 +109,5 @@ Here is a list of available pins on the ESP32 board for this project.
 
 
 
+スクリプト実行中は、ポンプが稼働し、チューブから水が出てきて、2秒間停止した後、再び稼働を開始するのを見ることができます。
 
-During the script execution, you will see the pump working and water coming out of the tube, then stopping for 2 seconds before starting to work again.

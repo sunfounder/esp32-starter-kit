@@ -1,41 +1,41 @@
 .. _py_light_theremin:
 
-6.3 Light Theremin
+6.3 光セラミン
 =========================
 
-Theremin is an electronic musical instrument that does not require physical contact. Based on the position of the player's hand, it produces different tones.
+セラミンは物理的な接触を必要としない電子楽器です。プレイヤーの手の位置に基づいて、異なるトーンを生み出します。
 
-Its controlling section is usually made up of two metal antennas that sense the position of the thereminist's hands and control oscillators with one hand and volume with the other. The electric signals from the theremin are amplified and sent to a loudspeaker.
+通常、セラミン奏者の手の位置を感知してオシレータを制御する2つの金属アンテナで構成されており、一方の手で音程を、もう一方の手で音量をコントロールします。セラミンからの電気信号は増幅され、スピーカーに送られます。
 
-We cannot reproduce the same instrument through ESP32, but we can use photoresistor and passive buzzer to achieve similar gameplay.
+ESP32を通じて同じ楽器を再現することはできませんが、フォトレジスタとパッシブブザーを使用して似たようなゲームプレイを実現することができます。
 
-* `Theremin - Wikipedia <https://en.wikipedia.org/wiki/Theremin>`_
+* `セラミン - Wikipedia <https://en.wikipedia.org/wiki/Theremin>`_
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -56,28 +56,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.3_light_theremin.png
 
-Before starting the project, calibrate the range of light intensity by waving your hand over the photoresistor. The LED connected to IO26 is used as an indicator during the calibration process. When the LED is lit, it signifies the start of calibration, and when it is turned off, it indicates the end of calibration.
+プロジェクトを始める前に、フォトレジスタの上で手を振って光の強度の範囲を調整します。IO26に接続されたLEDは、調整プロセス中のインジケータとして使用されます。LEDが点灯すると調整の開始を、消灯すると調整の終了を示します。
 
-As you wave your hand over the photoresistor, the value of the photoresistor will change accordingly. 
-Utilize this change to control the buzzer and play different musical notes. 
-Each variation in the photoresistor's value can be mapped to a specific musical note, allowing 
-the buzzer to produce a melody as you wave your hand over the photoresistor.
+フォトレジスタの上で手を振ると、フォトレジスタの値がそれに応じて変化します。
+この変化を利用してブザーを制御し、異なる音楽ノートを演奏します。
+フォトレジスタの値の各変化を特定の音楽ノートにマッピングし、
+フォトレジスタの上で手を振るとブザーがメロディを生み出します。
 
-
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.3_theremin_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.3_light_theremin.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``6.3_light_theremin.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
 
 .. code-block:: python
@@ -129,12 +128,10 @@ the buzzer to produce a melody as you wave your hand over the photoresistor.
         time.sleep_ms(10)
 
 
-Upon starting the program, the LED turns on, providing us with a five-second window to calibrate the photoresistor's detection range.
+プログラムを開始すると、LEDが点灯し、フォトレジスタの検出範囲を調整するための5秒間のウィンドウが提供されます。
 
-Calibration is a crucial step as it accounts for various lighting conditions that we may encounter while using the device, 
-such as varying light intensities during different times of the day. 
-Additionally, the calibration process takes into account the distance between our hands 
-and the photoresistor, which determines the playable range of the instrument.
+調整は、デバイスを使用する際に遭遇する可能性のある様々な照明条件（例えば、一日の異なる時間帯における光の強度の変化など）を考慮するため、非常に重要なステップです。
+さらに、調整プロセスでは、私たちの手とフォトレジスタの間の距離を考慮に入れます。これにより楽器の演奏可能範囲が決まります。
 
-Once the calibration period is over, the LED turns off, indicating that we can now play the instrument by waving our hands over the photoresistor. 
-This setup enables us to create music by adjusting the height of our hands, providing an interactive and enjoyable experience.
+調整期間が終了すると、LEDが消え、フォトレジスタの上で手を振ることで楽器を演奏できるようになります。
+この設定により、手の高さを調整して音楽を作ることができ、インタラクティブで楽しい体験を提供します。

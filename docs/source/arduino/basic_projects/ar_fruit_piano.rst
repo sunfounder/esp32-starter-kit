@@ -1,37 +1,37 @@
 .. _ar_fruit_piano:
 
-6.1 Fruit Piano
+6.1 フルーツピアノ
 ====================
 
-Have you ever wanted to play the piano but couldn't afford one? Or maybe you just want to have some fun with diy a fruit piano? Well, this project is for you! 
+ピアノを弾いてみたいけど手が出ない、あるいはDIYでフルーツピアノを楽しみたいと思ったことはありませんか？ そんなあなたにぴったりのプロジェクトです！
 
-With just a few touch sensors on the ESP32 board, you can now play your favorite tunes and enjoy the experience of playing the piano without breaking the bank.
+ESP32ボードにいくつかのタッチセンサーを取り付けるだけで、お気に入りの曲を演奏し、銀行を壊さずにピアノの演奏体験を楽しむことができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一つに買うのは非常に便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,17 +46,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**About the Touch Pins**
+**タッチピンについて**
 
-The ESP32 microcontroller has built-in touch sensor functionality, which allows you to use certain pins on the board 
-as touch-sensitive inputs. The touch sensor works by measuring changes in capacitance on the touch pins, 
-which are caused by the electrical properties of the human body.
+ESP32マイクロコントローラーには内蔵のタッチセンサー機能があり、ボード上の特定のピンをタッチ感度のある入力として使用できます。タッチセンサーは、人体の電気的特性によって引き起こされるタッチピン上の静電容量の変化を測定することで動作します。
 
-Here are some key features of the touch sensor on the ESP32:
+ESP32のタッチセンサーの主な特徴は以下の通りです：
 
-* **Number of touch pins**
+* **タッチピンの数**
 
-    The ESP32 has up to 10 touch pins, depending on the specific board. The touch pins are typically labeled with a "T" followed by a number.
+    ESP32には、ボードによって最大10個のタッチピンがあります。タッチピンは通常、「T」に続く数字でラベル付けされます。
 
     * GPIO4: TOUCH0
     * GPIO0：TOUCH1
@@ -70,68 +68,66 @@ Here are some key features of the touch sensor on the ESP32:
     * GPIO32: TOUCH9
 
     .. note::
-        The GPIO0 and GPIO2 pins are used for bootstrapping and flashing firmware to the ESP32, respectively. These pins are also connected to the onboard LED and button. Therefore, it is generally not recommended to use these pins for other purposes, as it could interfere with the normal operation of the board.
+        GPIO0ピンとGPIO2ピンは、それぞれESP32にブートストラッピングとファームウェアのフラッシングに使用されます。これらのピンはオンボードのLEDとボタンにも接続されています。そのため、これらのピンを他の目的で使用することは通常お勧めできません。なぜなら、ボードの通常の操作に干渉する可能性があるからです。
 
-* **Sensitivity**
+* **感度**
 
-    The touch sensor on the ESP32 is very sensitive and can detect even small changes in capacitance. The sensitivity can be adjusted using software settings.
+    ESP32のタッチセンサーは非常に敏感で、小さな静電容量の変化も検出できます。感度はソフトウェア設定で調整することができます。
 
-* **ESD Protection**
+* **ESD保護**
 
-    The touch pins on the ESP32 have built-in ESD (Electrostatic Discharge) protection, which helps to prevent damage to the board from static electricity.
+    ESP32のタッチピンには内蔵のESD（静電気放電）保護機能があり、静電気からボードを保護するのに役立ちます。
 
-* **Multitouch**
+* **マルチタッチ**
 
-    The touch sensor on the ESP32 supports multitouch, which means that you can detect multiple touch events simultaneously.
+    ESP32のタッチセンサーはマルチタッチをサポートしており、同時に複数のタッチイベントを検出できます。
 
-
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.1_fruit_piano.png
 
-The idea behind this project is to use touch sensors to detect when a user touches a specific pin. 
-Each touch pin is associated with a specific note, and when the user touches a pin, 
-the corresponding note is played on the passive buzzer. 
-The result is a simple and affordable way to enjoy the experience of playing the piano.
+このプロジェクトのアイデアは、タッチセンサーを使用してユーザーが特定のピンに触れたときを検出することです。
+各タッチピンは特定の音符に関連付けられており、ユーザーがピンに触れると、
+対応する音符がパッシブブザーで鳴ります。
+これにより、ピアノ演奏の体験を手軽でお手頃な方法で楽しむことができます。
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-**Code**
-
+**コード**
 
 .. note::
 
-    * You can open the file ``6.1_fruit_piano.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.1_fruit_piano`` directly.
-    * Or copy this code into Arduino IDE.
+    * ``esp32-starter-kit-main\c\codes\6.1_fruit_piano`` のパスの下にあるファイル ``6.1_fruit_piano.ino`` を直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/3e06ce6c-268a-4fdc-99d0-6d74f68265e2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-You can connect fruits to these ESP32 pins: 4, 15, 13, 12, 14, 27, 33, 32.
+これらのESP32のピンにフルーツを接続できます: 4, 15, 13, 12, 14, 27, 33, 32。
 
-When the script runs, touching these fruits will play the notes C, D, E, F, G, A, B and C5.
+スクリプトが実行されると、これらのフルーツに触れると、ド、レ、ミ、ファ、ソ、ラ、シ、ド（C5）の音が鳴ります。
 
-**How it works?**
+**どのように動作するのか？**
 
 * ``touchRead(uint8_t pin);``
 
-    This function gets the touch sensor data. Each touch sensor has a counter to count the number of charge/discharge cycles. 
-    When the pad is **touched**, the value in the counter will change because of the larger equivalent capacitance. 
-    The change of the data determines if the pad has been touched or not.
+    この関数はタッチセンサーのデータを取得します。各タッチセンサーには、充放電サイクルの数を数えるカウンターがあります。
+    パッドが **触れられた** 場合、相当する静電容量が大きくなるため、カウンター内の値が変わります。
+    データの変化によって、パッドが触れられたかどうかが決まります。
 
-    * ``pin`` GPIO pin to read TOUCH value
+    * ``pin`` TOUCH値を読み取るGPIOピン
 
-    This function returns a value between 0 and 4095, with a lower value indicating a stronger touch input.
+    この関数は0から4095の値を返し、値が低いほど強いタッチ入力を示します。
 
 .. note::
-    ``threshold`` needs to be adjusted based on the conductivity of different fruits. 
+    ``threshold`` は異なるフルーツの導電性に基づいて調整する必要があります。
     
-    You can run the script first to see the values printed by the shell.
+    最初にスクリプトを実行して、シェルによって印刷される値を確認できます。
 
     .. code-block::
 
@@ -145,7 +141,7 @@ When the script runs, touching these fruits will play the notes C, D, E, F, G, A
       7: 82
 
 
-    After touching the fruits on pins 12, 14, and 27, the printed values are as follows. Therefore, I set the ``threshold`` to 30, which means that when a value less than 30 is detected, it is considered to be touched, and the buzzer will emit different notes.
+    12、14、27番のピンにあるフルーツに触れた後、印刷される値は以下の通りです。そのため、 ``threshold`` を30に設定しました。これは、30未満の値が検出されたときに触れたと見なされ、ブザーが異なる音符を発することを意味します。
     
     .. code-block::
 

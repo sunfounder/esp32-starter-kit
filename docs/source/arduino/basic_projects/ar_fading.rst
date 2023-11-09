@@ -1,39 +1,39 @@
 .. _ar_fading:
 
-2.2 Fading
-=================
+2.2 フェーディング
+=====================
 
-In the previous project, we controlled the LED by turning it on and off using digital output. In this project, we will create a breathing effect on the LED by utilizing Pulse Width Modulation (PWM). PWM is a technique that allows us to control the brightness of an LED or the speed of a motor by varying the duty cycle of a square wave signal.
+前回のプロジェクトでは、デジタル出力を使用してLEDをオン/オフすることで制御しました。今回のプロジェクトでは、パルス幅変調（PWM）を活用してLEDに呼吸効果を作り出します。PWMは、正方形波信号のデューティ比を変えることで、LEDの明るさやモーターの速度を制御する技術です。
 
-With PWM, instead of simply turning the LED on or off, we will be adjusting the amount of time the LED is on versus the amount of time it is off within each cycle. By rapidly switching the LED on and off at varying intervals, we can create the illusion of the LED gradually brightening and dimming, simulating a breathing effect.
+PWMでは、LEDを単純にオン/オフする代わりに、各サイクル内でLEDがオンになる時間とオフになる時間の割合を調整します。LEDを迅速にオン/オフする間隔を変えながら切り替えることで、LEDが徐々に明るくなったり暗くなったりする錯覚を生み出し、呼吸効果を模倣します。
 
-By using the PWM capabilities of the ESP32 WROOM 32E, we can achieve smooth and precise control over the LED's brightness. This breathing effect adds a dynamic and visually appealing element to your projects, creating an eye-catching display or ambiance.
+ESP32 WROOM 32EのPWM機能を使用することで、LEDの明るさをスムーズかつ正確に制御できます。この呼吸効果は、プロジェクトにダイナミックで視覚的に魅力的な要素を加え、目を引くディスプレイや雰囲気を作り出します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,48 +48,48 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+こちらは、このプロジェクトのためのESP32ボード上で利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This project is the same circuit as the first project :ref:`ar_blink`, but the signal type is different. The first project is to output digital high and low levels (0&1) directly from pin26 to make the LED light up or turn off, this project is to output PWM signal from pin26 to control the brightness of the LED.
+このプロジェクトは最初のプロジェクト :ref:`ar_blink` と同じ回路ですが、シグナルタイプが異なります。最初のプロジェクトはピン26からデジタルの高/低レベル（0&1）を直接出力してLEDを点灯/消灯させるもので、このプロジェクトはピン26からPWM信号を出力してLEDの明るさを制御します。
 
 
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``2.2_fading_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.2_fading_led``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ファイル ``2.2_fading_led.ino`` をパス ``esp32-starter-kit-main\c\codes\2.2_fading_led`` 以下から開けます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **Upload** ボタンをクリックします。
     * :ref:`unknown_com_port`
    
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aa898b09-be86-473b-9bfe-317556c696bb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you can see the LED breathing.
+コードのアップロードに成功すると、LEDが呼吸するのを見ることができます。
 
-**How it works？**
+**どのように動作するのか？**
 
 
-#. Define constants and variables。
+#. 定数と変数を定義します。
 
     .. code-block:: arduino
 
@@ -97,11 +97,11 @@ After the code is uploaded successfully, you can see the LED breathing.
         int brightness = 0;
         int fadeAmount = 5;
    
-    * ``ledPin``: The GPIO pin number where the LED is connected (in this case, GPIO 26).
-    * ``brightness``: The current brightness level of the LED (initially set to 0).
-    * ``fadeAmount``: The amount by which the LED's brightness will change in each step (set to 5).
+    * ``ledPin``: LEDが接続されているGPIOピン番号（ここではGPIO 26）。
+    * ``brightness``: LEDの現在の明るさレベル（初期設定は0）。
+    * ``fadeAmount``: 各ステップでLEDの明るさが変わる量（5に設定）。
 
-#. Initializes the PWM channel and configures the LED pin.
+#. PWMチャンネルを初期化し、LEDピンを設定します。
 
     .. code-block:: arduino
 
@@ -110,25 +110,24 @@ After the code is uploaded successfully, you can see the LED breathing.
             ledcAttachPin(ledPin, 0); // Attach the LED pin to the PWM channel
         }
 
-    Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
+    ここでは |link_ledc| （LED制御）周辺機器を使用します。これは主にLEDの明るさを制御するために設計されていますが、他の目的でPWM信号を生成するためにも使用できます。
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
+    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: この関数はLEDCチャンネルの周波数と解像度を設定するために使用されます。LEDCチャンネルに対して設定された``frequency``を返します。0が返された場合はエラーが発生し、LEDCチャンネルが設定されませんでした。
             
-        * ``channel`` select LEDC channel to config.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
+        * ``channel`` 設定するLEDCチャンネルを選択します。
+        * ``freq`` PWMの周波数を選択します。
+        * ``resolution_bits`` LEDCチャンネルの解像度を選択します。範囲は1-14ビットです（ESP32の場合は1-20ビット）。
 
+    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: この関数はピンをLEDCチャンネルにアタッチするために使用されます。
 
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
+        * ``pin`` GPIOピンを選択します。
+        * ``chan`` LEDCチャンネルを選択します。
 
-        * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
-
-#. The ``loop()`` function contains the main logic of the program and runs continuously. It updates the LED's brightness, inverts the fade amount when the brightness reaches the minimum or maximum value, and introduces a delay.
+#. ``loop()`` 関数にはプログラムの主要なロジックが含まれており、連続して実行されます。LEDの明るさを更新し、明るさが最小値または最大値に到達した際にfadeAmountを反転させ、遅延を導入します。
 
     .. code-block:: arduino
 
-        void loop() {
+       void loop() {
             ledcWrite(0, brightness); // Write the new brightness value to the PWM channel
             brightness = brightness + fadeAmount;
 
@@ -139,7 +138,7 @@ After the code is uploaded successfully, you can see the LED breathing.
             delay(50); // Wait for 20 milliseconds
             }
 
-    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: This function is used to set duty for the LEDC channel.
+    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: この関数はLEDCチャンネルのデューティを設定するために使用されます。
         
-        * ``chan`` select the LEDC channel for writing duty.
-        * ``duty`` select duty to be set for selected channel.
+        * ``chan`` デューティを設定するLEDCチャンネルを選択します。
+        * ``duty`` 選択されたチャンネルに設定するデューティを選択します。

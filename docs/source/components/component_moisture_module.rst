@@ -1,42 +1,39 @@
 .. _cpn_soil_moisture:
 
-Soil Moisture Module
+土壌湿度モジュール
 ================================
 
 .. image:: img/soil_mositure.png
 
-* GND: Ground
-* VCC: Power supply, 3.3v~5V
-* AOUT: Outputs the soil moisture value, the wetter the soil, the smaller its value.
+* GND: グラウンド
+* VCC: 電源供給、3.3v〜5V
+* AOUT: 土壌の湿度値を出力します。土壌が湿っているほど、その値は小さくなります。
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture. It avoids the problem that resistive sensors are highly susceptible to corrosion and greatly extends its working life.
+この容量性土壌湿度センサーは、市場のほとんどの抵抗型センサーとは異なり、容量性感応の原理を使用して土壌の湿度を検出します。抵抗型センサーが腐食に非常に敏感である問題を回避し、作業寿命を大幅に延長します。
 
+腐食に耐性のある材料で作られており、優れた耐久性があります。植物の周りの土に挿入して、リアルタイムで土壌の湿度データを監視します。モジュールには、3.3〜5.5 Vの電圧範囲で動作するためのオンボード電圧レギュレータが含まれています。3.3 Vと5 Vの供給を持つ低電圧のマイクロコントローラに適しています。
 
-It is made of corrosion-resistant materials and has an excellent service life. Insert it into the soil around plants and monitor real-time soil moisture data. The module includes an on-board voltage regulator that allows it to operate over a voltage range of 3.3 ~ 5.5 V. It is ideal for low-voltage microcontrollers with 3.3 V and 5 V supplies.
-
-The hardware schematic of the capacitive soil moisture sensor is shown below.
+容量性土壌湿度センサーのハードウェア回路図は以下の通りです。
 
 .. image:: img/solid_schematic.png
 
-There is a fixed frequency oscillator, which is built with a 555 timer IC. The generated square wave is then fed to the sensor like a capacitor. However, for the square wave signal, the capacitor has a certain reactance or, for the sake of argument, a resistor with a pure ohmic resistor (10k resistor on pin 3) to form a voltage divider.
+固定周波数の発振器があり、これは555タイマーICで構築されています。生成された方形波は、コンデンサのようなセンサに供給されます。ただし、方形波信号に対して、コンデンサは一定のリアクタンスを持っています。または、議論のために、純粋なオーム抵抗（ピン3の10k抵抗）を持つ抵抗器で電圧分割を形成します。
 
-The higher the soil moisture, the higher the capacitance of the sensor. As a result, the square wave has less reactance, which reduces the voltage on the signal line, and the smaller the value of the analog input through the microcontroller.
+土壌の湿度が高いほど、センサの容量が高くなります。その結果、方形波のリアクタンスが減少し、信号線上の電圧が減少し、マイクロコントローラを通したアナログ入力の値が小さくなります。
 
+**仕様**
 
-**Specification**
+* 動作電圧: 3.3〜5.5 VDC
+* 出力電圧: 0〜3.0VDC
+* 動作電流: 5mA
+* インターフェース: PH2.0-3P
+* 寸法: 3.86 x 0.905 インチ (L x W)
+* 重量: 15g
 
-* Operating Voltage: 3.3 ~ 5.5 VDC
-* Output Voltage: 0 ~ 3.0VDC
-* Operating Current: 5mA
-* Interface: PH2.0-3P
-* Dimensions: 3.86 x 0.905 inches (L x W)
-* Weight: 15g
+**例**
 
-**Example**
-
-* :ref:`ar_moisture` (Arduino Project)
-* :ref:`ar_plant_monitor` (Arduino Project)
-* :ref:`py_moisture` (MicroPython Project)
-* :ref:`py_plant_monitor` (MicroPython Project)
-
+* :ref:`ar_moisture` (Arduinoプロジェクト)
+* :ref:`ar_plant_monitor` (Arduinoプロジェクト)
+* :ref:`py_moisture` (MicroPythonプロジェクト)
+* :ref:`py_plant_monitor` (MicroPythonプロジェクト)
 

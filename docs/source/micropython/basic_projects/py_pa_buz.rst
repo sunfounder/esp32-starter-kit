@@ -1,40 +1,40 @@
 .. _py_pa_buz:
 
-3.2 Custom Tone
+3.2 カスタムトーン
 ==========================================
 
-We have used active buzzer in the previous project, this time we will use passive buzzer.
+前回のプロジェクトではアクティブブザーを使用しましたが、今回はパッシブブザーを使用します。
 
-Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used.
-But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as "doh, re, mi, fa, sol, la, ti".
+アクティブブザーと同様に、パッシブブザーも電磁誘導の現象を利用して動作します。違いは、パッシブブザーには発振源がないため、直流信号を使用してもビープ音を鳴らすことはありません。
+しかし、これによりパッシブブザーは自身の発振周波数を調整でき、「ド、レ、ミ、ファ、ソ、ラ、シ」といった異なる音符を出すことができます。
 
-Let the passive buzzer emit a melody!
+パッシブブザーでメロディーを鳴らしましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,47 +51,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトのESP32ボードに利用可能なピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+IO14の出力が高いと、1Kの電流制限抵抗（トランジスタを保護するため）を経由して、S8050（NPNトランジスタ）が導通し、ブザーが鳴ります。
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
+S8050（NPNトランジスタ）の役割は、電流を増幅してブザーの音を大きくすることです。実際には、ブザーを直接IO14に接続しても問題ありませんが、ブザーの音が小さくなることがわかります。
 
-**Wiring**
+**配線図**
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+キットには2種類のブザーが含まれています。
+アクティブブザーを使用する必要があります。それらを裏返すと、シールドされた背面（露出したPCBではない方）が必要なものです。
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+ブザーは動作時にトランジスタを使用する必要がありますが、ここではS8050（NPNトランジスタ）を使用します。
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``3.2_custom_tone.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``3.2_custom_tone.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。 
 
 .. code-block:: python
 
@@ -133,34 +131,28 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
     tone(buzzer, B4, 250)
 
 
-**How it works?**
+**どのように動作するのか？**
 
-If the passive buzzer given a digital signal, it can only keep pushing the diaphragm without producing sound.
+パッシブブザーにデジタル信号を与えると、音を発生させることなくダイヤフラムを押し続けるだけです。
 
-Therefore, we use the ``tone()`` function to generate the PWM signal to make the passive buzzer sound.
+そのため、 ``tone()`` 関数を使用してPWM信号を生成し、パッシブブザーに音を出させます。
 
-This function has three parameters:
+この関数には3つのパラメーターがあります：
 
-* ``pin``: The pin that controls the buzzer.
-* ``frequency``: The pitch of the buzzer is determined by the frequency, the higher the frequency, the higher the pitch.
-* ``Duration``: The duration of the tone.
+* ``pin``: ブザーを制御するピン。
+* ``frequency``: ブザーの音程は周波数によって決まり、周波数が高いほど音程も高くなります。
+* ``Duration``: 音の持続時間。
 
-We use the ``duty()`` function to set the duty cycle to 512(about 50%). It can be other numbers, and it only needs to generate a discontinuous electrical signal to oscillate.
+``duty()`` 関数を使用してデューティサイクルを512(約50%)に設定します。他の数値でも構いませんが、不連続な電気信号を生成して振動させる必要があります。
 
+**もっと学ぶ**
 
-
-**Learn More**
-
-We can simulate specific pitches and thus play a complete piece of music.
-
+特定のピッチをシミュレートし、完全な音楽曲を演奏することができます。
 
 .. note::
 
-    * Open the ``3.2_custom_tone_music.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``3.2_custom_tone_music.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。次に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+    * 右下のコーナーで「MicroPython (ESP32).COMxx」インタープリタを選択してください。
 
 .. code-block:: python
 
@@ -232,8 +224,9 @@ We can simulate specific pitches and thus play a complete piece of music.
         time.sleep_ms(50)
 
 
-* The ``tone`` function sets the frequency of the pin to the value of ``frequency`` using the ``freq`` method of the ``pin`` object. 
-* It then sets the duty cycle of the pin to 512 using the ``duty`` method of the ``pin`` object. 
-* This will cause the pin to produce a tone with the specified frequency and volume for the duration of ``duration`` in milliseconds using the ``sleep_ms`` method of the time module.
-* The code then plays a melody by iterating through a sequence called ``melody`` and calling the ``tone`` function for each note in the melody with the note's frequency and duration. 
-* It also inserts a short pause of 50 milliseconds between each note using the ``sleep_ms`` method of the time module.
+* ``tone`` 関数は、 ``pin`` オブジェクトの ``freq`` メソッドを使用して、ピンの周波数を ``frequency`` の値に設定します。
+* 次に、 ``pin`` オブジェクトの ``duty`` メソッドを使用して、ピンのデューティサイクルを512に設定します。
+* これにより、ピンは指定された周波数と音量で ``duration`` ミリ秒の間音を出すことになります。これは、timeモジュールの ``sleep_ms`` メソッドを使用します。
+* コードは、 ``melody`` と呼ばれるシーケンスを通じて反復し、メロディの各ノートに対してそのノートの周波数と持続時間で ``tone`` 関数を呼び出すことにより、メロディを演奏します。
+* また、timeモジュールの ``sleep_ms`` メソッドを使用して、各ノートの間に50ミリ秒の短い休止を挿入します。
+

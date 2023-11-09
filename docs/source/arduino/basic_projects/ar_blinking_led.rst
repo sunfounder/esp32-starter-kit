@@ -1,35 +1,35 @@
 .. _ar_blink:
 
-2.1 Hello, LED! 
+2.1 LEDを点灯させよう
 =======================================
 
-Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+プログラム学習の最初の一歩として"Hello, world!"を出力するように、LEDをプログラムで制御することは物理プログラミングを学ぶための伝統的な入門です。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入することは非常に便利です。以下のリンクから購入できます：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+また、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,34 +45,34 @@ You can also buy them separately from the links below.
         - |link_led_buy|
 
 
-**Available Pins**
+**利用可能なピン**
 
-Here is a list of available pins on the ESP32 board for this project.
+このプロジェクトで使用可能なESP32ボード上のピンのリストです。
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - 利用可能なピン
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This circuit works on a simple principle, and the current direction is shown in the figure. The LED will light up after the 220ohm current limiting resistor when pin26 outputs high level. The LED will turn off when pin26 outputs low level.
+この回路は簡単な原理で動作し、図に示されているように電流の方向があります。ピン26が高レベルを出力すると220オームの電流制限抵抗を通過してLEDが点灯します。ピン26が低レベルを出力するとLEDが消えます。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``2.1_hello_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.1_hello_led``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ``esp32-starter-kit-main\c\codes\2.1_hello_led`` のパス下にあるファイル ``2.1_hello_led.ino`` を開くことができます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **Upload** ボタンをクリックします。
     * :ref:`unknown_com_port`
    
 .. raw:: html
@@ -81,18 +81,17 @@ This circuit works on a simple principle, and the current direction is shown in 
 
 
 
-After the code is uploaded successfully, you will see the LED blinking.
+コードが正常にアップロードされた後、LEDが点滅するのを見ることができます。
 
-**How it works?**
+**どのように動作するのか？**
 
-#. Declare an integer constant named ``ledPin`` and assigns it the value 26. 
+#. ``ledPin`` という名前の整数定数を宣言し、それに26という値を割り当てます。
 
     .. code-block:: arduino
 
         const int ledPin = 26;  // The GPIO pin for the LED
 
-
-#. Now, initialize the pin in the ``setup()`` function, where you need to initialize the pin to ``OUTPUT`` mode.
+#. 次に、 ``setup()`` 関数でピンを初期化します。ここで、ピンを ``OUTPUT`` モードに初期化する必要があります。
 
     .. code-block:: arduino
 
@@ -100,19 +99,19 @@ After the code is uploaded successfully, you will see the LED blinking.
             pinMode(ledPin, OUTPUT);
         }
 
-    * ``void pinMode(uint8_t pin, uint8_t mode);``: This function is used to define the GPIO operation mode for a specific pin.
+    * ``void pinMode(uint8_t pin, uint8_t mode);``: この関数は、特定のピンのGPIO動作モードを定義するために使用されます。
 
-        * ``pin`` defines the GPIO pin number.
-        * ``mode`` sets operation mode.
+        * ``pin`` はGPIOピン番号を定義します。
+        * ``mode`` は動作モードを設定します。
 
-        The following modes are supported for the basic input and output:
+        基本入出力のために、以下のモードがサポートされています：
 
-        * ``INPUT`` sets the GPIO as input without pullup or pulldown (high impedance).
-        * ``OUTPUT`` sets the GPIO as output/read mode.
-        * ``INPUT_PULLDOWN`` sets the GPIO as input with the internal pulldown.
-        * ``INPUT_PULLUP`` sets the GPIO as input with the internal pullup.
+        * ``INPUT`` はプルアップもプルダウンもない入力（高インピーダンス）としてGPIOを設定します。
+        * ``OUTPUT`` は出力/読み取りモードとしてGPIOを設定します。
+        * ``INPUT_PULLDOWN`` は内部プルダウン付きでGPIOを入力として設定します。
+        * ``INPUT_PULLUP`` は内部プルアップ付きでGPIOを入力として設定します。
 
-#. The ``loop()`` function contains the main logic of the program and runs continuously. It alternates between setting the pin high and low, with one-second intervals between the changes.
+#. ``loop()`` 関数にはプログラムの主なロジックが含まれ、変更間の一秒の間隔を置いて、ピンを高低に交互に設定します。
 
     .. code-block:: arduino
 
@@ -123,7 +122,7 @@ After the code is uploaded successfully, you will see the LED blinking.
             delay(1000);                       // wait for a second
         }
 
-    * ``void digitalWrite(uint8_t pin, uint8_t val);``: This function sets the state of the selected GPIO to ``HIGH`` or ``LOW``. This function is only used if the ``pinMode`` was configured as ``OUTPUT``.
+    * ``void digitalWrite(uint8_t pin, uint8_t val);``: この関数は、選択したGPIOの状態を ``HIGH`` または ``LOW`` に設定します。この関数は、 ``pinMode`` が ``OUTPUT`` として設定されている場合のみ使用されます。
     
-        * ``pin`` defines the GPIO pin number.
-        * ``val`` set the output digital state to ``HIGH`` or ``LOW``.
+        * ``pin`` はGPIOピン番号を定義します。
+        * ``val`` は出力デジタル状態を ``HIGH`` または ``LOW`` に設定します。

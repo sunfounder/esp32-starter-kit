@@ -1,39 +1,39 @@
 .. _py_thermistor:
 
-5.10 Temperature Sensing
+5.10 温度センシング
 ===========================
 
-A thermistor is a temperature sensor that exhibits a strong dependence on temperature, and it can be classified into two types: Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC). The resistance of an NTC thermistor decreases with increasing temperature, while the resistance of a PTC thermistor increases with increasing temperature.
+サーミスタは温度に強く依存する温度センサーで、負の温度係数（NTC）と正の温度係数（PTC）の2種類に分類されます。NTCサーミスタの抵抗は温度が上昇すると減少し、PTCサーミスタの抵抗は温度が上昇すると増加します。
 
-In this project, we will be using an NTC thermistor. By connecting the NTC thermistor to an analog input pin of the ESP32 microcontroller, we can measure its resistance, which is directly proportional to the temperature.
+このプロジェクトでは、NTCサーミスタを使用します。NTCサーミスタをESP32マイクロコントローラのアナログ入力ピンに接続することで、抵抗を測定し、それが直接温度に比例することができます。
 
-By incorporating the NTC thermistor and performing the necessary calculations, we can accurately measure the temperature and display it on the I2C LCD1602 module. This project enables real-time temperature monitoring and provides a visual interface for temperature display.
+NTCサーミスタを組み込み、必要な計算を行うことで、正確に温度を測定し、I2C LCD1602モジュールに表示することができます。このプロジェクトにより、リアルタイムで温度監視を行い、温度表示のための視覚的インターフェースを提供します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,54 +48,51 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-**Available Pins**
+**利用可能なピン**
 
-* **Available Pins**
+* **利用可能なピン**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    こちらは、このプロジェクトのためのESP32ボード上の利用可能なピンのリストです。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - 利用可能なピン
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **ストラッピングピン**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    以下のピンはストラッピングピンで、電源オンまたはリセット時のESP32の起動プロセスに影響します。しかし、ESP32が正常に起動した後は、通常のピンとして使用できます。
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - ストラッピングピン
             - IO0, IO12
 
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_5.10_thermistor.png
 
-When the temperature rises, the resistance of the thermistor decreases, causing the value read on I35 to decrease. Additionally, by using a formula, you can convert the analog value into temperature and then print it out.
+温度が上昇すると、サーミスタの抵抗が減少し、I35で読み取られる値が減少します。さらに、式を使用してアナログ値を温度に変換し、出力することができます。
 
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/5.10_thermistor_bb.png
 
 
 .. note::
-    * The thermistor is black and marked 103.
-    * The color ring of the 10K ohm resistor is red, black, black, red and brown.
+    * サーミスタは黒色で、103とマークされています。
+    * 10Kオーム抵抗のカラーリングは赤、黒、黒、赤、茶色です。
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.10_thermistor.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.10_thermistor.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。 
 
 .. code-block:: python
 
@@ -134,45 +131,43 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
         print('Celsius: %.2f C  Fahrenheit: %.2f F' % (Cel, Fah))
         time.sleep(0.5)
 
-When the code is run, the Shell will print out the Celsius and Fahrenheit temperatures.
+コードを実行すると、シェルは摂氏と華氏の温度を出力します。
 
-**How it works?**
+**どのように動作するのか？**
 
-Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius. 
+各サーミスタには、通常の抵抗値があります。ここでは25度摂氏で測定された10kオームです。
 
-When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. 
+温度が高くなると、サーミスタの抵抗値が減少します。次に、A/D変換器により電圧データがデジタル量に変換されます。
 
-The temperature in Celsius or Fahrenheit is output via programming. 
+摂氏または華氏の温度は、プログラミングを通じて出力されます。
 
-Here is the relation between the resistance and temperature: 
+ここに抵抗と温度の関係があります：
 
     **RT =RN expB(1/TK - 1/TN)** 
 
-    * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
-    * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``373.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``373.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``4950``. 
-    * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
+    * **RT** は温度 **TK** のときのNTCサーミスタの抵抗値です。
+    * **RN** は定格温度 TN 下のNTCサーミスタの抵抗値です。ここでは、RNの数値は10kです。
+    * **TK** はケルビン温度で、単位はKです。ここでは、**TK** の数値は ``373.15 + 摂氏度数`` です。
+    * **TN** は定格ケルビン温度で、単位もKです。ここでは、TNの数値は ``373.15+25`` です。
+    * そして **B（ベータ）**、NTCサーミスタの材料定数であり、熱感受性指数とも呼ばれ、数値は ``4950`` です。
+    * **exp** は指数の略で、基数 ``e`` は自然数で、約2.7に等しいです。
 
-    Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
+    この式 ``TK=1/(ln(RT/RN)/B+1/TN)`` を変換してケルビン温度を求め、273.15を引くと摂氏度が求まります。
 
-    This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+    この関係は経験式です。温度と抵抗値が有効範囲内にあるときのみ正確です。
 
+**もっと学ぶ**
 
-**Learn More**
-
-You can also display the calculated Celsius and Fahrenheit temperatures on the I2C LCD1602.
+計算された摂氏および華氏の温度をI2C LCD1602に表示することもできます。
 
 .. image:: ../../img/wiring/5.10_thermistor_lcd_bb.png
 
 .. note::
 
-    * Open the ``5.10_thermistor_lcd.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``5.10_thermistor_lcd.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。次に、「Run Current Script」をクリックするかF5キーを押して実行します。
+    * 右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択してください。
 
-    * Here you need to use the library called ``lcd1602.py``, please check if it has been uploaded to ESP32, for a detailed tutorial refer to :ref:`add_libraries_py`.
-
+    * ここでは ``lcd1602.py`` というライブラリを使用する必要があります。ESP32にアップロードされていることを確認してください。詳しいチュートリアルは :ref:`add_libraries_py` を参照してください。
 
 .. code-block:: python
 

@@ -1,37 +1,37 @@
 .. _ar_dice:
 
-6.4 Digital Dice
+6.4 デジタルダイス
 =============================
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+このプロジェクトは :ref:`py_7_segment` のプロジェクトをベースに、7セグメント表示器に表示される数字を制御するボタンを追加しています。
 
-In this project, a random number is generated and displayed on the seven-segment display to simulate a dice roll. When the button is pressed, a stable number (randomly selected from 1 to 6) is displayed on the seven-segment display. Pressing the button again will initiate the simulation of a dice roll, generating random numbers as before. This cycle continues each time the button is pressed.
+このプロジェクトでは、ランダムな数字を生成し、7セグメント表示器に表示して、サイコロを振る動作をシミュレートします。ボタンを押すと、1から6までの安定した数字（ランダムに選ばれた）が7セグメント表示器に表示されます。ボタンを再度押すと、以前と同様にランダムな数字を生成するサイコロの振るシミュレーションが始まります。このサイクルは、ボタンが押されるたびに続きます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのが確かに便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,25 +50,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`ar_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+このプロジェクトは :ref:`ar_7_segment` をベースにしており、7セグメント表示器に表示される数字を制御するボタンが追加されています。
 
-The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
+IO13には内部に47Kのプルアップ抵抗があるため、外部のプルアップ抵抗またはプルダウン抵抗を直接接続する必要はなく、追加の外部抵抗は不要です。
 
-
-**Wiring**
+**配線図**
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.4_digital_dice.ino`` file under the path of ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * ファイル ``6.4_digital_dice.ino`` をパス ``esp32-starter-kit-main\c\codes\6.4_digital_dice`` から開きます。
+    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **アップロード** ボタンをクリックします。
     * :ref:`unknown_com_port`
     
     
@@ -76,7 +75,6 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ad904f48-cd24-49ce-ad92-91b1fb76364d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-This project is based on :ref:`ar_7_segment` with a button to start/pause the scrolling display on the 7-segment Display.
+このプロジェクトは :ref:`ar_7_segment` をベースにしており、7セグメントディスプレイのスクロール表示を開始/一時停止するボタンが追加されています。
 
-When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
-
+ボタンを押すと、7セグメントディスプレイは1から6までの数字をスクロールし、ボタンを放すと、ランダムな数字が表示されます。

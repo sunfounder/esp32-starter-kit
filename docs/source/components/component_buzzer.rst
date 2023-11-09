@@ -1,37 +1,34 @@
 .. _cpn_buzzer:
 
-Buzzer
+ブザー
 =======
 
 .. image:: img/buzzer.png
     :width: 600
 
-As a type of electronic buzzer with an integrated structure, buzzers, which are supplied by DC power, are widely used in computers, printers, photocopiers, alarms, electronic toys, automotive electronic devices, telephones, timers and other electronic products or voice devices. 
+一体型の電子ブザーとして、DC電源で動作するブザーは、コンピュータ、プリンタ、コピー機、アラーム、電子玩具、自動車電子機器、電話、タイマーなどの電子製品や音声機器に広く利用されています。
 
-Buzzers can be categorized as active and passive ones (see the following picture). Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
+ブザーは、アクティブなものとパッシブなものに分類されます（以下の画像を参照）。ブザーをピンが上を向くように回転させると、緑の基板が付いているブザーはパッシブブザー、黒テープで囲まれているものはアクティブブザーです。
 
-The difference between an active buzzer and a passive buzzer: 
+アクティブブザーとパッシブブザーの違い:
 
-An active buzzer has a built-in oscillating source, so it will make sounds when electrified. But a passive buzzer does not have such source, so it will not beep if DC signals are used; instead, you need to use square waves whose frequency is between 2K and 5K to drive it. The active buzzer is often more expensive than the passive one because of multiple built-in oscillating circuits.
+アクティブブザーには内蔵の振動源があるため、電化すると音がします。しかし、パッシブブザーにはそのような源がないため、DC信号を使用してもビープ音がしない。代わりに、2Kから5Kの周波数の正方形の波を使って駆動させる必要がある。アクティブブザーは、多数の内蔵振動回路があるため、パッシブブザーよりも高価であることがよくあります。
 
-The following is the electrical symbol of a buzzer. It has two pins with positive and negative poles. With a + in the surface represents the anode and the other is the cathode. 
+以下はブザーの電気記号です。プラスとマイナスの極を持つ2本のピンがあります。表面に+のマークがある方がアノードで、もう一方がカソードです。
 
 .. image:: img/buzzer_symbol.png
     :width: 150
 
-You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don't mix them up when connecting, otherwise the buzzer will not make sound. 
+ブザーのピンを確認すると、長い方がアノードで、短い方がカソードです。接続するときに間違えないよう注意してください。そうでないと、ブザーは音を出しません。
 
-`Buzzer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
+`ブザー - ウィキペディア <https://en.wikipedia.org/wiki/Buzzer>`_
 
-**Example**
+**例**
 
-* :ref:`ar_ac_buz` (Arduino Project)
-* :ref:`ar_pa_buz` (Arduino Project)
-* :ref:`ar_reversing_aid` (Arduino Project)
-* :ref:`py_pa_buz` (MicroPython Project)
-* :ref:`py_ac_buz` (MicroPython Project)
-* :ref:`py_reversing_aid` (MicroPython Project)
-
-
-
+* :ref:`ar_ac_buz` (Arduinoプロジェクト)
+* :ref:`ar_pa_buz` (Arduinoプロジェクト)
+* :ref:`ar_reversing_aid` (Arduinoプロジェクト)
+* :ref:`py_pa_buz` (MicroPythonプロジェクト)
+* :ref:`py_ac_buz` (MicroPythonプロジェクト)
+* :ref:`py_reversing_aid` (MicroPythonプロジェクト)
 

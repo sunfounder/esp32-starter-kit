@@ -1,9 +1,9 @@
-While Loops
+Whileループ
 ====================
 
-The ``while`` statement is used to execute a program in a loop, that is, to execute a program in a loop under certain conditions to handle the same task that needs to be processed repeatedly. 
+``while`` 文はループ内でプログラムを実行するために使われます。つまり、特定の条件下で繰り返し処理する必要がある同じタスクを処理するために、ループ内でプログラムを実行します。
 
-Its basic form is:
+基本的な形式は以下の通りです：
 
 .. code-block:: python
 
@@ -11,19 +11,17 @@ Its basic form is:
         Body of while
 
 
-In the ``while`` loop, first check the ``test expression``. Only when ``test expression`` evaluates to ``True``, enter the body of the while. After one iteration, check the ``test expression`` again. This process continues until ``test expression`` evaluates to ``False``.
+``while`` ループでは、まず ``test expression`` をチェックします。 ``test expression`` が ``True`` と評価された場合のみ、whileの本体に入ります。一回のイテレーションの後、再び ``test expression`` をチェックします。このプロセスは ``test expression`` が ``False`` と評価されるまで続きます。
 
-In MicroPython, the body of the ``while`` loop is determined by indentation.
+MicroPythonでは、 ``while`` ループの本体はインデントによって決定されます。
 
-The body starts with an indentation and ends with the first unindented line.
+本体はインデントで始まり、最初の非インデント行で終わります。
 
-Python interprets any non-zero value as ``True``. None and 0 are interpreted as ``False``.
+Pythonはゼロでない任意の値を ``True`` と解釈します。Noneと0は ``False`` と解釈されます。
 
-**while Loop Flowchart**
+**whileループのフローチャート**
 
 .. image:: img/while_loop.png
-
-
 
 .. code-block:: python
 
@@ -46,12 +44,10 @@ Python interprets any non-zero value as ``True``. None and 0 are interpreted as 
 1
 
 
-Break Statement
+Break文
 --------------------
 
-With the break statement we can stop the loop even if the while condition is true:
-
-
+break文を使えば、while条件が真であってもループを停止させることができます：
 
 .. code-block:: python
 
@@ -70,13 +66,11 @@ With the break statement we can stop the loop even if the while condition is tru
 7
 6
 
-While Loop with Else
+Elseを持つWhileループ
 ----------------------
-Like the `if` loop, the `while` loop can also have an optional `else` block.
+`if` ループのように、 `while` ループにもオプショナルの `else` ブロックを持たせることができます。
 
-If the condition in the `while` loop is evaluated as `False`, the `else` part is executed.
-
-
+`while` ループの条件が `False` と評価された場合、 `else` 部分が実行されます。
 
 .. code-block:: python
 
@@ -99,4 +93,4 @@ If the condition in the `while` loop is evaluated as `False`, the `else` part is
 3
 2
 1
-Game Over
+ゲームオーバー

@@ -1,160 +1,158 @@
-1.5 Quick Guide on Thonny
+1.5 Thonnyのクイックガイド
 ==================================
 
 .. _open_run_code_py:
 
-Open and Run Code Directly
+直接コードを開いて実行する
 ---------------------------------------------
 
-The code section in the projects tells you exactly which code is used, so double-click on the ``.py`` file with the serial number in the ``esp32-starter-kit-main\micropython\codes\`` path to open it. 
+プロジェクトのコードセクションでは、使用する正確なコードが示されているので、 ``esp32-starter-kit-main\micropython\codes\`` パスのシリアル番号が付いた ``.py`` ファイルをダブルクリックして開きます。
 
-However, you must first download the package and upload the libraries, as described in :ref:`add_libraries_py`.
+ただし、 :ref:`add_libraries_py` で説明されているように、まずパッケージをダウンロードしてライブラリをアップロードする必要があります。
 
-#. Open code.
+#. コードを開く。
 
-    For example, ``1.1_hello_led.py``.
+    例えば、 ``1.1_hello_led.py`` です。
 
-    If you double click on it, a new window will open on the right. You can open more than one code at the same time.
+    ダブルクリックすると、右側に新しいウィンドウが開きます。複数のコードを同時に開くことができます。
 
     .. image:: img/quick_guide1.png
 
-#. Plug the esp32 into your computer with a micro USB cable.
+#. マイクロUSBケーブルでESP32をコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Select correct interpreter
+#. 正しいインタプリタを選択
 
-    Select the "MicroPython (ESP32).COMxx" interpreter.
+    「MicroPython (ESP32).COMxx」インタプリタを選択します。
 
     .. image:: img/sec_inter.png
 
-#. Run the code
+#. コードを実行
 
-    To run the script, click the **Run current script** button or press F5.
+    スクリプトを実行するには、 **Run current script** ボタンをクリックするかF5キーを押します。
 
     .. image:: img/quick_guide2.png
 
-    If the code contains any information that needs to be printed, it will appear in the Shell; otherwise, only the following information will appear.
+    コードに印刷が必要な情報が含まれている場合は、シェルに表示されます。それ以外の場合は、以下の情報のみが表示されます。
 
-    Click **View** -> **Edit** to open the Shell window if it doesn't appear on your Thonny.
+    シェルウィンドウがThonnyに表示されない場合は、 **View** -> **Edit** をクリックして開きます。
 
         .. code-block::
 
             MicroPython v1.19.1 on 2022-06-18; ESP32 module with ESP32
 
-            Type "help()" for more information.
+            詳しい情報は「help()」と入力してください。
 
             >>> %Run -c $EDITOR_CONTENT
 
-    * The first line shows the version of MicroPython, the date, and your device information.
-    * The second line prompts you to enter "help()" to get some help.
-    * The third line is a command from Thonny telling the MicroPython interpreter on your Pico W to run the contents of the script area - "EDITOR_CONTENT".
-    * If there is any message after the third line, it is usually a message that you tell MicroPython to print, or an error message for the code.
+    * 最初の行には、MicroPythonのバージョン、日付、およびデバイス情報が表示されます。
+    * 2行目には、「help()」を入力してヘルプを取得するように促されます。
+    * 3行目は、スクリプトエリアの「EDITOR_CONTENT」の内容をPico WのMicroPythonインタプリタに実行させるThonnyからのコマンドです。
+    * 3行目の後にメッセージがある場合、通常はMicroPythonに印刷するように指示したメッセージ、またはコードのエラーメッセージです。
 
 
-#. Stop running
+#. 実行を停止
 
     .. image:: img/quick_guide3.png
 
-    To stop the running code, click the **Stop/Restart backend** button. The **%RUN -c $EDITOR_CONTENT** command will disappear after stopping.
+    実行中のコードを停止するには、 **Stop/Restart backend** ボタンをクリックします。 **%RUN -c $EDITOR_CONTENT** コマンドは停止後に消えます。
 
-#. Save or save as
+#. 保存または名前を付けて保存
 
-    You can save changes made to the open example by pressing **Ctrl+S** or clicking the **Save** button on Thonny.
+    Thonnyで開いた例の変更を保存するには、 **Ctrl+S** を押すか、Thonnyの **Save** ボタンをクリックします。
 
-    The code can be saved as a separate file within the **MicroPython drive(ESP32)** by clicking on **File** -> **Save As**.
+    **File** -> **Save As** をクリックして、 **MicroPython drive(ESP32)** 内の別のファイルとしてコードを保存することができます。
 
     .. image:: img/quick_guide4.png
 
-    Select **MicroPython drive**.
+    **MicroPython drive** を選択します。
 
     .. image:: img/quick_guide5.png
         
-    Then click **OK** after entering the file name and extension **.py**. On the MicroPython drive, you will see your saved file.
+    ファイル名と拡張子 **.py** を入力した後、 **OK** をクリックします。MicroPythonドライブに保存されたファイルが表示されます。
 
     .. image:: img/quick_guide6.png
 
     .. note::
-        Regardless of what name you give your code, it's best to describe what type of code it is, and not give it a meaningless name like ``abc.py``.
-        When you save the code as ``main.py``, it will run automatically when the power is turned on.
+        コードにどんな名前を付けても、コードの種類を記述することが最善です。意味のない名前（例： ``abc.py`` ）は避けましょう。
+        コードを ``main.py`` として保存すると、電源を入れたときに自動的に実行されます。
 
 
-Create File and Run it
+ファイルを作成して実行する
 ---------------------------
 
+コードはコードセクションで直接示されています。Thonnyにコピーして以下のように実行できます。
 
-The code is shown directly in the code section. You can copy it to Thonny and run it as follows.
+#. 新しいファイルを作成する
 
-#. Create a new file
-
-    Open Thonny IDE, click **New** button to create a new blank file.
+    Thonny IDEを開き、 **New** ボタンをクリックして新しい空のファイルを作成します。
 
     .. image:: img/quick_guide7.png
 
-#. Copy code
+#. コードをコピー
 
-    Copy the code from the project to the Thonny IDE.
+    プロジェクトからのコードをThonny IDEにコピーします。
 
     .. image:: img/quick_guide8.png
 
-#. Plug the esp32 into your computer with a micro USB cable.
+#. マイクロUSBケーブルでESP32をコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Select correct interpreter
+#. 正しいインタプリタを選択
 
-    Select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner.
+    右下隅にある「MicroPython (ESP32).COMxx」インタプリタを選択します。
 
     .. image:: img/sec_inter.png
 
-#. Run the code
+#. コードを実行
 
-    You need click **Run Current Script** or simply press ``F5`` to run it.
+    **Run Current Script** をクリックするか、単に ``F5`` キーを押して実行します。
 
     .. image:: img/quick_guide9.png
 
-    If the code contains any information that needs to be printed, it will appear in the Shell; otherwise, only the following information will appear.
+    コードに印刷が必要な情報が含まれている場合は、シェルに表示されます。それ以外の場合は、以下の情報のみが表示されます。
 
-    Click **View** -> **Edit** to open the Shell window if it doesn't appear on your Thonny.
+    シェルウィンドウがThonnyに表示されない場合は、 **View** -> **Edit** をクリックして開きます。
 
         .. code-block::
 
             MicroPython v1.19.1 on 2022-06-18; ESP32 module with ESP32
 
-            Type "help()" for more information.
+            詳しい情報は「help()」と入力してください。
 
             >>> %Run -c $EDITOR_CONTENT
 
-    * The first line shows the version of MicroPython, the date, and your device information.
-    * The second line prompts you to enter "help()" to get some help.
-    * The third line is a command from Thonny telling the MicroPython interpreter on your Pico W to run the contents of the script area - "EDITOR_CONTENT".
-    * If there is any message after the third line, it is usually a message that you tell MicroPython to print, or an error message for the code.
+    * 最初の行には、MicroPythonのバージョン、日付、およびデバイス情報が表示されます。
+    * 2行目には、「help()」を入力してヘルプを取得するように促されます。
+    * 3行目は、スクリプトエリアの「EDITOR_CONTENT」の内容をPico WのMicroPythonインタプリタに実行させるThonnyからのコマンドです。
+    * 3行目の後にメッセージがある場合、通常はMicroPythonに印刷するように指示したメッセージ、またはコードのエラーメッセージです。
 
 
-#. Stop running
+#. 実行を停止する
 
     .. image:: img/quick_guide3.png
 
-    To stop the running code, click the **Stop/Restart backend** button. The **%RUN -c $EDITOR_CONTENT** command will disappear after stopping.
+    実行中のコードを停止するには、 **Stop/Restart backend** ボタンをクリックします。 **%RUN -c $EDITOR_CONTENT** コマンドは停止後に消えます。
 
-#. Save or save as
+#. 保存または名前を付けて保存
 
-    You can save the code by pressing **Ctrl+S** or clicking the **Save** button on Thonny. In the pop-up window, select the location where you want to save the file.
+    **Ctrl+S** を押すか、Thonnyの **Save** ボタンをクリックしてコードを保存できます。ポップアップウィンドウで、ファイルを保存する場所を選択します。
 
     .. image:: img/quick_guide5.png
         
-    Then click **OK** or **Save** after entering the file name and extension **.py**.
+    ファイル名と拡張子 **.py** を入力した後、 **OK** または **Save** をクリックします。
 
     .. image:: img/quick_guide6.png
 
     .. note::
-        Regardless of what name you give your code, it's best to describe what type of code it is, and not give it a meaningless name like ``abc.py``.
-        When you save the code as ``main.py``, it will run automatically when the power is turned on.
+        コードにどんな名前を付けても、コードの種類を記述することが最善です。意味のない名前（例： ``abc.py`` ）は避けましょう。
+        コードを ``main.py`` として保存すると、電源を入れたときに自動的に実行されます。
 
-#. Open file
+#. ファイルを開く
 
-    Here are two ways to open a saved code file.
+    保存されたコードファイルを開く方法は2つあります。
 
-    * The first method is to click the open icon on the Thonny toolbar, just like when you save a program, you will be asked if you want to open it from **this computer** or **MicroPython device**, for example, click **MicroPython device** and you will see a list of all the programs you have saved on the ESP32.
-    * The second is to open the file preview directly by clicking **View** -> **Files** -> and then double-clicking on the corresponding ``.py`` file to open it.
-
+    * 一つ目の方法は、Thonnyのツールバーにある開くアイコンをクリックすることです。プログラムを保存する時と同じように、 **this computer** から開くか、 **MicroPython device** から開くかを尋ねられます。例えば、 **MicroPython device** をクリックすると、ESP32に保存されている全てのプログラムのリストが表示されます。
+    * 二つ目の方法は、 **View** -> **Files** をクリックし、対応する ``.py`` ファイルをダブルクリックして直接ファイルプレビューを開くことです。

@@ -1,38 +1,38 @@
 .. _sh_light_ball:
 
-2.10 Light Sensitive Ball
+2.10 光感知ボール
 ==============================
 
-In this project, we use Photoresistor to make the ball on the stage fly upwards. Place your hand on top of the photoresistor to control the light intensity it receives. The closer your hand is to the photoresistor, the smaller its value and the higher the ball flies on the stage, otherwise it will fall. When the ball touches the string, it makes a nice sound as well as a twinkling starlight.
+このプロジェクトでは、フォトレジスターを使用してステージ上のボールを上方向に飛ばします。フォトレジスターの上に手を置いて、受ける光の強さをコントロールします。手がフォトレジスターに近づくほど、その値は小さくなり、ステージ上でボールはより高く飛びます。そうでなければボールは落ちます。ボールが線に触れると、美しい音がして星の光がきらめきます。
 
 .. image:: img/18_ball.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全キットを購入すると便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,99 +47,97 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-You Will Learn
+学べること
 ---------------------
 
-- Fill the sprite with colors
-- Touch between the sprites
+- スプライトに色を塗る
+- スプライト間のタッチ
 
-Build the Circuit
+回路の構築
 -----------------------
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+フォトレジスターまたはフォトセルは、光によって可変する抵抗器です。フォトレジスターの抵抗は、入射光の強度が増すと減少します。
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を構築します。
 
-Connect one end of the photoresistor to 5V, the other end to pin35, and connect a 10K resistor in series with GND at this end.
+フォトレジスターの一方の端を5Vに、もう一方の端をピン35に接続し、この端に10Kの抵抗をGNDと直列に接続します。
 
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by pin35 becomes larger.
+したがって、光の強度が増すと、フォトレジスターの抵抗が減少し、10Kの抵抗の電圧分割が増加し、ピン35によって得られる値が大きくなります。
 
 .. image:: img/circuit/8_light_alarm_bb.png
 
-Programming
+プログラミング
 ------------------
 
-The effect we want to get is that the closer your hand is to the photoresistor, the ball sprite on the stage keeps going up, otherwise it will fall on the bowl sprite. If it touches the Line sprite while walking up or falling down, it will make a musical sound and emit star sprites in all directions.
+私たちが得たい効果は、あなたの手がフォトレジスターに近づくほど、ステージ上のボールスプライトが上に上がり続け、そうでなければボウルスプライトに落ちるということです。上がったり落ちたりする途中でラインスプライトに触れると、音楽の音がして、あらゆる方向に星スプライトを放出します。
 
 
-**1. Select sprite and backdrop**
+**1. スプライトと背景の選択**
 
-Delete the default sprite, select the **Ball**, **Bowl** and **Star** sprite.
+デフォルトのスプライトを削除し、 **Ball**、 **Bowl**、 **Star** スプライトを選択します。
 
 .. image:: img/18_ball1.png
 
-
-Move the **Bowl** sprite to the bottom center of the stage and enlarge its size.
+**Bowl** スプライトをステージの底の中央に移動し、サイズを大きくします。
 
 .. image:: img/18_ball3.png
 
-Because we need to move it upwards, so set direction of **Ball** sprite to 0.
+**Ball** スプライトを上方向に動かす必要があるため、向きを0に設定します。
 
 .. image:: img/18_ball4.png
 
-Set the size and direction of the **Star** sprite to 180 because we need it to fall down, or you can change it to another angle.
+**Star** スプライトのサイズと向きを180に設定します。下方向に落ちる必要があるためですが、他の角度に変更することもできます。
 
 .. image:: img/18_ball12.png
 
-Now add the **Stars** backdrop.
+次に、 **Stars** 背景を追加します。
 
 .. image:: img/18_ball2.png
 
-**2. Draw a Line sprite**
+**2. Line スプライトの描画**
 
-Add a Line sprite.
+Line スプライトを追加します。
 
 .. image:: img/18_ball7.png
 
-Go to the **Costumes** page of the **Line** sprite, reduce the width of the red line on the canvas slightly, then copy it 5 times and align the lines.
+**Line** スプライトの **Costumes** ページに移動し、キャンバス上の赤い線の幅を少し狭くして、それを5回コピーして線を揃えます。
 
 .. image:: img/18_ball8.png
 
-Now fill the lines with different colors. First choose a color you like, then click on the **Fill** tool and move the mouse over the line to fill it with color.
+次に、線を好きな色で塗ります。好きな色を選んで、 **Fill** ツールをクリックし、マウスを線の上に移動して色を塗ります。
 
 .. image:: img/18_ball9.png
 
-Follow the same method to change the color of the other lines.
+同じ方法で他の線の色を変更します。
 
 .. image:: img/18_ball10.png
 
+**3. Ball スプライトのスクリプト**
 
-**3. Scripting the Ball sprite**
+**Ball** スプライトの初期位置を設定し、光の値が1500未満の場合（環境に応じて他の値にすることもできます。）、Ballを上に移動させます。
 
-Set the initial position of the **Ball** sprite, then when the light value is less than 1500 (it can be any other value, depending on your current environment.), let the Ball move up.
-
-You can make the variable light_value show up on the stage to observe the change of light intensity at any time.
+light_value 変数をステージ上に表示させ、いつでも光の強度の変化を観察できるようにします。
 
 .. image:: img/18_ball5.png
 
-Otherwise, the **Ball** sprite will fall and limit its Y coordinate to a minimum of -100. This can be modified to make it look like it is falling on the **Bowl** sprite.
+そうでない場合、 **Ball** スプライトは落下し、Y座標の最小値を-100に制限します。これは、 **Bowl** スプライトの上に落ちているように見えるように変更できます。
 
 .. image:: img/18_ball6.png
 
-When the **Line** sprite is hit, the current Y coordinate is saved to the variable **ball_coor** and a **Bling** message is broadcast.
+**Line** スプライトに触れたとき、現在のY座標を変数 **ball_coor** に保存し、 **Bling** メッセージをブロードキャストします。
 
 .. image:: img/18_ball11.png
 
-**4. Scripting the Star sprite**
+**4. Star スプライトのスクリプト**
 
-When the script starts, first hide the **Star** sprite. When the **Bling** message is received, clone the **Star** sprite.
+スクリプトが開始されたとき、まず **Star** スプライトを隠します。 **Bling** メッセージを受け取ったとき、 **Star** スプライトをクローンします。
 
 .. image:: img/18_ball13.png
 
-When the **Star** sprite appears as a clone, play the sound effect and set its coordinates to be in sync with the **Ball** sprite.
+**Star** スプライトがクローンとして現れたとき、効果音を鳴らし、その座標を **Ball** スプライトと同期させます。
 
 .. image:: img/18_ball14.png
 
-Create the effect of the **Star** sprite appearing, and adjust it as needed.
+**Star** スプライトの登場効果を作り、必要に応じて調整します。
 
 .. image:: img/18_ball15.png

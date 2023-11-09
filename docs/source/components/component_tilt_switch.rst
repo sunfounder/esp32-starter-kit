@@ -1,23 +1,23 @@
 .. _cpn_tilt:
 
-Tilt Switch
+傾斜スイッチ
 =============================
-
 
 .. image:: img/tilt_switch.png
     :width: 80
     :align: center
 
-The tilt switch used here is a ball one with a metal ball inside. It is used to detect inclinations of a small angle.
+こちらで使用される傾斜スイッチは、内部に金属の球を持つタイプです。これは、小さな角度の傾斜を検出するために使用されます。
 
-The principle is very simple. When the switch is tilted in a certain angle, the ball inside rolls down and touches the two contacts connected to the pins outside, thus triggering circuits. Otherwise the ball will stay away from the contacts, thus breaking the circuits.
+その原理は非常に単純です。スイッチが特定の角度で傾けられると、内部の球が転がり落ち、外部のピンに接続された2つのコンタクトに触れ、回路が作動します。それ以外の場合、球はコンタクトから離れており、回路が切断されます。
 
 .. image:: img/tilt_symbol.png
     :width: 600
 
-* `SW520D Tilt Switch Datasheet <https://www.tme.com/Document/f1e6cedd8cb7feeb250b353b6213ec6c/SW-520D.pdf>`_
+* `SW520D 傾斜スイッチ データシート <https://www.tme.com/Document/f1e6cedd8cb7feeb250b353b6213ec6c/SW-520D.pdf>`_
 
-**Example**
+**例**
 
-* :ref:`ar_tilt` (Arduino Project)
-* :ref:`py_tilt` (MicroPython Project)
+* :ref:`ar_tilt` (Arduinoプロジェクト)
+* :ref:`py_tilt` (MicroPythonプロジェクト)
+

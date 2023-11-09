@@ -1,42 +1,41 @@
-.. _.. _sh_introduce:
+.. _sh_introduce:
 
-1.2 Interface Introduction
+1.2 インターフェース紹介
 ================================
 
 .. image:: img/pictoblox_interface.jpg
 
+**スプライト(Sprites)**
 
-**Sprites**
+スプライトは、プロジェクトでさまざまなアクションを実行するオブジェクトまたはキャラクターです。与えられた命令を理解し、従います。各スプライトには、カスタマイズも可能な特定のコスチュームとサウンドがあります。
 
-A sprite is an object, or a character, that performs different actions in a project. It understands and obeys the commands given to it. Each sprite has specific costumes and sounds that you can also customize.
+**ステージ(Stage)**
 
-**Stage**
+ステージは、スプライトがあなたのプログラムに従ってバックドロップでアクションを実行するエリアです。
 
-The stage is the area where the sprite performs actions in backdrops according to your program. 
+**バックドロップ(Backdrops)**
 
-**Backdrops**
+バックドロップは、ステージを装飾するために使用されます。PictoBloxから選ぶことも、自分で描くことも、コンピューターから画像をアップロードすることもできます。
 
-Backdrops are used to decorate the stage. You can choose a backdrop from PictoBlox, draw one yourself or upload an image from your computer.
+**スクリプトエリア(Script Area)**
 
-**Script Area**
+スクリプトは、PictoBlox/Scratch用語でのプログラムまたはコードです。タスクまたは一連のタスクを実行するために特定の順序で配置された「ブロック」のセットです。複数のスクリプトを書くことができ、すべて同時に実行することができます。スクリプトは画面中央のスクリプトエリアでのみ書くことができます。
 
-A script is a program or a code in PictoBlox/Scratch lingo.  It is a set of "blocks" arranged in a specific order to perform a task or a series of tasks. You can write multiple scripts, all of which can run simultaneously. You can only write scripts in the script area in the center of the screen.
+**ブロック(Blocks)**
 
-**Blocks**
+ブロックは、スクリプトエリアに積み重ねるだけでプログラムを書くために使用されるパズルのピースのようなものです。ブロックを使用してコードを書くことで、プログラミングを簡単にし、エラーの可能性を減らすことができます。
 
-Blocks are like pieces of a puzzle that are used to write programs by simply stacking them together in the script area. Using blocks to write code can make programming easier and reduce the probability of errors.
+**ブロックパレット(Block Palette)**
 
-**Block Palette**
+ブロックパレットは左側のエリアにあり、その機能によって名付けられています。例えば、運動、音、制御などです。各パレットには異なるブロックがあり、例えば運動パレットのブロックはスプライトの動きを制御し、制御パレットのブロックは特定の条件に基づいてスクリプトの作業を制御します。
 
-The block palettes are located in the left area and are named by their functions, such as motion, sound and control. Each palette has different blocks, for example, the blocks in the Motion palette will control the movement of the sprites, and the blocks in the Control palette will control the work of the script based on specific conditions.
+他にも、左下にある **拡張機能を追加(Add Extension)** ボタンからロードできるブロックパレットがあります。
 
-There are other kinds of block palettes that can be loaded from the **Add Extension** button located at the bottom left.
+**モード(Modes)**
 
-**Modes**
+Scratchとは異なり、PictoBloxには2つのモードがあります：
 
-Unlike Scratch, PictoBlox has two modes:
+* :ref:`stage_mode`：このモードでは、スプライトとボード用のスクリプトを書き、リアルタイムでスプライトと対話することができます。Pictobloxからボードを切断すると、もう対話することはできません。
+* :ref:`upload_mode`：このモードでは、スクリプトを書いてボードにアップロードし、コンピュータに接続されていないときでも使用できます。例えば、動くロボットを作るためのスクリプトをアップロードする必要があります。
 
-* :ref:`stage_mode`: In this mode, you can write scripts for the sprite and boards to interact with sprites in real-time. If you disconnect the board with Pictoblox, you cannot interact anymore.
-* :ref:`upload_mode`: This mode allows you to write scripts and upload it to the board so that you can use even when it is not connected to your computer, for example, you need to upload a script for making moving robots.
-
-For more information, please refer to: https://thestempedia.com/tutorials/getting-started-pictoblox
+詳細については、以下を参照してください： https://thestempedia.com/tutorials/getting-started-pictoblox

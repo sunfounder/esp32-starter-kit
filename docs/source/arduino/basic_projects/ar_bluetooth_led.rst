@@ -1,33 +1,33 @@
-7.2 Bluetooth Control RGB LED
-=================================
+7.2 Bluetoothを用いたRGB LEDの制御
+=====================================
 
-This project is an extension of a previous project(:ref:`ar_bluetooth`), adding RGB LED configurations and custom commands such as "led_off", "red", "green", etc. These commands allow the RGB LED to be controlled by sending commands from a mobile device using LightBlue.
+このプロジェクトは以前のプロジェクト（:ref:`ar_bluetooth`）を拡張したもので、RGB LEDの設定と「led_off」、「red」、「green」などのカスタムコマンドを追加しています。これらのコマンドにより、LightBlueを使用してモバイルデバイスからのコマンドを送信することでRGB LEDを制御できます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは間違いなく便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+または、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,29 +42,28 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_rgb`
         - |link_rgb_led_buy|
 
-**Operation Steps**
+**操作手順**
 
-#. Build the circuit.
+#. 回路を組み立てます。
 
     .. image:: ../../components/img/rgb_pin.jpg
         :width: 200
         :align: center
 
-    The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+    RGB LEDには4本のピンがあります。一番長いピンは共通カソードピンで、通常GNDに接続されます。一番長いピンの隣の左ピンが赤、右側の二本が緑と青です。
 
     .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-#. Open the ``7.2_bluetooth_rgb_led.ino`` file located in the ``esp32-starter-kit-main\c\codes\7.2_bluetooth_rgb_led`` directory, or copy the code into the Arduino IDE.
+#. ``esp32-starter-kit-main\c\codes\7.2_bluetooth_rgb_led`` ディレクトリにある ``7.2_bluetooth_rgb_led.ino`` ファイルを開くか、コードをArduino IDEにコピーします。
 
     .. raw:: html
          
         <iframe src=https://create.arduino.cc/editor/sunfounder01/b9331c9d-e9ea-4970-87ce-bf2ca8c231b2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. To avoid UUID conflicts, it is recommended to randomly generate three new UUIDs using the |link_uuid| provided by the Bluetooth SIG, and fill them in the following lines of code.
+#. UUIDの衝突を避けるため、Bluetooth SIGが提供する |link_uuid| を使ってランダムに3つの新しいUUIDを生成し、コードの以下の行に記入することをお勧めします。
 
     .. note::
-        If you have already generated three new UUIDs in the :ref:`ar_bluetooth` project, then you can continue using them.
-
+        もし :ref:`ar_bluetooth` プロジェクトで既に3つの新しいUUIDを生成している場合は、それらを引き続き使用できます。
 
     .. code-block:: arduino
 
@@ -74,29 +73,29 @@ You can also buy them separately from the links below.
 
     .. image:: img/uuid_generate.png
 
-#. Select the correct board and port, then click the **Upload** button.
+#. 正しいボードとポートを選択し、 **アップロード** ボタンをクリックします。
 
-#. After the code has been successfully uploaded, turn on **Bluetooth** on your mobile device and open the **LightBlue** app.
+#. コードが正常にアップロードされた後、モバイルデバイスの **Bluetooth** をオンにし、 **LightBlue** アプリを開きます。
 
     .. image:: img/bluetooth_open.png
 
-#. On the **Scan** page, find **ESP32-Bluetooth** and click **CONNECT**. If you don't see it, try refreshing the page a few times. When **"Connected to device!"** appears, the Bluetooth connection is successful. Scroll down to see the three UUIDs set in the code.
+#. **Scan** ページで **ESP32-Bluetooth** を見つけ、 **CONNECT** をクリックします。見つからない場合は、数回ページを更新してみてください。 **「Connected to device!」** と表示されると、Bluetooth接続が成功しています。コードで設定された3つのUUIDを見るために下にスクロールします。
 
     .. image:: img/bluetooth_connect.png
         :width: 800
 
-#. Tap the Send UUID, then set the data format to "UTF-8 String". Now you can write these commands: "led_off", "red", "green", "blue", "yellow", and "purple" to see if the RGB LED responds to these instructions.
+#. 送信用UUIDをタップし、データ形式を"UTF-8 String"に設定します。これで、「led_off」、「red」、「green」、「blue」、「yellow」、「purple」というコマンドを書き込んで、RGB LEDがこれらの指示に反応するかどうかを確認できます。
 
     .. image:: img/bluetooth_send_rgb.png
     
 
-**How it works?**
+**どのように動作するのか？**
 
-This code is an extension of a previous project(:ref:`ar_bluetooth`), adding RGB LED configurations and custom commands such as "led_off", "red", "green", etc. These commands allow the RGB LED to be controlled by sending commands from a mobile device using LightBlue.
+このコードは、以前のプロジェクト(:ref:`ar_bluetooth`)の拡張版であり、RGB LED設定と「led_off」、「red」、「green」などのカスタムコマンドを追加しています。これらのコマンドにより、LightBlueを使用してモバイルデバイスからのコマンドを送信することでRGB LEDを制御できます。
 
-Let's break down the code step by step:
+コードをステップバイステップで分解してみましょう：
 
-* Add new global variables for the RGB LED pins, PWM channels, frequency, and resolution.
+* RGB LEDピン、PWMチャンネル、周波数、解像度に関する新しいグローバル変数を追加します。
 
     .. code-block:: arduino
 
@@ -114,7 +113,7 @@ Let's break down the code step by step:
 
         ...
 
-* Within the ``setup()`` function, the PWM channels are initialized with the predefined frequency and resolution. The RGB LED pins are then attached to their respective PWM channels.
+* ``setup()`` 関数内では、PWMチャンネルが定義済みの周波数と解像度で初期化されます。次に、RGB LEDのピンをそれぞれのPWMチャンネルに割り当てます。
 
     .. code-block:: arduino
         
@@ -133,7 +132,7 @@ Let's break down the code step by step:
 
         }
 
-* Modify the ``onWrite`` method in the ``MyCharacteristicCallbacks`` class. This function listens for data coming from the Bluetooth connection. Based on the received string (like ``"led_off"``, ``"red"``, ``"green"``, etc.), it controls the RGB LED.
+* ``MyCharacteristicCallbacks`` クラスの ``onWrite`` メソッドを変更します。この関数は、Bluetooth接続から来るデータを監視します。受信した文字列（ ``「led_off」``, ``「red」``, ``「green」`` など）に基づいて、RGB LEDを制御します。
 
     .. code-block:: arduino
 
@@ -167,7 +166,7 @@ Let's break down the code step by step:
             }
         };
 
-* Finally, a function is added to set the RGB LED color.
+* 最後に、RGB LEDの色を設定する関数を追加します。
 
     .. code-block:: arduino
 
@@ -178,6 +177,7 @@ Let's break down the code step by step:
             ledcWrite(blueChannel, blue);
         }
 
-In summary, this script enables a remote control interaction model, where the ESP32 operates as a Bluetooth Low Energy (BLE) server.
+要約すると、このスクリプトはリモートコントロールの対話モデルを実現します。ここではESP32がBluetooth Low Energy (BLE) サーバーとして動作します。
 
-The connected BLE client (like a smartphone) can send string commands to change the color of an RGB LED. The ESP32 also gives feedback to the client by sending back the string received, allowing the client to know what operation was performed.
+接続されたBLEクライアント（スマートフォンなど）は文字列のコマンドを送信してRGB LEDの色を変更することができます。ESP32は実行された操作をクライアントに知らせるために受信した文字列をクライアントに返信し、フィードバックを与えます。
+

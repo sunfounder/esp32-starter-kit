@@ -1,39 +1,37 @@
-
-
 .. _iot_intrusion_alert_system:
 
-8.9 Blynk-based Intrusion Notification System
+8.9 Blynkを利用した侵入通知システム
 =============================================
 
-This project demonstrate a simple home intrusion detection system using a PIR motion sensor (HC-SR501).
-When the system is set to "Away" mode through the Blynk app, the PIR sensor monitors for motion.
-Any detected movement triggers a notification on the Blynk app, alerting the user of potential intrusion.
+このプロジェクトでは、PIRモーションセンサー（HC-SR501）を使用したシンプルな自宅侵入検出システムを紹介します。
+Blynkアプリを通じてシステムを「外出」モードに設定すると、PIRセンサーが動きを監視します。
+検出された動きはBlynkアプリに通知を送り、ユーザーに潜在的な侵入を警告します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入することは非常に便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,100 +43,100 @@ You can also buy them separately from the links below.
         - |link_pir_buy|
 
 
-1. Circuit Assembly
+1. 回路組立
 --------------------
 
 .. image:: ../../img/wiring/iot_9_blynk_bb.png
     :width: 60%
     :align: center
 
-2. Blynk Configuration
+2. Blynk設定
 ----------------------
 
-**2.1 Initializing Blynk**
+**2.1 Blynkの初期化**
 
-#. Navigate to the |link_blynk| and select **START FREE**. 
+#. |link_blynk| にアクセスし、 **START FREE** を選択します。
 
    .. image:: img/09_blynk_access.png
         :width: 90%
 
-#. Enter your email to initiate the registration process.
+#. メールアドレスを入力して登録プロセスを開始します。
 
    .. image:: img/09_blynk_sign_in.png
         :width: 70%
         :align: center
 
-#. Confirm your registration through your email.
+#. メールで登録を確認します。
 
     .. image:: img/09_blynk_password.png
         :width: 90%
 
-#. After confirmation, **Blynk Tour** will appear. It is recommended to select "Skip". If **Quick Start** also appears, consider skipping it as well.
+#. 確認後、 **Blynk Tour** が表示されます。「スキップ」を選択することをおすすめします。 **Quick Start** も表示された場合は、これもスキップすることを検討してください。
    
     .. image:: img/09_blynk_tour.png
         :width: 90%
 
-**2.2 Template Creation**
+**2.2 テンプレートの作成**
 
-#. First, create a template in Blynk. Follow the subsequent instructions to create the **Intrusion Alert System** template.
+#. Blynkでテンプレートを作成します。次の指示に従って **Intrusion Alert System** テンプレートを作成します。
 
     .. image:: img/09_create_template_1_shadow.png
         :width: 700
         :align: center
 
-#. Assign a name to the template, select **ESP32** Hardware, and select **Connection Type** as **WiFi**, then select **Done**.
+#. テンプレートに名前を割り当て、ハードウェアを **ESP32** として選択し、 **Connection Type** を **WiFi** として選択し、 **Done** を選択します。
 
     .. image:: img/09_create_template_2_shadow.png
         :width: 700
         :align: center
 
-**2.3 Datastream Generation**
+**2.3 データストリームの生成**
 
-Open the template you just set up, let's create two datastreams.
+設定したテンプレートを開き、2つのデータストリームを作成しましょう。
 
-#. Click **New Datastream**.
+#. **New Datastream** をクリックします。
 
     .. image:: img/09_blynk_new_datastream.png
         :width: 700
         :align: center
 
-#. In the popup, choose **Virtual Pin**.
+#. ポップアップで **Virtual Pin** を選択します。
 
     .. image:: img/09_blynk_datastream_virtual.png
         :width: 700
         :align: center
 
-#. Name the **Virtual Pin V0** as **AwayMode**. Set the **DATA TYPE** as **Integer** with **MIN** and **MAX** values as **0** and **1**.
+#. **Virtual Pin V0** に **AwayMode** と名付けます。 **DATA TYPE** を **Integer** とし、 **MIN** と **MAX** の値を **0** と **1** に設定します。
 
     .. image:: img/09_create_template_shadow.png
         :width: 700
         :align: center
 
-#. Similarly, create another **Virtual Pin** datastream. Name it **Current Status** and set the **DATA TYPE** to **String**.
+#. 同様に、別の **Virtual Pin** データストリームを作成します。 **Current Status** と名付け、 **DATA TYPE** を **String** に設定します。
 
     .. image:: img/09_datastream_1_shadow.png
         :width: 700
         :align: center
 
-**2.4 Setting Up an Event**
+**2.4 イベントの設定**
 
-Next, we'll set up an event that sends an email notification if an intrusion is detected.
+次に、侵入が検出された場合にメール通知を送信するイベントを設定します。
 
-#. Click **Add New Event**.
+#. **Add New Event** をクリックします。
 
     .. image:: img/09_blynk_event_add.png
 
-#. Define the event's name and its specific code. For **TYPE**, choose **Warning** and write a short description for the email to be sent when the event happens. You can also adjust how often you get notified.
+#. イベントの名前と特定のコードを定義します。 **TYPE** には **Warning** を選択し、イベント発生時に送信されるメールの短い説明を書きます。通知の頻度も調整できます。
 
     .. note::
         
-        Make sure the **EVENT CODE** is set as ``intrusion_detected``. This is predefined in the code, so any changes would mean you need to adjust the code as well.
+        **EVENT CODE** は ``intrusion_detected`` として設定されていることを確認してください。これはコードで事前に定義されているため、変更がある場合はコードも調整する必要があります。
 
     .. image:: img/09_event_1_shadow.png
         :width: 700
         :align: center
 
-#. Go to the **Notifications** section to turn on notifications and set up email details.
+#. **Notifications** セクションに移動して通知をオンにし、メールの詳細を設定します。
 
     .. image:: img/09_event_2_shadow.png
         :width: 80%
@@ -148,84 +146,85 @@ Next, we'll set up an event that sends an email notification if an intrusion is 
     
     <br/> 
 
-**2.5  Fine-Tuning the Web Dashboard**
+**2.5 Webダッシュボードの微調整**
 
-Making sure the **Web Dashboard** interacts perfectly with the Intrusion Alert System is vital.
+侵入アラートシステムと **Web Dashboard** が完璧に連動するようにすることが重要です。
 
-#. Simply drag and place both the **Switch widget** and the **Label widget** onto the **Web Dashboard**.
+#. **Switch widget** と **Label widget** を **Web Dashboard** にドラッグ＆ドロップします。
 
     .. image:: img/09_web_dashboard_1_shadow.png
         :width: 100%
         :align: center
 
-#. When you hover over a widget, three icons will appear. Use the settings icon to adjust the widget's properties.
+#. ウィジェット上にカーソルを合わせると、3つのアイコンが表示されます。設定アイコンを使用してウィジェットのプロパティを調整します。
 
     .. image:: img/09_blynk_dashboard_set.png
         :width: 100%
         :align: center
 
-#. In the **Switch widget** settings, select **Datastream** as **AwayMode(V0)**. Set **ONLABEL** and **OFFLABEL** to display **"away"** and **"home"**, respectively.
+#. **Switch widget** の設定で、 **Datastream** を **AwayMode(V0)** に設定します。 **ONLABEL** と **OFFLABEL** にそれぞれ **「away」** と **「home」** を表示するように設定します。
 
     .. image:: img/09_web_dashboard_2_shadow.png
         :width: 100%
         :align: center
 
-#. In the **Label widget** settings, select **Datastream** as **Current Status(V1)**.
+#. **Label widget** の設定で、 **Datastream** を **Current Status(V1)** に設定します。
 
     .. image:: img/09_web_dashboard_3_shadow.png
         :width: 100%
         :align: center
 
-**2.6 Saving the Template**
+**2.6 テンプレートの保存**
 
-Lastly, don't forget to save your template.
+最後に、テンプレートを保存するのを忘れないでください。
 
     .. image:: img/09_save_template_shadow.png
         :width: 100%
         :align: center
 
-**2.7 Making a Device**
+**2.7 デバイスの作成**
 
-#. It's time to create a new device.
+#. 新しいデバイスを作成する時が来ました。
 
     .. image:: img/09_blynk_device_new.png
         :width: 700
         :align: center
 
-#. Click on **From template** to start with a new setup.
+#. **From template** をクリックして新しいセットアップを開始します。
 
     .. image:: img/09_blynk_device_template.png
         :width: 700
         :align: center
 
-#. Then, pick the **Intrusion Alert System** template and click on **Create**.
+
+#. 次に、 **Intrusion Alert System** テンプレートを選択し、 **Create** をクリックします。
 
     .. image:: img/09_blynk_device_template2.png
         :width: 700
         :align: center
 
-#. Here, you'll see the ``Template ID``, ``Device Name``, and ``AuthToken``. You need to copy these into your code so the ESP32 can work with Blynk.
+#. ここでは、 ``Template ID``、 ``Device Name``、 ``AuthToken`` が表示されます。これらをコードにコピーして、ESP32がBlynkと連携できるようにします。
 
     .. image:: img/09_blynk_device_code.png
         :width: 700
         :align: center
 
-3. Code Execution
+3. コードの実行
 -----------------------------
-#. Before running the code, make sure to install the ``Blynk`` library from the **Library Manager** on the Arduino IDE.
+#. コードを実行する前に、Arduino IDEの **Library Manager** から ``Blynk`` ライブラリをインストールしてください。
 
     .. image:: img/09_blynk_add_library.png
         :width: 700
         :align: center
 
-#. Open the ``iot_9_intrusion_alert_system.ino`` file, which is located in the ``esp32-starter-kit-main\c\codes\iot_9_intrusion_alert_system`` directory. You can also copy its content into the Arduino IDE.
+#.  ``iot_9_intrusion_alert_system.ino`` ファイルを開きます。このファイルは、 ``esp32-starter-kit-main\c\codes\iot_9_intrusion_alert_system`` ディレクトリ内にあります。内容をArduino IDEにコピーすることもできます。
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/16bca228-64d7-4519-ac3b-833afecfcc65/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. Replace the placeholders for ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME``, and ``BLYNK_AUTH_TOKEN`` with your own unique IDs.
+#.  ``BLYNK_TEMPLATE_ID``、 ``BLYNK_TEMPLATE_NAME``、 ``BLYNK_AUTH_TOKEN`` のプレースホルダーを独自のIDに置き換えてください。
 
     .. code-block:: arduino
     
@@ -233,32 +232,32 @@ Lastly, don't forget to save your template.
         #define BLYNK_TEMPLATE_NAME "Intrusion Alert System"
         #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
-#. You also need to enter your WiFi network's ``ssid`` and ``password``.
+#. また、WiFiネットワークの ``ssid`` と ``password`` を入力する必要があります。
 
    .. code-block:: arduino
 
         char ssid[] = "your_ssid";
         char pass[] = "your_password";
 
-#. Choose the correct board (**ESP32 Dev Module**) and port, then click the **Upload** button.
+#. 正しいボード(**ESP32 Dev Module**)とポートを選択し、 **Upload** ボタンをクリックしてください。
 
-#. Open the Serial monitor (set baud rate to 115200) and wait for a successful connection message.
+#. シリアルモニターを開き（ボーレートを115200に設定）、成功した接続メッセージが表示されるのを待ちます。
 
     .. image:: img/09_blynk_upload_code.png
         :align: center
 
-#. After a successful connection, activating the switch in Blynk will start the PIR module's surveillance. When motion is detected (state of 1), it will say, "Somebody here!" and send an alert to your email.
+#. 接続に成功したら、Blynkでスイッチをアクティブにすると、PIRモジュールの監視が開始されます。動きが検出されると（状態が1になる）、"誰かがここにいる！"と表示され、あなたのメールにアラートが送信されます。
 
     .. image:: img/09_blynk_code_alarm.png
         :width: 700
         :align: center
 
-4. Code explanation
+4. コードの説明
 -----------------------------
 
-#. **Configuration & Libraries**
+#. **設定とライブラリ**
 
-   Here, you set up the Blynk constants and credentials. You also include the necessary libraries for the ESP32 and Blynk.
+   ここでは、Blynkの定数と資格情報を設定します。また、ESP32とBlynkに必要なライブラリを含めます。
 
     .. code-block:: arduino
 
@@ -273,18 +272,18 @@ Lastly, don't forget to save your template.
         #include <WiFiClient.h>
         #include <BlynkSimpleEsp32.h>
 
-#. **WiFi Setup**
+#. **WiFi設定**
 
-   Enter your WiFi credentials.
+   あなたのWiFiの資格情報を入力してください。
 
    .. code-block:: arduino
 
         char ssid[] = "your_ssid";
         char pass[] = "your_password";
 
-#. **PIR Sensor Configuration**
+#. **PIRセンサー設定**
 
-   Set the pin where the PIR sensor is connected and initialize the state variables.
+   PIRセンサーが接続されているピンを設定し、状態変数を初期化します。
 
    .. code-block:: arduino
 
@@ -293,11 +292,11 @@ Lastly, don't forget to save your template.
       int awayHomeMode = 0;
       BlynkTimer timer;
 
-#. **setup() Function**
+#. **setup()関数**
 
-   This function initializes the PIR sensor as an input, sets up serial communication, connects to WiFi, and configures Blynk.
+   この関数はPIRセンサーを入力として初期化し、シリアル通信を設定し、WiFiに接続し、Blynkを設定します。
 
-   - We use ``timer.setInterval(1000L, myTimerEvent)`` to set the timer interval in ``setup()``, here we set to execute the ``myTimerEvent()`` function every **1000ms**. You can modify the first parameter of ``timer.setInterval(1000L, myTimerEvent)`` to change the interval between ``myTimerEvent`` executions.
+   - ``setup()`` で ``timer.setInterval(1000L, myTimerEvent)`` を使用してタイマーの間隔を設定します。ここでは ``myTimerEvent()`` 関数を毎 **1000ms** 実行するように設定しています。 ``timer.setInterval(1000L, myTimerEvent)`` の最初のパラメータを変更することで ``myTimerEvent`` 実行の間隔を変更できます。
 
    .. raw:: html
     
@@ -316,9 +315,9 @@ Lastly, don't forget to save your template.
             timer.setInterval(1000L, myTimerEvent);  // Setup a function to be called every second
         }
 
-#. **loop() Function**
+#. **loop()関数**
 
-   The loop function continuously runs Blynk and the Blynk timer functions.
+   loop関数はBlynkとBlynkタイマー関数を継続的に実行します。
 
    .. code-block:: arduino
 
@@ -327,13 +326,13 @@ Lastly, don't forget to save your template.
            timer.run();
         }
 
-#. **Blynk App Interaction**
+#. **Blynkアプリとのやり取り**
 
-   These functions are called when the device connects to Blynk and when there's a change in the state of the virtual pin V0 on the Blynk app.
+   これらの関数は、デバイスがBlynkに接続したとき、またはBlynkアプリの仮想ピンV0の状態に変更があったときに呼び出されます。
 
-   - Every time the device connects to the Blynk server, or reconnects due to poor network conditions, the ``BLYNK_CONNECTED()`` function is called. The ``Blynk.syncVirtual()`` command request a single Virtual Pin value. The specified Virtual Pin will perform ``BLYNK_WRITE()`` call. 
+   - デバイスがBlynkサーバーに接続するたび、またはネットワーク状況が悪いために再接続するたびに、 ``BLYNK_CONNECTED()`` 関数が呼び出されます。 ``Blynk.syncVirtual()`` コマンドは単一の仮想ピン値のリクエストを行います。指定された仮想ピンは ``BLYNK_WRITE()`` コールを実行します。
 
-   - Whenever the value of a virtual pin on the BLYNK server changes, it will trigger ``BLYNK_WRITE()``.
+   - BLYNKサーバー上の仮想ピンの値が変更されると、 ``BLYNK_WRITE()`` がトリガされます。
 
    .. raw:: html
     
@@ -352,13 +351,13 @@ Lastly, don't forget to save your template.
             // additional logic
         }
 
-#. **Data Handling**
+#. **データ処理**
 
-   Every second, the ``myTimerEvent()`` function calls ``sendData()``. If the away mode is enabled on Blynk, it checks the PIR sensor and sends a notification to Blynk if motion is detected.
+   ``myTimerEvent()`` 関数は毎秒 ``sendData()`` を呼び出します。Blynkで外出モードが有効になっている場合、PIRセンサーをチェックし、動きが検出された場合にBlynkに通知を送ります。
 
-   - We use ``Blynk.virtualWrite(V1, "Somebody in your house! Please check!");`` to change the text of a label.
+   - ラベルのテキストを変更するには、 ``Blynk.virtualWrite(V1, "Somebody in your house! Please check!");`` を使用します。
 
-   - Use ``Blynk.logEvent("intrusion_detected");`` to log event to Blynk.
+   - イベントをBlynkに記録するには、 ``Blynk.logEvent("intrusion_detected");`` を使用します。
 
    .. raw:: html
     
@@ -386,7 +385,7 @@ Lastly, don't forget to save your template.
            }
         }
 
-**Reference**
+**参考文献**
 
 - |link_blynk_doc|
 - |link_blynk_quickstart| 

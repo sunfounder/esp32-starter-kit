@@ -1,29 +1,27 @@
 .. _cpn_capacitor:
 
-
-Capacitor
+コンデンサー
 =============
 
 .. image:: img/103_capacitor.png
 .. image:: img/10uf_cap.png
 
-Capacitor, refers to the amount of charge storage under a given potential difference, denoted as C, and the international unit is farad (F). 
-Generally speaking, electric charges move under force in an electric field. When there is a medium between conductors, the movement of electric charges is hindered and the electric charges accumulate on the conductors, resulting in accumulation of electric charges. 
+コンデンサーは、特定の電位差下での電荷の蓄積量を指し、Cとして示され、国際単位はファラッド（F）です。
+一般的に、電荷は電場内で力のもとに移動します。導体の間に媒体が存在すると、電荷の移動が妨げられ、電荷が導体に蓄積します、これが電荷の蓄積をもたらします。
 
-The amount of stored electric charges is called capacitance. Because capacitors are one of the most widely used electronic components in electronic equipment, they are widely used in direct current isolation, coupling, bypass, filtering, tuning loops, energy conversion, and control circuits. Capacitors are divided into electrolytic capacitors, solid capacitors, etc.
+蓄積される電荷の量を容量と言います。コンデンサーは、電子機器で最も広く使用される電子部品の一つであり、直流隔離、結合、バイパス、フィルタリング、チューニングループ、エネルギー変換、および制御回路に広く使用されています。コンデンサーは、電解コンデンサー、固体コンデンサーなどに分けられます。
 
-According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
+材料の特性に基づいて、コンデンサーは以下のように分けられます：アルミ電解コンデンサー、フィルムコンデンサー、タンタルコンデンサー、セラミックコンデンサー、スーパーコンデンサーなど。
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
+このキットには、セラミックコンデンサーと電解コンデンサーが使用されています。
 
-* `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
+* `セラミックコンデンサー - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
 
-* `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
+* `電解コンデンサー - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
 
-There are 103 or 104 label on the ceramic capacitors, which represent the capacitance value, 103=10x10^3pF, 104=10x10^4pF
+セラミックコンデンサーには103または104のラベルがあり、これらは容量値を示しており、103=10x10^3pF、104=10x10^4pFです。
 
-**Unit Conversion**
+**単位の変換**
 
-    1F=10^3mF=10^6uF=10^9nF=10^12pF
-
+    1F=10^3mF=10^6μF=10^9nF=10^12pF
 

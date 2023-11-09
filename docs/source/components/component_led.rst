@@ -3,7 +3,7 @@
 LED
 ==========
 
-**What's LED?**
+**LEDとは?**
 
 .. image:: img/led_pin.jpg
     :width: 200
@@ -11,94 +11,92 @@ LED
 .. image:: img/led_polarity.jpg
     :width: 400
 
-LEDs are very common electronic devices that can be used to decorate your room during the festival, and you can also use them as indicators for various things, such as whether the power to your home appliances is on or off. They come in dozens of different shapes and sizes, and the most common are LEDs with through hole LEDs, which generally have long leads and can be plugged into a breadboard.
+LEDは非常に一般的な電子部品で、祭りの時に部屋を飾るためや、家電の電源がオンかオフかのようなさまざまなことを示すインジケータとしても使用できます。LEDには数十の異なる形やサイズがあり、最も一般的なのはスルーホールLEDを持つLEDです。これらは通常長いリードを持っており、ブレッドボードに挿入できます。
 
-The full name of LED is light-emitting diode, so it has the characteristics of a diode, where current flows in one direction, from the anode (positive) to the cathode (negative).
+LEDの正式名称は発光ダイオードで、ダイオードの特性を持っているため、電流は一方向、アノード（正）からカソード（負）へ流れます。
 
-Here are the electrical symbols for LEDs.
+以下はLEDの電気記号です。
 
 .. image:: img/led_symbol.png
 
 
-**Various sizes and colors**
+**さまざまなサイズと色**
 
 .. image:: img/led_color.png
 
-Red, yellow, blue, green, and white are the most common LED colors, and the light emitted is usually the same color as the appearance.
+赤、黄、青、緑、白が最も一般的なLEDの色であり、放射される光は通常外観と同じ色です。
 
-We rarely use LEDs that are transparent or matte in appearance, but the light emitted may be a color other than white.
+透明またはマットな外観のLEDを使用することはまれですが、放射される光は白以外の色である場合があります。
 
-LEDs come in four sizes: 3mm, 5mm, 8mm and 10mm, with 5mm being the most common size.
+LEDは4つのサイズ、3mm、5mm、8mm、10mmで提供されており、5mmが最も一般的なサイズです。
 
 .. image:: img/led_type.jpg
 
-Below is the LED size of 5mm in mm.
+以下は5mmのLEDサイズの詳細です。
 
 .. image:: img/led_size.png
 
 
 
-**Forward Voltage**
+**順方向電圧**
 
-The Forward Voltage is a very important parameter to know when using LEDs, as it determines how much power you use and how large the current limiting resistor should be.
+LEDを使用する際に知っておくべき非常に重要なパラメータが順方向電圧です。これは、どれだけの電力を使用するか、また、電流制限抵抗のサイズがどれほど大きくなるべきかを決定します。
 
-The Forward Voltage is the voltage that the LED needs to use when it lights up. For most red, yellow, orange and light green LEDs, they generally use a voltage between 1.9V and 2.1V.
-
+順方向電圧は、LEDが点灯する際に必要とする電圧です。ほとんどの赤、黄、橙、淡緑色のLEDは、通常1.9Vから2.1Vの電圧を使用します。
 
 .. image:: img/led_voltage.jpg
     :width: 400
     :align: center
 
-
-According to Ohm's law, the current through this circuit decreases as the resistance increases, which causes the LED to dim.
+オームの法則によれば、この回路を通る電流は抵抗が増加すると減少し、LEDの光が暗くなります。
 
     I = (Vp-Vl)/R
 
-To get the LEDs to light up safely and with the right brightness, how much resistance should we use in the circuit?
+LEDを安全に、適切な明るさで点灯させるためには、回路にどれだけの抵抗を使用すべきか？
 
-For 99% of 5mm LEDs, the recommended current is 20mA, as you can see from the Conditions column of its data sheet.
+5mmのLEDの99%について、推奨される電流は20mAであり、そのデータシートのConditions列から確認できます。
 
 .. image:: img/led_datasheet.png
 
-Now convert the above formula as shown below.
+上の式を以下のように変換します。
 
     R = (Vp-Vl)/I
 
+もし ``Vp`` が5Vで、 ``Vl`` （順方向電圧）が2V、そして ``I`` が20mAの場合、 ``R`` は150Ωです。
 
-If ``Vp`` is 5V, ``Vl`` (Forward Voltage) is 2V, and ``I`` is 20mA, then ``R`` is 150Ω.
+抵抗の抵抗を減少させることでLEDを明るくすることができますが、150Ω以下にすることは推奨されません（この抵抗は非常に正確ではないかもしれません、異なる供給元が提供するLEDには違いがあるため）。
 
-So we can make the LED brighter by reducing the resistance of the resistor, but it is not recommended to go below 150Ω (this resistance may not be very accurate, because different suppliers provide LEDs have differences).
-
-Below are the forward voltages and wavelengths of different color LEDs that you can use as reference.
+以下は、参考として使用できるさまざまな色のLEDの順方向電圧と波長です。
 
 .. list-table::
    :widths: 25 25 50
    :header-rows: 1
 
-   * - LED Color
-     - Forward Voltage
-     - Wavelength
-   * - Red
+   * - LEDの色
+     - 順方向電圧
+     - 波長
+   * - 赤
      - 1.8V ~ 2.1V
      - 620 ~ 625
-   * - Yellow
+   * - 黄
      - 1.9V ~ 2.2V
      - 580 ~ 590
-   * - Green
+   * - 緑
      - 1.9V ~ 2.2V
      - 520 ~ 530
-   * - Blue
+   * - 青
      - 3.0V ~ 3.2V
      - 460 ~ 465
-   * - White
+   * - 白
      - 3.0V ~ 3.2V
      - 8000 ~ 9000
 
-**Example**
+**例**
 
-* :ref:`ar_blink` (Arduino Project)
-* :ref:`ar_fading` (Arduino Project)
-* :ref:`py_blink` (MicroPython Project)
-* :ref:`py_fading` (MicroPython Project)
-* :ref:`sh_breathing_led` (Scratch Project)
-* :ref:`sh_table_lamp` (Scratch Project)
+* :ref:`ar_blink` (Arduinoプロジェクト)
+* :ref:`ar_fading` (Arduinoプロジェクト)
+* :ref:`py_blink` (MicroPythonプロジェクト)
+* :ref:`py_fading` (MicroPythonプロジェクト)
+* :ref:`sh_breathing_led` (Scratchプロジェクト)
+* :ref:`sh_table_lamp` (Scratchプロジェクト)
+

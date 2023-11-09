@@ -1,33 +1,32 @@
-
 .. _add_libraries_py:
 
-1.4 Upload the Libraries (Important)
+1.4 ライブラリのアップロード（重要）
 ======================================
 
-In some projects, you will need additional libraries. So here we upload these libraries to ESP32 first, and then we can run the code directly later.
+一部のプロジェクトでは、追加のライブラリが必要になることがあります。ここでは、これらのライブラリを先にESP32にアップロードしておき、後でコードを直接実行できるようにします。
 
-#. Download the relevant code from the link below.
-
-
-   * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+#. 下記のリンクから関連するコードをダウンロードします。
 
 
-#. Open Thonny IDE and plug the ESP32 into your computer with a micro USB cable and click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+   * :download:`SunFounder ESP32スターターキット <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+
+
+#. Thonny IDEを開き、マイクロUSBケーブルでESP32をコンピュータに接続し、右下隅にある「MicroPython (ESP32).COMXX」インタプリタをクリックします。
 
     .. image:: img/sec_inter.png
 
-#. In the top navigation bar, click **View** -> **Files**.
+#. 上部のナビゲーションバーで、 **View** -> **Files** をクリックします。
 
     .. image:: img/th_files.png
 
-#. Switch the path to the folder where you downloaded the `code package <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ before, and then go to the ``esp32-starter-kit-main\micropython\libs`` folder.
+#. `コードパッケージ <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ をダウンロードしたフォルダへのパスを切り替え、その後で ``esp32-starter-kit-main\micropython\libs`` フォルダに進みます。
 
     .. image:: img/th_path.png
 
-#. Select all the files or folders in the ``libs/`` folder, right-click and click **Upload to**, it will take a while to upload.
+#. ``libs/`` フォルダ内の全てのファイルやフォルダを選択し、右クリックして **Upload to** をクリックします。アップロードには少し時間がかかります。
 
     .. image:: img/th_upload.png
 
-#. Now you will see the files you just uploaded inside your drive ``MicroPython device``.
+#. これで、アップロードしたばかりのファイルが ``MicroPython device`` 内に表示されます。
 
     .. image:: img/th_done.png

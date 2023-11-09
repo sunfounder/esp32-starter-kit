@@ -1,44 +1,44 @@
 .. _iot_bluetooth_app:
 
-8.10 Android Application - RGB LED Operation via Arduino and Bluetooth
-=======================================================================
+8.10 アンドロイドアプリケーション - ArduinoとBluetoothを介したRGB LED操作
+==========================================================================
 
-The objective of this project is to develop an Android application capable of manipulating the hue of an RGB LED through a smartphone using Bluetooth technology.
+このプロジェクトの目的は、Bluetooth技術を使ってスマートフォンでRGB LEDの色調を操作できるアンドロイドアプリケーションを開発することです。
 
-This Android application will be constructed utilizing a complimentary web-based platform known as MIT App Inventor 2. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
+このアンドロイドアプリケーションは、MIT App Inventor 2と呼ばれる無料のウェブベースプラットフォームを使用して構築されます。このプロジェクトは、Arduinoとスマートフォンのインターフェースに慣れる絶好の機会を提供します。
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../../_static/video/10_ble_app.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+      ご使用のブラウザではビデオタグがサポートされていません。
    </video>
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのが便利です。以下がリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -53,132 +53,132 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_rgb`
         - |link_rgb_led_buy|
 
-**1. Creation of the Android Application**
+**1. アンドロイドアプリケーションの作成**
 
-The Android application will be fashioned using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+アンドロイドアプリケーションは |link_appinventor| という無料のウェブアプリケーションを使用して作成されます。
+MIT App Inventorは、直感的なドラッグ＆ドロップ機能を使用して簡単なアプリケーションを作成することができるため、アンドロイド開発において優れた出発点です。
 
-Now, let's begin.
+さあ、始めましょう。
 
-#. Here is the login page: http://ai2.appinventor.mit.edu. You will require a Google account to register with MIT App Inventor.
+#. こちらがログインページです： http://ai2.appinventor.mit.edu。 MIT App Inventorに登録するにはGoogleアカウントが必要です。
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``control_rgb_led.aia`` file located in the path ``esp32-starter-kit-main\c\codes\iot_10_bluetooth_app_inventor``.
+#. ログインした後、 **Projects** -> **Import project (.aia) from my computer** に進み、 ``esp32-starter-kit-main\c\codes\iot_10_bluetooth_app_inventor`` パスにある ``control_rgb_led.aia`` ファイルをアップロードしてください。
 
    .. image:: img/10_ble_app_inventor1.png
 
-#. Upon uploading the ``.aia`` file, you will see the application on the **MIT App Inventor** software. This is a pre-configured template. You can modify this template after you have familiarized yourself with **MIT App Inventor** through the following steps.
+#. ``.aia`` ファイルをアップロードすると、 **MIT App Inventor** ソフトウェア上でアプリケーションが表示されます。これは事前に設定されたテンプレートです。 **MIT App Inventor** に慣れた後、このテンプレートを変更することができます。
 
    .. image:: img/10_ble_app_inventor2.png
 
-#. In **MIT App Inventor**, you have 2 primary sections: the **Designer** and the **Blocks**.
+#. **MIT App Inventor** では、主に **Designer** と **Blocks** の2つのセクションがあります。
 
    .. image:: img/10_ble_app_inventor3.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. **Designer** を使用すると、ボタン、テキスト、画面を追加し、アプリケーションの全体的な美観を変更することができます。
 
    .. image:: img/10_ble_app_inventor2.png
    
 
-#. Subsequently, you have the **Blocks** section. The **Blocks** section facilitates the creation of bespoke functions for your application.
+#. 次に、 **Blocks** セクションがあります。 **Blocks** セクションは、アプリケーションのための特別な機能を作成するのに役立ちます。
 
    .. image:: img/10_ble_app_inventor5.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. スマートフォンにアプリケーションをインストールするには、 **Build** タブに移動します。
 
    .. image:: img/10_ble_app_inventor6.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation.
-   * If you wish to upload this app to **Google Play** or another app marketplace, you can generate a ``.aab`` file.
+   * ``.apk`` ファイルを生成することができます。このオプションを選択すると、 ``.apk`` ファイルをダウンロードするか、QRコードをスキャンしてインストールするかを選択できるページが表示されます。インストールガイドに従ってアプリケーションのインストールを完了してください。
+   * このアプリを **Google Play** や他のアプリマーケットにアップロードしたい場合は、 ``.aab`` ファイルを生成することができます。
 
 
-**2. Upload the code**
 
-#. Build the circuit.
+**2. コードのアップロード**
+
+#. 回路を組み立てます。
 
    .. image:: ../../components/img/rgb_pin.jpg
       :width: 200
       :align: center
 
-   The RGB LED comprises 4 pins: the elongated pin is the common cathode pin, typically connected to GND; the pin to the left of the longest pin represents Red; and the two pins on the right symbolize Green and Blue.
+   RGB LEDには4つのピンがあります：長いピンは共通カソードピンで、通常はGNDに接続されています。最長のピンの左にあるピンは赤を表し、右側の2つのピンは緑と青を象徴しています。
 
    .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-#. Subsequently, connect the ESP32-WROOM-32E to your computer using a USB cable.
+#. 次に、USBケーブルを使用してESP32-WROOM-32Eをコンピュータに接続します。
 
    .. image:: ../../img/plugin_esp32.png
 
-#. Open the ``iot_10_bluetooth_app_inventor.ino`` file situated in the ``esp32-starter-kit-main\c\codes\iot_10_bluetooth_app_inventor`` directory, or copy the code into the Arduino IDE.
+#. ``esp32-starter-kit-main\c\codes\iot_10_bluetooth_app_inventor`` ディレクトリ内にある ``iot_10_bluetooth_app_inventor.ino`` ファイルを開くか、コードをArduino IDEにコピーします。
 
    .. raw:: html
 
       <iframe src=https://create.arduino.cc/editor/sunfounder01/07622bb5-31eb-4a89-b6f2-085f3332051f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Upon selecting the appropriate board (**ESP32 Dev Module**) and port, click the **Upload** button.
+#. 適切なボード（ **ESP32 Dev Module** ）とポートを選択した後、 **Upload** ボタンをクリックします。
 
-**3. App and ESP32 Connection**
+**3. アプリとESP32の接続**
 
-Ensure that the application created earlier is installed on your smartphone.
+以前に作成したアプリケーションがスマートフォンにインストールされていることを確認します。
 
-#. Initially, activate **Bluetooth** on your smartphone.
+#. 最初に、スマートフォンで **Bluetooth** を有効にします。
 
    .. image:: img/10_ble_mobile1.png
       :width: 500
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and find **ESP32RGB**.
+#. スマートフォンの **Bluetooth settings** に移動し、 **ESP32RGB** を探します。
 
    .. image:: img/10_ble_mobile2.png
       :width: 500
       :align: center
 
 
-#. After clicking it, agree to the **Pair** request in the pop-up window.
+#. クリックした後、ポップアップウィンドウで **Pair** 要求に同意します。
 
    .. image:: img/10_ble_mobile3.png
       :width: 500
       :align: center
 
-#. Now open the recently installed **Control_RGB_LED** APP.
+#. 今、最近インストールした **Control_RGB_LED** APPを開きます。
 
    .. image:: img/10_ble_mobile4.png
       :align: center
 
-#. In the APP, click on **Connect Bluetooth** to establish a connection between the APP and ESP32.
+#. APP内で **Connect Bluetooth** をクリックし、APPとESP32の間の接続を確立します。
 
    .. image:: img/10_ble_mobile5.png
       :width: 500
       :align: center
 
-#. Select the ``xx.xx.xx.xx.xx.xx ESP32RGB`` that comes up. if you changed ``SerialBT.begin("ESP32RGB");`` in the code, then just select the name of your setting.
+#. 表示される ``xx.xx.xx.xx.xx.xx ESP32RGB`` を選択します。もしコード内で ``SerialBT.begin("ESP32RGB");`` を変更した場合は、設定した名前を選択します。
 
    .. image:: img/10_ble_mobile6.png
       :width: 500
       :align: center
 
-#. If you have been waiting for a while and still can't see any device names, it may be that this APP is not allowed to scan surrounding devices. In this case, you need to adjust the settings manually.
+#. しばらく待ってもデバイス名が表示されない場合は、このAPPが周囲のデバイスをスキャンすることを許可されていない可能性があります。その場合は、手動で設定を調整する必要があります。
 
-   * Long press the APP icon and click on the resulting **APP Info**. If you have another method to access this page, follow that.
+   * APPアイコンを長押しして、表示された **APP Info** をクリックします。他の方法でこのページにアクセスできる場合は、その方法に従ってください。
 
       .. image:: img/10_ble_mobile8.png
          :width: 500
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * **Permissions** ページに移動します。
 
       .. image:: img/10_ble_mobile9.png
          :width: 500
          :align: center
 
-   * Locate **Nearby devices**, and select **Always** to allow this APP to scan for nearby devices.
+   * **Nearby devices** を探し、 **Always** を選択して、このAPPが近くのデバイスをスキャンできるようにします。
 
       .. image:: img/10_ble_mobile10.png
          :width: 500
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * 今、APPを再起動し、手順5と6を繰り返してBluetoothに成功裏に接続します。
 
-#. Upon successful connection, you will automatically return to the main page, where it will display connected. Now you can adjust the RGB values and change the color of the RGB display by pressing the **Change Color** button.
+#. 接続に成功すると、自動的にメインページに戻り、接続されたと表示されます。これで、 **Change Color** ボタンを押してRGB値を調整し、RGBディスプレイの色を変更することができます。
 
    .. image:: img/10_ble_mobile7.png
       :width: 500
