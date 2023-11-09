@@ -35,7 +35,14 @@ You can also buy them separately from the links below.
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
         - \-
-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_audio_speaker`
+        - \-
 
 **Operating Steps**
 
@@ -58,14 +65,6 @@ You can also buy them separately from the links below.
     If your SD card's music is already soft, you can remove or replace the resistor with a smaller value.
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
-
-    * :ref:`cpn_esp32_wroom_32e`
-    * :ref:`cpn_esp32_camera_extension`
-    * :ref:`cpn_breadboard`
-    * :ref:`cpn_wires`
-    * :ref:`cpn_resistor`
-    * :ref:`cpn_audio_speaker`
-
 
 #. Connect ESP32-WROOM-32E to the computer using the USB cable.
 
