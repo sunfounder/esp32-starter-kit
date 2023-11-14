@@ -95,7 +95,8 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 
 
-# Language switching links
+
+# open link in a new window
 
 rst_epilog = """
 
@@ -110,14 +111,6 @@ rst_epilog = """
 .. |link_en_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/" target="_blank">English Online-tutorials</a>
-
-"""
-
-
-
-# open link in a new window
-
-rst_epilog = """
 
 .. |link_thonny| raw:: html
 
