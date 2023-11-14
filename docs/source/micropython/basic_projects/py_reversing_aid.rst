@@ -1,41 +1,41 @@
 .. _py_reversing_aid:
 
-6.4 Reversing Aid
+6.4 Einparkhilfe
 ======================
 
-Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
+Stellen Sie sich Folgendes vor: Sie sitzen in Ihrem Auto und wollen in eine enge Parklücke zurücksetzen. Mit unserem Projekt haben Sie ein Ultraschallmodul am Heck Ihres Fahrzeugs montiert, das als digitales Auge fungiert. Sobald Sie den Rückwärtsgang einlegen, erwacht das Modul zum Leben, sendet Ultraschallimpulse aus, die von Hindernissen hinter Ihnen abprallen.
 
-The magic happens when these pulses return to the module. It swiftly calculates the distance between your car and the objects, transforming this data into real-time visual feedback displayed on a vibrant LCD screen. You'll witness dynamic, color-coded indicators depicting the proximity of obstacles, ensuring you have a crystal-clear understanding of the surrounding environment.
+Das Magische passiert, wenn diese Impulse zum Modul zurückkehren. Es berechnet blitzschnell die Entfernung zwischen Ihrem Auto und den Objekten und verwandelt diese Daten in eine Echtzeit-Visuelle Rückmeldung, die auf einem lebendigen LCD-Bildschirm angezeigt wird. Sie erleben dynamische, farbcodierte Indikatoren, die die Nähe zu Hindernissen darstellen und sicherstellen, dass Sie ein kristallklares Verständnis der Umgebung haben.
 
-But we didn't stop there. To immerse you further into this driving experience, we incorporated a lively buzzer. As your car inches closer to an obstacle, the buzzer's tempo intensifies, creating an auditory symphony of warnings. It's like having a personal orchestra guiding you through the complexities of reverse parking.
+Aber damit nicht genug. Um Sie noch weiter in dieses Fahrerlebnis einzutauchen, haben wir einen lebhaften Summer eingebaut. Nähert sich Ihr Auto einem Hindernis, intensiviert sich das Tempo des Summers und schafft eine akustische Symphonie von Warnungen. Es ist, als hätten Sie ein persönliches Orchester, das Sie durch die Komplexitäten des Einparkens leitet.
 
-This innovative project combines cutting-edge technology with an interactive user interface, making your reversing experience safe and stress-free. With the ultrasonic module, LCD display, and lively buzzer working harmoniously, you'll feel empowered and confident while maneuvering in tight spaces, leaving you free to focus on the joy of driving.
+Dieses innovative Projekt kombiniert Spitzentechnologie mit einer interaktiven Benutzeroberfläche und macht Ihr Einparkerlebnis sicher und stressfrei. Mit dem Ultraschallmodul, dem LCD-Display und dem lebhaften Summer, die harmonisch zusammenarbeiten, fühlen Sie sich ermächtigt und sicher beim Manövrieren auf engem Raum und können sich auf die Freude am Fahren konzentrieren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -56,16 +56,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_6.4_reversing_aid.png
     :width: 800
     :align: center
 
+Der Ultraschallsensor im Projekt sendet hochfrequente Schallwellen aus und misst die Zeit, die diese Wellen benötigen, um nach dem Aufprall auf ein Objekt zurückzuprallen. Durch die Analyse dieser Daten kann die Entfernung zwischen dem Sensor und dem Objekt berechnet werden. Um eine Warnung zu geben, wenn das Objekt zu nahe ist, wird ein Summer verwendet, um ein hörbares Signal zu erzeugen. Zusätzlich wird die gemessene Entfernung auf einem LCD-Bildschirm zur einfachen Visualisierung angezeigt.
 
-The ultrasonic sensor in the project emits high-frequency sound waves and measures the time it takes for the waves to bounce back after hitting an object. By analyzing this data, the distance between the sensor and the object can be calculated. To provide a warning when the object is too close, a buzzer is used to produce an audible signal. Additionally, the measured distance is displayed on an LCD screen for easy visualization.
-
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
     :width: 800
@@ -75,8 +74,8 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
 
 .. note::
 
-    * Open the ``6.4_reversing_aid.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``6.4_reversing_aid.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
 .. code-block:: python
 
@@ -183,10 +182,11 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
             previousMills = currentMills
 
 
-* When the script is running, the ultrasonic module will continuously detect the distance of obstacles in front of it, and display the distance on the Shell and I2C LCD1602. 
-* As the obstacle gets closer, the beeping frequency of the buzzer will become more rapid.
-* The ``ultrasonic_thread()`` function runs in a separate thread so that it can update the distance measurement continuously without blocking the main loop.
+* Wenn das Skript läuft, wird das Ultraschallmodul kontinuierlich die Entfernung von Hindernissen vor ihm erkennen und die Entfernung sowohl auf der Shell als auch auf dem I2C LCD1602 anzeigen. 
+* Je näher das Hindernis kommt, desto schneller wird die Piepfrequenz des Summers.
+* Die Funktion ``ultrasonic_thread()`` läuft in einem separaten Thread, damit sie die Entfernungsmessung kontinuierlich aktualisieren kann, ohne die Hauptloop zu blockieren.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Wenn der Code und die Verdrahtung korrekt sind, das LCD jedoch immer noch keinen Inhalt anzeigt, können Sie das Potentiometer auf der Rückseite justieren, um den Kontrast zu erhöhen.
+

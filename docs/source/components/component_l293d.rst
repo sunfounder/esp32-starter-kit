@@ -1,31 +1,30 @@
 .. _cpn_l293d:
 
-L293D 
+L293D
 =================
 
-L293D is a 4-channel motor driver integrated by chip with high voltage and high current. 
-It's designed to connect to standard DTL, TTL logic level, and drive inductive loads (such as relay coils, DC, Stepper Motors) and power switching transistors etc. 
-DC Motors are devices that turn DC electrical energy into mechanical energy. They are widely used in electrical drive for their superior speed regulation performance.
+Der L293D ist ein integrierter 4-Kanal-Motortreiber-Chip mit hoher Spannung und hohem Strom. 
+Er ist dafür konzipiert, an Standard-DTL, TTL-Logikpegel anzuschließen und induktive Lasten (wie Relaisspulen, Gleichstrom-, Schrittmotoren) sowie Leistungsschalttransistoren usw. zu steuern.
+Gleichstrommotoren sind Geräte, die Gleichstromenergie in mechanische Energie umwandeln. Aufgrund ihrer überlegenen Drehzahlregelungsleistung werden sie häufig in elektrischen Antrieben eingesetzt.
 
-See the figure of pins below. L293D has two pins (Vcc1 and Vcc2) for power supply. 
-Vcc2 is used to supply power for the motor, while Vcc1 to supply for the chip. Since a small-sized DC motor is used here, connect both pins to +5V.
+Siehe die folgende Abbildung der Pins. Der L293D hat zwei Pins (Vcc1 und Vcc2) für die Stromversorgung. 
+Vcc2 dient zur Stromversorgung des Motors, während Vcc1 den Chip versorgt. Da hier ein kleiner Gleichstrommotor verwendet wird, verbinden Sie beide Pins mit +5V.
 
 .. image:: img/l293d111.png
 
-The following is the internal structure of L293D. 
-Pin EN is an enable pin and only works with high level; A stands for input and Y for output. 
-You can see the relationship among them at the right bottom. 
-When pin EN is High level, if A is High, Y outputs high level; if A is Low, Y outputs Low level. When pin EN is Low level, the L293D does not work.
+Folgend sehen Sie die interne Struktur des L293D.
+Pin EN ist ein Aktivierungspin und funktioniert nur auf hohem Niveau; A steht für Eingang und Y für Ausgang.
+Die Beziehung zwischen ihnen können Sie unten rechts sehen.
+Wenn Pin EN auf hohem Niveau ist, gibt Y bei hohem A ein hohes Signal aus und bei niedrigem A ein niedriges Signal. Wenn Pin EN auf niedrigem Niveau ist, funktioniert der L293D nicht.
 
 .. image:: img/l293d334.png
 
-* `L293D Datasheet <https://www.ti.com/lit/ds/symlink/l293d.pdf?ts=1627004062301&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FL293D>`_
+* `L293D Datenblatt <https://www.ti.com/lit/ds/symlink/l293d.pdf?ts=1627004062301&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FL293D>`_
 
+**Beispiele**
 
-**Example**
-
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`ar_pump` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`py_pump` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Arduino-Projekt)
+* :ref:`ar_pump` (Arduino-Projekt)
+* :ref:`py_motor` (MicroPython-Projekt)
+* :ref:`py_pump` (MicroPython-Projekt)
+* :ref:`sh_rotating_fan` (Scratch-Projekt)

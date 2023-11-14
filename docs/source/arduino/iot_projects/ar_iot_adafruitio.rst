@@ -1,37 +1,37 @@
 .. _ar_adafruit_io:
 
-8.6 Temperature and Humidity Monitoring with Adafruit IO
+8.6 Temperatur- und Feuchtigkeitsüberwachung mit Adafruit IO
 =============================================================
 
-In this project, we will guide you on how to use a popular IoT platform. There are many free (or low-cost) platforms available online for programming enthusiasts. Some examples are Adafruit IO, Blynk, Arduino Cloud, ThingSpeak, and so on. The usage of these platforms is quite similar. Here, we will be focusing on Adafruit IO.
+In diesem Projekt werden wir Ihnen zeigen, wie Sie eine beliebte IoT-Plattform verwenden können. Es gibt viele kostenlose (oder kostengünstige) Plattformen online für Programmierbegeisterte. Einige Beispiele sind Adafruit IO, Blynk, Arduino Cloud, ThingSpeak und so weiter. Die Nutzung dieser Plattformen ist recht ähnlich. Hier konzentrieren wir uns auf Adafruit IO.
 
-We will write an Arduino program that uses the DHT11 sensor to send temperature and humidity readings to Adafruit IO's dashboard. You can also control an LED on the circuit through a switch on the dashboard.
+Wir werden ein Arduino-Programm schreiben, das den DHT11-Sensor verwendet, um Temperatur- und Feuchtigkeitsmessungen an das Dashboard von Adafruit IO zu senden. Sie können auch eine LED im Schaltkreis über einen Schalter im Dashboard steuern.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen. Hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,92 +48,92 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_dht11_buy|
 
-**Setting up the Dashboard**
+**Einrichten des Dashboards**
 
-#. Visit |link_adafruit_io|, then click on **Start for free** to create a free account.
+#. Besuchen Sie |link_adafruit_io| und klicken Sie auf **Start for free**, um ein kostenloses Konto zu erstellen.
 
     .. image:: img/sp230516_102503.png
 
-#. Fill out the form to create an account.
+#. Füllen Sie das Formular aus, um ein Konto zu erstellen.
 
     .. image:: img/sp230516_102629.png
 
-#. After creating an Adafruit account, you'll need to reopen Adafruit io. Click on the **Dashboards**, then click on **New Dashboard**.
+#. Nachdem Sie ein Adafruit-Konto erstellt haben, müssen Sie Adafruit io erneut öffnen. Klicken Sie auf **Dashboards** und dann auf **New Dashboard**.
 
     .. image:: img/sp230516_103347.png
 
-#. Create a **New Dashboard**.
+#. Erstellen Sie ein **New Dashboard**.
 
     .. image:: img/sp230516_103744.png
 
-#. Enter the newly created **Dashboard** and create a new block.
+#. Betreten Sie das neu erstellte **Dashboard** und erstellen Sie einen neuen Block.
 
     .. image:: img/sp230516_104234.png
 
-#. Create 1 **Toggle** block.
+#. Erstellen Sie 1 **Toggle**-Block.
 
     .. image:: img/sp230516_105727.png
 
-#. Next, you'll need to create a new feed here. This toggle will be used to control the LED, and we'll name this feed "LED".
+#. Als Nächstes müssen Sie hier einen neuen Feed erstellen. Dieser Toggle wird verwendet, um die LED zu steuern, und wir nennen diesen Feed "LED".
 
     .. image:: img/sp230516_105641.png
 
-#. Check the **LED** feed, then move to the next step.
+#. Überprüfen Sie den **LED**-Feed und gehen Sie dann zum nächsten Schritt über.
 
     .. image:: img/sp230516_105925.png
 
-#. Complete the block settings (mainly Block Title, On Text, and Off Text), then click on the **Create block** button at the bottom right to finish.
+#. Vervollständigen Sie die Blockeinstellungen (hauptsächlich Blocktitel, On-Text und Off-Text) und klicken Sie dann unten rechts auf den Button **Create block**, um den Vorgang abzuschließen.
 
     .. image:: img/sp230516_110124.png
 
-#. We also need to create two **Text Blocks** next. They will be used to display temperature and humidity. So, create two feeds named **temperature** and **humidity**.
+#. Als Nächstes müssen wir zwei **Text Blocks** erstellen. Sie werden verwendet, um Temperatur und Luftfeuchtigkeit anzuzeigen. Erstellen Sie also zwei Feeds mit den Namen **temperature** und **humidity**.
 
     .. image:: img/sp230516_110657.png
 
-#. After creation, your Dashboard should look something like this:
+#. Nach der Erstellung sollte Ihr Dashboard ungefähr so aussehen:
 
     .. image:: img/sp230516_111134.png
 
-#. You can adjust the layout by using the **Edit Layout** option on the Dashboard.
+#. Sie können das Layout mit der Option **Edit Layout** auf dem Dashboard anpassen.
 
     .. image:: img/sp230516_111240.png
 
-#. Click on **API KEY**, and you will see your username and **API KEY** displayed. Note these down as you'll need them for your code.
+#. Klicken Sie auf **API KEY**, und Ihr Benutzername und **API KEY** werden angezeigt. Notieren Sie sich diese, da Sie sie für Ihren Code benötigen.
 
     .. image:: img/sp230516_111641.png
 
-**Running the Code**
+**Code ausführen**
 
-#. Build the circuit. 
+#. Bauen Sie den Schaltkreis.
 
     .. image:: ../../img/wiring/iot_6_adafruit_io_bb.png
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Verbinden Sie dann ESP32-WROOM-32E mit dem Computer über das USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Open the code.
+#. Öffnen Sie den Code.
 
-    * Open the ``iot_6_adafruit_io.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_6_adafruit_io`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Öffnen Sie die Datei ``iot_6_adafruit_io.ino``, die sich im Verzeichnis ``esp32-starter-kit-main\c\codes\iot_6_adafruit_io`` befindet, oder kopieren Sie den Code in die Arduino IDE.
+    * Nachdem Sie das Board (ESP32 Dev Module) und den passenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
     * :ref:`unknown_com_port`
-    * The ``Adafruit_MQTT Library`` and ``DHT sensor library`` are used here, you can install them from the **Library Manager**.
+    * Hier werden die Bibliotheken ``Adafruit_MQTT Library`` und ``DHT sensor library`` verwendet, die Sie über den **Library Manager** installieren können.
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4cf6ad03-250e-4fe9-aa04-0ca73b997843/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. Find the following lines and replace ``<SSID>`` and ``<PASSWORD>`` with the specific details of your WiFi network.
+#. Finden Sie die folgenden Zeilen und ersetzen Sie ``<SSID>`` und ``<PASSWORD>`` mit den spezifischen Details Ihres WLAN-Netzwerks.
 
     .. code-block::  Arduino
 
-        /************************* WiFi Access Point *********************************/
+        /************************* WiFi Access Point  *********************************/
 
         #define WLAN_SSID "<SSID>"
         #define WLAN_PASS "<PASSWORD>"
 
-#. Then replace ``<YOUR_ADAFRUIT_IO_USERNAME>`` with your Adafruit IO username and ``<YOUR_ADAFRUIT_IO_KEY>`` with the **API KEY** you just copied.
+#. Ersetzen Sie dann ``<YOUR_ADAFRUIT_IO_USERNAME>`` mit Ihrem Adafruit IO-Benutzernamen und ``<YOUR_ADAFRUIT_IO_KEY>`` mit dem **API KEY**, den Sie gerade kopiert haben.
 
     .. code-block::  Arduino
 
@@ -142,9 +142,9 @@ You can also buy them separately from the links below.
         #define AIO_USERNAME "<YOUR_ADAFRUIT_IO_USERNAME>"
         #define AIO_KEY      "<YOUR_ADAFRUIT_IO_KEY>"
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
+#. Nachdem Sie das richtige Board (ESP32 Dev Module) und den Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
 
-#. Once the code is successfully uploaded, you will observe the following message in the serial monitor, indicating successful communication with Adafruit IO.
+#. Sobald der Code erfolgreich hochgeladen wurde, werden Sie die folgende Meldung im seriellen Monitor beobachten, die auf eine erfolgreiche Kommunikation mit Adafruit IO hinweist.
     
     .. code-block::
 
@@ -159,6 +159,7 @@ You can also buy them separately from the links below.
         Temperature: 27.10
         Humidity: 61.00
 
-#. Navigate back to Adafruit IO. Now you can observe the temperature and humidity readings on the dashboard, or utilize the LED toggle switch to control the on/off state of the external LED connected to the circuit.
+#. Navigieren Sie zurück zu Adafruit IO. Jetzt können Sie die Temperatur- und Luftfeuchtigkeitsmessungen auf dem Dashboard beobachten oder den LED-Kippschalter nutzen, um den Ein-/Ausschaltzustand der externen LED zu steuern, die mit dem Schaltkreis verbunden ist.
 
     .. image:: img/sp230516_143220.png
+

@@ -1,13 +1,13 @@
-Indentation
-=============
+Einrückung
+===========
 
-Indentation refers to the spaces at the beginning of a code line.
-Like standard Python programs, MicroPython programs usually run from top to bottom:
-It traverses each line in turn, runs it in the interpreter, and then continues to the next line,
-Just like you type them line by line in the Shell.
-A program that just browses the instruction list line by line is not very smart, though - so MicroPython, just like Python, has its own method to control the sequence of its program execution: indentation.
+Einrückung bezieht sich auf die Leerzeichen am Anfang einer Codezeile.
+Wie bei Standard-Python-Programmen laufen MicroPython-Programme normalerweise von oben nach unten:
+Das Programm durchläuft jede Zeile der Reihe nach, führt sie im Interpreter aus und geht dann zur nächsten Zeile über,
+genau so, als ob Sie sie Zeile für Zeile in der Shell eintippen.
+Ein Programm, das einfach die Anweisungsliste Zeile für Zeile durchblättert, ist jedoch nicht sehr intelligent - deshalb hat MicroPython, genau wie Python, seine eigene Methode, um die Ausführungsreihenfolge seines Programms zu steuern: Einrückung.
 
-You must put at least one space before print(), otherwise an error message "Invalid syntax" will appear. It is usually recommended to standardise spaces by pressing the Tab key uniformly.
+Sie müssen mindestens ein Leerzeichen vor print() setzen, sonst erscheint eine Fehlermeldung "Ungültige Syntax". Es wird normalerweise empfohlen, die Leerzeichen durch gleichmäßiges Drücken der Tab-Taste zu standardisieren.
 
 
 
@@ -21,7 +21,7 @@ Traceback (most recent call last):
   File "<stdin>", line 2
 SyntaxError: invalid syntax
 
-You must use the same number of spaces in the same block of code, or Python will give you an error.
+Sie müssen die gleiche Anzahl von Leerzeichen im gleichen Codeblock verwenden, sonst wird Python einen Fehler melden.
 
 
 .. code-block:: python
@@ -34,3 +34,4 @@ You must use the same number of spaces in the same block of code, or Python will
 Traceback (most recent call last):
   File "<stdin>", line 2
 SyntaxError: invalid syntax
+

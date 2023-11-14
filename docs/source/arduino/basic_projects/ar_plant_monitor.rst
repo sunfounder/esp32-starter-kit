@@ -1,37 +1,37 @@
 .. _ar_plant_monitor:
 
-6.6 Plant Monitor
+6.6 Pflanzenüberwachung
 ===============================
 
-Welcome to the Plant Monitor project! 
+Willkommen beim Projekt Pflanzenüberwachung!
 
-In this project, we will be using an ESP32 board to create a system that helps us take care of our plants. With this system, we can monitor the temperature, humidity, soil moisture, and light levels of our plants, and ensure that they are getting the care and attention they need to thrive.
+In diesem Projekt werden wir ein ESP32-Board verwenden, um ein System zu erstellen, das uns hilft, unsere Pflanzen zu pflegen. Mit diesem System können wir die Temperatur, die Luftfeuchtigkeit, die Bodenfeuchtigkeit und den Lichtpegel unserer Pflanzen überwachen und sicherstellen, dass sie die Pflege und Aufmerksamkeit erhalten, die sie zum Gedeihen benötigen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,23 +58,23 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
-The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
-Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
-measure the light level. The readings from these sensors are displayed on an LCD screen, and a water pump can be controlled 
-using a button to water the plant when needed.
+Das System verwendet einen DHT11-Sensor, um die Temperatur- und Feuchtigkeitswerte der Umgebung zu messen. 
+In der Zwischenzeit wird ein Bodenfeuchtigkeitsmodul verwendet, um den Feuchtigkeitsgehalt des Bodens zu messen, und ein Fotowiderstand, um 
+das Lichtniveau zu messen. Die Messwerte dieser Sensoren werden auf einem LCD-Bildschirm angezeigt, und eine Wasserpumpe kann gesteuert werden 
+mit einem Knopf, um die Pflanze bei Bedarf zu bewässern.
 
-IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
+IO32 hat einen internen Pull-Down-Widerstand von 1K und ist standardmäßig auf einem niedrigen Logikniveau. Wenn der Knopf gedrückt wird, stellt er eine Verbindung zu VCC (Hochspannung) her, was zu einem hohen Logikniveau auf IO32 führt.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    Es wird empfohlen, hier die Batterie einzulegen und dann den Schalter auf dem Erweiterungsboard auf die ON-Position zu schieben, um die Batterieversorgung zu aktivieren.
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
@@ -83,10 +83,10 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 .. note::
 
-    * You can open the file ``6.6_plant_monitor.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.6_plant_monitor``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Sie können die Datei ``6.6_plant_monitor.ino`` direkt unter dem Pfad ``esp32-starter-kit-main\c\codes\6.6_plant_monitor`` öffnen. 
+    * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
+    * Die Bibliotheken ``LiquidCrystal_I2C`` und ``DHT sensor library`` werden hier verwendet, Sie können sie aus dem **Library Manager** installieren.
 
 
 .. raw:: html
@@ -94,9 +94,10 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
     <iframe src=https://create.arduino.cc/editor/sunfounder01/52f54c4d-ad8c-49c4-816a-2a55a247d425/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-* After uploading the code, the I2C LCD1602 alternately displays temperature and humidity, as well as soil moisture and light intensity analog values, with a 2-second interval.
-* The water pump is controlled using a button press. To water the plants, hold down the button, and release it to stop watering.
+* Nach dem Hochladen des Codes zeigt das I2C LCD1602 abwechselnd Temperatur und Luftfeuchtigkeit sowie Bodenfeuchtigkeit und Lichtintensität analoge Werte an, mit einem 2-Sekunden-Intervall.
+* Die Wasserpumpe wird mit einem Knopfdruck gesteuert. Um die Pflanzen zu bewässern, halten Sie den Knopf gedrückt und lassen Sie ihn los, um das Bewässern zu stoppen.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Wenn der Code und die Verdrahtung korrekt sind, das LCD jedoch weiterhin keinen Inhalt anzeigt, können Sie den Potentiometer auf der Rückseite verstellen, um den Kontrast zu erhöhen.
+

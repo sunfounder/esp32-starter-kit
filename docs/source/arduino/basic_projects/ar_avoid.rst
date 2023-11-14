@@ -1,37 +1,35 @@
 .. _ar_ir_obstacle:
 
-5.3 Detect the Obstacle
+5.3 Hindernis Erkennen
 ===================================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+Dieses Modul wird häufig auf Autos und Robotern installiert, um die Existenz von Hindernissen voraus zu beurteilen. Es wird auch weit verbreitet in Handheld-Geräten, Wasserhähnen und so weiter eingesetzt.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -43,22 +41,22 @@ You can also buy them separately from the links below.
         - |link_avoid_buy|
 
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **Strapping Pins (Eingang)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Strapping-Pins sind eine spezielle Gruppe von Pins, die verwendet werden, um bestimmte Boot-Modi während des Gerätestarts 
+    (d.h., Einschalt-Reset) zu bestimmen.
         
     .. list-table::
         :widths: 5 15
@@ -66,15 +64,15 @@ You can also buy them separately from the links below.
         *   - Strapping Pins
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generell wird **nicht empfohlen, sie als Eingangspins zu verwenden**. Wenn Sie diese Pins verwenden möchten, berücksichtigen Sie den potenziellen Einfluss auf den Boot-Vorgang. Weitere Details finden Sie im Abschnitt :ref:`esp32_strapping`.
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.3_avoid.png
 
-When the obstacle avoidance module does not detect any obstacles, IO14 returns a high level. However, when it detects an obstacle, it returns a low level. You can adjust the blue potentiometer to modify the detection distance of this module.
+Wenn das Hindernisvermeidungsmodul keine Hindernisse erkennt, gibt IO14 ein hohes Niveau zurück. Wenn es jedoch ein Hindernis erkennt, gibt es ein niedriges Niveau zurück. Sie können das blaue Potentiometer einstellen, um die Erkennungsdistanz dieses Moduls zu ändern.
 
-**Wiring**
+**Verdrahtung**
 
 
 .. image:: ../../img/wiring/5.3_avoid_bb.png
@@ -84,8 +82,8 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
 
 .. note::
 
-    * You can open the file ``5.3.detect_the_obstacle.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.3.detect_the_obstacle``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Sie können die Datei ``5.3.detect_the_obstacle.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\5.3.detect_the_obstacle`` öffnen. 
+    * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
     * :ref:`unknown_com_port`
    
 .. raw:: html
@@ -93,4 +91,4 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b0f22caa-3c77-4dc1-9a33-20ff23d04a5e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After the code is uploaded successfully, if the IR obstacle avoidance module detects something blocking in front of it, "0" will appear on the serial monitor, otherwise "1" will be displayed.
+Nachdem der Code erfolgreich hochgeladen wurde, wird auf dem seriellen Monitor "0" angezeigt, wenn das IR-Hindernisvermeidungsmodul etwas in seinem Weg erkennt, andernfalls wird "1" angezeigt.

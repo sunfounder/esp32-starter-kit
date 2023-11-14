@@ -1,37 +1,37 @@
 .. _py_rgb_strip:
 
-2.7 RGB LED Strip
-======================
+2.7 RGB-LED-Streifen
+=========================
 
-In this project, we will delve into the mesmerizing world of driving WS2812 LED strips and bring a vibrant display of colors to life. With the ability to individually control each LED on the strip, we can create captivating lighting effects that will dazzle the senses.
+In diesem Projekt werden wir uns in die faszinierende Welt der Steuerung von WS2812-LED-Streifen vertiefen und eine lebendige Farbdisplay zum Leben erwecken. Mit der Möglichkeit, jede LED auf dem Streifen einzeln zu steuern, können wir fesselnde Beleuchtungseffekte erzeugen, die die Sinne verzaubern.
 
-Furthermore, we have included an exciting extension to this project, where we will explore the realm of randomness. By introducing random colors and implementing a flowing light effect, we can create a mesmerizing visual experience that captivates and enchants.
+Darüber hinaus haben wir eine spannende Erweiterung zu diesem Projekt hinzugefügt, in der wir das Reich der Zufälligkeit erkunden werden. Indem wir zufällige Farben einführen und einen fließenden Lichteffekt implementieren, können wir ein faszinierendes visuelles Erlebnis schaffen, das fesselt und verzaubert.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die unten stehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,33 +42,33 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_2.7_ws2812.png
     :width: 500
     :align: center
 
 
-**Available Pins**
+**Verfügbare Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Verfügbare Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
 .. note::
 
-    IO33 is not available for this project.
+    IO33 ist für dieses Projekt nicht verfügbar.
 
-    The WS2812 LED strip is a type of LED strip that requires a precise pulse-width modulation (PWM) signal. The PWM signal has precise requirements in both time and voltage. For instance, a "0" bit for the WS2812 corresponds to a high-level pulse of about 0.4 microseconds, while a "1" bit corresponds to a high-level pulse of about 0.8 microseconds. This means the strip needs to receive high-frequency voltage changes.
+    Der WS2812-LED-Streifen ist eine Art LED-Streifen, der ein präzises Pulsbreitenmodulations-(PWM-)Signal benötigt. Das PWM-Signal hat genaue Anforderungen sowohl in der Zeit als auch in der Spannung. Zum Beispiel entspricht ein "0"-Bit für den WS2812 einem High-Level-Puls von etwa 0,4 Mikrosekunden, während ein "1"-Bit einem High-Level-Puls von etwa 0,8 Mikrosekunden entspricht. Das bedeutet, dass der Streifen Hochfrequenzspannungsänderungen empfangen muss.
 
-    However, with a 4.7K pull-up resistor and a 100nf pull-down capacitor on IO33, a simple low-pass filter is created. This type of circuit "smooths out" high-frequency signals, because the capacitor needs some time to charge and discharge when it receives voltage changes. Therefore, if the signal changes too quickly (i.e., is high-frequency), the capacitor will not be able to keep up. This results in the output signal becoming blurred and unrecognizable to the strip.
+    Jedoch wird mit einem 4,7K-Pull-up-Widerstand und einem 100nf-Pull-down-Kondensator an IO33 ein einfacher Tiefpassfilter erstellt. Diese Art von Schaltung "glättet" Hochfrequenzsignale, da der Kondensator einige Zeit benötigt, um sich aufzuladen und zu entladen, wenn er Spannungsänderungen erhält. Wenn das Signal also zu schnell wechselt (d.h. hochfrequent ist), kann der Kondensator nicht mithalten. Dies führt dazu, dass das Ausgangssignal verwischt und für den Streifen unerkennbar wird.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/2.7_rgb_strip_bb.png
     :width: 800
@@ -77,10 +77,9 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``2.7_rgb_strip.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``2.7_rgb_strip.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
 
-    
 .. code-block:: python
 
     from machine import Pin
@@ -101,23 +100,23 @@ Here is a list of available pins on the ESP32 board for this project.
     pixels.write()              # write data to all pixels
 
 
-Let's select some favorite colors and display them on the RGB LED Strip!
+Lassen Sie uns einige Lieblingsfarben auswählen und sie auf dem RGB-LED-Streifen anzeigen!
 
-**How it works?**
+**Wie funktioniert das?**
 
-#. In the ``neopixel`` module, we have integrated related functions into the ``NeoPixel`` class.
+#. Im Modul ``neopixel`` haben wir verwandte Funktionen in die Klasse ``NeoPixel`` integriert.
 
     .. code-block:: python
 
         from neopixel import NeoPixel
 
-#. Use the ``NeoPixel`` class from the ``neopixel`` module to initialize the  ``pixels`` object, specifying the data pin and the number of LEDs.
+#. Verwenden Sie die Klasse ``NeoPixel`` aus dem Modul ``neopixel``, um das Objekt ``pixels`` zu initialisieren, wobei Sie den Datenpin und die Anzahl der LEDs angeben.
 
     .. code-block:: python
 
         pixels = NeoPixel(pin, 8)   # create NeoPixel driver on pin for 8 pixels
 
-#. Set the color of each LED and use the ``write()`` method to send the data to the WS2812 LED to update its display.
+#. Stellen Sie die Farbe jeder LED ein und verwenden Sie die Methode ``write()``, um die Daten an den WS2812-LED zu senden und seine Anzeige zu aktualisieren.
 
     .. code-block:: python
 
@@ -132,13 +131,13 @@ Let's select some favorite colors and display them on the RGB LED Strip!
 
         pixels.write()              # write data to all pixels
 
-**Learn More**
+**Mehr erfahren**
 
-We can randomly generate colors and make a colorful flowing light.
+Wir können zufällig Farben generieren und ein buntes fließendes Licht machen.
 
 .. note::
 
-    * Open the ``2.7_rgb_strip_random.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``2.7_rgb_strip_random.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
 
 
 .. code-block:: python
@@ -176,8 +175,9 @@ We can randomly generate colors and make a colorful flowing light.
             time.sleep_ms(100)
 
 
-* In the ``while`` loop, we use a ``for`` loop to turn on each pixel of the RGB LED strip one by one. 
-* First use the ``random.randint()`` function to generate a random color for the current pixel.
-* Then turn on the current pixel with the random color, use the ``write()`` method of the ``NeoPixel`` object to send the color data to the RGB LED strip to update its display
-* Finally, turn off the current pixel by setting its color to (0, 0, 0), and wait for a period of time to control the speed of the running light.
+* In der ``while``-Schleife verwenden wir eine ``for``-Schleife, um jedes Pixel des RGB-LED-Streifens nacheinander einzuschalten.
+* Zuerst verwenden wir die Funktion ``random.randint()``, um eine zufällige Farbe für das aktuelle Pixel zu generieren.
+* Dann schalten wir das aktuelle Pixel mit der zufälligen Farbe ein, verwenden die Methode ``write()`` des ``NeoPixel``-Objekts, um die Farbdaten an den RGB-LED-Streifen zu senden und seine Anzeige zu aktualisieren.
+* Schließlich schalten wir das aktuelle Pixel aus, indem wir seine Farbe auf (0, 0, 0) einstellen, und warten eine Zeit lang, um die Geschwindigkeit des Lauflichts zu steuern.
+
 

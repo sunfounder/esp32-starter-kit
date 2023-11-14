@@ -1,39 +1,39 @@
 .. _py_thermistor:
 
-5.10 Temperature Sensing
+5.10 Temperaturmessung
 ===========================
 
-A thermistor is a temperature sensor that exhibits a strong dependence on temperature, and it can be classified into two types: Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC). The resistance of an NTC thermistor decreases with increasing temperature, while the resistance of a PTC thermistor increases with increasing temperature.
+Ein Thermistor ist ein Temperatursensor, der eine starke Temperaturabhängigkeit aufweist, und er kann in zwei Typen eingeteilt werden: Negative Temperature Coefficient (NTC) und Positive Temperature Coefficient (PTC). Der Widerstand eines NTC-Thermistors nimmt mit steigender Temperatur ab, während der Widerstand eines PTC-Thermistors mit steigender Temperatur zunimmt.
 
-In this project, we will be using an NTC thermistor. By connecting the NTC thermistor to an analog input pin of the ESP32 microcontroller, we can measure its resistance, which is directly proportional to the temperature.
+In diesem Projekt werden wir einen NTC-Thermistor verwenden. Durch Anschluss des NTC-Thermistors an einen analogen Eingangspin des ESP32-Mikrocontrollers können wir seinen Widerstand messen, der direkt proportional zur Temperatur ist.
 
-By incorporating the NTC thermistor and performing the necessary calculations, we can accurately measure the temperature and display it on the I2C LCD1602 module. This project enables real-time temperature monitoring and provides a visual interface for temperature display.
+Durch die Einbindung des NTC-Thermistors und die Durchführung der notwendigen Berechnungen können wir die Temperatur genau messen und auf dem I2C LCD1602-Modul anzeigen. Dieses Projekt ermöglicht eine Echtzeit-Temperaturüberwachung und bietet eine visuelle Schnittstelle zur Temperaturanzeige.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,54 +48,51 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO14, IO25, I35, I34, I39, I36
 
 
 * **Strapping Pins**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Die folgenden Pins sind Strapping-Pins, die den Startvorgang des ESP32 beim Einschalten oder Zurücksetzen beeinflussen. Sobald der ESP32 jedoch erfolgreich hochgefahren ist, können sie als reguläre Pins verwendet werden.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Strapping-Pins
             - IO0, IO12
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.10_thermistor.png
 
-When the temperature rises, the resistance of the thermistor decreases, causing the value read on I35 to decrease. Additionally, by using a formula, you can convert the analog value into temperature and then print it out.
+Wenn die Temperatur steigt, nimmt der Widerstand des Thermistors ab, was dazu führt, dass der auf I35 abgelesene Wert sinkt. Zusätzlich können Sie durch Verwendung einer Formel den Analogwert in Temperatur umrechnen und dann ausdrucken.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.10_thermistor_bb.png
 
 
 .. note::
-    * The thermistor is black and marked 103.
-    * The color ring of the 10K ohm resistor is red, black, black, red and brown.
+    * Der Thermistor ist schwarz und mit 103 gekennzeichnet.
+    * Der Farbring des 10K-Ohm-Widerstands ist rot, schwarz, schwarz, rot und braun.
 
 **Code**
 
 .. note::
 
-    * Open the ``5.10_thermistor.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * Öffnen Sie die Datei ``5.10_thermistor.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
 .. code-block:: python
 
@@ -134,45 +131,44 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
         print('Celsius: %.2f C  Fahrenheit: %.2f F' % (Cel, Fah))
         time.sleep(0.5)
 
-When the code is run, the Shell will print out the Celsius and Fahrenheit temperatures.
+Wenn der Code ausgeführt wird, zeigt die Shell die Temperaturen in Celsius und Fahrenheit an.
 
-**How it works?**
+**Wie funktioniert das?**
 
-Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius. 
+Jeder Thermistor hat einen normalen Widerstand. Hier beträgt er 10k Ohm, gemessen bei 25 Grad Celsius.
 
-When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. 
+Wenn die Temperatur steigt, nimmt der Widerstand des Thermistors ab. Dann werden die Spannungsdaten durch den A/D-Adapter in digitale Werte umgewandelt.
 
-The temperature in Celsius or Fahrenheit is output via programming. 
+Die Temperatur in Celsius oder Fahrenheit wird durch Programmierung ausgegeben.
 
-Here is the relation between the resistance and temperature: 
+Hier ist die Beziehung zwischen Widerstand und Temperatur:
 
-    **RT =RN expB(1/TK - 1/TN)** 
+    **RT = RN expB(1/TK - 1/TN)** 
 
-    * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
-    * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``373.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``373.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``4950``. 
-    * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
+    * **RT** ist der Widerstand des NTC-Thermistors bei der Temperatur **TK**. 
+    * **RN** ist der Widerstand des NTC-Thermistors unter der Nenntemperatur TN. Hier beträgt der numerische Wert von RN 10k. 
+    * **TK** ist eine Kelvin-Temperatur und die Einheit ist K. Hier beträgt der numerische Wert von **TK** ``373.15 + degree Celsius``. 
+    * **TN** ist eine Nenntemperatur in Kelvin; die Einheit ist ebenfalls K. Hier beträgt der numerische Wert von TN ``373.15+25``.
+    * Und **B(Beta)**, die Materialkonstante des NTC-Thermistors, wird auch als Wärmeempfindlichkeitsindex bezeichnet, mit einem numerischen Wert von ``4950``. 
+    * **exp** ist die Abkürzung für Exponential, und die Basiszahl ``e`` ist eine natürliche Zahl und entspricht ungefähr 2,7. 
 
-    Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
+    Konvertieren Sie diese Formel ``TK=1/(ln(RT/RN)/B+1/TN)``, um die Kelvin-Temperatur zu erhalten, die minus 273,15 Grad Celsius entspricht. 
 
-    This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+    Diese Beziehung ist eine empirische Formel. Sie ist nur genau, wenn die Temperatur und der Widerstand innerhalb des effektiven Bereichs liegen.
 
 
-**Learn More**
+**Weitere Informationen**
 
-You can also display the calculated Celsius and Fahrenheit temperatures on the I2C LCD1602.
+Sie können auch die berechneten Temperaturen in Celsius und Fahrenheit auf dem I2C LCD1602 anzeigen.
 
 .. image:: ../../img/wiring/5.10_thermistor_lcd_bb.png
 
 .. note::
 
-    * Open the ``5.10_thermistor_lcd.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``5.10_thermistor_lcd.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
-    * Here you need to use the library called ``lcd1602.py``, please check if it has been uploaded to ESP32, for a detailed tutorial refer to :ref:`add_libraries_py`.
-
+    * Hier müssen Sie die Bibliothek ``lcd1602.py`` verwenden, überprüfen Sie bitte, ob sie auf den ESP32 hochgeladen wurde. Für eine detaillierte Anleitung siehe :ref:`add_libraries_py`.
 
 .. code-block:: python
 
@@ -220,5 +216,3 @@ You can also display the calculated Celsius and Fahrenheit temperatures on the I
         lcd.message('Cel: %.2f \xDFC \n' % Cel)
         lcd.message('Fah: %.2f \xDFF' % Fah)
         time.sleep(1)
-
-

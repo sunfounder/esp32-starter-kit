@@ -1,77 +1,69 @@
-
 .. _cpn_breadboard:
 
-Breadboard
+Steckbrett
 ==============
 
-**What is a "solderless" breadboard?**
+**Was ist ein „lötfreies“ Steckbrett?**
 
 .. image:: img/breadboard.png
     :width: 600
     :align: center
 
-A breadboard is a rectangular plastic board with many small holes in it. These small holes allow you to easily insert electronic components to build circuits. Technically speaking, these breadboards are known as solderless breadboards because they do not require soldering to make connections.
+Ein Steckbrett ist eine rechteckige Kunststoffplatte mit vielen kleinen Löchern. Diese Löcher ermöglichen es Ihnen, elektronische Bauteile einzufügen, um Schaltungen zu bauen. Technisch gesehen sind diese Steckbretter als lötfreie Steckbretter bekannt, da sie keine Lötverbindungen zur Herstellung von Kontakten benötigen.
 
-**Features**
+**Merkmale**
 
-* Size: 163 x 54 x 8 mm
-* 830 tie points breadboards: 630 tie-point ic-circuit area plus 2x100 tie-point distribution strips providing 4 power rails.
-* Wire size: Suitable for 20-29 AWG wires.
-* Material: ABS Plastic Panel, Tin Plated Phosphor Bronze Contact Sheet.
-* Voltage / Current: 300V/3-5A.
-* With Self-Adhesive Tape on the Back
+* Größe: 163 x 54 x 8 mm
+* 830 Anschlusspunkte: 630 Anschlusspunkte für IC-Schaltkreise plus 2x100 Anschlussstreifen mit 4 Stromschienen.
+* Drahtgröße: Geeignet für 20-29 AWG Drähte.
+* Material: ABS-Kunststoffplatte, verzinntes Phosphorbronze-Kontaktblech.
+* Spannung / Strom: 300V/3-5A.
+* Mit Selbstklebeband auf der Rückseite
 
-**What is in the breadboard?**
+**Was befindet sich im Steckbrett?**
 
 .. image:: img/breadboard_internal.png
     :width: 600
     :align: center
 
-The inside of the breadboard is made up of rows of small metal clips. When you insert the leads of a component into the holes of the breadboard, one of the clips catches it. Some breadboards are actually made of clear plastic, so you can see the clips inside.
+Das Innere des Steckbretts besteht aus Reihen kleiner Metallklammern. Wenn Sie die Anschlüsse eines Bauteils in die Löcher des Steckbretts stecken, wird einer der Klammern dies erfassen. Manche Steckbretter bestehen tatsächlich aus durchsichtigem Kunststoff, sodass Sie die Klammern im Inneren sehen können.
 
-**What do the letters and numbers on a breadboard mean?**
+**Was bedeuten die Buchstaben und Zahlen auf einem Steckbrett?**
 
 .. image:: img/breadboard_internal2.png
     :width: 500
     :align: center
 
-Most breadboards have some numbers, letters and plus and minus signs on them. Although the labels will vary from breadboard to breadboard, the function is basically the same. These labels allow you to find the corresponding holes more quickly when building your circuit.
+Die meisten Steckbretter haben einige Zahlen, Buchstaben und Plus- und Minuszeichen. Obwohl sich die Beschriftungen von Steckbrett zu Steckbrett unterscheiden, ist die Funktion im Grunde gleich. Diese Beschriftungen helfen Ihnen, die entsprechenden Löcher beim Bau Ihres Schaltkreises schneller zu finden.
 
-The row numbers and column letters help you to precisely locate the holes on the breadboard, for example, hole "C12" is where column C intersects row 12.
+Die Reihennummern und Spaltenbuchstaben helfen Ihnen, die Löcher auf dem Steckbrett präzise zu lokalisieren, zum Beispiel befindet sich das Loch „C12“ dort, wo Spalte C auf Reihe 12 trifft.
 
-
-**What do the colored lines and plus and minus signs mean?**
+**Was bedeuten die farbigen Linien und Plus- und Minuszeichen?**
 
 .. image:: img/breadboard_internal3.png
     :width: 500
     :align: center
 
-The sides of the breadboard are usually distinguished by red and blue (or other colors), as well as plus and minus signs, and are usually used to connect to the power supply, known as the power bus.
+Die Seiten des Steckbretts sind in der Regel durch rote und blaue (oder andere Farben) sowie Plus- und Minuszeichen gekennzeichnet und werden üblicherweise verwendet, um eine Verbindung zur Stromversorgung herzustellen, bekannt als Stromschiene.
 
-When building a circuit, it is common to connect the negative terminal to the blue (-) column and the positive terminal to the red (+) column.
+Beim Aufbau eines Schaltkreises ist es üblich, den negativen Pol mit der blauen (-) Spalte und den positiven Pol mit der roten (+) Spalte zu verbinden.
 
-
-**How are the holes connected?**
+**Wie sind die Löcher verbunden?**
 
 .. image:: img/breadboard_internal4.png
     :width: 500
     :align: center
 
-As shown in the diagram, each set of five holes in the middle section, columns A-E or F-J, is electrically connected. This means, for example, that hole A1 is electrically connected to holes B1, C1, D1 and E1.
+Wie in der Abbildung dargestellt, ist jede Gruppe von fünf Löchern im mittleren Bereich, Spalten A-E oder F-J, elektrisch miteinander verbunden. Das bedeutet beispielsweise, dass Loch A1 elektrisch mit den Löchern B1, C1, D1 und E1 verbunden ist.
 
-It is not connected to hole A2 because that hole is in a different row with a separate set of metal clips. It is also not connected to holes F1, G1, H1, I1 or J1 because they are located in the other "half" of the breadboard - the clips are not connected across the middle gap.
+Es ist nicht mit Loch A2 verbunden, da dieses Loch in einer anderen Reihe liegt, die eine separate Gruppe von Metallklammern hat. Es ist auch nicht mit den Löchern F1, G1, H1, I1 oder J1 verbunden, da diese sich in der anderen „Hälfte“ des Steckbretts befinden - die Klammern sind nicht über die mittlere Lücke hinweg verbunden.
 
-Unlike the middle section, which is grouped by five holes, the buses on sides are electrically connected separately. For example, the column marked blue (-) is electrically connected as a whole, and the column marked red (+) is also electrically connected.
+Im Gegensatz zum mittleren Abschnitt, der in Fünfergruppen unterteilt ist, sind die Busse an den Seiten separat elektrisch verbunden. Zum Beispiel ist die Spalte, die mit Blau (-) markiert ist, als Ganzes elektrisch verbunden, und die Spalte, die mit Rot (+) markiert ist, ist ebenfalls elektrisch verbunden.
 
-**Which electronic parts are compatible with breadboards?**
+**Welche elektronischen Teile sind mit Steckbrettern kompatibel?**
 
 .. image:: img/breadboard_pins.jpg
     :width: 600
     :align: center
 
-Many electronic components have long metal legs called leads. Almost all components with leads will work with a breadboard. Components such as resistors, capacitors, switches, diodes, etc. can be inserted in any of the rows, but ICs need to be arranged across the middle gap.
-
-
-
-
-
+Viele elektronische Komponenten haben lange Metallbeine, die als Anschlüsse bezeichnet werden. Fast alle Komponenten mit Anschlüssen funktionieren mit einem Steckbrett. Komponenten wie Widerstände, Kondensatoren, Schalter, Dioden usw. können in jede der Reihen eingefügt werden, aber ICs müssen über die mittlere Lücke hinweg angeordnet werden.

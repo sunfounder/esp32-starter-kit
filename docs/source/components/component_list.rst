@@ -1,15 +1,14 @@
-Components List and Introduction
+Komponentenliste und Einführung
 ====================================
 
-
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Nach dem Öffnen des Pakets überprüfen Sie bitte, ob die Anzahl der Komponenten mit der Produktbeschreibung übereinstimmt und ob alle Komponenten in einwandfreiem Zustand sind.
 
 .. image:: img/components_list.jpg
     :width: 800
     
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+Im Folgenden finden Sie eine Einführung in jede Komponente, einschließlich des Funktionsprinzips der Komponente und der entsprechenden Projekte.
 
-**Control Board**
+**Steuerplatine**
 
 .. toctree::
     :maxdepth: 1
@@ -19,7 +18,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Basic**
+**Grundlegendes**
 
 .. toctree::
     :maxdepth: 1
@@ -39,7 +38,7 @@ Below is the introduction to each component, which contains the operating princi
     component_l293d
 
 
-**Display**
+**Anzeige**
 
 .. toctree::
     :maxdepth: 1
@@ -51,7 +50,7 @@ Below is the introduction to each component, which contains the operating princi
     component_ws2812
 
 
-**Sound**
+**Klang**
 
 .. toctree::
     :maxdepth: 1
@@ -59,7 +58,7 @@ Below is the introduction to each component, which contains the operating princi
     component_buzzer
     component_audio_speaker
 
-**Driver**
+**Treiber**
 
 .. toctree::
     :maxdepth: 1

@@ -4,35 +4,35 @@ SunFounder ESP32 Starter Kit
 .. image:: img/esp32_ultimate_kit.png
 
 
-Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
+Willkommen beim ESP32 Lernkit! Dieses umfassende Paket ist sowohl für Anfänger als auch für erfahrene Entwickler konzipiert, um einen tiefen Einblick in die vielseitige Welt des ESP32-Mikrocontrollers zu erhalten. Mit dem ESP32 WROOM 32E als Herzstück und einer Reihe von begleitenden Komponenten wie LEDs, Sensoren, Motoren und mehr können Benutzer eine Vielzahl von Projekten erkunden.
 
-Whether you're keen on basic electronics, IoT integrations, this kit has it all. For MicroPython enthusiasts, we provide a structured introduction to MicroPython, complete with IDE setups and basic syntax lessons. Arduino users are not left behind, with a dedicated section on getting started with Arduino, and a suite of basic projects to jumpstart the learning process.
+Ob Sie sich für Grundlagen der Elektronik oder IoT-Integrationen interessieren, dieses Kit bietet alles. Für MicroPython-Begeisterte bieten wir eine strukturierte Einführung in MicroPython, komplett mit Einrichtungen der IDE und Grundlagen der Syntax. Auch Arduino-Anwender kommen nicht zu kurz, mit einem eigenen Abschnitt zum Einstieg in Arduino und einer Sammlung von Grundprojekten, um den Lernprozess zu starten.
 
-For the creatives, there's a delightful section on integrating with Scratch, allowing for a blend of programming and storytelling. Each project in the kit is meticulously outlined, ensuring you understand the objectives, the circuit assembly, and the programming aspects.
+Für Kreative gibt es einen reizvollen Abschnitt zur Integration mit Scratch, der Programmierung und Geschichtenerzählen verbindet. Jedes Projekt im Kit ist akribisch dargestellt, um sicherzustellen, dass Sie die Ziele, den Schaltungsanbau und die Programmieraspekte verstehen.
 
-With a myriad of game projects, practical applications, and troubleshooting FAQs, this kit promises an enriching learning experience for all. Dive in and let the ESP32 adventure begin!
+Mit einer Fülle von Spielprojekten, praktischen Anwendungen und FAQs zur Fehlersuche verspricht dieses Kit eine bereichernde Lernerfahrung für alle. Tauchen Sie ein und lassen Sie das ESP32-Abenteuer beginnen!
 
 
-If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
+Wenn Sie Fragen haben oder andere interessante Ideen, zögern Sie nicht, eine E-Mail an service@sunfounder.com zu senden.
 
-**About the display language**
+**Über die Anzeigesprache**
 
-In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
-In the meantime, we recommend using Google Translate to convert English to the language you want to see.
+Zusätzlich zu Englisch arbeiten wir an anderen Sprachen für diesen Kurs. Bitte kontaktieren Sie service@sunfounder.com , wenn Sie helfen möchten, und wir werden Ihnen als Dank ein kostenloses Produkt geben.
+In der Zwischenzeit empfehlen wir, Google Translate zu verwenden, um Englisch in die Sprache zu übersetzen, die Sie sehen möchten.
 
-The steps are as follows.
+Die Schritte sind wie folgt.
 
-* In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
+* Rechtsklicken Sie auf dieser Kursseite und wählen Sie **Translate to xx**. Wenn die aktuelle Sprache nicht die gewünschte ist, können Sie sie später ändern.
 
 .. image:: img/translate1.png
     :align: center
 
-* There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
+* Es erscheint ein Sprach-Popup in der oberen rechten Ecke. Klicken Sie auf das Menüsymbol, um **choose another language**.
 
 .. image:: img/translate2.png
     :align: center
 
-* Select the language from the inverted triangle box, and then click **Done**.
+* Wählen Sie aus dem umgekehrten Dreieckkasten die Sprache aus und klicken Sie dann auf **Done**.
 
 .. image:: img/translate3.png
     :align: center
@@ -41,7 +41,7 @@ The steps are as follows.
     :maxdepth: 2
 
 
-    About this Kit <self>
+    Über dieses Kit <self>
     components/component_list
     arduino/for_arduino_user
     micropython/for_micropython_user
@@ -49,7 +49,7 @@ The steps are as follows.
     faq/faq
     thank-learning
 
-Copyright Notice
+Urheberrechtshinweis
 -----------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+Alle Inhalte, einschließlich aber nicht beschränkt auf Texte, Bilder und Code in diesem Handbuch sind Eigentum der SunFounder Company. Sie sollten es nur für persönliche Studien, Untersuchungen, Vergnügen oder andere nicht-kommerzielle oder gemeinnützige Zwecke unter Beachtung der entsprechenden Vorschriften und Urheberrechtsgesetze verwenden, ohne die gesetzlichen Rechte des Autors und der relevanten Rechteinhaber zu verletzen. Für jede Einzelperson oder Organisation, die diese ohne Erlaubnis zu kommerziellen Gewinnzwecken nutzt, behält sich das Unternehmen das Recht vor, rechtliche Schritte einzuleiten.

@@ -1,45 +1,45 @@
-8.8 Camera with Home Assistant
+8.8 Kamera mit Home Assistant
 ======================================
 
-This project will guide you in setting up a video stream web server for the ESP32 camera and integrating it with the popular home automation platform, Home Assistant. This integration will allow you to access the server from any device on your network.
+Dieses Projekt führt Sie durch die Einrichtung eines Video-Stream-Web-Servers für die ESP32-Kamera und dessen Integration in die beliebte Heimautomatisierungsplattform Home Assistant. Diese Integration ermöglicht Ihnen den Zugriff auf den Server von jedem Gerät in Ihrem Netzwerk aus.
 
 .. note::
     
-    Before diving into this project, you need to have an operating system with Home Assistant installed.
+    Bevor Sie mit diesem Projekt beginnen, benötigen Sie ein Betriebssystem mit installiertem Home Assistant.
         
-    We recommend installing the Home Assistant OS on a Raspberry Pi.
+    Wir empfehlen die Installation des Home Assistant OS auf einem Raspberry Pi.
         
-    If you don't have a Raspberry Pi, you can also install it on a virtual machine running on Windows, macOS, or Linux.
+    Falls Sie keinen Raspberry Pi besitzen, können Sie es auch auf einer virtuellen Maschine unter Windows, macOS oder Linux installieren.
         
-    For installation instructions, refer to the official website link: https://www.home-assistant.io/installation/
+    Anweisungen zur Installation finden Sie auf der offiziellen Website: https://www.home-assistant.io/installation/
         
-    Please proceed with this project only after successful installation.
+    Fahren Sie mit diesem Projekt erst nach einer erfolgreichen Installation fort.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen. Hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,64 +47,65 @@ You can also buy them separately from the links below.
         - \-
 
 
-**1. Configuration in ESP Home**
+**1. Konfiguration in ESPHome**
 
-#. First plug in the camera.
+#. Stecken Sie zuerst die Kamera ein.
 
     .. raw:: html
 
         <video loop autoplay muted style = "max-width:100%">
             <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Ihr Browser unterstützt das Video-Tag nicht.
         </video>
 
-#. Connect your ESP32 to the host where you've installed the Home Assistant system (e.g., if installed on a Raspberry Pi, connect to the Pi).
+#. Verbinden Sie Ihr ESP32 mit dem Host, auf dem Sie das Home Assistant System installiert haben (z.B. wenn es auf einem Raspberry Pi installiert ist, verbinden Sie es mit dem Pi).
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Install ESPHome Addon.
+#. Installieren Sie das ESPHome Addon.
 
     .. image:: img/sp230629_145928.png
 
-#. Click **START**, then **OPEN WEB UI**.
+#. Klicken Sie auf **START**, dann auf **OPEN WEB UI**.
 
     .. image:: img/sp230629_172645.png
         :width: 700
         :align: center
 
-#. Add new devices.
+#. Fügen Sie neue Geräte hinzu.
 
     .. image:: img/sp230629_172733.png
 
-#. A prompt might appear. Click **CONTINUE**.
+#. Es könnte eine Aufforderung erscheinen. Klicken Sie auf **CONTINUE**.
 
     .. image:: img/sp230629_172816.png
         :align: center
 
 
-#. Create a configuration. Here, you can enter any desired name for **Name**. For WiFi, enter details of the network on which your Home Assistant system is present.
+#. Erstellen Sie eine Konfiguration. Hier können Sie für **Name** einen beliebigen Namen eingeben. Für das WLAN geben Sie die Details des Netzwerks ein, in dem sich Ihr Home Assistant System befindet.
 
     .. image:: img/sp230629_172926.png
 
-#. Select the **ESP32** as the device type.
+#. Wählen Sie den **ESP32** als Gerätetyp.
 
     .. image:: img/sp230629_173043.png
 
-#. When you see a fireworks celebration icon, it means you've successfully created the device. Click skip (DO NOT click **INSTALL**).
+#. Wenn Sie ein Feuerwerksfeier-Symbol sehen, bedeutet dies, dass Sie das Gerät erfolgreich erstellt haben. Klicken Sie auf überspringen (NICHT auf **INSTALL** klicken).
 
     .. image:: img/sp230629_173151.png
 
-    At this point, you've only added the device in ESPHome. To integrate the ESP32 module into Home Assistant, additional configurations are needed:
+    An diesem Punkt haben Sie das Gerät nur in ESPHome hinzugefügt. Um das ESP32-Modul in Home Assistant zu integrieren, sind zusätzliche Konfigurationen notwendig:
 
-#. Click **EDIT**.
+
+#. Klicken Sie auf **EDIT**.
 
     .. image:: img/sp230629_173322.png
 
-#. After entering the ``.yaml`` interface, modify the ``ssid`` and ``password`` with your WiFi details.
+#. Nachdem Sie die ``.yaml``-Schnittstelle geöffnet haben, ändern Sie ``ssid`` und ``password`` mit Ihren WLAN-Daten.
 
     .. image:: img/sp230629_174301.png
 
-#. Under the ``captive_portal`` section, paste the following code:
+#. Fügen Sie im Abschnitt ``captive_portal`` den folgenden Code ein:
 
     .. code-block::
 
@@ -128,71 +129,72 @@ You can also buy them separately from the links below.
 
     .. note:: 
         
-        For more details on the ``.yaml`` configuration for ESP32, you can refer to `ESP32 Camera - ESPHome <https://esphome.io/components/esp32_camera.html>`_.
+        Für weitere Details zur ``.yaml``-Konfiguration für ESP32 können Sie sich auf `ESP32 Kamera - ESPHome <https://esphome.io/components/esp32_camera.html>`_ beziehen.
 
-#. **Save**, then click **INSTALL**.
+#. **Save** Sie und klicken Sie dann auf **INSTALL**.
 
     .. image:: img/sp230629_174447.png
 
-#. Choose the USB port method for installation.
+#. Wählen Sie die USB-Port-Methode zur Installation.
 
     .. image:: img/sp230629_174852.png
 
     .. note:: 
         
-        The initial compilation will download dependency packages, which might take around 10 minutes. Please be patient. If the process stalls for a long time, check if there's enough disk space on your system.
+        Die erste Kompilierung wird Abhängigkeitspakete herunterladen, was etwa 10 Minuten dauern kann. Bitte haben Sie Geduld. Wenn der Prozess lange Zeit stillsteht, überprüfen Sie, ob genügend Speicherplatz auf Ihrem System vorhanden ist.
 
-#. Wait for the ``INFO Successfully compiled program.`` message, indicating firmware compilation is complete.
+#. Warten Sie auf die Nachricht ``INFO Successfully compiled program.``, was anzeigt, dass die Firmware-Kompilierung abgeschlossen ist.
 
     .. image:: img/sp230630_115109.png
 
     .. sp230630_114902.png
 
-    .. note::
+    .. note:: 
 
-        At this point, you should see the node as **ONLINE**. If not, ensure your ESP32 is on the same network segment or try rebooting the device.
+        An diesem Punkt sollte der Knoten als **ONLINE** angezeigt werden. Wenn nicht, stellen Sie sicher, dass Ihr ESP32 im selben Netzwerksegment ist oder versuchen Sie, das Gerät neu zu starten.
 
         .. image:: img/sp230630_153024.png
 
-**2. Configuration in Home Assistant**
+**2. Konfiguration in Home Assistant**
 
-After integrating with Esphome, you still need to configure the camera in homeassistant. 
+Nach der Integration mit Esphome müssen Sie die Kamera in Home Assistant noch konfigurieren. 
 
-#. Go to **Settings** > **Devices & Services**.
+#. Gehen Sie zu **Settings** > **Devices & Services**.
 
     .. image:: img/sp230630_155917.png
 
-#. Now you should see the esphome tab. Click **CONFIGURE**.
+#. Jetzt sollten Sie den Reiter esphome sehen. Klicken Sie auf **CONFIGURE**.
 
     .. image:: img/sp230630_155736.png
 
-#. Click **SUBMIT**.
+#. Klicken Sie auf **SUBMIT**.
 
     .. image:: img/sp230630_162218.png
 
-#. Wait for the **Success** message.
+#. Warten Sie auf die **Success**-Nachricht.
 
     .. image:: img/sp230630_162311.png
 
-#. In **Overview**, click the top-right menu and select **Edit Dashboard**.
+#. Klicken Sie im **Overview** oben rechts auf das Menü und wählen Sie **Edit Dashboard**.
 
     .. image:: img/sp230630_164745.png
 
-#. Click **ADD CARD**.
+#. Klicken Sie auf **ADD CARD**.
 
     .. image:: img/sp230630_164850.png
 
-#. Choose **Picture entity**.
+#. Wählen Sie **Picture entity**.
 
     .. image:: img/sp230630_164935.png
 
-#. In the entity field, select the ESP32 you just added. Then **save**.
+#. Wählen Sie im Feld Entität das ESP32 aus, das Sie gerade hinzugefügt haben. Dann **save**.
 
     .. image:: img/sp230630_165019.png
 
-#. Lastly, click **DONE** to exit the **EDIT** interface.
+#. Klicken Sie zuletzt auf **DONE**, um die **EDIT**-Schnittstelle zu verlassen.
 
     .. image:: img/sp230630_165235.png
 
-Now, you can view your camera feed on Home Assistant.
+Nun können Sie Ihren Kamera-Feed in Home Assistant ansehen.
+
 

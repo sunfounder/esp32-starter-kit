@@ -1,42 +1,42 @@
 .. _py_guess_number:
 
-6.7 Guess Number
+6.7 Zahlenraten
 ==============================
 
-Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
+Fühlen Sie sich glücklich? Wollen Sie Ihre Intuition testen und sehen, ob Sie die richtige Zahl erraten können? Dann ist das Zahlenraten-Spiel genau das Richtige für Sie!
 
-With this project, you can play a fun and exciting game of chance.
+Mit diesem Projekt können Sie ein spannendes und unterhaltsames Glücksspiel spielen.
 
-Using an IR remote control, players input numbers between 0 and 99 to try and guess the randomly generated lucky point number. 
-The system displays the player's input number on an LCD screen, along with upper and lower limit tips to help guide the 
-player towards the right answer. With every guess, players get closer to the lucky point number, 
-until finally, someone hits the jackpot and wins the game!
+Mit einer IR-Fernbedienung geben die Spieler Zahlen zwischen 0 und 99 ein, um zu versuchen, die zufällig generierte Glückszahl zu erraten.
+Das System zeigt die vom Spieler eingegebene Zahl auf einem LCD-Bildschirm an, zusammen mit Tipps für die obere und untere Grenze, um den 
+Spieler zur richtigen Antwort zu leiten. Mit jedem Versuch kommen die Spieler der Glückszahl näher,
+bis schließlich jemand den Jackpot knackt und das Spiel gewinnt!
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -52,11 +52,11 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_6.7_guess_number.png
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
@@ -65,9 +65,9 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``6.7_game_guess_number.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * The ``lcd1602.py`` and ``ir_rx`` libraries are used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
+    * Öffnen Sie die Datei ``6.7_game_guess_number.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
+    * Die Bibliotheken ``lcd1602.py`` und ``ir_rx`` werden hier verwendet. Überprüfen Sie, ob sie auf den ESP32 hochgeladen wurden. Siehe :ref:`add_libraries_py` für eine Anleitung.
 
 .. code-block:: python
 
@@ -220,20 +220,20 @@ You can also buy them separately from the links below.
 
 
 
-* When the code runs, a secret number is produced but not displayed on the LCD, and what you need to do is to guess it. 
-* Press the number you guessed on the remote control, then press the ``+`` key to confirm.
-* Simultaneously, the range shown on the I2C LCD1602 will decrease, and you must press the appropriate number based on this new range.
-* If you got the lucky number luckily or unluckily, there will appear ``GAME OVER!``.
+* Wenn das Programm ausgeführt wird, wird eine geheime Zahl erzeugt, die jedoch nicht auf dem LCD angezeigt wird. Ihre Aufgabe ist es, diese Zahl zu erraten.
+* Drücken Sie die von Ihnen vermutete Zahl auf der Fernbedienung und bestätigen Sie mit der ``+`` Taste.
+* Gleichzeitig wird der auf dem I2C LCD1602 angezeigte Bereich verkleinert, und Sie müssen die entsprechende Zahl basierend auf diesem neuen Bereich eingeben.
+* Sollten Sie die Glückszahl zufälligerweise erraten oder nicht erraten, erscheint ``GAME OVER!``.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Falls der Code und die Verkabelung korrekt sind, aber das LCD dennoch keinen Inhalt anzeigt, können Sie das Potentiometer auf der Rückseite justieren, um den Kontrast zu erhöhen.
 
-**How it works?**
+**Wie funktioniert das?**
 
-The following is a detailed analysis of part of the code.
+Im Folgenden eine detaillierte Analyse eines Teils des Codes.
 
-#. Initialize the guessing game variables.
+#. Initialisierung der Variablen für das Ratespiel.
 
     .. code-block:: python
     
@@ -242,12 +242,11 @@ The following is a detailed analysis of part of the code.
         pointValue = int(urandom.uniform(lower, upper))
         count = 0
 
+    * ``lower`` und ``upper`` begrenzen die geheime Zahl.
+    * Die geheime Zahl (``pointValue``) wird zufällig zwischen ``lower`` und ``upper`` generiert.
+    * Der aktuelle Tipp des Benutzers (``count``).
 
-    * ``lower`` and ``upper`` bounds for the secret number.
-    * The secret number (``pointValue``) randomly generated between ``lower`` and ``upper`` bounds.
-    * The user's current guess (``count``).
-
-#. This function resets the guessing game values and generates a new secret number.
+#. Diese Funktion setzt die Werte des Ratespiels zurück und generiert eine neue Geheimzahl.
 
     .. code-block:: python
     
@@ -260,7 +259,7 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
 
-#. This function displays the current game status on the LCD screen.
+#. Diese Funktion zeigt den aktuellen Spielstatus auf dem LCD-Bildschirm an.
 
     .. code-block:: python
 
@@ -276,10 +275,10 @@ The following is a detailed analysis of part of the code.
             lcd.message(string)
             return
 
-    * If the game is over (``result=True``), it shows ``GAME OVER!`` and the secret number.
-    * Otherwise, it shows the current guess (``count``) and the current guessing range (``lower`` to ``upper``)
+    * Wenn das Spiel vorbei ist (``result=True``), wird ``GAME OVER!`` und die Geheimzahl angezeigt.
+    * Andernfalls wird der aktuelle Tipp (``count``) und der aktuelle Ratebereich (``lower`` bis ``upper``) angezeigt.
 
-#. This function processes the user's current guess (``count``) and updates the guessing range.
+#. Diese Funktion verarbeitet den aktuellen Tipp des Benutzers (``count``) und aktualisiert den Ratebereich.
 
     .. code-block:: python
 
@@ -296,11 +295,11 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
     
-    * If the current guess (``count``) is higher than the secret number, the upper bound is updated.
-    * If the current guess (``count``) is lower than the secret number, the lower bound is updated.
-    * If the current guess (``count``) is equal to the secret number, the function returns ``True`` (game over).
+    * Wenn der aktuelle Tipp (``count``) höher als die Geheimzahl ist, wird die obere Grenze aktualisiert.
+    * Wenn der aktuelle Tipp (``count``) niedriger als die Geheimzahl ist, wird die untere Grenze aktualisiert.
+    * Wenn der aktuelle Tipp (``count``) gleich der Geheimzahl ist, gibt die Funktion ``True`` zurück (Spiel vorbei).
 
-#. This function processes the key press events received from the IR remote.
+#. Diese Funktion verarbeitet die Tastendrücke, die vom IR-Fernbedienung empfangen werden.
 
     .. code-block:: python
 
@@ -322,11 +321,11 @@ The following is a detailed analysis of part of the code.
                 count = count * 10 + int(key) if count * 10 + int(key) <= 99 else count
                 lcd_show(False)
 
-    * If the ``Power`` key is pressed, the game is reset.
-    * If the ``+`` key is pressed, the current guess (``count``) is processed and the game status is updated.
-    * If a digit key is pressed, the current guess (``count``) is updated with the new digit.
+    * Wenn die Taste ``Power`` gedrückt wird, wird das Spiel zurückgesetzt.
+    * Wenn die Taste ``+`` gedrückt wird, wird der aktuelle Tipp (``count``) verarbeitet und der Spielstatus aktualisiert.
+    * Wenn eine Zifferntaste gedrückt wird, wird der aktuelle Tipp (``count``) mit der neuen Ziffer aktualisiert.
 
-#. This callback function is triggered when the IR receiver receives
+#. Diese Callback-Funktion wird ausgelöst, wenn der IR-Empfänger ein Signal empfängt.
 
     .. code-block:: python
 

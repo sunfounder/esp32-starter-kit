@@ -1,37 +1,37 @@
 .. _py_line_track:
 
-5.4 Detect the Line
+5.4 Linie erkennen
 ===================================
 
-The line-tracking module is used to detect the presence of black areas on the ground, such as black lines taped with electrical tape.
+Das Linienverfolgungsmodul wird verwendet, um das Vorhandensein von schwarzen Flächen auf dem Boden zu erkennen, wie beispielsweise schwarze Linien, die mit Isolierband geklebt wurden.
 
-Its emitter emits appropriate infrared light into the ground, which is relatively absorbed and weakly reflected by black surfaces. The opposite is true for white surfaces. If reflected light is detected, the ground is currently indicated as white. If it is not detected, it is indicated as black.
+Sein Sender sendet geeignetes Infrarotlicht auf den Boden, das von schwarzen Oberflächen relativ absorbiert und schwach reflektiert wird. Das Gegenteil ist der Fall bei weißen Oberflächen. Wenn reflektiertes Licht erkannt wird, wird der Boden derzeit als weiß angezeigt. Wenn es nicht erkannt wird, wird es als schwarz angezeigt.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,40 +42,39 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_line_track`
         - |link_line_track_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **Strapping Pins (Eingang)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
-
-        
+    Strapping Pins sind eine spezielle Gruppe von Pins, die verwendet werden, um bestimmte Boot-Modi während des Startvorgangs des Geräts 
+    (d.h., beim Einschalten) festzulegen.
+   
     .. list-table::
         :widths: 5 15
 
         *   - Strapping Pins
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generell wird **nicht empfohlen, sie als Eingangspins zu verwenden**. Wenn Sie diese Pins verwenden möchten, bedenken Sie die möglichen Auswirkungen auf den Bootvorgang. Für weitere Details siehe den Abschnitt :ref:`esp32_strapping`.
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.4_line.png
 
-When the line tracking module detects a black line, IO14 returns a high level. On the other hand, when it detects a white line, IO14 returns a low level. You can adjust the blue potentiometer to modify the sensitivity of this module's detection.
+Wenn das Linienverfolgungsmodul eine schwarze Linie erkennt, gibt IO14 ein hohes Signal zurück. Wenn es jedoch eine weiße Linie erkennt, gibt IO14 ein niedriges Signal zurück. Sie können das blaue Potentiometer anpassen, um die Empfindlichkeit der Erkennung dieses Moduls zu modifizieren.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.4_line_bb.png
     :align: center
@@ -85,8 +84,8 @@ When the line tracking module detects a black line, IO14 returns a high level. O
 
 .. note::
 
-    * Open the ``5.4_detect_the_line.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``5.4_detect_the_line.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
 
 
 .. code-block:: python
@@ -112,4 +111,5 @@ When the line tracking module detects a black line, IO14 returns a high level. O
 
 
 
-When the line tracking module detects there is black line, there appears "black" on the Shell; otherwise, "white" is displayed.
+Wenn das Linienverfolgungsmodul erkennt, dass eine schwarze Linie vorhanden ist, erscheint "schwarz" in der Shell; andernfalls wird "weiß" angezeigt.
+

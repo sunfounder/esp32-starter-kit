@@ -1,37 +1,35 @@
 .. _py_ir_obstacle:
 
-5.3 Detect the Obstacle
+5.3 Hinderniserkennung
 ===================================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+Dieses Modul wird üblicherweise in Autos und Robotern installiert, um die Existenz von Hindernissen voraus zu erkennen. Es wird auch häufig in Handgeräten, Wasserhähnen und ähnlichem verwendet.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,22 +40,22 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_avoid_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **Strapping Pins (Eingang)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Strapping Pins sind eine spezielle Gruppe von Pins, die verwendet werden, um bestimmte Boot-Modi während des Startvorgangs des Geräts 
+    (d.h., beim Einschalten) festzulegen.
    
     .. list-table::
         :widths: 5 15
@@ -65,15 +63,15 @@ You can also buy them separately from the links below.
         *   - Strapping Pins
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generell wird **nicht empfohlen, sie als Eingangspins zu verwenden**. Wenn Sie diese Pins verwenden möchten, bedenken Sie die möglichen Auswirkungen auf den Bootvorgang. Für weitere Details siehe den Abschnitt :ref:`esp32_strapping`.
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.3_avoid.png
 
-When the obstacle avoidance module does not detect any obstacles, IO14 returns a high level. However, when it detects an obstacle, it returns a low level. You can adjust the blue potentiometer to modify the detection distance of this module.
+Wenn das Hindernisvermeidungsmodul keine Hindernisse erkennt, gibt IO14 ein hohes Signal zurück. Erkennt es jedoch ein Hindernis, wird ein niedriges Signal zurückgegeben. Sie können das blaue Potentiometer anpassen, um die Erkennungsdistanz dieses Moduls zu modifizieren.
 
-**Wiring**
+**Verdrahtung**
 
 
 .. image:: ../../img/wiring/5.3_avoid_bb.png
@@ -82,8 +80,8 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
 
 .. note::
 
-    * Open the ``5.3_avoid.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``5.3_avoid.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben.
 
 
 
@@ -100,5 +98,4 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
         print(ir_avoid.value()) 
         time.sleep(0.1)
 
-
-While the program is running, if the IR obstacle avoidance module detects an obstacle in front of it, the value "0" will be shown on the Serial Monitor, otherwise, the value "1" will be shown.
+Während das Programm läuft, wird auf dem Serial Monitor der Wert "0" angezeigt, wenn das IR-Hindernisvermeidungsmodul ein Hindernis vor sich erkennt, andernfalls wird der Wert "1" angezeigt.

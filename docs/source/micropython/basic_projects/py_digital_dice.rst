@@ -1,39 +1,39 @@
 .. _py_dice:
 
-6.6 Digital Dice
+6.6 Digitaler Würfel
 ================================
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Dieses Projekt baut auf dem :ref:`py_7_segment`-Projekt auf, indem ein Knopf hinzugefügt wird, um die auf dem Siebensegment-Display angezeigte Zahl zu steuern.
 
-When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
+Wenn der Knopf gedrückt wird, scrollt das Siebensegment-Display durch die Zahlen 1-6, und wenn der Knopf losgelassen wird, zeigt es eine zufällige Zahl an.
 
-This cycle continues each time the button is pressed.
+Dieser Zyklus setzt sich jedes Mal fort, wenn der Knopf gedrückt wird.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,16 +50,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Dieses Projekt baut auf dem :ref:`py_7_segment`-Projekt auf, indem ein Knopf hinzugefügt wird, um die auf dem Siebensegment-Display angezeigte Zahl zu steuern.
 
-The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
+Der Knopf ist direkt mit IO13 verbunden, ohne einen externen Pull-Up- oder Pull-Down-Widerstand, da IO13 einen internen Pull-Up-Widerstand von 47K hat, was den Bedarf an einem zusätzlichen externen Widerstand überflüssig macht.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
@@ -67,11 +67,8 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. note::
 
-    * Open the ``6.6_digital_dice.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * Öffnen Sie die Datei ``6.6_digital_dice.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
 .. code-block:: python
 
@@ -141,9 +138,10 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
             num = random.randint(1, 6)
             time.sleep_ms(10) # Adjust this value to control the display refresh rate
         
-While the program is running, pressing the button will make the 7-segment display scroll and randomly display a number between 1 and 6. 
+Während das Programm läuft, wird durch das Drücken des Knopfes das Siebensegment-Display scrollen und zufällig eine Zahl zwischen 1 und 6 anzeigen.
 
-Upon pressing the button again, the 7-segment display will stop and reveal a specific number. Press the button once more, and the 7-segment display will resume scrolling through the digits.
+Beim erneuten Drücken des Knopfes stoppt das Siebensegment-Display und zeigt eine bestimmte Zahl an. Drücken Sie den Knopf noch einmal, und das Siebensegment-Display wird das Durchlaufen der Ziffern fortsetzen.
+
 
 
 

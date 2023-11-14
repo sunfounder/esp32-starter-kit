@@ -1,38 +1,38 @@
 .. _sh_light_alarm:
 
-2.7 Light Alarm Clock
+2.7 Lichtwecker
 ======================
 
-In life, there are various kinds of time alarm clocks. Now let's make a light-controlled alarm clock. When morning comes, the brightness of light increases and this light-controlled alarm clock will remind you that it's time to get up.
+Im Alltag gibt es verschiedene Arten von Zeitweckern. Jetzt wollen wir einen lichtgesteuerten Wecker bauen. Wenn der Morgen kommt und die Helligkeit des Lichts zunimmt, wird dieser lichtgesteuerte Wecker Sie daran erinnern, dass es Zeit ist, aufzustehen.
 
 .. image:: img/10_clock.png
 
-Required Components
+Benötigte Komponenten
 ---------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,55 +47,55 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-You Will Learn
+Was Sie Lernen Werden
 ---------------------
 
-- Photoresistor working principle
-- Stopping sound playback and stopping scripts from running
+- Funktionsprinzip des Fotowiderstands
+- Beenden der Tonwiedergabe und Beenden der Ausführung von Skripten
 
-Build the Circuit
+
+Schaltung Aufbauen
 -----------------------
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+Ein Fotowiderstand oder eine Fotodiode ist ein lichtgesteuerter variabler Widerstand. Der Widerstand eines Fotowiderstands nimmt mit zunehmender einfallender Lichtintensität ab.
 
-Build the circuit according to the following diagram.
+Bauen Sie die Schaltung gemäß dem folgenden Diagramm auf.
 
-Connect one end of the photoresistor to 5V, the other end to pin35, and connect a 10K resistor in series with GND at this end.
+Verbinden Sie ein Ende des Fotowiderstands mit 5V, das andere Ende mit Pin35 und schalten Sie einen 10K-Widerstand in Serie mit GND an diesem Ende.
 
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by pin35 becomes larger.
+Wenn also die Lichtintensität zunimmt, verringert sich der Widerstand des Fotowiderstands, die Spannungsteilung des 10K-Widerstands nimmt zu, und der von Pin35 erhaltene Wert wird größer.
 
 .. image:: img/circuit/8_light_alarm_bb.png
 
-Programming
+Programmierung
 ------------------
 
-**1. Select a sprite**
+**1. Wähle ein Sprite aus**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Lösche das Standard-Sprite, klicke auf den **Choose a Sprite**-Button in der unteren rechten Ecke des Sprite-Bereichs, gib **bell** in das Suchfeld ein und klicke dann darauf, um es hinzuzufügen.
 
 .. image:: img/10_sprite.png
 
-**2. Read the value of pin35**
+**2. Lies den Wert von Pin35**
 
-Create two variables **before** and **current**. When green flag is clicked, read the value of pin35 and store it in variable **before** as a reference value. In [forever], read the value of pin35 again, store it in the variable **current**.
+Erstelle zwei Variablen **before** und **current**. Wenn die grüne Flagge angeklickt wird, lese den Wert von Pin35 und speichere ihn in der Variablen **before** als Referenzwert. In [forever], lese den Wert von Pin35 erneut, speichere ihn in der Variablen **current**.
 
 .. image:: img/10_reada0.png
 
-**3. Make a sound**
+**3. Einen Ton machen**
 
-When the value of current pin35 is greater than the previous 50, which represents the current light intensity is greater than the threshold, then let the sprite make a sound.
+Wenn der Wert des aktuellen Pin35 um mehr als 50 über dem vorherigen liegt, was bedeutet, dass die aktuelle Lichtintensität größer als der Schwellenwert ist, dann lasse das Sprite einen Ton machen.
 
 .. image:: img/10_sound.png
 
-**4. Turning the sprite**
+**4. Das Sprite drehen**
 
-Use [turn block] to make the **bell** sprite turn left and right to achieve the alarm effect.
+Verwende [turn block], um das **bell**-Sprite nach links und rechts zu drehen, um den Weckeffekt zu erzielen.
 
 .. image:: img/10_turn.png
 
-**5. stop all**
+**5. Alles stoppen**
 
-Stops the alarm when it has been ringing for a while.
+Stoppt den Alarm, wenn er eine Weile geklingelt hat.
 
 .. image:: img/10_stop.png
-

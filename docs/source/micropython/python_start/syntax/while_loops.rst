@@ -1,9 +1,9 @@
-While Loops
+While-Schleifen
 ====================
 
-The ``while`` statement is used to execute a program in a loop, that is, to execute a program in a loop under certain conditions to handle the same task that needs to be processed repeatedly. 
+Das ``while``-Statement wird verwendet, um ein Programm in einer Schleife auszuführen, d.h., es ermöglicht die wiederholte Ausführung einer Aufgabe unter bestimmten Bedingungen.
 
-Its basic form is:
+Seine grundlegende Form lautet:
 
 .. code-block:: python
 
@@ -11,15 +11,15 @@ Its basic form is:
         Body of while
 
 
-In the ``while`` loop, first check the ``test expression``. Only when ``test expression`` evaluates to ``True``, enter the body of the while. After one iteration, check the ``test expression`` again. This process continues until ``test expression`` evaluates to ``False``.
+In der ``while``-Schleife wird zuerst der ``test expression`` geprüft. Nur wenn der ``test expression`` als ``True`` bewertet wird, tritt man in den Körper der Schleife ein. Nach einer Iteration wird der ``test expression`` erneut geprüft. Dieser Prozess setzt sich fort, bis der ``test expression`` als ``False`` bewertet wird.
 
-In MicroPython, the body of the ``while`` loop is determined by indentation.
+In MicroPython wird der Körper der ``while``-Schleife durch Einrückung bestimmt.
 
-The body starts with an indentation and ends with the first unindented line.
+Der Körper beginnt mit einer Einrückung und endet mit der ersten nicht eingerückten Zeile.
 
-Python interprets any non-zero value as ``True``. None and 0 are interpreted as ``False``.
+Python interpretiert jeden Nicht-Null-Wert als ``True``. None und 0 werden als ``False`` interpretiert.
 
-**while Loop Flowchart**
+**Flussdiagramm der while-Schleife**
 
 .. image:: img/while_loop.png
 
@@ -46,10 +46,10 @@ Python interprets any non-zero value as ``True``. None and 0 are interpreted as 
 1
 
 
-Break Statement
+Break-Statement
 --------------------
 
-With the break statement we can stop the loop even if the while condition is true:
+Mit dem Break-Statement können wir die Schleife stoppen, auch wenn die Bedingung der while-Schleife wahr ist:
 
 
 
@@ -70,11 +70,11 @@ With the break statement we can stop the loop even if the while condition is tru
 7
 6
 
-While Loop with Else
-----------------------
-Like the `if` loop, the `while` loop can also have an optional `else` block.
+While-Schleife mit Else
+---------------------------
+Ähnlich wie die `if`-Schleife kann auch die `while`-Schleife einen optionalen `else`-Block haben.
 
-If the condition in the `while` loop is evaluated as `False`, the `else` part is executed.
+Wenn die Bedingung in der `while`-Schleife als `False` bewertet wird, wird der `else`-Teil ausgeführt.
 
 
 

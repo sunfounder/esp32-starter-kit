@@ -1,7 +1,7 @@
-Lists
+Listen
 ===================
 
-Lists are used to store multiple items in a single variable, and are created using square brackets:
+Listen werden verwendet, um mehrere Elemente in einer einzigen Variablen zu speichern, und werden mit eckigen Klammern erstellt:
 
 .. code-block:: python
 
@@ -9,8 +9,8 @@ Lists are used to store multiple items in a single variable, and are created usi
     print(B_list)
 
 
-List items are changeable, ordered, and allow duplicate values.
-The list items are indexed, with the first item having index [0], the second item having index [1], and so on.
+Listenelemente sind veränderbar, geordnet und erlauben doppelte Werte.
+Die Listenelemente sind indiziert, wobei das erste Element den Index [0], das zweite Element den Index [1] usw. hat.
 
 .. code-block:: python
 
@@ -28,7 +28,7 @@ Blue
 ['Red', 'Blue', 'Purple', 'Blue']
 
 
-A list can contain different data types:
+Eine Liste kann verschiedene Datentypen enthalten:
 
 .. code-block:: python
 
@@ -39,9 +39,9 @@ A list can contain different data types:
 ['Banana', 255, False, 3.14]
 
 
-List Length
+Listenlänge
 ------------------
-To determine how many items are in the list, use the len() function.
+Um festzustellen, wie viele Elemente in der Liste sind, verwenden Sie die Funktion len().
 
 .. code-block:: python
 
@@ -51,10 +51,10 @@ To determine how many items are in the list, use the len() function.
 >>> %Run -c $EDITOR_CONTENT
 4
 
-Check List items
+Listenelemente prüfen
 -----------------------
 
-Print the second item of the list:
+Drucken Sie das zweite Element der Liste aus:
 
 .. code-block:: python
 
@@ -64,7 +64,7 @@ Print the second item of the list:
 >>> %Run -c $EDITOR_CONTENT
 [255]
 
-Print the last one item of the list:
+Drucken Sie das letzte Element der Liste aus:
 
 .. code-block:: python
 
@@ -74,7 +74,7 @@ Print the last one item of the list:
 >>> %Run -c $EDITOR_CONTENT
 [3.14]
 
-Print the second, third item:
+Drucken Sie das zweite und dritte Element aus:
 
 .. code-block:: python
 
@@ -85,9 +85,9 @@ Print the second, third item:
 [255, False]
 
 
-Change List Items
+Listenelemente ändern
 ----------------------
-Change the second, third item:
+Ändern Sie das zweite und dritte Element:
 
 .. code-block:: python
 
@@ -98,7 +98,7 @@ Change the second, third item:
 >>> %Run -c $EDITOR_CONTENT
 ['Banana', True, 'Orange', 3.14]
 
-Change the second value by replacing it with two values:
+Ändern Sie das zweite Element, indem Sie es durch zwei Werte ersetzen:
 
 .. code-block:: python
 
@@ -110,10 +110,10 @@ Change the second value by replacing it with two values:
 ['Banana', True, 'Orange', False, 3.14]
 
 
-Add List Items
--------------------
+Listenelemente hinzufügen
+-----------------------------
 
-Using the append() method to add an item:
+Verwendung der Methode append(), um ein Element hinzuzufügen:
 
 .. code-block:: python
 
@@ -124,7 +124,7 @@ Using the append() method to add an item:
 >>> %Run -c $EDITOR_CONTENT
 ['Red', 'Blue', 'Green', 'Orange']
 
-Insert an item as the second position:
+Fügen Sie ein Element an der zweiten Position ein:
 
 .. code-block:: python
 
@@ -137,10 +137,10 @@ Insert an item as the second position:
 
 
 
-Remove List Items
------------------------
+Listenelemente entfernen
+----------------------------
 
-The remove() method removes the specified item.
+Die Methode remove() entfernt das angegebene Element.
 
 .. code-block:: python
 
@@ -151,7 +151,7 @@ The remove() method removes the specified item.
 >>> %Run -c $EDITOR_CONTENT
 ['Red', 'Green']
 
-The pop() method removes the specified index. If you do not specify the index, the pop() method removes the last item.
+Die Methode pop() entfernt den angegebenen Index. Wenn Sie den Index nicht angeben, entfernt die Methode pop() das letzte Element.
 
 .. code-block:: python
 
@@ -167,7 +167,7 @@ The pop() method removes the specified index. If you do not specify the index, t
 'Orange'
 ['Banana', False, 3.14, True]
 
-The ``del`` keyword also removes the specified index:
+Das Schlüsselwort ``del`` entfernt ebenfalls den angegebenen Index:
 
 .. code-block:: python
 
@@ -178,7 +178,7 @@ The ``del`` keyword also removes the specified index:
 >>> %Run -c $EDITOR_CONTENT
 ['Red', 'Green']
 
-The clear() method empties the list. The list still remains, but it has no content.
+Die Methode clear() leert die Liste. Die Liste bleibt bestehen, hat aber keinen Inhalt.
 
 .. code-block:: python
 

@@ -1,38 +1,30 @@
 .. _cpn_avoid:
 
-Obstacle Avoidance Module
+Modul zur Hindernisvermeidung
 ===========================================
-
 
 .. image:: img/IR_Obstacle.png
    :width: 400
    :align: center
 
-* **VCC**: Power supply, 3.3 ~ 5V DC.
-* **GND**: Ground
-* **OUT**: Signal pin, usually high level, and low level when an obstacle is detected.
+* **VCC**: Stromversorgung, 3,3 ~ 5V DC.
+* **GND**: Masse
+* **OUT**: Signalpin, normalerweise auf hohem Pegel, und auf niedrigem Pegel, wenn ein Hindernis erkannt wird.
 
+Das IR-Hindernisvermeidungsmodul passt sich gut an die Umgebungslichtverhältnisse an und verfügt über ein Paar Infrarot-Sendungs- und Empfangsröhren.
 
-The IR obstacle avoidance module has strong adaptability to environmental light, it has a pair of infrared transmitting and receiving tubes.
+Die Sendungsröhre strahlt Infrarotfrequenz aus, wenn in der Erkennungsrichtung ein Hindernis auftritt, wird die Infrarotstrahlung von der Empfangsröhre aufgenommen. 
+Nach der Verarbeitung durch den Komparatorschaltkreis leuchtet die Anzeige auf und gibt ein Niedrigpegelsignal aus.
 
-The transmitting tube emits infrared frequency, when the detection direction encounters an obstacle, the infrared radiation is received by the receiving tube, 
-after the comparator circuit processing, the indicator will light up and output low level signal.
-
-The detection distance can be adjusted by potentiometer, the effective distance range 2-30cm.
+Die Erkennungsdistanz kann mittels eines Potentiometers eingestellt werden, der wirksame Distanzbereich liegt bei 2-30cm.
 
 .. image:: img/IR_module.png
     :width: 600
     :align: center
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_ir_obstacle` (Arduino Project)
-* :ref:`py_ir_obstacle` (MicroPython Project)
-* :ref:`sh_shooting` (Scratch Project)
-* :ref:`sh_tap_tile` (Scratch Project)
-
-
-
-
-
-
+* :ref:`ar_ir_obstacle` (Arduino-Projekt)
+* :ref:`py_ir_obstacle` (MicroPython-Projekt)
+* :ref:`sh_shooting` (Scratch-Projekt)
+* :ref:`sh_tap_tile` (Scratch-Projekt)

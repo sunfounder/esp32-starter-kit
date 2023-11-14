@@ -1,37 +1,37 @@
 .. _ar_photoresistor:
 
-5.7 Feel the Light
+5.7 Das Licht Fühlen
 ===========================
 
-The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
+Der Fotowiderstand ist ein häufig verwendetes Gerät für analoge Eingaben, ähnlich einem Potentiometer. Sein Widerstandswert ändert sich abhängig von der Intensität des Lichts, das er empfängt. Bei starker Lichtexposition verringert sich der Widerstand des Fotowiderstands, und wenn die Lichtintensität abnimmt, steigt der Widerstand.
 
-By reading the value of the photoresistor, we can gather information about the ambient light conditions. This information can be used for tasks such as controlling the brightness of an LED, adjusting the sensitivity of a sensor, or implementing light-dependent actions in a project.
+Indem wir den Wert des Fotowiderstands auslesen, können wir Informationen über die Umgebungslichtverhältnisse sammeln. Diese Informationen können für Aufgaben wie die Steuerung der Helligkeit einer LED, die Anpassung der Empfindlichkeit eines Sensors oder die Implementierung lichtabhängiger Aktionen in einem Projekt verwendet werden.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,22 +46,22 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO14, IO25, I35, I34, I39, I36
 
 
 * **Strapping Pins**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Die folgenden Pins sind Strapping-Pins, die den Startprozess des ESP32 während des Einschaltens oder Resets beeinflussen. Sobald der ESP32 jedoch erfolgreich gestartet ist, können sie als normale Pins verwendet werden.
 
     .. list-table::
         :widths: 5 15
@@ -69,13 +69,13 @@ You can also buy them separately from the links below.
         *   - Strapping Pins
             - IO0, IO12
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.7_photoresistor.png
 
-As the light intensity increases, the resistance of the light-dependent resistor (LDR) decreases, resulting in a decrease in the value read on I35.
+Mit zunehmender Lichtintensität nimmt der Widerstand des lichtabhängigen Widerstands (LDR) ab, was zu einer Verringerung des auf I35 ausgelesenen Werts führt.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
@@ -83,8 +83,8 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
 .. note::
 
-    * Open the ``5.7_feel_the_light.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.7_feel_the_light``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Öffnen Sie die Datei ``5.7_feel_the_light.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\5.7_feel_the_light``.
+    * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
     * :ref:`unknown_com_port`
     
     
@@ -92,14 +92,14 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/58b494c7-eef4-4476-af65-4823cef13f90/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, the Serial Monitor prints out the photoresistor values from 0 ~ 4095. 
-The stronger the current ambient brightness, the larger the value displayed on the serial monitor.
+Nachdem der Code erfolgreich hochgeladen wurde, druckt der Serielle Monitor die Fotowiderstandswerte von 0 bis 4095 aus. 
+Je stärker die aktuelle Umgebungshelligkeit, desto größer der Wert, der im seriellen Monitor angezeigt wird.
 
 .. note::
-    For the ESP32, the resolution is between 9 to 12 and it will change the ADC hardware resolution. Else value will be shifted.
+    Für den ESP32 liegt die Auflösung zwischen 9 und 12 und es wird die ADC-Hardwareauflösung geändert. Andernfalls wird der Wert verschoben.
 
-    Default is 12 bits (range from 0 to 4096) for all chips except ESP32S3 where default is 13 bits (range from 0 to 8192).
+    Standardmäßig ist sie 12 Bit (Bereich von 0 bis 4096) für alle Chips außer ESP32S3, wo der Standard 13 Bit (Bereich von 0 bis 8192) ist.
 
-    You can add ``analogReadResolution(10);`` to ``setup()`` function to set a different resolution, such as ``20``.
+    Sie können ``analogReadResolution(10);`` zur ``setup()``-Funktion hinzufügen, um eine andere Auflösung festzulegen, wie z.B. ``20``.
 
     

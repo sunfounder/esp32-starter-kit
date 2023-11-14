@@ -1,36 +1,36 @@
 .. _ar_moisture:
 
-5.9 Measure Soil Moisture
-==========================
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture.
+5.9 Bodenfeuchtigkeit messen
+============================
+Dieser kapazitive Bodenfeuchtigkeitssensor unterscheidet sich von den meisten resistiven Sensoren auf dem Markt, indem er das Prinzip der kapazitiven Induktion zur Messung der Bodenfeuchtigkeit verwendet.
 
-By visually reading the values from the soil moisture sensor, we can gather information about the moisture level in the soil. This information is useful for various applications, such as automatic irrigation systems, plant health monitoring, or environmental sensing projects.
+Durch das visuelle Ablesen der Werte vom Bodenfeuchtigkeitssensor können wir Informationen über den Feuchtigkeitsgehalt im Boden sammeln. Diese Informationen sind nützlich für verschiedene Anwendungen, wie automatische Bewässerungssysteme, Pflanzengesundheitsüberwachung oder Umweltsensorikprojekte.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv bequem, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -41,22 +41,22 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO14, IO25, I35, I34, I39, I36
 
 
 * **Strapping Pins**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Die folgenden Pins sind Strapping-Pins, die den Startprozess des ESP32 während des Einschaltens oder Zurücksetzens beeinflussen. Sobald der ESP32 jedoch erfolgreich gestartet ist, können sie als reguläre Pins verwendet werden.
 
     .. list-table::
         :widths: 5 15
@@ -64,13 +64,13 @@ You can also buy them separately from the links below.
         *   - Strapping Pins
             - IO0, IO12
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.9_soil_moisture.png
 
-By inserting the module into the soil and watering it, the value read on I35 will decrease.
+Durch das Einstecken des Moduls in den Boden und das Bewässern wird der auf I35 gelesene Wert sinken.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.9_moisture_bb.png
 
@@ -78,8 +78,8 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 .. note::
 
-    * Open the ``5.9_moisture.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.9_moisture``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Öffnen Sie die Datei ``5.9_moisture.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\5.9_moisture``.
+    * Nachdem Sie das Board (ESP32 Dev Module) und den passenden Port ausgewählt haben, klicken Sie auf den **Upload**-Button.
     * :ref:`unknown_com_port`
     
     
@@ -88,6 +88,6 @@ By inserting the module into the soil and watering it, the value read on I35 wil
     <iframe src=https://create.arduino.cc/editor/sunfounder01/431302c2-3579-4be6-8142-c91d28757004/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
+Sobald der Code erfolgreich hochgeladen wurde, gibt der serielle Monitor den Bodenfeuchtigkeitswert aus.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+Durch das Einstecken des Moduls in den Boden und das Bewässern wird der Wert des Bodenfeuchtigkeitssensors kleiner.

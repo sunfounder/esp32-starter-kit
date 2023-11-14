@@ -1,33 +1,33 @@
-7.2 Bluetooth Control RGB LED
+7.2 Bluetooth-Steuerung RGB-LED
 =================================
 
-This project is an extension of a previous project(:ref:`ar_bluetooth`), adding RGB LED configurations and custom commands such as "led_off", "red", "green", etc. These commands allow the RGB LED to be controlled by sending commands from a mobile device using LightBlue.
+Dieses Projekt ist eine Erweiterung eines vorherigen Projekts (:ref:`ar_bluetooth`), bei dem RGB-LED-Konfigurationen und benutzerdefinierte Befehle wie "led_off", "rot", "grün" usw. hinzugefügt wurden. Diese Befehle ermöglichen die Steuerung der RGB-LED durch Senden von Befehlen von einem mobilen Gerät über LightBlue.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen. Hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,28 +42,28 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_rgb`
         - |link_rgb_led_buy|
 
-**Operation Steps**
+**Betriebsschritte**
 
-#. Build the circuit.
+#. Bauen Sie den Schaltkreis auf.
 
     .. image:: ../../components/img/rgb_pin.jpg
         :width: 200
         :align: center
 
-    The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+    Die RGB-LED hat 4 Pins: der längste Pin ist der gemeinsame Kathodenpin, der normalerweise mit GND verbunden ist; der linke Pin neben dem längsten Pin ist Rot; und die beiden Pins rechts sind Grün und Blau.
 
     .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-#. Open the ``7.2_bluetooth_rgb_led.ino`` file located in the ``esp32-starter-kit-main\c\codes\7.2_bluetooth_rgb_led`` directory, or copy the code into the Arduino IDE.
+#. Öffnen Sie die Datei ``7.2_bluetooth_rgb_led.ino`` im Verzeichnis ``esp32-starter-kit-main\c\codes\7.2_bluetooth_rgb_led`` oder kopieren Sie den Code in die Arduino IDE.
 
     .. raw:: html
          
         <iframe src=https://create.arduino.cc/editor/sunfounder01/b9331c9d-e9ea-4970-87ce-bf2ca8c231b2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. To avoid UUID conflicts, it is recommended to randomly generate three new UUIDs using the |link_uuid| provided by the Bluetooth SIG, and fill them in the following lines of code.
+#. Um UUID-Konflikte zu vermeiden, wird empfohlen, drei neue UUIDs mit dem |link_uuid|, bereitgestellt von der Bluetooth SIG, zufällig zu generieren und sie in den folgenden Codezeilen einzufügen.
 
     .. note::
-        If you have already generated three new UUIDs in the :ref:`ar_bluetooth` project, then you can continue using them.
+        Wenn Sie bereits drei neue UUIDs im :ref:`ar_bluetooth` Projekt generiert haben, dann können Sie diese weiterhin verwenden.
 
 
     .. code-block:: arduino
@@ -74,29 +74,29 @@ You can also buy them separately from the links below.
 
     .. image:: img/uuid_generate.png
 
-#. Select the correct board and port, then click the **Upload** button.
+#. Wählen Sie das richtige Board und den richtigen Port aus, dann klicken Sie auf die **Upload**-Taste.
 
-#. After the code has been successfully uploaded, turn on **Bluetooth** on your mobile device and open the **LightBlue** app.
+#. Nachdem der Code erfolgreich hochgeladen wurde, schalten Sie **Bluetooth** auf Ihrem mobilen Gerät ein und öffnen Sie die **LightBlue**-App.
 
     .. image:: img/bluetooth_open.png
 
-#. On the **Scan** page, find **ESP32-Bluetooth** and click **CONNECT**. If you don't see it, try refreshing the page a few times. When **"Connected to device!"** appears, the Bluetooth connection is successful. Scroll down to see the three UUIDs set in the code.
+#. Auf der **Scan**-Seite finden Sie **ESP32-Bluetooth** und klicken Sie auf **CONNECT**. Wenn Sie es nicht sehen, versuchen Sie, die Seite einige Male zu aktualisieren. Wenn **"Connected to device!"** erscheint, ist die Bluetooth-Verbindung erfolgreich. Scrollen Sie nach unten, um die drei im Code eingestellten UUIDs zu sehen.
 
     .. image:: img/bluetooth_connect.png
         :width: 800
 
-#. Tap the Send UUID, then set the data format to "UTF-8 String". Now you can write these commands: "led_off", "red", "green", "blue", "yellow", and "purple" to see if the RGB LED responds to these instructions.
+#. Tippen Sie auf die Senden-UUID, dann stellen Sie das Datenformat auf "UTF-8-String" ein. Jetzt können Sie diese Befehle schreiben: "led_off", "rot", "grün", "blau", "gelb" und "lila", um zu sehen, ob die RGB-LED auf diese Anweisungen reagiert.
 
     .. image:: img/bluetooth_send_rgb.png
     
 
-**How it works?**
+**Wie funktioniert das?**
 
-This code is an extension of a previous project(:ref:`ar_bluetooth`), adding RGB LED configurations and custom commands such as "led_off", "red", "green", etc. These commands allow the RGB LED to be controlled by sending commands from a mobile device using LightBlue.
+Dieser Code ist eine Erweiterung eines vorherigen Projekts (:ref:`ar_bluetooth`), bei dem RGB-LED-Konfigurationen und benutzerdefinierte Befehle wie "led_off", "rot", "grün" usw. hinzugefügt wurden. Diese Befehle ermöglichen die Steuerung der RGB-LED durch Senden von Befehlen von einem mobilen Gerät über LightBlue.
 
-Let's break down the code step by step:
+Lassen Sie uns den Code Schritt für Schritt durchgehen:
 
-* Add new global variables for the RGB LED pins, PWM channels, frequency, and resolution.
+* Fügen Sie neue globale Variablen für die RGB-LED-Pins, PWM-Kanäle, Frequenz und Auflösung hinzu.
 
     .. code-block:: arduino
 
@@ -114,7 +114,7 @@ Let's break down the code step by step:
 
         ...
 
-* Within the ``setup()`` function, the PWM channels are initialized with the predefined frequency and resolution. The RGB LED pins are then attached to their respective PWM channels.
+* Innerhalb der Funktion ``setup()`` werden die PWM-Kanäle mit der vordefinierten Frequenz und Auflösung initialisiert. Die RGB-LED-Pins werden dann ihren jeweiligen PWM-Kanälen zugeordnet.
 
     .. code-block:: arduino
         
@@ -133,7 +133,7 @@ Let's break down the code step by step:
 
         }
 
-* Modify the ``onWrite`` method in the ``MyCharacteristicCallbacks`` class. This function listens for data coming from the Bluetooth connection. Based on the received string (like ``"led_off"``, ``"red"``, ``"green"``, etc.), it controls the RGB LED.
+* Modifizieren Sie die Methode ``onWrite`` in der Klasse ``MyCharacteristicCallbacks``. Diese Funktion hört auf Daten, die von der Bluetooth-Verbindung kommen. Basierend auf dem empfangenen String (wie ``"led_off"``, ``"red"``, ``"green"``, usw.) steuert sie die RGB-LED.
 
     .. code-block:: arduino
 
@@ -167,7 +167,7 @@ Let's break down the code step by step:
             }
         };
 
-* Finally, a function is added to set the RGB LED color.
+* Schließlich wird eine Funktion hinzugefügt, um die Farbe der RGB-LED einzustellen.
 
     .. code-block:: arduino
 
@@ -178,6 +178,7 @@ Let's break down the code step by step:
             ledcWrite(blueChannel, blue);
         }
 
-In summary, this script enables a remote control interaction model, where the ESP32 operates as a Bluetooth Low Energy (BLE) server.
+Zusammenfassend ermöglicht dieses Skript ein Fernsteuerungs-Interaktionsmodell, bei dem der ESP32 als Bluetooth Low Energy (BLE)-Server fungiert.
 
-The connected BLE client (like a smartphone) can send string commands to change the color of an RGB LED. The ESP32 also gives feedback to the client by sending back the string received, allowing the client to know what operation was performed.
+Der verbundene BLE-Client (wie ein Smartphone) kann String-Befehle senden, um die Farbe einer RGB-LED zu ändern. Der ESP32 gibt auch Feedback an den Client, indem er den empfangenen String zurücksendet, sodass der Client weiß, welche Operation durchgeführt wurde.
+

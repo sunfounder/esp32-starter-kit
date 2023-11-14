@@ -1,38 +1,38 @@
 .. _sh_low_temperature:
 
-2.6 Low Temperature Alarm
-=========================
+2.6 Niedrigtemperaturalarm
+=============================
 
-In this project, we will make a low temperature alarm system, when the temperature is below the threshold, the **Snowflake** sprite will appear on the stage.
+In diesem Projekt werden wir ein Niedrigtemperaturalarmsystem erstellen, bei dem das **Snowflake**-Sprite auf der Bühne erscheint, wenn die Temperatur unter den Schwellenwert fällt.
 
 .. image:: img/9_tem.png
 
-Required Components
+Benötigte Komponenten
 ---------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,56 +47,57 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-You Will Learn
+Was Sie Lernen Werden
 ---------------------
 
-- Thermistor working principle
-- Multivariable and Subtractive Operations
+- Funktionsprinzip des Thermistors
+- Multivariable und subtraktive Operationen
 
-Build the Circuit
+
+Schaltung Aufbauen
 -----------------------
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors, and there are two types of resistors, PTC (resistance increases as temperature increases) and PTC (resistance decreases as temperature increases).
+Ein Thermistor ist ein Typ von Widerstand, dessen Widerstand stark temperaturabhängig ist, stärker als bei Standardwiderständen, und es gibt zwei Arten von Widerständen, PTC (Widerstand erhöht sich mit steigender Temperatur) und PTC (Widerstand verringert sich mit steigender Temperatur).
 
-Build the circuit according to the following diagram.
+Bauen Sie die Schaltung gemäß dem folgenden Diagramm auf.
 
-One end of the thermistor is connected to GND, the other end is connected to pin35, and a 10K resistor is connected in series to 5V.
+Ein Ende des Thermistors ist mit GND verbunden, das andere Ende mit Pin35, und ein 10K-Widerstand ist in Serie zu 5V geschaltet.
 
-The NTC thermistor is used here, so when the temperature rises, the resistance of the thermistor decreases, the voltage division of pin35 decreases, and the value obtained from pin35 decreases, and vice versa increases.
+Hier wird der NTC-Thermistor verwendet, so dass, wenn die Temperatur steigt, der Widerstand des Thermistors abnimmt, die Spannungsteilung an Pin35 abnimmt und der von Pin35 erhaltene Wert sinkt und umgekehrt steigt.
 
 .. image:: img/circuit/7_low_temp_bb.png
 
-Programming
+Programmierung
 ------------------
 
-**1. Select a sprite**
+**1. Wähle ein Sprite aus**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **Snowflake** in the search box, and then click to add it.
+Lösche das Standard-Sprite, klicke auf den **Choose a Sprite**-Button in der unteren rechten Ecke des Sprite-Bereichs, gib **Snowflake** in das Suchfeld ein und klicke dann darauf, um es hinzuzufügen.
 
 .. image:: img/9_snow.png
 
-**2. Create 2 variables**
+**2. Erstelle 2 Variablen**
 
-Create two variables, **before** and **current**, to store the value of pin35 in different cases.
+Erstelle zwei Variablen, **before** und **current**, um den Wert von Pin35 in unterschiedlichen Fällen zu speichern.
 
 .. image:: img/9_va.png
 
-**3. Read the value of pin35**
+**3. Lies den Wert von Pin35**
 
-When the green flag is clicked, the value of pin35 is read and stored in the variable **before**.
+Wenn die grüne Flagge angeklickt wird, wird der Wert von Pin35 gelesen und in der Variablen **before** gespeichert.
 
 .. image:: img/9_before.png
 
-**4. Read the value of pin35 again**
+**4. Lies den Wert von Pin35 erneut**
 
-In [forever], read the value of pin35 again and store it in the variable **current**.
+In [forever], lese den Wert von Pin35 erneut und speichere ihn in der Variablen **current**.
 
 .. image:: img/9_current.png
 
-**5. Determining temperature changes**
+**5. Bestimmung von Temperaturänderungen**
 
-Using the [if else] block, determine if the current value of pin35 is 200 greater than before, which represents a decrease in temperature. At this point let **Snowflake** sprite show, otherwise hide.
+Verwende den [if else]-Block, um festzustellen, ob der aktuelle Wert von Pin35 um 200 größer als zuvor ist, was einen Temperaturrückgang darstellt. In diesem Fall lasse das **Snowflake**-Sprite erscheinen, andernfalls verstecke es.
 
-* [-] & [>]: subtraction and comparison operators from **Operators** platette.
+* [-] & [>]: Subtraktions- und Vergleichsoperatoren aus der **Operators**-Palette.
 
 .. image:: img/9_show.png

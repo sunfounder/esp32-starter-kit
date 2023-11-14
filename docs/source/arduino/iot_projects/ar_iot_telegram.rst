@@ -1,37 +1,37 @@
 .. _iot_telegram:
 
-8.7 ESP Camera with Telegram Bot
+8.7 ESP-Kamera mit Telegram-Bot
 ====================================
 
-In this project, we'll demonstrate how to integrate the ESP32 with your favorite messaging application. For this demonstration, we're using Telegram.
+In diesem Projekt zeigen wir, wie Sie das ESP32 mit Ihrer Lieblings-Messaging-Anwendung integrieren können. Für diese Demonstration verwenden wir Telegram.
 
-Create a Telegram Bot, allowing you to control your circuit from anywhere, capture photos, and manage the flash. Moreover, whenever someone passes by your device, it will snap a new photo and send a notification to your Telegram account.
+Erstellen Sie einen Telegram-Bot, der es Ihnen ermöglicht, Ihren Schaltkreis von überall zu steuern, Fotos zu machen und den Blitz zu verwalten. Außerdem wird jedes Mal, wenn jemand an Ihrem Gerät vorbeigeht, ein neues Foto aufgenommen und eine Benachrichtigung an Ihr Telegram-Konto gesendet.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen. Hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,62 +48,62 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Creating a Telegram Bot**
+**Einen Telegram-Bot erstellen**
 
-#. Head to **Google Play** or the **App Store** and download and install **Telegram**.
+#. Gehen Sie zu **Google Play** oder dem **App Store** und laden und installieren Sie **Telegram**.
 
-#. Search for ``botfather`` in the **Telegram** app, and once it appears, click on it to open. or you can directly access this link: t.me/botfather.
+#. Suchen Sie in der **Telegram**-App nach ``botfather``, und sobald er erscheint, klicken Sie darauf, um ihn zu öffnen. Alternativ können Sie direkt diesen Link verwenden: t.me/botfather.
 
     .. image:: img/sp230515_135927.png
 
-#. Upon opening, you'll be presented with a chat window. Send the command ``/start``.
+#. Wenn Sie den Chat geöffnet haben, senden Sie den Befehl ``/start``.
 
     .. image:: img/sp230515_140149.png
 
-#. Enter ``/newbot`` and follow the provided instructions to create your bot. Once successful, the BotFather will provide you with the access link and API for your new bot.
+#. Geben Sie ``/newbot`` ein und folgen Sie den angegebenen Anweisungen, um Ihren Bot zu erstellen. Nach erfolgreichem Abschluss gibt Ihnen der BotFather den Zugangslink und die API für Ihren neuen Bot.
 
     .. image:: img/sp230515_140830.png
 
-**Authorizing Telegram Users**
+**Autorisierung von Telegram-Benutzern**
 
-As anyone can interact with the bot you've created, there's a risk of information leakage. To address this, we want the bot to only respond to authorized users.
+Da jeder mit dem von Ihnen erstellten Bot interagieren kann, besteht ein Risiko des Informationslecks. Um dies zu verhindern, möchten wir, dass der Bot nur auf autorisierte Benutzer reagiert.
 
-#. In your **Telegram** account, search for ``IDBot`` or open the link: t.me/myidbot.
+#. Suchen Sie in Ihrem **Telegram**-Konto nach ``IDBot`` oder öffnen Sie den Link: t.me/myidbot.
 
     .. image:: img/sp230515_144241.png
 
-#. Send the command ``/getid``. Save the provided ID for later use in our program.
+#. Senden Sie den Befehl ``/getid``. Speichern Sie die bereitgestellte ID zur späteren Verwendung in unserem Programm.
 
     .. image:: img/sp230515_144614.png
 
-**Upload the Code**
+**Code hochladen**
 
-#. First plug in the camera.
+#. Schließen Sie zuerst die Kamera an.
 
     .. raw:: html
 
         <video loop autoplay muted style = "max-width:100%">
             <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Ihr Browser unterstützt das Video-Tag nicht.
         </video>
 
-#. Build the circuit.
+#. Bauen Sie den Schaltkreis auf.
 
     .. image:: ../../img/wiring/iot_7_cam_telegram_bb.png
         
-#. Open the code.
+#. Öffnen Sie den Code.
 
-    * Open the ``iot_7_cam_telegram.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_7_cam_telegram`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Öffnen Sie die Datei ``iot_7_cam_telegram.ino``, die sich im Verzeichnis ``esp32-starter-kit-main\c\codes\iot_7_cam_telegram`` befindet, oder kopieren Sie den Code in die Arduino IDE.
+    * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf den **Upload**-Button.
     * :ref:`unknown_com_port`
-    * The ``UniversalTelegramBot`` and ``ArduinoJson`` libraries are used here, you can install them from the **Library Manager**.
+    * Die Bibliotheken ``UniversalTelegramBot`` und ``ArduinoJson`` werden hier verwendet. Sie können sie aus dem **Library Manager** installieren.
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/d7c439b0-fca3-4648-9714-900a2859740c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. Locate and modify the following lines with your WiFi details, replacing ``<SSID>`` and ``<PASSWORD>``:
+#. Suchen und ändern Sie die folgenden Zeilen mit Ihren WLAN-Daten und ersetzen Sie ``<SSID>`` und ``<PASSWORD>``:
 
     .. code-block::  Arduino
 
@@ -111,7 +111,7 @@ As anyone can interact with the bot you've created, there's a risk of informatio
         const char* ssid = "<SSID>";
         const char* password = "<PASSWORD>";
 
-5. Update the next line, replacing ``<CHATID>`` with your Telegram ID, which you obtained from @IDBot.
+5. Aktualisieren Sie die nächste Zeile, indem Sie ``<CHATID>`` durch Ihre Telegram-ID ersetzen, die Sie von @IDBot erhalten haben.
 
     .. code-block:: Arduino
 
@@ -120,15 +120,15 @@ As anyone can interact with the bot you've created, there's a risk of informatio
         // message you
         String chatId = "<CHATID>";
 
-#. Update the next line, substituting ``<BOTTOKEN>`` with the token of your Telegram BOT, which was provided by @BotFather.
+#. Aktualisieren Sie die nächste Zeile, indem Sie ``<BOTTOKEN>`` durch den Token Ihres Telegram-Bots ersetzen, den Ihnen @BotFather bereitgestellt hat.
 
     .. code-block:: Arduino
 
         // Initialize Telegram BOT
         String BOTtoken = "<BOTTOKEN>";
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
-#. Open the Serial Monitor. If an IP address is printed, this indicates successful execution. 
+#. Nachdem Sie das richtige Board (ESP32 Dev Module) und den Port ausgewählt haben, klicken Sie auf den **Upload**-Button.
+#. Öffnen Sie den Serial Monitor. Wenn eine IP-Adresse gedruckt wird, deutet dies auf eine erfolgreiche Ausführung hin.
 
     .. code-block::
 
@@ -136,6 +136,7 @@ As anyone can interact with the bot you've created, there's a risk of informatio
         ESP32-CAM IP Address: 192.168.18.76
         Init Done!
 
-#. Now, you can interact with your ESP32 via Telegram.
+#. Jetzt können Sie über Telegram mit Ihrem ESP32 interagieren.
 
     .. image:: img/sp230515_161237.png
+

@@ -1,64 +1,64 @@
-8.2 Camera Web Server
+8.2 Kamera-Webserver
 =============================
 
-This project combines the ESP32 board with a camera module to stream high-quality video over a local network. 
-Set up your own camera system effortlessly and monitor any location in real-time.
+Dieses Projekt kombiniert das ESP32-Board mit einem Kameramodul, um hochwertiges Video über ein lokales Netzwerk zu streamen. 
+Richten Sie mühelos Ihr eigenes Kamerasystem ein und überwachen Sie jeden Ort in Echtzeit.
 
-With the project's web interface, you can access and control the camera feed from any device connected to the network. 
-Customize camera settings to optimize the streaming experience and easily adjust settings with the user-friendly interface.
+Mit der Web-Oberfläche des Projekts können Sie auf den Kamerastream zugreifen und ihn von jedem mit dem Netzwerk verbundenen Gerät aus steuern. 
+Passen Sie die Kameraeinstellungen an, um das Streaming-Erlebnis zu optimieren, und stellen Sie die Einstellungen einfach über die benutzerfreundliche Oberfläche ein.
 
-Enhance your surveillance or live streaming capabilities with the versatile ESP32 Camera Streaming project. Monitor your home, office, or any desired location with ease and reliability.
+Erweitern Sie Ihre Überwachungs- oder Live-Streaming-Fähigkeiten mit dem vielseitigen ESP32 Camera Streaming-Projekt. Überwachen Sie Ihr Zuhause, Ihr Büro oder jeden gewünschten Ort mit Leichtigkeit und Zuverlässigkeit.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen. Hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
         - \-
 
-**How to do?**
+**Wie macht man das?**
 
-#. First plug in the camera.
+#. Schließen Sie zuerst die Kamera an.
 
     .. raw:: html
 
         <video loop autoplay muted style = "max-width:100%">
             <source src="../../_static/video/plugin_camera.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Ihr Browser unterstützt das Video-Tag nicht.
         </video>
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Verbinden Sie dann ESP32-WROOM-32E mit dem Computer über das USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Open the code.
+#. Öffnen Sie den Code.
 
-    * Open the ``iot_2_camera_server.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_2_camera_server`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Öffnen Sie die Datei ``iot_2_camera_server.ino``, die sich im Verzeichnis ``esp32-starter-kit-main\c\codes\iot_2_camera_server`` befindet, oder kopieren Sie den Code in die Arduino IDE.
+    * Nachdem Sie das Board (ESP32 Dev Module) und den passenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
     * :ref:`unknown_com_port`
 
     .. raw:: html
@@ -66,25 +66,25 @@ You can also buy them separately from the links below.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
 
-#. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
+#. Suchen Sie die folgenden Zeilen und ändern Sie sie mit Ihrem ``<SSID>`` und ``<PASSWORD>``.
 
     .. code-block::  Arduino
 
-        // Replace the next variables with your SSID/Password combination
+        // Ersetzen Sie die nächsten Variablen mit Ihrer SSID/Passwort-Kombination
         const char* ssid = "<SSID>";
         const char* password = "<PASSWORD>";
 
-#. Now, enable **PSRAM**.
+#. Aktivieren Sie jetzt **PSRAM**.
 
     .. image:: img/sp230516_150554.png
 
-#. Set the partition scheme to **Huge APP (3MB No OTA/1MB SPIFFS)**.
+#. Stellen Sie das Partitionsschema auf **Huge APP (3MB No OTA/1MB SPIFFS)** ein.
 
     .. image:: img/sp230516_150840.png
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the "Upload" button.
+#. Nachdem Sie das richtige Board (ESP32 Dev Module) und den Port ausgewählt haben, klicken Sie auf den "Hochladen"-Knopf.
 
-#. You will see a successful WiFi connection message and the assigned IP address in the Serial Monitor.
+#. Im seriellen Monitor sehen Sie eine erfolgreiche WLAN-Verbindungsmeldung und die zugewiesene IP-Adresse.
 
     .. code-block::
 
@@ -94,15 +94,15 @@ You can also buy them separately from the links below.
         Starting stream server on port: '81'
         Camera Ready! Use 'http://192.168.18.77' to connect
 
-#. Enter the IP address in your web browser. You will see a web interface where you can click **Start Stream** to view the camera feed.
+#. Geben Sie die IP-Adresse in Ihrem Webbrowser ein. Sie sehen eine Web-Oberfläche, auf der Sie **Start Stream** klicken können, um den Kamerastream anzusehen.
 
     .. image:: img/sp230516_151521.png
 
-#. Scroll back to the top of the page, where you will see the live camera feed. You can adjust the settings on the left side of the interface.
+#. Scrollen Sie zurück nach oben auf der Seite, wo Sie den Live-Kamerastream sehen. Sie können die Einstellungen auf der linken Seite der Oberfläche anpassen.
 
     .. image:: img/sp230516_180520.png
 
 .. note:: 
 
-    * This ESP32 module supports Face Detection. To enable it, set the resolution to 240x240 and toggle the Face Detection option at the bottom of the interface.
-    * This ESP32 module does not support Face Recognition.
+    * Dieses ESP32-Modul unterstützt Gesichtserkennung. Um es zu aktivieren, stellen Sie die Auflösung auf 240x240 ein und schalten Sie die Option für die Gesichtserkennung am unteren Rand der Oberfläche um.
+    * Dieses ESP32-Modul unterstützt keine Gesichtserkennung.

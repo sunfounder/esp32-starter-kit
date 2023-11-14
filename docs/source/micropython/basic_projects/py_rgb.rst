@@ -1,41 +1,41 @@
 .. _py_rgb:
 
-2.3 Colorful Light
+2.3 Farbiges Licht
 ==============================================
 
-In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
+In diesem Projekt werden wir in die faszinierende Welt der additiven Farbmischung mit einer RGB-LED eintauchen.
 
-RGB LED combines three primary colors, namely Red, Green, and Blue, into a single package. These three LEDs share a common cathode pin, while each anode pin controls the intensity of the corresponding color.
+Eine RGB-LED kombiniert die drei Grundfarben Rot, Grün und Blau in einem einzigen Gehäuse. Diese drei LEDs teilen sich eine gemeinsame Kathoden-Pin, während jeder Anoden-Pin die Intensität der entsprechenden Farbe steuert.
 
-By varying the electrical signal intensity applied to each anode, we can create a wide range of colors. For example, mixing high-intensity red and green light will result in yellow light, while combining blue and green light will produce cyan.
+Durch Variieren der elektrischen Signalintensität, die an jede Anode angelegt wird, können wir eine breite Palette von Farben erzeugen. Zum Beispiel ergibt die Mischung von hochintensivem rotem und grünem Licht gelbes Licht, während die Kombination von blauem und grünem Licht Cyan erzeugt.
 
-Through this project, we will explore the principles of additive color mixing and unleash our creativity by manipulating the RGB LED to display captivating and vibrant colors.
+Durch dieses Projekt werden wir die Prinzipien der additiven Farbmischung erkunden und unsere Kreativität entfesseln, indem wir die RGB-LED manipulieren, um fesselnde und lebendige Farben anzuzeigen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die unten stehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,31 +51,31 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Available Pins**
+**Verfügbare Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Verfügbare Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_2.3_rgb.png
 
-The PWM pins pin27, pin26 and pin25 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+Die PWM-Pins Pin27, Pin26 und Pin25 steuern die Rot-, Grün- und Blau-Pins der RGB-LED und verbinden den gemeinsamen Kathoden-Pin mit GND. Dies ermöglicht es der RGB-LED, eine bestimmte Farbe anzuzeigen, indem Licht auf diesen Pins mit unterschiedlichen PWM-Werten überlagert wird.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
-The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+Die RGB-LED hat 4 Pins: der längste Pin ist der gemeinsame Kathoden-Pin, der normalerweise mit GND verbunden wird; der linke Pin neben dem längsten Pin ist Rot; und die beiden Pins auf der rechten Seite sind Grün und Blau.
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
@@ -83,10 +83,8 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. note::
 
-    * Open the ``2.3_colorful_light.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Öffnen Sie die Datei ``2.3_colorful_light.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
 
 .. code-block:: python
 
@@ -125,16 +123,16 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
         set_color(1023, 0, 1023) # purple
         time.sleep(1)
 
-When the script runs, you will see the RGB LEDs display red, green, blue and purple, and so on.
+Wenn das Skript ausgeführt wird, sehen Sie, wie die RGB-LEDs Rot, Grün, Blau und Lila sowie andere Farben anzeigen.
 
-**Learn More**
+**Mehr erfahren**
 
-You can also set the color you want with the following code with the familiar color values of 0~255.
+Sie können auch die gewünschte Farbe mit dem folgenden Code und den bekannten Farbwerten von 0 bis 255 einstellen.
 
 .. note::
 
-    * Open the ``2.3_colorful_light_rgb.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``2.3_colorful_light_rgb.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
 
 
 
@@ -183,17 +181,9 @@ You can also set the color you want with the following code with the familiar co
         set_color(255, 0, 255) # purple
         time.sleep(1)
 
-This code is based on the previous example, but it maps color values from 0 to 255 to a duty cycle range of 0 to 1023.
+Dieser Code basiert auf dem vorherigen Beispiel, bildet jedoch Farbwerte von 0 bis 255 auf einen Tastgradbereich von 0 bis 1023 ab.
 
-* The ``interval_mapping`` function is a utility function that maps a value from one range to another. It takes five arguments: the input value, the minimum and maximum values of the input range, and the minimum and maximum values of the output range. It returns the input value mapped to the output range.
-
-    .. code-block:: python
-
-        def color_to_duty(rgb_value):
-            rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
-            return rgb_value
-
-* The ``color_to_duty`` function takes an integer RGB value (e.g. 255,0,255) and maps it to a duty cycle value suitable for the PWM pins. The input RGB value is first mapped from the range 0-255 to the range 0-1023 using the ``interval_mapping`` function. The output of ``interval_mapping`` is then returned as the duty cycle value.
+* Die Funktion ``interval_mapping`` ist eine Hilfsfunktion, die einen Wert von einem Bereich in einen anderen abbildet. Sie nimmt fünf Argumente an: den Eingabewert, die minimalen und maximalen Werte des Eingabebereichs und die minimalen und maximalen Werte des Ausgabebereichs. Sie gibt den Eingabewert, abgebildet auf den Ausgabebereich, zurück.
 
     .. code-block:: python
 
@@ -201,7 +191,15 @@ This code is based on the previous example, but it maps color values from 0 to 2
             rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
             return rgb_value
 
-* The ``color_set`` function takes three integer arguments: the red, green, and blue values for the LED. These values are passed to ``color_to_duty`` to obtain the duty cycle values for the PWM pins. The duty cycle values are then set for the corresponding pins using the ``duty`` method.
+* Die Funktion ``color_to_duty`` nimmt einen ganzzahligen RGB-Wert (z.B. 255,0,255) entgegen und bildet ihn auf einen Tastgradwert, der für die PWM-Pins geeignet ist. Der Eingabe-RGB-Wert wird zunächst von 0-255 auf 0-1023 mit der Funktion ``interval_mapping`` abgebildet. Der Ausgabewert von ``interval_mapping`` wird dann als Tastgradwert zurückgegeben.
+
+    .. code-block:: python
+
+        def farbe_zu_tastgrad(rgb_wert):
+            rgb_wert = int(bereichsabbildung(rgb_wert,0,255,0,1023))
+            return rgb_wert
+
+* Die Funktion ``color_set`` nimmt drei ganzzahlige Argumente an: die Rot-, Grün- und Blauwerte für die LED. Diese Werte werden an ``color_to_duty`` übergeben, um die Tastgradwerte für die PWM-Pins zu erhalten. Die Tastgradwerte werden dann mit der Methode ``duty`` für die entsprechenden Pins eingestellt.
 
     .. code-block:: python
 

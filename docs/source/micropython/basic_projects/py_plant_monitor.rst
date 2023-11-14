@@ -1,37 +1,37 @@
 .. _py_plant_monitor:
 
-6.8 Plant Monitor
+6.8 Pflanzenüberwachung
 ===============================
 
-Welcome to the Plant Monitor project! 
+Willkommen beim Pflanzenüberwachungsprojekt!
 
-In this project, we will be using an ESP32 board to create a system that helps us take care of our plants. With this system, we can monitor the temperature, humidity, soil moisture, and light levels of our plants, and ensure that they are getting the care and attention they need to thrive.
+In diesem Projekt werden wir ein ESP32-Board verwenden, um ein System zu entwickeln, das uns hilft, unsere Pflanzen zu pflegen. Mit diesem System können wir Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtverhältnisse unserer Pflanzen überwachen und sicherstellen, dass sie die notwendige Pflege und Aufmerksamkeit erhalten, um zu gedeihen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,23 +58,21 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
-The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
-Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
-measure the light level. The readings from these sensors are displayed on an LCD screen, and a water pump can be controlled 
-using a button to water the plant when needed.
+Das System verwendet einen DHT11-Sensor, um die Temperatur- und Luftfeuchtigkeitswerte der Umgebung zu messen.
+Gleichzeitig wird ein Bodenfeuchtigkeitsmodul verwendet, um den Feuchtigkeitsgehalt des Bodens zu messen, und ein Fotowiderstand dient zur Messung des Lichtniveaus. Die Messwerte dieser Sensoren werden auf einem LCD-Bildschirm angezeigt, und eine Wasserpumpe kann mit einem Knopf gesteuert werden, um die Pflanze bei Bedarf zu bewässern.
 
-IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
+IO32 verfügt über einen internen Pull-Down-Widerstand von 1K und befindet sich standardmäßig auf einem niedrigen Logikniveau. Wenn der Knopf gedrückt wird, wird eine Verbindung zu VCC (Hohe Spannung) hergestellt, was zu einem hohen Logikniveau auf IO32 führt.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    Es wird hier empfohlen, zuerst die Batterie einzusetzen und dann den Schalter auf dem Erweiterungsboard auf die ON-Position zu schieben, um die Batterieversorgung zu aktivieren.
 
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
@@ -84,10 +82,8 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 .. note::
 
-    * Open the ``6.8_plant_monitor.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Öffnen Sie die Datei ``6.8_plant_monitor.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren Sie den Code in Thonny. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der rechten unteren Ecke ausgewählt ist.
 
 .. code-block:: python
 
@@ -194,9 +190,9 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 
 
-* When the code is running, the I2C LCD1602 alternately displays temperature and humidity, as well as soil moisture and light intensity analog values, with a 2-second interval.
-* Press the button to start the water pump, and press it again to stop the water pump.
+* Während der Code ausgeführt wird, zeigt das I2C LCD1602 abwechselnd Temperatur und Luftfeuchtigkeit sowie Analogwerte der Bodenfeuchtigkeit und Lichtintensität an, mit einem Intervall von 2 Sekunden.
+* Drücken Sie den Knopf, um die Wasserpumpe zu starten, und drücken Sie ihn erneut, um die Wasserpumpe zu stoppen.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Falls der Code und die Verkabelung korrekt sind, aber das LCD dennoch keinen Inhalt anzeigt, können Sie das Potentiometer auf der Rückseite justieren, um den Kontrast zu erhöhen.

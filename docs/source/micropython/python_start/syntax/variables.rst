@@ -1,20 +1,18 @@
-Variables
+Variablen
 ==========
-Variables are containers used to store data values.
+Variablen sind Behälter, die verwendet werden, um Datenwerte zu speichern.
 
-Creating a variable is very simple. You only need to name it and assign it a value. You don't need to specify the data type of the variable when assigning it, because the variable is a reference, and it accesses objects of different data types through assignment.
+Das Erstellen einer Variablen ist sehr einfach. Sie müssen ihr nur einen Namen geben und ihr einen Wert zuweisen. Sie müssen den Datentyp der Variablen bei der Zuweisung nicht angeben, denn die Variable ist eine Referenz, und sie greift durch Zuweisung auf Objekte verschiedener Datentypen zu.
 
-Naming variables must follow the following rules:
+Die Benennung von Variablen muss folgenden Regeln folgen:
 
-* Variable names can only contain numbers, letters, and underscores
-* The first character of the variable name must be a letter or underscore
-* Variable names are case sensitive
+* Variablennamen dürfen nur Zahlen, Buchstaben und Unterstriche enthalten
+* Das erste Zeichen des Variablennamens muss ein Buchstabe oder Unterstrich sein
+* Variablennamen sind groß- und kleinschreibungsempfindlich
 
-Create Variable
+Variable Erstellen
 ------------------
-There is no command for declaring variables in MicroPython. Variables are created when you assign a value to it for the first time. It does not need to use any specific type declaration, and you can even change the type after setting the variable.
-
-
+Es gibt keinen Befehl zum Deklarieren von Variablen in MicroPython. Variablen werden erstellt, wenn Sie ihnen zum ersten Mal einen Wert zuweisen. Es ist keine spezifische Typdeklaration erforderlich, und Sie können sogar den Typ nach dem Setzen der Variablen ändern.
 
 .. code-block:: python
 
@@ -25,12 +23,9 @@ There is no command for declaring variables in MicroPython. Variables are create
 >>> %Run -c $EDITOR_CONTENT
 lily
 
-
 Casting
 -------------
-If you want to specify the data type for the variable, you can do it by casting.
-
-
+Wenn Sie den Datentyp für die Variable festlegen möchten, können Sie dies durch Casting tun.
 
 .. code-block:: python
 
@@ -42,11 +37,9 @@ If you want to specify the data type for the variable, you can do it by casting.
 >>> %Run -c $EDITOR_CONTENT
 5 5 5.0
 
-Get the Type
+Den Typ Erhalten
 -------------------
-You can get the data type of a variable with the `type()` function.
-
-
+Sie können den Datentyp einer Variablen mit der Funktion `type()` erhalten.
 
 .. code-block:: python
 
@@ -58,10 +51,10 @@ You can get the data type of a variable with the `type()` function.
 >>> %Run -c $EDITOR_CONTENT
 <class 'int'> <class 'str'> <class 'float'>
 
-Single or Double Quotes?
----------------------------
+Einfache oder Doppelte Anführungszeichen?
+--------------------------------------------
 
-In MicroPython, single quotes or double quotes can be used to define string variables.
+In MicroPython können einfache oder doppelte Anführungszeichen verwendet werden, um String-Variablen zu definieren.
 
 
 
@@ -71,11 +64,9 @@ In MicroPython, single quotes or double quotes can be used to define string vari
     # is the same as
     x = 'hello'
 
-Case-Sensitive
----------------------
-Variable names are case-sensitive.
-
-
+Groß- und Kleinschreibung
+-----------------------------
+Variablennamen sind groß- und kleinschreibungsempfindlich.
 
 .. code-block:: python
 
@@ -86,5 +77,3 @@ Variable names are case-sensitive.
 
 >>> %Run -c $EDITOR_CONTENT
 5 lily
-
-

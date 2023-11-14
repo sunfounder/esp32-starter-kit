@@ -1,35 +1,35 @@
 .. _py_ultrasonic:
 
-5.12 Measuring Distance
+5.12 Distanzmessung
 ======================================
 
-The ultrasonic module is used for distance measurement or object detection. In this project, we will program the module to obtain obstacle distances. By sending ultrasonic pulses and measuring the time it takes for them to bounce back, we can calculate distances. This enables us to implement distance-based actions or obstacle avoidance behaviors.
+Das Ultraschallmodul wird zur Entfernungsmessung oder Objekterkennung verwendet. In diesem Projekt werden wir das Modul so programmieren, dass es Hindernisentfernungen erfasst. Durch das Senden von Ultraschallimpulsen und das Messen der Zeit, die sie zum Zurückprallen benötigen, können wir Entfernungen berechnen. Dies ermöglicht es uns, distanzbasierte Aktionen oder Verhaltensweisen zur Hindernisvermeidung zu implementieren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -40,29 +40,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Für Eingang
             - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Für Ausgang
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.12_ultrasonic.png
 
-The ESP32 sends a set of square wave signals to the Trig pin of the ultrasonic sensor every 10 seconds. This prompts the ultrasonic sensor to emit a 40kHz ultrasound signal outward. If there is an obstacle in front, the ultrasound waves will be reflected back.
+Der ESP32 sendet alle 10 Sekunden eine Reihe von Rechteckwellensignalen an den Trig-Pin des Ultraschallsensors. Das veranlasst den Ultraschallsensor, ein 40kHz Ultraschallsignal nach außen zu senden. Gibt es ein Hindernis vorne, werden die Ultraschallwellen zurückreflektiert.
 
-By recording the time it takes from sending to receiving the signal, dividing it by 2, and multiplying it by the speed of light, you can determine the distance to the obstacle.
+Durch Aufzeichnung der Zeit vom Senden bis zum Empfangen des Signals, Teilen durch 2 und Multiplizieren mit der Lichtgeschwindigkeit können Sie die Entfernung zum Hindernis bestimmen.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.12_ultrasonic_bb.png
 
@@ -70,8 +70,8 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 .. note::
 
-    * Open the ``5.12_ultrasonic.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``5.12_ultrasonic.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
 
 
@@ -122,5 +122,6 @@ By recording the time it takes from sending to receiving the signal, dividing it
         time.sleep_ms(300)  # Wait for 300 milliseconds before repeating
 
 
-Once the program is running, the Shell will print out the distance of the ultrasonic sensor from the obstacle ahead.
+Sobald das Programm läuft, wird die Shell die Entfernung des Ultraschallsensors zum Hindernis vor ihm ausgeben.
+
 

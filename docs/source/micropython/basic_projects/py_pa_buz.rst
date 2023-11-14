@@ -1,40 +1,40 @@
 .. _py_pa_buz:
 
-3.2 Custom Tone
+3.2 Eigener Klang
 ==========================================
 
-We have used active buzzer in the previous project, this time we will use passive buzzer.
+Im vorherigen Projekt haben wir einen aktiven Summer verwendet, dieses Mal benutzen wir einen passiven Summer.
 
-Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used.
-But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as "doh, re, mi, fa, sol, la, ti".
+Wie der aktive Summer nutzt auch der passive Summer das Phänomen der elektromagnetischen Induktion. Der Unterschied besteht darin, dass ein passiver Summer keine eigene Oszillationsquelle hat und daher nicht piept, wenn Gleichstromsignale verwendet werden.
+Dies ermöglicht es dem passiven Summer jedoch, seine eigene Oszillationsfrequenz anzupassen und unterschiedliche Töne wie "do, re, mi, fa, sol, la, ti" zu erzeugen.
 
-Let the passive buzzer emit a melody!
+Lassen Sie den passiven Summer eine Melodie abspielen!
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,36 +51,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Verfügbare Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+Wenn der IO14-Ausgang hoch ist, leitet der S8050 (NPN-Transistor) nach dem 1K-Strombegrenzungswiderstand (zum Schutz des Transistors), sodass der Summer ertönt.
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
+Die Rolle des S8050 (NPN-Transistor) ist es, den Strom zu verstärken und den Summer lauter klingen zu lassen. Tatsächlich können Sie den Summer auch direkt an IO14 anschließen, aber dann wird der Summer leiser klingen.
 
-**Wiring**
+**Verdrahtung**
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+Im Set sind zwei Arten von Summern enthalten. 
+Wir benötigen den passiven Summer. Drehen Sie ihn um, die versiegelte Rückseite (nicht die freiliegende Leiterplatte) ist die, die wir verwenden wollen.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+Der Summer benötigt beim Betrieb einen Transistor, hier verwenden wir S8050 (NPN-Transistor).
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
@@ -88,10 +88,8 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
 
 .. note::
 
-    * Open the ``3.2_custom_tone.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Öffnen Sie die Datei ``3.2_custom_tone.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben.
 
 .. code-block:: python
 
@@ -133,34 +131,31 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
     tone(buzzer, B4, 250)
 
 
-**How it works?**
+**Wie funktioniert das?**
 
-If the passive buzzer given a digital signal, it can only keep pushing the diaphragm without producing sound.
+Wenn der passive Summer ein digitales Signal erhält, kann er nur das Zwerchfell bewegen, ohne einen Ton zu erzeugen.
 
-Therefore, we use the ``tone()`` function to generate the PWM signal to make the passive buzzer sound.
+Deshalb verwenden wir die Funktion ``tone()``, um das PWM-Signal zu erzeugen, damit der passive Summer klingt.
 
-This function has three parameters:
+Diese Funktion hat drei Parameter:
 
-* ``pin``: The pin that controls the buzzer.
-* ``frequency``: The pitch of the buzzer is determined by the frequency, the higher the frequency, the higher the pitch.
-* ``Duration``: The duration of the tone.
+* ``pin``: Der Pin, der den Summer steuert.
+* ``frequency``: Die Tonhöhe des Summers wird durch die Frequenz bestimmt, je höher die Frequenz, desto höher die Tonhöhe.
+* ``Duration``: Die Dauer des Tons.
 
-We use the ``duty()`` function to set the duty cycle to 512(about 50%). It can be other numbers, and it only needs to generate a discontinuous electrical signal to oscillate.
+Wir verwenden die Funktion ``duty()`` um den Tastgrad auf 512 (etwa 50%) einzustellen. Es können auch andere Zahlen sein, es muss nur ein diskontinuierliches elektrisches Signal erzeugt werden, um zu oszillieren.
 
 
 
-**Learn More**
+**Mehr erfahren**
 
-We can simulate specific pitches and thus play a complete piece of music.
+Wir können bestimmte Tonhöhen simulieren und so ein komplettes Musikstück spielen.
 
 
 .. note::
 
-    * Open the ``3.2_custom_tone_music.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * Öffnen Sie die Datei ``3.2_custom_tone_music.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
 
 .. code-block:: python
 
@@ -232,8 +227,9 @@ We can simulate specific pitches and thus play a complete piece of music.
         time.sleep_ms(50)
 
 
-* The ``tone`` function sets the frequency of the pin to the value of ``frequency`` using the ``freq`` method of the ``pin`` object. 
-* It then sets the duty cycle of the pin to 512 using the ``duty`` method of the ``pin`` object. 
-* This will cause the pin to produce a tone with the specified frequency and volume for the duration of ``duration`` in milliseconds using the ``sleep_ms`` method of the time module.
-* The code then plays a melody by iterating through a sequence called ``melody`` and calling the ``tone`` function for each note in the melody with the note's frequency and duration. 
-* It also inserts a short pause of 50 milliseconds between each note using the ``sleep_ms`` method of the time module.
+* Die Funktion ``tone`` setzt die Frequenz des Pins auf den Wert von ``frequency`` unter Verwendung der ``freq``-Methode des ``pin``-Objekts.
+* Anschließend setzt sie den Tastgrad des Pins auf 512 unter Verwendung der ``duty``-Methode des ``pin``-Objekts.
+* Dadurch erzeugt der Pin einen Ton mit der angegebenen Frequenz und Lautstärke für die Dauer von ``duration`` in Millisekunden unter Verwendung der ``sleep_ms``-Methode des Zeitmoduls.
+* Der Code spielt dann eine Melodie ab, indem er durch eine Sequenz namens ``melody`` iteriert und für jede Note in der Melodie die Funktion ``tone`` mit der Frequenz und Dauer der Note aufruft.
+* Zwischen jeder Note wird auch eine kurze Pause von 50 Millisekunden unter Verwendung der ``sleep_ms``-Methode des Zeitmoduls eingefügt.
+

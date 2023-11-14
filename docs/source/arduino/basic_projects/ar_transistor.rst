@@ -1,37 +1,37 @@
 .. _ar_transistor:
 
-5.6 Two Kinds of Transistors
+5.6 Zwei Arten von Transistoren
 ==========================================
-This kit is equipped with two types of transistors, S8550 and S8050, the former is PNP and the latter is NPN. They look very similar, and we need to check carefully to see their labels.
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+Dieses Kit ist mit zwei Arten von Transistoren ausgestattet, S8550 und S8050, wobei ersterer ein PNP- und letzterer ein NPN-Transistor ist. Sie sehen sehr ähnlich aus, und wir müssen sorgfältig prüfen, um ihre Beschriftungen zu sehen.
+Wenn ein High-Level-Signal durch einen NPN-Transistor fließt, wird er aktiviert. Aber ein PNP-Transistor benötigt ein Low-Level-Signal, um ihn zu steuern. Beide Arten von Transistoren werden häufig für kontaktlose Schalter verwendet, genau wie in diesem Experiment.
 
-Let's use LED and button to understand how to use transistor!
+Lassen Sie uns LED und Taster verwenden, um zu verstehen, wie man Transistoren einsetzt!
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,42 +50,42 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Für Eingang
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Für Ausgang
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-* **Conditional Usage Pins (Input)**
+* **Bedingte Verwendung Pins (Eingang)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
+    Die folgenden Pins haben eingebaute Pull-up- oder Pull-down-Widerstände, sodass externe Widerstände nicht erforderlich sind, wenn **sie als Eingangspins verwendet werden**:
 
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - Bedingte Verwendung Pins
+            - Beschreibung
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Hochziehen mit einem 47K-Widerstand setzt den Wert standardmäßig auf hoch.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Hochziehen mit einem 4.7K-Widerstand setzt den Wert standardmäßig auf hoch.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Herunterziehen mit einem 1K-Widerstand setzt den Wert standardmäßig auf niedrig.
 
-* **Strapping Pins (Input)**
+* **Strapping Pins (Eingang)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Strapping-Pins sind eine spezielle Gruppe von Pins, die verwendet werden, um bestimmte Boot-Modi während des Gerätestarts 
+    (d.h., Einschalt-Reset) zu bestimmen.
 
     
     
@@ -98,30 +98,30 @@ You can also buy them separately from the links below.
 
     
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generell wird **nicht empfohlen, sie als Eingangspins zu verwenden**. Wenn Sie diese Pins verwenden möchten, berücksichtigen Sie den potenziellen Einfluss auf den Boot-Vorgang. Weitere Details finden Sie im Abschnitt :ref:`esp32_strapping`.
 
 
 
-**Way to connect NPN (S8050) transistor**
+**Verbindungsmöglichkeit des NPN (S8050) Transistors**
 
 .. image:: ../../img/circuit/circuit_5.6_S8050.png
 
-In this circuit, when the button is pressed, IO14 is high.
+In diesem Schaltkreis wird IO14 hoch, wenn der Taster gedrückt wird.
 
-By programming IO26 to output **high**, after a 1k current limiting resistor (to protect the transistor), the S8050 (NPN transistor) is allowed to conduct, thus allowing the LED to light up.
+Indem IO26 programmiert wird, um **high** auszugeben, nach einem 1k-Strombegrenzungswiderstand (um den Transistor zu schützen), wird der S8050 (NPN-Transistor) leitfähig, wodurch die LED aufleuchten kann.
 
 
 .. image:: ../../img/wiring/5.6_s8050_bb.png
 
-**Way to connect PNP(S8550) transistor**
+**Verbindungsmöglichkeit des PNP(S8550) Transistors**
 
 .. image:: ../../img/circuit/circuit_5.6_S8550.png
 
-In this circuit, IO14 is low by the default and will change to high when the button is pressed.
+In diesem Schaltkreis ist IO14 standardmäßig niedrig und wird hoch, wenn der Taster gedrückt wird.
 
-By programming IO26 to output **low**, after a 1k current limiting resistor (to protect the transistor), the S8550 (PNP transistor) is allowed to conduct, thus allowing the LED to light up.
+Indem IO26 programmiert wird, um **low** auszugeben, nach einem 1k-Strombegrenzungswiderstand (um den Transistor zu schützen), wird der S8550 (PNP-Transistor) leitfähig, wodurch die LED aufleuchten kann.
 
-The only difference you will notice between this circuit and the previous one is that in the previous circuit the cathode of the LED is connected to the **collector** of the **S8050 (NPN transistor)**, while this one is connected to the **emitter** of the **S8550 (PNP transistor)**.
+Der einzige Unterschied, den Sie zwischen diesem Schaltkreis und dem vorherigen feststellen werden, ist, dass in dem vorherigen Schaltkreis die Kathode der LED mit dem **collector** des **S8050 (NPN transistor)** verbunden ist, während sie in diesem mit dem **emitter** des **S8550 (PNP transistor)** verbunden ist.
 
 .. image:: ../../img/wiring/5.6_s8550_bb.png
 
@@ -129,17 +129,17 @@ The only difference you will notice between this circuit and the previous one is
 
 .. note::
 
-    * You can open the file ``5.6_transistor.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.6_transistor``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Sie können die Datei ``5.6_transistor.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\5.6_transistor`` öffnen. 
+    * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
     * :ref:`unknown_com_port`
    
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/3ab778b4-642d-4a5d-8b71-05bc089389e5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Two types of transistors can be controlled using the same code. 
-When we press the button, the ESP32 will send a high-level signal to the transistor; 
-when we release it, it will send a low-level signal.
+Beide Arten von Transistoren können mit demselben Code gesteuert werden. 
+Wenn wir den Taster drücken, sendet der ESP32 ein Hochpegel-Signal an den Transistor; 
+wenn wir ihn loslassen, sendet er ein Niedrigpegel-Signal.
 
-* The circuit using the S8050 (NPN transistor) will light up when the button is pressed, indicating that it is in a high-level conduction state;
-* The circuit using the S8550 (PNP transistor) will light up when the button is released, indicating that it is in a low-level conduction state.
+* Der Schaltkreis mit dem S8050 (NPN-Transistor) leuchtet auf, wenn der Taster gedrückt wird, was darauf hindeutet, dass er sich in einem Hochpegel-Leitzustand befindet;
+* Der Schaltkreis mit dem S8550 (PNP-Transistor) leuchtet auf, wenn der Taster losgelassen wird, was darauf hindeutet, dass er sich in einem Niedrigpegel-Leitzustand befindet.

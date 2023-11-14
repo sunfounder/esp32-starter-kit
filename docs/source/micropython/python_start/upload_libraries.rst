@@ -1,33 +1,32 @@
-
 .. _add_libraries_py:
 
-1.4 Upload the Libraries (Important)
-======================================
+1.4 Bibliotheken Hochladen (Wichtig)
+====================================
 
-In some projects, you will need additional libraries. So here we upload these libraries to ESP32 first, and then we can run the code directly later.
+In manchen Projekten benötigt man zusätzliche Bibliotheken. Daher laden wir diese zuerst auf den ESP32 hoch, sodass wir den Code später direkt ausführen können.
 
-#. Download the relevant code from the link below.
+1. Laden Sie den relevanten Code von dem folgenden Link herunter.
 
 
    * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
 
-#. Open Thonny IDE and plug the ESP32 into your computer with a micro USB cable and click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+2. Öffnen Sie die Thonny IDE, verbinden Sie den ESP32 mit einem Mikro-USB-Kabel mit Ihrem Computer und klicken Sie in der unteren rechten Ecke auf den Interpreter "MicroPython (ESP32).COMXX".
 
     .. image:: img/sec_inter.png
 
-#. In the top navigation bar, click **View** -> **Files**.
+3. Klicken Sie in der oberen Navigationsleiste auf **View** -> **Files**.
 
     .. image:: img/th_files.png
 
-#. Switch the path to the folder where you downloaded the `code package <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ before, and then go to the ``esp32-starter-kit-main\micropython\libs`` folder.
+4. Wechseln Sie den Pfad zum Ordner, in dem Sie zuvor das `Codepaket <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ heruntergeladen haben, und gehen Sie dann zum Ordner ``esp32-starter-kit-main\micropython\libs``.
 
     .. image:: img/th_path.png
 
-#. Select all the files or folders in the ``libs/`` folder, right-click and click **Upload to**, it will take a while to upload.
+5. Wählen Sie alle Dateien oder Ordner im Ordner ``libs/``, klicken Sie mit der rechten Maustaste und wählen Sie **Upload to**, das Hochladen dauert einen Moment.
 
     .. image:: img/th_upload.png
 
-#. Now you will see the files you just uploaded inside your drive ``MicroPython device``.
+6. Jetzt sehen Sie die Dateien, die Sie gerade in Ihrem Laufwerk ``MicroPython device`` hochgeladen haben.
 
     .. image:: img/th_done.png

@@ -1,36 +1,37 @@
 .. _cpn_pump:
 
-Centrifugal Pump
+Zentrifugalpumpe
 ================
 
 .. image:: img/pump.png
     :width: 300
     :align: center
 
-The centrifugal pump converts rotational kinetic energy into hydrodynamic energy to transport fluid. The rotation energy comes from the electric motor. The fluid enters the pump impeller along or near the rotating shaft, is accelerated by the impeller, flows radially outward into the diffuser or volute chamber, and then flows out from there.
+Die Zentrifugalpumpe wandelt Rotationsenergie in hydrodynamische Energie um, um Flüssigkeiten zu transportieren. Die Rotationsenergie stammt aus dem Elektromotor. Die Flüssigkeit tritt entlang oder in der Nähe der rotierenden Welle in das Pumpenlaufrad ein, wird vom Laufrad beschleunigt, fließt radial nach außen in das Diffusor- oder Spiralgehäuse und strömt von dort aus ab.
 
-Common uses of centrifugal pumps include water, sewage, agricultural, petroleum, and petrochemical pumping.
+Häufige Einsatzgebiete von Zentrifugalpumpen sind Wasser-, Abwasser-, Landwirtschafts-, Erdöl- und Petrochemiepumpen.
 
 
-* `Centrifugal Pump - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
+* `Zentrifugalpumpe - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
 
-**Features**
-    * **Voltage Scope**: DC 3 ~ 4.5V
-    * **Operating Current**: 120 ~ 180mA
-    * **Power**: 0.36 ~ 0.91W
-    * **Max Water Head**: 0.35 ~ 0.55M
-    * **Max Flow Rate**: 80 ~ 100 L/H
-    * **Continuous Working Life**: 100 hours
-    * **Water Fing Grade**: IP68
-    * **Driving Mode**: DC, Magnetic Driving
-    * **Material**: Engineering Plastic
-    * **Outlet Outside Diameter**: 7.8 mm
-    * **Outlet Inside Diameter**: 6.5 mm
-    * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
+**Merkmale**
+    * **Spannungsbereich**: DC 3 ~ 4,5V
+    * **Betriebsstrom**: 120 ~ 180mA
+    * **Leistung**: 0,36 ~ 0,91W
+    * **Maximale Förderhöhe**: 0,35 ~ 0,55M
+    * **Maximale Fördermenge**: 80 ~ 100 L/H
+    * **Dauerbetriebszeit**: 100 Stunden
+    * **Wasserdichtheitsgrad**: IP68
+    * **Antriebsmodus**: DC, magnetischer Antrieb
+    * **Material**: Technischer Kunststoff
+    * **Außendurchmesser des Auslasses**: 7,8 mm
+    * **Innendurchmesser des Auslasses**: 6,5 mm
+    * Es handelt sich um eine Tauchpumpe, die auch so verwendet werden sollte. Es besteht Überhitzungsgefahr bei Betrieb außerhalb des Wassers, da sie sich sonst zu stark erwärmt.
 
-**Example**
+**Beispiele**
 
-* :ref:`ar_pump` (Arduino Project)
-* :ref:`ar_plant_monitor` (Arduino Project)
-* :ref:`py_pump` (MicroPython Project)
-* :ref:`py_plant_monitor` (MicroPython Project)
+* :ref:`ar_pump` (Arduino-Projekt)
+* :ref:`ar_plant_monitor` (Arduino-Projekt)
+* :ref:`py_pump` (MicroPython-Projekt)
+* :ref:`py_plant_monitor` (MicroPython-Projekt)
+

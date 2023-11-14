@@ -1,31 +1,31 @@
 .. _cpn_wires:
 
-Jumper Wires
+Überbrückungsdrähte
 =====================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+Drähte, die zwei Klemmen miteinander verbinden, werden als Schaltdrähte bezeichnet. Es gibt
+verschiedene Arten von Überbrückungsdrähten. Hier konzentrieren wir uns auf diejenigen, die in
+Breadboard. Sie werden unter anderem verwendet, um elektrische Signale zu übertragen
+von einer beliebigen Stelle auf dem Breadboard zu den Eingangs-/Ausgangspins eines
+Mikrocontrollers zu übertragen.
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+Überbrückungsdrähte werden durch Einsetzen ihrer "Endstecker" in die Schlitze
+Steckplätze der Lochrasterplatine gesteckt, unter deren Oberfläche sich einige Sätze
+parallele Platten, die die Steckplätze je nach Fläche in Gruppen von Reihen oder Spalten verbinden
+je nach Bereich. Die "Endstecker" werden ohne Löten in die
+in die Lochrasterplatine eingefügt, und zwar ohne zu löten, und zwar in den Schlitzen, die
+Prototypen angeschlossen werden müssen.
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+Es gibt drei Arten von Überbrückungsdraht: Buchse-zu-Buchse, Stecker-zu-Stecker,
+und Männlich-auf-Weiblich. Der Grund, warum wir sie Male-to-Female nennen, ist, dass sie
+die herausragende Spitze an einem Ende sowie ein versenktes weibliches Ende hat.
+Male-to-Male bedeutet, dass beide Seiten männlich sind und Female-to-Female bedeutet, dass beide
+Enden sind weiblich.
 
 .. image:: img/image414.png
 
 
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn't mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+In einem Projekt kann mehr als ein Typ von ihnen verwendet werden. Die Farbe der
+Sprungdrähte ist unterschiedlich, aber das bedeutet nicht, dass ihre Funktion unterschiedlich ist.
+Funktion unterschiedlich ist; sie dient lediglich der besseren Identifizierung der Verbindung
+zwischen den einzelnen Schaltkreisen.

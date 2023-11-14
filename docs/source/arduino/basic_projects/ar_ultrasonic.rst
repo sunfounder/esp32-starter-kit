@@ -1,34 +1,34 @@
 .. _ar_ultrasonic:
 
-5.12 Measuring Distance
+5.12 Entfernung messen
 ======================================
-The ultrasonic module is used for distance measurement or object detection. In this project, we will program the module to obtain obstacle distances. By sending ultrasonic pulses and measuring the time it takes for them to bounce back, we can calculate distances. This enables us to implement distance-based actions or obstacle avoidance behaviors.
+Das Ultraschallmodul wird zur Entfernungsmessung oder Objekterkennung verwendet. In diesem Projekt programmieren wir das Modul, um Hindernisentfernungen zu ermitteln. Indem wir Ultraschallimpulse senden und die Zeit messen, die sie zum Zurückprallen benötigen, können wir Entfernungen berechnen. Dies ermöglicht es uns, distanzbasierte Aktionen oder Hindernisvermeidungsverhalten zu implementieren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -39,29 +39,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
-            - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Für Eingang
+            - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36
+        *   - Für Ausgang
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.12_ultrasonic.png
 
-The ESP32 sends a set of square wave signals to the Trig pin of the ultrasonic sensor every 10 seconds. This prompts the ultrasonic sensor to emit a 40kHz ultrasound signal outward. If there is an obstacle in front, the ultrasound waves will be reflected back.
+Der ESP32 sendet alle 10 Sekunden einen Satz von Rechteckwellensignalen an den Trig-Pin des Ultraschallsensors. Dies veranlasst den Ultraschallsensor, ein 40kHz Ultraschallsignal nach außen zu senden. Wenn sich ein Hindernis vorne befindet, werden die Ultraschallwellen zurückreflektiert.
 
-By recording the time it takes from sending to receiving the signal, dividing it by 2, and multiplying it by the speed of light, you can determine the distance to the obstacle.
+Durch die Aufzeichnung der Zeit, die vom Senden bis zum Empfangen des Signals vergeht, diese durch 2 teilen und mit der Schallgeschwindigkeit multiplizieren, können Sie die Entfernung zum Hindernis bestimmen.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.12_ultrasonic_bb.png
 
@@ -69,8 +69,8 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 .. note::
 
-    * Open the ``5.12_ultrasonic.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Öffnen Sie die Datei ``5.12_ultrasonic.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
+    * Nachdem Sie das Board (ESP32 Dev Module) und den passenden Port ausgewählt haben, klicken Sie auf den **Upload**-Button.
     * :ref:`unknown_com_port`
     
 .. raw:: html
@@ -79,17 +79,17 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 
 
-After the code is successfully uploaded, the serial monitor will print out the distance between the ultrasonic sensor and the obstacle ahead.
+Nachdem der Code erfolgreich hochgeladen wurde, gibt der serielle Monitor die Entfernung zwischen dem Ultraschallsensor und dem Hindernis vorne aus.
 
-**How it works?**
+**Wie funktioniert das?**
 
-About the application of ultrasonic sensor, we can directly check the subfunction.
+Über die Anwendung des Ultraschallsensors können wir direkt die Unterfunktion überprüfen.
 
 .. code-block:: arduino
 
     float readSensorData(){// ...}
 
-* The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal every 2us.
+* Der ``trigPin`` des Ultraschallmoduls sendet alle 2us ein 10us-Rechteckwellensignal.
 
     .. code-block:: arduino
 
@@ -103,17 +103,18 @@ About the application of ultrasonic sensor, we can directly check the subfunctio
         digitalWrite(trigPin, LOW);
 
 
-* The ``echoPin`` receives a high level signal if there is an obstacle within the range and use the ``pulseIn()`` function to record the time from sending to receiving.
+* Der ``echoPin`` empfängt ein Hochpegeleingangssignal, wenn sich ein Hindernis im Bereich befindet, und verwendet die Funktion ``pulseIn()``, um die Zeit vom Senden bis zum Empfangen aufzuzeichnen.
 
     .. code-block:: arduino
 
         unsigned long microsecond = pulseIn(echoPin, HIGH);
 
-* The speed of sound is 340 meters per second, which is equivalent to 29 microseconds per centimeter. By measuring the time it takes for a square wave to travel to an obstacle and return, we can calculate the distance traveled by dividing the total time by 2. This gives us the distance of the obstacle from the source of the sound wave.
+* Die Schallgeschwindigkeit beträgt 340 Meter pro Sekunde, was 29 Mikrosekunden pro Zentimeter entspricht. Indem wir die Zeit messen, die eine Rechteckwelle benötigt, um zu einem Hindernis zu gelangen und zurückzukehren, können wir die zurückgelegte Entfernung berechnen, indem wir die Gesamtzeit durch 2 teilen. Dies ergibt die Entfernung des Hindernisses von der Schallquelle.
 
     .. code-block:: arduino
 
         float distance = microsecond / 29.00 / 2;  
 
 
-Note that the ultrasonic sensor will pause the program when it is working, which may cause some lagging when writing complex projects.
+Beachten Sie, dass der Ultraschallsensor das Programm während der Arbeit anhält, was bei der Erstellung komplexer Projekte zu Verzögerungen führen kann.
+

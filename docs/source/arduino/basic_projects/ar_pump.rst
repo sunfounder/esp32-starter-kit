@@ -1,36 +1,36 @@
 .. _ar_pump:
 
-4.2 Pumping
+4.2 Pumpen
 ===================
-In this intriguing project, we will delve into controlling a water pump using the L293D.
+In diesem faszinierenden Projekt werden wir uns mit der Steuerung einer Wasserpumpe mit dem L293D befassen.
 
-In the realm of water pump control, things are a bit simpler compared to controlling other motors. The beauty of this project lies in its simplicity - there's no need to worry about the direction of rotation. Our primary goal is to successfully activate the water pump and keep it running.
+Bei der Steuerung von Wasserpumpen ist es etwas einfacher als bei anderen Motoren. Die Schönheit dieses Projekts liegt in seiner Einfachheit - es besteht keine Notwendigkeit, sich um die Drehrichtung zu kümmern. Unser Hauptziel ist es, die Wasserpumpe erfolgreich zu aktivieren und in Betrieb zu halten.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,27 +45,26 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**Verfügbare Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Verfügbare Pins
       - IO13, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
 
-**Wiring**
+**Verdrahtung**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    Hier wird empfohlen, zuerst die Batterie einzulegen und dann den Schalter auf dem Erweiterungsboard auf die Position ON zu schieben, um die Batterieversorgung zu aktivieren.
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
 
@@ -73,12 +72,13 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-  * You can open the file ``4.2_pump.ino`` under the path of ``esp32-starter-kit-main\c\codes\4.2_pump``. 
-  * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+  * Sie können die Datei ``4.2_pump.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\4.2_pump`` öffnen.
+  * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
   * :ref:`unknown_com_port`
    
 .. raw:: html
 
   <iframe src=https://create.arduino.cc/editor/sunfounder01/a56216f9-eba8-4fdc-8bbb-91337095e543/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Connect the tubing to the pump and place it inside the water-filled container. Once the code has been successfully uploaded, you will observe the water in the container gradually being drained. During this experiment, please ensure that the electrical circuit is kept away from water to prevent short-circuiting!
+Verbinden Sie den Schlauch mit der Pumpe und platzieren Sie ihn im wassergefüllten Behälter. Sobald der Code erfolgreich hochgeladen wurde, werden Sie beobachten, wie das Wasser im Behälter allmählich abgepumpt wird. Während dieses Experiments stellen Sie bitte sicher, dass der elektrische Stromkreis von Wasser ferngehalten wird, um einen Kurzschluss zu verhindern!
+

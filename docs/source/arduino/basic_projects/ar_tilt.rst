@@ -1,37 +1,37 @@
 .. _ar_tilt:
 
-5.2 Tilt It！
+5.2 Kippen!
 ==========================
 
-The tilt switch is a simple yet effective 2-pin device that contains a metal ball in its center. When the switch is in an upright position, the two pins are electrically connected, allowing current to flow through. However, when the switch is tilted or tilted at a certain angle, the metal ball moves and breaks the electrical connection between the pins.
+Der Kippschalter ist ein einfaches, aber effektives 2-Pin-Gerät, das eine Metallkugel in seiner Mitte enthält. Wenn der Schalter in einer aufrechten Position ist, sind die beiden Pins elektrisch verbunden, was den Stromfluss ermöglicht. Wenn der Schalter jedoch gekippt oder in einem bestimmten Winkel geneigt wird, bewegt sich die Metallkugel und unterbricht die elektrische Verbindung zwischen den Pins.
 
-In this project, we will utilize the tilt switch to control the illumination of an LED. By positioning the switch in a way that triggers the tilt action, we can toggle the LED on and off based on the switch's orientation. 
+In diesem Projekt werden wir den Kippschalter nutzen, um die Beleuchtung einer LED zu steuern. Indem wir den Schalter so positionieren, dass die Kippaktion ausgelöst wird, können wir die LED basierend auf der Orientierung des Schalters ein- und ausschalten.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,42 +48,42 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt`
         - \-
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Für Eingang
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Für Ausgang
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **Bedingte Verwendung Pins (Eingang)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
+    Die folgenden Pins haben eingebaute Pull-up- oder Pull-down-Widerstände, sodass externe Widerstände nicht erforderlich sind, wenn **sie als Eingangspins verwendet werden**:
 
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - Bedingte Verwendung Pins
+            - Beschreibung
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Hochziehen mit einem 47K-Widerstand setzt den Wert standardmäßig auf hoch.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Hochziehen mit einem 4.7K-Widerstand setzt den Wert standardmäßig auf hoch.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Herunterziehen mit einem 1K-Widerstand setzt den Wert standardmäßig auf niedrig.
 
-* **Strapping Pins (Input)**
+* **Strapping Pins (Eingang)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Strapping-Pins sind eine spezielle Gruppe von Pins, die verwendet werden, um bestimmte Boot-Modi während des Gerätestarts 
+    (d.h., Einschalt-Reset) zu bestimmen.
 
     
     .. list-table::
@@ -92,22 +92,21 @@ You can also buy them separately from the links below.
         *   - Strapping Pins
             - IO5, IO0, IO2, IO12, IO15 
     
-
     
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generell wird **nicht empfohlen, sie als Eingangspins zu verwenden**. Wenn Sie diese Pins verwenden möchten, berücksichtigen Sie den potenziellen Einfluss auf den Boot-Vorgang. Weitere Details finden Sie im Abschnitt :ref:`esp32_strapping`.
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.2_tilt.png
 
-When the tilt switch is in an upright position, IO14 will be set to high, resulting in the LED being lit. Conversely, when the tilt switch is tilted, IO14 will be set to low, causing the LED to turn off.
+Wenn der Kippschalter in einer aufrechten Position ist, wird IO14 auf hoch gesetzt, was dazu führt, dass die LED aufleuchtet. Umgekehrt wird IO14 auf niedrig gesetzt, wenn der Kippschalter geneigt ist, wodurch die LED ausgeschaltet wird.
 
-The purpose of the 10K resistor is to maintain a stable low state for IO14 when the tilt switch is in a tilted position.
+Der Zweck des 10K-Widerstands besteht darin, einen stabilen niedrigen Zustand für IO14 aufrechtzuerhalten, wenn der Kippschalter geneigt ist.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.2_tilt_switch_bb.png
 
@@ -115,8 +114,8 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
 
 .. note::
 
-    * You can open the file ``5.2_tilt_switch.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.2_tilt_switch``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Sie können die Datei ``5.2_tilt_switch.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\5.2_tilt_switch`` öffnen. 
+    * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
     * :ref:`unknown_com_port`
 
 .. raw:: html
@@ -125,6 +124,5 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
     
 
 
-After code upload successfully, the LED will be turned on when the switch is upright, and turned off when the switch is tilted.
-
+Nachdem der Code erfolgreich hochgeladen wurde, leuchtet die LED auf, wenn der Schalter aufrecht steht, und geht aus, wenn der Schalter geneigt wird.
 

@@ -1,41 +1,41 @@
 .. _ar_rgb:
 
-2.3 Colorful Light
+2.3 Bunte Beleuchtung
 ==============================================
 
-In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
+In diesem Projekt tauchen wir in die faszinierende Welt der additiven Farbmischung mit Hilfe einer RGB-LED ein.
 
-RGB LED combines three primary colors, namely Red, Green, and Blue, into a single package. These three LEDs share a common cathode pin, while each anode pin controls the intensity of the corresponding color.
+Die RGB-LED kombiniert drei Primärfarben, nämlich Rot, Grün und Blau, in einem einzigen Gehäuse. Diese drei LEDs teilen sich einen gemeinsamen Kathoden-Pin, während jeder Anoden-Pin die Intensität der entsprechenden Farbe steuert.
 
-By varying the electrical signal intensity applied to each anode, we can create a wide range of colors. For example, mixing high-intensity red and green light will result in yellow light, while combining blue and green light will produce cyan.
+Durch Variation der elektrischen Signalstärke, die auf jede Anode angewendet wird, können wir eine Vielzahl von Farben erzeugen. Zum Beispiel führt die Mischung von hochintensivem rotem und grünem Licht zu gelbem Licht, während die Kombination von blauem und grünem Licht Cyan erzeugt.
 
-Through this project, we will explore the principles of additive color mixing and unleash our creativity by manipulating the RGB LED to display captivating and vibrant colors.
+Durch dieses Projekt werden wir die Prinzipien der additiven Farbmischung erforschen und unsere Kreativität entfesseln, indem wir die RGB-LED manipulieren, um faszinierende und lebendige Farben darzustellen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+In diesem Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die unten stehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,58 +51,58 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Available Pins**
+**Verfügbare Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Verfügbare Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_2.3_rgb.png
 
-The PWM pins pin27, pin26 and pin25 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+Die PWM-Pins Pin27, Pin26 und Pin25 steuern die Rot-, Grün- und Blau-Pins der RGB-LED und verbinden den gemeinsamen Kathoden-Pin mit GND. Dadurch kann die RGB-LED eine bestimmte Farbe anzeigen, indem sie Licht mit unterschiedlichen PWM-Werten auf diese Pins überlagert.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
-The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+Die RGB-LED hat 4 Pins: der lange Pin ist der gemeinsame Kathoden-Pin, der normalerweise mit GND verbunden ist; der linke Pin neben dem längsten Pin ist Rot; und die beiden Pins rechts sind Grün und Blau.
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
 
 **Code**
 
-Here, we can choose our favorite color in drawing software (such as paint) and display it with RGB LED.
+Hier können wir unsere Lieblingsfarbe in einer Zeichensoftware (wie z.B. Paint) auswählen und sie mit der RGB-LED anzeigen.
 
 .. note::
 
-    * You can open the file ``2.3_rgb_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.3_rgb_led``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Sie können die Datei ``2.3_rgb_led.ino`` im Pfad ``esp32-starter-kit-main\c\codes\2.3_rgb_led`` öffnen.
+    * Nachdem Sie das Board (ESP32 Dev Module) und den entsprechenden Port ausgewählt haben, klicken Sie auf die **Upload**-Schaltfläche.
     * :ref:`unknown_com_port`
-
+   
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/49a579a1-ae9b-4e23-b6cd-c20e5695191b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
+
 
 .. image:: img/edit_colors.png
 
-Write the RGB value into ``color_set()``, you will be able to see the RGB light up the colors you want.
+Schreiben Sie den RGB-Wert in ``color_set()`` und Sie werden sehen, wie die RGB-LED die gewünschten Farben aufleuchten lässt.
 
 
-**How it works?**
+**Wie funktioniert das?**
 
-#. Define the GPIO pins, the PWM channels and the frequency (in Hz) and resolution (in bits).
+#. Definiere die GPIO-Pins, die PWM-Kanäle sowie die Frequenz (in Hz) und Auflösung (in Bits).
 
     .. code-block:: arduino
 
@@ -121,7 +121,7 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
         const int resolution = 8;
 
 
-#. The ``setup()`` function initializes the PWM channels with the specified frequency and resolution, and then attaches the LED pins to their corresponding PWM channels.
+#. Die Funktion ``setup()`` initialisiert die PWM-Kanäle mit der angegebenen Frequenz und Auflösung und weist dann den LED-Pins ihre entsprechenden PWM-Kanäle zu.
 
     .. code-block:: arduino
 
@@ -137,22 +137,21 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
             ledcAttachPin(bluePin, blueChannel);
         }
     
-    Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
+    Hier verwenden wir die |link_ledc| (LED-Steuerung), die hauptsächlich zur Steuerung der Intensität von LEDs entwickelt wurde, aber auch verwendet werden kann, um PWM-Signale für andere Zwecke zu erzeugen.
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
+    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: Diese Funktion wird verwendet, um die Frequenz und Auflösung des LEDC-Kanals einzustellen. Sie gibt die konfigurierte ``Frequenz`` für den LEDC-Kanal zurück. Wenn 0 zurückgegeben wird, ist ein Fehler aufgetreten und der LEDC-Kanal wurde nicht konfiguriert.
             
-        * ``channel`` select LEDC channel to config.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
+        * ``channel`` wählt den LEDC-Kanal zur Konfiguration aus.
+        * ``freq`` wählt die PWM-Frequenz aus.
+        * ``resolution_bits`` wählt die Auflösung für den LEDC-Kanal aus. Der Bereich beträgt 1-14 Bits (1-20 Bits für ESP32).
+
+    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: Diese Funktion wird verwendet, um den Pin dem LEDC-Kanal zuzuordnen.
+
+        * ``pin`` wählt den GPIO-Pin aus.
+        * ``chan`` wählt den LEDC-Kanal aus.
 
 
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
-
-        * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
-
-
-#. The ``loop()`` function cycles through various colors (red, green, blue, yellow, purple, and cyan) with one-second intervals between each color change.
+#. Die Funktion ``loop()`` wechselt mit einer Sekunde Verzögerung zwischen verschiedenen Farben (Rot, Grün, Blau, Gelb, Lila und Cyan).
 
     .. code-block:: arduino
 
@@ -172,23 +171,18 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
         }
 
 
-#. The ``setColor()`` function sets the desired color by writing the appropriate duty cycle values to each PWM channel. The function takes in three integer arguments for red, green, and blue color values.
+#. Die Funktion ``setColor()`` setzt die gewünschte Farbe, indem sie die entsprechenden Tastverhältniswerte für jeden PWM-Kanal schreibt. Die Funktion erhält drei Ganzzahlargumente für die Rot-, Grün- und Blau-Farbintensität.
 
     .. code-block:: arduino
 
         void setColor(int red, int green, int blue) {
-            // For common-anode RGB LEDs, use 255 minus the color value
+             // For common-anode RGB LEDs, use 255 minus the color value
             ledcWrite(redChannel, red);
             ledcWrite(greenChannel, green);
             ledcWrite(blueChannel, blue);
         }
     
-    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: This function is used to set duty for the LEDC channel.
+    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: Diese Funktion wird verwendet, um das Tastverhältnis für den LEDC-Kanal festzulegen.
         
-        * ``chan`` select the LEDC channel for writing duty.
-        * ``duty`` select duty to be set for selected channel.
-
-
-
-
-
+        * ``chan`` wählt den LEDC-Kanal zum Schreiben des Tastverhältnisses aus.
+        * ``duty`` wählt das Tastverhältnis, das für den ausgewählten Kanal festgelegt werden soll.

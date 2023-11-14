@@ -1,37 +1,37 @@
 .. _ar_flowing_light:
 
-6.2 Flowing Light
+6.2 Fließendes Licht
 =======================
 
-Have you ever wanted to add some fun and interactive element to your living space? 
-This project involves creating a running light using WS2812 LED strip and a obstacle avoidance module. 
-The running light changes direction when an obstacle is detected, making it an exciting addition to your home or office decor.
+Haben Sie schon einmal daran gedacht, Ihrer Wohnfläche ein unterhaltsames und interaktives Element hinzuzufügen? 
+Dieses Projekt beinhaltet die Erstellung eines fließenden Lichts mit einem WS2812 LED-Streifen und einem Hindernisvermeidungsmodul. 
+Das fließende Licht ändert die Richtung, sobald ein Hindernis erkannt wird, was es zu einer spannenden Ergänzung für Ihre Wohn- oder Bürodekoration macht.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,17 +44,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic Diagram**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_6.2_flowing_led.png
     :align: center
 
-The WS2812 LED strip is composed of a series of individual LEDs that can be programmed to display different colors and patterns. 
-In this project, the strip is set up to display a running light that moves in a particular direction and 
-changes direction when an obstacle is detected by the obstacle avoidance module.
+Der WS2812 LED-Streifen besteht aus einer Reihe von einzelnen LEDs, die so programmiert werden können, dass sie verschiedene Farben und Muster anzeigen. 
+In diesem Projekt ist der Streifen so eingestellt, dass er ein fließendes Licht zeigt, das in eine bestimmte Richtung läuft und 
+die Richtung ändert, wenn ein Hindernis vom Hindernisvermeidungsmodul erkannt wird.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     
@@ -63,12 +63,13 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 
 .. note::
 
-    * You can open the file ``6.2_flowing_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.2_flowing_led`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``6.2_flowing_led.ino`` direkt unter dem Pfad ``esp32-starter-kit-main\c\codes\6.2_flowing_led`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ff625cb6-2efd-436a-9b59-5dd967191338/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-This project extends the functionality of the :ref:`ar_rgb_strip` project by adding the ability to display random colors on the LED strip. 
-Additionally, an obstacle avoidance module has been included to dynamically change the direction of the running light.
+Dieses Projekt erweitert die Funktionalität des :ref:`ar_rgb_strip` Projekts, indem es die Möglichkeit hinzufügt, zufällige Farben auf dem LED-Streifen anzuzeigen. 
+Zusätzlich wurde ein Hindernisvermeidungsmodul integriert, um die Laufrichtung des fließenden Lichts dynamisch zu ändern.
+

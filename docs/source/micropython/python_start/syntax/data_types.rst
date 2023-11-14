@@ -1,21 +1,21 @@
-Data Types
+Datentypen
 ===========
 
-Built-in Data Types
+Eingebaute Datentypen
 ---------------------
-MicroPython has the following data types:
+MicroPython hat die folgenden Datentypen:
 
-* Text Type: str
-* Numeric Types: int, float, complex
-* Sequence Types: list, tuple, range
-* Mapping Type: dict
-* Set Types: set, frozenset
-* Boolean Type: bool
-* Binary Types: bytes, bytearray, memoryview
+* Texttyp: str
+* Numerische Typen: int, float, complex
+* Sequenztypen: list, tuple, range
+* Zuordnungstyp: dict
+* Mengentypen: set, frozenset
+* Boolescher Typ: bool
+* Binäre Typen: bytes, bytearray, memoryview
 
-Getting the Data Type
+Ermitteln des Datentyps
 -----------------------------
-You can get the data type of any object by using the `type()` function:
+Sie können den Datentyp eines beliebigen Objekts mit der Funktion `type()` ermitteln:
 
 
 
@@ -27,9 +27,9 @@ You can get the data type of any object by using the `type()` function:
 >>> %Run -c $EDITOR_CONTENT
 <class 'float'>
 
-Setting the Data Type
-----------------------
-MicroPython does not need to set the data type specifically, it has been determined when you assign a value to the variable.
+Festlegen des Datentyps
+--------------------------
+MicroPython benötigt kein spezifisches Festlegen des Datentyps, dieser wird bestimmt, wenn Sie einer Variablen einen Wert zuweisen.
 
 
 
@@ -49,17 +49,17 @@ MicroPython does not need to set the data type specifically, it has been determi
 <class 'list'>
 >>> 
 
-Setting the Specific Data Type
-----------------------------------
+Festlegen des spezifischen Datentyps
+---------------------------------------
 
-If you want to specify the data type, you can use the following constructor functions:
+Wenn Sie den Datentyp spezifizieren möchten, können Sie die folgenden Konstruktorfunktionen verwenden:
 
 .. list-table:: 
     :widths: 25 10
     :header-rows: 1
 
-    *   - Example
-        - Date Type
+    *   - Beispiel
+        - Datentyp
     *   - x = int(20)
         - int
     *   - x = float(20.5)
@@ -89,7 +89,7 @@ If you want to specify the data type, you can use the following constructor func
     *   - x = memoryview(bytes(5))
         - memoryview
 
-You can print some of them to see the result.
+Einige davon können Sie ausdrucken, um das Ergebnis zu sehen.
 
 
 
@@ -109,14 +109,14 @@ You can print some of them to see the result.
 True
 >>> 
 
-Type Conversion
+Typumwandlung
 ----------------
-You can convert from one type to another with the int(), float(), and complex() methods:
-Casting in python is therefore done using constructor functions:
+Sie können mit den Methoden int(), float() und complex() von einem Typ in einen anderen konvertieren:
+Casting in Python erfolgt daher mit Konstruktorfunktionen:
 
-* int() - constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)
-* float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
-* str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals
+* int() - konstruiert eine ganze Zahl aus einer Ganzzahl-, Fließkommazahl- oder Stringliteral (indem alle Dezimalstellen entfernt werden)
+* float() - konstruiert eine Fließkommazahl aus einer Ganzzahl-, Fließkommazahl- oder Stringliteral (vorausgesetzt, der String stellt eine Fließkommazahl oder eine Ganzzahl dar)
+* str() - konstruiert einen String aus einer Vielzahl von Datentypen, einschließlich Strings, Ganzzahl- und Fließkommazahlen
 
 
 
@@ -130,4 +130,4 @@ Casting in python is therefore done using constructor functions:
     print(b)
     print(c)
 
-Note: You cannot convert complex numbers into another number type.
+Hinweis: Sie können komplexe Zahlen nicht in einen anderen Zahlentyp konvertieren.

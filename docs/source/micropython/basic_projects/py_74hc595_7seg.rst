@@ -1,39 +1,39 @@
 .. _py_7_segment:
 
-2.5 Number Display
+2.5 Ziffernanzeige
 =======================
 
-Welcome to this fascinating project! In this project, we will explore the enchanting world of displaying numbers from 0 to 9 on a seven-segment display.
+Willkommen zu diesem faszinierenden Projekt! In diesem Projekt werden wir die zauberhafte Welt der Anzeige von Zahlen von 0 bis 9 auf einem Siebensegment-Display erkunden.
 
-Imagine triggering this project and witnessing a small, compact display glowing brightly with each number from 0 to 9. It's like having a miniature screen that showcases the digits in a captivating way. By controlling the signal pins, you can effortlessly change the displayed number and create various engaging effects.
+Stellen Sie sich vor, dieses Projekt auszulösen und zu beobachten, wie ein kleines, kompaktes Display mit jeder Zahl von 0 bis 9 hell leuchtet. Es ist, als hätte man einen Miniaturbildschirm, der die Ziffern auf fesselnde Weise präsentiert. Durch Steuerung der Signalleitungen können Sie die angezeigte Zahl mühelos ändern und verschiedene ansprechende Effekte erzeugen.
 
-Through simple circuit connections and programming, you will learn how to interact with the seven-segment display and bring your desired numbers to life. Whether it's a counter, a clock, or any other intriguing application, the seven-segment display will be your reliable companion, adding a touch of brilliance to your projects.
+Durch einfache Schaltungsverbindungen und Programmierung lernen Sie, wie Sie mit dem Siebensegment-Display interagieren und Ihre gewünschten Zahlen zum Leben erwecken. Ob es sich um einen Zähler, eine Uhr oder eine andere faszinierende Anwendung handelt, das Siebensegment-Display wird Ihr zuverlässiger Begleiter sein und Ihren Projekten einen Hauch von Brillanz verleihen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die unten stehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,29 +50,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Verfügbare Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_2.5_74hc595_7_segment.png
 
-Here the wiring principle is basically the same as :ref:`py_74hc595`, the only difference is that Q0-Q7 are connected to the a ~ g pins of the 7 Segment Display.
+Hier ist das Verdrahtungsprinzip im Grunde das gleiche wie bei :ref:`py_74hc595`, der einzige Unterschied ist, dass Q0-Q7 mit den a ~ g Pins des 7-Segment-Displays verbunden sind.
 
-.. list-table:: Wiring
+.. list-table:: Verdrahtung
     :widths: 15 25
     :header-rows: 1
 
     *   - 74HC595
-        - LED Segment Display
+        - LED-Segmentanzeige
     *   - Q0
         - a
     *   - Q1
@@ -90,7 +90,7 @@ Here the wiring principle is basically the same as :ref:`py_74hc595`, the only d
     *   - Q7
         - dp
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/2.5_segment_bb.png
 
@@ -98,8 +98,8 @@ Here the wiring principle is basically the same as :ref:`py_74hc595`, the only d
 
 .. note::
 
-    * Open the ``2.5_number_display.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``2.5_number_display.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
 
 .. code-block:: python
 
@@ -145,33 +145,33 @@ Here the wiring principle is basically the same as :ref:`py_74hc595`, the only d
 
     
 
-When the script is running, you will be able to see the LED Segment Display display 0~9 in sequence.
+Wenn das Skript läuft, können Sie sehen, wie das LED-Segmentdisplay nacheinander die Zahlen 0 bis 9 anzeigt.
 
-**How it works?**
+**Wie funktioniert das?**
 
-In this project, we are using the ``hc595_shift()`` function to write the binary number to the shift register. 
+In diesem Projekt verwenden wir die Funktion ``hc595_shift()``, um die Binärzahl in das Schieberegister zu schreiben.
 
-Suppose that the 7-segment Display display the number "2". This bit pattern corresponds to the segments **f**, **c** and **dp** being turned off (low), while the segments **a**, **b**, **d**, **e** and **g** are turned on (high). This is "01011011" in binary and "0x5b" in hexadecimal notation. 
+Angenommen, das 7-Segment-Display soll die Zahl "2" anzeigen. Dieses Bitmuster entspricht den Segmenten **f**, **c** und **dp**, die ausgeschaltet (niedrig) sind, während die Segmente **a**, **b**, **d**, **e** und **g** eingeschaltet (hoch) sind. Das entspricht "01011011" in Binär- und "0x5b" in hexadezimaler Schreibweise.
 
-Therefore, you would need to call **hc595_shift(0x5b)** to display the number "2" on the 7-segment display.
+Daher müssten Sie **hc595_shift(0x5b)** aufrufen, um die Zahl "2" auf dem 7-Segment-Display anzuzeigen.
 
 .. image:: img/7_segment2.png
 
 
-* `Hexadecimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
+* `Hexadezimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
 
-* `BinaryHex Converter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
+* `Binär-Hex-Konverter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
 
-The following table shows the hexadecimal patterns that need to be written to the shift register to display the numbers 0 to 9 on a 7-segment display.
+Die folgende Tabelle zeigt die hexadezimalen Muster, die in das Schieberegister geschrieben werden müssen, um die Zahlen 0 bis 9 auf einem 7-Segment-Display anzuzeigen.
 
 
-.. list-table:: Glyph Code
+.. list-table:: Glyph-Code
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Numbers	
-        - Binary Code
-        - Hex Code  
+    *   - Zahlen	
+        - Binärcode
+        - Hexcode  
     *   - 0	
         - 00111111	
         - 0x3f
@@ -203,4 +203,4 @@ The following table shows the hexadecimal patterns that need to be written to th
         - 01101111	
         - 0x6f
 
-Write these codes into ``hc595_shift()`` to make the LED Segment Display display the corresponding numbers.
+Schreiben Sie diese Codes in ``hc595_shift()``, damit das LED-Segmentdisplay die entsprechenden Zahlen anzeigt.

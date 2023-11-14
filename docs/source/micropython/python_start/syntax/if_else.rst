@@ -1,28 +1,29 @@
 If Else
-=============
+========
 
-Decision making is required when we want to execute a code only if a certain condition is satisfied.
+Entscheidungsfindung ist erforderlich, wenn wir einen Code nur dann ausführen möchten, wenn eine bestimmte Bedingung erfüllt ist.
 
 if
---------------------
+----
+
 .. code-block:: python
 
     if test expression:
         statement(s)
 
-Here, the program evaluates the `test expression` and executes the `statement` only when the `test expression` is True.
+Hier bewertet das Programm den `test expression` und führt die `statement` nur aus, wenn der `test expression` True ist.
 
-If `test expression` is False, then `statement(s)` will not be executed.
+Ist der `test expression` False, werden die `statement(s)` nicht ausgeführt.
 
-In MicroPython, indentation means the body of the `if` statement. The body starts with an indentation and ends with the first unindented line.
+In MicroPython bedeutet Einrückung den Körper der `if`-Anweisung. Der Körper beginnt mit einer Einrückung und endet mit der ersten nicht eingerückten Zeile.
 
-Python interprets non-zero values ​​as "True". None and 0 are interpreted as "False".
+Python interpretiert Nicht-Null-Werte als "True". None und 0 werden als "False" interpretiert.
 
-**if Statement Flowchart**
+**Flussdiagramm des if-Statements**
 
 .. image:: img/if_statement.png
 
-**Example**
+**Beispiel**
 
 .. code-block:: python
 
@@ -35,10 +36,8 @@ Python interprets non-zero values ​​as "True". None and 0 are interpreted as
 8 is a positive number.
 End with this line
 
-
-
 if...else
------------------------
+----------
 
 .. code-block:: python
 
@@ -47,15 +46,15 @@ if...else
     else:
         Body of else
 
-The `if..else` statement evaluates `test expression` and will execute the body of `if` only when the test condition is `True`.
+Die `if..else`-Anweisung bewertet `test expression` und führt den Körper von `if` nur aus, wenn die Testbedingung `True` ist.
 
-If the condition is `False`, the body of `else` is executed. Indentation is used to separate the blocks.
+Ist die Bedingung `False`, wird der Körper von `else` ausgeführt. Einrückungen werden verwendet, um die Blöcke zu trennen.
 
-**if...else Statement Flowchart**
+**Flussdiagramm des if...else-Statements**
 
 .. image:: img/if_else.png
 
-**Example**
+**Beispiel**
 
 .. code-block:: python
 
@@ -71,7 +70,7 @@ If the condition is `False`, the body of `else` is executed. Indentation is used
 
 
 if...elif...else
---------------------
+----------------
 
 .. code-block:: python
 
@@ -82,21 +81,21 @@ if...elif...else
     else: 
         Body of else
 
-`Elif` is short for `else if`. It allows us to check multiple expressions.
+`Elif` steht für `else if`. Es ermöglicht uns, mehrere Ausdrücke zu überprüfen.
 
-If the condition of the `if` is False, the condition of the next elif block is checked, and so on.
+Ist die Bedingung des `if` False, wird die Bedingung des nächsten elif-Blocks überprüft, und so weiter.
 
-If all conditions are `False`, the body of `else` is executed.
+Sind alle Bedingungen `False`, wird der Körper von `else` ausgeführt.
 
-Only one of several `if...elif...else` blocks is executed according to the conditions.
+Nur einer von mehreren `if...elif...else`-Blöcken wird entsprechend den Bedingungen ausgeführt.
 
-The `if` block can only have one `else` block. But it can have multiple `elif` blocks.
+Der `if`-Block kann nur einen `else`-Block haben. Aber er kann mehrere `elif`-Blöcke haben.
 
-**if...elif...else Statement Flowchart**
+**Flussdiagramm des if...elif...else-Statements**
 
 .. image:: img/if_elif_else.png
 
-**Example**
+**Beispiel**
 
 .. code-block:: python
 
@@ -114,12 +113,12 @@ The `if` block can only have one `else` block. But it can have multiple `elif` b
 x is greater than y
 
 
-Nested if
----------------------
+Verschachteltes if
+------------------
 
-We can embed an if statement into another if statement, and then call it a nested if statement.
+Wir können ein if-Statement in ein anderes if-Statement einbetten, das dann als verschachteltes if-Statement bezeichnet wird.
 
-**Example**
+**Beispiel**
 
 .. code-block:: python
 

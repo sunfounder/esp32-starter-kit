@@ -5,79 +5,70 @@
 
 .. image:: img/74HC595.png
 
-Do you ever find yourself wanting to control a lot of LEDs, or just need more I/O pins to control buttons, sensors, and servos all at once? Well, you can connect a few sensors to Arduino pins, but you will soon start to run out of pins on the Arduino.
+Sind Sie jemals in der Situation gewesen, eine Vielzahl von LEDs steuern zu wollen, oder benötigten Sie einfach mehr I/O-Pins, um Tasten, Sensoren und Servos gleichzeitig zu kontrollieren? Sicherlich können Sie einige Sensoren an Arduino-Pins anschließen, doch bald werden Ihnen die Pins am Arduino ausgehen.
 
-The solution is to use "shift registers". Shift registers allow you to expand the number of I/O pins you can use from the Arduino (or any microcontroller). The 74HC595 shift register  is one of the most famous.
+Die Lösung hierfür sind "Schieberegister". Schieberegister ermöglichen es Ihnen, die Anzahl der I/O-Pins, die Sie vom Arduino (oder jedem Mikrocontroller) verwenden können, zu erweitern. Der 74HC595-Schieberegister ist einer der bekanntesten.
 
-The  74HC595 basically controls eight independent output pins and uses only three input pins. If you need more than eight additional I/O lines, you can easily cascade any number of shift registers and create a large number of I/O lines. All this is done by so-called shifting.
+Der 74HC595 steuert im Wesentlichen acht unabhängige Ausgangspins und verwendet dabei nur drei Eingangspins. Wenn Sie mehr als acht zusätzliche I/O-Leitungen benötigen, können Sie problemlos beliebig viele Schieberegister kaskadieren und so eine große Anzahl an I/O-Leitungen schaffen. All dies wird durch das sogenannte Verschieben erreicht.
 
+**Merkmale**
 
-**Features**
+* 8-Bit serieller Eingang, paralleler Ausgang
+* Breiter Betriebsspannungsbereich von 2 V bis 6 V
+* Hochstrom-3-State-Ausgänge können bis zu 15 LSTTL-Lasten treiben
+* Geringer Stromverbrauch, maximal 80 µA ICC
+* Typische tPD = 14 ns
+* ±6-mA-Ausgangstreiber bei 5 V
+* Geringer Eingangsstrom von maximal 1 µA
+* Schieberegister mit direkter Rückstellung
 
-* 8-Bit serial-in, parallel-out shift
-* Wide operating voltage range of 2 V to 6 V
-* High-current 3-state outputs can drive up to 15LSTTL loads
-* Low power consumption, 80-µA max ICC
-* Typical tPD = 14 ns
-* ±6-mA output drive at 5 V
-* Low input current of 1 µA max
-* Shift register has direct clear
-
-**Pins of 74HC595 and their functions:**
+**Pins des 74HC595 und ihre Funktionen:**
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7'**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7**: 8-Bit parallele Datenausgangspins, geeignet zur Steuerung von 8 LEDs oder 8 Pins eines 7-Segment-Displays direkt.
+* **Q7'**: Serieller Ausgangspin, verbunden mit dem DS eines weiteren 74HC595, um mehrere 74HC595 in Serie zu schalten
+* **MR**: Rücksetzpin, aktiv bei niedrigem Pegel;
+* **SHcp**: Zeitsequenzeingang des Schieberegisters. Bei der steigenden Flanke bewegen sich die Daten im Schieberegister sukzessive um ein Bit, d. h., die Daten in Q1 gehen zu Q2 usw. Bei der fallenden Flanke bleiben die Daten im Schieberegister unverändert.
+* **STcp**: Zeitsequenzeingang des Speicherregisters. Bei der steigenden Flanke bewegen sich die Daten aus dem Schieberegister in das Speicherregister.
+* **OE**: Ausgangsaktivierungspin, aktiv bei niedrigem Pegel.
+* **DS**: Serieller Dateneingangspin
+* **VCC**: Positive Versorgungsspannung.
+* **GND**: Erde.
 
-**Functional Diagram**
+**Funktionsdiagramm**
 
 .. image:: img/74hc595_functional_diagram.png
 
+**Arbeitsprinzip**
 
-**Working Principle**
+Wenn MR (Pin 10) auf hohem Pegel und OE (Pin 13) auf niedrigem Pegel ist, 
+werden die Daten bei der steigenden Flanke von SHcp eingegeben und gelangen durch die steigende Flanke von STcp ins Speicherregister.
 
-When MR (pin10) is high level and OE (pin13) is low level, 
-data is input in the rising edge of SHcp and goes to the memory register through the rising edge of STcp. 
+* Schieberegister
 
-
-* Shift Register
-
-    * Suppose, we want to input the binary data 1110 1110 into the shift register of the 74hc595.
-    * The data is input from bit 0 of the shift register.
-    * Whenever the shift register clock is a rising edge, the bits in the shift register are shifted one step. For example, bit 7 accepts the previous value in bit 6, bit 6 gets the value of bit 5, etc.
-
+    * Angenommen, wir möchten die Binärdaten 1110 1110 in das Schieberegister des 74HC595 eingeben.
+    * Die Daten werden ab Bit 0 des Schieberegisters eingegeben.
+    * Bei jeder steigenden Flanke des Schieberegister-Takts werden die Bits im Schieberegister um einen Schritt verschoben. Zum Beispiel übernimmt Bit 7 den vorherigen Wert in Bit 6, Bit 6 bekommt den Wert von Bit 5 usw.
 
 .. image:: img/74hc595_shift.png
 
-* Storage Register
+* Speicherregister
 
-    * When the storage register is in the rising edge state, the data of the shift register will be transferred to the storage register.
-    * The storage register is directly connected to the 8 output pins, Q0 ~ Q7 will be able to receive a byte of data. 
-    * The so-called storage register means that the data can exist in this register and will not disappear with one output. 
-    * The data will remain valid and unchanged as long as the 74HC595 is powered on continuously. 
-    * When new data comes, the data in the storage register will be overwritten and updated.
+    * Wenn das Speicherregister im Zustand der steigenden Flanke ist, werden die Daten des Schieberegisters in das Speicherregister übertragen.
+    * Das Speicherregister ist direkt mit den 8 Ausgangspins verbunden, Q0 bis Q7 können ein Byte Daten empfangen.
+    * Das sogenannte Speicherregister bedeutet, dass die Daten in diesem Register bestehen und nicht mit einem Ausgang verschwinden.
+    * Die Daten bleiben gültig und unverändert, solange der 74HC595 kontinuierlich mit Strom versorgt wird.
+    * Wenn neue Daten ankommen, werden die Daten im Speicherregister überschrieben und aktualisiert.
 
 .. image:: img/74hc595_storage.png
 
-**Example**
+**Beispiele**
 
-* :ref:`ar_74hc595` (Arduino Project)
-* :ref:`ar_7_segment` (Arduino Project)
-* :ref:`ar_dice` (Arduino Project)
-* :ref:`py_74hc595` (MicroPython Project)
-* :ref:`py_7_segment` (MicroPython Project)
-* :ref:`py_dice` (MicroPython Project)
-
-
-
-
-
+* :ref:`ar_74hc595` (Arduino-Projekt)
+* :ref:`ar_7_segment` (Arduino-Projekt)
+* :ref:`ar_dice` (Arduino-Projekt)
+* :ref:`py_74hc595` (MicroPython-Projekt)
+* :ref:`py_7_segment` (MicroPython-Projekt)
+* :ref:`py_dice` (MicroPython-Projekt)

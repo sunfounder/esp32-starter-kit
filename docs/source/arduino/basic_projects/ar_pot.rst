@@ -1,35 +1,35 @@
 .. _ar_potentiometer:
 
-5.8 Turn the Knob
-===================
+5.8 Den Knopf Drehen
+========================
 
-A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
+Ein Potentiometer ist ein dreipoliges Gerät, das häufig verwendet wird, um den Widerstand in einem Schaltkreis anzupassen. Es verfügt über einen Drehknopf oder einen Schieberegler, mit dem der Widerstandswert des Potentiometers verändert werden kann. In diesem Projekt werden wir es nutzen, um die Helligkeit einer LED zu steuern, ähnlich wie bei einer Schreibtischlampe im täglichen Leben. Durch Anpassen der Position des Potentiometers können wir den Widerstand im Schaltkreis verändern, wodurch der Stromfluss durch die LED reguliert und deren Helligkeit entsprechend angepasst wird. Dies ermöglicht es uns, ein anpassbares und verstellbares Beleuchtungserlebnis zu schaffen, ähnlich dem einer Schreibtischlampe.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,21 +46,21 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO14, IO25, I35, I34, I39, I36
 
 * **Strapping Pins**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Die folgenden Pins sind Strapping-Pins, die den Startprozess des ESP32 während des Einschaltens oder Resets beeinflussen. Sobald der ESP32 jedoch erfolgreich gestartet ist, können sie als normale Pins verwendet werden.
 
     .. list-table::
         :widths: 5 15
@@ -69,14 +69,15 @@ You can also buy them separately from the links below.
             - IO0, IO12
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.8_potentiometer.png
 
-When you rotate the potentiometer, the value of I35 will change. By programming, you can use the value of I35 to control the brightness of the LED. Therefore, as you rotate the potentiometer, the brightness of the LED will also change accordingly.
+Wenn Sie das Potentiometer drehen, ändert sich der Wert von I35. Durch Programmierung können Sie den Wert von I35 verwenden, um die Helligkeit der LED zu steuern. Daher ändert sich die Helligkeit der LED entsprechend, wenn Sie das Potentiometer drehen.
 
 
-**Wiring**
+
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
@@ -85,20 +86,20 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. note::
 
-    * You can open the file ``5.8_pot.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.8_pot``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Die Datei ``5.8_pot.ino`` kann unter dem Pfad ``esp32-starter-kit-main\c\codes\5.8_pot`` geöffnet werden. 
+    * Nachdem Sie das Board (ESP32 Dev Module) und den passenden Port ausgewählt haben, klicken Sie auf den **Upload**-Button.
     * :ref:`unknown_com_port`
    
 .. raw:: html
      
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aadce2e7-fd5d-4608-a557-f1e4d07ba795/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, rotate the potentiometer and you will see the brightness of the LED change accordingly. At the same time you can see the analog and voltage values of the potentiometer in the serial monitor.
+Nachdem der Code erfolgreich hochgeladen wurde, drehen Sie am Potentiometer und Sie werden sehen, wie sich die Helligkeit der LED entsprechend ändert. Gleichzeitig können Sie die analogen und Spannungswerte des Potentiometers im seriellen Monitor sehen.
 
 
-**How it works?**
+**Wie funktioniert das?**
 
-#. Define constants for pin connections and PWM settings.
+#. Definition der Konstanten für Pin-Verbindungen und PWM-Einstellungen.
 
     .. code-block:: arduino
 
@@ -110,9 +111,9 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
         const int resolution = 12; // PWM resolution (bits)
         const int channel = 0; // PWM channel
 
-    Here the PWM resolution is set to 12 bits and the range is 0-4095.
+    Hier ist die PWM-Auflösung auf 12 Bit eingestellt und der Bereich ist 0-4095.
 
-#. Configure the system in the ``setup()`` function.
+#. Konfiguration des Systems in der Funktion ``setup()``.
 
     .. code-block:: arduino
 
@@ -124,10 +125,10 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             ledcAttachPin(ledPin, channel);
         }
 
-    * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcSetup()`` function is called to set up the PWM channel with the specified frequency and resolution, and the ``ledcAttachPin()`` function is called to associate the specified LED pin with the PWM channel.
+    * In der Funktion ``setup()`` wird die serielle Kommunikation mit einer Baudrate von 115200 gestartet. 
+    * Die Funktion ``ledcSetup()`` wird aufgerufen, um den PWM-Kanal mit der angegebenen Frequenz und Auflösung einzurichten, und die Funktion ``ledcAttachPin()`` wird aufgerufen, um den angegebenen LED-Pin mit dem PWM-Kanal zu verknüpfen.
 
-#. Main loop (executed repeatedly) in the loop() function.
+#. Hauptloop (wird wiederholt ausgeführt) in der Funktion ``loop()``.
 
     .. code-block:: arduino
 
@@ -147,9 +148,9 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             delay(100);
         }
 
-    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: This function is used to get ADC value for a given pin/ADC channel in millivolts.
+    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: Diese Funktion wird verwendet, um den ADC-Wert für einen gegebenen Pin/ADC-Kanal in Millivolt zu erhalten.
 
-        * ``pin`` GPIO pin to read analog value.
+        * ``pin`` GPIO-Pin, um den analogen Wert zu lesen.
 
-    The potentiometer value is directly used as the PWM duty cycle for controlling the LED brightness via the ``ledcWrite()`` function, as the range of values is also from 0 to 4095.
+    Der Potentiometerwert wird direkt als PWM-Tastverhältnis für die Steuerung der LED-Helligkeit über die Funktion ``ledcWrite()`` verwendet, da der Wertebereich ebenfalls von 0 bis 4095 reicht.
 

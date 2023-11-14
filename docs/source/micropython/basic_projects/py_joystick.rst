@@ -1,43 +1,43 @@
 .. _py_joystick:
 
-5.11 Toggle the Joystick
+5.11 Bedienung des Joysticks
 ================================
 
-If you play a lot of video games, then you should be very familiar with the Joystick.
-It is usually used to move the character around, rotate the screen, etc.
+Wenn Sie viele Videospiele spielen, sollten Sie mit dem Joystick sehr vertraut sein.
+Er wird normalerweise verwendet, um den Charakter zu bewegen, den Bildschirm zu drehen usw.
 
-The principle behind Joystick's ability to allow the computer to read our actions is very simple.
-It can be thought of as consisting of two potentiometers that are perpendicular to each other.
-These two potentiometers measure the analog value of the joystick vertically and horizontally, resulting in a value (x,y) in a planar right-angle coordinate system.
+Das Prinzip hinter der Fähigkeit des Joysticks, dem Computer unsere Aktionen zu übermitteln, ist sehr einfach.
+Man kann ihn sich als aus zwei Potentiometern bestehend vorstellen, die senkrecht zueinander stehen.
+Diese beiden Potentiometer messen den analogen Wert des Joysticks vertikal und horizontal, was in einem Wert (x, y) in einem ebenen rechtwinkligen Koordinatensystem resultiert.
 
 
-The joystick of this kit also has a digital input, which is activated when the joystick is pressed.
+Der Joystick dieses Kits verfügt auch über einen digitalen Eingang, der aktiviert wird, wenn der Joystick gedrückt wird.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,41 +48,41 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 15
 
-        *   - For Analog Input
+        *   - Für Analogeingang
             - IO14, IO25, I35, I34, I39, I36
-        *   - For Digital Input
+        *   - Für Digitaleingang
             - IO13, IO14, IO27, IO26, IO25, IO33, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **Strapping Pins (Eingang)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Strapping Pins sind eine spezielle Gruppe von Pins, die verwendet werden, um spezifische Startmodi während des Gerätestarts zu bestimmen 
+    (z. B. Power-On-Reset).
 
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Strapping-Pins
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generell wird **nicht empfohlen, sie als Eingangspins zu verwenden**. Wenn Sie diese Pins verwenden möchten, bedenken Sie die möglichen Auswirkungen auf den Startprozess. Für weitere Details siehe den Abschnitt :ref:`esp32_strapping`.
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.11_joystick.png
 
-The SW (Z-axis) pin is connected to IO33, which has a built-in 4.7K pull-up resistor. Therefore, when the SW button is not pressed, it will output a high level. When the button is pressed, it will output a low level.
+Der SW (Z-Achse)-Pin ist mit IO33 verbunden, der einen eingebauten 4,7K-Pull-up-Widerstand hat. Daher gibt er, wenn der SW-Knopf nicht gedrückt ist, ein hohes Signal aus. Wird der Knopf gedrückt, wird ein niedriges Signal ausgegeben.
 
-I34 and I35 will change their values as you manipulate the joystick. The range of values is from 0 to 4095.
+I34 und I35 ändern ihre Werte, wenn Sie den Joystick bewegen. Der Bereich der Werte reicht von 0 bis 4095.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.11_joystick_bb.png
 
@@ -90,8 +90,8 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 .. note::
 
-    * Open the ``5.11_joystick.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``5.11_joystick.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
 .. code-block:: python
 
@@ -111,7 +111,7 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
         print(f"X:{xValue}, Y:{yValue}, Button:{btnValue}")
         time.sleep(0.1)
 
-When the program runs, the Shell prints out the x, y, and button values of joystick.
+Wenn das Programm läuft, gibt die Shell die x-, y- und Knopfwerte des Joysticks aus.
 
 .. code-block:: 
 
@@ -124,7 +124,7 @@ When the program runs, the Shell prints out the x, y, and button values of joyst
     X:1924, Y:1776, Button:0
 
 
-* The x-axis and y-axis values are analog values that vary from 0 to 4095.
-* The button is a digital value with a status of 1(release) or 0(press).
+* Die x- und y-Achsenwerte sind analoge Werte, die von 0 bis 4095 variieren.
+* Der Knopf ist ein digitaler Wert mit einem Status von 1 (Loslassen) oder 0 (Drücken).
 
     .. image:: img/joystick_direction.png

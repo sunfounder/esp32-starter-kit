@@ -7,57 +7,55 @@ RGB LED
     :width: 200
     :align: center
 
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+RGB-LEDs erzeugen Licht in verschiedenen Farben. Eine RGB-LED kombiniert drei LEDs in den Farben Rot, Grün und Blau in einer durchsichtigen oder halbdurchsichtigen Kunststoffhülle. Durch das Verändern der Eingangsspannung an den drei Pins und deren Überlagerung können verschiedenste Farben erzeugt werden, was laut Statistik bis zu 16.777.216 unterschiedliche Farbtöne ermöglicht.
 
-**Features**
+**Merkmale**
 
-* Color: Tri-Color (Red/Green/Blue)
-* Common Cathode
-* 5mm Clear Round Lens
-* Forward Voltage: Red: DC 2.0 - 2.2V; Blue&Green: DC 3.0 - 3.2V (IF=20mA) 
-* 0.06 Watts DIP RGB LED
-* Luminance Brighter Up To +20%
-* Viewing Angle: 30°
+* Farbe: Dreifarbig (Rot/Grün/Blau)
+* Gemeinsame Kathode
+* 5mm klare, runde Linse
+* Vorwärtsspannung: Rot: DC 2,0 - 2,2V; Blau&Grün: DC 3,0 - 3,2V (IF=20mA)
+* 0,06 Watt DIP RGB LED
+* Luminanz bis zu +20% heller
+* Betrachtungswinkel: 30°
 
-**Common Anode and Common Cathode**
+**Gemeinsame Anode und gemeinsame Kathode**
 
-RGB LEDs can be categorized into common anode and common cathode ones. 
+RGB-LEDs können in solche mit gemeinsamer Anode und gemeinsamer Kathode unterteilt werden.
 
-* In a common cathode RGB LED, all three LEDs share a negative connection (cathode).
-* In a common anode RGB LED, the three LEDs share a positive connection (anode).
+* Bei einer RGB-LED mit gemeinsamer Kathode teilen sich alle drei LEDs eine negative Verbindung (Kathode).
+* Bei einer RGB-LED mit gemeinsamer Anode teilen sich alle drei LEDs eine positive Verbindung (Anode).
 
 .. image:: img/rgb_cc_ca.jpg
 
 .. note::
-    We use the common cathode one.
+    Wir verwenden die mit gemeinsamer Kathode.
 
-**RGB LED Pins**
+**Pins einer RGB-LED**
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Place the RGB LEDs as shown, so that the longest lead is second from the left. Then the pin numbers of the RGB LEDs should be Red, GND, Green and Blue.
+Eine RGB-LED hat 4 Pins: der längste ist GND; die anderen sind Rot, Grün und Blau. Positionieren Sie die RGB-LEDs wie gezeigt, sodass der längste Pin zweiter von links ist. Dann sollten die Pinnummern der RGB-LEDs Rot, GND, Grün und Blau sein.
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-You can also use the multimeter to select Diode Test mode, and then connect as shown below to measure the color of each pin.
+Sie können auch das Multimeter im Diodentestmodus verwenden und wie unten gezeigt verbinden, um die Farbe jedes Pins zu messen.
 
 .. image:: img/rgb_test.png
 
-**Mix colors**
+**Farben mischen**
 
-To generate additional colors, you can combine the three colors at different intensities. To adjust the intensity of each LED, you can use a PWM signal.
+Um zusätzliche Farben zu erzeugen, können Sie die drei Farben in unterschiedlichen Intensitäten kombinieren. Um die Intensität jeder LED anzupassen, können Sie ein PWM-Signal verwenden.
 
-Because the LEDs are so close to each other, our eyes see the result of the color combination rather than the three colors individually.
+Da die LEDs so nah beieinander liegen, nehmen unsere Augen das Ergebnis der Farbkombination wahr, anstatt der drei einzelnen Farben.
 
-Check out the table below to see how the colors are combined. It will give you an idea of how the color mixing chart works and how different colors are produced.
+Schauen Sie sich die Tabelle unten an, um zu sehen, wie die Farben kombiniert werden. Sie gibt Ihnen eine Vorstellung davon, wie die Farbmischtabelle funktioniert und wie verschiedene Farben produziert werden.
 
 .. image:: img/rgb_mix.png
 
+**Beispiele**
 
-
-**Example**
-
-* :ref:`ar_rgb` (Arduino Project)
-* :ref:`ar_color_gradient` (Arduino Project)
-* :ref:`py_rgb` (MicroPython Project)
-* :ref:`sh_colorful_ball` (Scratch Project)
+* :ref:`ar_rgb` (Arduino-Projekt)
+* :ref:`ar_color_gradient` (Arduino-Projekt)
+* :ref:`py_rgb` (MicroPython-Projekt)
+* :ref:`sh_colorful_ball` (Scratch-Projekt)
 

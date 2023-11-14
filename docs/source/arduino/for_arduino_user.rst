@@ -1,14 +1,14 @@
-For Arduino User
+Für Arduino-Benutzer
 ========================
 
 
-Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
+Hier ist das vollständige Code-Paket für das ESP32 Starter Kit. Sie können auf den folgenden Link klicken, um es herunterzuladen:
 
 * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
+Sobald der Download abgeschlossen ist, entpacken Sie die Datei und öffnen Sie den entsprechenden Beispielcode oder Projektdateien in der entsprechenden Software. Dadurch können Sie den gesamten Code und die bereitgestellten Ressourcen des Kits durchsuchen und nutzen.
 
-**1. Get Started**
+**1. Erste Schritte**
 
 .. toctree::
     :maxdepth: 1
@@ -34,7 +34,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_rgb_strip
 
 
-**3. Sounds**
+**3. Töne**
 
 .. toctree::
     :maxdepth: 1
@@ -42,7 +42,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_ac_buz
     basic_projects/ar_pa_buz
 
-**4. Actuators**
+**4. Aktoren**
 
 .. toctree::
     :maxdepth: 1
@@ -51,7 +51,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_pump
     basic_projects/ar_servo
 
-**5. Sensors**
+**5. Sensoren**
 
 .. toctree::
     :maxdepth: 1
@@ -71,7 +71,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_dht11
     basic_projects/ar_irremote
 
-**6. Funny Projects**
+**6. Lustige Projekte**
 
 .. toctree::
     :maxdepth: 1
@@ -84,7 +84,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_plant_monitor
     basic_projects/ar_guess_number
 
-**7. Bluetooth&SD Card&Camera&Speaker**
+**7. Bluetooth&SD-Karte&Kamera&Lautsprecher**
 
 .. toctree::
     :maxdepth: 1
@@ -96,7 +96,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_mp3_player_sd
     basic_projects/ar_take_photo_sd
 
-**8. Bluetooth&SD Card&Camera&Speaker**
+**8. Bluetooth&SD-Karte&Kamera&Lautsprecher**
 
 .. toctree::
     :maxdepth: 1

@@ -1,37 +1,37 @@
 .. _py_pump:
 
-4.2 Pumping
+4.2 Pumpen
 =======================
 
-In this intriguing project, we will delve into controlling a water pump using the L293D.
+In diesem faszinierenden Projekt werden wir uns damit beschäftigen, eine Wasserpumpe mit dem L293D zu steuern.
 
-In the realm of water pump control, things are a bit simpler compared to controlling other motors. The beauty of this project lies in its simplicity - there's no need to worry about the direction of rotation. Our primary goal is to successfully activate the water pump and keep it running.
+Bei der Steuerung von Wasserpumpen sind die Dinge im Vergleich zur Steuerung anderer Motoren etwas einfacher. Die Schönheit dieses Projekts liegt in seiner Einfachheit - es besteht keine Notwendigkeit, sich um die Drehrichtung zu kümmern. Unser Hauptziel ist es, die Wasserpumpe erfolgreich zu aktivieren und in Betrieb zu halten.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,26 +46,26 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**Verfügbare Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Verfügbare Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
 
-**Wiring**
+**Verdrahtung**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    Hier wird empfohlen, zuerst die Batterie einzulegen und dann den Schalter auf dem Erweiterungsboard auf die Position ON zu schieben, um die Batterieversorgung zu aktivieren.
 
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
@@ -74,8 +74,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``4.2_pumping.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``4.2_pumping.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben.
 
 
 
@@ -111,4 +111,5 @@ Here is a list of available pins on the ESP32 board for this project.
 
 
 
-During the script execution, you will see the pump working and water coming out of the tube, then stopping for 2 seconds before starting to work again.
+Während der Skriptausführung werden Sie sehen, wie die Pumpe arbeitet und Wasser aus dem Schlauch kommt, dann für 2 Sekunden stoppt, bevor sie wieder zu arbeiten beginnt.
+

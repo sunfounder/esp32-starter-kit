@@ -1,37 +1,37 @@
 .. _py_flowing_light:
 
-6.2 Flowing Light
+6.2 Fließendes Licht
 =================================
 
-Have you ever wanted to add some fun and interactive element to your living space? 
-This project involves creating a running light using WS2812 LED strip and a obstacle avoidance module. 
-The running light changes direction when an obstacle is detected, making it an exciting addition to your home or office decor.
+Haben Sie schon einmal daran gedacht, Ihrer Wohnfläche ein spaßiges und interaktives Element hinzuzufügen?
+Dieses Projekt umfasst die Erstellung eines Lauflichts mit einem WS2812-LED-Streifen und einem Hindernisvermeidungsmodul.
+Das Lauflicht ändert seine Richtung, wenn ein Hindernis erkannt wird, und wird so zu einer spannenden Ergänzung für Ihre Haus- oder Bürodekoration.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,17 +44,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic Diagram**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_6.2_flowing_led.png
     :align: center
 
-The WS2812 LED strip is composed of a series of individual LEDs that can be programmed to display different colors and patterns. 
-In this project, the strip is set up to display a running light that moves in a particular direction and 
-changes direction when an obstacle is detected by the obstacle avoidance module.
+Der WS2812-LED-Streifen besteht aus einer Reihe von einzelnen LEDs, die programmiert werden können, um verschiedene Farben und Muster anzuzeigen.
+In diesem Projekt ist der Streifen so eingestellt, dass er ein Lauflicht anzeigt, das sich in eine bestimmte Richtung bewegt und 
+seine Richtung ändert, wenn ein Hindernis vom Hindernisvermeidungsmodul erkannt wird.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     :width: 800
@@ -63,8 +63,8 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 
 .. note::
 
-    * Open the ``6.2_flowing_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``6.2_flowing_led.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
     
 .. code-block:: python
@@ -124,4 +124,4 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
                   pixels[i] = (0, 0, 0)
                   time.sleep_ms(100)
 
-LEDs on the RGB Strip light up one by one when the script runs. As soon as an object is placed in front of the obstacle avoidance module, the LEDs on the RGB Strip light up one by one in the opposite direction.
+Die LEDs auf dem RGB-Streifen leuchten nacheinander auf, wenn das Skript läuft. Sobald sich ein Objekt vor dem Hindernisvermeidungsmodul befindet, leuchten die LEDs auf dem RGB-Streifen nacheinander in die entgegengesetzte Richtung auf.

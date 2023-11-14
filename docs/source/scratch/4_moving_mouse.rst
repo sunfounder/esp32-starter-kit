@@ -1,40 +1,40 @@
 .. _sh_moving_mouse:
 
-2.4 Moving Mouse
+2.4 Bewegliche Maus
 ===================
 
-Today we are going to make a mouse toy controlled by a potentiometer.
+Heute werden wir ein von einem Potentiometer gesteuertes Mausspielzeug bauen.
 
-When the green flag is clicked, the mouse on the stage moves forward, and when you rotate the potentiometer, the mouse will change the direction of movement.
+Wenn die grüne Flagge angeklickt wird, bewegt sich die Maus auf der Bühne vorwärts, und wenn Sie das Potentiometer drehen, ändert die Maus die Bewegungsrichtung.
 
 .. image:: img/6_mouse.png
 
-Required Components
+Benötigte Komponenten
 ---------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,69 +47,65 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-You Will Learn
+Was Sie Lernen Werden
 ---------------------
 
-- Potentiometer principle
-- Read analog pin and ranges
-- Mapping one range to another
-- Moving and changing the direction of sprite
+- Potentiometerprinzip
+- Analogen Pin lesen und Bereich verstehen
+- Einen Bereich in einen anderen abbilden
+- Bewegung und Richtungsänderung des Sprites
 
-Build the Circuit
+
+Schaltung Aufbauen
 -----------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to pin35. After conversion by the ADC converter of the ESP32, the value range is 0-4095.
+Das Potentiometer ist ein Widerstandselement mit 3 Anschlüssen, wobei die beiden seitlichen Pins mit 5V und GND verbunden sind und der mittlere Pin mit Pin35. Nach der Umwandlung durch den ADC-Wandler des ESP32 liegt der Wertebereich bei 0-4095.
 
 .. image:: img/circuit/5_moving_mouse_bb.png
 
-Programming
+Programmierung
 ------------------
 
-**1. Choose a sprite**
+**1. Wähle ein Sprite aus**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **mouse** in the search box, and then click to add it.
+Lösche das Standard-Sprite, klicke auf den **Choose a Sprite**-Button in der unteren rechten Ecke des Sprite-Bereichs, gib **mouse** in das Suchfeld ein und klicke dann darauf, um es hinzuzufügen.
 
 .. image:: img/6_sprite.png
 
-**2. Creating a variable**.
+**2. Eine Variable erstellen**
 
-Create a variable called **value** to store the value of the potentiometer read.
+Erstelle eine Variable namens **value** um den gelesenen Wert des Potentiometers zu speichern.
 
-Once created, you will see **value** appear inside the **Variables** palette and in the checked state, which means this variable will appear on the stage.
+Sobald erstellt, erscheint **value** im **Variables**-Palette und im angekreuzten Zustand, was bedeutet, dass diese Variable auf der Bühne erscheint.
 
 .. image:: img/6_value.png
 
-**3. Read the value of pin35**
+**3. Den Wert von Pin35 lesen**
 
-Store the value of pin35 read into the variable **value**.
+Speichere den gelesenen Wert von Pin35 in die Variable **value**.
 
-* [set my variable to 0]: Set the value of the variable.
-* [read analog pin ()]: Read the value of pins in the range of 0-4095.
+* [set my variable to 0]: Setze den Wert der Variable.
+* [read analog pin ()]: Lies den Wert von Pins im Bereich von 0-4095.
 
 .. image:: img/6_read_a0.png
 
-To be able to read all the way through, you need to use the [forever] block. Click on this script to run it, rotate the potentiometer in both directions, and you will see that the value range is 0-1023.
+Um durchgehend lesen zu können, musst du den [forever]-Block verwenden. Klicke auf dieses Skript, um es auszuführen, drehe das Potentiometer in beide Richtungen und du wirst sehen, dass der Wertebereich 0-1023 ist.
 
 .. image:: img/6_1023.png
 
-**4. Move the sprite**
+**4. Bewege das Sprite**
 
-Use the [move steps] block to move the sprite, run the script and you will see the sprite move from the middle to the right.
+Verwende den [move steps]-Block, um das Sprite zu bewegen. Führe das Skript aus und du wirst sehen, dass sich das Sprite von der Mitte nach rechts bewegt.
 
 .. image:: img/6_move.png
 
-**5. Changing the sprite's direction**
+**5. Die Bewegungsrichtung des Sprites ändern**
 
-Now change the direction of the sprite's movement by the value of pin35. Since the value of pin35 ranges from 0-4095, but the sprite's rotation direction is -180~180, a [map] block needs to be used.
+Ändere jetzt die Bewegungsrichtung des Sprites durch den Wert von Pin35. Da der Wert von Pin35 von 0-4095 reicht, aber die Rotationsrichtung des Sprites -180~180 ist, muss ein [map]-Block verwendet werden.
 
-Also add [when green flag clicked] at the beginning to start the script.
+Füge auch [when green flag clicked] am Anfang hinzu, um das Skript zu starten.
 
-* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Set the steering angle of the sprite, from **Motion** palette.
-* [map from to]: Map a range to another range.
+* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Setze den Lenkwinkel des Sprites, aus dem **Motion**-Palette.
+* [map from to]: Abbilde einen Bereich auf einen anderen Bereich.
 
 .. image:: img/6_direction.png
-
-
-
-
-

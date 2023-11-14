@@ -1,39 +1,39 @@
 .. _py_receiver:
 
-5.14 IR Remote Control
+5.14 IR-Fernbedienung
 ================================
 
-An infrared receiver is a component that receives infrared signals and can independently detect and output signals compatible with TTL level. It is similar in size to a regular plastic-packaged transistor and is commonly used in various applications such as infrared remote control and infrared transmission.
+Ein Infrarotempfänger ist eine Komponente, die Infrarotsignale empfängt und Signale, die mit TTL-Pegel kompatibel sind, unabhängig erkennen und ausgeben kann. Er ist ähnlich groß wie ein regulärer, in Kunststoff verpackter Transistor und wird häufig in verschiedenen Anwendungen wie Infrarot-Fernbedienung und Infrarot-Übertragung eingesetzt.
 
-In this project, we will use an infrared receiver to detect signals from a remote control. When a button on the remote control is pressed and the infrared receiver receives the corresponding signal, it can decode the signal to determine which button was pressed. By decoding the received signal, we can identify the specific key or command associated with it.
+In diesem Projekt werden wir einen Infrarotempfänger verwenden, um Signale von einer Fernbedienung zu erkennen. Wenn eine Taste auf der Fernbedienung gedrückt wird und der Infrarotempfänger das entsprechende Signal empfängt, kann er das Signal dekodieren, um zu bestimmen, welche Taste gedrückt wurde. Durch Dekodieren des empfangenen Signals können wir den spezifischen Schlüssel oder Befehl identifizieren, der damit verbunden ist.
 
-The infrared receiver allows us to incorporate remote control functionality into our project, enabling us to interact with and control devices using infrared signals.
+Der Infrarotempfänger ermöglicht es uns, Fernbedienungsfunktionen in unser Projekt einzubauen, sodass wir Geräte mittels Infrarotsignalen interagieren und steuern können.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,23 +46,23 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - |link_receiver_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO13, IO12, IO14, IO27, IO26, IO25, IO15, IO0, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.14_receiver.png
 
-When you press a button on the remote control, the infrared receiver detects the signal, and you can use an infrared library to decode it. This decoding process allows you to obtain the key value associated with the button press.
+Wenn Sie eine Taste auf der Fernbedienung drücken, erkennt der Infrarotempfänger das Signal, und Sie können eine Infrarotbibliothek verwenden, um es zu dekodieren. Dieser Dekodierungsprozess ermöglicht es Ihnen, den Schlüsselwert zu erhalten, der mit dem Tastendruck verbunden ist.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.14_ir_receiver_bb.png
 
@@ -70,10 +70,10 @@ When you press a button on the remote control, the infrared receiver detects the
 
 .. note::
 
-    * Open the ``5.14_ir_receiver.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``5.14_ir_receiver.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
-    * Here, you need to utilize the libraries found in the ``ir_rx`` folder. Please ensure they have been uploaded to the ESP32. For a comprehensive tutorial, refer to :ref:`add_libraries_py`.
+    * Hier müssen Sie die Bibliotheken im Ordner ``ir_rx`` verwenden. Stellen Sie bitte sicher, dass sie auf den ESP32 hochgeladen wurden. Für eine umfassende Anleitung siehe :ref:`add_libraries_py`.
 
 .. code-block:: python
 
@@ -150,14 +150,14 @@ When you press a button on the remote control, the infrared receiver detects the
     except KeyboardInterrupt:
         ir.close()  # Close the receiver
 
-When the program is running, press the key on the remote control, the value and name of the key will appear in the Shell.
+Wenn das Programm läuft, drücken Sie die Taste auf der Fernbedienung, und der Wert sowie der Name der Taste erscheinen in der Shell.
 
 .. note::
-    The new remote control features a plastic tab at the end to insulate the battery inside. To power up the remote when using it, simply remove this plastic piece.
+    Die neue Fernbedienung hat am Ende einen Kunststoffstreifen, um die Batterie im Inneren zu isolieren. Um die Fernbedienung zu aktivieren, entfernen Sie einfach dieses Kunststoffteil.
 
-**How it works?**
+**Wie funktioniert das?**
 
-#. While this program may appear somewhat complex at first glance, it actually accomplishes the fundamental functions of the IR receiver using just a few lines of code.
+#. Obwohl dieses Programm auf den ersten Blick etwas komplex erscheinen mag, erfüllt es tatsächlich die grundlegenden Funktionen des IR-Empfängers mit nur wenigen Codezeilen.
 
 
     .. code-block:: python
@@ -177,14 +177,14 @@ When the program is running, press the key on the remote control, the value and 
 
         ir = NEC_8(pin_ir, callback)  # Instantiate receiver
 
-    * In this code, an ``ir`` object is instantiated, allowing it to read the signals captured by the IR receiver at any given moment.
-    * The resulting information is then stored in the ``data`` variable within the callback function.
+    * In diesem Code wird ein ``ir``-Objekt instanziiert, das es ihm ermöglicht, die vom IR-Empfänger erfassten Signale jederzeit zu lesen.
+    * Die resultierenden Informationen werden dann in der Variablen ``data`` innerhalb der Callback-Funktion gespeichert.
 
-        * `Callback Function - Wikipedia <https://en.wikipedia.org/wiki/Callback_(computer_programming)>`_
+        * `Callback-Funktion - Wikipedia <https://en.wikipedia.org/wiki/Callback_(computer_programming)>`_
 
-    * If the IR receiver receives duplicate values (e.g., when a button is pressed and held down), the ``data`` will be less than 0, and this ``data`` needs to be filtered out.
+    * Wenn der IR-Empfänger doppelte Werte empfängt (z.B. wenn eine Taste gedrückt und gehalten wird), ist das ``data`` kleiner als 0, und diese ``data`` müssen herausgefiltert werden.
 
-    * Otherwise, the ``data`` would be a usable value, albeit in an unreadable code. The ``decodeKeyValue(data)`` function is then utilized to decode it into a more comprehensible format.
+    * Andernfalls wäre das ``data`` ein nutzbarer Wert, allerdings in einem unlesbaren Code. Die Funktion ``decodeKeyValue(data)`` wird dann verwendet, um ihn in ein verständlicheres Format zu dekodieren.
 
         .. code-block:: python
 
@@ -199,7 +199,7 @@ When the program is running, press the key on the remote control, the value and 
                 ...
 
 
-#. Next, we incorporate several debug functions into the program. While these functions are essential, they are not directly related to the desired outcome we aim to achieve.
+#. Als Nächstes integrieren wir mehrere Debug-Funktionen in das Programm. Während diese Funktionen wichtig sind, stehen sie nicht direkt mit dem gewünschten Ergebnis in Verbindung, das wir erreichen wollen.
 
     .. code-block:: python
 
@@ -207,7 +207,7 @@ When the program is running, press the key on the remote control, the value and 
 
         ir.error_function(print_error) # Show debug information
 
-#. Lastly, we use an empty loop for the main program and implement a try-except structure to ensure the program exits with the ``ir`` object properly terminated.
+#. Schließlich verwenden wir eine leere Schleife für das Hauptprogramm und implementieren eine try-except-Struktur, um sicherzustellen, dass das Programm mit dem ordnungsgemäß beendeten ``ir``-Objekt abgeschlossen wird.
 
     .. code-block:: python
 
@@ -217,4 +217,4 @@ When the program is running, press the key on the remote control, the value and 
         except KeyboardInterrupt:
             ir.close()
 
-    * `Try Statement - Python Docs <https://docs.python.org/3/reference/compound_stmts.html?#the-try-statement>`_
+    * `Try-Anweisung - Python-Dokumentation <https://docs.python.org/3/reference/compound_stmts.html?#the-try-statement>`_

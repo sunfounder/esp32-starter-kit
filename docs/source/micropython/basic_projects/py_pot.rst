@@ -1,34 +1,34 @@
 .. _py_potentiometer:
 
-5.8 Turn the Knob
+5.8 Drehen Sie den Knopf
 ===========================
-A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
+Ein Potentiometer ist ein dreipoliges Gerät, das häufig verwendet wird, um den Widerstand in einem Schaltkreis anzupassen. Es verfügt über einen Drehknopf oder einen Schieberegler, mit dem der Widerstandswert des Potentiometers verändert werden kann. In diesem Projekt werden wir es nutzen, um die Helligkeit einer LED zu steuern, ähnlich einer Schreibtischlampe in unserem Alltag. Durch Anpassen der Position des Potentiometers können wir den Widerstand im Stromkreis verändern und somit den durch die LED fließenden Strom regulieren, was deren Helligkeit entsprechend anpasst. Dies ermöglicht es uns, ein anpassbares und verstellbares Beleuchtungserlebnis zu schaffen, vergleichbar mit dem einer Schreibtischlampe.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,37 +45,37 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-**Available Pins**
+**Verfügbare Pins**
 
-* **Available Pins**
+* **Verfügbare Pins**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Verfügbare Pins
             - IO14, IO25, I35, I34, I39, I36
 
 * **Strapping Pins**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Die folgenden Pins sind Strapping-Pins, die den Startvorgang des ESP32 beim Einschalten oder Zurücksetzen beeinflussen. Sobald der ESP32 jedoch erfolgreich hochgefahren ist, können sie als reguläre Pins verwendet werden.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Strapping-Pins
             - IO0, IO12
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: ../../img/circuit/circuit_5.8_potentiometer.png
 
-When you rotate the potentiometer, the value of I35 will change. By programming, you can use the value of I35 to control the brightness of the LED. Therefore, as you rotate the potentiometer, the brightness of the LED will also change accordingly.
+Wenn Sie das Potentiometer drehen, ändert sich der Wert von I35. Durch Programmierung können Sie den Wert von I35 nutzen, um die Helligkeit der LED zu steuern. Daher ändert sich die Helligkeit der LED entsprechend, wenn Sie am Potentiometer drehen.
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
@@ -84,8 +84,8 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. note::
 
-    * Open the ``5.8_turn_the_knob.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Öffnen Sie die Datei ``5.8_turn_the_knob.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Run Current Script" oder drücken Sie F5, um ihn auszuführen.
+    * Stellen Sie sicher, dass der Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt ist. 
 
 
 
@@ -121,7 +121,6 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
         # Wait for 0.5 seconds before taking the next reading
         time.sleep(0.5)
 
-With this script run, the LED brightness changes as the potentiometer is rotated, while the analog value and voltage at this point are displayed in the Shell.
+Mit diesem Skript ausgeführt, ändert sich die Helligkeit der LED, wenn das Potentiometer gedreht wird, während der analoge Wert und die Spannung an diesem Punkt im Shell angezeigt werden.
 
 * `machine.ADC - MicroPython Docs <https://docs.micropython.org/en/latest/esp32/quickref.html#adc-analog-to-digital-conversion>`_
-

@@ -7,42 +7,40 @@ Potentiometer
     :align: center
     :width: 150
 
-Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation. 
+Ein Potentiometer ist ebenfalls ein Widerstandsbauteil mit drei Anschlüssen, dessen Widerstandswert entsprechend einer regelmäßigen Variation angepasst werden kann.
 
-Potentiometers come in various shapes, sizes, and values, but they all have the following things in common:
+Potentiometer gibt es in verschiedenen Formen, Größen und Werten, aber sie haben alle Folgendes gemeinsam:
 
-* They have three terminals (or connection points).
-* They have a knob, screw, or slider that can be moved to vary the resistance between the middle terminal and either one of the outer terminals.
-* The resistance between the middle terminal and either one of the outer terminals varies from 0 Ω to the maximum resistance of the pot as the knob, screw, or slider is moved.
+* Sie verfügen über drei Anschlüsse (oder Verbindungspunkte).
+* Sie besitzen einen Drehknopf, eine Schraube oder einen Schieber, der bewegt werden kann, um den Widerstand zwischen dem mittleren Anschluss und einem der beiden äußeren Anschlüsse zu variieren.
+* Der Widerstand zwischen dem mittleren Anschluss und einem der beiden äußeren Anschlüsse variiert von 0 Ω bis zum maximalen Widerstand des Potentiometers, je nachdem wie weit der Drehknopf, die Schraube oder der Schieber bewegt wird.
 
-Here is the circuit symbol of potentiometer. 
+Hier ist das Schaltungssymbol des Potentiometers.
 
 .. image:: img/potentiometer_symbol.png
     :align: center
     :width: 400
 
+Die Funktionen des Potentiometers in einer Schaltung sind wie folgt:
 
-The functions of the potentiometer in the circuit are as follows: 
+#. Als Spannungsteiler
 
-#. Serving as a voltage divider
+    Das Potentiometer ist ein kontinuierlich einstellbarer Widerstand. Wenn Sie die Welle oder den Schiebegriff des Potentiometers einstellen, wird der bewegliche Kontakt auf dem Widerstand gleiten. An diesem Punkt kann eine Spannung ausgegeben werden, abhängig von der am Potentiometer angelegten Spannung und dem Winkel, den der bewegliche Arm gedreht hat, oder dem Weg, den er zurückgelegt hat.
 
-    Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor.  At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the travel it has made. 
+#. Als Rheostat
 
-#. Serving as a rheostat
+    Wird das Potentiometer als Rheostat verwendet, verbinden Sie den mittleren Pin mit einem der beiden anderen Pins im Schaltkreis. Dadurch erhalten Sie einen sanft und kontinuierlich veränderbaren Widerstandswert innerhalb des Weges des beweglichen Kontakts.
 
-    When the potentiometer is used as a rheostat, connect the middle pin and one of the other 2 pins in the circuit. Thus you can get a smoothly and continuously changed resistance value within the travel of the moving contact. 
+#. Als Stromregler
 
-#. Serving as a current controller
+    Wenn das Potentiometer als Stromregler wirkt, muss der Schleifkontakt als einer der Ausgangsanschlüsse verbunden werden.
 
-    When the potentiometer acts as a current controller, the sliding contact terminal must be connected as one of the output terminals.
+Wenn Sie mehr über Potentiometer erfahren möchten, siehe: `Potentiometer - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer>`_
 
-If you want to know more about potentiometer, refer to: `Potentiometer - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer.>`_
+**Beispiele**
 
-**Example**
-
-* :ref:`ar_potentiometer` (Arduino Project)
-* :ref:`py_potentiometer` (MicroPython Project)
-* :ref:`sh_moving_mouse` (Scratch Project)
-* :ref:`sh_breakout_clone` (Scratch Project)
-
+* :ref:`ar_potentiometer` (Arduino-Projekt)
+* :ref:`py_potentiometer` (MicroPython-Projekt)
+* :ref:`sh_moving_mouse` (Scratch-Projekt)
+* :ref:`sh_breakout_clone` (Scratch-Projekt)
 

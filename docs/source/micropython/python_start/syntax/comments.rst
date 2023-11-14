@@ -1,12 +1,12 @@
-Comments
+Kommentare
 =============
 
-The comments in the code help us understand the code, make the entire code more readable and comment out part of the code during testing, so that this part of the code does not run.
+Die Kommentare im Code helfen uns, den Code zu verstehen, machen den gesamten Code lesbarer und kommentieren während des Testens Teile des Codes aus, so dass dieser Teil des Codes nicht ausgeführt wird.
 
-Single-line Comment
-----------------------------
+Einzellinienkommentar
+----------------------
 
-Single-line comments in MicroPython begin with #, and the following text is considered a comment until the end of the line. Comments can be placed before or after the code.
+Einzellinienkommentare in MicroPython beginnen mit #, und der nachfolgende Text wird bis zum Ende der Zeile als Kommentar betrachtet. Kommentare können vor oder nach dem Code platziert werden.
 
 .. code-block:: python
 
@@ -15,7 +15,7 @@ Single-line comments in MicroPython begin with #, and the following text is cons
 >>> %Run -c $EDITOR_CONTENT
 hello world
 
-Comments are not necessarily text used to explain the code. You can also comment out part of the code to prevent micropython from running the code.
+Kommentare müssen nicht unbedingt Text sein, der den Code erklärt. Sie können auch einen Teil des Codes auskommentieren, um zu verhindern, dass MicroPython den Code ausführt.
 
 
 .. code-block:: python
@@ -26,10 +26,10 @@ Comments are not necessarily text used to explain the code. You can also comment
 >>> %Run -c $EDITOR_CONTENT
 hello world
 
-Multi-line comment
-------------------------------
+Mehrzeiliger Kommentar
+----------------------
 
-If you want to comment on multiple lines, you can use multiple # signs.
+Wenn Sie mehrere Zeilen kommentieren möchten, können Sie mehrere # Zeichen verwenden.
 
 .. code-block:: python
 
@@ -41,9 +41,9 @@ If you want to comment on multiple lines, you can use multiple # signs.
 >>> %Run -c $EDITOR_CONTENT
 Hello, World!
 
-Or, you can use multi-line strings instead of expected.
+Oder Sie können mehrzeilige Zeichenketten verwenden, wenn erwartet.
 
-Since MicroPython ignores string literals that are not assigned to variables, you can add multiple lines of strings (triple quotes) to the code and put comments in them:
+Da MicroPython Zeichenkettenliterale ignoriert, die nicht Variablen zugewiesen werden, können Sie dem Code mehrzeilige Zeichenketten (dreifache Anführungszeichen) hinzufügen und Kommentare darin platzieren:
 
 .. code-block:: python
 
@@ -57,4 +57,5 @@ Since MicroPython ignores string literals that are not assigned to variables, yo
 >>> %Run -c $EDITOR_CONTENT
 Hello, World!
 
-As long as the string is not assigned to a variable, MicroPython will ignore it after reading the code and treat it as if you made a multi-line comment.
+Solange die Zeichenkette keiner Variablen zugewiesen wird, ignoriert MicroPython sie nach dem Lesen des Codes und behandelt sie, als hätten Sie einen mehrzeiligen Kommentar gemacht.
+

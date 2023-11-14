@@ -1,9 +1,9 @@
-For Loops
-============
+For-Schleifen
+=================
 
-The `for` loop can traverse any sequence of items, such as a list or a string.
+Die `for`-Schleife kann jede Art von Elementsequenz durchlaufen, wie beispielsweise eine Liste oder einen String.
 
-The syntax format of for loop is as follows:
+Die Syntax der For-Schleife ist wie folgt:
 
 .. code-block:: python
 
@@ -11,11 +11,11 @@ The syntax format of for loop is as follows:
         Body of for
 
 
-Here, `val` is a variable that gets the value of the item in the sequence in each iteration.
+Hier ist `val` eine Variable, die in jeder Iteration den Wert des Elements in der Sequenz annimmt.
 
-The loop continues until we reach the last item in the sequence. Use indentation to separate the body of the `for` loop from the rest of the code.
+Die Schleife setzt sich fort, bis wir das letzte Element in der Sequenz erreicht haben. Um den Körper der `for`-Schleife vom restlichen Code abzugrenzen, verwenden wir Einrückungen.
 
-**Flowchart of for Loop**
+**Flussdiagramm der for-Schleife**
 
 .. image:: img/for_loop.png
 
@@ -35,10 +35,10 @@ The loop continues until we reach the last item in the sequence. Use indentation
 >>> %Run -c $EDITOR_CONTENT
 The sum is 10
 
-The break Statement
+Das break-Statement
 -------------------------
 
-With the break statement we can stop the loop before it has looped through all the items:
+Mit dem break-Statement können wir die Schleife stoppen, bevor sie alle Elemente durchlaufen hat:
 
 
 
@@ -56,10 +56,10 @@ With the break statement we can stop the loop before it has looped through all t
 >>> %Run -c $EDITOR_CONTENT
 The sum is 6
 
-The continue Statement
+Das continue-Statement
 --------------------------------------------
 
-With the `continue` statement we can stop the current iteration of the loop, and continue with the next:
+Mit dem `continue`-Statement können wir die aktuelle Iteration der Schleife beenden und mit der nächsten fortfahren:
 
 
 
@@ -77,18 +77,18 @@ With the `continue` statement we can stop the current iteration of the loop, and
 2
 4
 
-The range() function
+Die range()-Funktion
 --------------------------------------------
 
-We can use the range() function to generate a sequence of numbers. range(6) will produce numbers between 0 and 5 (6 numbers).
+Wir können die range()-Funktion verwenden, um eine Zahlenfolge zu generieren. range(6) erzeugt Zahlen zwischen 0 und 5 (6 Zahlen).
 
-We can also define start, stop and step size as range(start, stop, step_size). If not provided, step_size defaults to 1.
+Wir können auch Start, Stopp und Schrittgröße als range(start, stop, step_size) definieren. Wird nichts angegeben, ist die Standard-Schrittgröße 1.
 
-In a sense of range, the object is "lazy" because when we create the object, it does not generate every number it "contains". However, this is not an iterator because it supports in, len and __getitem__ operations.
+Im Sinne von range ist das Objekt „lazy“, da es bei der Erstellung nicht jede Zahl generiert, die es „enthält“. Es ist jedoch kein Iterator, da es Operationen wie in, len und __getitem__ unterstützt.
 
-This function will not store all values ​​in memory; it will be inefficient. So it will remember the start, stop, step size and generate the next number during the journey.
+Diese Funktion speichert nicht alle Werte im Speicher; das wäre ineffizient. Sie merkt sich Start, Stopp und Schrittgröße und generiert während der Iteration die nächste Zahl.
 
-To force this function to output all items, we can use the function list().
+Um diese Funktion zu zwingen, alle Elemente auszugeben, können wir die Funktion list() verwenden.
 
 
 
@@ -109,7 +109,7 @@ range(0, 6)
 [2, 4, 6, 8]
 
 
-We can use `range()` in a `for` loop to iterate over a sequence of numbers. It can be combined with the len() function to use the index to traverse the sequence.
+Wir können `range()` in einer `for`-Schleife verwenden, um über eine Zahlenfolge zu iterieren. Es kann mit der len()-Funktion kombiniert werden, um den Index zum Durchlaufen der Sequenz zu verwenden.
 
 
 
@@ -125,14 +125,14 @@ I like pear
 I like apple
 I like grape
 
-Else in For Loop
+Else in For-Schleife
 --------------------------------
 
-The `for` loop can also have an optional `else` block. If the items in the sequence used for the loop are exhausted, the `else` part is executed.
+Die `for`-Schleife kann auch einen optionalen `else`-Block haben. Wenn die Elemente in der Sequenz, die für die Schleife verwendet werden, erschöpft sind, wird der `else`-Teil ausgeführt.
 
-The `break` keyword can be used to stop the `for` loop. In this case, the `else` part will be ignored.
+Das Schlüsselwort `break` kann verwendet werden, um die `for`-Schleife zu stoppen. In diesem Fall wird der `else`-Teil ignoriert.
 
-Therefore, if no interruption occurs, the `else` part of the `for` loop will run.
+Wenn also keine Unterbrechung auftritt, wird der `else`-Teil der `for`-Schleife ausgeführt.
 
 
 
@@ -151,7 +151,7 @@ Therefore, if no interruption occurs, the `else` part of the `for` loop will run
 4
 Finished
 
-The else block will NOT be executed if the loop is stopped by a break statement.
+Der else-Block wird NICHT ausgeführt, wenn die Schleife durch eine break-Anweisung gestoppt wird.
 
 
 

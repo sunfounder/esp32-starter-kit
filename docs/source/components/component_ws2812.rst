@@ -1,55 +1,55 @@
 .. _cpn_ws2812:
 
-WS2812 RGB 8 LEDs Strip
+WS2812 RGB 8 LEDs Leiste
 ============================
 
 .. image:: img/ws2812b.png
 
-The WS2812 RGB 8 LEDs Strip is composed of 8 RGB LEDs. 
-Only one pin is required to control all the LEDs. Each RGB LED has a WS2812 chip, which can be controlled independently. 
-It can realize 256-level brightness display and complete true color display of 16,777,216 colors. 
-At the same time, the pixel contains an intelligent digital interface data latch signal shaping amplifier drive circuit, 
-and a signal shaping circuit is built in to effectively ensure the color height of the pixel point light Consistent.
+Der WS2812 RGB 8 LEDs Strip besteht aus 8 RGB-LEDs. 
+Es wird nur ein Pin benötigt, um alle LEDs zu steuern. Jede RGB-LED hat einen WS2812-Chip, der unabhängig gesteuert werden kann. 
+Er kann eine 256-stufige Helligkeitsanzeige und eine vollständige Echtfarbanzeige von 16.777.216 Farben realisieren. 
+Gleichzeitig enthält das Pixel einen intelligenten digitalen Schnittstellen-Datenlatch-Signalformungs-Verstärker-Treiberschaltkreis, 
+und eine Signalformungsschaltung ist eingebaut, um die Farbhöhe des Pixelpunktlichts effektiv zu gewährleisten Konsistent.
 
-It is flexible, can be docked, bent, and cut at will, and the back is equipped with adhesive tape, which can be fixed on the uneven surface at will, and can be installed in a narrow space.
+Es ist flexibel, kann nach Belieben angedockt, gebogen und geschnitten werden, und die Rückseite ist mit Klebeband ausgestattet, das auf der unebenen Oberfläche nach Belieben befestigt werden kann, und kann in einem engen Raum installiert werden.
 
-**Features**
+**Merkmale**
 
-* Work Voltage: DC5V
-* IC: One IC drives one RGB LED
-* Consumption: 0.3w each LED
-* Working Temperature: -15-50
-* Color: Full color RGB
-* RGB Type：5050RGB（Built-in IC WS2812B）
-* Light Strip Thickness: 2mm
-* Each LED can be controlled individually
+* Arbeitsspannung: DC5V
+* IC: Ein IC steuert eine RGB-LED
+* Verbrauch: 0.3w jede LED
+* Arbeitstemperatur: -15-50
+* Farbe: Vollfarbe RGB
+* RGB-Typ：5050RGB（Built-in IC WS2812B）
+* Dicke des Lichtstreifens: 2mm
+* Jede LED kann einzeln gesteuert werden
 
-**WS2812B Introdction**
+**WS2812B Einführung**
 
-* `WS2812B Datasheet <https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf>`_
+* `WS2812B Datenblatt <https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf>`_
 
-WS2812B is a intelligent control LED light source that the control circuit and RGB chip are integrated in
-a package of 5050 components. It internal include intelligent digital port data latch and signal reshaping ampli
-fication drive circuit. Also include a precision internal oscillator and a 12V voltage programmable constant curr
-e-nt control part, effectively ensuring the pixel point light color height consistent.
+WS2812B ist eine intelligente Steuer-LED-Lichtquelle, bei der die Steuerschaltung und der RGB-Chip in einem
+einem Paket von 5050 Komponenten integriert sind. Intern sind ein intelligenter digitaler Port-Datenspeicher und ein Signalumformungs-Verstärker
+fikationsschaltung. Außerdem sind ein interner Präzisionsoszillator und ein programmierbarer 12V-Spannungskonstanthalter enthalten.
+e-nt Steuerteil, effektiv sicherzustellen, die Pixel Punkt Licht Farbhöhe konsistent.
 
-The data transfer protocol use single NZR communication mode. After the pixel power-on reset, the DIN
-port receive data from controller, the first pixel collect initial 24bit data then sent to the internal data latch,
-the other data which reshaping by the internal signal reshaping amplification circuit sent to the next cascade
-pixel through the DO port. After transmission for each pixel，the signal to reduce 24bit. pixel adopt auto resha
--ping transmit technology, making the pixel cascade number is not limited the signal transmission, only depend
-on the speed of signal transmission.
+Das Datenübertragungsprotokoll verwendet den einfachen NZR-Kommunikationsmodus. Nach dem Einschalt-Reset des Pixels empfängt der DIN
+Port die Daten vom Controller, das erste Pixel sammelt die ersten 24-Bit-Daten und sendet sie an den internen Daten-Latch,
+die anderen Daten, die durch den internen Signalumformungs-Verstärkungsschaltkreis umgestaltet werden, werden über den DO-Port an das nächste Kaskadenpixel gesendet.
+Pixel durch den DO-Port. Nach der Übertragung für jedes Pixel, das Signal zu reduzieren 24bit. Pixel verabschieden Auto resha
+Übertragungstechnik, so dass die Pixel-Kaskade Zahl ist nicht begrenzt die Signalübertragung, nur abhängig
+von der Geschwindigkeit der Signalübertragung ab.
 
-LED with low driving voltage, environmental protection and energy saving, high brightness, scattering angl
-e is large, good consistency, low power, long life and other advantages. The control chip integrated in LED
-above becoming more simple circuit, small volume, convenient installation.
+LED mit niedriger Betriebsspannung, Umweltschutz und Energieeinsparung, hohe Helligkeit, großer Streuwinkel
+e ist groß, gute Konsistenz, geringe Leistung, lange Lebensdauer und andere Vorteile. Der in die LED integrierte Steuerchip
+oben immer mehr einfache Schaltung, kleines Volumen, bequeme Installation.
 
 
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_rgb_strip` (Arduino Project)
-* :ref:`ar_flowing_light` (Arduino Project)
-* :ref:`py_rgb_strip` (MicroPython Project)
-* :ref:`py_flowing_light` (MicroPython Project)
-* :ref:`py_color_gradient` (MicroPython Project)
+* :ref:`ar_rgb_strip` (Arduino-Projekt)
+* :ref:`ar_flowing_light` (Arduino-Projekt)
+* :ref:`py_rgb_strip` (MicroPython-Projekt)
+* :ref:`py_flowing_light` (MicroPython-Projekt)
+* :ref:`py_color_gradient` (MicroPython-Projekt)

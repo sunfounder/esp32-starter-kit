@@ -1,79 +1,77 @@
-
 .. _cpn_7_segment:
 
-7-segment Display
+7-Segment-Anzeige
 ======================
 
 .. image:: img/7_segment.png
     :width: 200
     :align: center
 
-A 7-segment display is an 8-shaped component which packages 7 LEDs. Each LED is called a segment - when energized, one segment forms part of a numeral to be displayed.
+Eine 7-Segment-Anzeige ist eine 8-förmige Komponente, die 7 LEDs umfasst. Jede LED wird als Segment bezeichnet - bei Energiezufuhr bildet ein Segment einen Teil einer anzuzeigenden Ziffer.
 
-* Each of the LEDs in the display is given a positional segment with one of its connection pins led out from the rectangular plastic package.
-* These LED pins are labeled from "a" through to "g" representing each individual LED.
-* The other LED pins are connected together forming a common pin.
-* So by forward biasing the appropriate pins of the LED segments in a particular order, some segments will brighten and others stay dim, thus showing the corresponding character on the display. 
+* Jede der LEDs in der Anzeige erhält ein positionelles Segment, wobei einer ihrer Anschlussstifte aus dem rechteckigen Kunststoffgehäuse herausgeführt wird.
+* Diese LED-Stifte sind von "a" bis "g" beschriftet und repräsentieren jede einzelne LED.
+* Die anderen LED-Stifte sind miteinander verbunden und bilden einen gemeinsamen Stift.
+* Durch das Vorschalten der geeigneten Stifte der LED-Segmente in einer bestimmten Reihenfolge leuchten einige Segmente auf, während andere dunkel bleiben, wodurch der entsprechende Charakter auf der Anzeige dargestellt wird.
 
-**Features**
+**Eigenschaften**
 
-* Size: 19 x 12.7 x 13.8mm(LxWxH, include the pin)
-* Screen: 0.56''
-* Color: red
-* Common Cathode
-* Forward Voltage: 1.8V
-* 10 pins
-* Pitch: standard 0.1" (2.54mm)
+* Größe: 19 x 12,7 x 13,8mm(LxBxH, einschließlich der Stifte)
+* Bildschirm: 0,56''
+* Farbe: rot
+* Gemeinsame Kathode
+* Vorwärtsspannung: 1,8V
+* 10 Stifte
+* Abstand: standard 0,1" (2,54mm)
 
-**Common Cathode (CC) or Common Anode (CA)**
+**Gemeinsame Kathode (CC) oder Gemeinsame Anode (CA)**
 
-There are two types of pin connection: Common Cathode (CC) and Common Anode (CA). 
-As the name suggests, a CC display has all the cathodes of the 7 LEDs connected when a CA display has all the anodes of the 7 segments connected.
+Es gibt zwei Arten von Stiftverbindungen: Gemeinsame Kathode (CC) und Gemeinsame Anode (CA).
+Wie der Name andeutet, hat eine CC-Anzeige alle Kathoden der 7 LEDs verbunden, während eine CA-Anzeige alle Anoden der 7 Segmente verbunden hat.
 
-
-* Common Cathode 7-Segment Display
+* Gemeinsame Kathoden 7-Segment-Anzeige
 
 .. image:: img/segment_cathode.png
     :width: 500
 
-* Common Anode 7-Segment Display
+* Gemeinsame Anoden 7-Segment-Anzeige
 
 .. image:: img/segment_anode.png
     :width: 500
 
-**How to Know CC or CA?**
+**Wie erkennt man CC oder CA?**
 
-Usually there will be label on the side of the 7-segment display, xxxAx or xxxBx. Generally speaking xxxAx stands for common cathode and xxxBx stands for common anode.
+Normalerweise gibt es eine Beschriftung auf der Seite der 7-Segment-Anzeige, xxxAx oder xxxBx. Allgemein steht xxxAx für gemeinsame Kathode und xxxBx für gemeinsame Anode.
 
 .. image:: img/7_segment.png
     :width: 250
 
 .. image:: img/7_segment_bs.png
 
-You can also use a multimeter to check the 7-segment display if there is no label. Set the multimeter to diode test mode and connect the black lead to the middle pin of the 7-segment display, and the red lead to any other pin except the middle one. The 7-segment display is common cathode if a segment lights up.
+Sie können auch ein Multimeter verwenden, um die 7-Segment-Anzeige zu überprüfen, wenn keine Beschriftung vorhanden ist. Stellen Sie das Multimeter auf Diodentestmodus ein und verbinden Sie das schwarze Kabel mit dem mittleren Stift der 7-Segment-Anzeige und das rote Kabel mit einem beliebigen anderen Stift außer dem mittleren. Die 7-Segment-Anzeige ist eine gemeinsame Kathode, wenn ein Segment aufleuchtet.
 
-You swap the red and black meter heads if there is no segment lit. When a segment is lit, it indicates a common anode.
-
+Wechseln Sie die roten und schwarzen Messköpfe, wenn kein Segment leuchtet. Wenn ein Segment aufleuchtet, deutet dies auf eine gemeinsame Anode hin.
 
 .. image:: img/7_segment_test.JPG
     :width: 600
 
 
-**Display Codes** 
+**Anzeigecodes**
 
-To help you get to know how 7-segment displays(Common Cathode) display Numbers, we have drawn the following table. 
-Numbers are the number 0-F displayed on the 7-segment display; (DP) GFEDCBA refers to the corresponding LED set to 0 or 1.
+Um Ihnen zu veranschaulichen, wie 7-Segment-Anzeigen (Gemeinsame Kathode) Zahlen darstellen, haben wir die folgende Tabelle erstellt. 
+Die Zahlen sind die Nummern 0-F, die auf der 7-Segment-Anzeige dargestellt werden; (DP) GFEDCBA bezieht sich auf die entsprechende LED, die auf 0 oder 1 gesetzt ist.
 
 .. image:: img/segment_code.png
 
-For example, 01011011 means that DP, F and C are set to 0, while others are set to 1. Therefore, the number 2 is displayed on the 7-segment display.
+Zum Beispiel bedeutet 01011011, dass DP, F und C auf 0 gesetzt sind, während die anderen auf 1 gesetzt sind. Daher wird die Zahl 2 auf der 7-Segment-Anzeige angezeigt.
 
 .. image:: img/7segment_2.png
 
 
-**Example**
+**Beispiele**
 
-* :ref:`ar_7_segment` (Arduino Project)
-* :ref:`ar_dice` (Arduino Project)
-* :ref:`py_7_segment` (MicroPython Project)
-* :ref:`py_dice` (MicroPython Project)
+* :ref:`ar_7_segment` (Arduino-Projekt)
+* :ref:`ar_dice` (Arduino-Projekt)
+* :ref:`py_7_segment` (MicroPython-Projekt)
+* :ref:`py_dice` (MicroPython-Projekt)
+

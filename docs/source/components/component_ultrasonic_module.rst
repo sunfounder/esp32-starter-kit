@@ -1,66 +1,66 @@
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
+Ultraschall-Modul
 ================================
 
 .. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
-* **TRIG**: Trigger Pulse Input
-* **ECHO**: Echo Pulse Output
-* **GND**: Ground
-* **VCC**: 5V Supply
+* **TRIG**: Trigger-Impuls-Eingang
+* **ECHO**: Echo-Impuls-Ausgang
+* **GND**: Masse
+* **VCC**: 5V Versorgung
 
-This is the HC-SR04 ultrasonic distance sensor, providing non-contact measurement from 2 cm to 400 cm with a range accuracy of up to 3 mm. Included on the module is an ultrasonic transmitter, a receiver and a control circuit.
+Dies ist der HC-SR04-Ultraschall-Distanzsensor, der berührungslose Messungen von 2 cm bis 400 cm mit einer Messgenauigkeit von bis zu 3 mm ermöglicht. Auf dem Modul befinden sich ein Ultraschall-Sender, ein Empfänger und eine Steuerschaltung.
 
-You only need to connect 4 pins: VCC (power), Trig (trigger), Echo (receive) and GND (ground) to make it easy to use for your measurement projects.
+Sie müssen nur 4 Pins anschließen: VCC (Strom), Trig (Auslöser), Echo (Empfang) und GND (Masse), um es für Ihre Messprojekte einfach zu verwenden.
 
-**Features**
+**Merkmale**
 
-* Working Voltage: DC5V
-* Working Current: 16mA
-* Working Frequency: 40Hz
-* Max Range: 500cm
-* Min Range: 2cm
-* Trigger Input Signal: 10uS TTL pulse
-* Echo Output Signal: Input TTL lever signal and the range in proportion
-* Connector: XH2.54-4P
-* Dimension: 46x20.5x15 mm
+* Arbeitsspannung: DC5V
+* Arbeitsstrom: 16mA
+* Arbeitsfrequenz: 40Hz
+* Maximale Reichweite: 500cm
+* Min Reichweite: 2cm
+* Trigger-Eingangssignal: 10uS TTL-Impuls
+* Echo-Ausgangssignal: Eingang TTL Hebelsignal und die Reichweite im Verhältnis
+* Anschluss: XH2.54-4P
+* Abmessungen: 46x20,5x15 mm
 
-**Principle**
+**Prinzip**
 
-The basic principles are as follows:
+Die Grundprinzipien sind wie folgt:
 
-* Using IO trigger for at least 10us high level signal.
+* Mit IO-Trigger für mindestens 10us High-Level-Signal.
 
-* The module sends an 8 cycle burst of ultrasound at 40 kHz and detects whether a pulse signal is received.
+* Das Modul sendet einen 8-Zyklen-Ultraschallburst mit 40 kHz und erkennt, ob ein Impulssignal empfangen wird.
 
-* Echo will output a high level if a signal is returned; the duration of the high level is the time from emission to return.
+* Das Echo gibt einen hohen Pegel aus, wenn ein Signal zurückkommt; die Dauer des hohen Pegels ist die Zeit von der Aussendung bis zur Rückkehr.
 
-* Distance = (high level time x velocity of sound (340M/S)) / 2
+* Entfernung = (Hochpegelzeit x Schallgeschwindigkeit (340M/S)) / 2
 
 .. image:: img/ultrasonic_prin.jpg
 
+Formel:
 
-Formula:
-
-* us / 58 = centimeters distance
-* us / 148 = inch distance
-* distance = high level time x velocity (340M/S) / 2
+* us / 58 = Abstand in Zentimetern
+* us / 148 = Zoll-Abstand
+* Entfernung = Hochgeschwindigkeitszeit x Geschwindigkeit (340M/S) / 2
 
 .. note::
 
-    This module should not be connected under power up, if necessary, let the module's GND be connected first. Otherwise, it will affect the work of the module.
+    Dieses Modul sollte nicht unter Strom angeschlossen werden, wenn nötig, lassen Sie die GND des Moduls zuerst angeschlossen werden. Andernfalls wird es die Arbeit des Moduls beeinträchtigen.
 
-    The area of the object to be measured should be at least 0.5 square meters and as flat as possible. Otherwise, it will affect results.
+    Die Fläche des zu messenden Objekts sollte mindestens 0,5 Quadratmeter betragen und möglichst flach sein. Andernfalls wird das Ergebnis beeinträchtigt.
 
 
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_ultrasonic` (Arduino Project)
-* :ref:`ar_reversing_aid` (Arduino Project)
-* :ref:`py_ultrasonic` (MicroPython Project)
-* :ref:`py_reversing_aid` (MicroPython Project)
-* :ref:`sh_parrot` (Scratch Project)
+* :ref:`ar_ultrasonic` (Arduino-Projekt)
+* :ref:`ar_reversing_aid` (Arduino-Projekt)
+* :ref:`py_ultrasonic` (MicroPython-Projekt)
+* :ref:`py_reversing_aid` (MicroPython-Projekt)
+* :ref:`sh_parrot` (Scratch-Projekt)
+

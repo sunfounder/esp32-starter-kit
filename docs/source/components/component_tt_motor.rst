@@ -1,6 +1,6 @@
 .. _cpn_tt_motor:
 
-TT Motor
+TT-Motor
 ==============
 
 
@@ -8,31 +8,31 @@ TT Motor
     :width: 400
     :align: center
 
-This is a TT DC gearbox motor with a gear ratio of 1:48, it comes with 2 x 200mm wires with 0.1" male connectors that fit into a breadboard. Perfect for plugging into a breadboard or terminal block.
+Dies ist ein TT-Gleichstrom-Getriebemotor mit einem Übersetzungsverhältnis von 1:48. Er wird mit 2 x 200 mm langen Kabeln mit 0,1"-Steckern geliefert, die in ein Breadboard passen. Perfekt zum Einstecken in ein Breadboard oder eine Klemmleiste.
 
-You can power these motors with 3 ~ 6VDC, but of course, they will go a little faster at higher voltages.
+Sie können diese Motoren mit 3 ~ 6VDC betreiben, aber natürlich werden sie bei höheren Spannungen etwas schneller laufen.
 
-Note that these are very basic motors with no built-in encoder, speed control or position feedback. The voltage goes in and the spin comes out. There will be variation from motor to motor, so if you need precise motion, you'll need a separate feedback system.
+Beachten Sie, dass es sich um sehr einfache Motoren ohne eingebauten Encoder, Drehzahlregelung oder Positionsrückmeldung handelt. Die Spannung geht rein und der Spin kommt raus. Wenn Sie also eine präzise Bewegung benötigen, benötigen Sie ein separates Feedbacksystem.
 
-**Technical Details**
+**Technische Details**
 
-* Rated Voltage: 3~6V
-* Continuous No-Load Current: 150mA +/- 10%
-* Min. Operating Speed (3V): 90+/- 10% RPM
-* Min. Operating Speed (6V): 200+/- 10% RPM
-* Stall Torque (3V): 0.4kg.cm
-* Stall Torque (6V): 0.8kg.cm
-* Gear Ratio: 1:48
-* Body Dimensions: 70 x 22 x 18mm
-* Wires Length: 200mm & 28 AWG
-* Weight: 30.6g
+* Nennspannung: 3~6V
+* Kontinuierlicher Leerlaufstrom: 150mA +/- 10%
+* Min. Betriebsdrehzahl (3V): 90+/- 10% UMDREHUNGEN PRO MINUTE
+* Min. Betriebsdrehzahl (6V): 200+/- 10% RPM
+* Stillstandsdrehmoment (3V): 0.4kg.cm
+* Stillstandsdrehmoment (6V): 0.8kg.cm
+* Getriebeübersetzung: 1:48
+* Gehäuseabmessungen: 70 x 22 x 18mm
+* Länge der Drähte: 200mm & 28 AWG
+* Gewicht: 30.6g
 
-**Dimensional Drawing**
+**Maßzeichnung**
 
 .. image:: img/motor_size.jpg
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Arduino-Projekt)
+* :ref:`py_motor` (MicroPython-Projekt)
+* :ref:`sh_rotating_fan` (Scratch-Projekt)

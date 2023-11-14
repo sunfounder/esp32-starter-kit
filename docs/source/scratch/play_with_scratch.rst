@@ -3,22 +3,21 @@
 Play with Scratch
 ========================
 
-Besides programming on the Arduino IDE or Thonny IDE, we can also use graphical programming.
+Neben der Programmierung in der Arduino IDE oder Thonny IDE können wir auch grafische Programmierung nutzen.
 
-Here we recommend programming with Scratch, but the official Scratch is currently only compatible with Raspberry Pi, so we have partnered with a company, STEMPedia, who has developed a Scratch 3 based graphical programming software for many boards - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
+Hier empfehlen wir die Programmierung mit Scratch, aber das offizielle Scratch ist derzeit nur mit dem Raspberry Pi kompatibel. Deshalb haben wir uns mit einem Unternehmen, STEMPedia, zusammengetan, das eine auf Scratch 3 basierende grafische Programmiersoftware für viele Boards entwickelt hat - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
 
 .. image:: img/1_pictoblox.png
 
-It keeps the basic functions of Scratch 3, but also adds control boards, such as Arduino Uno, Mega, Nano, ESP32, Microbit and STEAMPedia homemade main boards, which can use external sensors, robots to control the sprites on the stage, with strong hardware interaction capabilities.
+Es behält die grundlegenden Funktionen von Scratch 3 bei, fügt jedoch die Steuerung von Boards hinzu, wie Arduino Uno, Mega, Nano, ESP32, Microbit und STEAMPedia-eigene Hauptplatinen, die externe Sensoren und Roboter nutzen können, um die Sprites auf der Bühne zu steuern, mit starken Hardware-Interaktionsfähigkeiten.
 
-In addition, it has AI and machine learning, even if you do not have much programming foundation, you can learn and use these popular and high-tech.
+Darüber hinaus bietet es KI und maschinelles Lernen, sodass auch ohne umfangreiche Programmierkenntnisse diese beliebten und hochtechnologischen Werkzeuge erlernt und genutzt werden können.
 
-Just drag and drop the Scratch coding blocks and make cool games, animations, interactive projects, and even control robots the way you want!
+Einfach die Scratch-Programmierblöcke per Drag-and-Drop bewegen und coole Spiele, Animationen, interaktive Projekte und sogar Roboter nach Wunsch steuern!
 
+Beginnen wir jetzt unsere Entdeckungsreise!
 
-Now let's start the journey of discovery!
-
-**1. Get Started**
+**1. Erste Schritte**
 
 .. toctree::
     :maxdepth: 2
@@ -27,18 +26,17 @@ Now let's start the journey of discovery!
     pictoblox_start/2_introduce
     pictoblox_start/3_quick_guide
 
-**2. Projects**
+**2. Projekte**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Die folgenden Projekte sind nach Programmierschwierigkeit geordnet. Es wird empfohlen, diese Bücher der Reihe nach zu lesen.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+In jedem Projekt gibt es sehr detaillierte Schritte, die Ihnen beibringen, wie Sie die Schaltung aufbauen und Schritt für Schritt programmieren, um das endgültige Ergebnis zu erreichen.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
+Natürlich können Sie auch direkt das Skript öffnen und ausführen, aber Sie müssen sicherstellen, dass Sie das relevante Material von `GitHub <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ heruntergeladen haben.
 
-Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
+Nachdem der Download abgeschlossen ist, entpacken Sie ihn. Beziehen Sie sich auf :ref:`stage_mode`, um einzelne Skripte direkt auszuführen.
 
-But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
-
+Aber das :ref:`sh_humiture` verwendet den :ref:`upload_mode`.
 
 .. toctree::
     :maxdepth: 1
