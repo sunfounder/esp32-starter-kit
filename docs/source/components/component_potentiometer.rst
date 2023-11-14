@@ -35,7 +35,7 @@
 
     ポテンショメータが電流コントローラとして機能する場合、スライド接触端子は出力端子の一方として接続する必要があります。
 
-ポテンショメータについての詳細は、次のリンクを参照してください： `Potentiometer - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer.>`_
+ポテンショメータについての詳細は、次のリンクを参照してください： `Potentiometer - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer>`_
 
 **例**
 
