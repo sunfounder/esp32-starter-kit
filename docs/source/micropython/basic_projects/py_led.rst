@@ -64,13 +64,6 @@ This circuit works on a simple principle, and the current direction is shown in 
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_led`
-
 **Run the Code**
 
 #. Open the ``2.1_hello_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. 
