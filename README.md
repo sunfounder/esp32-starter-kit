@@ -17,6 +17,10 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 
 <a id="update"></a>
 ## Update:
+2023-11-28:
+- Add images of inserting a USB cable into an ESP32 for various programming language projects.
+- Modify some errors.
+
 2023-11-14:
 - First release in German.
 

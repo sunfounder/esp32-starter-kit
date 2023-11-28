@@ -66,21 +66,32 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
 
-**Code**
+**Code hochladen**
 
-.. note::
+#. Sie können die Datei ``2.1_hello_led.ino`` unter dem Pfad ``esp32-starter-kit-main\c\codes\2.1_hello_led`` öffnen. Oder kopieren Sie diesen Code direkt in die Arduino IDE.
 
-    * Du kannst die Datei ``2.1_hello_led.ino`` im Pfad ``esp32-starter-kit-main\c\codes\2.1_hello_led`` öffnen. 
-    * Wähle das Board (ESP32 Dev Module) und den entsprechenden Port aus und klicke dann auf die **Upload**-Schaltfläche.
+    .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+#. Verbinden Sie dann das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
+
     * :ref:`unknown_com_port`
-   
-.. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
+#. Wählen Sie das Board (ESP32 Dev Module) und den entsprechenden Port aus.
 
+    .. image:: img/choose_board.png
 
-Nach erfolgreichem Hochladen des Codes siehst du die blinkende LED.
+#. Klicken Sie jetzt auf den **Hochladen**-Knopf, um den Code auf das ESP32-Board zu laden.
+
+    .. image:: img/click_upload.png
+
+#. Nachdem der Code erfolgreich hochgeladen wurde, sehen Sie das LED-Blinken.
+
 
 **Wie funktioniert das?**
 

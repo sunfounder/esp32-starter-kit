@@ -1,5 +1,5 @@
-Komponentenliste und Einführung
-====================================
+Lernen Sie die Komponenten in Ihrem Kit kennen
+======================================================
 
 Nach dem Öffnen des Pakets überprüfen Sie bitte, ob die Anzahl der Komponenten mit der Produktbeschreibung übereinstimmt und ob alle Komponenten in einwandfreiem Zustand sind.
 

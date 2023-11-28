@@ -3,6 +3,8 @@
 
 Um den ESP32-Mikrocontroller zu programmieren, müssen wir das ESP32-Board-Paket in der Arduino-IDE installieren. Befolgen Sie die folgende Schritt-für-Schritt-Anleitung:
 
+**ESP32-Board installieren**
+
 #. Öffnen Sie die Arduino-IDE. Gehen Sie zu **File** und wählen Sie **Preferences** aus dem Dropdown-Menü.
 
     .. image:: img/install_esp321.png
@@ -11,7 +13,7 @@ Um den ESP32-Mikrocontroller zu programmieren, müssen wir das ESP32-Board-Paket
 
     .. image:: img/install_esp322.png
 
-#. Fügen Sie die folgende URL in das Feld **Additional Board Manager URLs** ein: https://dl.espressif.com/dl/package_esp32_index.json. Diese URL verweist auf die Paketindexdatei für die ESP32-Boards. Klicken Sie auf die Schaltfläche **OK**, um die Änderungen zu speichern.
+#. Fügen Sie die folgende URL in das Feld **Additional Board Manager URLs** ein: https://espressif.github.io/arduino-esp32/package_esp32_index.json. Diese URL verweist auf die Paketindexdatei für die ESP32-Boards. Klicken Sie auf die Schaltfläche **OK**, um die Änderungen zu speichern.
 
     .. image:: img/install_esp323.png
 
@@ -19,7 +21,18 @@ Um den ESP32-Mikrocontroller zu programmieren, müssen wir das ESP32-Board-Paket
 
     .. image:: img/install_esp324.png
 
-#. Herzlichen Glückwunsch! Sie haben das ESP32-Board-Paket erfolgreich in der Arduino-IDE installiert. Sie können nun das richtige Board, **ESP32 Dev Module**, auswählen, indem Sie auf **Tools** -> **Board** -> **esp32** klicken.
+#. Herzlichen Glückwunsch! Sie haben das ESP32-Board-Paket erfolgreich in der Arduino-IDE installiert. 
+
+
+**Laden Sie den Code hoch**
+
+#. Verbinden Sie jetzt das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
+
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
+
+#. Wählen Sie dann das richtige Board, ESP32 Dev Module, aus, indem Sie auf Werkzeuge -> Board -> esp32 klicken.
 
     .. image:: img/install_esp325.png
 

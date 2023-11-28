@@ -5,25 +5,25 @@ IR-Empfänger
 
 **IR-Empfänger**
 
-.. image:: img/ir_receiver_hs0038b.jpg
+.. image:: img/ir_receiver_sl838.png
+    :width: 400
     :align: center
 
 * OUT: Signalausgang
 * GND: Erdung
 * VCC: Stromversorgung, 3,3V~5V
 
-Ein Infrarot-Empfänger ist eine Komponente, die Infrarotsignale empfängt und in der Lage ist, eigenständig Infrarotstrahlen zu empfangen und Signale auszugeben, die mit dem TTL-Niveau kompatibel sind. Er ähnelt in der Größe einem normalen in Plastik verpackten Transistor und eignet sich für alle Arten von Infrarot-Fernbedienungen und Infrarot-Übertragungen.
+SL838 Infrarot-Empfänger ist eine Komponente, die Infrarotsignale empfängt und in der Lage ist, eigenständig Infrarotstrahlen zu empfangen und Signale auszugeben, die mit dem TTL-Niveau kompatibel sind. Er ähnelt in der Größe einem normalen in Plastik verpackten Transistor und eignet sich für alle Arten von Infrarot-Fernbedienungen und Infrarot-Übertragungen.
 
 Infrarot, oder IR, Kommunikation ist eine beliebte, kostengünstige und leicht zu verwendende drahtlose Kommunikationstechnologie. Infrarotlicht hat eine etwas längere Wellenlänge als sichtbares Licht, daher ist es für das menschliche Auge nicht wahrnehmbar - ideal für drahtlose Kommunikation. Ein gängiges Modulationsschema für die Infrarotkommunikation ist die 38kHz-Modulation.
 
 
-* Verwendet den `HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_ IR-Empfängersensor, hohe Empfindlichkeit
-* Kann für Fernsteuerungen verwendet werden
-* Stromversorgung: 5V
-* Schnittstelle: Digital
-* Modulationsfrequenz: 38Khz
-* Pin-Definitionen: (1) Ausgang (2) Vcc (3) GND
-* Größe: 23,5mm x 21,5mm
+* Kann für Fernsteuerung verwendet werden
+* Breiter Betriebsspannungsbereich: 2,7~5V
+* Interner Filter für PCM-Frequenz
+* TTL- und CMOS-Kompatibilität
+* Starke Störunterdrückungsfähigkeit
+* RoHS-konform
 
 
 **Fernbedienung**

@@ -8,12 +8,14 @@ Gleichstrommotor
 
 Hier handelt es sich um einen 3V-Gleichstrommotor. Wenn Sie an jeden der beiden Anschlüsse einen hohen und einen niedrigen Pegel anlegen, wird er sich drehen.
 
-* **Größe**: 25*20*15MM
-* **Betriebsspannung**: 1-6V
-* **Leerlaufstrom** (3V): 70mA
-* **Leerlaufdrehzahl** (3V): 13000 U/min
-* **Blockierstrom** (3V): 800mA
+* **Länge**: 25mm
+* **Durchmesser**: 21mm
 * **Wellendurchmesser**: 2mm
+* **Wellenlänge**: 8mm
+* **Spannung**: 3-6V
+* **Strom**: 0.35-0.4A
+* **Geschwindigkeit bei 3V**: 19000 U/min (Umdrehungen pro Minute)
+* **Gewicht**: Ungefähr 14g (für eine Einheit)
 
 Ein Gleichstrommotor (DC-Motor) ist ein kontinuierlicher Aktuator, der elektrische Energie in mechanische Energie umwandelt. DC-Motoren ermöglichen es, dass rotierende Pumpen, Ventilatoren, Kompressoren, Impeller und andere Geräte durch kontinuierliche Drehbewegungen funktionieren.
 
@@ -25,8 +27,11 @@ Der Schlüssel zur Bewegungserzeugung ist die Positionierung des Ankers innerhal
 
 Der Strom fließt vom positiven Pol der Batterie durch den Schaltkreis, über die Kupferbürsten zum Kommutator und dann zum Anker.
 Durch die beiden Lücken im Kommutator kehrt sich dieser Fluss jedoch bei jeder vollständigen Drehung zur Hälfte um.
+
 Diese kontinuierliche Umkehrung wandelt die Gleichstromleistung der Batterie im Wesentlichen in Wechselstrom um, wodurch der Anker das Drehmoment in der richtigen Richtung zur richtigen Zeit erfährt, um die Drehung aufrechtzuerhalten.
 
+.. image:: img/motor_rotate.gif
+    :align: center
 
 **Beispiele**
 

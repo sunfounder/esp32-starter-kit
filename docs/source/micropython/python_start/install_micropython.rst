@@ -7,6 +7,12 @@
 
     .. image:: img/dowload_micropython_uf2.png
 
+#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
+    
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
+
 #. Klicken Sie in der unteren rechten Ecke der Thonny IDE, wählen Sie im aufklappenden Menü **"MicroPython(ESP32).COMXX"** aus und dann **"Configure interpreter"**.
 
     .. image:: img/install_micropython1.png

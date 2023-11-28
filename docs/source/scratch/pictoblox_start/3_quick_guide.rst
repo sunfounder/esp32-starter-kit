@@ -58,6 +58,10 @@ Bühnenmodus
 
 Verbinden Sie Ihr ESP32-Board mit einem USB-Kabel mit dem Computer, normalerweise wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
 
+    .. image:: ../../img/plugin_esp32.png
+       :width: 600
+       :align: center
+
 Öffnen Sie PictoBlox, standardmäßig öffnet sich die Python-Programmierschnittstelle. Wir müssen jedoch zur Block-Schnittstelle wechseln.
 
 .. image:: img/0_choose_blocks.png
@@ -149,6 +153,10 @@ Upload-Modus
 **1. Verbindung mit dem ESP32-Board herstellen**
 
 Verbinden Sie Ihr ESP32-Board mit einem USB-Kabel mit dem Computer, normalerweise wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
+
+    .. image:: ../../img/plugin_esp32.png
+       :width: 600
+       :align: center
 
 Öffnen Sie PictoBlox und klicken Sie in der oberen rechten Navigationsleiste auf **Board**, um das Board auszuwählen.
 

@@ -64,38 +64,46 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-**Code**
+**Führen Sie den Code aus**
 
-.. note::
+#. Öffnen Sie die Datei ``2.1_hello_led.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein.
 
-    * Öffnen Sie die Datei ``2.1_hello_led.py``, die sich im Pfad ``esp32-starter-kit-main\micropython\codes`` befindet, oder kopieren und fügen Sie den Code in Thonny ein. Klicken Sie dann auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
-    * Stellen Sie sicher, dass Sie den Interpreter "MicroPython (ESP32).COMxx" in der unteren rechten Ecke ausgewählt haben. 
+    .. code-block:: python
 
+        # Import the necessary libraries
+        import machine
+        import time
 
+        # Set up the LED on pin 26 as an output pin
+        led = machine.Pin(26, machine.Pin.OUT)
 
-.. code-block:: python
+        # Start an infinite loop
+        while True:
+            # Turn on the LED by setting its value to 1 (HIGH)
+            led.value(1)
+            # Wait for 1 second (1000 milliseconds) while the LED is on
+            time.sleep(1)
 
-    # Import the necessary libraries
-    import machine
-    import time
+            # Turn off the LED by setting its value to 0 (LOW)
+            led.value(0)
+            # Wait for 0.5 seconds (500 milliseconds) while the LED is off
+            time.sleep(0.5)
 
-    # Set up the LED on pin 26 as an output pin
-    led = machine.Pin(26, machine.Pin.OUT)
+#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
 
-    # Start an infinite loop
-    while True:
-        # Turn on the LED by setting its value to 1 (HIGH)
-        led.value(1)
-        # Wait for 1 second (1000 milliseconds) while the LED is on
-        time.sleep(1)
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
-        # Turn off the LED by setting its value to 0 (LOW)
-        led.value(0)
-        # Wait for 0.5 seconds (500 milliseconds) while the LED is off
-        time.sleep(0.5)
+#. Klicken Sie dann in der unteren rechten Ecke auf den Interpreter "MicroPython (ESP32).COMXX".
 
-Nachdem der Code ausgeführt wurde, sehen Sie das Blinken der LED.
+    .. image:: ../python_start/img/sec_inter.png
 
+#. Klicken Sie schließlich auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
+
+    .. image:: ../python_start/img/quick_guide2.png
+
+#. Nachdem der Code ausgeführt wurde, sehen Sie das Blinken der LED.
 
 **Wie funktioniert das?**
 
