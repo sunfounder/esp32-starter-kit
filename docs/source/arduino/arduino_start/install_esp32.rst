@@ -3,6 +3,8 @@
 
 ESP32マイクロコントローラをプログラムするためには、Arduino IDEにESP32ボードパッケージをインストールする必要があります。以下のステップバイステップガイドに従ってください：
 
+**ESP32ボードのインストール**
+
 #. Arduino IDEを開きます。 **File** を選択し、ドロップダウンメニューから **Preferences** を選びます。
 
     .. image:: img/install_esp321.png
@@ -11,7 +13,7 @@ ESP32マイクロコントローラをプログラムするためには、Arduin
 
     .. image:: img/install_esp322.png
 
-#. 次のURLを **Additional Board Manager URLs** フィールドに追加します： https://dl.espressif.com/dl/package_esp32_index.json。このURLはESP32ボードのパッケージインデックスファイルを指します。 **OK** ボタンをクリックして変更を保存します。
+#. 次のURLを **Additional Board Manager URLs** フィールドに追加します： https://espressif.github.io/arduino-esp32/package_esp32_index.json。このURLはESP32ボードのパッケージインデックスファイルを指します。 **OK** ボタンをクリックして変更を保存します。
 
     .. image:: img/install_esp323.png
 
@@ -19,8 +21,19 @@ ESP32マイクロコントローラをプログラムするためには、Arduin
 
     .. image:: img/install_esp324.png
 
-#. おめでとうございます！Arduino IDEにESP32ボードパッケージを正常にインストールしました。これで、 **Tools** -> **Board** -> **esp32** に進んで、正しいボード **ESP32 Dev Module** を選択できます。
+#. おめでとうございます！Arduino IDEにESP32ボードパッケージを正常にインストールしました。
 
+
+**コードをアップロードする**
+
+#. まず、Micro USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
+
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
+
+#. 次に、ツール -> ボード -> esp32 をクリックして、正しいボード、ESP32 Dev Moduleを選択します。
+    
     .. image:: img/install_esp325.png
 
 #. ESP32がコンピュータに接続されている場合は、 **Tools** -> **Port** に進んで正しいポートを選択できます。

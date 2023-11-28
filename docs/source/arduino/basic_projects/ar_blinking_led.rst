@@ -67,21 +67,32 @@
 
 
 
-**コード**
+**コードをアップロードする**
 
-.. note::
+#. ファイル 2.1_hello_led.ino をパス esp32-starter-kit-main\c\codes\2.1_hello_led から開くか、このコードをArduino IDEに直接コピーします。
 
-    * ``esp32-starter-kit-main\c\codes\2.1_hello_led`` のパス下にあるファイル ``2.1_hello_led.ino`` を開くことができます。
-    * ボード（ESP32 Dev Module）と適切なポートを選択した後、 **Upload** ボタンをクリックします。
+    .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+#. 次に、Micro USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
+
     * :ref:`unknown_com_port`
-   
-.. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
+#. ボード（ESP32 Dev Module）と適切なポートを選択します。
 
+    .. image:: img/choose_board.png
 
-コードが正常にアップロードされた後、LEDが点滅するのを見ることができます。
+#. 今、アップロードボタンをクリックして、コードをESP32ボードにアップロードします。
+
+    .. image:: img/click_upload.png
+
+#. コードが正常にアップロードされると、LEDが点滅するのが見えます。
+
 
 **どのように動作するのか？**
 

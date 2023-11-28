@@ -64,37 +64,46 @@
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-**コード**
+**コードを実行する**
 
-.. note::
+#. ``esp32-starter-kit-main\micropython\codes`` パスにある ``2.1_hello_led.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストします。
 
-    * ``esp32-starter-kit-main\micropython\codes`` パスにある ``2.1_hello_led.py`` ファイルを開くか、コードをThonnyにコピー＆ペーストしてください。その後、「現在のスクリプトを実行」をクリックするかF5キーを押して実行します。
-    * 右下の角にある「MicroPython (ESP32).COMxx」インタープリターを選択してください。
+    .. code-block:: python
 
+        # Import the necessary libraries
+        import machine
+        import time
 
+        # Set up the LED on pin 26 as an output pin
+        led = machine.Pin(26, machine.Pin.OUT)
 
-.. code-block:: python
+        # Start an infinite loop
+        while True:
+            # Turn on the LED by setting its value to 1 (HIGH)
+            led.value(1)
+            # Wait for 1 second (1000 milliseconds) while the LED is on
+            time.sleep(1)
 
-    # Import the necessary libraries
-    import machine
-    import time
+            # Turn off the LED by setting its value to 0 (LOW)
+            led.value(0)
+            # Wait for 0.5 seconds (500 milliseconds) while the LED is off
+            time.sleep(0.5)
 
-    # Set up the LED on pin 26 as an output pin
-    led = machine.Pin(26, machine.Pin.OUT)
+#. Micro USBケーブルを使用してESP32 WROOM 32Eをコンピューターに接続します。
 
-    # Start an infinite loop
-    while True:
-        # Turn on the LED by setting its value to 1 (HIGH)
-        led.value(1)
-        # Wait for 1 second (1000 milliseconds) while the LED is on
-        time.sleep(1)
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
-        # Turn off the LED by setting its value to 0 (LOW)
-        led.value(0)
-        # Wait for 0.5 seconds (500 milliseconds) while the LED is off
-        time.sleep(0.5)
+#. その後、右下隅にある「MicroPython (ESP32).COMXX」インタープリタをクリックします。
 
-コードが実行された後、LEDが点滅するのが見えます。
+    .. image:: ../python_start/img/sec_inter.png
+
+#. 最後に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
+
+    .. image:: ../python_start/img/quick_guide2.png
+
+#. コードを実行した後、LEDが点滅するのが見えます。
 
 
 **どのように動作するのか？**

@@ -10,9 +10,13 @@
 
    * :download:`SunFounder ESP32スターターキット <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
+#. Micro USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
 
-#. Thonny IDEを開き、マイクロUSBケーブルでESP32をコンピュータに接続し、右下隅にある「MicroPython (ESP32).COMXX」インタプリタをクリックします。
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
+#. Thonny IDEを開き、右下隅にある「MicroPython (ESP32).COMXX」インタープリタをクリックします。
     .. image:: img/sec_inter.png
 
 #. 上部のナビゲーションバーで、 **View** -> **Files** をクリックします。
