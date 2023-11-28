@@ -17,6 +17,9 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 
 <a id="update"></a>
 ## Update:
+2023-10-31:
+- Add electronic component purchase link.
+
 2023-10-20:
 - Correct some errors.
 - Add an FAQ for 'Unknown COMxx'.

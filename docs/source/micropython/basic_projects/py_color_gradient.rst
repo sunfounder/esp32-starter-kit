@@ -7,6 +7,44 @@ Are you ready to experience a world of color? This project will take you on a ma
 LED strip and achieve smooth color transitions. Whether you're looking to add some color to your home decor or 
 seeking a fun programming project, this project has got you covered. Let's dive into this colorful world together!
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_pot`
+        - |link_potentiometer_buy|
+    *   - :ref:`cpn_ws2812`
+        - |link_ws2812_buy|
 
 **Schematic**
 
@@ -16,27 +54,15 @@ This project uses an LED strip and a potentiometer to create a color mixing effe
 
 **Wiring**
 
-
 .. image:: ../../img/wiring/6.5_color_strip_bb.png
     :width: 800
 
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_pot`
-* :ref:`cpn_ws2812`
-
-
 **Code**
-
 
 .. note::
 
     * Open the ``6.5_color_gradient.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
 
 .. code-block:: python
     

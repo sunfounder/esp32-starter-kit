@@ -7,13 +7,51 @@ In this project, we will make a low temperature alarm system, when the temperatu
 
 .. image:: img/9_tem.png
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_thermistor`
+        - |link_thermistor_buy|
+
 You Will Learn
 ---------------------
 
 - Thermistor working principle
 - Multivariable and Subtractive Operations
-
-
 
 Build the Circuit
 -----------------------
@@ -27,12 +65,6 @@ One end of the thermistor is connected to GND, the other end is connected to pin
 The NTC thermistor is used here, so when the temperature rises, the resistance of the thermistor decreases, the voltage division of pin35 decreases, and the value obtained from pin35 decreases, and vice versa increases.
 
 .. image:: img/circuit/7_low_temp_bb.png
-
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_thermistor` 
-* :ref:`cpn_resistor`
 
 Programming
 ------------------

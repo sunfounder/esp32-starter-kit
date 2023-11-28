@@ -42,7 +42,6 @@ This relation is an empirical formula. It is accurate only when the temperature 
 **Example**
 
 * :ref:`ar_thermistor` (Arduino Project)
-* :ref:`ar_thermistor` (Arduino Project)
 * :ref:`ar_iot_mqtt` (Arduino Project)
 * :ref:`py_thermistor` (MicroPython Project)
 * :ref:`sh_low_temperature` (Scratch Project)

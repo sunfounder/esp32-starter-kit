@@ -57,6 +57,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_js_files = [
     'https://ezblock.cc/readDocFile/custom.js',
+    './lang.js', # new
 ]
 html_css_files = [
     'https://ezblock.cc/readDocFile/custom.css',
@@ -94,9 +95,22 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 
 
+
 # open link in a new window
 
 rst_epilog = """
+
+.. |link_german_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/de/latest/" target="_blank">Deutsch Online-Kurs</a>
+
+.. |link_jp_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/ja/latest/" target="_blank">日本語オンライン教材</a>
+
+.. |link_en_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/" target="_blank">English Online-tutorials</a>
 
 .. |link_thonny| raw:: html
 
@@ -210,6 +224,15 @@ rst_epilog = """
 
 rst_epilog += """
 
+.. |link_esp32_starter_kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">ESP32 Starter Kit</a>
+
+
+
+.. |link_esp32_wroom_32e_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/esp-wroom-32-esp32-esp-32s-development-board" target="_blank">BUY</a>    
 
 .. |link_led_buy| raw:: html
 
@@ -307,9 +330,28 @@ rst_epilog += """
 
     <a href="https://www.sunfounder.com/products/rfid-kit-blue" target="_blank">BUY</a>
 
-
 .. |link_pir_buy| raw:: html
 
     <a href="https://www.sunfounder.com/products/hcsr501-human-sensor" target="_blank">BUY</a>
 
+.. |link_avoid_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/ir-obstacle-avoidance-sensor-module" target="_blank">BUY</a> 
+
+.. |link_line_track_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/tracking-sensor-module" target="_blank">BUY</a> 
+
+.. |link_soil_moisture_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/capacitive-soil-moisture-sensor-module" target="_blank">BUY</a>  
+
+.. |link_joystick_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/dual-axis-button-joystick-module-ps2-game" target="_blank">BUY</a> 
+
+.. |link_dht11_buy| raw:: html
+
+    <a href="https://www.sunfounder.com/products/dht11-temperature-and-humidity-sensor-module" target="_blank">BUY</a> 
+        
 """

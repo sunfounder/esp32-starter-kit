@@ -1,8 +1,18 @@
 SunFounder ESP32 Starter Kit
 ==================================================
 
-.. image:: img/esp32_ultimate_kit.png
+Thanks for choosing our ESP32 Starter Kit.
 
+.. note::
+    This document is available in the following languages.
+
+        * |link_german_tutorials|
+        * |link_jp_tutorials|
+        * |link_en_tutorials|
+    
+    Please click on the respective links to access the document in your preferred language.
+
+.. image:: img/esp32_ultimate_kit.png
 
 Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
 

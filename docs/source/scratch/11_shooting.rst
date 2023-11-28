@@ -11,6 +11,42 @@ Click on the green flag to start. Use the Obstacle Avoidance module to shoot an 
 
 .. image:: img/14_shooting.png
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_avoid`
+        - |link_avoid_buy|
+
 You Will Learn
 ---------------------
 
@@ -26,11 +62,6 @@ The obstacle avoidance module is a distance-adjustable infrared proximity sensor
 Now build the circuit according to the diagram below.
 
 .. image:: img/circuit/12_shooting_bb.png
-
-
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_avoid` 
 
 Programming
 ------------------

@@ -9,6 +9,46 @@ When the sprite on the stage is clicked, the brightness of the LED slowly increa
 
 .. image:: img/3_ap.png
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+
 You Will Learn
 ---------------------
 
@@ -24,14 +64,6 @@ This project uses the same circuit as the previous project :ref:`sh_table_lamp`,
 The PWM signal range is 0-255, on the ESP32 board, 2, 5, 12~15, 18, 19, 21, 22, 25, 26 and 27 can output PWM signal.
 
 .. image:: img/circuit/1_hello_led_bb.png
-
-
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_led`
-* :ref:`cpn_resistor`
 
 Programming
 ------------------

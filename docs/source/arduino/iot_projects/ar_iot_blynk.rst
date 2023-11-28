@@ -9,6 +9,40 @@ This project demonstrate a simple home intrusion detection system using a PIR mo
 When the system is set to "Away" mode through the Blynk app, the PIR sensor monitors for motion.
 Any detected movement triggers a notification on the Blynk app, alerting the user of potential intrusion.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_pir`
+        - |link_pir_buy|
 
 
 1. Circuit Assembly
@@ -17,14 +51,6 @@ Any detected movement triggers a notification on the Blynk app, alerting the use
 .. image:: ../../img/wiring/iot_9_blynk_bb.png
     :width: 60%
     :align: center
-
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_led`
-* :ref:`cpn_pir`
 
 2. Blynk Configuration
 ----------------------

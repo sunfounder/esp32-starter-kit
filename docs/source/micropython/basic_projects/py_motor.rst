@@ -9,6 +9,44 @@ The L293D is a versatile integrated circuit (IC) commonly used for motor control
 
 By the end of this captivating project, you will have gained a thorough understanding of how digital signals and PWM signals can effectively be utilized to control motors. This invaluable knowledge will prove to be a solid foundation for your future endeavors in robotics and mechatronics. Buckle up and get ready to dive into the exciting world of motor control with the L293D!
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_motor`
+        - |link_motor_buy|
+    *   - :ref:`cpn_l293d`
+        - \-
 
 **Available Pins**
 
@@ -20,13 +58,10 @@ Here is a list of available pins on the ESP32 board for this project.
     * - Available Pins
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-
-
 **Schematic**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
-    
 **Wiring**
 
 .. note:: 
@@ -35,21 +70,12 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_wires`
-* :ref:`cpn_motor`
-* :ref:`cpn_l293d`
-
-
 **Code**
 
 .. note::
 
     * Open the ``4.1_motor_turn.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
     * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
 
 .. code-block:: python
 

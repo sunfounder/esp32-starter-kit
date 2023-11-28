@@ -10,6 +10,51 @@ But we didn't stop there. To immerse you further into this driving experience, w
 
 This innovative project combines cutting-edge technology with an interactive user interface, making your reversing experience safe and stress-free. With the ultrasonic module, LCD display, and lively buzzer working harmoniously, you'll feel empowered and confident while maneuvering in tight spaces, leaving you free to focus on the joy of driving.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
+    *   - :ref:`cpn_buzzer`
+        - \-
+    *   - :ref:`cpn_transistor`
+        - |link_transistor_buy|
+    *   - :ref:`cpn_lcd`
+        - |link_i2clcd1602_buy|
+
 **Schematic**
 
 .. image:: ../../img/circuit/circuit_6.4_reversing_aid.png
@@ -22,16 +67,6 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
 **Wiring**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
-
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_resistor`
-* :ref:`cpn_wires`
-* :ref:`cpn_ultrasonic`
-* :ref:`cpn_buzzer`
-* :ref:`cpn_transistor`
-* :ref:`cpn_lcd`
 
 **Code**
 

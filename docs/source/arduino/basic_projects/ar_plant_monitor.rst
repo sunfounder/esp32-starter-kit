@@ -1,4 +1,3 @@
-
 .. _ar_plant_monitor:
 
 6.6 Plant Monitor
@@ -8,6 +7,56 @@ Welcome to the Plant Monitor project!
 
 In this project, we will be using an ESP32 board to create a system that helps us take care of our plants. With this system, we can monitor the temperature, humidity, soil moisture, and light levels of our plants, and ensure that they are getting the care and attention they need to thrive.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_dht11`
+        - |link_dht11_buy|
+    *   - :ref:`cpn_lcd`
+        - |link_i2clcd1602_buy|
+    *   - :ref:`cpn_pump`
+        - \-
+    *   - :ref:`cpn_l293d`
+        - \-
+    *   - :ref:`cpn_button`
+        - |link_button_buy|
+    *   - :ref:`cpn_photoresistor`
+        - |link_photoresistor_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_soil_moisture`
+        - |link_soil_moisture_buy|
 
 **Schematic**
 
@@ -29,20 +78,6 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
-
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_dht11`
-* :ref:`cpn_lcd`
-* :ref:`cpn_pump`
-* :ref:`cpn_l293d`
-* :ref:`cpn_button`
-* :ref:`cpn_photoresistor`
-* :ref:`cpn_resistor`
-* :ref:`cpn_soil_moisture`
-
 
 **Code**
 

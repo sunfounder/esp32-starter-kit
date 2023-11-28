@@ -15,7 +15,7 @@ Key features include:
 * **Processing Power**: It's equipped with a dual-core Xtensa® 32-bit LX6 microprocessor, offering scalability and flexibility.
 * **Wireless Capabilities**: With integrated 2.4 GHz Wi-Fi and dual-mode Bluetooth, it's perfectly suited for applications demanding stable wireless communication.
 * **Memory & Storage**: It comes with ample SRAM and high-performance flash storage, catering to user programs and data storage needs.
-* **GPIO**: Offering up to 34 GPIO pins, it supports a variety of external devices and sensors.
+* **GPIO**: Offering up to 38 GPIO pins, it supports a variety of external devices and sensors.
 * **Low Power Consumption**: Multiple power-saving modes are available, making it ideal for battery-powered or energy-efficient scenarios.
 * **Security**: Integrated encryption and security features ensure user data and privacy are well-protected.
 * **Versatility**: From simple household appliances to complex industrial machinery, the WROOM-32E delivers consistent, efficient performance.
@@ -91,8 +91,7 @@ Refer to following table for a detailed boot-mode configuration by strapping pin
 .. image:: img/esp32_strapping.png
 
 * FE: falling-edge, RE: rising-edge
-* Firmware can configure register bits to change the settings of "Voltage of Internal
-* LDO (VDD_SDIO)" and "Timing of SDIO Slave", after booting.
+* Firmware can configure register bits to change the settings of "Voltage of Internal LDO (VDD_SDIO)" and "Timing of SDIO Slave", after booting.
 * The module integrates a 3.3 V SPI flash, so the pin MTDI cannot be set to 1 when the module is powered up.
 
 .. _cpn_esp32_camera_extension:

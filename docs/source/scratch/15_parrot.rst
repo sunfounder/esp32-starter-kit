@@ -10,6 +10,42 @@ You need to control the distance between your hand and the ultrasonic module so 
 
 .. image:: img/15_parrot.png
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - ESP32 Starter Kit
+        - 320+
+        - |link_esp32_starter_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_esp32_wroom_32e`
+        - |link_esp32_wroom_32e_buy|
+    *   - :ref:`cpn_esp32_camera_extension`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
+
 Build the Circuit
 -----------------------
 
@@ -19,11 +55,6 @@ It has two probes. One is to send ultrasonic waves and the other is to receive t
 Now build the circuit according to the following diagram.
 
 .. image:: img/circuit/16_flappy_parrot_bb.png
-
-
-* :ref:`cpn_esp32_wroom_32e`
-* :ref:`cpn_esp32_camera_extension`
-* :ref:`cpn_ultrasonic`
 
 Programming
 ------------------
