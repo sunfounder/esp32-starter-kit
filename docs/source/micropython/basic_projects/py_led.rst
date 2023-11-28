@@ -32,37 +32,46 @@ This circuit works on a simple principle, and the current direction is shown in 
 * :ref:`cpn_resistor`
 * :ref:`cpn_led`
 
-**Code**
+**Run the Code**
 
-.. note::
+#. Open the ``2.1_hello_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. 
 
-    * Open the ``2.1_hello_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    .. code-block:: python
 
+        # Import the necessary libraries
+        import machine
+        import time
 
+        # Set up the LED on pin 26 as an output pin
+        led = machine.Pin(26, machine.Pin.OUT)
 
-.. code-block:: python
+        # Start an infinite loop
+        while True:
+            # Turn on the LED by setting its value to 1 (HIGH)
+            led.value(1)
+            # Wait for 1 second (1000 milliseconds) while the LED is on
+            time.sleep(1)
 
-    # Import the necessary libraries
-    import machine
-    import time
+            # Turn off the LED by setting its value to 0 (LOW)
+            led.value(0)
+            # Wait for 0.5 seconds (500 milliseconds) while the LED is off
+            time.sleep(0.5)
 
-    # Set up the LED on pin 26 as an output pin
-    led = machine.Pin(26, machine.Pin.OUT)
+#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
 
-    # Start an infinite loop
-    while True:
-        # Turn on the LED by setting its value to 1 (HIGH)
-        led.value(1)
-        # Wait for 1 second (1000 milliseconds) while the LED is on
-        time.sleep(1)
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
-        # Turn off the LED by setting its value to 0 (LOW)
-        led.value(0)
-        # Wait for 0.5 seconds (500 milliseconds) while the LED is off
-        time.sleep(0.5)
+#. Then click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
 
-After the code runs, you will see the LED blinking.
+    .. image:: ../python_start/img/sec_inter.png
+
+#. Finally, click "Run Current Script" or press F5 to execute it.
+
+    .. image:: ../python_start/img/quick_guide2.png
+
+#. After the code runs, you will see the LED blinking.
 
 
 **How it works?**

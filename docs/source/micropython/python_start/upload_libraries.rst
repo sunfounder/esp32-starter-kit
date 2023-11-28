@@ -11,8 +11,13 @@ In some projects, you will need additional libraries. So here we upload these li
 
    * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
+#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
 
-#. Open Thonny IDE and plug the ESP32 into your computer with a micro USB cable and click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
+
+#. Open Thonny IDE and click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
 
     .. image:: img/sec_inter.png
 

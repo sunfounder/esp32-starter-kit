@@ -26,6 +26,10 @@ Stage Mode
 
 Connect your ESP32 board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
 
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
+    
 Open PictoBlox, the Python programming interface will open by default. And we need to switch to the Blocks interface.
 
 .. image:: img/0_choose_blocks.png
@@ -117,6 +121,10 @@ Upload Mode
 **1. Connect to ESP32 Board**
 
 Connect your ESP32 board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
 Open PictoBlox and click **Board** in the top right navigation bar to select the board.
 

@@ -32,21 +32,31 @@ This circuit works on a simple principle, and the current direction is shown in 
 * :ref:`cpn_resistor`
 * :ref:`cpn_led`
 
-**Code**
+**Upload Code**
 
-.. note::
+#. You can open the file ``2.1_hello_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.1_hello_led``. Or copy this code to the Arduino IDE directly .
+    
+    .. raw:: html
 
-    * You can open the file ``2.1_hello_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.1_hello_led``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
+#. Then connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+
     * :ref:`unknown_com_port`
-   
-.. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    .. image:: ../../img/plugin_esp32.png
+        :width: 600
+        :align: center
 
+#. Select the board (ESP32 Dev Module) and the appropriate port.
 
+    .. image:: img/choose_board.png
 
-After the code is uploaded successfully, you will see the LED blinking.
+#. Now, click the **Upload** button to upload the code to the ESP32 board.
+    
+    .. image:: img/click_upload.png
+
+#. After the code is uploaded successfully, you will see the LED blinking.
 
 **How it works?**
 
