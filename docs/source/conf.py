@@ -332,7 +332,7 @@ rst_epilog += """
 
 .. |link_pir_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/hcsr501-human-sensor" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/hcsr501-infrared-sensor" target="_blank">BUY</a>
 
 .. |link_avoid_buy| raw:: html
 
