@@ -22,9 +22,7 @@ For the creatives, there's a delightful section on integrating with Scratch, all
 
 With a myriad of game projects, practical applications, and troubleshooting FAQs, this kit promises an enriching learning experience for all. Dive in and let the ESP32 adventure begin!
 
-
 If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
-
 
 .. toctree::
     :maxdepth: 2
