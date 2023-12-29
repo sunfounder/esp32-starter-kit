@@ -95,7 +95,7 @@ It is also important to ensure that the SD card is properly mounted before savin
         Saved file to path: /picture9.jpg
         Going to sleep now
 
-    .. image:: img/press_reset.PNG
+    .. image:: img/press_reset.png
 
 #. Now, remove the SD card from the expansion board and insert it into your computer. You will be able to view the photos you just took.
 
