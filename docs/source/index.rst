@@ -28,6 +28,7 @@ If you have any questions or other interesting ideas, feel free to send an email
     :maxdepth: 2
 
     About this Kit <self>
+    download_code
     arduino/for_arduino_user
     arduino_video_course/arduino_video_course
     micropython/for_micropython_user
