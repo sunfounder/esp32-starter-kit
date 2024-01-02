@@ -104,41 +104,49 @@ void setup() {
     return;
   }
 
-  camera_fb_t *fb = NULL;
-
-  // Take Picture with Camera
-  fb = esp_camera_fb_get();
-  if (!fb) {
-    Serial.println("Camera capture failed");
-    return;
-  }
   // initialize EEPROM with predefined size
   EEPROM.begin(EEPROM_SIZE);
   pictureNumber = EEPROM.read(0) + 1;
 
-  // Path where new picture will be saved in SD Card
-  String path = "/picture" + String(pictureNumber) + ".jpg";
+  for (int shoot = 0; shoot < 5; shoot++) {
+    camera_fb_t *fb = NULL;
 
-  fs::FS &fs = SD_MMC;
-  Serial.printf("Picture file name: %s\n", path.c_str());
+    // Take Picture with Camera
+    fb = esp_camera_fb_get();
+    if (!fb) {
+      Serial.println("Camera capture failed");
+      return;
+    }
 
-  File file = fs.open(path.c_str(), FILE_WRITE);
-  if (!file) {
-    Serial.println("Failed to open file in writing mode");
-  } else {
-    file.write(fb->buf, fb->len);  // payload (image), payload length
-    Serial.printf("Saved file to path: %s\n", path.c_str());
-    EEPROM.write(0, pictureNumber);
-    EEPROM.commit();
+    // Path where new picture will be saved in SD Card
+    String path = "/picture" + String(pictureNumber) + ".jpg";
+
+    fs::FS &fs = SD_MMC;
+    // Serial.printf("Picture file name: %s\n", path.c_str());
+
+    File file = fs.open(path.c_str(), FILE_WRITE);
+    if (!file) {
+      Serial.println("Failed to open file in writing mode");
+    } else {
+      file.write(fb->buf, fb->len);  // Write image data to file
+      if (shoot == 4) {
+        Serial.printf("Saved file to path: %s\n", path.c_str());
+      }else{
+        Serial.printf("Shooting... \n");
+      }
+      EEPROM.write(0, pictureNumber);  // Update the picture number in EEPROM
+      EEPROM.commit();
+    }
+    file.close();                      // Close the file
+    esp_camera_fb_return(fb);          // Return the frame buffer back to the camera driver
+    delay(200);                        // Short delay between shots
   }
-  file.close();
-  esp_camera_fb_return(fb);
-
   // Turns off the ESP32-CAM white on-board LED (flash) connected to GPIO 4
   pinMode(4, OUTPUT);
   digitalWrite(4, LOW);
   rtc_gpio_hold_en(GPIO_NUM_4);
 
+  // Put the ESP32-CAM to deep sleep
   delay(2000);
   Serial.println("Going to sleep now");
   delay(2000);
@@ -147,4 +155,5 @@ void setup() {
 }
 
 void loop() {
+  // Empty loop as we are putting the ESP32-CAM to deep sleep
 }
