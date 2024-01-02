@@ -53,6 +53,7 @@ Die Schritte sind wie folgt.
 
 
     Über dieses Kit <self>
+    download_code
     components/component_list
     arduino/for_arduino_user
     micropython/for_micropython_user
