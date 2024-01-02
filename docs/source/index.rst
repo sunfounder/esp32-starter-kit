@@ -50,6 +50,7 @@ ESP32ラーニングキットへようこそ！この包括的なキットは、
     :maxdepth: 2
 
     このキットについて <self>
+    download_code
     components/component_list
     arduino/for_arduino_user
     micropython/for_micropython_user
