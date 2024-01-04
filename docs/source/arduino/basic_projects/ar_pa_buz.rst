@@ -74,7 +74,7 @@ Die Rolle des S8050 (NPN-Transistor) besteht darin, den Strom zu verstärken und
 **Verdrahtung**
 
 Im Kit sind zwei Arten von Summern enthalten.
-Wir müssen den passiven Summer verwenden. Drehen Sie sie um, die versiegelte Rückseite (nicht die freiliegende PCB) ist die, die wir wollen.
+Wir müssen den passiven Summer verwenden. Drehen Sie sie um, die freiliegende PCB ist die, die wir wollen.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
