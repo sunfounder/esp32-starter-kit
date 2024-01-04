@@ -74,7 +74,7 @@ The role of S8050 (NPN transistor) is to amplify the current and make the buzzer
 **Wiring**
 
 Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+We need to use passive buzzer. Turn them around, the exposed PCB is the one we want.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
