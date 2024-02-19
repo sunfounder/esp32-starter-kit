@@ -1,3 +1,7 @@
+.. _iot_camera_web:
+
+
+
 8.2 Camera Web Server
 =============================
 

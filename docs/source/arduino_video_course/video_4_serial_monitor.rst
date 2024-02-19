@@ -1,5 +1,5 @@
 
-Video 4 - Data Types, Variables, and Serial Monitor
+Video 4: Data Types, Variables, and Serial Monitor
 ============================================================
 
 This tutorial provides crucial knowledge for working with data types, variables, and the Serial Monitor in Arduino programming.
@@ -18,4 +18,4 @@ This tutorial provides crucial knowledge for working with data types, variables,
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/snmKdaxLPcw?si=ICHyMDyoCD_fTubn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/snmKdaxLPcw?si=ICHyMDyoCD_fTubn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

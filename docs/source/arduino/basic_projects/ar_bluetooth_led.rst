@@ -1,3 +1,6 @@
+.. _ar_bluetooth_led:
+
+
 7.2 Bluetooth Control RGB LED
 =================================
 

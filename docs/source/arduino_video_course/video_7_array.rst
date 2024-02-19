@@ -17,5 +17,5 @@ This tutorial is designed to provide a thorough understanding of using arrays an
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/7gh1OAu5vdo?si=JbXJoQYqShrCaFvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/7gh1OAu5vdo?si=JbXJoQYqShrCaFvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

@@ -16,7 +16,7 @@ This tutorial is perfect to learn how to utilize the WS2812 LED strip with ESP32
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/CdYeKW2N-nY?si=9dKvXzDMonp31L0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/CdYeKW2N-nY?si=9dKvXzDMonp31L0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **Related On-line Tutorials**
 

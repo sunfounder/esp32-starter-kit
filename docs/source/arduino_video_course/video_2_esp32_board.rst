@@ -1,4 +1,4 @@
-Video 2 - What's ESP32, Camera Extension Board?
+Video 2: What's ESP32, Camera Extension Board?
 ================================================
 
 This video introduces the SunFounder ESP32 IoT Learning Kit and its components, providing a solid foundation for further exploration and projects.
@@ -13,5 +13,5 @@ This video introduces the SunFounder ESP32 IoT Learning Kit and its components, 
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/vBlmp0wlfns?si=-A-juwGJQvxvQhb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/vBlmp0wlfns?si=-A-juwGJQvxvQhb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

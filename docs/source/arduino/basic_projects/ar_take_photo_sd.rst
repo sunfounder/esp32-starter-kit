@@ -1,3 +1,6 @@
+.. _ar_take_photo_sd:
+
+
 7.6 Take Photo SD
 ============================
 

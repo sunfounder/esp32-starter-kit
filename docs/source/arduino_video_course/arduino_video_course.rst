@@ -25,3 +25,39 @@ Embark on a journey through the Arduino world with the comprehensive Arduino Vid
     video_15_motor
     video_16_pump
     video_17_servo
+    video_18_tilt 
+    video_19_obstacle 
+    video_20_line_tracking 
+    video_21_pir 
+    video_22_light 
+    video_23_pot 
+    video_24_moisture 
+    video_25_thermistor 
+    video_26_joystick 
+    video_27_distance 
+    video_28_dht11 
+    video_29_irremote 
+    video_30_servo_mqtt 
+    video_31_flowing 
+    video_32_reversing_aid 
+    video_33_digital_dice 
+    video_34_color_gradient 
+    video_35_plant_monitor 
+    video_36_guess_number 
+    video_37_bluetooth 
+    video_38_bluetooth_led 
+    video_39_bluetooth_audio_player 
+    video_40_sd_write 
+    video_41_mp3_player_sd 
+    video_42_take_photo_sd 
+    video_43_open_weather 
+    video_44_camera_web 
+    video_45_html_cam 
+    video_46_mqtt 
+    video_47_cheerlight 
+    video_48_temp_mqtt 
+    video_50_rgb_remote 
+    video_51_temp_monitor 
+    video_52_cheerlight_lcd 
+    video_53_lcd_clock 
+    video_54_html_neopixel

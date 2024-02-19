@@ -1,3 +1,7 @@
+
+.. _iot_html_cam:
+
+
 8.3 Custom Video Streaming Web Server
 ========================================
 

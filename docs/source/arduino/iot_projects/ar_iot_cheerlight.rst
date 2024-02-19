@@ -1,3 +1,6 @@
+.. _iot_cheerlights:
+
+
 8.5 CheerLights
 ===============================
 CheerLights is a global network of synchronized lights that can be controlled by anyone.

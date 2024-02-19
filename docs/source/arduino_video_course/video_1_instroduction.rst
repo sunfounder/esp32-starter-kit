@@ -1,5 +1,5 @@
 
-Video 1 - Introduce this Kit
+Video 1: Introduce this Kit
 =====================================
 
 This video serves as an introduction to SunFounder's ESP32 IoT Learning Kit. It covers various aspects of the kit, highlighting its features and capabilities:
@@ -17,6 +17,6 @@ This video serves as an introduction to SunFounder's ESP32 IoT Learning Kit. It 
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/fsLxbRaqsaE?si=eZOoD9W-PYijG3S2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/fsLxbRaqsaE?si=eZOoD9W-PYijG3S2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
