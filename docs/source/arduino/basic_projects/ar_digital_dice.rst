@@ -1,37 +1,37 @@
 .. _ar_dice:
 
-6.4 Digital Dice
+6.4 Dados Digitales
 =============================
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Este proyecto se basa en el proyecto :ref:`py_7_segment` agregando un botón para controlar el dígito mostrado en el display de siete segmentos.
 
-In this project, a random number is generated and displayed on the seven-segment display to simulate a dice roll. When the button is pressed, a stable number (randomly selected from 1 to 6) is displayed on the seven-segment display. Pressing the button again will initiate the simulation of a dice roll, generating random numbers as before. This cycle continues each time the button is pressed.
+En este proyecto, se genera un número aleatorio y se muestra en el display de siete segmentos para simular un lanzamiento de dados. Cuando se presiona el botón, se muestra un número estable (seleccionado al azar de 1 a 6) en el display de siete segmentos. Presionar el botón nuevamente iniciará la simulación de un lanzamiento de dados, generando números aleatorios como antes. Este ciclo continúa cada vez que se presiona el botón.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,25 +50,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`ar_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Este proyecto se basa en el proyecto :ref:`ar_7_segment` agregando un botón para controlar el dígito mostrado en el display de siete segmentos.
 
-The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
+El botón está conectado directamente a IO13 sin una resistencia de pull-up o pull-down externa porque IO13 tiene una resistencia de pull-up interna de 47K, eliminando la necesidad de una resistencia externa adicional.
 
-
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``6.4_digital_dice.ino`` file under the path of ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``6.4_digital_dice.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
     
     
@@ -76,7 +75,6 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ad904f48-cd24-49ce-ad92-91b1fb76364d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-This project is based on :ref:`ar_7_segment` with a button to start/pause the scrolling display on the 7-segment Display.
+Este proyecto se basa en :ref:`ar_7_segment` con un botón para iniciar/pausar el desplazamiento de la pantalla en el Display de 7 segmentos.
 
-When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
-
+Cuando se presiona el botón, el display de 7 segmentos desplaza los números del 1-6, y cuando se suelta el botón, muestra un número aleatorio.

@@ -5,46 +5,45 @@ Transistor
 
 .. image:: img/npn_pnp.png
 
-Transistor is a semiconductor device that controls current by current. It functions by amplifying weak signal to larger amplitude signal and is also used for non-contact switch. 
+El transistor es un dispositivo semiconductor que controla la corriente mediante corriente. Funciona amplificando una señal débil a una señal de mayor amplitud y también se utiliza como interruptor sin contacto.
 
-A transistor is a three-layer structure composed of P-type and N-type semiconductors. They form the three regions internally. The thinner in the middle is the base region; the other two are both N-type or P-type ones - the smaller region with intense majority carriers is the emitter region, when the other one is the collector region. This composition enables the transistor to be an amplifier. 
-From these three regions, three poles are generated respectively, which are base (b), emitter (e), and collector (c). They form two P-N junctions, namely, the emitter junction and collection junction. The direction of the arrow in the transistor circuit symbol indicates that of the emitter junction. 
+Un transistor es una estructura de tres capas compuesta por semiconductores de tipo P y N. Internamente forman las tres regiones. La más delgada en el medio es la región de la base; las otras dos son ambas de tipo N o P: la región más pequeña con portadores de mayoría intensos es la región del emisor, mientras que la otra es la región del colector. Esta composición permite que el transistor sea un amplificador. 
+De estas tres regiones se generan tres polos respectivamente, que son base (b), emisor (e) y colector (c). Forman dos uniones P-N, a saber, la unión del emisor y la unión de recolección. La dirección de la flecha en el símbolo del circuito del transistor indica la dirección de la unión del emisor.
 
-* `P-N junction - Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
+* `Unión P-N - Wikipedia <https://es.wikipedia.org/wiki/Unión_p-n>`_
 
-Based on the semiconductor type, transistors can be divided into two groups, the NPN and PNP ones. From the abbreviation, we can tell that the former is made of two N-type semiconductors and one P-type and that the latter is the opposite. See the figure below. 
+Según el tipo de semiconductor, los transistores se pueden dividir en dos grupos, los NPN y PNP. Por la abreviatura, podemos deducir que el primero está hecho de dos semiconductores de tipo N y uno de tipo P, y que el segundo es lo contrario. Consulte la siguiente figura. 
 
 .. note::
-    s8550 is PNP transistor and the s8050 is the NPN one, They look very similar, and we need to check carefully to see their labels.
+    El s8550 es un transistor PNP y el s8050 es un transistor NPN, se parecen mucho, y debemos verificar cuidadosamente para ver sus etiquetas.
 
 .. image:: img/transistor_symbol.png
 
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+Cuando una señal de nivel alto atraviesa un transistor NPN, se energiza. Pero uno PNP necesita una señal de nivel bajo para gestionarlo. Ambos tipos de transistores se utilizan con frecuencia para interruptores sin contacto, al igual que en este experimento.
 
+* `Hoja de datos del transistor S8050 <https://components101.com/asset/sites/default/files/component_datasheet/S8050%20Transistor%20Datasheet.pdf>`_
+* `Hoja de datos del transistor S8550 <https://www.mouser.com/datasheet/2/149/SS8550-118608.pdf>`_
 
-* `S8050 Transistor Datasheet <https://components101.com/asset/sites/default/files/component_datasheet/S8050%20Transistor%20Datasheet.pdf>`_
-* `S8550 Transistor Datasheet <https://www.mouser.com/datasheet/2/149/SS8550-118608.pdf>`_
-
-Put the label side facing us and the pins facing down. The pins from left to right are emitter(e), base(b), and collector(c).
+Coloque el lado de la etiqueta hacia nosotros y los pines hacia abajo. Los pines de izquierda a derecha son emisor (e), base (b) y colector (c).
 
 .. image:: img/ebc.png
 
 .. note::
-    * The base is the gate controller device for the larger electrical supply. 
-    * In the NPN transistor, the collector is the larger electrical supply and the emitter is the outlet for that supply, the PNP transistor is just the opposite.
+    * La base es el dispositivo controlador de puerta para el suministro eléctrico más grande. 
+    * En el transistor NPN, el colector es el suministro eléctrico más grande y el emisor es la salida para ese suministro, en el transistor PNP es justo lo contrario.
 
 
 .. Example
 .. -------------------
 
-.. :ref:`Two Kinds of Transistors`
+.. :ref:`Dos Tipos de Transistores`
 
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_transistor` (Arduino Project)
-* :ref:`ar_ac_buz` (Arduino Project)
-* :ref:`ar_fruit_piano` (Arduino Project)
-* :ref:`py_transistor` (MicroPython Project)
-* :ref:`py_pa_buz` (MicroPython Project)
-* :ref:`py_light_theremin` (MicroPython Project)
+* :ref:`ar_transistor` (Proyecto Arduino)
+* :ref:`ar_ac_buz` (Proyecto Arduino)
+* :ref:`ar_fruit_piano` (Proyecto Arduino)
+* :ref:`py_transistor` (Proyecto MicroPython)
+* :ref:`py_pa_buz` (Proyecto MicroPython)
+* :ref:`py_light_theremin` (Proyecto MicroPython)

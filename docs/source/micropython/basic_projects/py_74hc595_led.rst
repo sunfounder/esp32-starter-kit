@@ -3,37 +3,37 @@
 2.4 Microchip - 74HC595
 ===========================
 
-Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
+¡Bienvenidos a este emocionante proyecto! En este proyecto, utilizaremos el chip 74HC595 para controlar una secuencia fluida de 8 LEDs.
 
-Imagine triggering this project and witnessing a mesmerizing flow of light, as if a sparkling rainbow is jumping between the 8 LEDs. Each LED will light up one by one and quickly fade away, while the next LED continues to shine, creating a gorgeous and dynamic effect.
+Imagina activar este proyecto y ser testigo de un flujo hipnotizante de luz, como si un arcoíris chispeante saltara entre los 8 LEDs. Cada LED se iluminará uno tras otro y se apagará rápidamente, mientras el siguiente LED sigue brillando, creando un efecto dinámico y espléndido.
 
-By cleverly utilizing the 74HC595 chip, we can control the on and off states of multiple LEDs to achieve the flowing effect. This chip has multiple output pins that can be connected in series to control the sequence of LED illumination. Moreover, thanks to the chip's expandability, we can easily add more LEDs to the flowing display, creating even more spectacular effects.
+Mediante el uso ingenioso del chip 74HC595, podemos controlar los estados de encendido y apagado de múltiples LEDs para lograr el efecto fluido. Este chip tiene múltiples pines de salida que pueden conectarse en serie para controlar la secuencia de iluminación de los LEDs. Además, gracias a la capacidad de expansión del chip, podemos añadir fácilmente más LEDs a la secuencia, creando efectos aún más espectaculares.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,41 +50,39 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí tienes una lista de los pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_2.4_74hc595_led.png
     :width: 600
 
-* When MR (pin10) is high level and CE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. 
-* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. 
-* There is a serial shift input pin (DS), a serial output pin (Q7') and an asynchronous reset button (low level) in the memory register. 
-* The memory register outputs a Bus with a parallel 8-bit and in three states. 
-* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+* Cuando MR (pin10) está en alto y CE (pin13) en bajo, los datos se ingresan en el flanco ascendente de SHcp y pasan al registro de memoria a través del flanco ascendente de SHcp. 
+* Si los dos relojes están conectados juntos, el registro de desplazamiento siempre está un pulso antes que el registro de memoria. 
+* Hay un pin de entrada de desplazamiento serial (DS), un pin de salida serial (Q7') y un botón de reinicio asincrónico (nivel bajo) en el registro de memoria. 
+* El registro de memoria produce un Bus con 8 bits paralelos y en tres estados. 
+* Cuando OE está activado (nivel bajo), los datos en el registro de memoria se envían al bus (Q0 ~ Q7).
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/2.4_74hc595_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``2.4_microchip_74hc595.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Abre el archivo ``2.4_microchip_74hc595.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 .. code-block:: python
 
@@ -133,20 +131,20 @@ Here is a list of available pins on the ESP32 board for this project.
 
 
 
-During script execution, you will see the LED light up one by one, and then turn off in the original order.
+Durante la ejecución del script, verás cómo se iluminan los LEDs uno por uno y luego se apagan en el orden original.
 
-**How it works?**
+**¿Cómo funciona?**
 
-This code is used to control an 8-bit shift register (74595), and output different binary values to the shift register, with each value displayed on an LED for a certain period of time.
+Este código se utiliza para controlar un registro de desplazamiento de 8 bits (74595) y emitir diferentes valores binarios al registro de desplazamiento, con cada valor mostrado en un LED por un cierto período de tiempo.
 
-#. The code imports the ``machine`` and ``time`` modules, where the ``machine`` module is used to control hardware I/O, and the ``time`` module is used for implementing time delays and other functions.
+#. El código importa los módulos ``machine`` y ``time``, donde el módulo ``machine`` se utiliza para controlar E/S de hardware, y el módulo ``time`` se utiliza para implementar retrasos de tiempo y otras funciones.
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Three output ports are initialized using the ``machine.Pin()`` function, corresponding to the data port (SDI), storage clock port (RCLK), and shift register clock port (SRCLK) of the shift register.
+#. Tres puertos de salida se inicializan usando la función ``machine.Pin()``, correspondiendo al puerto de datos (SDI), puerto de reloj de almacenamiento (RCLK) y puerto de reloj del registro de desplazamiento (SRCLK) del registro de desplazamiento.
 
     .. code-block:: python
 
@@ -155,7 +153,7 @@ This code is used to control an 8-bit shift register (74595), and output differe
         rclk = machine.Pin(27, machine.Pin.OUT)  # STcp
         srclk = machine.Pin(26, machine.Pin.OUT)  # SHcp
 
-#. A function called ``hc595_shift()`` is defined to write an 8-bit data to the shift register.
+#. Se define una función llamada ``hc595_shift()`` para escribir un dato de 8 bits en el registro de desplazamiento.
 
     .. code-block:: python
 
@@ -180,7 +178,7 @@ This code is used to control an 8-bit shift register (74595), and output differe
             # Latch the data into the storage register by setting the RCLK pin to high
             rclk.on()
 
-#. About the ``for`` loop.
+#. Acerca del bucle ``for``.
 
     .. code-block:: python
 
@@ -193,8 +191,8 @@ This code is used to control an 8-bit shift register (74595), and output differe
                 print("{:0>8b}".format(num))  # Print the current value in binary format
                 time.sleep_ms(200)  # Wait 200 milliseconds before shifting the next value
 
-    * The variable ``i`` is used to control the output binary value. In the first 8 iterations, the value of num will be successively 00000001, 00000011, 00000111, ..., 11111111, which is left-shifted by one bit and then added by 1.
-    * In the 9th to 16th iterations, the highest bit of 1 is first changed to 0, and then left-shifted by one bit, resulting in the output values of 00000010, 00000100, 00001000, ..., 10000000.
-    * In each iteration, the value of ``num`` is passed to the ``hc595_shift()`` function to control the shift register to output the corresponding binary value.
-    * At the same time as outputting the binary value, the ``print()`` function outputs the binary value as a string to the terminal.
-    * After outputting the binary value, the program pauses for 200 milliseconds using the ``time.sleep_ms()`` function, so that the value on the LED remains displayed for a certain period of time.
+    * La variable ``i`` se utiliza para controlar el valor binario de salida. En las primeras 8 iteraciones, el valor de num será sucesivamente 00000001, 00000011, 00000111, ..., 11111111, que se desplaza a la izquierda por un bit y luego se suma 1.
+    * En las iteraciones del 9 al 16, el bit más alto de 1 se cambia primero a 0, y luego se desplaza a la izquierda por un bit, resultando en los valores de salida de 00000010, 00000100, 00001000, ..., 10000000.
+    * En cada iteración, el valor de ``num`` se pasa a la función ``hc595_shift()`` para controlar el registro de desplazamiento para emitir el valor binario correspondiente.
+    * Al mismo tiempo que se emite el valor binario, la función ``print()`` muestra el valor binario como una cadena en el terminal.
+    * Después de emitir el valor binario, el programa hace una pausa durante 200 milisegundos usando la función ``time.sleep_ms()``, para que el valor en el LED permanezca mostrado por un cierto período de tiempo.

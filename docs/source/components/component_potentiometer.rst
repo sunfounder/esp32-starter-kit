@@ -1,48 +1,46 @@
 .. _cpn_pot:
 
-Potentiometer
+Potenciómetro
 ===============
 
 .. image:: img/potentiometer.png
     :align: center
     :width: 150
 
-Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation. 
+El potenciómetro es también un componente de resistencia con 3 terminales y su valor de resistencia puede ajustarse según alguna variación regular.
 
-Potentiometers come in various shapes, sizes, and values, but they all have the following things in common:
+Los potenciómetros vienen en varias formas, tamaños y valores, pero todos tienen las siguientes características en común:
 
-* They have three terminals (or connection points).
-* They have a knob, screw, or slider that can be moved to vary the resistance between the middle terminal and either one of the outer terminals.
-* The resistance between the middle terminal and either one of the outer terminals varies from 0 Ω to the maximum resistance of the pot as the knob, screw, or slider is moved.
+* Tienen tres terminales (o puntos de conexión).
+* Tienen un botón, tornillo o deslizador que puede moverse para variar la resistencia entre el terminal central y cualquiera de los terminales exteriores.
+* La resistencia entre el terminal central y cualquiera de los terminales exteriores varía desde 0 Ω hasta la resistencia máxima del potenciómetro a medida que se mueve el botón, tornillo o deslizador.
 
-Here is the circuit symbol of potentiometer. 
+Aquí está el símbolo de circuito del potenciómetro.
 
 .. image:: img/potentiometer_symbol.png
     :align: center
     :width: 400
 
 
-The functions of the potentiometer in the circuit are as follows: 
+Las funciones del potenciómetro en el circuito son las siguientes:
 
-#. Serving as a voltage divider
+#. Servir como divisor de voltaje
 
-    Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor.  At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the travel it has made. 
+    El potenciómetro es un resistor ajustable continuamente. Cuando ajustas el eje o la manija deslizante del potenciómetro, el contacto móvil se deslizará sobre el resistor. En este punto, se puede obtener un voltaje de salida dependiendo del voltaje aplicado al potenciómetro y el ángulo que el brazo móvil ha rotado o el recorrido que ha realizado.
 
-#. Serving as a rheostat
+#. Servir como reóstato
 
-    When the potentiometer is used as a rheostat, connect the middle pin and one of the other 2 pins in the circuit. Thus you can get a smoothly and continuously changed resistance value within the travel of the moving contact. 
+    Cuando el potenciómetro se utiliza como un reóstato, conecta el pin central y uno de los otros 2 pines en el circuito. Así puedes obtener un valor de resistencia cambiado suavemente y continuamente dentro del recorrido del contacto móvil.
 
-#. Serving as a current controller
+#. Servir como controlador de corriente
 
-    When the potentiometer acts as a current controller, the sliding contact terminal must be connected as one of the output terminals.
+    Cuando el potenciómetro actúa como un controlador de corriente, el terminal de contacto deslizante debe conectarse como uno de los terminales de salida.
 
-If you want to know more about potentiometer, refer to: `Potentiometer - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer>`_
+Si deseas saber más sobre el potenciómetro, consulta: `Potenciómetro - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer>`_
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_potentiometer` (Arduino Project)
-* :ref:`py_potentiometer` (MicroPython Project)
-* :ref:`sh_moving_mouse` (Scratch Project)
-* :ref:`sh_breakout_clone` (Scratch Project)
-
-
+* :ref:`ar_potentiometer` (Proyecto Arduino)
+* :ref:`py_potentiometer` (Proyecto MicroPython)
+* :ref:`sh_moving_mouse` (Proyecto Scratch)
+* :ref:`sh_breakout_clone` (Proyecto Scratch)

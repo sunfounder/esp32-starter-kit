@@ -1,40 +1,40 @@
 .. _sh_moving_mouse:
 
-2.4 Moving Mouse
-===================
+2.4 Ratón en Movimiento
+=====================================
 
-Today we are going to make a mouse toy controlled by a potentiometer.
+Hoy vamos a hacer un juguete de ratón controlado por un potenciómetro.
 
-When the green flag is clicked, the mouse on the stage moves forward, and when you rotate the potentiometer, the mouse will change the direction of movement.
+Cuando se hace clic en la bandera verde, el ratón en el escenario se mueve hacia adelante, y al girar el potenciómetro, el ratón cambiará la dirección de movimiento.
 
 .. image:: img/6_mouse.png
 
-Required Components
----------------------
+Componentes necesarios
+------------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,69 +47,66 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-You Will Learn
+Lo que aprenderás
 ---------------------
 
-- Potentiometer principle
-- Read analog pin and ranges
-- Mapping one range to another
-- Moving and changing the direction of sprite
+- Principio del potenciómetro
+- Leer pin analógico y rangos
+- Mapear un rango a otro
+- Mover y cambiar la dirección del sprite
 
-Build the Circuit
+Construir el circuito
 -----------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to pin35. After conversion by the ADC converter of the ESP32, the value range is 0-4095.
+El potenciómetro es un elemento resistivo con 3 terminales, los pines laterales están conectados a 5V y GND, y el pin del medio está conectado al pin35. Después de la conversión por el convertidor ADC del ESP32, el rango de valores es 0-4095.
 
 .. image:: img/circuit/5_moving_mouse_bb.png
 
-Programming
+Programación
 ------------------
 
-**1. Choose a sprite**
+**1. Elegir un sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **mouse** in the search box, and then click to add it.
+Elimina el sprite predeterminado, haz clic en el botón **Elegir un Sprite** en la esquina inferior derecha del área de sprites, ingresa **ratón** en la caja de búsqueda y luego haz clic para añadirlo.
 
 .. image:: img/6_sprite.png
 
-**2. Creating a variable**.
+**2. Crear una variable**.
 
-Create a variable called **value** to store the value of the potentiometer read.
+Crea una variable llamada **valor** para almacenar el valor leído del potenciómetro.
 
-Once created, you will see **value** appear inside the **Variables** palette and in the checked state, which means this variable will appear on the stage.
+Una vez creada, verás **valor** aparecer dentro de la paleta **Variables** y en estado marcado, lo que significa que esta variable aparecerá en el escenario.
 
 .. image:: img/6_value.png
 
-**3. Read the value of pin35**
+**3. Leer el valor del pin35**
 
-Store the value of pin35 read into the variable **value**.
+Almacena el valor leído del pin35 en la variable **valor**.
 
-* [set my variable to 0]: Set the value of the variable.
-* [read analog pin ()]: Read the value of pins in the range of 0-4095.
+* [establecer mi variable a 0]: Establece el valor de la variable.
+* [leer pin analógico ()]: Lee el valor de los pines en el rango de 0-4095.
 
 .. image:: img/6_read_a0.png
 
-To be able to read all the way through, you need to use the [forever] block. Click on this script to run it, rotate the potentiometer in both directions, and you will see that the value range is 0-1023.
+Para poder leer de manera continua, necesitas usar el bloque [siempre]. Haz clic en este script para ejecutarlo, gira el potenciómetro en ambas direcciones y verás que el rango de valores es 0-1023.
 
 .. image:: img/6_1023.png
 
-**4. Move the sprite**
+**4. Mover el sprite**
 
-Use the [move steps] block to move the sprite, run the script and you will see the sprite move from the middle to the right.
+Usa el bloque [mover pasos] para mover el sprite, ejecuta el script y verás que el sprite se mueve del medio hacia la derecha.
 
 .. image:: img/6_move.png
 
-**5. Changing the sprite's direction**
+**5. Cambiar la dirección del movimiento del sprite**
 
-Now change the direction of the sprite's movement by the value of pin35. Since the value of pin35 ranges from 0-4095, but the sprite's rotation direction is -180~180, a [map] block needs to be used.
+Ahora cambia la dirección del movimiento del sprite por el valor del pin35. Dado que el valor del pin35 varía de 0-4095, pero la dirección de rotación del sprite es de -180~180, se necesita usar un bloque [mapear].
 
-Also add [when green flag clicked] at the beginning to start the script.
+También agrega [cuando se hace clic en la bandera verde] al principio para iniciar el script.
 
-* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Set the steering angle of the sprite, from **Motion** palette.
-* [map from to]: Map a range to another range.
+* [`apuntar en dirección <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Establece el ángulo de dirección del sprite, desde la paleta **Movimiento**.
+* [mapear de a]: Mapea un rango a otro rango.
 
 .. image:: img/6_direction.png
-
-
-
 
 

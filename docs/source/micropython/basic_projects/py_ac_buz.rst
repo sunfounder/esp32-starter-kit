@@ -1,34 +1,34 @@
 .. _py_ac_buz:
 
-3.1 Beep
+3.1 Pitido
 ==================
-This is a simple project to make an active buzzer beep quickly four times every second.
+Este es un proyecto simple para hacer que un zumbador activo emita un pitido rápidamente cuatro veces cada segundo.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,47 +45,47 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí tienes una lista de los pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+Cuando la salida IO14 es alta, después de la resistencia limitadora de corriente de 1K (para proteger el transistor), el S8050 (transistor NPN) conducirá, haciendo que el zumbador suene.
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
+El rol del S8050 (transistor NPN) es amplificar la corriente y hacer que el zumbador suene más fuerte. De hecho, también puedes conectar el zumbador directamente a IO14, pero encontrarás que el sonido del zumbador es menor.
 
-**Wiring**
+**Cableado**
 
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+El kit incluye dos tipos de zumbadores.
+Necesitamos usar el zumbador activo. Gíralos, el que tiene la parte trasera sellada (no el PCB expuesto) es el que queremos.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+El zumbador necesita usar un transistor para funcionar, aquí usamos S8050 (Transistor NPN).
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``3.1_beep.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``3.1_beep.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 
 
@@ -114,6 +114,4 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
         time.sleep(1)
 
 
-
-When the script is running, the buzzer will beep quickly four times every second.
-
+Cuando el script está en ejecución, el zumbador emitirá un pitido rápidamente cuatro veces cada segundo.

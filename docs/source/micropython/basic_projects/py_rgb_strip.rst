@@ -1,37 +1,37 @@
 .. _py_rgb_strip:
 
-2.7 RGB LED Strip
+2.7 Tira de LED RGB
 ======================
 
-In this project, we will delve into the mesmerizing world of driving WS2812 LED strips and bring a vibrant display of colors to life. With the ability to individually control each LED on the strip, we can create captivating lighting effects that will dazzle the senses.
+En este proyecto, nos adentraremos en el fascinante mundo de controlar tiras de LED WS2812, dando vida a un vibrante espectáculo de colores. Con la capacidad de controlar individualmente cada LED de la tira, podemos crear efectos de iluminación cautivadores que deslumbrarán los sentidos.
 
-Furthermore, we have included an exciting extension to this project, where we will explore the realm of randomness. By introducing random colors and implementing a flowing light effect, we can create a mesmerizing visual experience that captivates and enchants.
+Además, hemos incluido una extensión emocionante a este proyecto, donde exploraremos el reino de la aleatoriedad. Introduciendo colores aleatorios y implementando un efecto de luz fluida, podemos crear una experiencia visual hipnotizante que cautiva y encanta.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN AL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,45 +42,44 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_2.7_ws2812.png
     :width: 500
     :align: center
 
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
 .. note::
 
-    IO33 is not available for this project.
+    IO33 no está disponible para este proyecto.
 
-    The WS2812 LED strip is a type of LED strip that requires a precise pulse-width modulation (PWM) signal. The PWM signal has precise requirements in both time and voltage. For instance, a "0" bit for the WS2812 corresponds to a high-level pulse of about 0.4 microseconds, while a "1" bit corresponds to a high-level pulse of about 0.8 microseconds. This means the strip needs to receive high-frequency voltage changes.
+    La tira de LED WS2812 es un tipo de tira de LED que requiere una señal precisa de modulación por ancho de pulso (PWM). La señal PWM tiene requisitos precisos tanto en tiempo como en voltaje. Por ejemplo, un bit "0" para el WS2812 corresponde a un pulso de alto nivel de aproximadamente 0.4 microsegundos, mientras que un bit "1" corresponde a un pulso de alto nivel de aproximadamente 0.8 microsegundos. Esto significa que la tira necesita recibir cambios de voltaje de alta frecuencia.
 
-    However, with a 4.7K pull-up resistor and a 100nf pull-down capacitor on IO33, a simple low-pass filter is created. This type of circuit "smooths out" high-frequency signals, because the capacitor needs some time to charge and discharge when it receives voltage changes. Therefore, if the signal changes too quickly (i.e., is high-frequency), the capacitor will not be able to keep up. This results in the output signal becoming blurred and unrecognizable to the strip.
+    Sin embargo, con una resistencia de pull-up de 4.7K y un condensador de pull-down de 100nf en IO33, se crea un filtro pasa bajo simple. Este tipo de circuito "suaviza" las señales de alta frecuencia, porque el condensador necesita algún tiempo para cargar y descargar cuando recibe cambios de voltaje. Por lo tanto, si la señal cambia demasiado rápido (es decir, es de alta frecuencia), el condensador no podrá seguir el ritmo. Esto resulta en que la señal de salida se vuelva borrosa e irreconocible para la tira.
 
-**Wiring**
+**Conexión**
 
 .. image:: ../../img/wiring/2.7_rgb_strip_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``2.7_rgb_strip.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``2.7_rgb_strip.py`` ubicado en el camino ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
-    
 .. code-block:: python
 
     from machine import Pin
@@ -89,7 +88,7 @@ Here is a list of available pins on the ESP32 board for this project.
     pin = Pin(14, Pin.OUT)   # set a pin to output to drive NeoPixels
     pixels = NeoPixel(pin, 8)   # create NeoPixel driver on pin for 8 pixels
 
-    pixels[0] = [64,154,227]    # set the pixel 
+    pixels[0] = [64,154,227]    # set the pixel
     pixels[1] = [128,0,128]
     pixels[2] = [50,150,50]
     pixels[3] = [255,30,30]
@@ -100,46 +99,44 @@ Here is a list of available pins on the ESP32 board for this project.
 
     pixels.write()              # write data to all pixels
 
+¡Seleccionemos algunos colores favoritos y mostrémoslos en la Tira de LED RGB!
 
-Let's select some favorite colors and display them on the RGB LED Strip!
+**¿Cómo funciona?**
 
-**How it works?**
+#. En el módulo ``neopixel``, hemos integrado funciones relacionadas en la clase ``NeoPixel``.
 
-#. In the ``neopixel`` module, we have integrated related functions into the ``NeoPixel`` class.
+.. code-block:: python
 
-    .. code-block:: python
+    from neopixel import NeoPixel
 
-        from neopixel import NeoPixel
+#. Utiliza la clase ``NeoPixel`` del módulo ``neopixel`` para inicializar el objeto ``pixels``, especificando el pin de datos y el número de LEDs.
 
-#. Use the ``NeoPixel`` class from the ``neopixel`` module to initialize the  ``pixels`` object, specifying the data pin and the number of LEDs.
+.. code-block:: python
 
-    .. code-block:: python
+    pixels = NeoPixel(pin, 8)   # create NeoPixel driver on pin for 8 pixels
 
-        pixels = NeoPixel(pin, 8)   # create NeoPixel driver on pin for 8 pixels
+#. Configura el color de cada LED y usa el método ``write()`` para enviar los datos al LED WS2812 y actualizar su visualización.
 
-#. Set the color of each LED and use the ``write()`` method to send the data to the WS2812 LED to update its display.
+.. code-block:: python
 
-    .. code-block:: python
+    pixels[0] = [64,154,227]    # set the pixel
+    pixels[1] = [128,0,128]
+    pixels[2] = [50,150,50]
+    pixels[3] = [255,30,30]
+    pixels[4] = [0,128,255]
+    pixels[5] = [99,199,0]
+    pixels[6] = [128,128,128]
+    pixels[7] = [255,100,0]
 
-        pixels[0] = [64,154,227]    # set the pixel 
-        pixels[1] = [128,0,128]
-        pixels[2] = [50,150,50]
-        pixels[3] = [255,30,30]
-        pixels[4] = [0,128,255]
-        pixels[5] = [99,199,0]
-        pixels[6] = [128,128,128]
-        pixels[7] = [255,100,0]
+    pixels.write()              # write data to all pixels
 
-        pixels.write()              # write data to all pixels
+**Aprende Más**
 
-**Learn More**
-
-We can randomly generate colors and make a colorful flowing light.
+Podemos generar colores aleatoriamente y hacer una luz fluida colorida.
 
 .. note::
 
-    * Open the ``2.7_rgb_strip_random.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
+    * Abre el archivo ``2.7_rgb_strip_random.py`` ubicado en el camino ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 .. code-block:: python
 
@@ -175,9 +172,7 @@ We can randomly generate colors and make a colorful flowing light.
             # Wait for a period of time to control the speed of the running light
             time.sleep_ms(100)
 
-
-* In the ``while`` loop, we use a ``for`` loop to turn on each pixel of the RGB LED strip one by one. 
-* First use the ``random.randint()`` function to generate a random color for the current pixel.
-* Then turn on the current pixel with the random color, use the ``write()`` method of the ``NeoPixel`` object to send the color data to the RGB LED strip to update its display
-* Finally, turn off the current pixel by setting its color to (0, 0, 0), and wait for a period of time to control the speed of the running light.
-
+* En el bucle ``while``, usamos un bucle ``for`` para encender cada píxel de la tira de LED RGB uno por uno.
+* Primero usa la función ``random.randint()`` para generar un color aleatorio para el píxel actual.
+* Luego enciende el píxel actual con el color aleatorio, usa el método ``write()`` del objeto ``NeoPixel`` para enviar los datos de color a la tira de LED RGB y actualizar su visualización.
+* Finalmente, apaga el píxel actual configurando su color a (0, 0, 0), y espera un período de tiempo para controlar la velocidad de la luz corriente.

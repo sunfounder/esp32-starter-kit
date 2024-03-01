@@ -3,37 +3,37 @@
 2.4 Microchip - 74HC595
 ===========================
 
-Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
+¡Bienvenido a este emocionante proyecto! En este proyecto, utilizaremos el chip 74HC595 para controlar un flujo luminoso de 8 LEDs.
 
-Imagine triggering this project and witnessing a mesmerizing flow of light, as if a sparkling rainbow is jumping between the 8 LEDs. Each LED will light up one by one and quickly fade away, while the next LED continues to shine, creating a gorgeous and dynamic effect.
+Imagina activar este proyecto y ser testigo de un flujo hipnotizante de luz, como si un arcoíris chispeante saltara entre los 8 LEDs. Cada LED se iluminará uno por uno y se apagará rápidamente, mientras el siguiente LED continúa brillando, creando un efecto hermoso y dinámico.
 
-By cleverly utilizing the 74HC595 chip, we can control the on and off states of multiple LEDs to achieve the flowing effect. This chip has multiple output pins that can be connected in series to control the sequence of LED illumination. Moreover, thanks to the chip's expandability, we can easily add more LEDs to the flowing display, creating even more spectacular effects.
+Utilizando de manera ingeniosa el chip 74HC595, podemos controlar los estados de encendido y apagado de múltiples LEDs para lograr el efecto de flujo. Este chip tiene múltiples pines de salida que pueden conectarse en serie para controlar la secuencia de iluminación de los LEDs. Además, gracias a la capacidad de expansión del chip, podemos agregar fácilmente más LEDs al display de flujo, creando efectos aún más espectaculares.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,57 +51,57 @@ You can also buy them separately from the links below.
         - |link_74hc595_buy|
 
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí está una lista de los pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_2.4_74hc595_led.png
     :width: 600
 
-* When MR (pin10) is high level and CE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. 
-* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. 
-* There is a serial shift input pin (DS), a serial output pin (Q7') and an asynchronous reset button (low level) in the memory register. 
-* The memory register outputs a Bus with a parallel 8-bit and in three states. 
-* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+* Cuando MR (pin10) está a nivel alto y CE (pin13) está a nivel bajo, los datos se ingresan en el flanco ascendente de SHcp y pasan al registro de memoria a través del flanco ascendente de SHcp. 
+* Si los dos relojes están conectados juntos, el registro de desplazamiento siempre va un pulso antes que el registro de memoria. 
+* Hay un pin de entrada de desplazamiento serial (DS), un pin de salida serial (Q7') y un botón de reinicio asíncrono (nivel bajo) en el registro de memoria. 
+* El registro de memoria produce una salida de Bus con 8 bits paralelos y en tres estados. 
+* Cuando OE está habilitado (nivel bajo), los datos en el registro de memoria se envían al bus(Q0 ~ Q7).
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/2.4_74hc595_bb.png
     :width: 800
 
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``2.4_74hc595.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.4_74hc595``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``2.4_74hc595.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\2.4_74hc595``.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/024e20bb-f9c6-4baf-bb27-cdf49eb91e9e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When you finish uploading the codes to the ESP32 board, you can see the LEDs turning on one after another.
+Cuando termines de subir los códigos a la placa ESP32, podrás ver los LEDs encendiéndose uno tras otro.
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. Declare an array, store several 8 bit binary numbers that are used to change the working state of the eight LEDs controlled by 74HC595. 
+#. Declara un arreglo, almacena varios números binarios de 8 bits que se utilizan para cambiar el estado de trabajo de los ocho LEDs controlados por 74HC595.
 
     .. code-block:: arduino
 
         int datArray[] = {B00000000, B00000001, B00000011, B00000111, B00001111, B00011111, B00111111, B01111111, B11111111};
 
-#. ``loop()`` function.
+#. Función ``loop()``.
 
     .. code-block:: arduino
 
@@ -117,7 +117,7 @@ When you finish uploading the codes to the ESP32 board, you can see the LEDs tur
             }
 
 
-    * Iterates through the ``datArray[]``, sequentially sending the binary values to the shift register.
-    * The ``digitalWrite(STcp, LOW)`` and ``digitalWrite(STcp, HIGH)`` commands latch the data into the storage register.
-    * ``shiftOut()`` function sends the binary values from ``datArray[]`` to the shift register using the data pin (DS) and shift register clock pin (SHcp). ``MSBFIRST`` means to move from high bits.
-    * Then create a 1-second pause between each LED pattern update.
+    * Itera a través de ``datArray[]``, enviando secuencialmente los valores binarios al registro de desplazamiento.
+    * Los comandos ``digitalWrite(STcp, LOW)`` y ``digitalWrite(STcp, HIGH)`` aseguran los datos en el registro de almacenamiento.
+    * La función ``shiftOut()`` envía los valores binarios desde ``datArray[]`` al registro de desplazamiento usando el pin de datos (DS) y el pin de reloj del registro de desplazamiento (SHcp). ``MSBFIRST`` significa moverse desde los bits más altos.
+    * Luego crea una pausa de 1 segundo entre cada actualización del patrón de LEDs.

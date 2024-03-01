@@ -1,39 +1,39 @@
 .. _py_servo:
 
-4.3 Swinging Servo
+4.3 Servo Oscilante
 ===================
 
-A Servo is a type of position-based device known for its ability to maintain specific angles and deliver precise rotation. This makes it highly desirable for control systems that demand consistent angle adjustments. It's not surprising that Servos have found extensive use in high-end remote-controlled toys, from airplane models to submarine replicas and sophisticated remote-controlled robots.
+Un Servo es un tipo de dispositivo basado en la posición conocido por su capacidad para mantener ángulos específicos y proporcionar una rotación precisa. Esto lo hace altamente deseable para sistemas de control que demandan ajustes de ángulo consistentes. No es sorprendente que los Servos se hayan utilizado ampliamente en juguetes controlados remotamente de alta gama, desde modelos de aviones hasta réplicas de submarinos y robots controlados remotamente sofisticados.
 
-In this intriguing adventure, we'll challenge ourselves to manipulate the Servo in a unique way - by making it sway! This project offers a brilliant opportunity to dive deeper into the dynamics of Servos, sharpening your skills in precise control systems and offering a deeper understanding of their operation.
+En esta aventura intrigante, nos desafiaremos a manipular el Servo de una manera única: ¡haciéndolo balancearse! Este proyecto ofrece una brillante oportunidad para profundizar en la dinámica de los Servos, afilando tus habilidades en sistemas de control precisos y ofreciendo una comprensión más profunda de su operación.
 
-Are you ready to make the Servo dance to your tunes? Let's embark on this exciting journey!
+¿Estás listo para hacer bailar al Servo a tu ritmo? ¡Embarquémonos en este emocionante viaje!
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN AL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,35 +44,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-**Available Pins**
 
-Here is a list of available pins on the ESP32 board for this project.
+**Pines Disponibles**
+
+Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_4.3_servo.png
 
-**Wiring**
+**Conexión**
 
-* Orange wire is signal and connected to IO25.
-* Red wire is VCC and connected to 5V.
-* Brown wire is GND and connected to GND.
+* El cable naranja es de señal y se conecta a IO25.
+* El cable rojo es VCC y se conecta a 5V.
+* El cable marrón es GND y se conecta a GND.
 
 .. image:: ../../img/wiring/4.3_swinging_servo_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``4.3_swinging_servo.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``4.3_swinging_servo.py`` ubicado en el camino ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 
 
@@ -112,13 +113,13 @@ Here is a list of available pins on the ESP32 board for this project.
             time.sleep_ms(20)
 
 
-When running this code, the servo will continuously sweep back and forth between 0 and 180 degrees.
+Al ejecutar este código, el servo oscilará continuamente de ida y vuelta entre 0 y 180 grados.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
 
-#. Import the necessary libraries: ``machine`` for controlling the microcontroller's hardware, and ``time`` for adding delays.
+#. Importar las bibliotecas necesarias: ``machine`` para controlar el hardware del microcontrolador, y ``time`` para agregar retrasos.
 
 
     .. code-block:: python
@@ -126,7 +127,7 @@ When running this code, the servo will continuously sweep back and forth between
         import machine
         import time
 
-#. Create a PWM (Pulse Width Modulation) object on Pin 25 and set its frequency to 50 Hz, which is common for servo.
+#. Crear un objeto PWM (Modulación por Ancho de Pulso) en el Pin 25 y establecer su frecuencia a 50 Hz, que es común para servo.
 
     .. code-block:: python
 
@@ -136,14 +137,14 @@ When running this code, the servo will continuously sweep back and forth between
         # Set the frequency of the PWM signal to 50 Hz, common for servos
         servo.freq(50)
 
-#. Define an ``interval_mapping`` function to map values from one range to another. This will be used to convert the angle to the appropriate pulse width and duty cycle.
+#. Definir una función ``interval_mapping`` para mapear valores de un rango a otro. Esto se usará para convertir el ángulo al ancho de pulso y ciclo de trabajo apropiados.
 
     .. code-block:: python
 
         def interval_mapping(x, in_min, in_max, out_min, out_max):
             return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
-#. Define a ``servo_write`` function that takes a PWM object and an angle as inputs. It calculates the pulse width and duty cycle based on the given angle, and then sets the PWM output accordingly.
+#. Definir una función ``servo_write`` que toma un objeto PWM y un ángulo como entradas. Calcula el ancho de pulso y ciclo de trabajo basado en el ángulo dado, y luego establece la salida PWM en consecuencia.
 
     .. code-block:: python
         
@@ -153,12 +154,12 @@ When running this code, the servo will continuously sweep back and forth between
             duty = int(interval_mapping(pulse_width, 0, 20, 0, 1023))     # Calculate the duty cycle
             pin.duty(duty) # Set the duty cycle of the PWM signal
 
-    * In this function, ``interval_mapping()`` is called to map the angle range 0 ~ 180 to the pulse width range 0.5 ~ 2.5ms.
-    * Why is it 0.5~2.5? This is determined by the working mode of the :ref:`Servo`. 
-    * Next, convert the pulse width from period to duty. 
-    * Since ``duty()`` cannot have decimals when used (the value cannot be a float type), we used ``int()`` to force the duty to be converted to an int type.
+    * En esta función, se llama a ``interval_mapping()`` para mapear el rango de ángulo 0 ~ 180 al rango de ancho de pulso 0.5 ~ 2.5ms.
+    * ¿Por qué es 0.5~2.5? Esto está determinado por el modo de trabajo del :ref:`Servo`. 
+    * Luego, convertir el ancho de pulso de período a ciclo de trabajo. 
+    * Dado que ``duty()`` no puede tener decimales cuando se usa (el valor no puede ser de tipo flotante), usamos ``int()`` para forzar que el ciclo de trabajo se convierta a tipo entero.
 
-#. Create an infinite loop with two nested loops.
+#. Crear un bucle infinito con dos bucles anidados.
 
     .. code-block:: python
 
@@ -173,5 +174,5 @@ When running this code, the servo will continuously sweep back and forth between
                 servo_write(servo, angle)
                 time.sleep_ms(20)
     
-    * The first nested loop iterates through angles from 0 to 180 degrees, and the second nested loop iterates through angles from 180 to 0 degrees in reverse.
-    * In each iteration, the ``servo_write`` function is called with the current angle, and a delay of 20 milliseconds is added.
+    * El primer bucle anidado itera a través de ángulos de 0 a 180 grados, y el segundo bucle anidado itera a través de ángulos de 180 a 0 grados en reversa.
+    * En cada iteración, se llama a la función ``servo_write`` con el ángulo actual, y se añade un retraso de 20 milisegundos.

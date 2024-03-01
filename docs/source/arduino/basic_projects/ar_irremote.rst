@@ -1,38 +1,38 @@
 .. _ar_receiver:
 
-5.14 IR Receiver
+5.14 Receptor IR
 =========================
-An infrared receiver is a component that receives infrared signals and can independently detect and output signals compatible with TTL level. It is similar in size to a regular plastic-packaged transistor and is commonly used in various applications such as infrared remote control and infrared transmission.
+Un receptor infrarrojo es un componente que recibe señales infrarrojas y puede detectar y emitir señales compatibles con el nivel TTL de forma independiente. Es similar en tamaño a un transistor empaquetado en plástico regular y se utiliza comúnmente en diversas aplicaciones como control remoto infrarrojo y transmisión infrarroja.
 
-In this project, we will use an infrared receiver to detect signals from a remote control. When a button on the remote control is pressed and the infrared receiver receives the corresponding signal, it can decode the signal to determine which button was pressed. By decoding the received signal, we can identify the specific key or command associated with it.
+En este proyecto, usaremos un receptor infrarrojo para detectar señales de un control remoto. Cuando se presiona un botón en el control remoto y el receptor infrarrojo recibe la señal correspondiente, puede decodificar la señal para determinar qué botón se presionó. Al decodificar la señal recibida, podemos identificar la tecla o comando específico asociado con ella.
 
-The infrared receiver allows us to incorporate remote control functionality into our project, enabling us to interact with and control devices using infrared signals.
+El receptor infrarrojo nos permite incorporar funcionalidad de control remoto en nuestro proyecto, permitiéndonos interactuar con y controlar dispositivos usando señales infrarrojas.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,34 +46,34 @@ You can also buy them separately from the links below.
         - |link_receiver_buy|
 
 
-**Available Pins**
+**Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Pines Disponibles
             - IO13, IO12, IO14, IO27, IO26, IO25, IO15, IO0, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.14_receiver.png
 
-When you press a button on the remote control, the infrared receiver detects the signal, and you can use an infrared library to decode it. This decoding process allows you to obtain the key value associated with the button press.
+Cuando presionas un botón en el control remoto, el receptor infrarrojo detecta la señal, y puedes usar una biblioteca infrarroja para decodificarla. Este proceso de decodificación te permite obtener el valor de la tecla asociada con la presión del botón.
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/5.14_ir_receiver_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.14_ir_receiver.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.14_ir_receiver``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``5.14_ir_receiver.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\5.14_ir_receiver``.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
-    * The ``IRremoteESP8266`` library is used here, you can install it from the **Library Manager**.
+    * La biblioteca ``IRremoteESP8266`` se usa aquí, puedes instalarla desde el **Administrador de Bibliotecas**.
 
         .. image:: img/receiver_lib.png
 
@@ -81,16 +81,16 @@ When you press a button on the remote control, the infrared receiver detects the
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/463c8894-00bd-4035-a81c-cad99a7f3731/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, press the different keys on the remote control and you will see the names of these keys appear in the serial monitor.
+Después de que el código se haya cargado con éxito, presiona los diferentes botones en el control remoto y verás aparecer los nombres de estas teclas en el monitor serie.
 
 .. note::
-    * The ``IRremoteESP8266`` library includes implementations for many different infrared protocols and devices, so the size of the library is relatively large. When the compiler has to process more code, the compilation time will also increase accordingly. Please be patient and wait for the compilation to finish.
-    * The new remote control features a plastic tab at the end to insulate the battery inside. To power up the remote when using it, simply remove this plastic piece.
+    * La biblioteca ``IRremoteESP8266`` incluye implementaciones para muchos protocolos y dispositivos infrarrojos diferentes, por lo que el tamaño de la biblioteca es relativamente grande. Cuando el compilador tiene que procesar más código, el tiempo de compilación también aumentará en consecuencia. Por favor, sé paciente y espera a que finalice la compilación.
+    * El control remoto nuevo cuenta con una lengüeta de plástico en el extremo para aislar la batería en su interior. Para activar el control al usarlo, simplemente retira esta pieza de plástico.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. This code uses the ``IRremoteESP8266`` library to receive infrared (IR) signals using an IR receiver module.
+#. Este código utiliza la biblioteca ``IRremoteESP8266`` para recibir señales infrarrojas (IR) usando un módulo receptor IR.
 
     .. code-block:: arduino
 
@@ -106,7 +106,7 @@ After the code is uploaded successfully, press the different keys on the remote 
         // Create a decode_results object
         decode_results results;
     
-#. In the ``setup()`` function, serial communication is started at a baud rate of 115200, and the IR receiver is enabled using ``irrecv.enableIRIn()``.
+#. En la función ``setup()``, la comunicación serie se inicia a una tasa de baudios de 115200, y el receptor IR se habilita usando ``irrecv.enableIRIn()``.
 
     .. code-block:: arduino
 
@@ -118,7 +118,7 @@ After the code is uploaded successfully, press the different keys on the remote 
             irrecv.enableIRIn();
         }
 
-#. When you press a key on the remote control, the serial monitor will print the key name if it is received by the IR receiver.
+#. Cuando presionas una tecla en el control remoto, el monitor serie imprimirá el nombre de la tecla si es recibido por el receptor IR.
 
     .. code-block:: arduino
 
@@ -134,12 +134,12 @@ After the code is uploaded successfully, press the different keys on the remote 
             }
         }
 
-    * Firstly, check if an IR signal is received using the ``irrecv.decode()`` function. 
-    * If a signal is received, then call the ``decodeKeyValue()`` function to decode the value of the signal. 
-    * If the signal is successfully decoded, the decoded value is printed to the serial monitor using ``Serial.println()``.
-    * Finally, ``irrecv.resume()`` is called to continue to receive the next signal.
+    * Primero, verifica si se recibió una señal IR usando la función ``irrecv.decode()``. 
+    * Si se recibe una señal, entonces llama a la función ``decodeKeyValue()`` para decodificar el valor de la señal. 
+    * Si la señal se decodifica con éxito, el valor decodificado se imprime en el monitor serie usando ``Serial.println()``.
+    * Finalmente, ``irrecv.resume()`` se llama para continuar recibiendo la siguiente señal.
 
-#. The ``decodeKeyValue()`` function takes the decoded value of the IR signal as an argument and returns a string representing the key pressed on the remote control. 
+#. La función ``decodeKeyValue()`` toma el valor decodificado de la señal IR como argumento y devuelve una cadena que representa la tecla presionada en el control remoto. 
 
     .. code-block:: arduino
 
@@ -155,5 +155,5 @@ After the code is uploaded successfully, press the different keys on the remote 
                 case 0xFF7A85:
                 ...
 
-    * The function uses a switch statement to match the decoded value with the corresponding key and returns the string representation of the key. 
-    * If the decoded value does not match any known key, the function returns the string "ERROR".
+    * La función utiliza una instrucción switch para hacer coincidir el valor decodificado con la tecla correspondiente y devuelve la representación en cadena de la tecla. 
+    * Si el valor decodificado no coincide con ninguna tecla conocida, la función devuelve la cadena "ERROR".

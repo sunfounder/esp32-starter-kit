@@ -1,15 +1,14 @@
-Learn about the Components in Your Kit
+Aprende sobre los Componentes en tu Kit
 =============================================
 
-
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Después de abrir el paquete, por favor verifica si la cantidad de componentes cumple con la descripción del producto y si todos los componentes están en buenas condiciones.
 
 .. image:: img/components_list.jpg
     :width: 800
     
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+A continuación se presenta la introducción de cada componente, que contiene el principio de funcionamiento del componente y los proyectos correspondientes.
 
-**Control Board**
+**Placa de Control**
 
 .. toctree::
     :maxdepth: 1
@@ -19,7 +18,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Basic**
+**Básicos**
 
 .. toctree::
     :maxdepth: 1
@@ -51,7 +50,7 @@ Below is the introduction to each component, which contains the operating princi
     component_ws2812
 
 
-**Sound**
+**Sonido**
 
 .. toctree::
     :maxdepth: 1
@@ -70,7 +69,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Controller**
+**Controlador**
 
 .. toctree::
     :maxdepth: 1

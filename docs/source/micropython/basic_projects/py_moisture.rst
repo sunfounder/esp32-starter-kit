@@ -1,37 +1,37 @@
 .. _py_moisture:
 
-5.9 Measure Soil Moisture
-==========================
+5.9 Medir la Humedad del Suelo
+================================
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture.
+Este sensor de humedad del suelo capacitivo es diferente a la mayoría de los sensores resistivos en el mercado, ya que utiliza el principio de inducción capacitiva para detectar la humedad del suelo.
 
-By visually reading the values from the soil moisture sensor, we can gather information about the moisture level in the soil. This information is useful for various applications, such as automatic irrigation systems, plant health monitoring, or environmental sensing projects.
+Al leer visualmente los valores del sensor de humedad del suelo, podemos recopilar información sobre el nivel de humedad en el suelo. Esta información es útil para varias aplicaciones, como sistemas de riego automático, monitoreo de la salud de las plantas o proyectos de detección ambiental.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -42,45 +42,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-* **Available Pins**
+* **Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Pines Disponibles
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **Pines de Strapping**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Los siguientes pines son pines de strapping, los cuales afectan el proceso de arranque del ESP32 durante el encendido o el reinicio. Sin embargo, una vez que el ESP32 se ha iniciado correctamente, pueden ser utilizados como pines regulares.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pines de Strapping
             - IO0, IO12
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.9_soil_moisture.png
 
-By inserting the module into the soil and watering it, the value read on I35 will decrease.
+Al insertar el módulo en el suelo y regarlo, el valor leído en I35 disminuirá.
 
-**Wiring**
+**Conexión**
 
 .. image:: ../../img/wiring/5.9_moisture_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.9_moisture.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``5.9_moisture.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 
 
@@ -90,21 +90,21 @@ By inserting the module into the soil and watering it, the value read on I35 wil
     from machine import ADC,Pin
     import time
 
-    # create an ADC object acting on a pin
+    # crear un objeto ADC actuando sobre un pin
     moisture = ADC(Pin(35, Pin.IN))
 
-    # Configure the ADC attenuation to 11dB for full range     
+    # Configurar la atenuación del ADC a 11dB para el rango completo     
     moisture.atten(moisture.ATTN_11DB)
 
     while True:
 
-        # read a raw analog value in the range 0-4095
+        # leer un valor analógico crudo en el rango de 0-4095
         value = moisture.read()  
         print(value)
         time.sleep(0.05)
 
 
 
-When the script runs, you will see the soil moisture value in the Shell.
+Cuando el script se ejecute, verás el valor de la humedad del suelo en la Shell.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+Al insertar el módulo en el suelo y regarlo, el valor del sensor de humedad del suelo se volverá más pequeño.

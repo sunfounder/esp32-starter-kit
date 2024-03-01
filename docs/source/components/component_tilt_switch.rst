@@ -1,6 +1,6 @@
 .. _cpn_tilt:
 
-Tilt Switch
+Interruptor de Inclinación
 =============================
 
 
@@ -8,16 +8,16 @@ Tilt Switch
     :width: 80
     :align: center
 
-The tilt switch used here is a ball one with a metal ball inside. It is used to detect inclinations of a small angle.
+El interruptor de inclinación utilizado aquí es una bola con un interruptor de contacto en su interior. Se utiliza para detectar inclinaciones de ángulos pequeños.
 
-The principle is very simple. When the switch is tilted in a certain angle, the ball inside rolls down and touches the two contacts connected to the pins outside, thus triggering circuits. Otherwise the ball will stay away from the contacts, thus breaking the circuits.
+El principio es muy simple. Cuando el interruptor se inclina en un cierto ángulo, la bola en su interior rueda hacia abajo y toca los dos contactos conectados a los pines exteriores, activando así los circuitos. De lo contrario, la bola se mantendrá alejada de los contactos, interrumpiendo así los circuitos.
 
 .. image:: img/tilt_symbol.png
     :width: 600
 
-* `SW520D Tilt Switch Datasheet <https://www.tme.com/Document/f1e6cedd8cb7feeb250b353b6213ec6c/SW-520D.pdf>`_
+* `Hoja de datos del interruptor de inclinación SW520D <https://www.tme.com/Document/f1e6cedd8cb7feeb250b353b6213ec6c/SW-520D.pdf>`_
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_tilt` (Arduino Project)
-* :ref:`py_tilt` (MicroPython Project)
+* :ref:`ar_tilt` (Proyecto Arduino)
+* :ref:`py_tilt` (Proyecto MicroPython)

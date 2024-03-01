@@ -1,39 +1,39 @@
 .. _py_motor:
 
-4.1 Small Fan
+4.1 Pequeño Ventilador
 =======================
 
-In this engaging project, we'll explore how to drive a motor using the L293D.
+En este proyecto apasionante, exploraremos cómo manejar un motor utilizando el L293D.
 
-The L293D is a versatile integrated circuit (IC) commonly used for motor control in electronics and robotics projects. It can drive two motors in both forward and reverse directions, making it a popular choice for applications requiring precise motor control.
+El L293D es un circuito integrado (CI) versátil comúnmente utilizado para el control de motores en proyectos de electrónica y robótica. Puede manejar dos motores en direcciones hacia adelante y hacia atrás, lo que lo convierte en una opción popular para aplicaciones que requieren un control preciso del motor.
 
-By the end of this captivating project, you will have gained a thorough understanding of how digital signals and PWM signals can effectively be utilized to control motors. This invaluable knowledge will prove to be a solid foundation for your future endeavors in robotics and mechatronics. Buckle up and get ready to dive into the exciting world of motor control with the L293D!
+Al final de este proyecto fascinante, habrás ganado una comprensión profunda de cómo se pueden utilizar eficazmente las señales digitales y las señales PWM para controlar motores. Este conocimiento invaluable será una base sólida para tus futuros empeños en robótica y mecatrónica. ¡Prepárate y sumérgete en el emocionante mundo del control de motores con el L293D!
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,34 +48,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
-**Wiring**
+**Conexión**
 
 .. note:: 
 
-    Since the motor requires a relatively high current, it is necessary to first insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply. 
+    Dado que el motor requiere una corriente relativamente alta, es necesario primero insertar la batería y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de batería. 
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``4.1_motor_turn.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``4.1_motor_turn.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 .. code-block:: python
 
@@ -117,17 +117,17 @@ Here is a list of available pins on the ESP32 board for this project.
 
 
 
-During script execution, you will see the motor alternately rotating clockwise and counterclockwise every second.
+Durante la ejecución del script, verás el motor girando alternativamente en el sentido de las agujas del reloj y en sentido contrario cada segundo.
 
 
-**Learn More**
+**Aprender Más**
 
-In addition to simply making the motor rotate clockwise and counterclockwise, you can also control the speed of the motor's rotation by using pulse-width modulation (PWM) on the control pin, as shown below.
+Además de simplemente hacer girar el motor en sentido horario y antihorario, también puedes controlar la velocidad de rotación del motor utilizando modulación por ancho de pulso (PWM) en el pin de control, como se muestra a continuación.
 
 .. note::
 
-    * Open the ``4.1_motor_turn_pwm.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``4.1_motor_turn_pwm.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 
 
@@ -168,12 +168,10 @@ In addition to simply making the motor rotate clockwise and counterclockwise, yo
 
 
 
+A diferencia del script anterior, aquí el motor es controlado por señales PWM con una frecuencia de 1000 Hz, lo cual determina la velocidad del motor.
 
-
-Unlike the previous script, here the motor is controlled by PWM signals with a frequency of 1000 Hz, which determines the speed of the motor.
-
-* The code uses a ``while True`` loop to run continuously. Inside the loop, there are four ``for`` loops that control the motors in a sequence. 
-* The first two ``for`` loops increase and decrease the speed of IN1 while keeping IN2 at 0 speed. 
-* The next two ``for`` loops increase and decrease the speed of IN2 while keeping IN1 at 0 speed.
-* The ``range`` function in each ``for`` loop produces a string of numbers that serves as the duty cycle of the PWM signal. This is then output to IN1 or IN2 via the ``duty`` method. The duty cycle determines the percentage of time that the PWM signal is high, which in turn determines the average voltage applied to the motor, and thus the motor speed.
-* The ``time.sleep`` function is used to introduce a delay of 0.1 seconds between each step in the sequence, which allows the motor to change speed gradually, rather than jumping from one speed to another instantaneously.
+* El código utiliza un bucle ``while True`` para funcionar continuamente. Dentro del bucle, hay cuatro bucles ``for`` que controlan los motores en secuencia. 
+* Los primeros dos bucles ``for`` aumentan y disminuyen la velocidad de IN1 manteniendo IN2 a 0 de velocidad. 
+* Los siguientes dos bucles ``for`` aumentan y disminuyen la velocidad de IN2 manteniendo IN1 a 0 de velocidad.
+* La función ``range`` en cada bucle ``for`` produce una serie de números que sirve como el ciclo de trabajo de la señal PWM. Esto se envía luego a IN1 o IN2 a través del método ``duty``. El ciclo de trabajo determina el porcentaje de tiempo que la señal PWM está alta, lo que a su vez determina el voltaje promedio aplicado al motor, y por lo tanto la velocidad del motor.
+* La función ``time.sleep`` se utiliza para introducir un retraso de 0.1 segundos entre cada paso en la secuencia, lo que permite que el motor cambie de velocidad gradualmente, en lugar de saltar de una velocidad a otra instantáneamente.

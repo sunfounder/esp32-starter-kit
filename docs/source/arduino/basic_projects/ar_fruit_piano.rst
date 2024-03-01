@@ -1,37 +1,37 @@
 .. _ar_fruit_piano:
 
-6.1 Fruit Piano
+6.1 Piano de Frutas
 ====================
 
-Have you ever wanted to play the piano but couldn't afford one? Or maybe you just want to have some fun with diy a fruit piano? Well, this project is for you! 
+¿Alguna vez has querido tocar el piano pero no podías permitírtelo? ¿O tal vez solo quieres divertirte haciendo un piano de frutas tú mismo? Bueno, ¡este proyecto es para ti!
 
-With just a few touch sensors on the ESP32 board, you can now play your favorite tunes and enjoy the experience of playing the piano without breaking the bank.
+Con solo unos pocos sensores táctiles en la placa ESP32, ahora puedes tocar tus melodías favoritas y disfrutar de la experiencia de tocar el piano sin gastar mucho.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,20 +46,20 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**About the Touch Pins**
+**Acerca de los Pines Táctiles**
 
-The ESP32 microcontroller has built-in touch sensor functionality, which allows you to use certain pins on the board 
-as touch-sensitive inputs. The touch sensor works by measuring changes in capacitance on the touch pins, 
-which are caused by the electrical properties of the human body.
+El microcontrolador ESP32 tiene funcionalidad de sensor táctil incorporada, lo que te permite usar ciertos pines en la placa
+como entradas sensibles al tacto. El sensor táctil funciona midiendo cambios en la capacitancia en los pines táctiles,
+que son causados por las propiedades eléctricas del cuerpo humano.
 
-Here are some key features of the touch sensor on the ESP32:
+Aquí hay algunas características clave del sensor táctil en el ESP32:
 
-* **Number of touch pins**
+* **Número de pines táctiles**
 
-    The ESP32 has up to 10 touch pins, depending on the specific board. The touch pins are typically labeled with a "T" followed by a number.
+    El ESP32 tiene hasta 10 pines táctiles, dependiendo de la placa específica. Los pines táctiles suelen estar etiquetados con una "T" seguida de un número.
 
     * GPIO4: TOUCH0
-    * GPIO0：TOUCH1
+    * GPIO0: TOUCH1
     * GPIO2: TOUCH2
     * GPIO15: TOUCH3
     * GPIO13: TOUCH4
@@ -70,68 +70,68 @@ Here are some key features of the touch sensor on the ESP32:
     * GPIO32: TOUCH9
 
     .. note::
-        The GPIO0 and GPIO2 pins are used for bootstrapping and flashing firmware to the ESP32, respectively. These pins are also connected to the onboard LED and button. Therefore, it is generally not recommended to use these pins for other purposes, as it could interfere with the normal operation of the board.
+        Los pines GPIO0 y GPIO2 se utilizan para el arranque y la carga del firmware en el ESP32, respectivamente. Estos pines también están conectados al LED y botón integrados. Por lo tanto, generalmente no se recomienda usar estos pines para otros propósitos, ya que podría interferir con el funcionamiento normal de la placa.
 
-* **Sensitivity**
+* **Sensibilidad**
 
-    The touch sensor on the ESP32 is very sensitive and can detect even small changes in capacitance. The sensitivity can be adjusted using software settings.
+    El sensor táctil en el ESP32 es muy sensible y puede detectar incluso pequeños cambios en la capacitancia. La sensibilidad se puede ajustar usando configuraciones de software.
 
-* **ESD Protection**
+* **Protección ESD**
 
-    The touch pins on the ESP32 have built-in ESD (Electrostatic Discharge) protection, which helps to prevent damage to the board from static electricity.
+    Los pines táctiles en el ESP32 tienen protección ESD (Descarga Electroestática) incorporada, lo que ayuda a prevenir daños en la placa por electricidad estática.
 
-* **Multitouch**
+* **Multitáctil**
 
-    The touch sensor on the ESP32 supports multitouch, which means that you can detect multiple touch events simultaneously.
+    El sensor táctil en el ESP32 admite multitáctil, lo que significa que puedes detectar varios eventos táctiles simultáneamente.
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.1_fruit_piano.png
 
-The idea behind this project is to use touch sensors to detect when a user touches a specific pin. 
-Each touch pin is associated with a specific note, and when the user touches a pin, 
-the corresponding note is played on the passive buzzer. 
-The result is a simple and affordable way to enjoy the experience of playing the piano.
+La idea detrás de este proyecto es usar sensores táctiles para detectar cuando un usuario toca un pin específico.
+Cada pin táctil está asociado con una nota específica, y cuando el usuario toca un pin,
+la nota correspondiente se reproduce en el zumbador pasivo.
+El resultado es una forma simple y asequible de disfrutar de la experiencia de tocar el piano.
 
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-**Code**
+**Código**
 
 
 .. note::
 
-    * You can open the file ``6.1_fruit_piano.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.1_fruit_piano`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``6.1_fruit_piano.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\6.1_fruit_piano`` directamente.
+    * O copia este código en el IDE de Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/3e06ce6c-268a-4fdc-99d0-6d74f68265e2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-You can connect fruits to these ESP32 pins: 4, 15, 13, 12, 14, 27, 33, 32.
+Puedes conectar frutas a estos pines del ESP32: 4, 15, 13, 12, 14, 27, 33, 32.
 
-When the script runs, touching these fruits will play the notes C, D, E, F, G, A, B and C5.
+Cuando el script se ejecuta, tocar estas frutas reproducirá las notas C, D, E, F, G, A, B y C5.
 
-**How it works?**
+**¿Cómo funciona?**
 
 * ``touchRead(uint8_t pin);``
 
-    This function gets the touch sensor data. Each touch sensor has a counter to count the number of charge/discharge cycles. 
-    When the pad is **touched**, the value in the counter will change because of the larger equivalent capacitance. 
-    The change of the data determines if the pad has been touched or not.
+    Esta función obtiene los datos del sensor táctil. Cada sensor táctil tiene un contador para contar el número de ciclos de carga/descarga.
+    Cuando el pad es **tocado**, el valor en el contador cambiará debido a la mayor capacitancia equivalente.
+    El cambio de los datos determina si el pad ha sido tocado o no.
 
-    * ``pin`` GPIO pin to read TOUCH value
+    * ``pin`` pin GPIO para leer el valor TOUCH
 
-    This function returns a value between 0 and 4095, with a lower value indicating a stronger touch input.
+    Esta función devuelve un valor entre 0 y 4095, con un valor más bajo indicando una entrada táctil más fuerte.
 
 .. note::
-    ``threshold`` needs to be adjusted based on the conductivity of different fruits. 
+    ``threshold`` necesita ser ajustado basado en la conductividad de diferentes frutas.
     
-    You can run the script first to see the values printed by the shell.
+    Puedes ejecutar el script primero para ver los valores impresos por el shell.
 
     .. code-block::
 
@@ -145,7 +145,7 @@ When the script runs, touching these fruits will play the notes C, D, E, F, G, A
       7: 82
 
 
-    After touching the fruits on pins 12, 14, and 27, the printed values are as follows. Therefore, I set the ``threshold`` to 30, which means that when a value less than 30 is detected, it is considered to be touched, and the buzzer will emit different notes.
+    Después de tocar las frutas en los pines 12, 14 y 27, los valores impresos son los siguientes. Por lo tanto, establecí el ``threshold`` en 30, lo que significa que cuando se detecta un valor menor a 30, se considera tocado, y el zumbador emitirá diferentes notas.
     
     .. code-block::
 
@@ -157,4 +157,3 @@ When the script runs, touching these fruits will play the notes C, D, E, F, G, A
       5: 14
       6: 75
       7: 78
-

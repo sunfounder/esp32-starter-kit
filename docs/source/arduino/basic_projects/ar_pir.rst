@@ -1,124 +1,117 @@
 .. _ar_pir:
 
-5.5 Detect Human Movement
+5.5 Detección de Movimiento Humano
 ========================================
 
-Passive infrared sensor (PIR sensor) is a common sensor that can measure infrared (IR) light emitted by objects in its field of view.
-Simply put, it will receive infrared radiation emitted from the body, thereby detecting the movement of people and other animals.
-More specifically, it tells the main control board that someone has entered your room.
+El sensor infrarrojo pasivo (sensor PIR) es un sensor común que puede medir la luz infrarroja (IR) emitida por objetos en su campo de visión. En pocas palabras, recibirá la radiación infrarroja emitida por el cuerpo, detectando así el movimiento de personas y otros animales. Más específicamente, le indica a la placa de control principal que alguien ha entrado en su habitación.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar todo el kit, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
-        - 320+
-        - |link_esp32_starter_kit|
+    * - Nombre
+      - ARTÍCULOS EN ESTE KIT
+      - ENLACE
+    * - Kit de Inicio ESP32
+      - 320+
+      - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    * - INTRODUCCIÓN DE COMPONENTES
+      - ENLACE DE COMPRA
 
-    *   - :ref:`cpn_esp32_wroom_32e`
-        - |link_esp32_wroom_32e_buy|
-    *   - :ref:`cpn_esp32_camera_extension`
-        - \-
-    *   - :ref:`cpn_breadboard`
-        - |link_breadboard_buy|
-    *   - :ref:`cpn_wires`
-        - |link_wires_buy|
-    *   - :ref:`cpn_resistor`
-        - |link_resistor_buy|
-    *   - :ref:`cpn_led`
-        - |link_led_buy|
-    *   - :ref:`cpn_pir`
-        - |link_pir_buy|
+    * - :ref:`cpn_esp32_wroom_32e`
+      - |link_esp32_wroom_32e_buy|
+    * - :ref:`cpn_esp32_camera_extension`
+      - \-
+    * - :ref:`cpn_breadboard`
+      - |link_breadboard_buy|
+    * - :ref:`cpn_wires`
+      - |link_wires_buy|
+    * - :ref:`cpn_resistor`
+      - |link_resistor_buy|
+    * - :ref:`cpn_led`
+      - |link_led_buy|
+    * - :ref:`cpn_pir`
+      - |link_pir_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-* **Available Pins**
+* **Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
-            - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
-            - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
+        * - Para Entrada
+          - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
+        * - Para Salida
+          - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 .. note::
     
-    IO32 cannot be used **as input pin** in this project because it is internally connected to a 1K pull-down resistor, which sets its default value to 0.
+    IO32 no puede ser utilizado **como pin de entrada** en este proyecto porque está internamente conectado a una resistencia de pull-down de 1K, lo que establece su valor predeterminado en 0.
 
-* **Strapping Pins (Input)**
+* **Pines de Arranque (Entrada)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Los pines de arranque son un conjunto especial de pines que se utilizan para determinar modos de arranque específicos durante el inicio del dispositivo (es decir, el reinicio por encendido).
 
     
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
-            - IO5, IO0, IO2, IO12, IO15 
+        * - Pines de Arranque
+          - IO5, IO0, IO2, IO12, IO15 
     
 
     
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generalmente, **no se recomienda utilizarlos como pines de entrada**. Si deseas utilizar estos pines, considera el impacto potencial en el proceso de arranque. Para más detalles, por favor consulta la sección :ref:`esp32_strapping`.
 
-
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.5_pir.png
 
-When the PIR module detects motion, IO14 will go high, and the LED will be lit. Otherwise, when no motion is detected, IO14 will be low, and the LED will turn off.
+Cuando el módulo PIR detecta movimiento, IO14 se activará, y el LED se encenderá. De lo contrario, cuando no se detecta movimiento, IO14 estará en bajo, y el LED se apagará.
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    El módulo PIR tiene dos potenciómetros: uno ajusta la sensibilidad, el otro ajusta la distancia de detección. Para hacer que el módulo PIR funcione mejor, necesitas girar ambos en sentido antihorario hasta el final.
 
     .. image:: ../../components/img/PIR_TTE.png
         :width: 300
         :align: center
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/5.5_pir_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``5.5_pir.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.5_pir``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puedes abrir el archivo ``5.5_pir.ino`` en la ruta ``esp32-starter-kit-main\c\codes\5.5_pir``. 
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`  
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8b5f0cc8-b732-4ed2-b68e-bb7d0a73a1b8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code has been uploaded successfully, the LED will light up and then go off when the PIR module detects someone passing.
+Después de haber subido el código con éxito, el LED se encenderá y luego se apagará cuando el módulo PIR detecte a alguien pasando.
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    El módulo PIR tiene dos potenciómetros: uno ajusta la sensibilidad, el otro ajusta la distancia de detección. Para hacer que el módulo PIR funcione mejor, necesitas girar ambos en sentido antihorario hasta el final.
 
     .. image:: img/pir_back.png
-
-
-

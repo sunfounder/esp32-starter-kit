@@ -1,43 +1,43 @@
 .. _cpn_pir:
 
-PIR Motion Sensor Module
-============================
+Módulo Sensor de Movimiento PIR
+====================================
 
 .. image:: img/pir_pic.png
     :width: 300
     :align: center
 
-The PIR sensor detects infrared heat radiation that can be used to detect the presence of organisms that emit infrared heat radiation.
+El sensor PIR detecta radiación de calor infrarrojo que puede utilizarse para detectar la presencia de organismos que emiten radiación de calor infrarrojo.
 
-The PIR sensor is split into two slots that are connected to a differential amplifier. Whenever a stationary object is in front of the sensor, the two slots receive the same amount of radiation and the output is zero. Whenever a moving object is in front of the sensor, one of the slots receives more radiation than the other , which makes the output fluctuate high or low. This change in output voltage is a result of detection of motion.
+El sensor PIR está dividido en dos ranuras que están conectadas a un amplificador diferencial. Cuando un objeto estacionario está frente al sensor, las dos ranuras reciben la misma cantidad de radiación y la salida es cero. Cuando un objeto en movimiento está frente al sensor, una de las ranuras recibe más radiación que la otra, lo que hace que la salida fluctúe alta o baja. Este cambio en el voltaje de salida es el resultado de la detección de movimiento.
 
 .. image:: img/PIR_working_principle.jpg
     :width: 800
 
-After the sensing module is wired, there is a one-minute initialization. During the initialization, module will output for 0~3 times at intervals. Then the module will be in the standby mode. Please keep the interference of light source and other sources away from the surface of the module so as to avoid the misoperation caused by the interfering signal. Even you'd better use the module without too much wind, because the wind can also interfere with the sensor.
+Después de que el módulo de detección esté cableado, hay una inicialización de un minuto. Durante la inicialización, el módulo emitirá de 0 a 3 veces a intervalos. Luego, el módulo estará en modo de espera. Mantenga la interferencia de fuentes de luz y otras fuentes alejadas de la superficie del módulo para evitar el mal funcionamiento causado por la señal de interferencia. Incluso es mejor utilizar el módulo sin demasiado viento, ya que el viento también puede interferir con el sensor.
 
 .. image:: img/pir_back.png
     :width: 600
     :align: center
 
-**Distance Adjustment**
+**Ajuste de Distancia**
 
-Turning the knob of the distance adjustment potentiometer clockwise, the range of sensing distance increases, and the maximum sensing distance range is about 0-7 meters. If turn it anticlockwise, the range of sensing distance is reduced, and the minimum sensing distance range is about 0-3 meters.
+Girando el botón del potenciómetro de ajuste de distancia en el sentido de las agujas del reloj, aumenta el rango de distancia de detección, y el rango máximo de distancia de detección es de aproximadamente 0 a 7 metros. Si lo gira en sentido contrario a las agujas del reloj, el rango de distancia de detección se reduce, y el rango de distancia de detección mínimo es de aproximadamente 0 a 3 metros.
 
-**Delay adjustment**
+**Ajuste de Retardo**
 
-Rotate the knob of the delay adjustment potentiometer clockwise, you can also see the sensing delay increasing. The maximum of the sensing delay can reach up to 300s. On the contrary, if rotate it anticlockwise, you can shorten the delay with a minimum of 5s. 
+Gire el botón del potenciómetro de ajuste de retardo en el sentido de las agujas del reloj, también puede ver cómo aumenta el retardo de detección. El máximo del retardo de detección puede alcanzar hasta 300s. Por el contrario, si lo gira en sentido contrario a las agujas del reloj, puede acortar el retardo con un mínimo de 5s.
 
-**Two Trigger Modes**
+**Dos Modos de Disparo**
 
-Choosing different modes by using the jumper cap.
+Elija diferentes modos usando la tapa del jumper.
 
-* **H**: Repeatable trigger mode, after sensing the human body, the module outputs high level. During the subsequent delay period, if somebody enters the sensing range, the output will keep being the high level.
+* **H**: Modo de disparo repetible, después de detectar el cuerpo humano, el módulo emite un nivel alto. Durante el período de retardo subsiguiente, si alguien entra en el rango de detección, la salida seguirá siendo de nivel alto.
 
-* **L**: Non-repeatable trigger mode, outputs high level when it senses the human body. After the delay, the output will change from high level into low level automatically. 
+* **L**: Modo de disparo no repetible, emite un nivel alto cuando detecta el cuerpo humano. Después del retardo, la salida cambiará automáticamente de nivel alto a nivel bajo.
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_pir` (Arduino Project)
-* :ref:`iot_telegram` (Arduino Project)
-* :ref:`py_pir` (MicroPython Project)
+* :ref:`ar_pir` (Proyecto Arduino)
+* :ref:`iot_telegram` (Proyecto Arduino)
+* :ref:`py_pir` (Proyecto MicroPython)

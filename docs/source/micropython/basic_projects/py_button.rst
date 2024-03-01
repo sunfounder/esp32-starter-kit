@@ -1,37 +1,37 @@
 .. _py_button:
 
-5.1 Reading Button Value
+5.1 Lectura del Valor del Botón
 ==============================================
 
-In this interactive project, we'll venture into the realm of button controls and LED manipulation.
+En este proyecto interactivo, nos adentraremos en el ámbito de los controles por botón y la manipulación de LEDs.
 
-The concept is straightforward yet effective. We'll be reading the state of a button. When the button is pressed down, it registers a high voltage level, or 'high state'. This action will then trigger an LED to light up.
+El concepto es sencillo pero efectivo. Leeremos el estado de un botón. Cuando el botón se presiona, registra un nivel de voltaje alto, o 'estado alto'. Esta acción entonces hará que un LED se ilumine.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -48,73 +48,73 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-* **Available Pins**
+* **Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Aquí tienes una lista de los pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Para Entrada
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Para Salida
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **Uso Condicional de Pines (Entrada)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
+    Los siguientes pines tienen resistencias de pull-up o pull-down integradas, por lo que no se requieren resistencias externas cuando **se usan como pines de entrada**:
 
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - Pines de Uso Condicional
+            - Descripción
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Pull-up con una resistencia de 47K por defecto da un valor alto.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Pull-up con una resistencia de 4.7K por defecto da un valor alto.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Pull-down con una resistencia de 1K por defecto da un valor bajo.
 
-* **Strapping Pins (Input)**
+* **Pines de Arranque (Entrada)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Los pines de arranque son un conjunto especial de pines que se utilizan para determinar modos de arranque específicos durante el inicio del dispositivo 
+    (es decir, reseteo por encendido).
 
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pines de Arranque
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generalmente, **no se recomienda usarlos como pines de entrada**. Si deseas utilizar estos pines, considera el impacto potencial en el proceso de arranque. Para más detalles, por favor refiérete a la sección :ref:`esp32_strapping`.
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.1_button.png
 
-To ensure proper functionality, connect one side of the button pin to 3.3V and the other side to IO14. When the button is pressed, IO14 will be set to high, causing the LED to light up. When the button is released, IO14 will return to its suspended state, which may be either high or low. To ensure a stable low level when the button is not pressed, IO14 should be connected to GND through a 10K pull-down resistor.
+Para asegurar una funcionalidad adecuada, conecta un lado del pin del botón a 3.3V y el otro lado a IO14. Cuando el botón se presiona, IO14 se establece en alto, causando que el LED se ilumine. Cuando el botón se suelta, IO14 volverá a su estado suspendido, que puede ser alto o bajo. Para asegurar un nivel bajo estable cuando el botón no está presionado, IO14 debe conectarse a GND a través de una resistencia de pull-down de 10K.
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/5.1_button_bb.png
 
 .. note::
     
-    A four-pin button is designed in an H shape. When the button is not pressed, the left and right pins are disconnected, and current cannot flow between them. However, when the button is pressed, the left and right pins are connected, creating a pathway for current to flow.
+    Un botón de cuatro pines está diseñado en forma de H. Cuando el botón no está presionado, los pines izquierdo y derecho están desconectados, y la corriente no puede fluir entre ellos. Sin embargo, cuando el botón se presiona, los pines izquierdo y derecho se conectan, creando un camino para que fluya la corriente.
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.1_read_button_value.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``5.1_read_button_value.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 
 
@@ -137,4 +137,4 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
             # Turn off the LED
             led.value(0)
 
-During script execution, the LED lights up when you press the button and goes out when you release it.
+Durante la ejecución del script, el LED se ilumina cuando presionas el botón y se apaga cuando lo sueltas.

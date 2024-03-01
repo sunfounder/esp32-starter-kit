@@ -1,120 +1,120 @@
 .. _ar_pa_buz:
 
-3.2 Custom Tone
+3.2 Tono Personalizado
 ==========================================
 
-We have used active buzzer in the previous project, this time we will use passive buzzer.
+En el proyecto anterior, utilizamos un zumbador activo; esta vez, usaremos un zumbador pasivo.
 
-Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used.
-But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as "doh, re, mi, fa, sol, la, ti".
+Al igual que el zumbador activo, el zumbador pasivo también utiliza el fenómeno de inducción electromagnética para funcionar. La diferencia es que el zumbador pasivo no tiene una fuente oscilante, por lo que no emitirá un sonido si se usan señales de CC.
+Pero esto permite que el zumbador pasivo ajuste su propia frecuencia de oscilación y pueda emitir diferentes notas como "do, re, mi, fa, sol, la, si".
 
-Let the passive buzzer emit a melody!
+¡Hagamos que el zumbador pasivo emita una melodía!
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar todo el kit, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
-        - 320+
-        - |link_esp32_starter_kit|
+    * - Nombre
+      - ARTÍCULOS EN ESTE KIT
+      - ENLACE
+    * - Kit de inicio ESP32
+      - 320+
+      - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    * - INTRODUCCIÓN DE COMPONENTES
+      - ENLACE DE COMPRA
 
-    *   - :ref:`cpn_esp32_wroom_32e`
-        - |link_esp32_wroom_32e_buy|
-    *   - :ref:`cpn_esp32_camera_extension`
-        - \-
-    *   - :ref:`cpn_breadboard`
-        - |link_breadboard_buy|
-    *   - :ref:`cpn_wires`
-        - |link_wires_buy|
-    *   - :ref:`cpn_resistor`
-        - |link_resistor_buy|
-    *   - :ref:`cpn_buzzer`
-        - \-
-    *   - :ref:`cpn_transistor`
-        - |link_transistor_buy|
+    * - :ref:`cpn_esp32_wroom_32e`
+      - |link_esp32_wroom_32e_buy|
+    * - :ref:`cpn_esp32_camera_extension`
+      - \-
+    * - :ref:`cpn_breadboard`
+      - |link_breadboard_buy|
+    * - :ref:`cpn_wires`
+      - |link_wires_buy|
+    * - :ref:`cpn_resistor`
+      - |link_resistor_buy|
+    * - :ref:`cpn_buzzer`
+      - \-
+    * - :ref:`cpn_transistor`
+      - |link_transistor_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+Cuando la salida IO14 es alta, después de la resistencia limitadora de corriente de 1K (para proteger el transistor), el S8050 (transistor NPN) conducirá, haciendo que el zumbador suene.
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
+El rol del S8050 (transistor NPN) es amplificar la corriente y hacer que el sonido del zumbador sea más fuerte. De hecho, también puedes conectar el zumbador directamente a IO14, pero encontrarás que el sonido del zumbador es más bajo.
 
-**Wiring**
+**Cableado**
 
-Two types of buzzers are included in the kit. 
-We need to use passive buzzer. Turn them around, the exposed PCB is the one we want.
+Dos tipos de zumbadores están incluidos en el kit. 
+Necesitamos usar el zumbador pasivo. Dale la vuelta, el PCB expuesto es el que queremos.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+El zumbador necesita usar un transistor cuando trabaja, aquí usamos S8050 (Transistor NPN).
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``3.2_custom_tone.ino`` file under the path of ``esp32-starter-kit-main\c\codes\3.2_custom_tone``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``3.2_custom_tone.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\3.2_custom_tone``.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/09a319a6-6861-40e1-ba1b-e7027bc0383d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, you will hear the passive buzzer play a sequence of 7 musical notes.
+Después de subir exitosamente el código, escucharás el zumbador pasivo tocar una secuencia de 7 notas musicales.
 
 
-**How it works?**
+**Cómo funciona?**
 
-#. Define constants for the buzzer pin and PWM resolution.
+1. Define constantes para el pin del zumbador y la resolución PWM.
 
     .. code-block:: arduino
 
         const int buzzerPin = 14; //buzzer pin
         const int resolution = 8; 
 
-#. Define an array containing the frequencies of the 7 musical notes in Hz.
+2. Define un arreglo que contiene las frecuencias de las 7 notas musicales en Hz.
 
     .. code-block:: arduino
 
         int frequencies[] = {262, 294, 330, 349, 392, 440, 494};
 
-#. Create a function to play a given frequency on the buzzer for a specified duration.
+3. Crea una función para tocar una frecuencia dada en el zumbador durante una duración especificada.
 
     .. code-block:: arduino
 
@@ -124,14 +124,14 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
             ledcWriteTone(0, 0); // Stop the buzzer
         }
     
-    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: This function is used to setup the LEDC channel to 50 % PWM tone on selected frequency.
+    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: Esta función se usa para configurar el canal LEDC al tono PWM del 50% en la frecuencia seleccionada.
 
-        * ``chan`` select LEDC channel.
-        * ``freq`` select frequency of pwm signal.
+        * ``chan`` selecciona el canal LEDC.
+        * ``freq`` selecciona la frecuencia de la señal pwm.
 
-    This function will return ``frequency`` set for channel. If ``0`` is returned, error occurs and ledc cahnnel was not configured.
+    Esta función retornará la ``frecuencia`` configurada para el canal. Si retorna ``0``, ocurre un error y el canal ledc no fue configurado.
 
-#. Configure the PWM channel and attach the buzzer pin in the ``setup()`` function.
+4. Configura el canal PWM y adjunta el pin del zumbador en la función ``setup()``.
 
     .. code-block:: arduino
 
@@ -140,19 +140,18 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
             ledcAttachPin(buzzerPin, 0); // Attach the buzzer pin to the PWM channel
         }
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
+    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: Esta función se usa para configurar la frecuencia y resolución del canal LEDC. Retornará la ``frecuencia`` configurada para el canal LEDC. Si retorna ``0``, ocurre un error y el canal ledc no fue configurado.
             
-        * ``channel`` select LEDC channel to config.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
+        * ``channel`` selecciona el canal LEDC a configurar.
+        * ``freq`` selecciona la frecuencia del pwm.
+        * ``resolution_bits`` selecciona la resolución para el canal ledc. El rango es de 1-14 bits (1-20 bits para ESP32).
 
+    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: Esta función se usa para adjuntar el pin al canal LEDC.
 
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
+        * ``pin`` selecciona el pin GPIO.
+        * ``chan`` selecciona el canal LEDC.
 
-        * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
-
-#. In the ``loop()`` function, play the sequence of 7 notes with a brief pause between each note and a 1-second pause before repeating the sequence.
+5. En la función ``loop()``, toca la secuencia de 7 notas con una breve pausa entre cada nota y una pausa de 1 segundo antes de repetir la secuencia.
 
     .. code-block:: arduino
 
@@ -163,4 +162,3 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
             }
             delay(1000); // Wait for 1 second before replaying the sequence
             }
-

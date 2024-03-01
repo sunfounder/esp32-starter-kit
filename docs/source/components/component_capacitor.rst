@@ -7,23 +7,22 @@ Capacitor
 .. image:: img/103_capacitor.png
 .. image:: img/10uf_cap.png
 
-Capacitor, refers to the amount of charge storage under a given potential difference, denoted as C, and the international unit is farad (F). 
-Generally speaking, electric charges move under force in an electric field. When there is a medium between conductors, the movement of electric charges is hindered and the electric charges accumulate on the conductors, resulting in accumulation of electric charges. 
+El capacitor, se refiere a la cantidad de almacenamiento de carga bajo una diferencia de potencial dada, denotada como C, y la unidad internacional es el faradio (F).
+En general, las cargas eléctricas se mueven bajo la fuerza en un campo eléctrico. Cuando hay un medio entre conductores, el movimiento de las cargas eléctricas se ve obstaculizado y las cargas eléctricas se acumulan en los conductores, lo que resulta en la acumulación de cargas eléctricas.
 
-The amount of stored electric charges is called capacitance. Because capacitors are one of the most widely used electronic components in electronic equipment, they are widely used in direct current isolation, coupling, bypass, filtering, tuning loops, energy conversion, and control circuits. Capacitors are divided into electrolytic capacitors, solid capacitors, etc.
+La cantidad de cargas eléctricas almacenadas se llama capacitancia. Debido a que los capacitores son uno de los componentes electrónicos más ampliamente utilizados en equipos electrónicos, se utilizan ampliamente en el aislamiento de corriente continua, acoplamiento, derivación, filtrado, bucles de sintonización, conversión de energía y circuitos de control. Los capacitores se dividen en capacitores electrolíticos, capacitores sólidos, etc.
 
-According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
+Según las características del material, los capacitores se pueden dividir en: capacitores electrolíticos de aluminio, capacitores de película, capacitores de tantalio, capacitores cerámicos, supercondensadores, etc.
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
+En este kit, se utilizan capacitores cerámicos y capacitores electrolíticos.
 
-* `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
+* `Capacitor cerámico - Wikipedia <https://es.wikipedia.org/wiki/Condensador_cer%C3%A1mico>`_
 
-* `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
+* `Capacitor electrolítico - Wikipedia <https://es.wikipedia.org/wiki/Condensador_electrol%C3%ADtico>`_
 
-There are 103 or 104 label on the ceramic capacitors, which represent the capacitance value, 103=10x10^3pF, 104=10x10^4pF
+Hay una etiqueta 103 o 104 en los capacitores cerámicos, que representan el valor de la capacitancia, 103=10x10^3pF, 104=10x10^4pF
 
-**Unit Conversion**
+**Conversión de Unidades**
 
     1F=10^3mF=10^6uF=10^9nF=10^12pF
-
 

@@ -1,104 +1,102 @@
 .. _ar_potentiometer:
 
-5.8 Turn the Knob
-===================
+5.8 Gira el Potenciómetro
+==============================
 
-A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
+Un potenciómetro es un dispositivo de tres terminales que se utiliza comúnmente para ajustar la resistencia en un circuito. Cuenta con un botón o una palanca deslizante que se puede utilizar para variar el valor de resistencia del potenciómetro. En este proyecto, lo utilizaremos para controlar el brillo de un LED, similar a una lámpara de escritorio en nuestra vida diaria. Al ajustar la posición del potenciómetro, podemos cambiar la resistencia en el circuito, regulando así la corriente que fluye a través del LED y ajustando su brillo en consecuencia. Esto nos permite crear una experiencia de iluminación personalizable y ajustable, similar a la de una lámpara de escritorio.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar todo el kit, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
-        - 320+
-        - |link_esp32_starter_kit|
+    * - Nombre
+      - ARTÍCULOS EN ESTE KIT
+      - ENLACE
+    * - Kit de Inicio ESP32
+      - 320+
+      - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    * - INTRODUCCIÓN DE COMPONENTES
+      - ENLACE DE COMPRA
 
-    *   - :ref:`cpn_esp32_wroom_32e`
-        - |link_esp32_wroom_32e_buy|
-    *   - :ref:`cpn_esp32_camera_extension`
-        - \-
-    *   - :ref:`cpn_breadboard`
-        - |link_breadboard_buy|
-    *   - :ref:`cpn_wires`
-        - |link_wires_buy|
-    *   - :ref:`cpn_resistor`
-        - |link_resistor_buy|
-    *   - :ref:`cpn_led`
-        - |link_led_buy|
-    *   - :ref:`cpn_pot`
-        - |link_potentiometer_buy|
+    * - :ref:`cpn_esp32_wroom_32e`
+      - |link_esp32_wroom_32e_buy|
+    * - :ref:`cpn_esp32_camera_extension`
+      - \-
+    * - :ref:`cpn_breadboard`
+      - |link_breadboard_buy|
+    * - :ref:`cpn_wires`
+      - |link_wires_buy|
+    * - :ref:`cpn_resistor`
+      - |link_resistor_buy|
+    * - :ref:`cpn_led`
+      - |link_led_buy|
+    * - :ref:`cpn_pot`
+      - |link_potentiometer_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-* **Available Pins**
+* **Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
-
-    .. list-table::
-        :widths: 5 15
-
-        *   - Available Pins
-            - IO14, IO25, I35, I34, I39, I36
-
-* **Strapping Pins**
-
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Aquí está la lista de pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
-            - IO0, IO12
+        * - Pines Disponibles
+          - IO14, IO25, I35, I34, I39, I36
+
+* **Pines de Arranque**
+
+    Los siguientes pines son pines de arranque, que afectan el proceso de inicio del ESP32 durante el encendido o el restablecimiento. Sin embargo, una vez que el ESP32 se ha iniciado correctamente, se pueden utilizar como pines regulares.
+
+    .. list-table::
+        :widths: 5 15
+
+        * - Pines de Arranque
+          - IO0, IO12
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.8_potentiometer.png
 
-When you rotate the potentiometer, the value of I35 will change. By programming, you can use the value of I35 to control the brightness of the LED. Therefore, as you rotate the potentiometer, the brightness of the LED will also change accordingly.
+Al girar el potenciómetro, el valor de I35 cambiará. Mediante programación, puedes usar el valor de I35 para controlar el brillo del LED. Por lo tanto, al girar el potenciómetro, el brillo del LED también cambiará en consecuencia.
 
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
-**Code**
-
+**Código**
 
 .. note::
 
-    * You can open the file ``5.8_pot.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.8_pot``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puedes abrir el archivo ``5.8_pot.ino`` en la ruta ``esp32-starter-kit-main\c\codes\5.8_pot``. 
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
    
 .. raw:: html
      
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aadce2e7-fd5d-4608-a557-f1e4d07ba795/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, rotate the potentiometer and you will see the brightness of the LED change accordingly. At the same time you can see the analog and voltage values of the potentiometer in the serial monitor.
+Después de subir el código con éxito, gira el potenciómetro y verás el brillo del LED cambiar en consecuencia. Al mismo tiempo, puedes ver los valores analógicos y de voltaje del potenciómetro en el monitor serie.
 
+**Cómo funciona?**
 
-**How it works?**
-
-#. Define constants for pin connections and PWM settings.
+1. Define constantes para las conexiones de pines y configuraciones PWM.
 
     .. code-block:: arduino
 
@@ -112,7 +110,7 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
 
     Here the PWM resolution is set to 12 bits and the range is 0-4095.
 
-#. Configure the system in the ``setup()`` function.
+2. Configura el sistema en la función ``setup()``.
 
     .. code-block:: arduino
 
@@ -124,10 +122,10 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             ledcAttachPin(ledPin, channel);
         }
 
-    * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcSetup()`` function is called to set up the PWM channel with the specified frequency and resolution, and the ``ledcAttachPin()`` function is called to associate the specified LED pin with the PWM channel.
+    * En la función ``setup()``, se inicia la comunicación Serial a una tasa de baudios de 115200. 
+    * La función ``ledcSetup()`` se llama para configurar el canal PWM con la frecuencia y resolución especificadas, y la función ``ledcAttachPin()`` se llama para asociar el pin LED especificado con el canal PWM.
 
-#. Main loop (executed repeatedly) in the loop() function.
+3. Bucle principal (ejecutado repetidamente) en la función loop().
 
     .. code-block:: arduino
 
@@ -140,16 +138,17 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             
             Serial.print("Potentiometer Value: ");
             Serial.print(potValue);
-            Serial.print(", Voltage: ");
-            Serial.print(voltage_mV / 1000.0); // Convert millivolts to volts
+            Serial.print(", Voltaje: ");
+            Serial.print(voltage_mV / 1000.0); // Convierte milivoltios a voltios
             Serial.println(" V");
             
             delay(100);
         }
 
-    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: This function is used to get ADC value for a given pin/ADC channel in millivolts.
+    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: Esta función se utiliza para obtener el valor de ADC para un pin/canal de ADC dado en milivoltios.
 
-        * ``pin`` GPIO pin to read analog value.
+        * ``pin`` Pin GPIO para leer el valor analógico.
 
-    The potentiometer value is directly used as the PWM duty cycle for controlling the LED brightness via the ``ledcWrite()`` function, as the range of values is also from 0 to 4095.
+El valor del potenciómetro se utiliza directamente como el ciclo de trabajo PWM para controlar el brillo del LED a través de la función ``ledcWrite()``, ya que el rango de valores también es de 0 a 4095.
 
+    

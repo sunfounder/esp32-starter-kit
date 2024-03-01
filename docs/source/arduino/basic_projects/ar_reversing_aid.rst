@@ -1,40 +1,40 @@
 .. _ar_reversing_aid:
 
-6.3 Reversing Aid
-===================
-Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
+6.3 Ayuda para Reversa
+========================
+Imagina esto: estás en tu coche, a punto de estacionarte en reversa en un lugar estrecho. Con nuestro proyecto, tendrás un módulo ultrasónico montado en la parte trasera de tu vehículo, actuando como un ojo digital. Al poner la marcha en reversa, el módulo cobra vida, emitiendo pulsos ultrasónicos que rebotan en los obstáculos detrás de ti.
 
-The magic happens when these pulses return to the module. It swiftly calculates the distance between your car and the objects, transforming this data into real-time visual feedback displayed on a vibrant LCD screen. You'll witness dynamic, color-coded indicators depicting the proximity of obstacles, ensuring you have a crystal-clear understanding of the surrounding environment.
+La magia ocurre cuando estos pulsos regresan al módulo. Calcula rápidamente la distancia entre tu coche y los objetos, transformando estos datos en retroalimentación visual en tiempo real mostrada en una vibrante pantalla LCD. Presenciarás indicadores dinámicos y codificados por colores que describen la proximidad de los obstáculos, asegurando que tengas una comprensión cristalina del entorno circundante.
 
-But we didn't stop there. To immerse you further into this driving experience, we incorporated a lively buzzer. As your car inches closer to an obstacle, the buzzer's tempo intensifies, creating an auditory symphony of warnings. It's like having a personal orchestra guiding you through the complexities of reverse parking.
+Pero no nos detuvimos ahí. Para sumergirte aún más en esta experiencia de conducción, incorporamos un zumbador vivaz. A medida que tu coche se acerca a un obstáculo, el ritmo del zumbador se intensifica, creando una sinfonía auditiva de advertencias. Es como tener una orquesta personal guiándote a través de las complejidades del estacionamiento en reversa.
 
-This innovative project combines cutting-edge technology with an interactive user interface, making your reversing experience safe and stress-free. With the ultrasonic module, LCD display, and lively buzzer working harmoniously, you'll feel empowered and confident while maneuvering in tight spaces, leaving you free to focus on the joy of driving.
+Este innovador proyecto combina tecnología de vanguardia con una interfaz de usuario interactiva, haciendo que tu experiencia al reversar sea segura y libre de estrés. Con el módulo ultrasónico, la pantalla LCD y el zumbador vivaz trabajando armoniosamente, te sentirás empoderado y seguro mientras maniobras en espacios estrechos, dejándote libre para enfocarte en el placer de conducir.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -55,51 +55,46 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**Esquema**
 
 .. image:: ../../img/circuit/circuit_6.4_reversing_aid.png
     :width: 800
     :align: center
 
+El sensor ultrasónico en el proyecto emite ondas sonoras de alta frecuencia y mide el tiempo que tardan en rebotar después de golpear un objeto. Al analizar estos datos, se puede calcular la distancia entre el sensor y el objeto. Para proporcionar una advertencia cuando el objeto esté demasiado cerca, se utiliza un zumbador para producir una señal audible. Además, la distancia medida se muestra en una pantalla LCD para una fácil visualización.
 
-The ultrasonic sensor in the project emits high-frequency sound waves and measures the time it takes for the waves to bounce back after hitting an object. By analyzing this data, the distance between the sensor and the object can be calculated. To provide a warning when the object is too close, a buzzer is used to produce an audible signal. Additionally, the measured distance is displayed on an LCD screen for easy visualization.
-
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
 
-**Code**
-
+**Código**
 
 .. note::
 
-    * You can open the file ``6.3_reversing_aid.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.3_reversing_aid`` directly.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puedes abrir el archivo ``6.3_reversing_aid.ino`` directamente bajo la ruta de ``esp32-starter-kit-main\c\codes\6.3_reversing_aid``.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto adecuado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
-
+    * La biblioteca ``LiquidCrystal I2C`` se utiliza aquí, puedes instalarla desde el **Administrador de Bibliotecas**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c06deba0-36fd-4f17-8290-c7a39202e089/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+Después de que el código se haya subido con éxito, la distancia detectada actual se mostrará en la LCD. Luego, el zumbador cambiará la frecuencia de sonido según las diferentes distancias.
 
-.. note:: 
+.. note::
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Si el código y el cableado son correctos, pero la LCD aún no muestra ningún contenido, puedes ajustar el potenciómetro en la parte posterior para aumentar el contraste.
 
+**¿Cómo funciona?**
 
-**How it works?**
+Este código nos ayuda a crear un dispositivo simple de medición de distancia que puede medir la distancia entre objetos y proporcionar retroalimentación a través de una pantalla LCD y un zumbador.
 
-This code helps us create a simple distance measuring device that can measure the distance between objects and provide feedback through an LCD display and a buzzer.
+La función ``loop()`` contiene la lógica principal del programa y se ejecuta continuamente. Echemos un vistazo más de cerca a la función ``loop()``.
 
-The ``loop()`` function contains the main logic of the program and runs continuously. Let's take a closer look at the ``loop()`` function.
+#. Bucle para leer la distancia y actualizar parámetros
 
-#. Loop to read distance and update parameters
-
-    In the ``loop``, the code first reads the distance measured by the ultrasonic module and updates the interval parameter based on the distance. 
+    En el ``loop``, el código primero lee la distancia medida por el módulo ultrasónico y actualiza el parámetro del intervalo basado en la distancia.
 
     .. code-block:: arduino
 
@@ -117,9 +112,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             intervals = 2000;
         }
 
-#. Check if it's time to beep
+#. Verificar si es momento de pitar
 
-    The code calculates the difference between the current time and the previous beep time, and if the difference is greater than or equal to the interval time, it triggers the buzzer and updates the previous beep time.
+    El código calcula la diferencia entre el tiempo actual y el tiempo anterior del pitido, y si la diferencia es mayor o igual al tiempo del intervalo, activa el zumbador y actualiza el tiempo anterior del pitido.
 
     .. code-block:: arduino
 
@@ -130,9 +125,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             previousMillis = currentMillis;
         }
 
-#. Update LCD display
+#. Actualizar la pantalla LCD
 
-    The code clears the LCD display and then displays "Dis:" and the current distance in centimeters on the first line.
+    El código limpia la pantalla LCD y luego muestra "Dis:" y la distancia actual en centímetros en la primera línea.
 
     .. code-block:: arduino
 
@@ -143,8 +138,4 @@ The ``loop()`` function contains the main logic of the program and runs continuo
         lcd.print(" cm");
 
         delay(100);
-
-
-
-
 

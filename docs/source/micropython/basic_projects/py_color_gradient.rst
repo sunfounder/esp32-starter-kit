@@ -1,37 +1,37 @@
 .. _py_color_gradient:
 
-6.5 Color Gradient
-=====================
+6.5 Degradado de Color
+==============================
 
-Are you ready to experience a world of color? This project will take you on a magical journey where you can control an 
-LED strip and achieve smooth color transitions. Whether you're looking to add some color to your home decor or 
-seeking a fun programming project, this project has got you covered. Let's dive into this colorful world together!
+¿Estás listo para experimentar un mundo de color? Este proyecto te llevará a un viaje mágico donde podrás controlar una 
+tira de LED y lograr transiciones suaves de color. Ya sea que busques agregar algo de color a tu decoración del hogar o 
+busques un proyecto de programación divertido, este proyecto lo tiene todo. ¡Sumérgete juntos en este mundo colorido!
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,23 +46,23 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.5_color_gradient.png
 
-This project uses an LED strip and a potentiometer to create a color mixing effect. The potentiometer is used to adjust the hue value of the LED, which is then converted into RGB values using a color conversion function. The RGB values are then used to update the color of the LED.
+Este proyecto utiliza una tira de LED y un potenciómetro para crear un efecto de mezcla de colores. El potenciómetro se utiliza para ajustar el valor del tono del LED, que luego se convierte en valores RGB utilizando una función de conversión de color. Los valores RGB se utilizan para actualizar el color del LED.
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/6.5_color_strip_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``6.5_color_gradient.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``6.5_color_gradient.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 .. code-block:: python
     
@@ -133,4 +133,4 @@ This project uses an LED strip and a potentiometer to create a color mixing effe
 
 
 
-As the code runs, slowly rotate the potentiometer and you will see the color of the RGB Strip fade from red to purple.
+A medida que el código se ejecuta, gira lentamente el potenciómetro y verás cómo el color de la Tira RGB se desvanece de rojo a morado.

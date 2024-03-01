@@ -1,38 +1,38 @@
 .. _ar_servo:
 
-4.3 Swinging Servo
-======================
-A Servo is a type of position-based device known for its ability to maintain specific angles and deliver precise rotation. This makes it highly desirable for control systems that demand consistent angle adjustments. It's not surprising that Servos have found extensive use in high-end remote-controlled toys, from airplane models to submarine replicas and sophisticated remote-controlled robots.
+4.3 Balanceo del Servo
+==========================
+Un Servo es un tipo de dispositivo basado en posición conocido por su habilidad para mantener ángulos específicos y proporcionar una rotación precisa. Esto lo hace altamente deseable para sistemas de control que demandan ajustes de ángulo consistentes. No es sorprendente que los Servos se hayan utilizado ampliamente en juguetes controlados remotamente de alta gama, desde modelos de aviones hasta réplicas de submarinos y robots controlados a distancia sofisticados.
 
-In this intriguing adventure, we'll challenge ourselves to manipulate the Servo in a unique way - by making it sway! This project offers a brilliant opportunity to dive deeper into the dynamics of Servos, sharpening your skills in precise control systems and offering a deeper understanding of their operation.
+En esta aventura fascinante, nos desafiaremos a manipular el Servo de una manera única: ¡haciéndolo oscilar! Este proyecto ofrece una oportunidad brillante para profundizar en la dinámica de los Servos, afilando tus habilidades en sistemas de control precisos y ofreciendo una comprensión más profunda de su operación.
 
-Are you ready to make the Servo dance to your tunes? Let's embark on this exciting journey!
+¿Estás listo para hacer bailar al Servo al son de tus melodías? ¡Embarquémonos en este emocionante viaje!
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,37 +44,37 @@ You can also buy them separately from the links below.
         - |link_servo_buy|
 
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí tienes una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_4.3_servo.png
 
-**Wiring**
+**Conexión**
 
-* Orange wire is signal and connected to IO25.
-* Red wire is VCC and connected to 5V.
-* Brown wire is GND and connected to GND.
+* El cable naranja es de señal y se conecta al IO25.
+* El cable rojo es VCC y se conecta a 5V.
+* El cable marrón es GND y se conecta a GND.
 
 .. image:: ../../img/wiring/4.3_swinging_servo_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``4.3_servo.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.3_servo``. Or copy this code into **Arduino IDE**.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``4.3_servo.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\4.3_servo``. O copia este código en **Arduino IDE**.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto adecuado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
-    * The ``ESP32Servo`` library is used here, you can install it from the **Library Manager**.
+    * Se utiliza aquí la biblioteca ``ESP32Servo``, puedes instalarla desde el **Gestor de Bibliotecas**.
 
         .. image:: img/servo_lib.png
 
@@ -82,17 +82,17 @@ Here is a list of available pins on the ESP32 board for this project.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/34c7969e-fee3-413c-9fe7-9d38ca6fb906/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Once you finish uploading the code, you can see the servo arm rotating in the range 0°~180°.
+Una vez que hayas subido el código, podrás ver el brazo del servo rotando en el rango de 0°~180°.
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. Include the |link_esp32servo| library: This line imports the ESP32Servo library, which is required to control the servo motor.
+#. Incluir la biblioteca |link_esp32servo|: Esta línea importa la biblioteca ESP32Servo, necesaria para controlar el motor servo.
 
     .. code-block:: arduino
 
         #include <ESP32Servo.h>
 
-#. Define the servo and the pin it is connected to: This section declares a Servo object (``myServo``) and a constant integer (``servoPin``) to represent the pin that the servo motor is connected to (pin 25).
+#. Definir el servo y el pin al que está conectado: Esta sección declara un objeto Servo (``myServo``) y un entero constante (``servoPin``) para representar el pin al que está conectado el motor servo (pin 25).
 
     .. code-block:: arduino
 
@@ -100,7 +100,7 @@ Once you finish uploading the code, you can see the servo arm rotating in the ra
         Servo myServo;
         const int servoPin = 25;
 
-#. Define the minimum and maximum pulse widths for the servo: This section sets the minimum and maximum pulse widths for the servo motor (0.5 ms and 2.5 ms, respectively).
+#. Definir los anchos de pulso mínimo y máximo para el servo: Esta sección establece los anchos de pulso mínimo y máximo para el motor servo (0.5 ms y 2.5 ms, respectivamente).
 
     .. code-block:: arduino
 
@@ -108,8 +108,7 @@ Once you finish uploading the code, you can see the servo arm rotating in the ra
         const int minPulseWidth = 500; // 0.5 ms
         const int maxPulseWidth = 2500; // 2.5 ms
 
-
-#. The ``setup`` function initializes the servo motor by attaching it to the specified pin and setting its pulse width range. It also sets the PWM frequency for the servo to the standard 50Hz.
+#. La función ``setup`` inicializa el motor servo adjuntándolo al pin especificado y configurando su rango de anchura de pulso. También establece la frecuencia PWM para el servo en el estándar de 50Hz.
 
     .. code-block:: arduino
 
@@ -121,17 +120,17 @@ Once you finish uploading the code, you can see the servo arm rotating in the ra
             myServo.setPeriodHertz(50); // Standard 50Hz servo
         }
     
-    * ``attach (int pin, int min, int max)``: This function attaches the servo motor to the specified GPIO pin and sets the minimum and maximum pulse widths for the servo.
+    * ``attach (int pin, int min, int max)``: Esta función conecta el motor servo al pin GPIO especificado y establece los anchos de pulso mínimo y máximo para el servo.
 
-        * ``pin``: The GPIO pin number that the servo is connected to. 
-        * The ``min`` and ``max``: the minimum and maximum pulse widths, respectively, in microseconds. These values define the range of motion of the servo motor.
+        * ``pin``: El número del pin GPIO al cual está conectado el servo.
+        * ``min`` y ``max``: los anchos de pulso mínimo y máximo, respectivamente, en microsegundos. Estos valores definen el rango de movimiento del motor servo.
 
-    * ``setPeriodHertz(int hertz)``: This function sets the PWM frequency for the servo motor in hertz.
+    * ``setPeriodHertz(int hertz)``: Esta función establece la frecuencia PWM para el motor servo en hertz.
 
-        * ``hertz``: The desired PWM frequency in hertz. The default PWM frequency for servos is 50Hz, which is suitable for most applications. 
+        * ``hertz``: La frecuencia PWM deseada en hertz. La frecuencia PWM predeterminada para servos es 50Hz, lo cual es adecuado para la mayoría de las aplicaciones.
 
 
-#. The ``loop`` function is the main part of the code that continuously runs. It rotates the servo motor from 0 to 180 degrees, then back to 0 degrees. This is done by mapping the angle to the corresponding pulse width and updating the servo motor with the new pulse width value.
+#. La función ``loop`` es la parte principal del código que se ejecuta continuamente. Rota el motor servo de 0 a 180 grados y luego vuelve a 0 grados. Esto se logra mapeando el ángulo a la anchura de pulso correspondiente y actualizando el motor servo con el nuevo valor de anchura de pulso.
 
     .. code-block:: arduino
 
@@ -142,7 +141,7 @@ Once you finish uploading the code, you can see the servo arm rotating in the ra
                 myServo.writeMicroseconds(pulseWidth);
                 delay(15);
             }
-    
+
             // Rotate the servo from 180 to 0 degrees
             for (int angle = 180; angle >= 0; angle--) {
                 int pulseWidth = map(angle, 0, 180, minPulseWidth, maxPulseWidth);
@@ -151,9 +150,8 @@ Once you finish uploading the code, you can see the servo arm rotating in the ra
             }
         }
 
-    * ``writeMicroseconds(int value)``: This function sets the pulse width of the servo motor in microseconds. 
-    
-        * ``value``: The desired pulse width in microseconds. 
-        
-        The ``writeMicroseconds(int value)`` function takes an integer value as its argument, representing the desired pulse width in microseconds. This value should typically fall within the range specified by the minimum and maximum pulse widths (``minPulseWidth`` and ``maxPulseWidth``) defined earlier in the code. The function then sets the pulse width for the servo motor, causing it to move to the corresponding position.
-        
+    * ``writeMicroseconds(int value)``: Esta función establece el ancho de pulso del motor servo en microsegundos.
+
+            * ``value``: El ancho de pulso deseado en microsegundos.
+
+            La función ``writeMicroseconds(int value)`` toma un valor entero como argumento, representando el ancho de pulso deseado en microsegundos. Este valor típicamente debe estar dentro del rango especificado por los anchos de pulso mínimo y máximo (``minPulseWidth`` y ``maxPulseWidth``) definidos previamente en el código. Luego, la función establece el ancho de pulso para el motor servo, causando que se mueva a la posición correspondiente.

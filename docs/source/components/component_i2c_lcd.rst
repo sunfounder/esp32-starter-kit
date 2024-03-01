@@ -6,41 +6,42 @@ I2C LCD1602
 .. image:: img/i2c_lcd1602.png
     :width: 800
 
-* **GND**: Ground
-* **VCC**: Voltage supply, 5V.
-* **SDA**: Serial data line. Connect to VCC through a pullup resistor.
-* **SCL**: Serial clock line. Connect to VCC through a pullup resistor.
+* **GND**: Tierra
+* **VCC**: Suministro de voltaje, 5V.
+* **SDA**: Línea de datos serial. Conectar a VCC a través de una resistencia pull-up.
+* **SCL**: Línea de reloj serial. Conectar a VCC a través de una resistencia pull-up.
 
-As we all know, though LCD and some other displays greatly enrich the man-machine interaction, they share a common weakness. When they are connected to a controller, multiple IOs will be occupied of the controller which has no so many outer ports. Also it restricts other functions of the controller. 
+Como todos sabemos, aunque las pantallas LCD y algunas otras pantallas enriquecen enormemente la interacción hombre-máquina, comparten una debilidad común. Cuando están conectadas a un controlador, múltiples E/S serán ocupadas del controlador que no tiene tantos puertos externos. También restringe otras funciones del controlador.
 
-Therefore, LCD1602 with an I2C module is developed to solve the problem. The I2C module has a built-in PCF8574 I2C chip that converts I2C serial data to parallel data for the LCD display.        
+Por lo tanto, se desarrolla el LCD1602 con un módulo I2C para resolver el problema. El módulo I2C tiene un chip PCF8574 I2C incorporado que convierte los datos seriales I2C en datos paralelos para la pantalla LCD.
 
-* `PCF8574 Datasheet <https://www.ti.com/lit/ds/symlink/pcf8574.pdf?ts=1627006546204&ref_url=https%253A%252F%252Fwww.google.com%252F>`_
+* `Hoja de datos de PCF8574 <https://www.ti.com/lit/ds/symlink/pcf8574.pdf?ts=1627006546204&ref_url=https%253A%252F%252Fwww.google.com%252F>`_
 
-**I2C Address**
+**Dirección I2C**
 
-The default address is basically 0x27, in a few cases it may be 0x3F.
+La dirección predeterminada es básicamente 0x27, en algunos casos puede ser 0x3F.
 
-Taking the default address of 0x27 as an example, the device address can be modified by shorting the A0/A1/A2 pads; in the default state, A0/A1/A2 is 1, and if the pad is shorted, A0/A1/A2 is 0.
+Tomando la dirección predeterminada de 0x27 como ejemplo, la dirección del dispositivo se puede modificar cortocircuitando las almohadillas A0/A1/A2; en el estado predeterminado, A0/A1/A2 es 1, y si la almohadilla está cortocircuitada, A0/A1/A2 es 0.
 
 .. image:: img/i2c_address.jpg
     :width: 600
 
-**Backlight/Contrast**
+**Retroiluminación/Contraste**
 
-Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the backlight. The blue potentiometer on the back is used to adjust the contrast (the ratio of brightness between the brightest white and the darkest black).
+La retroiluminación se puede habilitar mediante un puente, desconecte el puente para deshabilitar la retroiluminación. El potenciómetro azul en la parte posterior se utiliza para ajustar el contraste (la relación de brillo entre el blanco más brillante y el negro más oscuro).
 
 
 .. image:: img/back_lcd1602.jpg
 
-* **Shorting Cap**: Backlight can be enabled by this cap，unplugg this cap to disable the backlight.
-* **Potentiometer**: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
+* **Puente Cortocircuitado**: La retroiluminación se puede habilitar mediante este puente, desenchufando este puente se deshabilita la retroiluminación.
+* **Potenciómetro**: Se utiliza para ajustar el contraste (la claridad del texto mostrado), que se aumenta en dirección de las agujas del reloj y se disminuye en dirección contraria a las agujas del reloj.
 
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_lcd1602` (Arduino Project)
-* :ref:`ar_guess_number` (Arduino Project)
-* :ref:`py_lcd1602` (MicroPython Project)
-* :ref:`py_guess_number` (MicroPython Project)
+* :ref:`ar_lcd1602` (Proyecto Arduino)
+* :ref:`ar_guess_number` (Proyecto Arduino)
+* :ref:`py_lcd1602` (Proyecto MicroPython)
+* :ref:`py_guess_number` (Proyecto MicroPython)
+
 

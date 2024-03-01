@@ -3,39 +3,39 @@
 
 8.5 CheerLights
 ===============================
-CheerLights is a global network of synchronized lights that can be controlled by anyone.
+CheerLights es una red global de luces sincronizadas que pueden ser controladas por cualquiera.
 
-Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.
+Únete a la comunidad de cambio de color de LEDs |link_cheerlights|, que permite a los LEDs alrededor del mundo cambiar de color simultáneamente.
 
-You can place your LEDs in a corner of your office to remind yourself that you are not alone.
+Puedes colocar tus LEDs en un rincón de tu oficina para recordarte que no estás solo.
 
-In this case, we also utilize MQTT, but instead of publishing our own messages, we subscribe to the "cheerlights" topic. This allows us to receive messages sent by others to the "cheerlights" topic and use that information to change the color of our LED strip accordingly.
+En este caso, también utilizamos MQTT, pero en lugar de publicar nuestros propios mensajes, nos suscribimos al tema "cheerlights". Esto nos permite recibir mensajes enviados por otros al tema "cheerlights" y usar esa información para cambiar el color de nuestra tira de LED en consecuencia.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,22 +47,22 @@ You can also buy them separately from the links below.
         - |link_ws2812_buy|
 
 
-**How to do?**
+**¿Cómo hacerlo?**
 
-#. Build the circuit.
+#. Construye el circuito.
 
     .. image:: ../../img/wiring/iot_5_cheerlight_bb.png
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Luego, conecta el ESP32-WROOM-32E al computador usando el cable USB.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Open the code.
+#. Abre el código.
 
-    * Open the ``iot_5_cheerlights.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_5_cheerlights`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``iot_5_cheerlights.ino`` ubicado en el directorio ``esp32-starter-kit-main\c\codes\iot_5_cheerlights``, o copia el código en el IDE de Arduino.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
-    * The ``PubSubClient`` and ``Adafruit_NeoPixel`` libraries are used here, you can install them from the **Library Manager**.
+    * Aquí se utilizan las bibliotecas ``PubSubClient`` y ``Adafruit_NeoPixel``, puedes instalarlas desde el **Gestor de Bibliotecas**.
 
         .. image:: img/mqtt_lib.png
 
@@ -70,7 +70,7 @@ You can also buy them separately from the links below.
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4fc7b0ff-db8e-4bf3-ad34-d68c1857794b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
+#. Localiza las siguientes líneas y modifícalas con tu ``<SSID>`` y ``<PASSWORD>``.
 
     .. code-block::  Arduino
 
@@ -78,7 +78,7 @@ You can also buy them separately from the links below.
         const char* ssid = "<SSID>";
         const char* password = "<PASSWORD>";
 
-#. Find the next line and modify your ``unique_identifier``. Guarantee that your ``unique_identifier`` is truly unique as any IDs that are identical trying to log in to the same **MQTT Broker** may result in a login failure.
+#. Encuentra la siguiente línea y modifica tu ``identificador_único``. Asegúrate de que tu ``identificador_único`` sea verdaderamente único ya que cualquier ID idéntico que intente iniciar sesión en el mismo **Broker MQTT** puede resultar en un fallo de inicio de sesión.
 
     .. code-block::  Arduino
 
@@ -86,11 +86,11 @@ You can also buy them separately from the links below.
         const char* mqtt_server = "mqtt.cheerlights.com";
         const char* unique_identifier = "sunfounder-client-sdgvsasdda";    
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
+#. Después de seleccionar la placa correcta (ESP32 Dev Module) y el puerto, haz clic en el botón **Subir**.
 
-#. At this point, you can see that your RGB strip is displaying a certain color. Place it on your desk and you will notice that it periodically changes colors. This is because other @CheerLights followers are changing the color of your lights!
+#. En este punto, puedes ver que tu tira RGB muestra un cierto color. Colócala en tu escritorio y notarás que cambia de color periódicamente. ¡Esto se debe a que otros seguidores de @CheerLights están cambiando el color de tus luces!
 
-#. Open the Serial Monitor. You will see messages similar to the following:
+#. Abre el Monitor Serie. Verás mensajes similares a los siguientes:
 
 .. code-block:: 
   
@@ -102,12 +102,12 @@ You can also buy them separately from the links below.
     Message: oldlace
     Changing color to oldlace
 
-**Control global @CheerLights devices**
+**Controla los dispositivos globales @CheerLights**
 
-#. Join the |link_discord_server| and utilize the CheerLights bot to set the color. Simply type ``/cheerlights`` in any of the channels on the **CheerLights Discord Server** to activate the bot.
+#. Únete al |link_discord_server| y utiliza el bot de CheerLights para establecer el color. Simplemente escribe ``/cheerlights`` en cualquiera de los canales del **Servidor de Discord de CheerLights** para activar el bot.
 
     .. image:: img/sp230511_163558.png
 
-#. Follow the instructions provided by the bot to set the color. This will allow you to control CheerLights devices globally.
+#. Sigue las instrucciones proporcionadas por el bot para establecer el color. Esto te permitirá controlar dispositivos CheerLights globalmente.
 
     .. image:: img/sp230511_163849.png

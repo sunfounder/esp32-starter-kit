@@ -1,38 +1,38 @@
 .. _py_dht11:
 
-5.13 Temperature - Humidity
+5.13 Temperatura - Humedad
 =======================================
-The DHT11 is a temperature and humidity sensor commonly used for environmental measurements. It is a digital sensor that communicates with a microcontroller to provide temperature and humidity readings.
+El DHT11 es un sensor de temperatura y humedad comúnmente utilizado para mediciones ambientales. Es un sensor digital que se comunica con un microcontrolador para proporcionar lecturas de temperatura y humedad.
 
-In this project, we will be reading the DHT11 sensor and printing out the temperature and humidity values it detects.
+En este proyecto, leeremos el sensor DHT11 e imprimiremos los valores de temperatura y humedad que detecta.
 
-By reading the data provided by the sensor, we can obtain the current temperature and humidity values in the environment. These values can be used for real-time monitoring of environmental conditions, weather observations, indoor climate control, humidity reports, and more.
+Al leer los datos proporcionados por el sensor, podemos obtener los valores actuales de temperatura y humedad en el ambiente. Estos valores pueden ser utilizados para el monitoreo en tiempo real de las condiciones ambientales, observaciones meteorológicas, control climático interior, informes de humedad y más.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,32 +45,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_dht11_buy|
 
-* **Available Pins**
+**Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+* **Pines Disponibles**
+
+    Aquí tienes una lista de los pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Pines Disponibles
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.13_dht11.png
 
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/5.13_dht11_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.13_dht11.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``5.13_dht11.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 .. code-block:: python
 
@@ -101,20 +103,20 @@ You can also buy them separately from the links below.
             time.sleep(1)
 
 
-When the code is running, you will see the Shell continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+Cuando el código está en ejecución, verás que la Shell imprime continuamente la temperatura y la humedad, y a medida que el programa se ejecuta de manera estable, estos dos valores se volverán cada vez más precisos.
 
 
-**Learn More**
+**Aprender Más**
 
-You can also display the temperature and humidity on the I2C LCD1602.
+También puedes mostrar la temperatura y la humedad en el LCD I2C 1602.
 
 .. image:: ../../img/wiring/5.13_dht11_lcd_bb.png
 
 .. note::
 
-    * Open the ``5.13_dht11_lcd.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * Here you need to use the library called ``lcd1602.py``, please check if it has been uploaded to ESP32, for a detailed tutorial refer to :ref:`add_libraries_py`.
+    * Abre el archivo ``5.13_dht11_lcd.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
+    * Aquí necesitas usar la biblioteca llamada ``lcd1602.py``, por favor verifica si ha sido cargada en el ESP32, para un tutorial detallado refiérete a :ref:`add_libraries_py`.
 
 
 .. code-block:: python

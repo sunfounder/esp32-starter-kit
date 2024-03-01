@@ -1,36 +1,36 @@
 .. _py_tilt:
 
-5.2 Tilt It！
+5.2 ¡Inclínalo!
 ==========================
-The tilt switch is a simple yet effective 2-pin device that contains a metal ball in its center. When the switch is in an upright position, the two pins are electrically connected, allowing current to flow through. However, when the switch is tilted or tilted at a certain angle, the metal ball moves and breaks the electrical connection between the pins.
+El interruptor de inclinación es un dispositivo simple pero efectivo de 2 pines que contiene una bola metálica en su centro. Cuando el interruptor está en posición vertical, los dos pines están eléctricamente conectados, permitiendo que la corriente fluya. Sin embargo, cuando el interruptor se inclina o se inclina a cierto ángulo, la bola metálica se mueve y rompe la conexión eléctrica entre los pines.
 
-In this project, we will utilize the tilt switch to control the illumination of an LED. By positioning the switch in a way that triggers the tilt action, we can toggle the LED on and off based on the switch's orientation. 
+En este proyecto, utilizaremos el interruptor de inclinación para controlar la iluminación de un LED. Posicionando el interruptor de manera que se active la acción de inclinación, podemos alternar el LED encendido y apagado basado en la orientación del interruptor.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN AL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,75 +47,75 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt`
         - \-
 
-**Available Pins**
+**Pines Disponibles**
 
-* **Available Pins**
+* **Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Para Entrada
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Para Salida
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **Pines de Uso Condicional (Entrada)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
+    Los siguientes pines tienen resistencias de pull-up o pull-down integradas, por lo que no se requieren resistencias externas cuando **se usan como pines de entrada**:
 
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - Pines de Uso Condicional
+            - Descripción
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Pull-up con una resistencia de 47K por defecto el valor es alto.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Pull-up con una resistencia de 4.7K por defecto el valor es alto.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Pull-down con una resistencia de 1K por defecto el valor es bajo.
 
-* **Strapping Pins (Input)**
+* **Pines de Configuración (Entrada)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Los pines de configuración son un conjunto especial de pines que se utilizan para determinar modos de arranque específicos durante el inicio del dispositivo 
+    (es decir, reseteo al encender).
 
     
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pines de Configuración
             - IO5, IO0, IO2, IO12, IO15 
     
 
     
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    Generalmente, **no se recomienda usarlos como pines de entrada**. Si deseas usar estos pines, considera el impacto potencial en el proceso de arranque. Para más detalles, por favor consulta la sección :ref:`esp32_strapping`.
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.2_tilt.png
 
-When the tilt switch is in an upright position, IO14 will be set to high, resulting in the LED being lit. Conversely, when the tilt switch is tilted, IO14 will be set to low, causing the LED to turn off.
+Cuando el interruptor de inclinación está en posición vertical, IO14 se establecerá en alto, resultando en que el LED se ilumine. Por el contrario, cuando el interruptor de inclinación se inclina, IO14 se establecerá en bajo, causando que el LED se apague.
 
-The purpose of the 10K resistor is to maintain a stable low state for IO14 when the tilt switch is in a tilted position.
+El propósito de la resistencia de 10K es mantener un estado bajo estable para IO14 cuando el interruptor de inclinación está en posición inclinada.
 
 
-**Wiring**
+**Conexión**
 
 .. image:: ../../img/wiring/5.2_tilt_switch_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.2_tilt_switch.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``5.2_tilt_switch.py`` ubicado en el camino ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 
 
@@ -136,6 +136,6 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
             # Turn off the LED
             led.value(0)
 
-When the script is running, the LED will be turned on when the switch is upright, and turned off when the switch is tilted.
+Cuando el script está en ejecución, el LED se encenderá cuando el interruptor esté vertical y se apagará cuando el interruptor se incline.
 
 

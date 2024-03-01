@@ -1,92 +1,92 @@
 .. _ar_plant_monitor:
 
-6.6 Plant Monitor
+6.6 Monitor de Plantas
 ===============================
 
-Welcome to the Plant Monitor project! 
+¡Bienvenidos al proyecto Monitor de Plantas!
 
-In this project, we will be using an ESP32 board to create a system that helps us take care of our plants. With this system, we can monitor the temperature, humidity, soil moisture, and light levels of our plants, and ensure that they are getting the care and attention they need to thrive.
+En este proyecto, utilizaremos una placa ESP32 para crear un sistema que nos ayude a cuidar de nuestras plantas. Con este sistema, podemos monitorear la temperatura, humedad, humedad del suelo y niveles de luz de nuestras plantas, asegurando que reciban el cuidado y la atención necesarios para prosperar.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar todo el kit, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
-        - 320+
-        - |link_esp32_starter_kit|
+    * - Nombre
+      - ARTÍCULOS EN ESTE KIT
+      - ENLACE
+    * - Kit de Inicio ESP32
+      - 320+
+      - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    * - INTRODUCCIÓN DE COMPONENTES
+      - ENLACE DE COMPRA
 
-    *   - :ref:`cpn_esp32_wroom_32e`
-        - |link_esp32_wroom_32e_buy|
-    *   - :ref:`cpn_esp32_camera_extension`
-        - \-
-    *   - :ref:`cpn_breadboard`
-        - |link_breadboard_buy|
-    *   - :ref:`cpn_wires`
-        - |link_wires_buy|
-    *   - :ref:`cpn_dht11`
-        - |link_dht11_buy|
-    *   - :ref:`cpn_lcd`
-        - |link_i2clcd1602_buy|
-    *   - :ref:`cpn_pump`
-        - \-
-    *   - :ref:`cpn_l293d`
-        - \-
-    *   - :ref:`cpn_button`
-        - |link_button_buy|
-    *   - :ref:`cpn_photoresistor`
-        - |link_photoresistor_buy|
-    *   - :ref:`cpn_resistor`
-        - |link_resistor_buy|
-    *   - :ref:`cpn_soil_moisture`
-        - |link_soil_moisture_buy|
+    * - :ref:`cpn_esp32_wroom_32e`
+      - |link_esp32_wroom_32e_buy|
+    * - :ref:`cpn_esp32_camera_extension`
+      - \-
+    * - :ref:`cpn_breadboard`
+      - |link_breadboard_buy|
+    * - :ref:`cpn_wires`
+      - |link_wires_buy|
+    * - :ref:`cpn_dht11`
+      - |link_dht11_buy|
+    * - :ref:`cpn_lcd`
+      - |link_i2clcd1602_buy|
+    * - :ref:`cpn_pump`
+      - \-
+    * - :ref:`cpn_l293d`
+      - \-
+    * - :ref:`cpn_button`
+      - |link_button_buy|
+    * - :ref:`cpn_photoresistor`
+      - |link_photoresistor_buy|
+    * - :ref:`cpn_resistor`
+      - |link_resistor_buy|
+    * - :ref:`cpn_soil_moisture`
+      - |link_soil_moisture_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
-The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
-Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
-measure the light level. The readings from these sensors are displayed on an LCD screen, and a water pump can be controlled 
-using a button to water the plant when needed.
+El sistema utiliza un sensor DHT11 para medir los niveles de temperatura y humedad del ambiente circundante. 
+Mientras tanto, un módulo de humedad del suelo se utiliza para medir el nivel de humedad del suelo y un fotoresistor se utiliza para 
+medir el nivel de luz. Las lecturas de estos sensores se muestran en una pantalla LCD, y una bomba de agua puede ser controlada 
+usando un botón para regar la planta cuando sea necesario.
 
-IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
+IO32 tiene una resistencia de pull-down interna de 1K, y por defecto, está a un nivel lógico bajo. Cuando se presiona el botón, se establece una conexión a VCC (alto voltaje), resultando en un nivel lógico alto en IO32.
 
 
-**Wiring**
+**Cableado**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    Aquí se recomienda insertar la batería y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de la batería.
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``6.6_plant_monitor.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.6_plant_monitor``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puedes abrir el archivo ``6.6_plant_monitor.ino`` en la ruta ``esp32-starter-kit-main\c\codes\6.6_plant_monitor``. 
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
+    * Las bibliotecas ``LiquidCrystal_I2C`` y ``DHT sensor library`` se utilizan aquí, puedes instalarlas desde el **Administrador de Bibliotecas**.
 
 
 .. raw:: html
@@ -94,9 +94,9 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
     <iframe src=https://create.arduino.cc/editor/sunfounder01/52f54c4d-ad8c-49c4-816a-2a55a247d425/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-* After uploading the code, the I2C LCD1602 alternately displays temperature and humidity, as well as soil moisture and light intensity analog values, with a 2-second interval.
-* The water pump is controlled using a button press. To water the plants, hold down the button, and release it to stop watering.
+* Después de subir el código, el I2C LCD1602 muestra alternativamente la temperatura y la humedad, así como los valores analógicos de humedad del suelo e intensidad de la luz, con un intervalo de 2 segundos.
+* La bomba de agua se controla mediante la presión de un botón. Para regar las plantas, mantén presionado el botón y suéltalo para detener el riego.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Si el código y el cableado son correctos, pero el LCD aún no muestra ningún contenido, puedes ajustar el potenciómetro en la parte posterior para aumentar el contraste.

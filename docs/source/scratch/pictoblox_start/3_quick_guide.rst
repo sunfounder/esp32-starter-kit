@@ -1,34 +1,35 @@
+
 .. _sh_guide:
 
-1.3 Quick Guide on PictoBlox
+1.3 Guía Rápida sobre PictoBlox
 ====================================
 
-Required Components
------------------------
+Componentes Necesarios
+-------------------------
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -43,193 +44,193 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-Now let's learn how to use PictoBlox in two modes.
+Ahora aprendamos a usar PictoBlox en dos modos.
 
-Also build a simple circuit to make this LED blink in 2 different modes.
+También construiremos un circuito simple para hacer que este LED parpadee en 2 modos diferentes.
 
 .. image:: ../img/circuit/1_hello_led_bb.png
 
 .. _stage_mode:
 
-Stage Mode
+Modo Escenario
 ---------------
 
-**1. Connect to ESP32 Board**
+**1. Conectar con la Placa ESP32**
 
-Connect your ESP32 board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+Conecta tu placa ESP32 al ordenador con un cable USB, normalmente el ordenador reconocerá automáticamente tu placa y finalmente asignará un puerto COM.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
     
-Open PictoBlox, the Python programming interface will open by default. And we need to switch to the Blocks interface.
+Abre PictoBlox, la interfaz de programación Python se abrirá por defecto. Y necesitamos cambiar a la interfaz de Bloques.
 
 .. image:: img/0_choose_blocks.png
 
-Then you will see the top right corner for mode switching. The default is Stage mode, where Tobi is standing on the stage.
+Entonces verás la esquina superior derecha para el cambio de modo. El predeterminado es el modo Escenario, donde Tobi está parado en el escenario.
 
 .. image:: img/1_stage_upload.png
 
-Click **Board** in the upper right navigation bar to select the board.
+Haz clic en **Placa** en la barra de navegación superior derecha para seleccionar la placa.
 
 .. image:: img/1_board.png
 
-For example, choose **ESP32**.
+Por ejemplo, elige **ESP32**.
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+Entonces aparecerá una ventana de conexión para que selecciones el puerto a conectar, y regresarás a la página principal cuando la conexión esté completa. Si rompes la conexión durante el uso, también puedes hacer clic en **Conectar** para reconectar.
 
 .. image:: img/1_connect.png
 
-At the same time, ESP32 related palettes, such as ESP32, Actuators, etc., will appear in the **Block Palette**.
+Al mismo tiempo, aparecerán en la **Paleta de Bloques** paletas relacionadas con ESP32, como ESP32, Actuadores, etc.
 
 .. image:: img/1_arduino_uno.png
 
-**2. Upload Firmware**
+**2. Subir Firmware**
 
-Since we're going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
+Dado que vamos a trabajar en el modo Escenario, debemos subir el firmware a la placa. Esto asegurará la comunicación en tiempo real entre la placa y el ordenador. Subir el firmware es un proceso único. Para hacerlo, haz clic en el botón Subir Firmware.
 
-After waiting for a while, the upload success message will appear.
+Después de esperar un rato, aparecerá el mensaje de éxito de la subida.
 
 .. note::
 
-    If you are using this board in PictoBlox for the first time, or if this board was previously uploaded with the Arduino IDE. Then you need to tap **Upload Firmware** before you can use it.
+    Si estás usando esta placa en PictoBlox por primera vez, o si esta placa fue previamente subida con el IDE de Arduino. Entonces necesitas tocar **Subir Firmware** antes de que puedas usarla.
 
 
 .. image:: img/1_firmware.png
 
 
-**3. Programming**
+**3. Programación**
 
-* Open and run the script directly
+* Abrir y ejecutar el script directamente
 
-Of course, you can open the scripts directly to run them, but please download them from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ first.
+Por supuesto, puedes abrir los scripts directamente para ejecutarlos, pero primero descárgalos de `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
 
-You can click on **File** in the top right corner and then choose **Open**.
+Puedes hacer clic en **Archivo** en la esquina superior derecha y luego elegir **Abrir**.
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+Elige **Abrir desde el Ordenador**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-starter-kit-main\scratch``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
+Luego ve a la ruta de ``esp32-starter-kit-main\scratch``, y abre **1. Modo Escenario.sb3**. Asegúrate de haber descargado el código requerido de `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
 
 .. image:: img/0_stage.png
 
-Click directly on the script to run it, some projects are click on the green flag or click on the sprite.
+Haz clic directamente en el script para ejecutarlo, algunos proyectos son hacer clic en la bandera verde o hacer clic en el sprite.
 
 .. image:: img/1_more.png
 
-* Program step by step
+* Programar paso a paso
 
-You can also write the script step by step by following these steps.
+También puedes escribir el script paso a paso siguiendo estos pasos.
 
-Click on the **ESP32** palette.
+Haz clic en la paleta **ESP32**.
 
 .. image:: img/1_arduino_uno.png
 
-The LED is controlled by the digital pin 26 (only 2 states, HIGH or LOW), so drag the [set digital pin out as] block to the script area.
+El LED está controlado por el pin digital 26 (solo 2 estados, ALTO o BAJO), así que arrastra el bloque [establecer el pin digital como] al área de script.
 
-Since the default state of the LED is lit, now set pin 23 to LOW and click on this block and you will see the LED go off.
+Dado que el estado predeterminado del LED es encendido, ahora establece el pin 23 en BAJO y haz clic en este bloque y verás que el LED se apaga.
 
-* [set digital pin out as]: Set the digital pin to (HIGH/LOW) level.
+* [establecer el pin digital como]: Establece el pin digital a nivel (ALTO/BAJO).
 
 .. image:: img/1_digital.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+Para ver el efecto de un LED parpadeando continuamente, necesitas usar los bloques [Esperar 1 segundos] y [siempre] en la paleta **Control**. Haz clic en estos bloques después de escribir, un halo amarillo significa que está ejecutándose.
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless manually paused.
+* [Esperar 1 segundos]: de la paleta **Control**, usado para establecer el intervalo de tiempo entre 2 bloques.
+* [siempre]: de la paleta **Control**, permite que el script siga ejecutándose a menos que se pause manualmente.
 
 .. image:: img/1_more.png
 
 .. _upload_mode:
 
-Upload Mode
+Modo de Subida
 ---------------
 
-**1. Connect to ESP32 Board**
+**1. Conectar con la Placa ESP32**
 
-Connect your ESP32 board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+Conecta tu placa ESP32 al ordenador con un cable USB, normalmente el ordenador reconocerá automáticamente tu placa y finalmente asignará un puerto COM.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-Open PictoBlox and click **Board** in the top right navigation bar to select the board.
+Abre PictoBlox y haz clic en **Placa** en la barra de navegación superior derecha para seleccionar la placa.
 
 .. image:: img/1_board.png
 
-For example, choose **ESP32**.
+Por ejemplo, elige **ESP32**.
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+Entonces aparecerá una ventana de conexión para que selecciones el puerto a conectar, y regresarás a la página principal cuando la conexión esté completa. Si rompes la conexión durante el uso, también puedes hacer clic en **Conectar** para reconectar.
 
 .. image:: img/1_connect.png
 
-At the same time, ESP32 related palettes, such as ESP32, Actuators, etc., will appear in the **Block Palette**.
+Al mismo tiempo, aparecerán en la **Paleta de Bloques** paletas relacionadas con ESP32, como ESP32, Actuadores, etc.
 
 .. image:: img/1_upload_uno.png
 
-After selecting Upload mode, the stage will switch to the original code area.
+Después de seleccionar el modo de Subida, el escenario cambiará al área de código original.
 
 .. image:: img/1_upload.png
 
-**2. Programming**
+**2. Programación**
 
-* Open and run the script directly
+* Abrir y ejecutar el script directamente
 
-You can click on **File** in the top right corner.
+Puedes hacer clic en **Archivo** en la esquina superior derecha.
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+Elige **Abrir desde el Ordenador**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``esp32-starter-kit-main\scratch``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
+Luego ve a la ruta de ``esp32-starter-kit-main\scratch``, y abre **1. Modo de Subida.sb3**. Asegúrate de haber descargado el código requerido de `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
 
 .. image:: img/0_upload.png
 
-Finally, click the **Upload Code** button.
+Finalmente, haz clic en el botón **Subir Código**.
 
 .. image:: img/1_upload_code.png
 
 
-* Program step by step
+* Programar paso a paso
 
-You can also write the script step by step by following these steps.
+También puedes escribir el script paso a paso siguiendo estos pasos.
 
-Click on the **ESP32** palette.
+Haz clic en la paleta **ESP32**.
 
 .. image:: img/1_upload_uno.png
 
-Drag [when ESP32 starts up] to the script area, which is required for every script.
+Arrastra [cuando ESP32 se inicia] al área de script, lo cual es necesario para cada script.
 
 .. image:: img/1_uno_starts.png
 
-The LED is controlled by the digital pin26 (only 2 states HIGH or LOW), so drag the [set digital pin out as]  block to the script area.
+El LED es controlado por el pin digital 26 (solo 2 estados ALTO o BAJO), así que arrastra el bloque [establecer el pin digital como] al área de script.
 
-Since the default state of the LED is lit, now set pin26 to LOW and click on this block and you will see the LED go off.
+Dado que el estado predeterminado del LED es encendido, ahora establece el pin 26 en BAJO y haz clic en este bloque y verás que el LED se apaga.
 
-* [set digital pin out as]: Set the digital pin to (HIGH/LOW) level.
+* [establecer el pin digital como]: Establece el pin digital a nivel (ALTO/BAJO).
 
 .. image:: img/1_upload_digital.png
 
-At this point you will see the code appear on the right side, if you want to edit this code, then you can turn Edit mode on.
+En este punto verás que el código aparece en el lado derecho, si quieres editar este código, entonces puedes activar el modo Edición.
 
 .. image:: img/1_upload1.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+Para ver el efecto de un LED parpadeando continuamente, necesitas usar los bloques [Esperar 1 segundos] y [siempre] en la paleta **Control**. Haz clic en estos bloques después de escribir, un halo amarillo significa que está ejecutándose.
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless the power is off.
+* [Esperar 1 segundos]: de la paleta **Control**, usado para establecer el intervalo de tiempo entre 2 bloques.
+* [siempre]: de la paleta **Control**, permite que el script siga ejecutándose a menos que se apague la alimentación.
 
 .. image:: img/1_upload_more.png
 
-Finally, click the **Upload Code** button.
+Finalmente, haz clic en el botón **Subir Código**.
 
 .. image:: img/1_upload_code.png

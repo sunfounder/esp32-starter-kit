@@ -1,36 +1,36 @@
 .. _cpn_pump:
 
-Centrifugal Pump
-================
+Bomba Centrífuga
+===================
 
 .. image:: img/pump.png
     :width: 300
     :align: center
 
-The centrifugal pump converts rotational kinetic energy into hydrodynamic energy to transport fluid. The rotation energy comes from the electric motor. The fluid enters the pump impeller along or near the rotating shaft, is accelerated by the impeller, flows radially outward into the diffuser or volute chamber, and then flows out from there.
+La bomba centrífuga convierte la energía cinética rotacional en energía hidrodinámica para transportar fluidos. La energía de rotación proviene del motor eléctrico. El fluido entra en el impulsor de la bomba a lo largo o cerca del eje rotativo, es acelerado por el impulsor, fluye radialmente hacia afuera en el difusor o cámara voluta, y luego fluye desde allí.
 
-Common uses of centrifugal pumps include water, sewage, agricultural, petroleum, and petrochemical pumping.
+Los usos comunes de las bombas centrífugas incluyen el bombeo de agua, aguas residuales, agrícolas, petroleras y petroquímicas.
 
 
-* `Centrifugal Pump - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
+* `Bomba Centrífuga - Wikipedia <https://es.wikipedia.org/wiki/Bomba_centr%C3%ADfuga>`_
 
-**Features**
-    * **Voltage Scope**: DC 3 ~ 4.5V
-    * **Operating Current**: 120 ~ 180mA
-    * **Power**: 0.36 ~ 0.91W
-    * **Max Water Head**: 0.35 ~ 0.55M
-    * **Max Flow Rate**: 80 ~ 100 L/H
-    * **Continuous Working Life**: 100 hours
-    * **Water Fing Grade**: IP68
-    * **Driving Mode**: DC, Magnetic Driving
-    * **Material**: Engineering Plastic
-    * **Outlet Outside Diameter**: 7.8 mm
-    * **Outlet Inside Diameter**: 6.5 mm
-    * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
+**Características**
+    * **Rango de Voltaje**: DC 3 ~ 4.5V
+    * **Corriente de Operación**: 120 ~ 180mA
+    * **Potencia**: 0.36 ~ 0.91W
+    * **Altura Máxima de Agua**: 0.35 ~ 0.55M
+    * **Tasa Máxima de Flujo**: 80 ~ 100 L/H
+    * **Vida Laboral Continua**: 100 horas
+    * **Grado de Protección al Agua**: IP68
+    * **Modo de Conducción**: DC, Conducción Magnética
+    * **Material**: Plástico de Ingeniería
+    * **Diámetro Exterior de Salida**: 7.8 mm
+    * **Diámetro Interior de Salida**: 6.5 mm
+    * Es una bomba sumergible y debe usarse de esa manera. Tiende a calentarse demasiado, por lo que existe el riesgo de sobrecalentamiento si se enciende sin estar sumergida.
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_pump` (Arduino Project)
-* :ref:`ar_plant_monitor` (Arduino Project)
-* :ref:`py_pump` (MicroPython Project)
-* :ref:`py_plant_monitor` (MicroPython Project)
+* :ref:`ar_pump` (Proyecto Arduino)
+* :ref:`ar_plant_monitor` (Proyecto Arduino)
+* :ref:`py_pump` (Proyecto MicroPython)
+* :ref:`py_plant_monitor` (Proyecto MicroPython)

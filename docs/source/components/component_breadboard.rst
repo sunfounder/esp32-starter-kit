@@ -1,77 +1,73 @@
 
 .. _cpn_breadboard:
 
-Breadboard
+Protoboard
 ==============
 
-**What is a "solderless" breadboard?**
+**¿Qué es un protoboard "sin soldadura"?**
 
 .. image:: img/breadboard.png
     :width: 600
     :align: center
 
-A breadboard is a rectangular plastic board with many small holes in it. These small holes allow you to easily insert electronic components to build circuits. Technically speaking, these breadboards are known as solderless breadboards because they do not require soldering to make connections.
+Un protoboard es una placa rectangular de plástico con muchos pequeños agujeros. Estos pequeños agujeros te permiten insertar fácilmente componentes electrónicos para construir circuitos. Técnicamente hablando, estos protoboards son conocidos como protoboards sin soldadura porque no requieren soldadura para hacer conexiones.
 
-**Features**
+**Características**
 
-* Size: 163 x 54 x 8 mm
-* 830 tie points breadboards: 630 tie-point ic-circuit area plus 2x100 tie-point distribution strips providing 4 power rails.
-* Wire size: Suitable for 20-29 AWG wires.
-* Material: ABS Plastic Panel, Tin Plated Phosphor Bronze Contact Sheet.
-* Voltage / Current: 300V/3-5A.
-* With Self-Adhesive Tape on the Back
+* Tamaño: 163 x 54 x 8 mm
+* Protoboard de 830 puntos de conexión: área de circuito integrado de 630 puntos de conexión más 2x100 tiras de distribución de puntos de conexión proporcionando 4 rieles de alimentación.
+* Tamaño del cable: Adecuado para cables de 20-29 AWG.
+* Material: Panel de plástico ABS, hoja de contacto de bronce fosforado estañado.
+* Voltaje / Corriente: 300V/3-5A.
+* Con Cinta Adhesiva en la Parte Posterior
 
-**What is in the breadboard?**
+**¿Qué hay dentro del protoboard?**
 
 .. image:: img/breadboard_internal.png
     :width: 600
     :align: center
 
-The inside of the breadboard is made up of rows of small metal clips. When you insert the leads of a component into the holes of the breadboard, one of the clips catches it. Some breadboards are actually made of clear plastic, so you can see the clips inside.
+El interior del protoboard está compuesto por filas de pequeños clips metálicos. Cuando insertas los cables de un componente en los agujeros del protoboard, uno de los clips lo sujeta. Algunos protoboards están hechos de plástico transparente, por lo que puedes ver los clips en su interior.
 
-**What do the letters and numbers on a breadboard mean?**
+**¿Qué significan las letras y números en un protoboard?**
 
 .. image:: img/breadboard_internal2.png
     :width: 500
     :align: center
 
-Most breadboards have some numbers, letters and plus and minus signs on them. Although the labels will vary from breadboard to breadboard, the function is basically the same. These labels allow you to find the corresponding holes more quickly when building your circuit.
+La mayoría de los protoboards tienen algunos números, letras y signos más y menos. Aunque las etiquetas variarán de un protoboard a otro, la función es básicamente la misma. Estas etiquetas te permiten encontrar más rápidamente los agujeros correspondientes al construir tu circuito.
 
-The row numbers and column letters help you to precisely locate the holes on the breadboard, for example, hole "C12" is where column C intersects row 12.
+Los números de fila y las letras de columna te ayudan a localizar con precisión los agujeros en el protoboard, por ejemplo, el agujero "C12" es donde la columna C se cruza con la fila 12.
 
 
-**What do the colored lines and plus and minus signs mean?**
+**¿Qué significan las líneas de colores y los signos más y menos?**
 
 .. image:: img/breadboard_internal3.png
     :width: 500
     :align: center
 
-The sides of the breadboard are usually distinguished by red and blue (or other colors), as well as plus and minus signs, and are usually used to connect to the power supply, known as the power bus.
+Los lados del protoboard suelen estar diferenciados por rojo y azul (u otros colores), así como por los signos más y menos, y suelen utilizarse para conectarse a la fuente de alimentación, conocida como bus de alimentación.
 
-When building a circuit, it is common to connect the negative terminal to the blue (-) column and the positive terminal to the red (+) column.
+Al construir un circuito, es común conectar el terminal negativo a la columna azul (-) y el terminal positivo a la columna roja (+).
 
 
-**How are the holes connected?**
+**¿Cómo están conectados los agujeros?**
 
 .. image:: img/breadboard_internal4.png
     :width: 500
     :align: center
 
-As shown in the diagram, each set of five holes in the middle section, columns A-E or F-J, is electrically connected. This means, for example, that hole A1 is electrically connected to holes B1, C1, D1 and E1.
+Como se muestra en el diagrama, cada conjunto de cinco agujeros en la sección central, columnas A-E o F-J, está eléctricamente conectado. Esto significa, por ejemplo, que el agujero A1 está eléctricamente conectado a los agujeros B1, C1, D1 y E1.
 
-It is not connected to hole A2 because that hole is in a different row with a separate set of metal clips. It is also not connected to holes F1, G1, H1, I1 or J1 because they are located in the other "half" of the breadboard - the clips are not connected across the middle gap.
+No está conectado al agujero A2 porque ese agujero está en una fila diferente con un conjunto separado de clips metálicos. Tampoco está conectado a los agujeros F1, G1, H1, I1 o J1 porque están ubicados en la otra "mitad" del protoboard; los clips no están conectados a través del espacio central.
 
-Unlike the middle section, which is grouped by five holes, the buses on sides are electrically connected separately. For example, the column marked blue (-) is electrically connected as a whole, and the column marked red (+) is also electrically connected.
+A diferencia de la sección central, que está agrupada por cinco agujeros, los buses en los lados están conectados eléctricamente por separado. Por ejemplo, la columna marcada en azul (-) está eléctricamente conectada en su totalidad, y la columna marcada en rojo (+) también está eléctricamente conectada.
 
-**Which electronic parts are compatible with breadboards?**
+**¿Qué partes electrónicas son compatibles con los protoboards?**
 
 .. image:: img/breadboard_pins.jpg
     :width: 600
     :align: center
 
-Many electronic components have long metal legs called leads. Almost all components with leads will work with a breadboard. Components such as resistors, capacitors, switches, diodes, etc. can be inserted in any of the rows, but ICs need to be arranged across the middle gap.
-
-
-
-
+Muchos componentes electrónicos tienen patas de metal largas llamadas terminales. Casi todos los componentes con terminales funcionarán con un protoboard. Componentes como resistencias, condensadores, interruptores, diodos, etc., se pueden insertar en cualquiera de las filas, pero los IC deben colocarse a través de la brecha central.
 

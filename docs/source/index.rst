@@ -1,28 +1,28 @@
-SunFounder ESP32 Starter Kit
+Kit de Inicio ESP32 de SunFounder
 ==================================================
 
-Thanks for choosing our ESP32 Starter Kit.
+Gracias por elegir nuestro Kit de Inicio ESP32.
 
 .. note::
-    This document is available in the following languages.
+    Este documento está disponible en los siguientes idiomas.
 
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
     
-    Please click on the respective links to access the document in your preferred language.
+    Por favor, haz clic en los enlaces respectivos para acceder al documento en tu idioma preferido.
 
 .. image:: img/esp32_ultimate_kit.png
 
-Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
+¡Bienvenido al Kit de Aprendizaje ESP32! Este paquete integral está diseñado para ofrecer tanto a principiantes como a desarrolladores experimentados una inmersión profunda en el versátil mundo del microcontrolador ESP32. Con el ESP32 WROOM 32E en su núcleo, y una gama de componentes acompañantes como LEDs, sensores, motores y más, los usuarios pueden explorar una amplia variedad de proyectos.
 
-Whether you're keen on basic electronics, IoT integrations, this kit has it all. For MicroPython enthusiasts, we provide a structured introduction to MicroPython, complete with IDE setups and basic syntax lessons. Arduino users are not left behind, with a dedicated section on getting started with Arduino, and a suite of basic projects to jumpstart the learning process.
+Ya sea que estés interesado en electrónica básica, integraciones IoT, este kit lo tiene todo. Para los entusiastas de MicroPython, proporcionamos una introducción estructurada a MicroPython, completa con configuraciones de IDE y lecciones básicas de sintaxis. Los usuarios de Arduino no se quedan atrás, con una sección dedicada a comenzar con Arduino y una serie de proyectos básicos para iniciar el proceso de aprendizaje.
 
-For the creatives, there's a delightful section on integrating with Scratch, allowing for a blend of programming and storytelling. Each project in the kit is meticulously outlined, ensuring you understand the objectives, the circuit assembly, and the programming aspects.
+Para los creativos, hay una sección encantadora sobre la integración con Scratch, permitiendo una mezcla de programación y narración. Cada proyecto en el kit está meticulosamente delineado, asegurando que entiendas los objetivos, el montaje del circuito y los aspectos de programación.
 
-With a myriad of game projects, practical applications, and troubleshooting FAQs, this kit promises an enriching learning experience for all. Dive in and let the ESP32 adventure begin!
+Con una miríada de proyectos de juegos, aplicaciones prácticas y preguntas frecuentes de resolución de problemas, este kit promete una experiencia de aprendizaje enriquecedora para todos. ¡Sumérgete y que comience la aventura ESP32!
 
-If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
+Si tienes alguna pregunta u otras ideas interesantes, no dudes en enviar un correo electrónico a service@sunfounder.com.
 
 .. toctree::
     :maxdepth: 2
@@ -40,4 +40,5 @@ If you have any questions or other interesting ideas, feel free to send an email
 Copyright Notice
 -----------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+Todos los contenidos incluidos pero no limitados a textos, imágenes y código en este manual son propiedad de la Compañía SunFounder. Debes usarlo solo para estudio personal, investigación, disfrute u otros propósitos no comerciales o sin fines de lucro, bajo las regulaciones y leyes de derechos de autor relacionadas, sin infringir los derechos legales del autor y los titulares de derechos relevantes. Para cualquier individuo u organización que utilice estos con fines de lucro comercial sin permiso, la Compañía se reserva el derecho de emprender acciones legales.
+

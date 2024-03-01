@@ -1,7 +1,7 @@
 If Else
 =============
 
-Decision making is required when we want to execute a code only if a certain condition is satisfied.
+La toma de decisiones es necesaria cuando queremos ejecutar un código solo si se cumple una determinada condición.
 
 if
 --------------------
@@ -10,19 +10,19 @@ if
     if test expression:
         statement(s)
 
-Here, the program evaluates the `test expression` and executes the `statement` only when the `test expression` is True.
+Aquí, el programa evalúa la ``test expression`` y ejecuta la ``statement`` solo cuando la ``test expression`` es Verdadera.
 
-If `test expression` is False, then `statement(s)` will not be executed.
+Si la ``test expression`` es Falsa, entonces la(s) ``statement(s)`` no será(n) ejecutada(s).
 
-In MicroPython, indentation means the body of the `if` statement. The body starts with an indentation and ends with the first unindented line.
+En MicroPython, la indentación indica el cuerpo de la declaración ``if``. El cuerpo comienza con una indentación y termina con la primera línea sin indentar.
 
-Python interprets non-zero values ​​as "True". None and 0 are interpreted as "False".
+Python interpreta los valores no cero como ``True``. None y 0 se interpretan como ``False``.
 
-**if Statement Flowchart**
+**Flujograma de la Declaración if**
 
 .. image:: img/if_statement.png
 
-**Example**
+**Ejemplo**
 
 .. code-block:: python
 
@@ -47,15 +47,15 @@ if...else
     else:
         Body of else
 
-The `if..else` statement evaluates `test expression` and will execute the body of `if` only when the test condition is `True`.
+La declaración ``if..else`` evalúa la ``test expression`` y ejecutará el cuerpo de ``if`` solo cuando la condición de prueba sea ``True``.
 
-If the condition is `False`, the body of `else` is executed. Indentation is used to separate the blocks.
+Si la condición es ``False``, se ejecuta el cuerpo de ``else``. Se utiliza la indentación para separar los bloques.
 
-**if...else Statement Flowchart**
+**Flujograma de la Declaración if...else**
 
 .. image:: img/if_else.png
 
-**Example**
+**Ejemplo**
 
 .. code-block:: python
 
@@ -82,21 +82,21 @@ if...elif...else
     else: 
         Body of else
 
-`Elif` is short for `else if`. It allows us to check multiple expressions.
+``Elif`` es la abreviatura de ``else if``. Nos permite verificar múltiples expresiones.
 
-If the condition of the `if` is False, the condition of the next elif block is checked, and so on.
+Si la condición del ``if`` es Falsa, se verifica la condición del siguiente bloque elif, y así sucesivamente.
 
-If all conditions are `False`, the body of `else` is executed.
+Si todas las condiciones son ``False``, se ejecuta el cuerpo de ``else``.
 
-Only one of several `if...elif...else` blocks is executed according to the conditions.
+Solo uno de varios bloques ``if...elif...else`` se ejecuta según las condiciones.
 
-The `if` block can only have one `else` block. But it can have multiple `elif` blocks.
+El bloque ``if`` solo puede tener un bloque ``else``. Pero puede tener múltiples bloques ``elif``.
 
-**if...elif...else Statement Flowchart**
+**Flujograma de la Declaración if...elif...else**
 
 .. image:: img/if_elif_else.png
 
-**Example**
+**Ejemplo**
 
 .. code-block:: python
 
@@ -117,9 +117,9 @@ x is greater than y
 Nested if
 ---------------------
 
-We can embed an if statement into another if statement, and then call it a nested if statement.
+Podemos incrustar una declaración if dentro de otra declaración if, a lo que se llama una declaración if anidada.
 
-**Example**
+**Ejemplo**
 
 .. code-block:: python
 

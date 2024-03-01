@@ -1,9 +1,9 @@
-While Loops
+Bucles While
 ====================
 
-The ``while`` statement is used to execute a program in a loop, that is, to execute a program in a loop under certain conditions to handle the same task that needs to be processed repeatedly. 
+La instrucción ``while`` se utiliza para ejecutar un programa en un bucle, es decir, para ejecutar un programa en bucle bajo ciertas condiciones para manejar la misma tarea que necesita ser procesada repetidamente.
 
-Its basic form is:
+Su forma básica es:
 
 .. code-block:: python
 
@@ -11,15 +11,15 @@ Its basic form is:
         Body of while
 
 
-In the ``while`` loop, first check the ``test expression``. Only when ``test expression`` evaluates to ``True``, enter the body of the while. After one iteration, check the ``test expression`` again. This process continues until ``test expression`` evaluates to ``False``.
+En el bucle ``while``, primero se verifica la ``test expression``. Solo cuando la ``test expression`` se evalúa como ``True``, se entra en el cuerpo del while. Después de una iteración, se verifica nuevamente la ``test expression``. Este proceso continúa hasta que la ``test expression`` se evalúa como ``False``.
 
-In MicroPython, the body of the ``while`` loop is determined by indentation.
+En MicroPython, el cuerpo del bucle ``while`` se determina por la indentación.
 
-The body starts with an indentation and ends with the first unindented line.
+El cuerpo comienza con una indentación y termina con la primera línea sin indentar.
 
-Python interprets any non-zero value as ``True``. None and 0 are interpreted as ``False``.
+Python interpreta cualquier valor no cero como ``True``. None y 0 se interpretan como ``False``.
 
-**while Loop Flowchart**
+**Diagrama de flujo del bucle while**
 
 .. image:: img/while_loop.png
 
@@ -46,10 +46,10 @@ Python interprets any non-zero value as ``True``. None and 0 are interpreted as 
 1
 
 
-Break Statement
+Instrucción Break
 --------------------
 
-With the break statement we can stop the loop even if the while condition is true:
+Con la instrucción break podemos detener el bucle incluso si la condición del while es verdadera:
 
 
 
@@ -70,11 +70,11 @@ With the break statement we can stop the loop even if the while condition is tru
 7
 6
 
-While Loop with Else
+Bucle While con Else
 ----------------------
-Like the `if` loop, the `while` loop can also have an optional `else` block.
+Al igual que el bucle ``if``, el bucle ``while`` también puede tener un bloque ``else`` opcional.
 
-If the condition in the `while` loop is evaluated as `False`, the `else` part is executed.
+Si la condición en el bucle ``while`` se evalúa como ``False``, se ejecuta la parte ``else``.
 
 
 

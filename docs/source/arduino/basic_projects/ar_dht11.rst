@@ -1,39 +1,39 @@
 .. _ar_dht11:
 
-5.13 Temperature - Humidity
+5.13 Temperatura - Humedad
 =======================================
 
-The DHT11 is a temperature and humidity sensor commonly used for environmental measurements. It is a digital sensor that communicates with a microcontroller to provide temperature and humidity readings.
+El DHT11 es un sensor de temperatura y humedad comúnmente utilizado para mediciones ambientales. Es un sensor digital que se comunica con un microcontrolador para proporcionar lecturas de temperatura y humedad.
 
-In this project, we will be reading the DHT11 sensor and printing out the temperature and humidity values it detects.
+En este proyecto, estaremos leyendo el sensor DHT11 e imprimiendo los valores de temperatura y humedad que detecta.
 
-By reading the data provided by the sensor, we can obtain the current temperature and humidity values in the environment. These values can be used for real-time monitoring of environmental conditions, weather observations, indoor climate control, humidity reports, and more.
+Al leer los datos proporcionados por el sensor, podemos obtener los valores actuales de temperatura y humedad en el ambiente. Estos valores pueden usarse para el monitoreo en tiempo real de condiciones ambientales, observaciones meteorológicas, control del clima interior, informes de humedad y más.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -46,34 +46,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_dht11_buy|
 
-* **Available Pins**
+**Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+* **Pines Disponibles**
+
+    Aquí está una lista de los pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Pines Disponibles
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.13_dht11.png
 
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/5.13_dht11_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.13_dht11.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.13_dht11``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``5.13_dht11.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\5.13_dht11``.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
-    * The ``DHT sensor library`` library is used here, you can install it from the **Library Manager**.
+    * Se utiliza aquí la biblioteca ``DHT sensor library``, puedes instalarla desde el **Administrador de Bibliotecas**.
 
         .. image:: img/dht_lib.png
 
@@ -81,11 +83,11 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95bef6dc-a4db-4315-9308-6663b77ddfa0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+Después de que el código se haya subido con éxito, verás el Monitor Serial imprimiendo continuamente la temperatura y humedad, y a medida que el programa se ejecute de manera estable, estos dos valores se volverán más y más precisos.
 
-**How it works?**
+**¿Cómo funciona?**
 
-#.  Includes the ``DHT.h`` library, which provides functions to interact with the DHT sensors. Then, set the pin and type for the DHT sensor.
+#.  Incluye la biblioteca ``DHT.h``, que proporciona funciones para interactuar con los sensores DHT. Luego, establece el pin y tipo para el sensor DHT.
 
     .. code-block:: arduino
 
@@ -96,7 +98,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
 
         DHT dht(DHTPIN, DHTTYPE);
 
-#. Initializes serial communication at a baud rate of 115200 and initializes the DHT sensor.
+#. Inicializa la comunicación serial a una tasa de baudios de 115200 e inicializa el sensor DHT.
 
     .. code-block:: arduino
 
@@ -106,7 +108,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             dht.begin();
         }
 
-#. In the ``loop()`` function, read temperature and humidity values from the DHT11 sensor, and print them to the serial monitor.
+#. En la función ``loop()``, lee los valores de temperatura y humedad del sensor DHT11 e imprímelos en el monitor serial.
 
     .. code-block:: arduino
 
@@ -134,23 +136,22 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             Serial.println(" *C");
         }
 
-    * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
-    * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
-    * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.
+    * La función ``dht.readHumidity()`` se llama para leer el valor de humedad del sensor DHT.
+    * La función ``dht.readTemperature()`` se llama para leer el valor de temperatura del sensor DHT.
+    * La función ``isnan()`` se usa para verificar si las lecturas son válidas. Si el valor de humedad o temperatura es NaN (no es un número), indica una lectura fallida del sensor, y se imprime un mensaje de error.
 
-**Learn More**
+**Aprende Más**
 
-You can also display the temperature and humidity on the I2C LCD1602.
+También puedes mostrar la temperatura y humedad en el LCD I2C1602.
 
 
 .. note::
 
-    * You can open the file ``5.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puedes abrir el archivo ``5.10_thermistor_lcd.ino`` bajo la ruta de ``euler-kit/arduino/5.10_thermistor_lcd``. 
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal_I2C`` and  ``DHT sensor library`` libraries are used here, you can install them from the **Library Manager**.
+    * Se utilizan aquí las bibliotecas ``LiquidCrystal_I2C`` y  ``DHT sensor library``, puedes instalarlas desde el **Administrador de Bibliotecas**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fb46ba7e-0a09-4805-87ab-f733e23eb920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    

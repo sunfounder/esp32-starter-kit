@@ -1,35 +1,35 @@
 .. _py_blink:
 
-2.1 Hello, LED! 
+2.1 ¡Hola, LED! 
 =======================================
 
-Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+Así como imprimir "¡Hola, mundo!" es el primer paso para aprender a programar, usar un programa para controlar un LED es la introducción tradicional para aprender la programación física.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,29 +44,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This circuit works on a simple principle, and the current direction is shown in the figure. The LED will light up after the 220ohm current limiting resistor when pin26 outputs high level. The LED will turn off when pin26 outputs low level.
+Este circuito funciona bajo un principio simple, y la dirección de la corriente se muestra en la figura. El LED se iluminará después de la resistencia limitadora de corriente de 220ohm cuando el pin26 emita un nivel alto. El LED se apagará cuando el pin26 emita un nivel bajo.
 
-**Wiring**
+**Conexión**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-**Run the Code**
+**Ejecutar el Código**
 
-#. Open the ``2.1_hello_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. 
+#. Abre el archivo ``2.1_hello_led.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. 
 
     .. code-block:: python
 
@@ -89,39 +89,39 @@ This circuit works on a simple principle, and the current direction is shown in 
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Conecta el ESP32 WROOM 32E a tu computadora usando un cable Micro USB. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Then click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+#. Luego haz clic en el intérprete "MicroPython (ESP32).COMXX" en la esquina inferior derecha.
 
     .. image:: ../python_start/img/sec_inter.png
 
-#. Finally, click "Run Current Script" or press F5 to execute it.
+#. Finalmente, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
 
     .. image:: ../python_start/img/quick_guide2.png
 
-#. After the code runs, you will see the LED blinking.
+#. Después de ejecutar el código, verás el LED parpadeando.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. It imports two modules, ``machine`` and ``time``. The ``machine`` module provides low-level access to the microcontroller's hardware, while the ``time`` module provides functions for time-related operations.
+#. Importa dos módulos, ``machine`` y ``time``. El módulo ``machine`` proporciona acceso a bajo nivel al hardware del microcontrolador, mientras que el módulo ``time`` ofrece funciones para operaciones relacionadas con el tiempo.
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Then set up the pin26 as an output pin using the ``machine.Pin()`` function with the ``machine.Pin.OUT`` argument. 
+#. Luego configura el pin26 como un pin de salida usando la función ``machine.Pin()`` con el argumento ``machine.Pin.OUT``. 
 
     .. code-block:: python
 
         led = machine.Pin(26, machine.Pin.OUT)
 
-#. In the ``While True`` loop, the LED is turned on for one second by setting the value of the pin26 to 1 using ``led.value(1)`` and then set to 0(``led.value(0)``) to turn it off for one second, and so on in an infinite loop.
+#. En el bucle ``While True``, el LED se enciende durante un segundo estableciendo el valor del pin26 en 1 usando ``led.value(1)`` y luego se establece en 0 (``led.value(0)``) para apagarlo durante un segundo, y así sucesivamente en un bucle infinito.
 
     .. code-block:: python
         
@@ -139,9 +139,9 @@ This circuit works on a simple principle, and the current direction is shown in 
 
 
 
-**Learn More**
+**Aprende Más**
 
-In this project, we used MicroPython's ``machine`` and ``time`` module, we can find more ways to use them here.
+En este proyecto, utilizamos los módulos ``machine`` y ``time`` de MicroPython, podemos encontrar más formas de usarlos aquí.
 
 * `machine.Pin <https://docs.micropython.org/en/latest/library/machine.Pin.html>`_
 

@@ -3,29 +3,29 @@
 L293D 
 =================
 
-L293D is a 4-channel motor driver integrated by chip with high voltage and high current. 
-It's designed to connect to standard DTL, TTL logic level, and drive inductive loads (such as relay coils, DC, Stepper Motors) and power switching transistors etc. 
-DC Motors are devices that turn DC electrical energy into mechanical energy. They are widely used in electrical drive for their superior speed regulation performance.
+L293D es un controlador de motor de 4 canales integrado en un chip con alta tensión y alta corriente. 
+Está diseñado para conectarse a lógica estándar DTL, TTL, y para controlar cargas inductivas (como bobinas de relé, motores de CC, motores paso a paso) y transistores de conmutación de potencia, etc. 
+Los motores de CC son dispositivos que convierten la energía eléctrica de CC en energía mecánica. Se utilizan ampliamente en accionamientos eléctricos por su excelente rendimiento de regulación de velocidad.
 
-See the figure of pins below. L293D has two pins (Vcc1 and Vcc2) for power supply. 
-Vcc2 is used to supply power for the motor, while Vcc1 to supply for the chip. Since a small-sized DC motor is used here, connect both pins to +5V.
+Vea la figura de los pines a continuación. L293D tiene dos pines (Vcc1 y Vcc2) para la fuente de alimentación. 
+Vcc2 se utiliza para suministrar energía al motor, mientras que Vcc1 se utiliza para alimentar el chip. Dado que aquí se utiliza un motor de CC de pequeño tamaño, conecte ambos pines a +5V.
 
 .. image:: img/l293d111.png
 
-The following is the internal structure of L293D. 
-Pin EN is an enable pin and only works with high level; A stands for input and Y for output. 
-You can see the relationship among them at the right bottom. 
-When pin EN is High level, if A is High, Y outputs high level; if A is Low, Y outputs Low level. When pin EN is Low level, the L293D does not work.
+A continuación se muestra la estructura interna de L293D. 
+El pin EN es un pin de habilitación y solo funciona con nivel alto; A representa la entrada y Y la salida. 
+Puede ver la relación entre ellos en la esquina inferior derecha. 
+Cuando el pin EN está en nivel alto, si A está en alto, Y emite un nivel alto; si A está en bajo, Y emite un nivel bajo. Cuando el pin EN está en nivel bajo, el L293D no funciona.
 
 .. image:: img/l293d334.png
 
-* `L293D Datasheet <https://www.ti.com/lit/ds/symlink/l293d.pdf?ts=1627004062301&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FL293D>`_
+* `Hoja de datos de L293D <https://www.ti.com/lit/ds/symlink/l293d.pdf?ts=1627004062301&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FL293D>`_
 
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`ar_pump` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`py_pump` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Proyecto Arduino)
+* :ref:`ar_pump` (Proyecto Arduino)
+* :ref:`py_motor` (Proyecto MicroPython)
+* :ref:`py_pump` (Proyecto MicroPython)
+* :ref:`sh_rotating_fan` (Proyecto Scratch)

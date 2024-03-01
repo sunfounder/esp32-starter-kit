@@ -1,34 +1,34 @@
 .. _install_micropython_on_esp32:
 
-1.3 Install MicroPython on the ESP32(Important)
+1.3 Instalar MicroPython en el ESP32(Importante)
 ==================================================
 
-#. Download the |link_esp32_micropython_download| from the MicroPython official website and then download the latest version of the firmware.
+#. Descarga el |link_esp32_micropython_download| desde la página oficial de MicroPython y luego descarga la última versión del firmware.
 
     .. image:: img/dowload_micropython_uf2.png
 
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Conecta el ESP32 WROOM 32E a tu computadora utilizando un cable Micro USB.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Click on the bottom right corner of Thonny IDE, select **"MicroPython(ESP32).COMXX"** from the pop-up menu, and then select **"Configure interpreter"**.
+#. Haz clic en la esquina inferior derecha del IDE de Thonny, selecciona **"MicroPython(ESP32).COMXX"** del menú emergente y luego selecciona **"Configurar intérprete"**.
 
     .. image:: img/install_micropython1.png
 
-#. Click **"Install or Update MicroPython"** in the new pop-up window.
+#. Haz clic en **"Instalar o Actualizar MicroPython"** en la nueva ventana emergente.
 
     .. image:: img/install_micropython2.png
 
-#. Select the correct port and the firmware you downloaded earlier, and click **"Install"**.
+#. Selecciona el puerto correcto y el firmware que descargaste anteriormente, y haz clic en **"Instalar"**.
 
     .. image:: img/install_micropython3.png
 
-#. After a successful installation, you can close this page.
+#. Después de una instalación exitosa, puedes cerrar esta página.
 
     .. image:: img/install_micropython4.png
 
-#. When you return to the Thonny homepage, you will see MicroPython version and ESP32-related prompts, instead of red error prompts.
+#. Cuando regreses a la página principal de Thonny, verás la versión de MicroPython y los mensajes relacionados con ESP32, en lugar de mensajes de error en rojo.
 
     .. image:: img/install_micropython5.png

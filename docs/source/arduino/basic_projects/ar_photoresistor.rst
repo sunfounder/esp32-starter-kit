@@ -1,90 +1,90 @@
 .. _ar_photoresistor:
 
-5.7 Feel the Light
+5.7 Siente la Luz
 ===========================
 
-The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
+La fotorresistencia es un dispositivo comúnmente utilizado para entradas analógicas, similar a un potenciómetro. Su valor de resistencia cambia según la intensidad de la luz que recibe. Cuando se expone a una luz fuerte, la resistencia de la fotorresistencia disminuye, y a medida que la intensidad de la luz disminuye, la resistencia aumenta.
 
-By reading the value of the photoresistor, we can gather information about the ambient light conditions. This information can be used for tasks such as controlling the brightness of an LED, adjusting the sensitivity of a sensor, or implementing light-dependent actions in a project.
+Al leer el valor de la fotorresistencia, podemos recopilar información sobre las condiciones de luz ambiental. Esta información puede ser utilizada para tareas como controlar el brillo de un LED, ajustar la sensibilidad de un sensor o implementar acciones dependientes de la luz en un proyecto.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar todo el kit, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
-        - 320+
-        - |link_esp32_starter_kit|
+    * - Nombre
+      - ARTÍCULOS EN ESTE KIT
+      - ENLACE
+    * - Kit de Inicio ESP32
+      - 320+
+      - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    * - INTRODUCCIÓN DE COMPONENTES
+      - ENLACE DE COMPRA
 
-    *   - :ref:`cpn_esp32_wroom_32e`
-        - |link_esp32_wroom_32e_buy|
-    *   - :ref:`cpn_esp32_camera_extension`
-        - \-
-    *   - :ref:`cpn_breadboard`
-        - |link_breadboard_buy|
-    *   - :ref:`cpn_wires`
-        - |link_wires_buy|
-    *   - :ref:`cpn_resistor`
-        - |link_resistor_buy|
-    *   - :ref:`cpn_photoresistor`
-        - |link_photoresistor_buy|
+    * - :ref:`cpn_esp32_wroom_32e`
+      - |link_esp32_wroom_32e_buy|
+    * - :ref:`cpn_esp32_camera_extension`
+      - \-
+    * - :ref:`cpn_breadboard`
+      - |link_breadboard_buy|
+    * - :ref:`cpn_wires`
+      - |link_wires_buy|
+    * - :ref:`cpn_resistor`
+      - |link_resistor_buy|
+    * - :ref:`cpn_photoresistor`
+      - |link_photoresistor_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-* **Available Pins**
+* **Pines Disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
-
-    .. list-table::
-        :widths: 5 15
-
-        *   - Available Pins
-            - IO14, IO25, I35, I34, I39, I36
-
-
-* **Strapping Pins**
-
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
-            - IO0, IO12
+        * - Pines Disponibles
+          - IO14, IO25, I35, I34, I39, I36
 
-**Schematic**
+
+* **Pines de Arranque**
+
+    Los siguientes pines son pines de arranque, los cuales afectan el proceso de inicio del ESP32 durante el encendido o el reinicio. Sin embargo, una vez que el ESP32 se ha iniciado con éxito, pueden ser utilizados como pines regulares.
+
+    .. list-table::
+        :widths: 5 15
+
+        * - Pines de Arranque
+          - IO0, IO12
+
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_5.7_photoresistor.png
 
-As the light intensity increases, the resistance of the light-dependent resistor (LDR) decreases, resulting in a decrease in the value read on I35.
+A medida que aumenta la intensidad de la luz, la resistencia del resistor dependiente de la luz (LDR) disminuye, resultando en una disminución del valor leído en I35.
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.7_feel_the_light.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.7_feel_the_light``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Abre el archivo ``5.7_feel_the_light.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\5.7_feel_the_light``.
+    * Después de seleccionar la placa (ESP32 Dev Module) y el puerto apropiado, haz clic en el botón **Subir**.
     * :ref:`unknown_com_port`
     
     
@@ -92,14 +92,12 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/58b494c7-eef4-4476-af65-4823cef13f90/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, the Serial Monitor prints out the photoresistor values from 0 ~ 4095. 
-The stronger the current ambient brightness, the larger the value displayed on the serial monitor.
+Después de subir con éxito el código, el Monitor Serial imprime los valores de la fotorresistencia de 0 ~ 4095. 
+Cuanto más fuerte es el brillo ambiental actual, mayor es el valor mostrado en el monitor serial.
 
 .. note::
-    For the ESP32, the resolution is between 9 to 12 and it will change the ADC hardware resolution. Else value will be shifted.
+    Para el ESP32, la resolución está entre 9 y 12 y cambiará la resolución de hardware ADC. De lo contrario, el valor se desplazará.
 
-    Default is 12 bits (range from 0 to 4096) for all chips except ESP32S3 where default is 13 bits (range from 0 to 8192).
+    El valor predeterminado es de 12 bits (rango de 0 a 4096) para todos los chips excepto ESP32S3 donde el predeterminado es de 13 bits (rango de 0 a 8192).
 
-    You can add ``analogReadResolution(10);`` to ``setup()`` function to set a different resolution, such as ``20``.
-
-    
+    Puedes agregar ``analogReadResolution(10);`` a la función ``setup()`` para establecer una resolución diferente, como ``20``.

@@ -1,8 +1,8 @@
-Download the Code
+Descargar el Código
 ======================
 
-Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
+Aquí tienes el paquete completo de código para el Kit de Inicio ESP32. Puedes hacer clic en el siguiente enlace para descargarlo:
 
 * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
+Una vez que la descarga esté completa, descomprime el archivo y abre los archivos de ejemplo o proyectos relevantes en el software correspondiente. Esto te permitirá navegar y utilizar todo el código y los recursos proporcionados por el kit.

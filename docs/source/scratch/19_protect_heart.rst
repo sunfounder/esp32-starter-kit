@@ -1,46 +1,46 @@
 .. _sh_protect_heart:
 
-2.19 GAME -  Protect Your Heart
+2.19 JUEGO - Protege Tu Corazón
 =====================================
 
-In this project, let's make a game that tests reaction speed.
+En este proyecto, hagamos un juego que ponga a prueba la velocidad de reacción.
 
-In the stage, there is a heart protected in a rectangular box, and there are arrows flying towards this heart from any position on the stage. The color of the arrow will alternate between black and white at random and the arrow will fly faster and faster.
+En el escenario, hay un corazón protegido en una caja rectangular, y hay flechas volando hacia este corazón desde cualquier posición en el escenario. El color de la flecha alternará entre negro y blanco al azar y la flecha volará cada vez más rápido.
 
-If the color of the rectangular box and the arrow color are the same, the arrow is blocked outside and level is added 1; if the color of both is not the same, the arrow will shoot through the heart and the game is over.
+Si el color de la caja rectangular y el color de la flecha son los mismos, la flecha se bloquea afuera y se suma 1 al nivel; si el color de ambos no es el mismo, la flecha atravesará el corazón y el juego terminará.
 
-Here the color of the rectangle box is controlled by the Line Tracking module. When the module is placed on a black surface (a surface that is reflective), the color of the rectangle box is black, otherwise it is white.
+Aquí el color de la caja rectangular está controlado por el módulo de Seguimiento de Línea. Cuando el módulo se coloca sobre una superficie negra (una superficie que refleja), el color de la caja rectangular es negro, de lo contrario, es blanco.
 
-So you need to decide whether to put the Line Tracking module on a white surface or a black surface according to the arrow color.
+Así que necesitas decidir si colocar el módulo de Seguimiento de Línea sobre una superficie blanca o negra según el color de la flecha.
 
 .. image:: img/22_heart.png
 
-Required Components
----------------------
+Componentes Necesarios
+-------------------------
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN AL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,136 +51,136 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_line_track`
         - |link_line_track_buy|
 
-Build the Circuit
+Construir el Circuito
 -----------------------
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+Este es un módulo digital de Seguimiento de Línea, cuando detecta una línea negra, emite 1; cuando detecta una línea blanca, emite un valor de 0. Además, puedes ajustar su distancia de detección a través del potenciómetro en el módulo.
 
-Now build the circuit according to the diagram below.
+Ahora construye el circuito según el diagrama a continuación.
 
 .. image:: img/circuit/20_protect_heart_bb.png
 
 .. note::
 
-    Before starting the project, you need to adjust the sensitivity of the module.
+    Antes de empezar el proyecto, necesitas ajustar la sensibilidad del módulo.
 
-    Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+    Conecta según el diagrama anterior, luego enciende la placa R3 (ya sea directamente en el cable USB o el cable de botón de batería de 9V), sin subir el código.
 
-    Now stick a black electrical tape on the desktop, put the Line Track module at a height of 2cm from the desktop.
+    Ahora pega una cinta eléctrica negra en el escritorio, coloca el módulo de Seguimiento de Línea a una altura de 2cm del escritorio.
 
-    With the sensor facing down, observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
+    Con el sensor mirando hacia abajo, observa el LED de señal en el módulo para asegurarte de que se ilumina en la mesa blanca y se apaga en la cinta negra.
 
-    If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+    Si no, necesitas ajustar el potenciómetro en el módulo, para que pueda hacer el efecto anterior.
 
 
-Programming
+Programación
 ------------------
 
-Here we need to create 3 sprites, **Heart**, **Square Box** and **Arrow1**.
+Aquí necesitamos crear 3 sprites, **Corazón**, **Caja Cuadrada** y **Flecha1**.
 
-* **Heart**: stops in the middle of the stage, if touched by **Arrow1** sprite, the game is over.
-* **Square Box**: There are two types of costumes, black and white, and will switch costumes according to the value of Line Tracking module.
-* **Arrow**: flies towards the middle of the stage from any position in black/white; if its color matches the color of the **Square Box** sprite, it is blocked and re-flies towards the middle of the stage from a random position; if its color does not match the color of the **Square Box** sprite, it passes through the **Heart** sprite and the game is over.
+* **Corazón**: se detiene en medio del escenario, si es tocado por el sprite **Flecha1**, el juego termina.
+* **Caja Cuadrada**: Hay dos tipos de disfraces, negro y blanco, y cambiará de disfraz según el valor del módulo de Seguimiento de Línea.
+* **Flecha**: vuela hacia el centro del escenario desde cualquier posición en negro/blanco; si su color coincide con el color del sprite **Caja Cuadrada**, se bloquea y vuelve a volar hacia el centro del escenario desde una posición aleatoria; si su color no coincide con el color del sprite **Caja Cuadrada**, pasa a través del sprite **Corazón** y el juego termina.
 
-**1. Add Square Box sprite**
+**1. Añade el sprite Caja Cuadrada**
 
-Since the Arrow1 and Square Box sprite both have white costumes, in order for them to be displayed on the stage, now fill the background with a color that can be any color except black, white, and red.
+Dado que el sprite Flecha1 y Caja Cuadrada ambos tienen disfraces blancos, para que se puedan mostrar en el escenario, ahora llena el fondo con un color que puede ser cualquier color excepto negro, blanco y rojo.
 
-* Click on **Backdrop1** to go to its **Backdrops** page.
-* Select the color you want to fill.
-* Use the **Rectangle** tool to draw a rectangle the same size as the drawing board.
+* Haz clic en **Backdrop1** para ir a su página de **Fondos**.
+* Selecciona el color que quieras llenar.
+* Usa la herramienta **Rectángulo** para dibujar un rectángulo del mismo tamaño que el tablero de dibujo.
 
 .. image:: img/22_heart0.png
 
-Delete the default sprite, use the **Choose a Sprite** button to add the **Square Box** sprite, and set its x and y to (0, 0).
+Elimina el sprite predeterminado, usa el botón **Elegir un Sprite** para añadir el sprite **Caja Cuadrada** y ajusta sus coordenadas x e y a (0, 0).
 
 .. image:: img/22_heart1.png
 
-Go to the **Square Box** sprite's **Costumes** page and set the black and white costumes.
+Ve a la página de **Disfraces** del sprite **Caja Cuadrada** y configura los disfraces negro y blanco.
 
-* Click the selection tool
-* Select the rectangle on the canvas
-* Select the fill color as black
-* and name the costume **Black**
+* Haz clic en la herramienta de selección
+* Selecciona el rectángulo en el lienzo
+* Selecciona el color de relleno como negro
+* y nombra el disfraz **Negro**
 
 .. image:: img/22_heart2.png
 
-Select the second costume, set the fill color to white, name it White, and delete the rest of the costume.
+Selecciona el segundo disfraz, configura el color de relleno a blanco, nómbralo Blanco y elimina el resto del disfraz.
 
 .. image:: img/22_heart3.png
 
-**2. Add Heart sprite**
+**2. Añade el sprite Corazón**
 
-Also add a **Heart** sprite, set its position to (0, 0), and shrink its size so that it appears to be located inside the Square Box.
+También añade un sprite **Corazón**, ajusta su posición a (0, 0) y reduce su tamaño para que parezca estar ubicado dentro de la Caja Cuadrada.
 
 .. image:: img/22_heart5.png
 
-On the **Costumes** page, adjust the heart purple costume so that it appears to be broken.
+En la página de **Disfraces**, ajusta el disfraz morado del corazón para que parezca estar roto.
 
 .. image:: img/22_heart6.png
 
-**3. Add Arrow1 sprite**
+**3. Añade el sprite Flecha1**
 
-Add an **Arrow1** sprite.
+Añade un sprite **Flecha1**.
 
 .. image:: img/22_heart7.png
 
-On the **Costumes** page, keep and copy the rightward facing costume and set its color to black and white.
+En la página de **Disfraces**, mantén y copia el disfraz que mira hacia la derecha y configura su color a negro y blanco.
 
 .. image:: img/22_heart8.png
 
 
-**4. Scripting for Square Box sprite**
+**4. Programación para el sprite Caja Cuadrada**
 
-Go back to the **Blocks** page and script **Square Box** sprite.
+Vuelve a la página de **Bloques** y programa el sprite **Caja Cuadrada**.
 
-* So when the value of the digital pin 2 (Line Following module) is 1 (black line detected), then switch the costume to **Black**.
-* Otherwise toggle the costume to **White**.
+* Así que cuando el valor del pin digital 2 (módulo de Seguimiento de Línea) es 1 (línea negra detectada), entonces cambia el disfraz a **Negro**.
+* De lo contrario, cambia el disfraz a **Blanco**.
 
 .. image:: img/22_heart4.png
 
 
-**5. Scripting for Heart sprite**
+**5. Programación para el sprite Corazón**
 
-**Heart** sprite is protected inside **Square Box**, and by default is a red costume. When the Arrow1 sprite is touched, the game ends.
+El sprite **Corazón** está protegido dentro de **Caja Cuadrada**, y por defecto es un disfraz rojo. Cuando el sprite Flecha1 lo toca, el juego termina.
 
 .. image:: img/22_heart9.png
 
-**6. Scripting for Arrow1 sprite**
+**6. Programación para el sprite Flecha1**
 
-Make the **Arrow1** sprite hide and create a clone when the green flag is clicked.
+Haz que el sprite **Flecha1** se oculte y cree un clon cuando se haga clic en la bandera verde.
 
 .. image:: img/22_heart10.png
 
-Create an [init] block to initialize the **Arrow1** sprite's position, orientation and color.
+Crea un bloque [init] para inicializar la posición, orientación y color del sprite **Flecha1**.
 
-It appears at a random location, and if the distance between it and the **Heart** sprite is less than 200, it moves outward until the distance is greater than 200.
+Aparece en una ubicación aleatoria, y si la distancia entre él y el sprite **Corazón** es menor de 200, se mueve hacia afuera hasta que la distancia sea mayor de 200.
 
 .. image:: img/22_heart11.png
 
-Set its direction to face the **Heart** sprite.
+Configura su dirección para enfrentar al sprite **Corazón**.
 
 .. image:: img/22_heart12.png
 
-Make its color alternate randomly between black/white.
+Haz que su color alterne aleatoriamente entre negro/blanco.
 
-* Variable color is 0, toggle costume to **White**.
-* Variable color is 1, toggles the outfit to **Black**.
+* Variable color es 0, cambia el disfraz a **Blanco**.
+* Variable color es 1, cambia el disfraz a **Negro**.
 
 .. image:: img/22_heart14.png
 
-Now let it start moving, it will move faster as the value of the variable **level** increases.
+Ahora deja que comience a moverse, se moverá más rápido a medida que aumenta el valor de la variable **nivel**.
 
 .. image:: img/22_heart13.png
 
-Now set its collision effect with the **Square Box** sprite.
+Ahora configura su efecto de colisión con el sprite **Caja Cuadrada**.
 
-* If the **Arrow1** sprite and the **Square Box** sprite have the same color (which will be modified according to the value of the Line Track module), either black or white, a new clone is created and the game continues.
-* If their colors do not match, the **Arrow1** sprite continues to move and the game ends when it hits the **Heart** sprite.
+* Si el sprite **Flecha1** y el sprite **Caja Cuadrada** tienen el mismo color (que se modificará según el valor del módulo de Seguimiento de Línea), ya sea negro o blanco, se crea un nuevo clon y el juego continúa.
+* Si sus colores no coinciden, el sprite **Flecha1** continúa moviéndose y el juego termina cuando golpea al sprite **Corazón**.
 
 .. image:: img/22_heart15.png
 
 .. note::
-    The two [touch color()] blocks need to pick up the black/white costumes of Square Box separately.
+    Los dos bloques [tocar color()] necesitan recoger los disfraces negro/blanco de Caja Cuadrada por separado.
 
     .. image:: img/22_heart16.png

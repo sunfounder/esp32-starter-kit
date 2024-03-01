@@ -1,79 +1,76 @@
 
 .. _cpn_7_segment:
 
-7-segment Display
-======================
+display de 7 Segmentos
+=========================
 
 .. image:: img/7_segment.png
     :width: 200
     :align: center
 
-A 7-segment display is an 8-shaped component which packages 7 LEDs. Each LED is called a segment - when energized, one segment forms part of a numeral to be displayed.
+Un display de 7 segmentos es un componente con forma de 8 que contiene 7 LED. Cada LED se llama segmento; cuando se energiza, un segmento forma parte de un numeral a ser mostrado.
 
-* Each of the LEDs in the display is given a positional segment with one of its connection pins led out from the rectangular plastic package.
-* These LED pins are labeled from "a" through to "g" representing each individual LED.
-* The other LED pins are connected together forming a common pin.
-* So by forward biasing the appropriate pins of the LED segments in a particular order, some segments will brighten and others stay dim, thus showing the corresponding character on the display. 
+* Cada uno de los LED en el display tiene un segmento posicional con uno de sus pines de conexión saliendo del paquete plástico rectangular.
+* Estos pines LED están etiquetados de "a" a "g" representando cada LED individual.
+* Los otros pines LED están conectados juntos formando un pin común.
+* Así que al polarizar hacia adelante los pines apropiados de los segmentos LED en un orden particular, algunos segmentos se iluminarán y otros permanecerán tenues, mostrando así el carácter correspondiente en el display.
 
-**Features**
+**Características**
 
-* Size: 19 x 12.7 x 13.8mm(LxWxH, include the pin)
-* Screen: 0.56''
-* Color: red
-* Common Cathode
-* Forward Voltage: 1.8V
-* 10 pins
-* Pitch: standard 0.1" (2.54mm)
+* Tamaño: 19 x 12.7 x 13.8 mm (LxWxH, incluyendo el pin)
+* Pantalla: 0.56''
+* Color: rojo
+* Cátodo Común
+* Voltaje Directo: 1.8V
+* 10 pines
+* Paso: estándar 0.1" (2.54mm)
 
-**Common Cathode (CC) or Common Anode (CA)**
+**Cátodo Común (CC) o Ánodo Común (CA)**
 
-There are two types of pin connection: Common Cathode (CC) and Common Anode (CA). 
-As the name suggests, a CC display has all the cathodes of the 7 LEDs connected when a CA display has all the anodes of the 7 segments connected.
+Existen dos tipos de conexión de pines: Cátodo Común (CC) y Ánodo Común (CA).
+Como su nombre indica, un display CC tiene todos los cátodos de los 7 LEDs conectados cuando un display CA tiene todos los ánodos de los 7 segmentos conectados.
 
-
-* Common Cathode 7-Segment Display
+* Display de 7 Segmentos con Cátodo Común
 
 .. image:: img/segment_cathode.png
     :width: 500
 
-* Common Anode 7-Segment Display
+* Display de 7 Segmentos con Ánodo Común
 
 .. image:: img/segment_anode.png
     :width: 500
 
-**How to Know CC or CA?**
+**Cómo Saber si es CC o CA?**
 
-Usually there will be label on the side of the 7-segment display, xxxAx or xxxBx. Generally speaking xxxAx stands for common cathode and xxxBx stands for common anode.
+Por lo general, habrá una etiqueta en el lateral del display de 7 segmentos, xxxAx o xxxBx. En general, xxxAx representa cátodo común y xxxBx representa ánodo común.
 
 .. image:: img/7_segment.png
     :width: 250
 
 .. image:: img/7_segment_bs.png
 
-You can also use a multimeter to check the 7-segment display if there is no label. Set the multimeter to diode test mode and connect the black lead to the middle pin of the 7-segment display, and the red lead to any other pin except the middle one. The 7-segment display is common cathode if a segment lights up.
+También puedes usar un multímetro para verificar el display de 7 segmentos si no hay etiqueta. Configura el multímetro en modo de prueba de diodo y conecta el cable negro al pin central del display de 7 segmentos, y el cable rojo a cualquier otro pin excepto el central. El display de 7 segmentos es de cátodo común si un segmento se ilumina.
 
-You swap the red and black meter heads if there is no segment lit. When a segment is lit, it indicates a common anode.
-
+Intercambia los cables rojo y negro si no hay ningún segmento iluminado. Cuando un segmento está iluminado, indica un ánodo común.
 
 .. image:: img/7_segment_test.JPG
     :width: 600
 
+**Códigos de Visualización**
 
-**Display Codes** 
-
-To help you get to know how 7-segment displays(Common Cathode) display Numbers, we have drawn the following table. 
-Numbers are the number 0-F displayed on the 7-segment display; (DP) GFEDCBA refers to the corresponding LED set to 0 or 1.
+Para ayudarte a entender cómo los displays de 7 segmentos (Cátodo Común) muestran números, hemos elaborado la siguiente tabla.
+Los números son el número 0-F mostrado en el display de 7 segmentos; (DP) GFEDCBA se refiere al conjunto LED correspondiente a 0 o 1.
 
 .. image:: img/segment_code.png
 
-For example, 01011011 means that DP, F and C are set to 0, while others are set to 1. Therefore, the number 2 is displayed on the 7-segment display.
+Por ejemplo, 01011011 significa que DP, F y C están configurados en 0, mientras que los otros están configurados en 1. Por lo tanto, el número 2 se muestra en el display de 7 segmentos.
 
 .. image:: img/7segment_2.png
 
+**Ejemplo**
 
-**Example**
+* :ref:`ar_7_segment` (Proyecto Arduino)
+* :ref:`ar_dice` (Proyecto Arduino)
+* :ref:`py_7_segment` (Proyecto MicroPython)
+* :ref:`py_dice` (Proyecto MicroPython)
 
-* :ref:`ar_7_segment` (Arduino Project)
-* :ref:`ar_dice` (Arduino Project)
-* :ref:`py_7_segment` (MicroPython Project)
-* :ref:`py_dice` (MicroPython Project)

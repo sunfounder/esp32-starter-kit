@@ -1,59 +1,58 @@
-
 .. _add_libraries_ar:
 
-1.4 Install libraries (Important)
-======================================
+1.4 Instalación de librerías (Importante)
+===================================================
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+Una librería es una colección de código o funciones preescritas que amplían las capacidades del IDE de Arduino. Las librerías proporcionan código listo para usar en diversas funcionalidades, permitiéndote ahorrar tiempo y esfuerzo en la codificación de características complejas.
 
-There are two main ways to install libraries:
+Existen dos maneras principales de instalar librerías:
 
-Install from Library Manager
-------------------------------------
+Instalación desde el Gestor de Librerías
+---------------------------------------------
 
-Many libraries are available directly through the Arduino Library Manager. You can access the Library Manager by following these steps:
+Muchas librerías están disponibles directamente a través del Gestor de Librerías de Arduino. Puedes acceder al Gestor de Librerías siguiendo estos pasos:
 
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. En el **Gestor de Librerías**, puedes buscar la librería deseada por nombre o navegar a través de diferentes categorías.
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The DHT sensor library library is used here, you can install it from the Library Manager." Simply install the recommended libraries as prompted.
+      En proyectos donde se requiere la instalación de librerías, habrá indicaciones sobre qué librerías instalar. Sigue las instrucciones proporcionadas, como "Se utiliza aquí la librería del sensor DHT, puedes instalarla desde el Gestor de Librerías." Simplemente instala las librerías recomendadas según se indica.
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. Una vez que encuentres la librería que deseas instalar, haz clic en ella y luego en el botón **Instalar**.
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. El IDE de Arduino descargará e instalará automáticamente la librería para ti.
 
 .. _install_lib_man:
 
-Manual Installation
+Instalación Manual
 --------------------------
 
-Some libraries are not available through the **Library Manager** and need to be manually installed. To install these libraries, follow these steps:
+Algunas librerías no están disponibles a través del **Gestor de Librerías** y necesitan ser instaladas manualmente. Para instalar estas librerías, sigue estos pasos:
 
 
-#. Open the Arduino IDE and go to **Sketch** -> **Include Library** -> **Add .ZIP Library**.
+#. Abre el IDE de Arduino y ve a **Sketch** -> **Incluir Librería** -> **Añadir Librería .ZIP**.
 
    .. image:: img/a2dp_add_zip.png
 
-#. Navigate to the directory where the library files are located, such as the ``esp32-starter-kit\c\libraries`` folder, and select the desired library file, like ``ESP32-A2DP.zip``. Then, click **Open**.
+#. Navega al directorio donde se encuentran los archivos de la librería, como la carpeta ``esp32-starter-kit\c\libraries``, y selecciona el archivo de librería deseado, como ``ESP32-A2DP.zip``. Luego, haz clic en **Abrir**.
 
    .. image:: img/a2dp_choose.png
 
-#. After a short while, you will receive a notification indicating a successful installation.
+#. Después de un corto tiempo, recibirás una notificación indicando una instalación exitosa.
 
    .. image:: img/a2dp_success.png
 
-#. Repeat the same process to add the ``ESP8266Audio.zip`` library.
+#. Repite el mismo proceso para añadir la librería ``ESP8266Audio.zip``.
 
 
 .. note::
 
-   The libraries installed using either of the above methods can be found in the default library directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
+   Las librerías instaladas usando cualquiera de los métodos anteriores se pueden encontrar en el directorio de librerías predeterminado del IDE de Arduino, que generalmente está ubicado en ``C:\Usuarios\xxx\Documentos\Arduino\libraries``.
 
-   If your library directory is different, you can check it by going to **File** -> **Preferences**.
+   Si tu directorio de librerías es diferente, puedes verificarlo yendo a **Archivo** -> **Preferencias**.
 
       .. image:: img/install_lib1.png

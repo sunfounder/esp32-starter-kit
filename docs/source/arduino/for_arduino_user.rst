@@ -1,14 +1,13 @@
-For Arduino User
-========================
+Para Usuarios de Arduino
+===========================
 
+Aquí tienes el paquete completo de código para el Kit de Inicio ESP32. Puedes hacer clic en el siguiente enlace para descargarlo:
 
-Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
+* :download:`Kit de Inicio SunFounder ESP32 <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-* :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+Una vez completada la descarga, descomprime el archivo y abre los archivos de ejemplo o proyectos relevantes en el software correspondiente. Esto te permitirá explorar y utilizar todo el código y los recursos proporcionados por el kit.
 
-Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
-
-**1. Get Started**
+**1. Comenzar**
 
 .. toctree::
     :maxdepth: 1
@@ -18,9 +17,7 @@ Once the download is complete, unzip the file and open the relevant example code
     arduino_start/install_esp32
     arduino_start/add_libraries_ar
 
-
 **2. Displays**
-
 
 .. toctree::
     :maxdepth: 1
@@ -33,8 +30,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_lcd
     basic_projects/ar_rgb_strip
 
-
-**3. Sounds**
+**3. Sonidos**
 
 .. toctree::
     :maxdepth: 1
@@ -42,7 +38,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_ac_buz
     basic_projects/ar_pa_buz
 
-**4. Actuators**
+**4. Actuadores**
 
 .. toctree::
     :maxdepth: 1
@@ -51,7 +47,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_pump
     basic_projects/ar_servo
 
-**5. Sensors**
+**5. Sensores**
 
 .. toctree::
     :maxdepth: 1
@@ -71,7 +67,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_dht11
     basic_projects/ar_irremote
 
-**6. Funny Projects**
+**6. Proyectos Divertidos**
 
 .. toctree::
     :maxdepth: 1
@@ -84,7 +80,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_plant_monitor
     basic_projects/ar_guess_number
 
-**7. Bluetooth&SD Card&Camera&Speaker**
+**7. Bluetooth&Tarjeta SD&Cámara&Altavoz**
 
 .. toctree::
     :maxdepth: 1
@@ -96,7 +92,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_mp3_player_sd
     basic_projects/ar_take_photo_sd
 
-**8. Bluetooth&SD Card&Camera&Speaker**
+**8. Proyectos de IoT**
 
 .. toctree::
     :maxdepth: 1
@@ -111,4 +107,3 @@ Once the download is complete, unzip the file and open the relevant example code
     iot_projects/ar_iot_homeassistant
     iot_projects/ar_iot_blynk
     iot_projects/ar_iot_bluetooth_app
-

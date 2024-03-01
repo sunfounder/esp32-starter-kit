@@ -1,41 +1,41 @@
 .. _ar_guess_number:
 
-6.7 Guess Number
-==================
-Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
+6.7 Adivina el Número
+===========================
+¿Te sientes con suerte? ¿Quieres probar tu intuición y ver si puedes adivinar el número correcto? ¡Entonces no busques más allá del juego Adivina el Número!
 
-With this project, you can play a fun and exciting game of chance.
+Con este proyecto, puedes jugar un juego divertido y emocionante de azar.
 
-Using an IR remote control, players input numbers between 0 and 99 to try and guess the randomly generated lucky point number. 
-The system displays the player's input number on an LCD screen, along with upper and lower limit tips to help guide the 
-player towards the right answer. With every guess, players get closer to the lucky point number, 
-until finally, someone hits the jackpot and wins the game!
+Usando un control remoto IR, los jugadores ingresan números entre 0 y 99 para intentar adivinar el número de punto de suerte generado aleatoriamente.
+El sistema muestra el número de entrada del jugador en una pantalla LCD, junto con consejos de límite superior e inferior para ayudar a guiar al
+jugador hacia la respuesta correcta. Con cada adivinanza, los jugadores se acercan al número de punto de suerte,
+hasta que finalmente, alguien acierta y gana el juego.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -50,21 +50,21 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.7_guess_number.png
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``6.7_guess_number.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.7_guess_number`` directly.
-    * The ``LiquidCrystal_I2C`` and  ``IRremoteESP8266`` libraries are used here, refer to :ref:`install_lib_man` for a tutorial to install.
+    * Puedes abrir el archivo ``6.7_guess_number.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\6.7_guess_number`` directamente.
+    * Las bibliotecas ``LiquidCrystal_I2C`` y ``IRremoteESP8266`` se utilizan aquí, consulta :ref:`install_lib_man` para obtener un tutorial de instalación.
 
 
 .. raw:: html
@@ -72,21 +72,20 @@ You can also buy them separately from the links below.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2e4217f5-c1b7-4859-a34d-d791bbc5e57a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-    
-* After the code is successfully uploaded, press any number button on the remote control to start the game.
-* Input a number using the number buttons on the remote control. To input a single digit, you need to press the **cycle** key to confirm.
-* The system will show the input number and the upper and lower limit tips on the LCD screen.
-* Keep guessing until you correctly guess the lucky point number.
-* After a successful guess, the system will show a success message and generate a new lucky point number.
+* Después de que el código se haya cargado con éxito, presiona cualquier botón numérico en el control remoto para iniciar el juego.
+* Ingresa un número usando los botones numéricos en el control remoto. Para ingresar un solo dígito, necesitas presionar la tecla **ciclo** para confirmar.
+* El sistema mostrará el número de entrada y los consejos de límite superior e inferior en la pantalla LCD.
+* Sigue adivinando hasta que adivines correctamente el número de punto de suerte.
+* Después de una adivinanza exitosa, el sistema mostrará un mensaje de éxito y generará un nuevo número de punto de suerte.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Si el código y el cableado son correctos, pero la LCD aún no muestra ningún contenido, puedes ajustar el potenciómetro en la parte posterior para aumentar el contraste.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. In the ``setup()`` function, the I2C LCD screen and IR receiver are initialized. Then call the ``initNewValue()`` function to generate a new random lucky number, and a welcome message is displayed on the LCD screen.
+#. En la función ``setup()``, la pantalla LCD I2C y el receptor IR se inicializan. Luego llama a la función ``initNewValue()`` para generar un nuevo número de suerte aleatorio, y se muestra un mensaje de bienvenida en la pantalla LCD.
 
     .. code-block:: arduino
 
@@ -105,7 +104,7 @@ You can also buy them separately from the links below.
             initNewValue();
         }
 
-#. In the ``loop`` function, the code waits for a signal from the IR receiver. When a signal is received, the ``decodeKeyValue`` function is called to decode the signal and get the corresponding button value.
+#. En la función ``loop``, el código espera una señal del receptor IR. Cuando se recibe una señal, la función ``decodeKeyValue`` se llama para decodificar la señal y obtener el valor del botón correspondiente.
 
     .. code-block:: arduino
 
@@ -141,7 +140,6 @@ You can also buy them separately from the links below.
         }
         }
 
-    * Depending on the button value, the appropriate function is called. If a number button is pressed, the ``count`` variable is updated, and the ``detectPoint`` function is called to detect if the input number is correct. The ``lcdShowInput`` function is called to show the input number and the upper and lower limit tips on the LCD screen.
-    * If the ``POWER`` button is pressed, the ``initNewValue`` function is called to generate a new lucky point number and show the welcome message on the LCD screen.
-    * If the ``CYCLE`` button is pressed, the ``detectPoint`` function is called to detect if the input number is correct. The ``lcdShowInput`` function is called to show the input number and the upper and lower limit tips on the LCD screen.
-
+    * Dependiendo del valor del botón, se llama a la función apropiada. Si se presiona un botón numérico, la variable ``count`` se actualiza, y la función ``detectPoint`` se llama para detectar si el número de entrada es correcto. La función ``lcdShowInput`` se llama para mostrar el número de entrada y los consejos de límite superior e inferior en la pantalla LCD.
+    * Si se presiona el botón ``POWER``, la función ``initNewValue`` se llama para generar un nuevo número de punto de suerte y mostrar el mensaje de bienvenida en la pantalla LCD.
+    * Si se presiona el botón ``CYCLE``, la función ``detectPoint`` se llama para detectar si el número de entrada es correcto. La función ``lcdShowInput`` se llama para mostrar el número de entrada y los consejos de límite superior e inferior en la pantalla LCD.

@@ -1,49 +1,50 @@
 .. _cpn_receiver:
 
-IR Receiver
+Receptor de Infrarrojos
 ===========================
 
-**IR Receiver**
+**Receptor de Infrarrojos**
 
 .. image:: img/ir_receiver_sl838.png
     :width: 400
     :align: center
 
-* OUT: Signal output
-* GND: GND
-* VCC: power supply, 3.3v~5V
+* OUT: Salida de señal
+* GND: Tierra
+* VCC: Fuente de alimentación, 3.3v~5V
 
-SL838 infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+El receptor de infrarrojos SL838 es un componente que recibe señales infrarrojas y puede recibir independientemente rayos infrarrojos y emitir señales compatibles con el nivel TTL. Es similar a un transistor normal encapsulado en plástico en tamaño y es adecuado para todo tipo de control remoto infrarrojo y transmisión infrarroja.
 
-Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
-
-
-* Can be used for remote control
-* Wide operating voltage: 2.7~5V
-* Internal filter for PCM frequency
-* TTL and CMOS compatibility
-* Strong anti-interference ability
-* Compliant RoHS
+La comunicación infrarroja, o IR, es una tecnología de comunicación inalámbrica popular, de bajo costo y fácil de usar. La luz infrarroja tiene una longitud de onda ligeramente más larga que la luz visible, por lo que es imperceptible para el ojo humano, lo que la hace ideal para la comunicación inalámbrica. Un esquema de modulación común para la comunicación infrarroja es la modulación de 38 kHz.
 
 
-**Remote Control**
+* Puede ser utilizado para control remoto
+* Amplio rango de voltaje de funcionamiento: 2.7~5V
+* Filtro interno para frecuencia PCM
+* Compatibilidad TTL y CMOS
+* Fuerte capacidad antiinterferencias
+* Cumple con RoHS
+
+
+**Control Remoto**
 
 .. image:: img/image186.jpeg
     :width: 400
 
-This is a Mini thin infrared wireless remote control with 21 function buttons and a transmitting distance of up to 8 meters, which is suitable for operating a wide range of devices in a kid's room.
+Este es un control remoto inalámbrico de infrarrojos delgado y miniatura con 21 botones de función y una distancia de transmisión de hasta 8 metros, que es adecuado para operar una amplia gama de dispositivos en la habitación de un niño.
 
-* Size: 85x39x6mm
-* Remote control range: 8-10m
-* Battery: 3V button type lithium manganese battery
-* Infrared carrier frequency: 38KHz
-* Surface paste material: 0.125mm PET
-* Effective life: more than 20,000 times
+* Tamaño: 85x39x6mm
+* Rango de control remoto: 8-10m
+* Batería: Pila de litio de tipo botón de 3V
+* Frecuencia portadora infrarroja: 38 kHz
+* Material de adhesión superficial: PET de 0.125mm
+* Vida útil efectiva: más de 20,000 veces
 
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_receiver` (Arduino Project)
-* :ref:`ar_guess_number` (Arduino Project)
-* :ref:`py_receiver` (MicroPython Project)
-* :ref:`py_guess_number` (MicroPython Project)
+* :ref:`ar_receiver` (Proyecto Arduino)
+* :ref:`ar_guess_number` (Proyecto Arduino)
+* :ref:`py_receiver` (Proyecto MicroPython)
+* :ref:`py_guess_number` (Proyecto MicroPython)
+

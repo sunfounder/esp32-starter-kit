@@ -1,40 +1,40 @@
 .. _sh_breakout_clone:
 
-2.16 GAME - Breakout Clone
-============================
+2.16 JUEGO - Clon de Breakout
+===============================
 
-Here we use the potentiometer to play a Breakout Clone game.
+Aquí utilizamos el potenciómetro para jugar a un clon del juego Breakout.
 
-After clicking the green flag, you need to use the potentiometer to control the paddle on the stage to catch the ball so that it can go up and hit the bricks, all the bricks disappear then the game is won, if you don't catch the ball, the game is lost.
+Después de hacer clic en la bandera verde, necesitarás usar el potenciómetro para controlar la paleta en el escenario y atrapar la bola para que pueda subir y golpear los ladrillos. Si desaparecen todos los ladrillos, ganas el juego; si no atrapas la bola, pierdes.
 
 .. image:: img/17_brick.png
 
-Required Components
----------------------
+Componentes Necesarios
+--------------------------
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN AL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,102 +47,93 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-Build the Circuit
+Construir el Circuito
 -----------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to pin35. After the conversion by the ADC converter of the esp32 board, the value range is 0-4095.
+El potenciómetro es un elemento resistivo con 3 terminales, los 2 pines laterales están conectados a 5V y GND, y el pin central está conectado al pin35. Después de la conversión por el convertidor ADC de la placa esp32, el rango de valores es de 0-4095.
 
 .. image:: img/circuit/5_moving_mouse_bb.png
 
-Programming
+Programación
 ------------------
 
-There are 3 sprites on the stage.
+Hay 3 sprites en el escenario.
 
-**1. Paddle sprite**
+**1. Sprite de la Paleta**
 
-The effect to be achieved by the **Paddle** is that the initial position is in the middle of the bottom of the stage, and it is controlled by a potentiometer to move it to the left or to the right.
+El efecto que se busca con la **Paleta** es que la posición inicial esté en el medio de la parte inferior del escenario, y sea controlada por un potenciómetro para moverla hacia la izquierda o hacia la derecha.
 
-* Delete the default sprite, use the **Choose a Sprite** button to add the **Paddle** sprite, and set its x and y to (0, -140).
+* Elimina el sprite predeterminado, usa el botón **Elegir un Sprite** para añadir el sprite **Paleta**, y ajusta sus coordenadas x e y a (0, -140).
 
     .. image:: img/17_padd1.png
 
-* Go to the **Costumes** page, remove the Outline and change its color to dark gray.
+* Ve a la página de **Disfraces**, elimina el contorno y cambia su color a gris oscuro.
 
     .. image:: img/17_padd3.png
 
-
-* Now script the **Paddle** sprite to set its initial position to (0, -140) when the green flag is clicked, and read the value of pin35 (potentiometer) into the variable **a0**. Since the **Paddle** sprite moves from left to right on the stage at x-coordinates -195~195, you need to use the [map] block to map the variable **a0** range 0~4095 to -195~195. 
+* Ahora programa el sprite **Paleta** para establecer su posición inicial a (0, -140) cuando se haga clic en la bandera verde, y lee el valor del pin35 (potenciómetro) en la variable **a0**. Dado que el sprite **Paleta** se mueve de izquierda a derecha en el escenario en las coordenadas x de -195 a 195, necesitas usar el bloque [map] para mapear el rango de la variable **a0** de 0~4095 a -195~195.
 
     .. image:: img/17_padd2.png
 
-* Now you can rotate the potentiometer to see if the **Paddle** can move left and right on the stage.
+* Ahora puedes girar el potenciómetro para ver si la **Paleta** puede moverse hacia la izquierda y hacia la derecha en el escenario.
 
-**2. Ball sprite**
+**2. Sprite de la Bola**
 
-The effect of the ball sprite is that it moves around the stage and bounces when it touches the edge; it bounces down if it touches the block above the stage; it bounces up if it touches the Paddle sprite during its fall; if it doesn't, the script stops running and the game ends.
+El efecto del sprite de la bola es que se mueva por el escenario y rebote cuando toque el borde; rebota hacia abajo si toca el bloque sobre el escenario; rebota hacia arriba si toca el sprite de la **Paleta** durante su caída; si no, el script deja de ejecutarse y el juego termina.
 
-
-* Add **Ball** sprite.
+* Añade el sprite **Bola**.
 
     .. image:: img/17_ball1.png
 
-* When the green flag is clicked, set the angle of the **Ball** sprite to 45° and set the initial position to (0, -120).
+* Cuando se haga clic en la bandera verde, establece el ángulo del sprite **Bola** a 45° y la posición inicial a (0, -120).
 
     .. image:: img/17_ball2.png
 
-* Now let the **Ball** sprite move around the stage and bounce when it touches the edge, and you can click on the green flag to see the effect.
+* Ahora deja que el sprite **Bola** se mueva por el escenario y rebote cuando toque el borde, y puedes hacer clic en la bandera verde para ver el efecto.
 
     .. image:: img/17_ball3.png
 
-* When the **Ball** sprite touches the **Paddle** sprite, do a reflection. The easy way to do this is to let the angle be directly inverted, but then you'll find that the path of the ball is completely fixed, which is too boring. Therefore, we use the center of the two sprites to calculate and make the ball bounce in the opposite direction of the center of the baffle.
+* Cuando el sprite **Bola** toca el sprite **Paleta**, realiza un reflejo. La forma fácil de hacer esto es dejar que el ángulo se invierta directamente, pero entonces encontrarás que la trayectoria de la bola es completamente fija, lo cual es demasiado aburrido. Por lo tanto, usamos el centro de los dos sprites para calcular y hacer que la bola rebote en la dirección opuesta al centro del baffle.
 
     .. image:: img/17_ball4.png
 
     .. image:: img/17_ball6.png
 
-* When the **Ball** sprite falls to the edge of the stage, the script stops running and the game ends.
+* Cuando el sprite **Bola** cae al borde del escenario, el script deja de ejecutarse y el juego termina.
 
     .. image:: img/17_ball5.png
 
+**3. Sprite del Bloque1**
 
-**3. Block1 sprite**
+El sprite **Bloque1** aparece con el efecto de clonarse a sí mismo 4x8 veces sobre el escenario en un color aleatorio, y eliminar un clon si es tocado por el sprite **Bola**.
 
-The **Block1** sprite is to appear with the effect of cloning 4x8 of itself above the stage in a random color, and deleting a clone if it is touched by the **Ball** sprite.
+El sprite **Bloque1** no está disponible en la biblioteca **PictoBlox**, necesitas dibujarlo tú mismo o modificarlo con un sprite existente. Aquí vamos a modificarlo con el sprite **Botón3**.
 
-The **Block1** sprite is not available in the **PictoBlox** library, you need to draw it yourself or modify it with an existing sprite. Here we are going to modify it with the **Button3** sprite.
-
-* After adding the **Button3** sprite, go to the **Costumes** page. Now delete **button-a** first, then reduce both the width and height of **button-b**, and change the sprite name to **Block1**, as shown in the following image.
+* Después de añadir el sprite **Botón3**, ve a la página de **Disfraces**. Ahora elimina primero **botón-a**, luego reduce tanto el ancho como el alto de **botón-b**, y cambia el nombre del sprite a **Bloque1**, como se muestra en la siguiente imagen.
 
     .. note::
 
-        * For the width of **Block1**, you can probably simulate it on the screen to see if you can put down 8 in a row, if not, then reduce the width appropriately.
-        * In the process of shrinking the **Block1** sprite, you need to keep the center point in the middle of the sprite.
+        * Para el ancho de **Bloque1**, puedes simularlo en la pantalla para ver si puedes colocar 8 en fila, si no, entonces reduce el ancho apropiadamente.
+        * En el proceso de reducir el sprite **Bloque1**, necesitas mantener el punto central en el medio del sprite.
 
     .. image:: img/17_bri2.png
 
-* Now create 2 variables first, **block** to store the number of blocks and **roll** to store the number of rows.
+* Ahora crea primero 2 variables, **bloque** para almacenar el número de bloques y **fila** para almacenar el número de filas.
 
     .. image:: img/17_bri3.png
 
-* We need to make a clone of the **Block1** sprite, so that it displays from left to right, top to bottom, one by one, 4x8 in total, with random colors.
+* Necesitamos hacer un clon del sprite **Bloque1** para que se muestre de izquierda a derecha, de arriba abajo, uno por uno, en total 4x8, con colores aleatorios.
 
     .. image:: img/17_bri4.png
 
-* After the script is written, click on the green flag and look at the display on the stage, if it is too compact or too small, you can change the size.
+* Después de escribir el script, haz clic en la bandera verde y observa la presentación en el escenario, si es demasiado compacta o pequeña, puedes cambiar el tamaño.
 
     .. image:: img/17_bri5.png
 
-* Now write the trigger event. If the cloned **Block1** sprite touches the **Ball** sprite, delete the clone and broadcast the message **crush**.
+* Ahora escribe el evento desencadenante. Si el clon del sprite **Bloque1** toca el sprite **Bola**, elimina el clon y emite el mensaje **crush**.
 
     .. image:: img/17_bri6.png
 
-* Back to the **Ball** sprite, when the broadcast **crush** is received (the **Ball** sprite touches the clone of **Block1** sprite), the **Ball** is popped from the opposite direction.
+* Vuelve al sprite **Bola**, cuando se recibe la emisión **crush** (el sprite **Bola** toca el clon del sprite **Bloque1**), la **Bola** es expulsada en la dirección opuesta.
 
     .. image:: img/17_ball7.png
-
-
-
-
-
-

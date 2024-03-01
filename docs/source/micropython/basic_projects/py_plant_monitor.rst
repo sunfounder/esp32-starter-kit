@@ -1,37 +1,37 @@
 .. _py_plant_monitor:
 
-6.8 Plant Monitor
+6.8 Monitor de Plantas
 ===============================
 
-Welcome to the Plant Monitor project! 
+¡Bienvenido al proyecto Monitor de Plantas!
 
-In this project, we will be using an ESP32 board to create a system that helps us take care of our plants. With this system, we can monitor the temperature, humidity, soil moisture, and light levels of our plants, and ensure that they are getting the care and attention they need to thrive.
+En este proyecto, utilizaremos una placa ESP32 para crear un sistema que nos ayude a cuidar de nuestras plantas. Con este sistema, podemos monitorear la temperatura, humedad, humedad del suelo y niveles de luz de nuestras plantas, y asegurarnos de que reciban el cuidado y atención que necesitan para prosperar.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,34 +58,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.8_plant_monitor_l293d.png
 
-The system uses a DHT11 sensor to measure the temperature and humidity levels of the surrounding environment. 
-Meanwhile, a soil moisture module is used to measure the moisture level of the soil and a photoresistor is used to 
-measure the light level. The readings from these sensors are displayed on an LCD screen, and a water pump can be controlled 
-using a button to water the plant when needed.
+El sistema utiliza un sensor DHT11 para medir los niveles de temperatura y humedad del entorno circundante. 
+Mientras tanto, un módulo de humedad del suelo se utiliza para medir el nivel de humedad del suelo y un fotoresistor se utiliza para 
+medir el nivel de luz. Las lecturas de estos sensores se muestran en una pantalla LCD, y se puede controlar una bomba de agua 
+usando un botón para regar la planta cuando sea necesario.
 
-IO32 has an internal pull-down resistor of 1K, and by default, it is at a low logic level. When the button is pressed, it establishes a connection to VCC (high voltage), resulting in a high logic level on IO32.
+IO32 tiene una resistencia interna de pull-down de 1K, y por defecto, está en un nivel lógico bajo. Cuando se presiona el botón, se establece una conexión a VCC (alto voltaje), resultando en un nivel lógico alto en IO32.
 
 
-**Wiring**
+**Conexión**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    Se recomienda aquí insertar la batería y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de la batería.
 
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``6.8_plant_monitor.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``6.8_plant_monitor.py`` ubicado en el camino ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 
 
@@ -99,104 +99,105 @@ IO32 has an internal pull-down resistor of 1K, and by default, it is at a low lo
       # DHT11
       dht11 = dht.DHT11(Pin(13))
 
-      # Soil moisture
+      # Humedad del suelo
       moisture_pin = ADC(Pin(14))
       moisture_pin.atten(ADC.ATTN_11DB)
 
-      # Photoresistor
+      # Fotoresistor
       photoresistor = ADC(Pin(35))
       photoresistor.atten(ADC.ATTN_11DB)
 
-      # Button and pump
+      # Botón y bomba
       button = Pin(32, Pin.IN)
 
       motor1A = Pin(27, Pin.OUT)
       motor2A = Pin(26, Pin.OUT)
 
-      # I2C LCD1602 setup
+      # Configuración del LCD I2C1602
       lcd = LCD()
 
-      # Rotate the pump
+      # Rotar la bomba
       def rotate():
       motor1A.value(1)
       motor2A.value(0)
 
-      # Stop the pump
+      # Detener la bomba
       def stop():
       motor1A.value(0)
       motor2A.value(0)
 
-      button_state = False
+      estado_del_boton = False
 
-      # Define the button callback function to toggle the button state
+      # Definir la función de callback del botón para alternar el estado del botón
       def button_callback(pin):
-      global button_state
-      button_state = not button_state
+      global estado_del_boton
+      estado_del_boton = not estado_del_boton
 
-      # Attach the button callback function to the rising edge of the button pin
+      # Adjuntar la función de callback del botón al borde ascendente del pin del botón
       button.irq(trigger=Pin.IRQ_RISING, handler=button_callback)
 
-      page = 0
+      pagina = 0
       temp = 0
       humi = 0
             
       try:
       while True:
             
-            # If the button is pressed and button state is True
-            if button_state:
-                  print("rotate")
+            # Si el botón está presionado y el estado del botón es Verdadero
+            if estado_del_boton:
+                  print("rotar")
                   rotate()
 
-            # If the button is pressed again and button state is False
-            if not button_state:
-                  print("stop")
+            # Si el botón está presionado de nuevo y el estado del botón es Falso
+            if not estado_del_boton:
+                  print("detener")
                   stop()
             time.sleep(2)
 
-            # Clear the LCD display
+            # Limpiar la pantalla LCD
             lcd.clear()
             
-            # Toggle the value of the page variable between 0 and 1
-            page=(page+1)%2
+            # Alternar el valor de la variable pagina entre 0 y 1
+            pagina=(pagina+1)%2
             
-            # When page is 1, display temperature and humidity on the LCD1602
-            if page is 1:
+            # Cuando la pagina es 1, mostrar temperatura y humedad en el LCD1602
+            if pagina is 1:
                   try:
-                  # Measure temperature and humidity
+                  # Medir temperatura y humedad
                   dht11.measure()
 
-                  # Get temperature and humidity values
+                  # Obtener valores de temperatura y humedad
                   temp = dht11.temperature()
                   humi = dht11.humidity()
                   except Exception as e:
                   print("Error: ", e)         
 
-                  # Display temperature and humidity
+                  # Mostrar temperatura y humedad
                   lcd.write(0, 0, "Temp: {}\xDFC".format(temp))
                   lcd.write(0, 1, "Humi: {}%".format(humi))
 
-            # If page is 0, display the soil moisture and light
+            # Si la pagina es 0, mostrar la humedad del suelo y luz
             else:
-                  light = photoresistor.read()
-                  moisture = moisture_pin.read()
+                  luz = photoresistor.read()
+                  humedad = moisture_pin.read()
 
-                  # Clear the LCD display
+                  # Limpiar la pantalla LCD
                   lcd.clear()
 
-                  # Display the value of soil moisture and light
-                  lcd.write(0, 0, f"Moisture: {moisture}")
-                  lcd.write(0, 1, f"Light: {light}")
+                  # Mostrar el valor de la humedad del suelo y luz
+                  lcd.write(0, 0, f"Humedad: {humedad}")
+                  lcd.write(0, 1, f"Luz: {luz}")
 
       except KeyboardInterrupt:
-      # Stop the motor when KeyboardInterrupt is caught
+      # Detener el motor cuando se captura KeyboardInterrupt
       stop()
 
 
 
-* When the code is running, the I2C LCD1602 alternately displays temperature and humidity, as well as soil moisture and light intensity analog values, with a 2-second interval.
-* Press the button to start the water pump, and press it again to stop the water pump.
+* Cuando el código está ejecutando, el LCD I2C1602 muestra alternativamente temperatura y humedad, así como valores analógicos de humedad del suelo e intensidad de luz, con un intervalo de 2 segundos.
+* Presiona el botón para iniciar la bomba de agua, y presiónalo de nuevo para detener la bomba de agua.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Si el código y la conexión son correctos, pero el LCD aún no muestra ningún contenido, puedes ajustar el potenciómetro en la parte trasera para aumentar el contraste.
+

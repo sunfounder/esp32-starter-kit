@@ -1,38 +1,38 @@
 .. _sh_low_temperature:
 
-2.6 Low Temperature Alarm
-=========================
+2.6 Alarma de Baja Temperatura
+==================================
 
-In this project, we will make a low temperature alarm system, when the temperature is below the threshold, the **Snowflake** sprite will appear on the stage.
+En este proyecto, haremos un sistema de alarma de baja temperatura, cuando la temperatura esté por debajo del umbral, el sprite **Copito de Nieve** aparecerá en el escenario.
 
 .. image:: img/9_tem.png
 
-Required Components
----------------------
+Componentes necesarios
+------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -47,56 +47,56 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-You Will Learn
+Lo que aprenderás
 ---------------------
 
-- Thermistor working principle
-- Multivariable and Subtractive Operations
+- Principio de funcionamiento del termistor
+- Operaciones multivariables y sustractivas
 
-Build the Circuit
+Construir el circuito
 -----------------------
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors, and there are two types of resistors, PTC (resistance increases as temperature increases) and PTC (resistance decreases as temperature increases).
+Un termistor es un tipo de resistencia cuya resistencia depende fuertemente de la temperatura, más que en las resistencias estándar, y hay dos tipos de resistencias, PTC (la resistencia aumenta a medida que aumenta la temperatura) y PTC (la resistencia disminuye a medida que aumenta la temperatura).
 
-Build the circuit according to the following diagram.
+Construye el circuito según el siguiente diagrama.
 
-One end of the thermistor is connected to GND, the other end is connected to pin35, and a 10K resistor is connected in series to 5V.
+Un extremo del termistor está conectado a GND, el otro extremo está conectado al pin35, y una resistencia de 10K está conectada en serie a 5V.
 
-The NTC thermistor is used here, so when the temperature rises, the resistance of the thermistor decreases, the voltage division of pin35 decreases, and the value obtained from pin35 decreases, and vice versa increases.
+Aquí se utiliza el termistor NTC, así que cuando la temperatura sube, la resistencia del termistor disminuye, la división de voltaje del pin35 disminuye, y el valor obtenido del pin35 disminuye, y viceversa aumenta.
 
 .. image:: img/circuit/7_low_temp_bb.png
 
-Programming
+Programación
 ------------------
 
-**1. Select a sprite**
+**1. Seleccionar un sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **Snowflake** in the search box, and then click to add it.
+Elimina el sprite predeterminado, haz clic en el botón **Elegir un Sprite** en la esquina inferior derecha del área de sprites, introduce **Copito de Nieve** en la caja de búsqueda y luego haz clic para añadirlo.
 
 .. image:: img/9_snow.png
 
-**2. Create 2 variables**
+**2. Crear 2 variables**
 
-Create two variables, **before** and **current**, to store the value of pin35 in different cases.
+Crea dos variables, **antes** y **actual**, para almacenar el valor del pin35 en diferentes casos.
 
 .. image:: img/9_va.png
 
-**3. Read the value of pin35**
+**3. Leer el valor del pin35**
 
-When the green flag is clicked, the value of pin35 is read and stored in the variable **before**.
+Cuando se hace clic en la bandera verde, se lee y almacena el valor del pin35 en la variable **antes**.
 
 .. image:: img/9_before.png
 
-**4. Read the value of pin35 again**
+**4. Leer nuevamente el valor del pin35**
 
-In [forever], read the value of pin35 again and store it in the variable **current**.
+En [siempre], lee nuevamente el valor del pin35 y almacénalo en la variable **actual**.
 
 .. image:: img/9_current.png
 
-**5. Determining temperature changes**
+**5. Determinar los cambios de temperatura**
 
-Using the [if else] block, determine if the current value of pin35 is 200 greater than before, which represents a decrease in temperature. At this point let **Snowflake** sprite show, otherwise hide.
+Usando el bloque [si sino], determina si el valor actual del pin35 es 200 mayor que el anterior, lo que representa una disminución de la temperatura. En este punto, deja que el sprite **Copito de Nieve** se muestre, de lo contrario, ocúltalo.
 
-* [-] & [>]: subtraction and comparison operators from **Operators** platette.
+* [-] y [>]: operadores de sustracción y comparación de la paleta **Operadores**.
 
 .. image:: img/9_show.png

@@ -17,26 +17,8 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 
 <a id="update"></a>
 ## Update:
-2023-12-15:
-- Add the Arduino video courses.
-
-2023-11-28:
-- Add images of inserting a USB cable into an ESP32 for various programming language projects.
-- Modify some errors.
-
-2023-10-31:
-- Add electronic component purchase link.
-
-2023-10-20:
-- Correct some errors.
-- Add an FAQ for 'Unknown COMxx'.
-
-2023-08-09:
-- Replace the TT motor with a 3V motor, and update the corresponding description and diagram.
-- Replace the L9110 module with the L293D, and update the corresponding description and diagram.
-
-2023-08-09:
-- change the name from esp32 ultimate kit to esp32 starter kit
+2024-3-1:
+- The first release of the Spanish version
 
 <a id="trouble"></a>
 ## Trouble Shootings:

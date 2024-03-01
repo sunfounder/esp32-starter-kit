@@ -1,10 +1,10 @@
 Print()
 =====================
 
-The ``print()`` function prints the specified message to the screen, or other standard output device.
-The message can be a string, or any other object, the object will be converted into a string before written to the screen.
+La función ``print()`` imprime el mensaje especificado en la pantalla o en otro dispositivo de salida estándar.
+El mensaje puede ser una cadena de texto o cualquier otro objeto; el objeto se convertirá en una cadena antes de ser escrito en la pantalla.
 
-Print multiple objects:
+Imprimir múltiples objetos:
 
 
 
@@ -15,7 +15,7 @@ Print multiple objects:
 >>> %Run -c $EDITOR_CONTENT
 Welcome! Enjoy yourself!
 
-Print tuples:
+Imprimir tuplas:
 
 
 
@@ -27,7 +27,7 @@ Print tuples:
 >>> %Run -c $EDITOR_CONTENT
 ('pear', 'apple', 'grape')
 
-Print two messages and specify the separator:
+Imprimir dos mensajes y especificar el separador:
 
 
 

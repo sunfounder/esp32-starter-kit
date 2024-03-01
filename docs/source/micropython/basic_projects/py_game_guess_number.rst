@@ -1,42 +1,42 @@
 .. _py_guess_number:
 
-6.7 Guess Number
+6.7 Adivina el Número
 ==============================
 
-Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
+¿Te sientes afortunado? ¿Quieres poner a prueba tu intuición a ver si puedes adivinar el número correcto? ¡Entonces este es el juego para ti!
 
-With this project, you can play a fun and exciting game of chance.
+Con este proyecto, puedes jugar un emocionante juego de azar.
 
-Using an IR remote control, players input numbers between 0 and 99 to try and guess the randomly generated lucky point number. 
-The system displays the player's input number on an LCD screen, along with upper and lower limit tips to help guide the 
-player towards the right answer. With every guess, players get closer to the lucky point number, 
-until finally, someone hits the jackpot and wins the game!
+Usando un control remoto IR, los jugadores introducen números entre 0 y 99 para intentar adivinar el número de la suerte generado aleatoriamente.
+El sistema muestra el número introducido por el jugador en una pantalla LCD, junto con pistas de límites superior e inferior para guiar
+al jugador hacia la respuesta correcta. Con cada intento, los jugadores se acercan al número de la suerte,
+hasta que finalmente, alguien acierta el número y gana el juego.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -52,22 +52,22 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.7_guess_number.png
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``6.7_game_guess_number.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * The ``lcd1602.py`` and ``ir_rx`` libraries are used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
+    * Abre el archivo ``6.7_game_guess_number.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha.
+    * Se utilizan las bibliotecas ``lcd1602.py`` y ``ir_rx`` aquí, verifica si se han cargado en el ESP32. Consulta :ref:`add_libraries_py` para obtener un tutorial.
 
 .. code-block:: python
 
@@ -105,16 +105,16 @@ You can also buy them separately from the links below.
     def lcd_show(result):
         global count
         lcd.clear()
-        if result == True: 
+        if result == True:
             string = "GAME OVER!\n"
             string += "Point is " + str(pointValue)
-        else: 
+        else:
             string = "Enter number: " + str(count) + "\n"
             string += str(lower) + " < Point < " + str(upper)
         lcd.message(string)
         return
 
-    # Process the entered number and update the game state
+   # Process the entered number and update the game state
     def number_processing():
         global upper, count, lower
         if count > pointValue:
@@ -220,20 +220,20 @@ You can also buy them separately from the links below.
 
 
 
-* When the code runs, a secret number is produced but not displayed on the LCD, and what you need to do is to guess it. 
-* Press the number you guessed on the remote control, then press the ``+`` key to confirm.
-* Simultaneously, the range shown on the I2C LCD1602 will decrease, and you must press the appropriate number based on this new range.
-* If you got the lucky number luckily or unluckily, there will appear ``GAME OVER!``.
+* Cuando se ejecuta el código, se genera un número secreto que no se muestra en el LCD, y lo que necesitas hacer es adivinarlo.
+* Presiona el número que adivinaste en el control remoto, luego presiona la tecla ``+`` para confirmar.
+* Simultáneamente, el rango mostrado en el LCD I2C 1602 disminuirá, y debes presionar el número adecuado basado en este nuevo rango.
+* Si aciertas el número de la suerte, ya sea por suerte o por desgracia, aparecerá ``¡JUEGO TERMINADO!``.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Si el código y el cableado son correctos, pero el LCD aún no muestra ningún contenido, puedes ajustar el potenciómetro en la parte trasera para aumentar el contraste.
 
-**How it works?**
+**¿Cómo funciona?**
 
-The following is a detailed analysis of part of the code.
+A continuación, se presenta un análisis detallado de parte del código.
 
-#. Initialize the guessing game variables.
+#. Inicializar las variables del juego de adivinanzas.
 
     .. code-block:: python
     
@@ -243,11 +243,11 @@ The following is a detailed analysis of part of the code.
         count = 0
 
 
-    * ``lower`` and ``upper`` bounds for the secret number.
-    * The secret number (``pointValue``) randomly generated between ``lower`` and ``upper`` bounds.
-    * The user's current guess (``count``).
+    * ``lower`` y ``upper`` son los límites para el número secreto.
+    * El número secreto (``valorPunto``) se genera aleatoriamente entre los límites ``lower`` y ``upper``.
+    * La suposición actual del usuario (``count``).
 
-#. This function resets the guessing game values and generates a new secret number.
+#. Esta función restablece los valores del juego de adivinanzas y genera un nuevo número secreto.
 
     .. code-block:: python
     
@@ -260,7 +260,7 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
 
-#. This function displays the current game status on the LCD screen.
+#. Esta función muestra el estado actual del juego en la pantalla LCD.
 
     .. code-block:: python
 
@@ -276,10 +276,10 @@ The following is a detailed analysis of part of the code.
             lcd.message(string)
             return
 
-    * If the game is over (``result=True``), it shows ``GAME OVER!`` and the secret number.
-    * Otherwise, it shows the current guess (``count``) and the current guessing range (``lower`` to ``upper``)
+    * Si el juego ha terminado (``result=True``), muestra ``¡JUEGO TERMINADO!`` y el número secreto.
+    * De lo contrario, muestra la suposición actual (``count``) y el rango de suposición actual (``lower`` a ``upper``)
 
-#. This function processes the user's current guess (``count``) and updates the guessing range.
+#. Esta función procesa la suposición actual del usuario (``count``) y actualiza el rango de suposición.
 
     .. code-block:: python
 
@@ -296,11 +296,11 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
     
-    * If the current guess (``count``) is higher than the secret number, the upper bound is updated.
-    * If the current guess (``count``) is lower than the secret number, the lower bound is updated.
-    * If the current guess (``count``) is equal to the secret number, the function returns ``True`` (game over).
+    * Si la suposición actual (``count``) es más alta que el número secreto, se actualiza el límite superior.
+    * Si la suposición actual (``count``) es más baja que el número secreto, se actualiza el límite inferior.
+    * Si la suposición actual (``count``) es igual al número secreto, la función devuelve ``True`` (juego terminado).
 
-#. This function processes the key press events received from the IR remote.
+#. Esta función procesa los eventos de pulsación de teclas recibidos del control remoto IR.
 
     .. code-block:: python
 
@@ -322,11 +322,11 @@ The following is a detailed analysis of part of the code.
                 count = count * 10 + int(key) if count * 10 + int(key) <= 99 else count
                 lcd_show(False)
 
-    * If the ``Power`` key is pressed, the game is reset.
-    * If the ``+`` key is pressed, the current guess (``count``) is processed and the game status is updated.
-    * If a digit key is pressed, the current guess (``count``) is updated with the new digit.
+    * Si se presiona la tecla ``Power``, el juego se reinicia.
+    * Si se presiona la tecla ``+``, se procesa la suposición actual (``count``) y se actualiza el estado del juego.
+    * Si se presiona una tecla de dígito, se actualiza la suposición actual (``count``) con el nuevo dígito.
 
-#. This callback function is triggered when the IR receiver receives
+#. Esta función de callback se activa cuando el receptor IR recibe
 
     .. code-block:: python
 

@@ -1,21 +1,21 @@
-For Loops
+Bucles For
 ============
 
-The `for` loop can traverse any sequence of items, such as a list or a string.
+El bucle ``for`` puede recorrer cualquier secuencia de elementos, como una lista o una cadena.
 
-The syntax format of for loop is as follows:
+El formato de sintaxis del bucle for es el siguiente:
 
 .. code-block:: python
 
-    for val in sequence:
-        Body of for
+    for val in secuencia:
+        Cuerpo del for
 
 
-Here, `val` is a variable that gets the value of the item in the sequence in each iteration.
+Aquí, ``val`` es una variable que obtiene el valor del elemento en la secuencia en cada iteración.
 
-The loop continues until we reach the last item in the sequence. Use indentation to separate the body of the `for` loop from the rest of the code.
+El bucle continúa hasta que alcanzamos el último elemento en la secuencia. Usa la indentación para separar el cuerpo del bucle ``for`` del resto del código.
 
-**Flowchart of for Loop**
+**Diagrama de flujo del bucle For**
 
 .. image:: img/for_loop.png
 
@@ -35,10 +35,10 @@ The loop continues until we reach the last item in the sequence. Use indentation
 >>> %Run -c $EDITOR_CONTENT
 The sum is 10
 
-The break Statement
+La sentencia break
 -------------------------
 
-With the break statement we can stop the loop before it has looped through all the items:
+Con la sentencia break podemos detener el bucle antes de que haya recorrido todos los elementos:
 
 
 
@@ -56,10 +56,10 @@ With the break statement we can stop the loop before it has looped through all t
 >>> %Run -c $EDITOR_CONTENT
 The sum is 6
 
-The continue Statement
+La sentencia continue
 --------------------------------------------
 
-With the `continue` statement we can stop the current iteration of the loop, and continue with the next:
+Con la sentencia ``continue`` podemos detener la iteración actual del bucle y continuar con la siguiente:
 
 
 
@@ -77,18 +77,18 @@ With the `continue` statement we can stop the current iteration of the loop, and
 2
 4
 
-The range() function
+La función ``range()``
 --------------------------------------------
 
-We can use the range() function to generate a sequence of numbers. range(6) will produce numbers between 0 and 5 (6 numbers).
+Podemos usar la función ``range()`` para generar una secuencia de números. ``range(6)`` producirá números entre 0 y 5 (6 números).
 
-We can also define start, stop and step size as range(start, stop, step_size). If not provided, step_size defaults to 1.
+También podemos definir inicio, parada y tamaño de paso como ``range(start, stop, step_size)``. Si no se proporciona, el tamaño_de_paso por defecto es 1.
 
-In a sense of range, the object is "lazy" because when we create the object, it does not generate every number it "contains". However, this is not an iterator because it supports in, len and __getitem__ operations.
+En un sentido de range, el objeto es "perezoso" porque cuando creamos el objeto, no genera cada número que "contiene". Sin embargo, esto no es un iterador porque soporta operaciones in, len y ``__getitem__``.
 
-This function will not store all values ​​in memory; it will be inefficient. So it will remember the start, stop, step size and generate the next number during the journey.
+Esta función no almacenará todos los valores en la memoria; sería ineficiente. Por lo tanto, recordará el inicio, la parada, el tamaño de paso y generará el siguiente número durante el recorrido.
 
-To force this function to output all items, we can use the function list().
+Para forzar a esta función a mostrar todos los elementos, podemos usar la función ``list()``.
 
 
 
@@ -109,7 +109,7 @@ range(0, 6)
 [2, 4, 6, 8]
 
 
-We can use `range()` in a `for` loop to iterate over a sequence of numbers. It can be combined with the len() function to use the index to traverse the sequence.
+Podemos usar ``range()`` en un bucle ``for`` para iterar sobre una secuencia de números. Se puede combinar con la función ``len()`` para usar el índice para recorrer la secuencia.
 
 
 
@@ -128,11 +128,11 @@ I like grape
 Else in For Loop
 --------------------------------
 
-The `for` loop can also have an optional `else` block. If the items in the sequence used for the loop are exhausted, the `else` part is executed.
+El bucle ``for`` también puede tener un bloque ``else`` opcional. Si los elementos en la secuencia utilizada para el bucle se agotan, se ejecuta la parte ``else``.
 
-The `break` keyword can be used to stop the `for` loop. In this case, the `else` part will be ignored.
+La palabra clave ``break`` puede usarse para detener el bucle ``for``. En este caso, se ignorará la parte ``else``.
 
-Therefore, if no interruption occurs, the `else` part of the `for` loop will run.
+Por lo tanto, si no ocurre ninguna interrupción, la parte ``else`` del bucle ``for`` se ejecutará.
 
 
 
@@ -151,7 +151,7 @@ Therefore, if no interruption occurs, the `else` part of the `for` loop will run
 4
 Finished
 
-The else block will NOT be executed if the loop is stopped by a break statement.
+El bloque else NO se ejecutará si el bucle se detiene mediante una sentencia break.
 
 
 

@@ -1,37 +1,37 @@
 .. _py_flowing_light:
 
-6.2 Flowing Light
+6.2 Luz Fluyente
 =================================
 
-Have you ever wanted to add some fun and interactive element to your living space? 
-This project involves creating a running light using WS2812 LED strip and a obstacle avoidance module. 
-The running light changes direction when an obstacle is detected, making it an exciting addition to your home or office decor.
+¿Alguna vez has querido añadir un elemento divertido e interactivo a tu espacio vital?
+Este proyecto implica crear una luz corriente usando una tira de LED WS2812 y un módulo de evitación de obstáculos.
+La luz corriente cambia de dirección cuando se detecta un obstáculo, convirtiéndola en una adición emocionante a tu decoración del hogar u oficina.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,27 +44,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic Diagram**
+**Diagrama Esquemático**
 
 .. image:: ../../img/circuit/circuit_6.2_flowing_led.png
     :align: center
 
-The WS2812 LED strip is composed of a series of individual LEDs that can be programmed to display different colors and patterns. 
-In this project, the strip is set up to display a running light that moves in a particular direction and 
-changes direction when an obstacle is detected by the obstacle avoidance module.
+La tira de LED WS2812 está compuesta por una serie de LEDs individuales que pueden ser programados para mostrar diferentes colores y patrones.
+En este proyecto, la tira está configurada para mostrar una luz corriente que se mueve en una dirección particular y
+cambia de dirección cuando un obstáculo es detectado por el módulo de evitación de obstáculos.
 
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``6.2_flowing_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Abre el archivo ``6.2_flowing_led.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar Script Actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
     
 .. code-block:: python
@@ -124,4 +124,4 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
                   pixels[i] = (0, 0, 0)
                   time.sleep_ms(100)
 
-LEDs on the RGB Strip light up one by one when the script runs. As soon as an object is placed in front of the obstacle avoidance module, the LEDs on the RGB Strip light up one by one in the opposite direction.
+Los LEDs en la Tira RGB se iluminan uno por uno cuando se ejecuta el script. Tan pronto como se coloca un objeto frente al módulo de evitación de obstáculos, los LEDs en la Tira RGB se iluminan uno por uno en la dirección opuesta.

@@ -1,40 +1,40 @@
 .. _py_pa_buz:
 
-3.2 Custom Tone
+3.2 Tono Personalizado
 ==========================================
 
-We have used active buzzer in the previous project, this time we will use passive buzzer.
+Hemos utilizado un zumbador activo en el proyecto anterior, esta vez usaremos un zumbador pasivo.
 
-Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used.
-But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as "doh, re, mi, fa, sol, la, ti".
+Al igual que el zumbador activo, el zumbador pasivo también utiliza el fenómeno de inducción electromagnética para funcionar. La diferencia es que un zumbador pasivo no tiene fuente oscilante, por lo que no emitirá un pitido si se utilizan señales de CC.
+Pero esto permite que el zumbador pasivo ajuste su propia frecuencia de oscilación y pueda emitir diferentes notas como "do, re, mi, fa, sol, la, si".
 
-Let the passive buzzer emit a melody!
+¡Hagamos que el zumbador pasivo emita una melodía!
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -51,47 +51,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+Cuando la salida IO14 es alta, después de la resistencia limitadora de corriente de 1K (para proteger el transistor), el S8050 (transistor NPN) conducirá, haciendo que el zumbador suene.
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
+El papel de S8050 (transistor NPN) es amplificar la corriente y hacer que el zumbador suene más fuerte. De hecho, también puedes conectar el zumbador directamente a IO14, pero encontrarás que el sonido del zumbador es más bajo.
 
-**Wiring**
+**Conexión**
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+El kit incluye dos tipos de zumbadores.
+Necesitamos usar el zumbador activo. Voltéalos, el lado sellado (no el PCB expuesto) es el que queremos.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+El zumbador necesita usar un transistor cuando funciona, aquí usamos S8050 (Transistor NPN).
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``3.2_custom_tone.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Abre el archivo ``3.2_custom_tone.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
 
 .. code-block:: python
 
@@ -133,32 +131,33 @@ The buzzer needs to use a transistor when working, here we use S8050 (NPN Transi
     tone(buzzer, B4, 250)
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-If the passive buzzer given a digital signal, it can only keep pushing the diaphragm without producing sound.
+Si al zumbador pasivo se le da una señal digital, solo puede continuar empujando el diafragma sin producir sonido.
 
-Therefore, we use the ``tone()`` function to generate the PWM signal to make the passive buzzer sound.
+Por lo tanto, utilizamos la función ``tone()`` para generar la señal PWM y hacer que el zumbador pasivo emita sonido.
 
-This function has three parameters:
+Esta función tiene tres parámetros:
 
-* ``pin``: The pin that controls the buzzer.
-* ``frequency``: The pitch of the buzzer is determined by the frequency, the higher the frequency, the higher the pitch.
-* ``Duration``: The duration of the tone.
+* ``pin``: El pin que controla el zumbador.
+* ``frecuencia``: El tono del zumbador está determinado por la frecuencia; cuanto mayor sea la frecuencia, más alto será el tono.
+* ``Duración``: La duración del tono.
 
-We use the ``duty()`` function to set the duty cycle to 512(about 50%). It can be other numbers, and it only needs to generate a discontinuous electrical signal to oscillate.
+Usamos la función ``duty()`` para establecer el ciclo de trabajo en 512 (alrededor del 50%). Puede ser otros números, y solo necesita generar una señal eléctrica discontinua para oscilar.
 
 
 
-**Learn More**
+**Aprender Más**
 
-We can simulate specific pitches and thus play a complete piece of music.
+
+
+Podemos simular tonos específicos y así reproducir una pieza musical completa.
 
 
 .. note::
 
-    * Open the ``3.2_custom_tone_music.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
+    * Abre el archivo ``3.2_custom_tone_music.py`` ubicado en el camino ``esp32-starter-kit-main\micropython\codes``, o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha.
 
 
 
@@ -232,8 +231,8 @@ We can simulate specific pitches and thus play a complete piece of music.
         time.sleep_ms(50)
 
 
-* The ``tone`` function sets the frequency of the pin to the value of ``frequency`` using the ``freq`` method of the ``pin`` object. 
-* It then sets the duty cycle of the pin to 512 using the ``duty`` method of the ``pin`` object. 
-* This will cause the pin to produce a tone with the specified frequency and volume for the duration of ``duration`` in milliseconds using the ``sleep_ms`` method of the time module.
-* The code then plays a melody by iterating through a sequence called ``melody`` and calling the ``tone`` function for each note in the melody with the note's frequency and duration. 
-* It also inserts a short pause of 50 milliseconds between each note using the ``sleep_ms`` method of the time module.
+* La función ``tone`` establece la frecuencia del pin al valor de ``frecuencia`` usando el método ``freq`` del objeto ``pin``.
+* Luego establece el ciclo de trabajo del pin en 512 usando el método ``duty`` del objeto ``pin``.
+* Esto hará que el pin produzca un tono con la frecuencia y volumen especificados durante la duración de ``duración`` en milisegundos usando el método ``sleep_ms`` del módulo de tiempo.
+* El código luego reproduce una melodía iterando a través de una secuencia llamada ``melody`` y llamando a la función ``tone`` para cada nota en la melodía con la frecuencia y duración de la nota.
+* También inserta una breve pausa de 50 milisegundos entre cada nota usando el método ``sleep_ms`` del módulo de tiempo.

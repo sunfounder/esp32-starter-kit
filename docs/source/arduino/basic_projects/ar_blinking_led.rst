@@ -1,35 +1,35 @@
 .. _ar_blink:
 
-2.1 Hello, LED! 
+2.1 ¡Hola, LED! 
 =======================================
 
-Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+Así como imprimir "¡Hola, mundo!" es el primer paso para aprender a programar, usar un programa para encender un LED es la introducción tradicional para aprender programación física.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DE COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -45,37 +45,37 @@ You can also buy them separately from the links below.
         - |link_led_buy|
 
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí está una lista de los pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pines Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This circuit works on a simple principle, and the current direction is shown in the figure. The LED will light up after the 220ohm current limiting resistor when pin26 outputs high level. The LED will turn off when pin26 outputs low level.
+Este circuito funciona sobre un principio simple, y la dirección de la corriente se muestra en la figura. El LED se encenderá después de la resistencia limitadora de corriente de 220ohm cuando el pin26 emita un nivel alto. El LED se apagará cuando el pin26 emita un nivel bajo.
 
-**Wiring**
+**Cableado**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
 
 
-**Upload Code**
+**Subir Código**
 
-#. You can open the file ``2.1_hello_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.1_hello_led``. Or copy this code to the Arduino IDE directly .
+#. Puedes abrir el archivo ``2.1_hello_led.ino`` bajo la ruta de ``esp32-starter-kit-main\c\codes\2.1_hello_led``. O copia este código directamente en el IDE de Arduino.
     
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-#. Then connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Luego conecta el ESP32 WROOM 32E a tu computadora usando un cable Micro USB. 
 
     * :ref:`unknown_com_port`
 
@@ -83,26 +83,26 @@ This circuit works on a simple principle, and the current direction is shown in 
         :width: 600
         :align: center
 
-#. Select the board (ESP32 Dev Module) and the appropriate port.
+#. Selecciona la placa (ESP32 Dev Module) y el puerto apropiado.
 
     .. image:: img/choose_board.png
 
-#. Now, click the **Upload** button to upload the code to the ESP32 board.
+#. Ahora, haz clic en el botón **Subir** para cargar el código a la placa ESP32.
     
     .. image:: img/click_upload.png
 
-#. After the code is uploaded successfully, you will see the LED blinking.
+#. Después de que el código se haya subido con éxito, verás el LED parpadeando.
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. Declare an integer constant named ``ledPin`` and assigns it the value 26. 
+#. Declara una constante entera llamada ``ledPin`` y asígnale el valor 26. 
 
     .. code-block:: arduino
 
         const int ledPin = 26;  // The GPIO pin for the LED
 
 
-#. Now, initialize the pin in the ``setup()`` function, where you need to initialize the pin to ``OUTPUT`` mode.
+#. Ahora, inicializa el pin en la función ``setup()``, donde necesitas inicializar el pin a modo ``OUTPUT``.
 
     .. code-block:: arduino
 
@@ -110,19 +110,19 @@ This circuit works on a simple principle, and the current direction is shown in 
             pinMode(ledPin, OUTPUT);
         }
 
-    * ``void pinMode(uint8_t pin, uint8_t mode);``: This function is used to define the GPIO operation mode for a specific pin.
+    * ``void pinMode(uint8_t pin, uint8_t mode);``: Esta función se utiliza para definir el modo de operación GPIO para un pin específico.
 
-        * ``pin`` defines the GPIO pin number.
-        * ``mode`` sets operation mode.
+        * ``pin`` define el número de pin GPIO.
+        * ``mode`` establece el modo de operación.
 
-        The following modes are supported for the basic input and output:
+        Los siguientes modos son compatibles para la entrada y salida básicas:
 
-        * ``INPUT`` sets the GPIO as input without pullup or pulldown (high impedance).
-        * ``OUTPUT`` sets the GPIO as output/read mode.
-        * ``INPUT_PULLDOWN`` sets the GPIO as input with the internal pulldown.
-        * ``INPUT_PULLUP`` sets the GPIO as input with the internal pullup.
+        * ``INPUT`` configura el GPIO como entrada sin pullup ni pulldown (alta impedancia).
+        * ``OUTPUT`` configura el GPIO como modo de salida/lectura.
+        * ``INPUT_PULLDOWN`` configura el GPIO como entrada con el pull-down interno.
+        * ``INPUT_PULLUP`` configura el GPIO como entrada con el pull-up interno.
 
-#. The ``loop()`` function contains the main logic of the program and runs continuously. It alternates between setting the pin high and low, with one-second intervals between the changes.
+#. La función ``loop()`` contiene la lógica principal del programa y se ejecuta continuamente. Alterna entre establecer el pin en alto y bajo, con intervalos de un segundo entre los cambios.
 
     .. code-block:: arduino
 
@@ -133,7 +133,7 @@ This circuit works on a simple principle, and the current direction is shown in 
             delay(1000);                       // wait for a second
         }
 
-    * ``void digitalWrite(uint8_t pin, uint8_t val);``: This function sets the state of the selected GPIO to ``HIGH`` or ``LOW``. This function is only used if the ``pinMode`` was configured as ``OUTPUT``.
+    * ``void digitalWrite(uint8_t pin, uint8_t val);``: Esta función establece el estado del GPIO seleccionado en ``HIGH`` o ``LOW``. Esta función solo se utiliza si el ``pinMode`` se configuró como ``OUTPUT``.
     
-        * ``pin`` defines the GPIO pin number.
-        * ``val`` set the output digital state to ``HIGH`` or ``LOW``.
+        * ``pin`` define el número de pin GPIO.
+        * ``val`` establece el estado digital de salida en ``HIGH`` o ``LOW``.

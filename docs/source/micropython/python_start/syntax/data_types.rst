@@ -1,21 +1,21 @@
-Data Types
-===========
+Tipos de Datos
+=====================================
 
-Built-in Data Types
----------------------
-MicroPython has the following data types:
+Tipos de Datos Incorporados
+----------------------------------
+MicroPython tiene los siguientes tipos de datos:
 
-* Text Type: str
-* Numeric Types: int, float, complex
-* Sequence Types: list, tuple, range
-* Mapping Type: dict
-* Set Types: set, frozenset
-* Boolean Type: bool
-* Binary Types: bytes, bytearray, memoryview
+* Tipo de Texto: str
+* Tipos Numéricos: int, float, complex
+* Tipos de Secuencia: list, tuple, range
+* Tipo de Mapeo: dict
+* Tipos de Conjuntos: set, frozenset
+* Tipo Booleano: bool
+* Tipos Binarios: bytes, bytearray, memoryview
 
-Getting the Data Type
+Obtener el Tipo de Datos
 -----------------------------
-You can get the data type of any object by using the `type()` function:
+Puedes obtener el tipo de datos de cualquier objeto utilizando la función ``type()``:
 
 
 
@@ -27,9 +27,9 @@ You can get the data type of any object by using the `type()` function:
 >>> %Run -c $EDITOR_CONTENT
 <class 'float'>
 
-Setting the Data Type
-----------------------
-MicroPython does not need to set the data type specifically, it has been determined when you assign a value to the variable.
+Estableciendo el Tipo de Datos
+-------------------------------------
+MicroPython no necesita establecer el tipo de datos específicamente, se determina cuando asignas un valor a la variable.
 
 
 
@@ -49,17 +49,17 @@ MicroPython does not need to set the data type specifically, it has been determi
 <class 'list'>
 >>> 
 
-Setting the Specific Data Type
-----------------------------------
+Estableciendo el Tipo de Datos Específico
+------------------------------------------------
 
-If you want to specify the data type, you can use the following constructor functions:
+Si deseas especificar el tipo de datos, puedes usar las siguientes funciones constructoras:
 
 .. list-table:: 
     :widths: 25 10
     :header-rows: 1
 
-    *   - Example
-        - Date Type
+    *   - Ejemplo
+        - Tipo de Dato
     *   - x = int(20)
         - int
     *   - x = float(20.5)
@@ -89,7 +89,7 @@ If you want to specify the data type, you can use the following constructor func
     *   - x = memoryview(bytes(5))
         - memoryview
 
-You can print some of them to see the result.
+Puedes imprimir algunos de ellos para ver el resultado.
 
 
 
@@ -109,14 +109,14 @@ You can print some of them to see the result.
 True
 >>> 
 
-Type Conversion
-----------------
-You can convert from one type to another with the int(), float(), and complex() methods:
-Casting in python is therefore done using constructor functions:
+Conversión de Tipos
+-----------------------
+Puedes convertir de un tipo a otro con los métodos int(), float() y complex():
+La conversión en python se realiza, por lo tanto, usando funciones constructoras:
 
-* int() - constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)
-* float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
-* str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals
+* int() - construye un número entero a partir de un literal entero, un literal flotante (eliminando todos los decimales) o un literal de cadena (siempre que la cadena represente un número entero)
+* float() - construye un número flotante a partir de un literal entero, un literal flotante o un literal de cadena (siempre que la cadena represente un flotante o un entero)
+* str() - construye una cadena a partir de una amplia variedad de tipos de datos, incluyendo cadenas, literales enteros y literales flotantes
 
 
 
@@ -130,4 +130,4 @@ Casting in python is therefore done using constructor functions:
     print(b)
     print(c)
 
-Note: You cannot convert complex numbers into another number type.
+Nota: No puedes convertir números complejos en otro tipo de número.

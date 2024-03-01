@@ -1,40 +1,40 @@
 .. _cpn_motor:
 
-DC Motor
-===================
+Motor de Corriente Continua (DC)
+=======================================
 
 .. image:: img/image114.jpeg
     :align: center
 
-This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
+Este es un motor de corriente continua (DC) de 3V. Cuando aplicas un nivel alto y un nivel bajo a cada uno de los 2 terminales, girará.
 
-* **Length**: 25mm
-* **Diameter**: 21mm
-* **Shaft Diameter**: 2mm
-* **Shaft Length**: 8mm
-* **Voltage**: 3-6V
-* **Current**: 0.35-0.4A
-* **Speed at 3V**: 19000 RPM (Rotations Per Minute)
-* **Weight**: Approximately 14g (for one unit)
+* **Longitud**: 25mm
+* **Diámetro**: 21mm
+* **Diámetro del Eje**: 2mm
+* **Longitud del Eje**: 8mm
+* **Voltaje**: 3-6V
+* **Corriente**: 0.35-0.4A
+* **Velocidad a 3V**: 19000 RPM (Rotaciones Por Minuto)
+* **Peso**: Aproximadamente 14g (por unidad)
 
-Direct current (DC) motor is a continuous actuator that converts electrical energy into mechanical energy. DC motors make rotary pumps, fans, compressors, impellers, and other devices work by producing continuous angular rotation.
+El motor de corriente continua (DC) es un actuador continuo que convierte la energía eléctrica en energía mecánica. Los motores de corriente continua hacen que funcionen bombas rotativas, ventiladores, compresores, impulsores y otros dispositivos al producir una rotación angular continua.
 
-A DC motor consists of two parts, the fixed part of the motor called the **stator** and the internal part of the motor called the **rotor** (or **armature** of a DC motor) that rotates to produce motion.
-The key to generating motion is to position the armature within the magnetic field of the permanent magnet (whose field extends from the north pole to the south pole). The interaction of the magnetic field and the moving charged particles (the current-carrying wire generates the magnetic field) produces the torque that rotates the armature.
+Un motor de corriente continua consta de dos partes, la parte fija del motor llamada el **estator** y la parte interna del motor llamada el **rotor** (o **inducido** de un motor de corriente continua) que gira para producir movimiento.
+La clave para generar movimiento es posicionar el inducido dentro del campo magnético del imán permanente (cuyo campo se extiende desde el polo norte hasta el polo sur). La interacción del campo magnético y las partículas cargadas en movimiento (el alambre conductor de corriente genera el campo magnético) produce el par de torsión que hace girar el inducido.
 
 .. image:: img/motor_sche.png
     :align: center
 
-Current flows from the positive terminal of the battery through the circuit, through the copper brushes to the commutator, and then to the armature.
-But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
+La corriente fluye desde el terminal positivo de la batería a través del circuito, pasando por los cepillos de cobre hasta el conmutador, y luego al inducido.
+Pero debido a las dos brechas en el conmutador, este flujo se invierte a mitad de cada rotación completa.
 
-This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
+Esta inversión continua básicamente convierte la energía eléctrica de corriente continua de la batería en corriente alterna, permitiendo que el inducido experimente un par de torsión en la dirección correcta en el momento adecuado para mantener la rotación.
 
 .. image:: img/motor_rotate.gif
     :align: center
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Proyecto Arduino)
+* :ref:`py_motor` (Proyecto MicroPython)
+* :ref:`sh_rotating_fan` (Proyecto Scratch)

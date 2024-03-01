@@ -5,79 +5,74 @@
 
 .. image:: img/74HC595.png
 
-Do you ever find yourself wanting to control a lot of LEDs, or just need more I/O pins to control buttons, sensors, and servos all at once? Well, you can connect a few sensors to Arduino pins, but you will soon start to run out of pins on the Arduino.
+¿Alguna vez te has encontrado queriendo controlar una gran cantidad de LED, o simplemente necesitas más pines de E/S para controlar botones, sensores y servos al mismo tiempo? Bueno, puedes conectar algunos sensores a los pines de Arduino, pero pronto comenzarás a quedarte sin pines en el Arduino.
 
-The solution is to use "shift registers". Shift registers allow you to expand the number of I/O pins you can use from the Arduino (or any microcontroller). The 74HC595 shift register  is one of the most famous.
+La solución es usar "registros de desplazamiento". Los registros de desplazamiento te permiten expandir el número de pines de E/S que puedes usar desde el Arduino (o cualquier microcontrolador). El registro de desplazamiento 74HC595 es uno de los más famosos.
 
-The  74HC595 basically controls eight independent output pins and uses only three input pins. If you need more than eight additional I/O lines, you can easily cascade any number of shift registers and create a large number of I/O lines. All this is done by so-called shifting.
+El 74HC595 básicamente controla ocho pines de salida independientes y utiliza solo tres pines de entrada. Si necesitas más de ocho líneas de E/S adicionales, puedes fácilmente concatenar cualquier número de registros de desplazamiento y crear un gran número de líneas de E/S. Todo esto se hace mediante el llamado desplazamiento.
 
+**Características**
 
-**Features**
+* Registro de desplazamiento serial de 8 bits, paralelo de salida
+* Amplio rango de voltaje de operación de 2 V a 6 V
+* Las salidas de 3 estados de alta corriente pueden manejar hasta 15 cargas LSTTL
+* Bajo consumo de energía, máx. 80 µA de corriente de CC
+* tPD típico = 14 ns
+* Salida de ±6 mA a 5 V
+* Baja corriente de entrada de 1 µA máx.
+* Registro de desplazamiento con limpieza directa
 
-* 8-Bit serial-in, parallel-out shift
-* Wide operating voltage range of 2 V to 6 V
-* High-current 3-state outputs can drive up to 15LSTTL loads
-* Low power consumption, 80-µA max ICC
-* Typical tPD = 14 ns
-* ±6-mA output drive at 5 V
-* Low input current of 1 µA max
-* Shift register has direct clear
-
-**Pins of 74HC595 and their functions:**
+**Pines de 74HC595 y sus funciones:**
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7'**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7**: Pines de salida de datos paralelos de 8 bits, capaces de controlar 8 LED o 8 pines de un display de 7 segmentos directamente.
+* **Q7'**: Pin de salida en serie, conectado a DS de otro 74HC595 para conectar múltiples 74HC595 en serie.
+* **MR**: Pin de reset, activo en nivel bajo;
+* **SHcp**: Entrada de secuencia de tiempo del registro de desplazamiento. En el flanco ascendente, los datos en el registro de desplazamiento se desplazan sucesivamente un bit, es decir, los datos en Q1 se desplazan a Q2, y así sucesivamente. Mientras que en el flanco descendente, los datos en el registro de desplazamiento permanecen sin cambios.
+* **STcp**: Entrada de secuencia de tiempo del registro de almacenamiento. En el flanco ascendente, los datos en el registro de desplazamiento se mueven al registro de memoria.
+* **CE**: Pin de habilitación de salida, activo en nivel bajo.
+* **DS**: Pin de entrada de datos en serie
+* **VCC**: Voltaje de alimentación positivo.
+* **GND**: Tierra.
 
-**Functional Diagram**
+**Diagrama Funcional**
 
 .. image:: img/74hc595_functional_diagram.png
 
 
-**Working Principle**
+**Principio de Funcionamiento**
 
-When MR (pin10) is high level and OE (pin13) is low level, 
-data is input in the rising edge of SHcp and goes to the memory register through the rising edge of STcp. 
+Cuando MR (pin 10) está en nivel alto y OE (pin 13) está en nivel bajo, 
+los datos se ingresan en el flanco ascendente de SHcp y pasan al registro de memoria a través del flanco ascendente de STcp.
 
 
-* Shift Register
+* Registro de Desplazamiento
 
-    * Suppose, we want to input the binary data 1110 1110 into the shift register of the 74hc595.
-    * The data is input from bit 0 of the shift register.
-    * Whenever the shift register clock is a rising edge, the bits in the shift register are shifted one step. For example, bit 7 accepts the previous value in bit 6, bit 6 gets the value of bit 5, etc.
+    * Supongamos que queremos ingresar los datos binarios 1110 1110 en el registro de desplazamiento del 74hc595.
+    * Los datos se ingresan desde el bit 0 del registro de desplazamiento.
+    * Cada vez que el reloj del registro de desplazamiento es un flanco ascendente, los bits en el registro de desplazamiento se desplazan un paso. Por ejemplo, el bit 7 acepta el valor anterior en el bit 6, el bit 6 obtiene el valor del bit 5, etc.
 
 
 .. image:: img/74hc595_shift.png
 
-* Storage Register
+* Registro de Almacenamiento
 
-    * When the storage register is in the rising edge state, the data of the shift register will be transferred to the storage register.
-    * The storage register is directly connected to the 8 output pins, Q0 ~ Q7 will be able to receive a byte of data. 
-    * The so-called storage register means that the data can exist in this register and will not disappear with one output. 
-    * The data will remain valid and unchanged as long as the 74HC595 is powered on continuously. 
-    * When new data comes, the data in the storage register will be overwritten and updated.
+    * Cuando el registro de almacenamiento está en estado de flanco ascendente, los datos del registro de desplazamiento se transferirán al registro de almacenamiento.
+    * El registro de almacenamiento está conectado directamente a los 8 pines de salida, Q0 ~ Q7 podrá recibir un byte de datos.
+    * El llamado registro de almacenamiento significa que los datos pueden existir en este registro y no desaparecerán con una salida.
+    * Los datos permanecerán válidos e inalterados siempre que el 74HC595 esté alimentado continuamente.
+    * Cuando llegan nuevos datos, los datos en el registro de almacenamiento serán sobrescritos y actualizados.
 
 .. image:: img/74hc595_storage.png
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_74hc595` (Arduino Project)
-* :ref:`ar_7_segment` (Arduino Project)
-* :ref:`ar_dice` (Arduino Project)
-* :ref:`py_74hc595` (MicroPython Project)
-* :ref:`py_7_segment` (MicroPython Project)
-* :ref:`py_dice` (MicroPython Project)
-
-
-
-
+* :ref:`ar_74hc595` (Proyecto Arduino)
+* :ref:`ar_7_segment` (Proyecto Arduino)
+* :ref:`ar_dice` (Proyecto Arduino)
+* :ref:`py_74hc595` (Proyecto MicroPython)
+* :ref:`py_7_segment` (Proyecto MicroPython)
+* :ref:`py_dice` (Proyecto MicroPython)
 

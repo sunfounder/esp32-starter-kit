@@ -1,43 +1,43 @@
 .. _format_sd_card:
 
-How to format the SD card?
+¿Cómo formatear la tarjeta SD?
 ====================================
 
-The steps to ensure your SD card is formatted correctly may vary depending on your operating system. Here are simple steps on how to format an SD card in Windows, MacOS, and Linux:
+Los pasos para asegurar que tu tarjeta SD esté formateada correctamente pueden variar dependiendo de tu sistema operativo. Aquí te mostramos pasos sencillos sobre cómo formatear una tarjeta SD en Windows, MacOS y Linux:
 
 **Windows**
 
-   #. Insert your SD card into the computer, then open "My Computer" or "This PC." Right-click on your SD card and select "Format."
+   #. Inserta tu tarjeta SD en el ordenador, luego abre "Mi PC" o "Este Equipo". Haz clic derecho en tu tarjeta SD y selecciona "Formatear".
 
         .. image:: img/sd_format_win1.png
 
-   #. In the file system drop-down menu, select the desired file system (usually choose FAT32, or for SD cards larger than 32GB, you may need to choose exFAT). Check "Quick Format" and then click "Start".
+   #. En el menú desplegable de sistema de archivos, selecciona el sistema de archivos deseado (usualmente elige FAT32, o para tarjetas SD mayores de 32GB, podrías necesitar elegir exFAT). Marca "Formato rápido" y luego haz clic en "Iniciar".
 
         .. image:: img/sd_format_win2.png
 
 **MacOS**
    
-   #. Insert your SD card into the computer. Open the "Disk Utility" application (can be found in the "Utilities" folder).
+   #. Inserta tu tarjeta SD en el ordenador. Abre la aplicación "Utilidad de Discos" (se puede encontrar en la carpeta "Utilidades").
 
         .. image:: img/sd_format_mac1.png
     
-   #. Select your SD card from the list on the left and then click "Erase".
+   #. Selecciona tu tarjeta SD de la lista a la izquierda y luego haz clic en "Borrar".
 
         .. image:: img/sd_format_mac2.png
 
-   #. From the format drop-down menu, choose your desired file system (usually choose MS-DOS (FAT) for FAT32, or ExFAT for SD cards larger than 32GB) and then click "Erase".
+   #. Del menú desplegable de formato, elige tu sistema de archivos deseado (usualmente elige MS-DOS (FAT) para FAT32, o ExFAT para tarjetas SD mayores de 32GB) y luego haz clic en "Borrar".
 
         .. image:: img/sd_format_mac3.png
 
-   #. Finally, wait for the formatting to complete.
+   #. Finalmente, espera a que se complete el formateo.
 
         .. image:: img/sd_format_mac3.png
 
 **Linux**
 
-   * First, insert your SD card and then open a terminal.
-   * Type ``lsblk`` and find your SD card's name in the device list (e.g., it may be ``sdb``).
-   * Use the ``umount`` command to unmount the SD card, like ``sudo umount /dev/sdb*``.
-   * Use the ``mkfs`` command to format the SD card. For example, ``sudo mkfs.vfat /dev/sdb1`` will format the SD card to a FAT32 file system (for SD cards larger than 32GB, you might need to use ``mkfs.exfat``).
+   * Primero, inserta tu tarjeta SD y luego abre una terminal.
+   * Escribe ``lsblk`` y encuentra el nombre de tu tarjeta SD en la lista de dispositivos (por ejemplo, podría ser ``sdb``).
+   * Usa el comando ``umount`` para desmontar la tarjeta SD, como ``sudo umount /dev/sdb*``.
+   * Usa el comando ``mkfs`` para formatear la tarjeta SD. Por ejemplo, ``sudo mkfs.vfat /dev/sdb1`` formateará la tarjeta SD a un sistema de archivos FAT32 (para tarjetas SD mayores de 32GB, podrías necesitar usar ``mkfs.exfat``).
 
-Before formatting your SD card, make sure to back up any important data on the SD card, as the formatting operation will erase all files on the SD card.
+Antes de formatear tu tarjeta SD, asegúrate de respaldar cualquier dato importante en la tarjeta SD, ya que la operación de formateo borrará todos los archivos en la tarjeta SD.

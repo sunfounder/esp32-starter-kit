@@ -1,66 +1,66 @@
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
+Módulo Ultrasonido
 ================================
 
 .. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
-* **TRIG**: Trigger Pulse Input
-* **ECHO**: Echo Pulse Output
-* **GND**: Ground
-* **VCC**: 5V Supply
+* **TRIG**: Entrada de Pulso de Disparo
+* **ECHO**: Salida de Pulso de Eco
+* **GND**: Tierra
+* **VCC**: Suministro de 5V
 
-This is the HC-SR04 ultrasonic distance sensor, providing non-contact measurement from 2 cm to 400 cm with a range accuracy of up to 3 mm. Included on the module is an ultrasonic transmitter, a receiver and a control circuit.
+Este es el sensor de distancia ultrasónico HC-SR04, que proporciona mediciones sin contacto desde 2 cm hasta 400 cm con una precisión de rango de hasta 3 mm. Incluido en el módulo hay un transmisor ultrasónico, un receptor y un circuito de control.
 
-You only need to connect 4 pins: VCC (power), Trig (trigger), Echo (receive) and GND (ground) to make it easy to use for your measurement projects.
+Solo necesitas conectar 4 pines: VCC (alimentación), Trig (disparador), Echo (recepción) y GND (tierra) para facilitar su uso en tus proyectos de medición.
 
-**Features**
+**Características**
 
-* Working Voltage: DC5V
-* Working Current: 16mA
-* Working Frequency: 40Hz
-* Max Range: 500cm
-* Min Range: 2cm
-* Trigger Input Signal: 10uS TTL pulse
-* Echo Output Signal: Input TTL lever signal and the range in proportion
-* Connector: XH2.54-4P
-* Dimension: 46x20.5x15 mm
+* Voltaje de Trabajo: DC5V
+* Corriente de Trabajo: 16mA
+* Frecuencia de Trabajo: 40Hz
+* Rango Máximo: 500cm
+* Rango Mínimo: 2cm
+* Señal de Entrada de Disparo: Pulso TTL de 10uS
+* Señal de Salida de Eco: Señal de nivel TTL de entrada y el rango en proporción
+* Conector: XH2.54-4P
+* Dimensiones: 46x20.5x15 mm
 
-**Principle**
+**Principio**
 
-The basic principles are as follows:
+Los principios básicos son los siguientes:
 
-* Using IO trigger for at least 10us high level signal.
+* Usando el disparador de IO durante al menos 10us con una señal de nivel alto.
 
-* The module sends an 8 cycle burst of ultrasound at 40 kHz and detects whether a pulse signal is received.
+* El módulo envía una ráfaga de ultrasonido de 8 ciclos a 40 kHz y detecta si se recibe una señal de pulso.
 
-* Echo will output a high level if a signal is returned; the duration of the high level is the time from emission to return.
+* Echo emitirá un nivel alto si se recibe una señal; la duración del nivel alto es el tiempo desde la emisión hasta el retorno.
 
-* Distance = (high level time x velocity of sound (340M/S)) / 2
+* Distancia = (tiempo de nivel alto x velocidad del sonido (340M/S)) / 2
 
 .. image:: img/ultrasonic_prin.jpg
 
 
-Formula:
+Fórmula:
 
-* us / 58 = centimeters distance
-* us / 148 = inch distance
-* distance = high level time x velocity (340M/S) / 2
+* us / 58 = distancia en centímetros
+* us / 148 = distancia en pulgadas
+* distancia = tiempo de nivel alto x velocidad (340M/S) / 2
 
 .. note::
 
-    This module should not be connected under power up, if necessary, let the module's GND be connected first. Otherwise, it will affect the work of the module.
+    Este módulo no debe estar conectado bajo encendido, si es necesario, deja que la GND del módulo se conecte primero. De lo contrario, afectará el funcionamiento del módulo.
 
-    The area of the object to be measured should be at least 0.5 square meters and as flat as possible. Otherwise, it will affect results.
+    El área del objeto a medir debe ser al menos de 0.5 metros cuadrados y lo más plana posible. De lo contrario, afectará los resultados.
 
 
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_ultrasonic` (Arduino Project)
-* :ref:`ar_reversing_aid` (Arduino Project)
-* :ref:`py_ultrasonic` (MicroPython Project)
-* :ref:`py_reversing_aid` (MicroPython Project)
-* :ref:`sh_parrot` (Scratch Project)
+* :ref:`ar_ultrasonic` (Proyecto Arduino)
+* :ref:`ar_reversing_aid` (Proyecto Arduino)
+* :ref:`py_ultrasonic` (Proyecto MicroPython)
+* :ref:`py_reversing_aid` (Proyecto MicroPython)
+* :ref:`sh_parrot` (Proyecto Scratch)

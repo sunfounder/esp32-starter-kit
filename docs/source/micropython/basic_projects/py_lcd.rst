@@ -1,39 +1,39 @@
 .. _py_lcd1602:
 
-2.6 Display Characters
+2.6 Mostrar Caracteres
 ==================================================
 
-Now, we will explore the fascinating world of character display using the I2C LCD1602 module.
+Ahora, exploraremos el fascinante mundo de la visualización de caracteres utilizando el módulo LCD1602 I2C.
 
-Through this project, we will learn how to initialize the LCD module, set the desired display parameters, and send character data to be displayed on the screen. We can showcase custom messages, display sensor readings, or create interactive menus. The possibilities are endless!
+A través de este proyecto, aprenderemos cómo inicializar el módulo LCD, configurar los parámetros de visualización deseados y enviar datos de caracteres para ser mostrados en la pantalla. Podemos mostrar mensajes personalizados, exhibir lecturas de sensores o crear menús interactivos. ¡Las posibilidades son infinitas!
 
-By mastering the art of character display on the I2C LCD1602, we will unlock new avenues for communication and information display in our projects. Let's dive into this exciting journey and bring our characters to life on the LCD screen
+Dominando el arte de la visualización de caracteres en el LCD1602 I2C, desbloquearemos nuevas vías para la comunicación y la muestra de información en nuestros proyectos. Sumérgete en este emocionante viaje y da vida a tus caracteres en la pantalla del LCD.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
+    *   - Kit de Inicio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -44,38 +44,38 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Available Pins**
+**Pines Disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. list-table::
     :widths: 5 15
     :header-rows: 1
 
-    *   - Available Pins
-        - Usage Description
+    *   - Pines Disponibles
+        - Descripción de Uso
 
     *   - IO21
         - SDA
     *   - IO22
         - SCL
     
-**Schematic**
+**Esquemático**
 
 .. image:: ../../img/circuit/circuit_2.6_lcd.png
 
-**Wiring**
+**Conexión**
 
 .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``2.6_liquid_crystal_display.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * The ``lcd1602.py`` library is used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
+    * Abre el archivo ``2.6_liquid_crystal_display.py`` ubicado en la ruta ``esp32-starter-kit-main\micropython\codes`` o copia y pega el código en Thonny. Luego, haz clic en "Ejecutar script actual" o presiona F5 para ejecutarlo.
+    * Asegúrate de seleccionar el intérprete "MicroPython (ESP32).COMxx" en la esquina inferior derecha. 
+    * Se utiliza aquí la biblioteca ``lcd1602.py`` y verifica si se ha cargado en el ESP32. Consulta :ref:`add_libraries_py` para obtener un tutorial.
 
 .. code-block:: python
 
@@ -102,38 +102,38 @@ Here is a list of available pins on the ESP32 board for this project.
     lcd.clear()
 
 
-After the script runs, you will be able to see two lines of text will appear on the LCD screen in turn and then disappear.
+Después de ejecutar el script, podrás ver dos líneas de texto que aparecen en la pantalla LCD por turnos y luego desaparecen.
 
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Si el código y la conexión son correctos, pero el LCD aún no muestra ningún contenido, puedes ajustar el potenciómetro en la parte posterior para aumentar el contraste.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-In the ``lcd1602`` library, we integrate the relevant functions of lcd1602 into the LCD class.
+En la biblioteca ``lcd1602``, integramos las funciones relevantes del lcd1602 en la clase LCD.
 
-#. Import ``lcd1602`` module.
+#. Importa el módulo ``lcd1602``.
 
     .. code-block:: python
 
         from lcd1602 import LCD    
 
-#. Declare an object of the ``LCD`` class and name it ``lcd``.
+#. Declara un objeto de la clase ``LCD`` y nómbralo ``lcd``.
 
     .. code-block:: python
 
         lcd = LCD()
 
-#. This statement will display the text on the LCD. It should be noted that the argument must be a string type. If we want to pass an integer or float, we must use the forced conversion statement ``str()``.
+#. Esta instrucción mostrará el texto en el LCD. Es importante señalar que el argumento debe ser de tipo cadena. Si queremos pasar un entero o un flotante, debemos utilizar la instrucción de conversión forzada ``str()``.
 
     .. code-block:: python
 
         lcd.message(string)
 
 
-#. If you call this statement multiple times, lcd will superimpose the texts. This requires the use of the following statement to clear the display.
+#. Si llamas a esta instrucción varias veces, el LCD superpondrá los textos. Esto requiere el uso de la siguiente instrucción para limpiar la pantalla.
 
     .. code-block:: python
 

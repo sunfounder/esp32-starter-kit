@@ -1,37 +1,34 @@
 .. _cpn_buzzer:
 
-Buzzer
-=======
+Zumbador
+==========
 
 .. image:: img/buzzer.png
     :width: 600
 
-As a type of electronic buzzer with an integrated structure, buzzers, which are supplied by DC power, are widely used in computers, printers, photocopiers, alarms, electronic toys, automotive electronic devices, telephones, timers and other electronic products or voice devices. 
+Como un tipo de zumbador electrónico con una estructura integrada, los zumbadores, que son alimentados por corriente continua, son ampliamente utilizados en computadoras, impresoras, fotocopiadoras, alarmas, juguetes electrónicos, dispositivos electrónicos automotrices, teléfonos, temporizadores y otros productos electrónicos o dispositivos de voz.
 
-Buzzers can be categorized as active and passive ones (see the following picture). Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
+Los zumbadores pueden clasificarse como activos y pasivos (ver la siguiente imagen). Gira el zumbador para que sus pines estén hacia arriba, y el zumbador con una placa de circuito verde es un zumbador pasivo, mientras que el que está envuelto con una cinta negra es un zumbador activo.
 
-The difference between an active buzzer and a passive buzzer: 
+La diferencia entre un zumbador activo y un zumbador pasivo:
 
-An active buzzer has a built-in oscillating source, so it will make sounds when electrified. But a passive buzzer does not have such source, so it will not beep if DC signals are used; instead, you need to use square waves whose frequency is between 2K and 5K to drive it. The active buzzer is often more expensive than the passive one because of multiple built-in oscillating circuits.
+Un zumbador activo tiene una fuente de oscilación incorporada, por lo que emitirá sonidos cuando esté electrificado. Pero un zumbador pasivo no tiene tal fuente, por lo que no emitirá pitidos si se usan señales de corriente continua; en su lugar, necesitas usar ondas cuadradas cuya frecuencia esté entre 2K y 5K para conducirlo. El zumbador activo suele ser más caro que el pasivo debido a los múltiples circuitos oscilantes incorporados.
 
-The following is the electrical symbol of a buzzer. It has two pins with positive and negative poles. With a + in the surface represents the anode and the other is the cathode. 
+Lo siguiente es el símbolo eléctrico de un zumbador. Tiene dos pines con polos positivos y negativos. Con un + en la superficie representa el ánodo y el otro es el cátodo.
 
 .. image:: img/buzzer_symbol.png
     :width: 150
 
-You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don't mix them up when connecting, otherwise the buzzer will not make sound. 
+Puedes verificar los pines del zumbador, el más largo es el ánodo y el más corto es el cátodo. Por favor, no los mezcles al conectarlos, de lo contrario, el zumbador no emitirá sonido.
 
-`Buzzer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
+`Zumbador - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_ac_buz` (Arduino Project)
-* :ref:`ar_pa_buz` (Arduino Project)
-* :ref:`ar_reversing_aid` (Arduino Project)
-* :ref:`py_pa_buz` (MicroPython Project)
-* :ref:`py_ac_buz` (MicroPython Project)
-* :ref:`py_reversing_aid` (MicroPython Project)
-
-
-
+* :ref:`ar_ac_buz` (Proyecto Arduino)
+* :ref:`ar_pa_buz` (Proyecto Arduino)
+* :ref:`ar_reversing_aid` (Proyecto Arduino)
+* :ref:`py_pa_buz` (Proyecto MicroPython)
+* :ref:`py_ac_buz` (Proyecto MicroPython)
+* :ref:`py_reversing_aid` (Proyecto MicroPython)
 
