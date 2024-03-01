@@ -6,9 +6,11 @@ Gracias por elegir nuestro Kit de Inicio ESP32.
 .. note::
     Este documento está disponible en los siguientes idiomas.
 
+        * |link_spanish_tutorials|
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
+
     
     Por favor, haz clic en los enlaces respectivos para acceder al documento en tu idioma preferido.
 
