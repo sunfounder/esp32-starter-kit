@@ -27,7 +27,7 @@ Si tienes alguna pregunta u otras ideas interesantes, no dudes en enviar un corr
 .. toctree::
     :maxdepth: 2
 
-    About this Kit <self>
+    Sobre este Kit <self>
     download_code
     arduino/for_arduino_user
     arduino_video_course/arduino_video_course
