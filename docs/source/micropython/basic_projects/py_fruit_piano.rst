@@ -100,6 +100,8 @@ El resultado es una forma simple y económica de disfrutar de la experiencia de 
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
+En este proyecto, necesitas quitar el ESP32 WROOM 32E de la placa de expansión y luego insertarlo en el protoboard. Esto se debe a que algunos pines en la placa de expansión están conectados a resistencias, lo que afectará la capacitancia de los pines.
+
 **Código**
 
 .. note::
