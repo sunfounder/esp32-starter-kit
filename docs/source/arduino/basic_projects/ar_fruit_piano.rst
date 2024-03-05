@@ -99,6 +99,8 @@ The result is a simple and affordable way to enjoy the experience of playing the
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
+In this project, you need to remove the ESP32 WROOM 32E from the expansion board and then insert it into the breadboard. This is because some pins on the expansion board are connected to resistors, which will affect the capacitance of the pins.
+
 **Code**
 
 

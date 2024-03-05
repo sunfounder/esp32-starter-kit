@@ -100,6 +100,10 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 rst_epilog = """
 
+.. |link_spanish_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/esp32-starter-kit-es/es/latest/index.html" target="_blank">Lecciones en línea de español</a>
+
 .. |link_german_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/de/latest/" target="_blank">Deutsch Online-Kurs</a>

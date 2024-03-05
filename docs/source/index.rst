@@ -6,6 +6,7 @@ Thanks for choosing our ESP32 Starter Kit.
 .. note::
     This document is available in the following languages.
 
+        * |link_spanish_tutorials|
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
