@@ -98,6 +98,8 @@ Das Ergebnis ist eine einfache und erschwingliche Möglichkeit, das Klavierspiel
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
+In diesem Projekt müssen Sie das ESP32 WROOM 32E von der Erweiterungsplatine entfernen und dann in das Steckbrett einsetzen. Dies liegt daran, dass einige Pins auf der Erweiterungsplatine mit Widerständen verbunden sind, was die Kapazität der Pins beeinflusst.
+
 **Code**
 
 
