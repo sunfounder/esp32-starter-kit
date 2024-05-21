@@ -1,3 +1,17 @@
+.. note::
+
+    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+
+    **Why Join?**
+
+    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
+    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
+    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
+    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
+    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+
+    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+
 Arduino Video Course
 ====================
 Embark on a journey through the Arduino world with the comprehensive Arduino Video Course, using SunFounder's ESP32 Starter Kit. This series begins with an introduction to the Arduino ecosystem and the capabilities of the ESP32 board, setting the stage for a deep dive into practical applications and programming techniques. You'll learn the basics of controlling LEDs, understanding serial communication, and manipulating various components like RGB LEDs, buttons, and shift registers. The course progresses to more advanced topics, including array handling, interfacing with LCD displays, and utilizing LED strips for visual effects. Towards the latter part of the series, you'll delve into controlling different types of motors, from simple DC motors to servo motors, and even operating a mini water pump, culminating in a well-rounded understanding of Arduino programming and hardware interfacing. Whether you're a beginner or looking to sharpen your skills, this course provides a thorough exploration from foundational concepts to intricate project executions.
