@@ -1,3 +1,17 @@
+.. note::
+
+    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+
+    **Warum beitreten?**
+
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
+    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
+
+    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+
 .. _cpn_esp32_wroom_32e:
 
 ESP32 WROOM 32E
@@ -93,7 +107,7 @@ Die folgende Tabelle gibt detaillierte Informationen zur Boot-Modus-Konfiguratio
 .. _cpn_esp32_camera_extension:
 
 ESP32-Kameraerweiterung
-=======================
+--------------------------
 
 Wir haben ein Erweiterungsboard entworfen, das Ihnen ermöglicht, die Kamera- und SD-Karten-Funktionen des ESP32 WROOM 32E vollständig zu nutzen. Mit der Kombination aus der OV2640-Kamera, Micro-SD und ESP32 WROOM 32E erhalten Sie ein All-in-One-Erweiterungsboard.
 
