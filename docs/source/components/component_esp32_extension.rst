@@ -1,3 +1,17 @@
+.. note::
+
+    ¡Hola, bienvenido a la Comunidad de Aficionados a Raspberry Pi, Arduino y ESP32 de SunFounder en Facebook! Profundiza en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
+
+    **¿Por qué unirse?**
+
+    - **Soporte de expertos**: Resuelve problemas posventa y desafíos técnicos con ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a anuncios de nuevos productos y avances.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de fiestas.
+
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy!
+
 .. _cpn_esp32_wroom_32e:
 
 ESP32 WROOM 32E
@@ -90,7 +104,7 @@ Consulte la siguiente tabla para obtener una configuración detallada del modo d
 .. _cpn_esp32_camera_extension:
 
 Extensión de Cámara ESP32
-============================
+----------------------------
 
 Hemos diseñado una placa de expansión que le permite aprovechar al máximo las funcionalidades de la cámara y la tarjeta SD del ESP32 WROOM 32E. Al combinar la cámara OV2640, Micro SD y ESP32 WROOM 32E, obtiene una placa de expansión todo en uno.
 
