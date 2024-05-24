@@ -23,9 +23,9 @@ Receptor de Infrarrojos
     :width: 400
     :align: center
 
-* OUT: Salida de señal
-* GND: Tierra
-* VCC: Fuente de alimentación, 3.3v~5V
+* **S**: Salida de señal
+* **-**: Tierra
+* **+**: Fuente de alimentación, 3.3v~5V
 
 El receptor de infrarrojos SL838 es un componente que recibe señales infrarrojas y puede recibir independientemente rayos infrarrojos y emitir señales compatibles con el nivel TTL. Es similar a un transistor normal encapsulado en plástico en tamaño y es adecuado para todo tipo de control remoto infrarrojo y transmisión infrarroja.
 
