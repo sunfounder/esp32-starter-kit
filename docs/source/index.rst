@@ -74,7 +74,8 @@ Die Schritte sind wie folgt.
     scratch/play_with_scratch
     components/component_list
     faq/faq
-    thank-learning
+    arduino_video_course/arduino_video_course
+    thank-learning/thank-learning
 
 Urheberrechtshinweis
 -----------------------
