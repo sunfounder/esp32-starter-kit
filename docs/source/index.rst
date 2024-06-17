@@ -67,6 +67,7 @@ ESP32ラーニングキットへようこそ！この包括的なキットは、
     このキットについて <self>
     download_code
     arduino/for_arduino_user
+    arduino_video_course/arduino_video_course
     micropython/for_micropython_user
     scratch/play_with_scratch
     components/component_list
