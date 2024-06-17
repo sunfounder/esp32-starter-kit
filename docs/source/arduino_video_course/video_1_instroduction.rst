@@ -1,33 +1,33 @@
 .. note::
 
-    ¡Hola, bienvenido a la Comunidad de Aficionados a Raspberry Pi, Arduino y ESP32 de SunFounder en Facebook! Profundiza en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
+    ¡Hola! Bienvenidos a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
     **¿Por qué unirse?**
 
-    - **Soporte de expertos**: Resuelve problemas posventa y desafíos técnicos con ayuda de nuestra comunidad y equipo.
-    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
-    - **Vistas previas exclusivas**: Obtén acceso anticipado a anuncios de nuevos productos y avances.
-    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
-    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de fiestas.
+    - **Soporte de Expertos**: Resuelve problemas post-venta y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y Compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Preestrenos Exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos Especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones Festivas y Sorteos**: Participa en sorteos y promociones festivas.
 
-    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-SERIE ESP32 #0: Nueva Serie Esp32 2024
-===========================================
+Video 1: Introducción a este Kit
+=====================================
 
-Descubre las novedades de la actualizada serie ESP32 para este 2024, donde te llevaremos a través de los últimos avances en software y hardware. Desde la transición al Arduino IDE versión 2 hasta la integración de nuevas plataformas y tecnologías, este video marca el inicio de una temporada llena de aprendizaje y exploración. Además, no te pierdas el detallado unboxing del ESP32 Starter Kit de SunFounder, un kit esencial para seguir paso a paso nuestra serie. Si eres nuevo en la programación del ESP32 o buscas profundizar tus conocimientos, este video es para ti.
+Este video sirve como una introducción al Kit de Aprendizaje IoT de SunFounder con ESP32. Cubre varios aspectos del kit, destacando sus características y capacidades:
 
-* **Actualización de Contenidos**: Adaptación de la serie a las últimas versiones de software y plataformas.
-* **Participación de la Comunidad**: Tu oportunidad de sugerir temas y contenidos para futuros episodios.
-* **ESP32 Starter Kit de SunFounder**: Todo lo que necesitas saber sobre este kit completo, desde su contenido hasta dónde adquirirlo.
-
-Prepárate para una temporada de aprendizaje avanzado con la serie ESP32, diseñada tanto para principiantes como para desarrolladores intermedios y avanzados. ¡Únete a nosotros en esta aventura tecnológica en 2024!
+* **Microcontrolador ESP32**: Características del microcontrolador ESP32 con Wi-Fi y Bluetooth integrados.
+* **Instalación del IDE de Arduino**: Guía a los espectadores a través de la instalación del IDE de Arduino.
+* **Configuración de la Placa ESP32**: Demuestra la configuración de la placa y la instalación del controlador.
+* **Selección del Módulo de Desarrollo ESP32**: Explica la selección de la placa en el IDE de Arduino.
+* **Instalación de Bibliotecas**: Muestra cómo instalar las bibliotecas necesarias.
+* **Ejemplos de Proyectos**: Introduce varios ejemplos de proyectos para Arduino y MicroPython.
 
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/mqRCbLqX-DE?si=SW6Ptqz2J2UQBT1m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/fsLxbRaqsaE?si=eZOoD9W-PYijG3S2" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
