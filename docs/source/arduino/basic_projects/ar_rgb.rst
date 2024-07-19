@@ -125,11 +125,6 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
         const int greenPin = 26;
         const int bluePin = 25;
 
-        // Define PWM channels
-        const int redChannel = 0;
-        const int greenChannel = 1;
-        const int blueChannel = 2;
-
         // Define PWM frequency and resolution
         const int freq = 5000;
         const int resolution = 8;
@@ -140,30 +135,19 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
     .. code-block:: arduino
 
         void setup() {
-            // Set up PWM channels
-            ledcSetup(redChannel, freq, resolution);
-            ledcSetup(greenChannel, freq, resolution);
-            ledcSetup(blueChannel, freq, resolution);
-            
-            // Attach pins to corresponding PWM channels
-            ledcAttachPin(redPin, redChannel);
-            ledcAttachPin(greenPin, greenChannel);
-            ledcAttachPin(bluePin, blueChannel);
+          // Set up PWM pins
+          ledcAttach(redPin, freq, resolution);
+          ledcAttach(greenPin, freq, resolution);
+          ledcAttach(bluePin, freq, resolution);
         }
     
     Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
-            
-        * ``channel`` select LEDC channel to config.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
-
-
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
+    * ``void ledcAttach(uint8_t pin,  uint32_t freq, uint8_t resolution_bits);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.
 
         * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
+        * ``freq`` select frequency of pwm.
+        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
 
 
 #. The ``loop()`` function cycles through various colors (red, green, blue, yellow, purple, and cyan) with one-second intervals between each color change.
@@ -191,10 +175,10 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
     .. code-block:: arduino
 
         void setColor(int red, int green, int blue) {
-            // For common-anode RGB LEDs, use 255 minus the color value
-            ledcWrite(redChannel, red);
-            ledcWrite(greenChannel, green);
-            ledcWrite(blueChannel, blue);
+          // For common-anode RGB LEDs, use 255 minus the color value
+          ledcWrite(redPin, red);
+          ledcWrite(greenPin, green);
+          ledcWrite(bluePin, blue);
         }
     
     * ``void ledcWrite(uint8_t chan, uint32_t duty);``: This function is used to set duty for the LEDC channel.
