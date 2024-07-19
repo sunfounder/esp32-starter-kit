@@ -143,7 +143,7 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
     
     Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
 
-    * ``void ledcAttach(uint8_t pin,  uint32_t freq, uint8_t resolution_bits);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.
+    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.
 
         * ``pin`` select GPIO pin.
         * ``freq`` select frequency of pwm.
@@ -175,15 +175,14 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
     .. code-block:: arduino
 
         void setColor(int red, int green, int blue) {
-          // For common-anode RGB LEDs, use 255 minus the color value
           ledcWrite(redPin, red);
           ledcWrite(greenPin, green);
           ledcWrite(bluePin, blue);
         }
     
-    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: This function is used to set duty for the LEDC channel.
+    * ``bool ledcWrite(uint8_t pin, uint32_t duty);``: This function is used to set duty for the LEDC pin.
         
-        * ``chan`` select the LEDC channel for writing duty.
+        * ``pin`` select LEDC pin.
         * ``duty`` select duty to be set for selected channel.
 
 
