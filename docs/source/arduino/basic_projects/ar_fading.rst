@@ -120,40 +120,33 @@ After the code is uploaded successfully, you can see the LED breathing.
     .. code-block:: arduino
 
         void setup() {
-            ledcSetup(0, 5000, 8); // Configure the PWM channel (0) with 5000Hz frequency and 8-bit resolution
-            ledcAttachPin(ledPin, 0); // Attach the LED pin to the PWM channel
+          ledcAttach(ledPin, 5000, 8);  // Attach the LED pin
         }
 
     Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
+    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.
             
-        * ``channel`` select LEDC channel to config.
+        * ``pin`` select GPIO pin.
         * ``freq`` select frequency of pwm.
         * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
-
-
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
-
-        * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
 
 #. The ``loop()`` function contains the main logic of the program and runs continuously. It updates the LED's brightness, inverts the fade amount when the brightness reaches the minimum or maximum value, and introduces a delay.
 
     .. code-block:: arduino
 
         void loop() {
-            ledcWrite(0, brightness); // Write the new brightness value to the PWM channel
+            ledcWrite(ledPin, brightness);  // Write the new brightness value to the PWM pin
             brightness = brightness + fadeAmount;
 
             if (brightness <= 0 || brightness >= 255) {
                 fadeAmount = -fadeAmount;
             }
             
-            delay(50); // Wait for 20 milliseconds
+            delay(50); // Wait for 50 milliseconds
             }
 
-    * ``void ledcWrite(uint8_t chan, uint32_t duty);``: This function is used to set duty for the LEDC channel.
+    * ``bool ledcWrite(uint8_t pin, uint32_t duty);``: This function is used to set duty for the LEDC pin.
         
-        * ``chan`` select the LEDC channel for writing duty.
+        * ``pin`` select LEDC pin.
         * ``duty`` select duty to be set for selected channel.
