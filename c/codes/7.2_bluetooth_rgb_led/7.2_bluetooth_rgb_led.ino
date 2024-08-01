@@ -8,11 +8,6 @@ const int redPin = 27;
 const int greenPin = 26;
 const int bluePin = 25;
 
-// Define PWM channels
-const int redChannel = 0;
-const int greenChannel = 1;
-const int blueChannel = 2;
-
 // Define PWM frequency and resolution
 const int freq = 5000;
 const int resolution = 8;
