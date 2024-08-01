@@ -20,8 +20,8 @@
 
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "<SSID>";
-const char* password = "<PASSWORD>";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 
 // Use @myidbot to find out the chat ID of an individual or a group
 // Also note that you need to click "start" on a bot before it can

@@ -25,9 +25,9 @@ String receivedText = "";
 unsigned long lastMessageTime = 0;
 
 // Define the UUIDs of the service and characteristics
-#define SERVICE_UUID "15d738e4-ed6e-11ed-a05b-0242ac120003"
-#define CHARACTERISTIC_UUID_RX "06015e54-ed6e-11ed-a05b-0242ac120003"
-#define CHARACTERISTIC_UUID_TX "0e8b42ba-ed6e-11ed-a05b-0242ac120003"
+#define SERVICE_UUID "8785d8b3-9d23-473b-aee5-3fabe2ba9583"
+#define CHARACTERISTIC_UUID_RX "b2bcd13b-aab6-4660-92ae-40abf6941fce"
+#define CHARACTERISTIC_UUID_TX "4219d86a-d701-4fd2-bd84-04db50f70fe2"
 
 // Define the Bluetooth characteristic
 BLECharacteristic *pCharacteristic;
@@ -36,16 +36,9 @@ void setup() {
   Serial.begin(115200);      // Initialize the serial port
   setupBLE();                // Initialize the Bluetooth BLE
 
-    // Set up PWM channels
-  ledcSetup(redChannel, freq, resolution);
-  ledcSetup(greenChannel, freq, resolution);
-  ledcSetup(blueChannel, freq, resolution);
-
-  // Attach pins to corresponding PWM channels
-  ledcAttachPin(redPin, redChannel);
-  ledcAttachPin(greenPin, greenChannel);
-  ledcAttachPin(bluePin, blueChannel);
-
+  ledcAttach(redPin, freq, resolution);
+  ledcAttach(greenPin, freq, resolution);
+  ledcAttach(bluePin, freq, resolution);
 }
 
 void loop() {
@@ -83,7 +76,7 @@ class MyServerCallbacks : public BLEServerCallbacks {
 // Define the BLE characteristic callbacks
 class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
   void onWrite(BLECharacteristic *pCharacteristic) {
-    std::string value = pCharacteristic->getValue();
+    std::string value = std::string(pCharacteristic->getValue().c_str());
     if (value == "led_off") {
       setColor(0, 0, 0); // turn the RGB LED off
       Serial.println("RGB LED turned off");
@@ -141,7 +134,7 @@ void setupBLE() {
 
 void setColor(int red, int green, int blue) {
   // For common-anode RGB LEDs, use 255 minus the color value
-  ledcWrite(redChannel, red);
-  ledcWrite(greenChannel, green);
-  ledcWrite(blueChannel, blue);
+  ledcWrite(redPin, red);
+  ledcWrite(greenPin, green);
+  ledcWrite(bluePin, blue);
 }

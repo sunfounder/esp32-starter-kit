@@ -4,18 +4,12 @@
 // PWM settings
 const int freq = 500; // PWM frequency: 500 Hz
 const int resolution = 8; // PWM resolution: 8 bits
-const int channelA = 0; // PWM channel for motor1A: 0
-const int channelB = 1; // PWM channel for motor2A: 1
 
 
 void setup() {
   // Set up PWM
-  ledcSetup(channelA, freq, resolution);
-  ledcSetup(channelB, freq, resolution);
-
-  // Attach PWM channels to GPIO pins
-  ledcAttachPin(motor1A, channelA);
-  ledcAttachPin(motor2A, channelB);
+  ledcAttach(motor1A, freq, resolution);
+  ledcAttach(motor2A, freq, resolution);
 
   Serial.begin(115200);
 }
@@ -24,8 +18,8 @@ void loop() {
   // Increase speed gradually
   for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
     Serial.println(dutyCycle);
-    ledcWrite(channelA, dutyCycle);
-    ledcWrite(channelB, 0);
+    ledcWrite(motor1A, dutyCycle);
+    ledcWrite(motor2A, 0);
     delay(50);
   }
 
@@ -34,8 +28,8 @@ void loop() {
   // Decrease speed gradually
   for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
     Serial.println(dutyCycle);
-    ledcWrite(channelA, dutyCycle);
-    ledcWrite(channelB, 0);
+    ledcWrite(motor1A, dutyCycle);
+    ledcWrite(motor2A, 0);
     delay(50);
   }
   

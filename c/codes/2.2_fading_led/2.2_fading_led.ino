@@ -3,17 +3,14 @@ int brightness = 0;
 int fadeAmount = 5;
 
 void setup() {
-  ledcSetup(0, 5000, 8);     // Configure the PWM channel (0) with 5000Hz frequency and 8-bit resolution
-  ledcAttachPin(ledPin, 0);  // Attach the LED pin to the PWM channel
+  ledcAttach(ledPin, 5000, 8);  // Attach the LED pin
 }
 
 void loop() {
-  ledcWrite(0, brightness);  // Write the new brightness value to the PWM channel
+  ledcWrite(ledPin, brightness);  // Write the new brightness value to the PWM pin
   brightness = brightness + fadeAmount;
-
   if (brightness <= 0 || brightness >= 255) {
     fadeAmount = -fadeAmount;
   }
-
-  delay(50);  // Wait for 20 milliseconds
+  delay(50);  // Wait for 50 milliseconds
 }

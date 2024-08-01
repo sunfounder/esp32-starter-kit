@@ -10,8 +10,7 @@ void setup() {
   Serial.begin(115200);
 
   // Configure PWM
-  ledcSetup(channel, freq, resolution);
-  ledcAttachPin(ledPin, channel);
+  ledcAttach(ledPin, freq, resolution);
 }
 
 void loop() {
@@ -19,7 +18,7 @@ void loop() {
   int potValue = analogRead(potPin); // read the value of the potentiometer
   uint32_t voltage_mV = analogReadMilliVolts(potPin); // Read the voltage in millivolts
 
-  ledcWrite(channel, potValue);
+  ledcWrite(ledPin, potValue);
 
   Serial.print("Potentiometer Value: ");
   Serial.print(potValue);

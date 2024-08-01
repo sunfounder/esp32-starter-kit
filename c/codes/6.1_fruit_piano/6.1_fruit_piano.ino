@@ -29,8 +29,7 @@ void setup() {
     pinMode(TOUCH_PINS[i], INPUT);
   }
 
-  ledcSetup(CHANNEL, FREQUENCY, RESOLUTION);  // Initialize the LEDC module
-  ledcAttachPin(BUZZER_PIN, CHANNEL); // Attach the buzzer pin to the LEDC channel
+  ledcAttach(BUZZER_PIN, FREQUENCY, RESOLUTION);  // Initialize the LEDC module
 }
 
 void loop() {
@@ -46,9 +45,9 @@ void loop() {
 
     // Check if the current touch pin is being touched
     if (touchValue < threshold) {
-      ledcWriteTone(CHANNEL, TONE[i]);  // Write the tone to the LEDC channel
+      ledcWriteTone(BUZZER_PIN, TONE[i]);  // Write the tone to the LEDC BUZZER_PIN
       delay(150);
-      ledcWrite(CHANNEL, 0);  // Turn off the tone by writing 0 to the LEDC channel
+      ledcWrite(BUZZER_PIN, 0);  // Turn off the tone by writing 0 to the LEDC channel
     }
   }
 }

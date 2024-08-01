@@ -3,25 +3,15 @@ const int redPin = 27;
 const int greenPin = 26;
 const int bluePin = 25;
 
-// Define PWM channels
-const int redChannel = 0;
-const int greenChannel = 1;
-const int blueChannel = 2;
-
 // Define PWM frequency and resolution
 const int freq = 5000;
 const int resolution = 8;
 
 void setup() {
-  // Set up PWM channels
-  ledcSetup(redChannel, freq, resolution);
-  ledcSetup(greenChannel, freq, resolution);
-  ledcSetup(blueChannel, freq, resolution);
-
-  // Attach pins to corresponding PWM channels
-  ledcAttachPin(redPin, redChannel);
-  ledcAttachPin(greenPin, greenChannel);
-  ledcAttachPin(bluePin, blueChannel);
+  // Set up PWM pins
+  ledcAttach(redPin, freq, resolution);
+  ledcAttach(greenPin, freq, resolution);
+  ledcAttach(bluePin, freq, resolution);
 }
 
 void loop() {
@@ -40,8 +30,7 @@ void loop() {
 }
 
 void setColor(int red, int green, int blue) {
-  // For common-anode RGB LEDs, use 255 minus the color value
-  ledcWrite(redChannel, red);
-  ledcWrite(greenChannel, green);
-  ledcWrite(blueChannel, blue);
+  ledcWrite(redPin, red);
+  ledcWrite(greenPin, green);
+  ledcWrite(bluePin, blue);
 }

@@ -25,8 +25,8 @@
 #include "esp_http_server.h"
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "<SSID>";
-const char* password = "<PASSWORD>";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 
 #define PART_BOUNDARY "123456789000000000000987654321"
 

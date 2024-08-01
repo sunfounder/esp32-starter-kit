@@ -32,8 +32,8 @@
 #include "camera_pins.h"
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "<SSID>";
-const char* password = "<PASSWORD>";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 
 void startCameraServer();
 void setupLedFlash(int pin);
