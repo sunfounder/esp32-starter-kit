@@ -144,8 +144,8 @@ String printLocalTime(){
   char timeMinute[3];
   strftime(timeMinute,3, "%M", &timeinfo); 
   String time = String(timeHour) + ":" + String(timeMinute);
-  Serial.println(time)  
-;  return time;
+  Serial.println(time);  
+  return time;
 }
 
 
