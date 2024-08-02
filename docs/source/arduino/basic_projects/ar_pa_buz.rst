@@ -133,14 +133,14 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
     .. code-block:: arduino
 
         void playFrequency(int frequency, int duration) {
-            ledcWriteTone(0, frequency); // Start the tone
+            ledcWriteTone(buzzerPin, frequency); // Start the tone
             delay(duration); // Wait for the specified duration
-            ledcWriteTone(0, 0); // Stop the buzzer
+            ledcWriteTone(buzzerPin, 0); // Stop the buzzer
         }
-    
-    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: This function is used to setup the LEDC channel to 50 % PWM tone on selected frequency.
 
-        * ``chan`` select LEDC channel.
+    * ``uint32_t ledcWriteTone(uint8_t pin, uint32_t freq);``: This function is used to setup the pin to 50 % PWM tone on selected frequency.
+
+        * ``pin`` select LEDC pin.
         * ``freq`` select frequency of pwm signal.
 
     This function will return ``frequency`` set for channel. If ``0`` is returned, error occurs and ledc cahnnel was not configured.
@@ -150,21 +150,15 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
     .. code-block:: arduino
 
         void setup() {
-            ledcSetup(0, 2000, resolution); // Set up the PWM channel
-            ledcAttachPin(buzzerPin, 0); // Attach the buzzer pin to the PWM channel
+            ledcAttach(buzzerPin, 2000, 8); // Set up the PWM pin
         }
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: This function is used to setup the LEDC channel frequency and resolution. It will return ``frequency`` configured for LEDC channel. If 0 is returned, error occurs and ledc channel was not configured.
+    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.
             
-        * ``channel`` select LEDC channel to config.
+        * ``pin`` select GPIO pin.
         * ``freq`` select frequency of pwm.
         * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
 
-
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: This function is used to attach the pin to the LEDC channel.
-
-        * ``pin`` select GPIO pin.
-        * ``chan`` select LEDC channel.
 
 #. In the ``loop()`` function, play the sequence of 7 notes with a brief pause between each note and a 1-second pause before repeating the sequence.
 
@@ -176,5 +170,5 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
                 delay(50); // Add a brief pause between the notes
             }
             delay(1000); // Wait for 1 second before replaying the sequence
-            }
+        }
 

@@ -91,13 +91,13 @@ You can also buy them separately from the links below.
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/a5e33c30-63dc-4987-94c3-89bc6a599e24/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
+#. Locate the following lines and modify them with your ``SSID`` and ``PASSWORD``.
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
 

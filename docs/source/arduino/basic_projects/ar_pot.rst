@@ -116,7 +116,7 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
 
     .. code-block:: arduino
 
-        const int potPin = 14; // Potentiometer connected to GPIO14
+        const int potPin = 35; // Potentiometer connected to GPIO14
         const int ledPin = 26; // LED connected to GPIO26
 
         // PWM settings
@@ -134,12 +134,11 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             Serial.begin(115200);
 
             // Configure PWM
-            ledcSetup(channel, freq, resolution);
-            ledcAttachPin(ledPin, channel);
+            ledcAttach(ledPin, freq, resolution);
         }
 
     * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcSetup()`` function is called to set up the PWM channel with the specified frequency and resolution, and the ``ledcAttachPin()`` function is called to associate the specified LED pin with the PWM channel.
+    * The ``ledcAttachPin()`` function is called to set up the specified LED pin with the specified frequency and resolution.
 
 #. Main loop (executed repeatedly) in the loop() function.
 
@@ -150,7 +149,7 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             int potValue = analogRead(potPin); // read the value of the potentiometer
             uint32_t voltage_mV = analogReadMilliVolts(potPin); // Read the voltage in millivolts
             
-            ledcWrite(channel, potValue);
+            ledcWrite(ledPin, potValue);
             
             Serial.print("Potentiometer Value: ");
             Serial.print(potValue);

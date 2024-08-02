@@ -91,9 +91,24 @@ When you press a button on the remote control, the infrared receiver detects the
 
         .. image:: img/receiver_lib.png
 
+
+.. warning::
+
+    If you are using an ESP32 development board version 3.0.0 or higher, you may encounter errors during the compilation process.
+    This issue is usually because the newer versions of the board no longer support the ``<IRremoteESP8266.h>`` library.
+    To properly run this example, it is recommended to downgrade your ESP32 board's firmware version to 2.0.17. 
+    After completing this example, upgrade back to the latest version.
+
+
+    .. image:: ../../faq/img/version_2.0.17.png
+
+
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/463c8894-00bd-4035-a81c-cad99a7f3731/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+Remember to Set the serial communication baud rate to 115200.
 
 After the code is uploaded successfully, press the different keys on the remote control and you will see the names of these keys appear in the serial monitor.
 

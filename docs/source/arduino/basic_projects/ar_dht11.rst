@@ -95,6 +95,8 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95bef6dc-a4db-4315-9308-6663b77ddfa0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Remember to Set the serial communication baud rate to 115200.
+
 After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
 
 **How it works?**

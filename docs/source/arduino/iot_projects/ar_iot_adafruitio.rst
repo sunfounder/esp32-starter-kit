@@ -138,23 +138,23 @@ You can also buy them separately from the links below.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4cf6ad03-250e-4fe9-aa04-0ca73b997843/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. Find the following lines and replace ``<SSID>`` and ``<PASSWORD>`` with the specific details of your WiFi network.
+#. Find the following lines and replace ``SSID`` and ``PASSWORD`` with the specific details of your WiFi network.
 
     .. code-block::  Arduino
 
         /************************* WiFi Access Point *********************************/
 
-        #define WLAN_SSID "<SSID>"
-        #define WLAN_PASS "<PASSWORD>"
+        #define WLAN_SSID "SSID"
+        #define WLAN_PASS "PASSWORD"
 
-#. Then replace ``<YOUR_ADAFRUIT_IO_USERNAME>`` with your Adafruit IO username and ``<YOUR_ADAFRUIT_IO_KEY>`` with the **API KEY** you just copied.
+#. Then replace ``YOUR_ADAFRUIT_IO_USERNAME`` with your Adafruit IO username and ``YOUR_ADAFRUIT_IO_KEY`` with the **API KEY** you just copied.
 
     .. code-block::  Arduino
 
         // Adafruit IO Account Configuration
         // (to obtain these values, visit https://io.adafruit.com and click on Active Key)
-        #define AIO_USERNAME "<YOUR_ADAFRUIT_IO_USERNAME>"
-        #define AIO_KEY      "<YOUR_ADAFRUIT_IO_KEY>"
+        #define AIO_USERNAME "YOUR_ADAFRUIT_IO_USERNAME"
+        #define AIO_KEY      "YOUR_ADAFRUIT_IO_KEY"
 
 #. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
 

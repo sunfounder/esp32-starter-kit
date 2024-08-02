@@ -111,4 +111,6 @@ When the line tracking module detects a black line, IO14 returns a high level. O
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fc7f3fe9-179a-4a3a-acbf-a4014faf3920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Set the serial communication baud rate to 115200.
+
 If the line tracking module detects a black line after the code has been uploaded successfully, "Black" will be shown in the Serial Monitor. Otherwise, "White" will be printed.

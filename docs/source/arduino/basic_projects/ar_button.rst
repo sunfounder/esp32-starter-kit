@@ -133,6 +133,8 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/702c5a70-78e7-4a8b-a0c7-10c0acebfc12/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Remember to Set the serial communication baud rate to 115200.
+
 Once the code is uploaded successfully, the LED lights up when you press the button and goes off when you release it.
 
 At the same time you can open the Serial Monitor in the upper right corner to observe the value of the button, when the button is pressed, "1" will be printed, otherwise "0" will be printed.

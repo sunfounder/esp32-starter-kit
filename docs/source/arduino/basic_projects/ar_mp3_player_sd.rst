@@ -95,6 +95,15 @@ You can also buy them separately from the links below.
         * :ref:`unknown_com_port`
         * The ``ESP8266Audio`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
         
+    .. warning::
+
+        If you are using an ESP32 development board version 3.0.0 or higher, you may encounter errors during the compilation process.
+        This issue is usually because the newer versions of the board no longer support the ``<IRremoteESP8266.h>`` library.
+        To properly run this example, it is recommended to downgrade your ESP32 board's firmware version to 2.0.17. 
+        After completing this example, upgrade back to the latest version.
+
+        .. image:: ../../faq/img/version_2.0.17.png
+
 
     .. raw:: html
 

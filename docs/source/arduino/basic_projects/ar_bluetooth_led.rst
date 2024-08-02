@@ -124,11 +124,6 @@ Let's break down the code step by step:
         const int greenPin = 26;
         const int bluePin = 25;
 
-        // Define PWM channels
-        const int redChannel = 0;
-        const int greenChannel = 1;
-        const int blueChannel = 2;
-
         ...
 
 * Within the ``setup()`` function, the PWM channels are initialized with the predefined frequency and resolution. The RGB LED pins are then attached to their respective PWM channels.
@@ -138,16 +133,9 @@ Let's break down the code step by step:
         void setup() {
             ...
 
-            // Set up PWM channels
-            ledcSetup(redChannel, freq, resolution);
-            ledcSetup(greenChannel, freq, resolution);
-            ledcSetup(blueChannel, freq, resolution);
-            
-            // Attach pins to corresponding PWM channels
-            ledcAttachPin(redPin, redChannel);
-            ledcAttachPin(greenPin, greenChannel);
-            ledcAttachPin(bluePin, blueChannel);
-
+            ledcAttach(redPin, freq, resolution);
+            ledcAttach(greenPin, freq, resolution);
+            ledcAttach(bluePin, freq, resolution);
         }
 
 * Modify the ``onWrite`` method in the ``MyCharacteristicCallbacks`` class. This function listens for data coming from the Bluetooth connection. Based on the received string (like ``"led_off"``, ``"red"``, ``"green"``, etc.), it controls the RGB LED.
@@ -157,7 +145,7 @@ Let's break down the code step by step:
         // Define the BLE characteristic callbacks
         class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
             void onWrite(BLECharacteristic *pCharacteristic) {
-                std::string value = pCharacteristic->getValue();
+                std::string value = std::string(pCharacteristic->getValue().c_str());
                 if (value == "led_off") {
                     setColor(0, 0, 0); // turn the RGB LED off
                     Serial.println("RGB LED turned off");
@@ -190,10 +178,11 @@ Let's break down the code step by step:
 
         void setColor(int red, int green, int blue) {
             // For common-anode RGB LEDs, use 255 minus the color value
-            ledcWrite(redChannel, red);
-            ledcWrite(greenChannel, green);
-            ledcWrite(blueChannel, blue);
+            ledcWrite(redPin, red);
+            ledcWrite(greenPin, green);
+            ledcWrite(bluePin, blue);
         }
+
 
 In summary, this script enables a remote control interaction model, where the ESP32 operates as a Bluetooth Low Energy (BLE) server.
 

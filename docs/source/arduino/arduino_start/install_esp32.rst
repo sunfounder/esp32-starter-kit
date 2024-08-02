@@ -19,17 +19,17 @@ To program the ESP32 microcontroller, we need to install the ESP32 board package
 
 **Install the ESP32 Board**
 
-#. Open the Arduino IDE. Go to **File** and select **Preferences** from the drop-down menu.
+.. #. Open the Arduino IDE. Go to **File** and select **Preferences** from the drop-down menu.
 
-    .. image:: img/install_esp321.png
+..     .. image:: img/install_esp321.png
 
-#. In the Preferences window, locate the **Additional Board Manager URLs** field. Click on it to activate the text box.
+.. #. In the Preferences window, locate the **Additional Board Manager URLs** field. Click on it to activate the text box.
 
-    .. image:: img/install_esp322.png
+..     .. image:: img/install_esp322.png
 
-#. Add the following URL to the **Additional Board Manager URLs** field: https://espressif.github.io/arduino-esp32/package_esp32_index.json. This URL points to the package index file for the ESP32 boards. Click the **OK** button to save the changes.
+.. #. Add the following URL to the **Additional Board Manager URLs** field: https://espressif.github.io/arduino-esp32/package_esp32_index.json. This URL points to the package index file for the ESP32 boards. Click the **OK** button to save the changes.
 
-    .. image:: img/install_esp323.png
+..     .. image:: img/install_esp323.png
 
 #. In the **Boards Manager** window, type **ESP32** in the search bar. Click the **Install** button to start the installation process. This will download and install the ESP32 board package.
 

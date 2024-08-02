@@ -106,5 +106,5 @@ When the obstacle avoidance module does not detect any obstacles, IO14 returns a
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b0f22caa-3c77-4dc1-9a33-20ff23d04a5e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-
+Set the serial communication baud rate to 115200.
 After the code is uploaded successfully, if the IR obstacle avoidance module detects something blocking in front of it, "0" will appear on the serial monitor, otherwise "1" will be displayed.

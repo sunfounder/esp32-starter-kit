@@ -101,6 +101,7 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/431302c2-3579-4be6-8142-c91d28757004/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
+Remember to Set the serial communication baud rate to 115200.
 
 Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
 

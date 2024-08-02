@@ -101,5 +101,7 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 Open the serial monitor after the code has been uploaded successfully to see the x,y,z values of the joystick.
 
+Remember to Set the serial communication baud rate to 115200.
+
 * The x-axis and y-axis values are analog values that vary from 0 to 4095.
 * The Z-axis is a digital value with a status of 1 or 0 ( when pressed, it is 0 ).

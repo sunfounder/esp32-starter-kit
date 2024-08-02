@@ -92,6 +92,7 @@ By recording the time it takes from sending to receiving the signal, dividing it
     <iframe src=https://create.arduino.cc/editor/sunfounder01/28ded128-62a8-4b2b-b21a-450f03323cd8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
+Remember to Set the serial communication baud rate to 115200.
 
 After the code is successfully uploaded, the serial monitor will print out the distance between the ultrasonic sensor and the obstacle ahead.
 

@@ -84,13 +84,13 @@ You can also buy them separately from the links below.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
 
-#. Locate the following lines and modify them with your ``<SSID>`` and ``<PASSWORD>``.
+#. Locate the following lines and modify them with your ``SSID`` and ``PASSWORD``.
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. Now, enable **PSRAM**.
 

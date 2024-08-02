@@ -17,6 +17,10 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 
 <a id="update"></a>
 ## Update:
+
+2024-08-02：
+- Due to the ESP32 board being upgraded to version 3.0, some functions have had their names and usage modified. Update the code accordingly or add a prompt to downgrade the version.
+
 2023-12-15:
 - Add the Arduino video courses.
 
