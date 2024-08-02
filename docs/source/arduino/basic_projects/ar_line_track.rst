@@ -109,5 +109,7 @@ Wenn das Linienverfolgungsmodul eine schwarze Linie erkennt, gibt IO14 ein hohes
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fc7f3fe9-179a-4a3a-acbf-a4014faf3920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Denken Sie daran, die serielle Kommunikationsgeschwindigkeit auf 115200 einzustellen.
+
 Wenn das Linienverfolgungsmodul eine schwarze Linie erkennt, nachdem der Code erfolgreich hochgeladen wurde, wird "Schwarz" im Seriellen Monitor angezeigt. Andernfalls wird "Weiß" gedruckt.
 

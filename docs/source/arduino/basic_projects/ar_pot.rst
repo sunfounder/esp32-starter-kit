@@ -117,13 +117,12 @@ Nachdem der Code erfolgreich hochgeladen wurde, drehen Sie am Potentiometer und 
 
     .. code-block:: arduino
 
-        const int potPin = 14; // Potentiometer connected to GPIO14
+        const int potPin = 35; // Potentiometer connected to GPIO14
         const int ledPin = 26; // LED connected to GPIO26
 
         // PWM settings
         const int freq = 5000; // PWM frequency
         const int resolution = 12; // PWM resolution (bits)
-        const int channel = 0; // PWM channel
 
     Hier ist die PWM-Auflösung auf 12 Bit eingestellt und der Bereich ist 0-4095.
 
@@ -134,9 +133,8 @@ Nachdem der Code erfolgreich hochgeladen wurde, drehen Sie am Potentiometer und 
         void setup() {
             Serial.begin(115200);
 
-            // Configure PWM
-            ledcSetup(channel, freq, resolution);
-            ledcAttachPin(ledPin, channel);
+            // Configure PWM pin
+            ledcAttach(ledPin, freq, resolution);
         }
 
     * In der Funktion ``setup()`` wird die serielle Kommunikation mit einer Baudrate von 115200 gestartet. 
@@ -151,7 +149,7 @@ Nachdem der Code erfolgreich hochgeladen wurde, drehen Sie am Potentiometer und 
             int potValue = analogRead(potPin); // read the value of the potentiometer
             uint32_t voltage_mV = analogReadMilliVolts(potPin); // Read the voltage in millivolts
             
-            ledcWrite(channel, potValue);
+            ledcWrite(ledPin, potValue);
             
             Serial.print("Potentiometer Value: ");
             Serial.print(potValue);

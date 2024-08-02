@@ -12,6 +12,8 @@
 
     👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
 
+.. _iot_owm:
+
 8.1 Echtzeit-Wetter von @OpenWeatherMap
 ====================================================
 
@@ -98,21 +100,21 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/71b196ce-8a84-4577-af76-43988c7d3f80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
          
 
-#. Suchen Sie die folgenden Zeilen und ändern Sie sie mit Ihrem ``<SSID>`` und ``<PASSWORD>``.
+#. Suchen Sie die folgenden Zeilen und ändern Sie sie mit Ihrem ``SSID`` und ``PASSWORD``.
 
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. Fügen Sie die zuvor kopierten API-Schlüssel in ``openWeatherMapApiKey`` ein.
 
     .. code-block::  Arduino
 
         // Your Domain name with URL path or IP address with path
-        String openWeatherMapApiKey = "<openWeatherMapApiKey>";
+        String openWeatherMapApiKey = "openWeatherMapApiKey";
 
 #. Ersetzen Sie sie mit Ihrem Ländercode und Ihrer Stadt.
 
@@ -120,8 +122,8 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
         // Replace with your country code and city
         // Fine the country code by https://openweathermap.org/find
-        String city = "<CITY>";
-        String countryCode = "<COUNTRY CODE>";
+        String city = "CITY";
+        String countryCode = "COUNTRY CODE";
 
 #. Nachdem der Code ausgeführt wird, sehen Sie die Uhrzeit und Wetterinformationen Ihres Standorts auf dem I2C LCD1602.
 

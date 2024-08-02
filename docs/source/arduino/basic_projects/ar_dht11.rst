@@ -95,6 +95,8 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95bef6dc-a4db-4315-9308-6663b77ddfa0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Denken Sie daran, die serielle Kommunikationsgeschwindigkeit auf 115200 einzustellen.
+
 Nachdem der Code erfolgreich hochgeladen wurde, wird der Serielle Monitor kontinuierlich die Temperatur und Feuchtigkeit ausgeben, und während das Programm stetig läuft, werden diese beiden Werte immer genauer.
 
 

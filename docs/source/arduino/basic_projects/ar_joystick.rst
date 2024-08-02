@@ -101,5 +101,7 @@ I34 und I35 ändern ihre Werte, wenn Sie den Joystick bedienen. Der Wertebereich
 
 Öffnen Sie den seriellen Monitor, nachdem der Code erfolgreich hochgeladen wurde, um die x-, y- und z-Werte des Joysticks zu sehen.
 
+Denken Sie daran, die serielle Kommunikationsgeschwindigkeit auf 115200 einzustellen.
+
 * Die x- und y-Achsenwerte sind analoge Werte, die von 0 bis 4095 variieren.
 * Die Z-Achse ist ein digitaler Wert mit einem Status von 1 oder 0 (wenn gedrückt, ist er 0).

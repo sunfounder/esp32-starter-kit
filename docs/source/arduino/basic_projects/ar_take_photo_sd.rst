@@ -12,6 +12,8 @@
 
     👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
 
+.. _ar_take_photo_sd:
+
 7.6 Foto auf SD-Karte speichern
 ==================================
 

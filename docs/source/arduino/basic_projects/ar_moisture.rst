@@ -101,6 +101,7 @@ Durch das Einstecken des Moduls in den Boden und das Bewässern wird der auf I35
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/431302c2-3579-4be6-8142-c91d28757004/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
+Denken Sie daran, die serielle Kommunikationsgeschwindigkeit auf 115200 einzustellen.
 
 Sobald der Code erfolgreich hochgeladen wurde, gibt der serielle Monitor den Bodenfeuchtigkeitswert aus.
 

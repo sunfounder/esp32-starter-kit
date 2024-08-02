@@ -92,6 +92,7 @@ Durch die Aufzeichnung der Zeit, die vom Senden bis zum Empfangen des Signals ve
     <iframe src=https://create.arduino.cc/editor/sunfounder01/28ded128-62a8-4b2b-b21a-450f03323cd8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
+Denken Sie daran, die serielle Kommunikationsgeschwindigkeit auf 115200 einzustellen.
 
 Nachdem der Code erfolgreich hochgeladen wurde, gibt der serielle Monitor die Entfernung zwischen dem Ultraschallsensor und dem Hindernis vorne aus.
 

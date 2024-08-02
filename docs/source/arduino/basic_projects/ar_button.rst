@@ -133,6 +133,8 @@ Um eine ordnungsgemäße Funktionalität zu gewährleisten, verbinden Sie eine S
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/702c5a70-78e7-4a8b-a0c7-10c0acebfc12/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Denken Sie daran, die serielle Kommunikationsgeschwindigkeit auf 115200 einzustellen.
+
 Nachdem der Code erfolgreich hochgeladen wurde, leuchtet die LED auf, wenn Sie den Taster drücken, und geht aus, wenn Sie ihn loslassen.
 
 Gleichzeitig können Sie den Seriellen Monitor in der oberen rechten Ecke öffnen, um den Wert des Tasters zu beobachten. Wenn der Taster gedrückt wird, wird "1" gedruckt, ansonsten "0".

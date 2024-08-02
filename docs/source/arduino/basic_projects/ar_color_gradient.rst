@@ -112,9 +112,10 @@ Dieses Projekt baut auf dem :ref:`ar_rgb` Projekt auf, indem ein Potentiometer h
     .. code-block:: arduino
 
         void setColor(int red, int green, int blue) {
-            ledcWrite(redChannel, red);
-            ledcWrite(greenChannel, green);
-            ledcWrite(blueChannel, blue);
+            // For common-anode RGB LEDs, use 255 minus the color value
+            ledcWrite(redPin, red);
+            ledcWrite(greenPin, green);
+            ledcWrite(bluePin, blue);
         }
     
 #. Die Funktion ``HUEtoRGB`` wandelt einen Farbtonwert mit dem HSL-Farbmodell in RGB-Werte um.

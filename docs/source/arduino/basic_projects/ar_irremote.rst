@@ -91,9 +91,20 @@ Wenn Sie einen Knopf auf der Fernbedienung drücken, erkennt der Infrarotempfän
 
         .. image:: img/receiver_lib.png
 
+.. warning::
+
+    Wenn Sie ein ESP32-Entwicklungsboard Version 3.0.0 oder höher verwenden, können während des Kompilierungsprozesses Fehler auftreten.
+    Dieses Problem tritt normalerweise auf, weil neuere Versionen des Boards die ``IRremoteESP8266``-Bibliothek nicht mehr unterstützen.
+    Um dieses Beispiel ordnungsgemäß auszuführen, wird empfohlen, die Firmware-Version Ihres ESP32-Boards auf 2.0.17 herunterzustufen.
+    Nachdem Sie dieses Beispiel abgeschlossen haben, aktualisieren Sie wieder auf die neueste Version.
+
+    .. image:: ../../faq/img/version_2.0.17.png
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/463c8894-00bd-4035-a81c-cad99a7f3731/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+Denken Sie daran, die serielle Kommunikationsgeschwindigkeit auf 115200 einzustellen.
 
 Nachdem der Code erfolgreich hochgeladen wurde, drücken Sie die verschiedenen Tasten auf der Fernbedienung und Sie werden die Namen dieser Tasten im seriellen Monitor sehen.
 

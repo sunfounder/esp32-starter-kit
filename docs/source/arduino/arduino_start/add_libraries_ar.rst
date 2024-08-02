@@ -54,6 +54,8 @@ Einige Bibliotheken sind nicht über die **Library Manager** verfügbar und müs
 
 #. Navigieren Sie zum Verzeichnis, in dem sich die Bibliotheksdateien befinden, z. B. zum Ordner ``esp32-starter-kit\c\libraries``, und wählen Sie die gewünschte Bibliotheksdatei, z. B. ``ESP32-A2DP.zip``, aus. Klicken Sie dann auf **Open**.
 
+* :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+
    .. image:: img/a2dp_choose.png
 
 #. Nach kurzer Zeit erhalten Sie eine Benachrichtigung über eine erfolgreiche Installation.

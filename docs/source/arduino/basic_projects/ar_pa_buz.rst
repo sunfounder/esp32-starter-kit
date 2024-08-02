@@ -133,14 +133,14 @@ Nachdem der Code erfolgreich hochgeladen wurde, hören Sie, wie der passive Summ
     .. code-block:: arduino
 
         void playFrequency(int frequency, int duration) {
-            ledcWriteTone(0, frequency); // Start the tone
+            ledcWriteTone(buzzerPin, frequency); // Start the tone
             delay(duration); // Wait for the specified duration
-            ledcWriteTone(0, 0); // Stop the buzzer
+            ledcWriteTone(buzzerPin, 0); // Stop the buzzer
         }
     
-    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: Diese Funktion wird verwendet, um den LEDC-Kanal auf 50 % PWM-Ton bei ausgewählter Frequenz einzustellen.
+    * ``uint32_t ledcWriteTone(uint8_t pin, uint32_t freq);``: Diese Funktion wird verwendet, um den Pin auf eine 50% PWM-Frequenz bei der ausgewählten Frequenz einzustellen.
 
-        * ``chan`` wählt LEDC-Kanal aus.
+        * ``pin`` wählt den LEDC-Pin aus.
         * ``freq`` wählt Frequenz des PWM-Signals aus.
 
     Diese Funktion gibt die ``frequency`` für den Kanal zurück. Wenn ``0`` zurückgegeben wird, ist ein Fehler aufgetreten und der LEDC-Kanal wurde nicht konfiguriert.
@@ -150,21 +150,15 @@ Nachdem der Code erfolgreich hochgeladen wurde, hören Sie, wie der passive Summ
     .. code-block:: arduino
 
         void setup() {
-            ledcSetup(0, 2000, resolution); // Set up the PWM channel
-            ledcAttachPin(buzzerPin, 0); // Attach the buzzer pin to the PWM channel
+            ledcAttach(buzzerPin, 2000, resolution); // Set up the PWM pin
         }
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: Diese Funktion wird verwendet, um die Frequenz und Auflösung des LEDC-Kanals einzurichten. Sie gibt die für den LEDC-Kanal konfigurierte ``frequency`` zurück. Wenn 0 zurückgegeben wird, ist ein Fehler aufgetreten und der LEDC-Kanal wurde nicht konfiguriert.
-            
-        * ``channel`` wählt LEDC-Kanal aus.
-        * ``freq`` wählt Frequenz des PWM aus.
-        * ``resolution_bits`` wählt Auflösung für LEDC-Kanal aus. Bereich ist 1-14 Bits (1-20 Bits für ESP32).
+    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: Diese Funktion wird verwendet, um den LEDC-Pin mit der angegebenen Frequenz und Auflösung einzustellen. Der LEDC-Kanal wird automatisch ausgewählt.
+                
+        * ``pin`` wählt den GPIO-Pin aus.
+        * ``freq`` wählt die PWM-Frequenz aus.
+        * ``resolution_bits`` wählt die Auflösung für den LEDC-Kanal aus. Der Bereich liegt zwischen 1-14 Bits (1-20 Bits für ESP32).
 
-
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: Diese Funktion wird verwendet, um den Pin an den LEDC-Kanal anzuschließen.
-
-        * ``pin`` wählt GPIO-Pin aus.
-        * ``chan`` wählt LEDC-Kanal aus.
 
 #. In der Funktion ``loop()`` spielen Sie die Sequenz von 7 Noten mit einer kurzen Pause zwischen jeder Note und einer 1-sekündigen Pause vor der Wiederholung der Sequenz ab.
 

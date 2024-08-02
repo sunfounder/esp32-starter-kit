@@ -75,7 +75,7 @@ Die Schritte sind wie folgt.
     components/component_list
     faq/faq
     arduino_video_course/arduino_video_course
-    thank-learning/thank-learning
+
 
 Urheberrechtshinweis
 -----------------------

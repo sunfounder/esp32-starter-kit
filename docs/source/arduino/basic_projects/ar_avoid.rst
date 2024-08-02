@@ -104,5 +104,5 @@ Wenn das Hindernisvermeidungsmodul keine Hindernisse erkennt, gibt IO14 ein hohe
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b0f22caa-3c77-4dc1-9a33-20ff23d04a5e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-
+Setzen Sie die serielle Kommunikationsgeschwindigkeit auf 115200.
 Nachdem der Code erfolgreich hochgeladen wurde, wird auf dem seriellen Monitor "0" angezeigt, wenn das IR-Hindernisvermeidungsmodul etwas in seinem Weg erkennt, andernfalls wird "1" angezeigt.
