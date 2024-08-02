@@ -150,7 +150,7 @@ After the code is successfully uploaded, you will hear the passive buzzer play a
     .. code-block:: arduino
 
         void setup() {
-            ledcAttach(buzzerPin, 2000, 8); // Set up the PWM pin
+            ledcAttach(buzzerPin, 2000, resolution); // Set up the PWM pin
         }
 
     * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.

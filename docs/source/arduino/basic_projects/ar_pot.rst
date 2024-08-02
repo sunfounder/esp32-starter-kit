@@ -122,7 +122,7 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
         // PWM settings
         const int freq = 5000; // PWM frequency
         const int resolution = 12; // PWM resolution (bits)
-        const int channel = 0; // PWM channel
+
 
     Here the PWM resolution is set to 12 bits and the range is 0-4095.
 
@@ -138,7 +138,7 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
         }
 
     * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcAttachPin()`` function is called to set up the specified LED pin with the specified frequency and resolution.
+    * The ``ledcAttach()`` function is called to set up the specified LED pin with the specified frequency and resolution.
 
 #. Main loop (executed repeatedly) in the loop() function.
 

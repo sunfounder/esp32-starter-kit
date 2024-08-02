@@ -1,19 +1,24 @@
-Some examples don't compile
+Some project code fails to compile?
 ===============================================
 
-**Q:** Projects using PWM cannot be compiled, prompting the error ``'ledcAttach' was not declared in this scope``.
+Q1: ``'ledcAttach' was not declared in this scope``
+-----------------------------------------------------
 
-**A:** This is caused by the version of your development board being too low. Please update it to the latest version.
+When using LEDs, RGB LEDs, or passive buzzers, you will need the ESP32 board's |link_ledc| peripheral to generate PWM signals. However, the ESP32 board was recently upgraded to version 3.0, which caused changes in the function names and usage within the |link_ledc| peripheral.
+
+Therefore, we have updated our code accordingly. If you encounter ledc-related issues during compilation, please upgrade your ESP32 board to version 3.0 or higher.
 
 .. image:: img/version_3.0.3.png
 
 
+Q2: Errors in Bluetooth and IR receiver-related projects after upgrading ESP32 to version 3.0?
+--------------------------------------------------------------------------------------------------------
 
+The ESP32 board has been upgraded to version 3.0, but the libraries used in Bluetooth and IR receiver-related projects are not yet compatible with version 3.0.
 
-**Q:** Projects using the IR module cannot be compiled, and many errors related to ``IRrecv.cpp`` are reported.
+To run these projects, it is recommended to temporarily downgrade the ESP32 version to 2.0, specifically version 2.0.17.
 
-**A:** If you are using an ESP32 development board version 3.0.0 or higher, you may encounter errors during the compilation process.
-This issue is usually because the newer versions of the board no longer support the ``<IRremoteESP8266.h>`` library.
-To properly run this example, it is recommended to downgrade your ESP32 board's firmware version to 2.0.17. After completing this example, upgrade back to the latest version.
+We will continuously monitor the updates of these libraries, and once they are compatible with ESP32 version 3.0, we will promptly update our code and documentation.
 
 .. image:: img/version_2.0.17.png
+
