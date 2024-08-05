@@ -71,157 +71,168 @@ You can also buy them separately from the links below.
 
 **2.1 Initializing Blynk**
 
-#. Navigate to the |link_blynk| and select **START FREE**. 
+1. Go to the |link_blynk| page and select **Sign Up FREE** or **Enterprise Solution**.
 
-   .. image:: img/09_blynk_access.png
-        :width: 90%
-
-#. Enter your email to initiate the registration process.
-
-   .. image:: img/09_blynk_sign_in.png
-        :width: 70%
+    .. image:: img/09_blynk_access.png
+        :width: 600
         :align: center
 
-#. Confirm your registration through your email.
+2. Enter your email to start the registration process.
+
+    .. image:: img/09_blynk_sign_in.png
+        :align: center
+
+3. Check your email for a prompt, and click on the **Create Password** link in the email to set your password.
 
     .. image:: img/09_blynk_password.png
-        :width: 90%
+        :align: center
 
-#. After confirmation, **Blynk Tour** will appear. It is recommended to select "Skip". If **Quick Start** also appears, consider skipping it as well.
-   
+4. After confirmation, a **Blynk Tour** will begin where you can quickly learn about some of Blynk's key features.
+
     .. image:: img/09_blynk_tour.png
-        :width: 90%
+        :width: 600
+        :align: center
+
+
+5. After completing the Blynk Tour, a window will pop up where you can choose to Explore Blueprints or click Quick Start to quickly connect your device. However, in this case, we will select "Have a look around first".
+
+    .. image:: img/09_blynk_skip.png
+        :align: center
 
 **2.2 Template Creation**
 
-#. First, create a template in Blynk. Follow the subsequent instructions to create the **Intrusion Alert System** template.
+1. Start by creating a template in Blynk. Follow the steps to set up the **Intrusion Alert System** template.
 
     .. image:: img/09_create_template_1_shadow.png
-        :width: 700
+        :width: 600
         :align: center
 
-#. Assign a name to the template, select **ESP32** Hardware, and select **Connection Type** as **WiFi**, then select **Done**.
+2. Name your template, choose **ESP32** as the Hardware, select **WiFi** as the **Connection Type**, and then click **Done**.
 
-    .. image:: img/09_create_template_2_shadow.png
-        :width: 700
+   .. image:: img/09_create_template_2_shadow.png
+        :width: 600
         :align: center
 
-**2.3 Datastream Generation**
+3. Enter the template, where you'll be prompted with next steps. Click **Configure template** to upload a cover image, enhance the description, and more. Follow the remaining three steps to complete the setup.
 
-Open the template you just set up, let's create two datastreams.
-
-#. Click **New Datastream**.
-
-    .. image:: img/09_blynk_new_datastream.png
-        :width: 700
+    .. image:: img/09_blynk_temp_steps.png
+        :width: 600
         :align: center
 
-#. In the popup, choose **Virtual Pin**.
+**2.3 Set Up Datastreams**
 
-    .. image:: img/09_blynk_datastream_virtual.png
-        :width: 700
+1. Open the newly created template and go to the datastream setup page.
+
+   .. image:: img/09_blynk_new_datastream.png
+        :width: 600
         :align: center
 
-#. Name the **Virtual Pin V0** as **AwayMode**. Set the **DATA TYPE** as **Integer** with **MIN** and **MAX** values as **0** and **1**.
+2. Click **New Datastream**, and in the popup, select **Virtual Pin**.
 
-    .. image:: img/09_create_template_shadow.png
-        :width: 700
+   .. image:: img/09_blynk_datastream_virtual.png
+        :width: 600
         :align: center
 
-#. Similarly, create another **Virtual Pin** datastream. Name it **Current Status** and set the **DATA TYPE** to **String**.
+3. Name the **Virtual Pin V0** as **AwayMode** and set the **DATA TYPE** to **Integer**, with **MIN** and **MAX** values as **0** and **1**.
 
-    .. image:: img/09_datastream_1_shadow.png
-        :width: 700
+   .. image:: img/09_create_template_shadow.png
+        :width: 600
         :align: center
 
-**2.4 Setting Up an Event**
+4. Similarly, create another **Virtual Pin** named **Current Status** and set the **DATA TYPE** to **String**.
 
-Next, we'll set up an event that sends an email notification if an intrusion is detected.
-
-#. Click **Add New Event**.
-
-    .. image:: img/09_blynk_event_add.png
-
-#. Define the event's name and its specific code. For **TYPE**, choose **Warning** and write a short description for the email to be sent when the event happens. You can also adjust how often you get notified.
-
-    .. note::
-        
-        Make sure the **EVENT CODE** is set as ``intrusion_detected``. This is predefined in the code, so any changes would mean you need to adjust the code as well.
-
-    .. image:: img/09_event_1_shadow.png
-        :width: 700
+   .. image:: img/09_datastream_1_shadow.png
+        :width: 600
         :align: center
 
-#. Go to the **Notifications** section to turn on notifications and set up email details.
+**2.4 Set up the Web Dashboard**
 
-    .. image:: img/09_event_2_shadow.png
-        :width: 80%
+1. Drag and drop both the **Switch widget** and the **Label widget** onto the **Web Dashboard**.
+
+   .. image:: img/09_web_dashboard_1_shadow.png
+        :width: 600
         :align: center
 
-.. raw:: html
+2. Hover over a widget to see three icons. Use the **Settings** icon to configure the widget's properties.
+
+   .. image:: img/09_blynk_dashboard_set.png
+        :width: 600
+        :align: center
+
+3. Configure the **Switch widget** to link with the **AwayMode(V0)** datastream, setting the **ONLABEL** and **OFFLABEL** to display **"away home"** and **"at home"**, respectively.
+
+   .. image:: img/09_web_dashboard_2_shadow.png
+        :width: 600
+        :align: center
+
+4. In the **Label widget** settings, link it to the **Current Status(V1)** datastream.
+
+   .. image:: img/09_web_dashboard_3_shadow.png
+        :width: 600
+        :align: center
+
+**2.5 Setting Up an Event**
+
+1. Click **Events & Notifications** and then **Create Event**.
+
+   .. image:: img/09_blynk_event_add.png
+        :width: 600
+        :align: center
     
-    <br/> 
+2. Name the event and specify its code. Choose **Warning** for **TYPE** and provide a short description for the notification email. Adjust notification frequency as desired.
 
-**2.5  Fine-Tuning the Web Dashboard**
+   .. note::
+   
+      Ensure the **EVENT CODE** is set as ``intrusion_detected``. Any changes here require corresponding code adjustments.
 
-Making sure the **Web Dashboard** interacts perfectly with the Intrusion Alert System is vital.
-
-#. Simply drag and place both the **Switch widget** and the **Label widget** onto the **Web Dashboard**.
-
-    .. image:: img/09_web_dashboard_1_shadow.png
-        :width: 100%
+   .. image:: img/09_event_1_shadow.png
+        :width: 600
         :align: center
 
-#. When you hover over a widget, three icons will appear. Use the settings icon to adjust the widget's properties.
+3. Go to the **Notifications** section to enable notifications and configure email settings.
 
-    .. image:: img/09_blynk_dashboard_set.png
-        :width: 100%
+   .. image:: img/09_event_2_shadow.png
+        :width: 600
         :align: center
 
-#. In the **Switch widget** settings, select **Datastream** as **AwayMode(V0)**. Set **ONLABEL** and **OFFLABEL** to display **"away"** and **"home"**, respectively.
+4. Under **Settings**, define how frequently an event triggers notifications and set intervals according to your preference. Remember to click **Create** to save your settings.
 
-    .. image:: img/09_web_dashboard_2_shadow.png
-        :width: 100%
-        :align: center
-
-#. In the **Label widget** settings, select **Datastream** as **Current Status(V1)**.
-
-    .. image:: img/09_web_dashboard_3_shadow.png
-        :width: 100%
+   .. image:: img/09_event_3_shadow.png
+        :width: 600
         :align: center
 
 **2.6 Saving the Template**
 
-Lastly, don't forget to save your template.
+1. Remember to save your changes to the template.
 
-    .. image:: img/09_save_template_shadow.png
-        :width: 100%
+   .. image:: img/09_save_template_shadow.png
+        :width: 600
         :align: center
 
 **2.7 Making a Device**
 
-#. It's time to create a new device.
+1. It's time to create a new device from the template.
 
-    .. image:: img/09_blynk_device_new.png
-        :width: 700
+   .. image:: img/09_blynk_device_new.png
+        :width: 600
         :align: center
 
-#. Click on **From template** to start with a new setup.
+2. Select **From template** to begin.
 
-    .. image:: img/09_blynk_device_template.png
-        :width: 700
+   .. image:: img/09_blynk_device_template.png
+        :width: 600
         :align: center
 
-#. Then, pick the **Intrusion Alert System** template and click on **Create**.
+3. Choose the **Intrusion Alert System** template and click **Create**.
 
-    .. image:: img/09_blynk_device_template2.png
-        :width: 700
+   .. image:: img/09_blynk_device_template2.png
+        :width: 600
         :align: center
 
-#. Here, you'll see the ``Template ID``, ``Device Name``, and ``AuthToken``. You need to copy these into your code so the ESP32 can work with Blynk.
+4. Note down the **Template ID**, **Device Name**, and **AuthToken** for your ESP32 integration.
 
-    .. image:: img/09_blynk_device_code.png
-        :width: 700
+   .. image:: img/09_blynk_device_code.png
+        :width: 600
         :align: center
 
 3. Code Execution
