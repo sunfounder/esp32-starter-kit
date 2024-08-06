@@ -116,29 +116,29 @@ Telegramボットを作成し、どこからでも回路を制御したり、写
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/d7c439b0-fca3-4648-9714-900a2859740c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. 次の行を見つけて、あなたのWiFiの詳細に ``<SSID>`` と ``<PASSWORD>`` を置き換えます。
+#. 次の行を見つけて、あなたのWiFiの詳細に ``SSID`` と ``PASSWORD`` を置き換えます。
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
-5. 次の行を更新し、@IDBotから取得したTelegram IDで ``<CHATID>`` を置き換えます。
+5. 次の行を更新し、@IDBotから取得したTelegram IDで ``CHATID`` を置き換えます。
 
     .. code-block:: Arduino
 
         // Use @myidbot to find out the chat ID of an individual or a group
         // Also note that you need to click "start" on a bot before it can
         // message you
-        String chatId = "<CHATID>";
+        String chatId = "CHATID";
 
-#. 次の行を更新し、@BotFatherから提供されたTelegram BOTのトークンで ``<BOTTOKEN>`` を置き換えます。
+#. 次の行を更新し、@BotFatherから提供されたTelegram BOTのトークンで ``BOTTOKEN`` を置き換えます。
 
     .. code-block:: Arduino
 
         // Initialize Telegram BOT
-        String BOTtoken = "<BOTTOKEN>";
+        String BOTtoken = "BOTTOKEN";
 
 #. 正しいボード（ESP32 Dev Module）とポートを選択した後、 **アップロード** ボタンをクリックします。
 #. シリアルモニターを開きます。IPアドレスが表示されれば、正常に実行されたことを意味します。

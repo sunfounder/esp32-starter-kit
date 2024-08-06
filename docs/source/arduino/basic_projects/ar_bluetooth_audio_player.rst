@@ -82,6 +82,15 @@ ESP32の内部DACを使用する場合、出力電圧レベルは1.1Vに限定�
     * :ref:`unknown_com_port`
     * ここでは ``ESP32-A2DP`` ライブラリを使用しています。インストールのチュートリアルについては :ref:`install_lib_man` を参照してください。
 
+    .. warning::
+
+        ESP32開発ボードのバージョン3.0.0以上を使用している場合、コンパイルプロセス中にエラーが発生することがあります。
+        この問題は、ボードの新しいバージョンが ``ESP32-A2DP`` ライブラリをサポートしなくなったためです。
+        この例を正しく実行するには、ESP32ボードのファームウェアバージョンを2.0.17にダウングレードすることをお勧めします。
+        この例を完了した後、最新バージョンに再度アップグレードしてください。
+
+        .. image:: ../../faq/img/version_2.0.17.png
+
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/7bb7d6dd-72d4-4529-bb42-033b38558347/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

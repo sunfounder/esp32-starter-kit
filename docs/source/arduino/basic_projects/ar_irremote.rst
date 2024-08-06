@@ -91,9 +91,20 @@
 
         .. image:: img/receiver_lib.png
 
+.. warning::
+
+    ESP32開発ボードのバージョン3.0.0以上を使用している場合、コンパイルプロセス中にエラーが発生することがあります。
+    この問題は、ボードの新しいバージョンが ``IRremoteESP8266`` ライブラリをサポートしなくなったためです。
+    この例を正しく実行するには、ESP32ボードのファームウェアバージョンを2.0.17にダウングレードすることをお勧めします。
+    この例を完了した後、最新バージョンに再度アップグレードしてください。
+
+    .. image:: ../../faq/img/version_2.0.17.png
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/463c8894-00bd-4035-a81c-cad99a7f3731/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+シリアル通信のボーレートを115200に設定することを忘れないでください。
 
 コードが正常にアップロードされた後、リモコンの異なるキーを押すと、そのキーの名前がシリアルモニターに表示されます。
 

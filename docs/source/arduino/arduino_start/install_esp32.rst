@@ -19,17 +19,17 @@ ESP32マイクロコントローラをプログラムするためには、Arduin
 
 **ESP32ボードのインストール**
 
-#. Arduino IDEを開きます。 **File** を選択し、ドロップダウンメニューから **Preferences** を選びます。
+.. #. Arduino IDEを開きます。 **File** を選択し、ドロップダウンメニューから **Preferences** を選びます。
 
-    .. image:: img/install_esp321.png
+..     .. image:: img/install_esp321.png
 
-#. 環境設定ウィンドウで、 **Additional Board Manager URLs** フィールドを探します。クリックしてテキストボックスをアクティブにします。
+.. #. 環境設定ウィンドウで、 **Additional Board Manager URLs** フィールドを探します。クリックしてテキストボックスをアクティブにします。
 
-    .. image:: img/install_esp322.png
+..     .. image:: img/install_esp322.png
 
-#. 次のURLを **Additional Board Manager URLs** フィールドに追加します： https://espressif.github.io/arduino-esp32/package_esp32_index.json。このURLはESP32ボードのパッケージインデックスファイルを指します。 **OK** ボタンをクリックして変更を保存します。
+.. #. 次のURLを **Additional Board Manager URLs** フィールドに追加します： https://espressif.github.io/arduino-esp32/package_esp32_index.json。このURLはESP32ボードのパッケージインデックスファイルを指します。 **OK** ボタンをクリックして変更を保存します。
 
-    .. image:: img/install_esp323.png
+..     .. image:: img/install_esp323.png
 
 #. **Boards Manager** ウィンドウで、検索バーに **ESP32** と入力します。 **Install** ボタンをクリックしてインストールプロセスを開始します。これにより、ESP32ボードパッケージがダウンロードおよびインストールされます。
 

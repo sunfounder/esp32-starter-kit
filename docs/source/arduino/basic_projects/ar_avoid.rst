@@ -104,4 +104,6 @@
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b0f22caa-3c77-4dc1-9a33-20ff23d04a5e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
+シリアル通信のボーレートを115200に設定することを忘れないでください。
+
 コードが正常にアップロードされた後、IR障害物回避モジュールが何かを検出してブロックしている場合は、シリアルモニターに「0」が表示されます。それ以外の場合は「1」が表示されます。

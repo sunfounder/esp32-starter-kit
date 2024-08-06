@@ -12,6 +12,8 @@
 
     👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
 
+.. _iot_html_cam:
+
 8.3 カスタムビデオストリーミングウェブサーバー
 ===============================================
 
@@ -87,13 +89,13 @@
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/a5e33c30-63dc-4987-94c3-89bc6a599e24/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. 次の行を見つけて、あなたの ``<SSID>`` と ``<PASSWORD>`` で修正してください。
+#. 次の行を見つけて、あなたの ``SSID`` と ``PASSWORD`` で修正してください。
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. 正しいボード（ESP32 Dev Module）とポートを選択した後、 **アップロード** ボタンをクリックします。
 

@@ -137,23 +137,23 @@ DHT11センサーを使用して温度と湿度の読み取りをAdafruit IOの�
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4cf6ad03-250e-4fe9-aa04-0ca73b997843/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. 次の行を見つけて、 ``<SSID>`` と ``<PASSWORD>`` をあなたのWiFiネットワークの詳細に置き換えます。
+#. 次の行を見つけて、 ``SSID`` と ``PASSWORD`` をあなたのWiFiネットワークの詳細に置き換えます。
 
     .. code-block::  Arduino
 
         /************************* WiFi Access Point *********************************/
 
-        #define WLAN_SSID "<SSID>"
-        #define WLAN_PASS "<PASSWORD>"
+        #define WLAN_SSID "SSID"
+        #define WLAN_PASS "PASSWORD"
 
-#. そして、 ``<YOUR_ADAFRUIT_IO_USERNAME>`` をあなたのAdafruit IOのユーザー名に、 ``<YOUR_ADAFRUIT_IO_KEY>`` を先ほどコピーした **API KEY** に置き換えます。
+#. そして、 ``YOUR_ADAFRUIT_IO_USERNAME`` をあなたのAdafruit IOのユーザー名に、 ``YOUR_ADAFRUIT_IO_KEY`` を先ほどコピーした **API KEY** に置き換えます。
 
     .. code-block::  Arduino
 
         // Adafruit IO Account Configuration
         // (to obtain these values, visit https://io.adafruit.com and click on Active Key)
-        #define AIO_USERNAME "<YOUR_ADAFRUIT_IO_USERNAME>"
-        #define AIO_KEY      "<YOUR_ADAFRUIT_IO_KEY>"
+        #define AIO_USERNAME "YOUR_ADAFRUIT_IO_USERNAME"
+        #define AIO_KEY      "YOUR_ADAFRUIT_IO_KEY"
 
 #. 正しいボード（ESP32 Dev Module）とポートを選択した後、 **アップロード** ボタンをクリックします。
 

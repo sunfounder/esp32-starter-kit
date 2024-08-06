@@ -12,6 +12,8 @@
 
     👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
 
+.. _iot_camera_web:
+
 8.2 カメラウェブサーバー
 =============================
 
@@ -80,13 +82,13 @@
         <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
 
-#. 次の行を見つけて、あなたの ``<SSID>`` と ``<PASSWORD>`` で修正してください。
+#. 次の行を見つけて、あなたの ``SSID`` と ``PASSWORD`` で修正してください。
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. 今度は、 **PSRAM** を有効にします。
 

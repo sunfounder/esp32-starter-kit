@@ -12,6 +12,8 @@
 
     👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
 
+.. _iot_owm:
+
 8.1 @OpenWeatherMapからのリアルタイム天気情報
 ====================================================
 
@@ -98,21 +100,21 @@ IoTオープンウェザーディスプレイプロジェクトは、ESP32ボー
         <iframe src=https://create.arduino.cc/editor/sunfounder01/71b196ce-8a84-4577-af76-43988c7d3f80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
          
 
-#. 次の行を見つけて、あなたの ``<SSID>`` と ``<PASSWORD>`` で修正してください。
+#. 次の行を見つけて、あなたの ``SSID`` と ``PASSWORD`` で修正してください。
 
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. 以前にコピーしたAPIキーを ``openWeatherMapApiKey`` に入力してください。
 
     .. code-block::  Arduino
 
         // Your Domain name with URL path or IP address with path
-        String openWeatherMapApiKey = "<openWeatherMapApiKey>";
+        String openWeatherMapApiKey = "openWeatherMapApiKey";
 
 #. あなたの国コードと市を置き換えてください。
 
@@ -120,8 +122,8 @@ IoTオープンウェザーディスプレイプロジェクトは、ESP32ボー
 
         // Replace with your country code and city
         // Fine the country code by https://openweathermap.org/find
-        String city = "<CITY>";
-        String countryCode = "<COUNTRY CODE>";
+        String city = "CITY";
+        String countryCode = "COUNTRY CODE";
 
 #. コードが実行された後、I2C LCD1602にあなたの位置の時間と天気情報が表示されます。
 

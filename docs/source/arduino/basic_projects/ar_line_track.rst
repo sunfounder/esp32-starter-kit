@@ -105,4 +105,6 @@
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fc7f3fe9-179a-4a3a-acbf-a4014faf3920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+シリアル通信のボーレートを115200に設定することを忘れないでください。
+
 コードが正常にアップロードされた後、ライン追跡モジュールが黒い線を検出すると、シリアルモニターに「Black」と表示されます。それ以外の場合は「White」と表示されます。

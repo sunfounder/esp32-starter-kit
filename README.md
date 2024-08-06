@@ -17,6 +17,12 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 
 <a id="update"></a>
 ## Update:
+
+2024-08-02：
+- Due to the ESP32 board being upgraded to version 3.0, some functions have had their names and usage modified. Update the code accordingly or add a prompt to downgrade the version.
+- update the project of blynk
+
+
 2023-11-28:
 - Add images of inserting a USB cable into an ESP32 for various programming language projects.
 - Modify some errors.
@@ -24,19 +30,6 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 2023-11-09:
 - First release of Japanese version.
 
-2023-10-31:
-- Add electronic component purchase link.
-
-2023-10-20:
-- Correct some errors.
-- Add an FAQ for 'Unknown COMxx'.
-
-2023-08-09:
-- Replace the TT motor with a 3V motor, and update the corresponding description and diagram.
-- Replace the L9110 module with the L293D, and update the corresponding description and diagram.
-
-2023-08-09:
-- change the name from esp32 ultimate kit to esp32 starter kit
 
 <a id="trouble"></a>
 ## Trouble Shootings:

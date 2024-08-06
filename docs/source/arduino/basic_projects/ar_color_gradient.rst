@@ -113,9 +113,9 @@ RGB LEDには4本のピンがあります。一番長いピンが共通カソー
     .. code-block:: arduino
 
         void setColor(int red, int green, int blue) {
-            ledcWrite(redChannel, red);
-            ledcWrite(greenChannel, green);
-            ledcWrite(blueChannel, blue);
+            ledcWrite(redPin, red);
+            ledcWrite(greenPin, green);
+            ledcWrite(bluePin, blue);
         }
     
 #. ``HUEtoRGB`` 関数は、HSLカラーモデルを使用して色相値をRGB値に変換します。

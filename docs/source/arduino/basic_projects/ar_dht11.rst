@@ -95,6 +95,8 @@ DHT11は、環境測定用によく使われる温度・湿度センサーです
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95bef6dc-a4db-4315-9308-6663b77ddfa0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+シリアル通信のボーレートを115200に設定することを忘れないでください。
+
 コードが正常にアップロードされた後、シリアルモニターには温度と湿度が連続して表示され、プログラムが安定して実行されるにつれて、これらの値はより正確になっていきます。
 
 

@@ -12,6 +12,8 @@
 
     👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
 
+.. _iot_cheerlights:
+
 8.5 CheerLights
 ===============================
 CheerLightsは、誰でも制御できる同期したライトのグローバルネットワークです。
@@ -81,13 +83,13 @@ CheerLightsは、誰でも制御できる同期したライトのグローバル
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4fc7b0ff-db8e-4bf3-ad34-d68c1857794b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. 次の行を見つけて、あなたの ``<SSID>`` と ``<PASSWORD>`` で修正してください。
+#. 次の行を見つけて、あなたの ``SSID`` と ``PASSWORD`` で修正してください。
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. 次の行を見つけて、あなたの ``unique_identifier`` で修正してください。 ``unique_identifier`` が本当にユニークであることを保証してください。同一のIDを持つデバイスが同じ **MQTT Broker** にログインしようとすると、ログインに失敗する可能性があります。
 

@@ -132,37 +132,31 @@ S8050（NPNトランジスタ）の役割は電流を増幅し、ブザーの音
     .. code-block:: arduino
 
         void playFrequency(int frequency, int duration) {
-            ledcWriteTone(0, frequency); // Start the tone
+            ledcWriteTone(buzzerPin, frequency); // Start the tone
             delay(duration); // Wait for the specified duration
-            ledcWriteTone(0, 0); // Stop the buzzer
+            ledcWriteTone(buzzerPin, 0); // Stop the buzzer
         }
     
-    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: この関数は、選択された周波数で50% PWM音をLEDCチャネルに設定するために使用されます。
+    * ``uint32_t ledcWriteTone(uint8_t pin, uint32_t freq);``: この関数は、選択した周波数で50％のPWMトーンにピンを設定するために使用されます。
 
-        * ``chan`` LEDCチャネルの選択。
-        * ``freq`` PWM信号の周波数の選択。
+    * ``pin`` はLEDCピンを選択します。
+    * ``freq`` はPWM信号の周波数を選択します。
 
-    この関数はチャネルの設定 ``frequency`` を返します。 ``0`` が返された場合、エラーが発生しLEDCチャネルが設定されませんでした。
+    この関数は、設定されたチャネルの ``frequency`` を返します。 ``0`` が返された場合、エラーが発生し、LEDCチャネルが設定されませんでした。
 
 #. ``setup()`` 関数内でPWMチャネルを設定し、ブザーピンをアタッチします。
 
     .. code-block:: arduino
 
         void setup() {
-            ledcSetup(0, 2000, resolution); // Set up the PWM channel
-            ledcAttachPin(buzzerPin, 0); // Attach the buzzer pin to the PWM channel
+            ledcAttach(buzzerPin, 2000, resolution); // Set up the PWM pin
         }
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: この関数はLEDCチャネルの周波数と解像度を設定するために使用されます。LEDCチャネルに設定された周波数を返します。0が返された場合、エラーが発生しLEDCチャネルが設定されませんでした。
-            
-        * ``channel`` 設定するLEDCチャネルの選択。
-        * ``freq`` PWMの周波数の選択。
-        * ``resolution_bits`` LEDCチャネルの解像度を選択。範囲は1-14ビット（ESP32の場合は1-20ビット）。
-
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: この関数はピンをLEDCチャネルにアタッチするために使用されます。
-
-        * ``pin`` GPIOピンの選択。
-        * ``chan`` LEDCチャネルの選択。
+    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: この関数は、指定された周波数と解像度でLEDCピンを設定するために使用されます。LEDCチャネルは自動的に選択されます。
+                
+        * ``pin`` はGPIOピンを選択します。
+        * ``freq`` はPWMの周波数を選択します。
+        * ``resolution_bits`` はLEDCチャネルの解像度を選択します。範囲は1〜14ビット（ESP32の場合は1〜20ビット）です。
 
 #. ``loop()`` 関数内で、各音符の間に短い休止を置き、シーケンスを繰り返す前に1秒間の休止を置いて、7つの音階を順に鳴らします。
 

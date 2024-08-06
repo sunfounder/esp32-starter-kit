@@ -90,13 +90,13 @@
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/e45a4bd6-9b35-47f0-af5e-92d802004087/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. 次の行を見つけて、あなたの ``<SSID>`` と ``<PASSWORD>`` で修正してください。
+#. 次の行を見つけて、あなたの ``SSID`` と ``PASSWORD`` で修正してください。
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. 次の行を見つけて、あなたの ``unique_identifier`` で修正してください。あなたの ``unique_identifier`` が本当にユニークであることを保証してください。同一のIDを持つデバイスが同じMQTTブローカーにログインしようとすると、ログインに失敗する可能性があります。
 

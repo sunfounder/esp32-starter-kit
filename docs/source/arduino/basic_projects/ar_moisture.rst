@@ -100,7 +100,8 @@
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/431302c2-3579-4be6-8142-c91d28757004/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
+
+シリアル通信のボーレートを115200に設定することを忘れないでください。
 
 コードが正常にアップロードされると、シリアルモニターが土壌の湿度値を出力します。
 

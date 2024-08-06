@@ -12,6 +12,8 @@
 
     👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
 
+.. _ar_bluetooth_led:
+
 7.2 Bluetoothを用いたRGB LEDの制御
 =====================================
 
@@ -119,12 +121,6 @@
         const int redPin = 27;
         const int greenPin = 26;
         const int bluePin = 25;
-
-        // Define PWM channels
-        const int redChannel = 0;
-        const int greenChannel = 1;
-        const int blueChannel = 2;
-
         ...
 
 * ``setup()`` 関数内では、PWMチャンネルが定義済みの周波数と解像度で初期化されます。次に、RGB LEDのピンをそれぞれのPWMチャンネルに割り当てます。
@@ -133,16 +129,9 @@
         
         void setup() {
             ...
-
-            // Set up PWM channels
-            ledcSetup(redChannel, freq, resolution);
-            ledcSetup(greenChannel, freq, resolution);
-            ledcSetup(blueChannel, freq, resolution);
-            
-            // Attach pins to corresponding PWM channels
-            ledcAttachPin(redPin, redChannel);
-            ledcAttachPin(greenPin, greenChannel);
-            ledcAttachPin(bluePin, blueChannel);
+            ledcAttach(redPin, freq, resolution);
+            ledcAttach(greenPin, freq, resolution);
+            ledcAttach(bluePin, freq, resolution);
 
         }
 
@@ -153,7 +142,7 @@
         // Define the BLE characteristic callbacks
         class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
             void onWrite(BLECharacteristic *pCharacteristic) {
-                std::string value = pCharacteristic->getValue();
+                std::string value = std::string(pCharacteristic->getValue().c_str());
                 if (value == "led_off") {
                     setColor(0, 0, 0); // turn the RGB LED off
                     Serial.println("RGB LED turned off");
@@ -186,9 +175,9 @@
 
         void setColor(int red, int green, int blue) {
             // For common-anode RGB LEDs, use 255 minus the color value
-            ledcWrite(redChannel, red);
-            ledcWrite(greenChannel, green);
-            ledcWrite(blueChannel, blue);
+            ledcWrite(redPin, red);
+            ledcWrite(greenPin, green);
+            ledcWrite(bluePin, blue);
         }
 
 要約すると、このスクリプトはリモートコントロールの対話モデルを実現します。ここではESP32がBluetooth Low Energy (BLE) サーバーとして動作します。

@@ -89,7 +89,7 @@ ESP32は10秒ごとに超音波センサーのTrigピンに一連の方形波信
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/28ded128-62a8-4b2b-b21a-450f03323cd8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
+シリアル通信のボーレートを115200に設定することを忘れないでください。
 
 コードが正常にアップロードされると、シリアルモニターは超音波センサーと前方の障害物との間の距離を出力します。
 

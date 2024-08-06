@@ -116,13 +116,12 @@
 
     .. code-block:: arduino
 
-        const int potPin = 14; // Potentiometer connected to GPIO14
-        const int ledPin = 26; // LED connected to GPIO26
+        const int potPin = 35; // Potentiometer connected to
+        const int ledPin = 26; // LED connected to
 
         // PWM settings
         const int freq = 5000; // PWM frequency
         const int resolution = 12; // PWM resolution (bits)
-        const int channel = 0; // PWM channel
 
     ここではPWMの解像度を12ビットに設定し、範囲は0-4095になります。
 
@@ -134,12 +133,11 @@
             Serial.begin(115200);
 
             // Configure PWM
-            ledcSetup(channel, freq, resolution);
-            ledcAttachPin(ledPin, channel);
+            ledcAttach(ledPin, freq, resolution);
         }
 
     * ``setup()`` 関数では、ボーレート115200でシリアル通信を開始します。
-    * 指定された周波数と解像度でPWMチャンネルを設定するために ``ledcSetup()`` 関数が呼び出され、指定されたLEDピンをPWMチャンネルに関連付けるために ``ledcAttachPin()`` 関数が呼び出されます。
+    * 指定されたLEDピンを指定された周波数と解像度で設定するために ``ledcAttach()`` 関数が呼び出されます。
 
 #. ``loop()`` 関数のメインループ（繰り返し実行される）。
 

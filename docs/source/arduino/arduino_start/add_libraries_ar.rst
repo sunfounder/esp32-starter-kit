@@ -54,6 +54,8 @@
 
 #. ライブラリファイルが置かれているディレクトリ（例えば ``esp32-starter-kit\c\libraries`` フォルダ）に移動し、希望のライブラリファイル（例えば ``ESP32-A2DP.zip``）を選択してから、 **Open** をクリックします。
 
+   * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+
    .. image:: img/a2dp_choose.png
 
 #. しばらくすると、インストールが成功したことを示す通知が表示されます。
