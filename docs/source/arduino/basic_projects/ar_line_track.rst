@@ -108,4 +108,6 @@ Cuando el módulo de seguimiento de línea detecta una línea negra, IO14 retorn
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fc7f3fe9-179a-4a3a-acbf-a4014faf3920/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Recuerda configurar la velocidad de comunicación serial a 115200.
+
 Si el módulo de seguimiento de línea detecta una línea negra después de que el código se haya cargado con éxito, "Negro" se mostrará en el Monitor Serie. De lo contrario, se imprimirá "Blanco".

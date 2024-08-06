@@ -19,17 +19,17 @@ Para programar el microcontrolador ESP32, necesitamos instalar el paquete de la 
 
 **Instalar la Placa ESP32**
 
-#. Abre el Arduino IDE. Ve a **Archivo** y selecciona **Preferencias** en el menú desplegable.
+.. #. Abre el Arduino IDE. Ve a **Archivo** y selecciona **Preferencias** en el menú desplegable.
 
-    .. image:: img/install_esp321.png
+..     .. image:: img/install_esp321.png
 
-#. En la ventana de Preferencias, localiza el campo **URLs Adicionales de Gestores de Tarjetas**. Haz clic en él para activar el cuadro de texto.
+.. #. En la ventana de Preferencias, localiza el campo **URLs Adicionales de Gestores de Tarjetas**. Haz clic en él para activar el cuadro de texto.
 
-    .. image:: img/install_esp322.png
+..     .. image:: img/install_esp322.png
 
-#. Añade la siguiente URL al campo **URLs Adicionales de Gestores de Tarjetas**: https://espressif.github.io/arduino-esp32/package_esp32_index.json. Esta URL apunta al archivo índice del paquete para las placas ESP32. Haz clic en el botón **OK** para guardar los cambios.
+.. #. Añade la siguiente URL al campo **URLs Adicionales de Gestores de Tarjetas**: https://espressif.github.io/arduino-esp32/package_esp32_index.json. Esta URL apunta al archivo índice del paquete para las placas ESP32. Haz clic en el botón **OK** para guardar los cambios.
 
-    .. image:: img/install_esp323.png
+..     .. image:: img/install_esp323.png
 
 #. En la ventana del **Gestor de Tarjetas**, escribe **ESP32** en la barra de búsqueda. Haz clic en el botón **Instalar** para comenzar el proceso de instalación. Esto descargará e instalará el paquete de la placa ESP32.
 

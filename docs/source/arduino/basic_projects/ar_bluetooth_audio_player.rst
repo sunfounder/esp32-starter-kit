@@ -83,6 +83,15 @@ También puedes comprarlos por separado en los enlaces a continuación.
     * :ref:`unknown_com_port`
     * Aquí se utiliza la biblioteca ``ESP32-A2DP``, consulta :ref:`install_lib_man` para obtener un tutorial para instalar.
 
+    .. warning::
+
+        Si estás utilizando una placa de desarrollo ESP32 versión 3.0.0 o superior, puedes encontrar errores durante el proceso de compilación.
+        Este problema se debe generalmente a que las versiones más recientes de la placa ya no son compatibles con la biblioteca ``ESP32-A2DP``.
+        Para ejecutar correctamente este ejemplo, se recomienda degradar la versión del firmware de tu placa ESP32 a la 2.0.17.
+        Después de completar este ejemplo, actualiza nuevamente a la versión más reciente.
+
+        .. image:: ../../faq/img/version_2.0.17.png
+
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/7bb7d6dd-72d4-4529-bb42-033b38558347/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

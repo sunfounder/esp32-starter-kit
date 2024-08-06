@@ -103,5 +103,7 @@ I34 e I35 cambiarán sus valores a medida que manipules el joystick. El rango de
 
 Abre el monitor serie después de que el código se haya cargado con éxito para ver los valores x, y, z del joystick.
 
+Recuerda configurar la velocidad de comunicación serial a 115200.
+
 * Los valores de los ejes x e y son valores analógicos que varían de 0 a 4095.
 * El eje Z es un valor digital con un estado de 1 o 0 (cuando se presiona, es 0).

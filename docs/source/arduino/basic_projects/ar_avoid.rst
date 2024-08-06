@@ -104,5 +104,5 @@ Cuando el módulo de evitación de obstáculos no detecta ningún obstáculo, IO
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b0f22caa-3c77-4dc1-9a33-20ff23d04a5e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-
+Configura la velocidad de comunicación serial a 115200.
 Después de subir el código con éxito, si el módulo de evitación de obstáculos IR detecta algo bloqueando frente a él, aparecerá "0" en el monitor serial, de lo contrario se mostrará "1".

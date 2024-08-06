@@ -89,13 +89,13 @@ También puedes comprarlos por separado en los siguientes enlaces.
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/a5e33c30-63dc-4987-94c3-89bc6a599e24/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Localiza las siguientes líneas y modifícalas con tu ``<SSID>`` y ``<PASSWORD>``.
+#. Localiza las siguientes líneas y modifícalas con tu ``SSID`` y ``PASSWORD``.
 
     .. code-block::  Arduino
 
         // Reemplaza las siguientes variables con tu combinación de SSID/Contraseña
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. Después de seleccionar la placa correcta (ESP32 Dev Module) y el puerto, haz clic en el botón **Subir**.
 

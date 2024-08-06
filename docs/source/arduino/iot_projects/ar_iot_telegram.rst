@@ -117,29 +117,29 @@ Como cualquiera puede interactuar con el bot que has creado, existe un riesgo de
         <iframe src=https://create.arduino.cc/editor/sunfounder01/d7c439b0-fca3-4648-9714-900a2859740c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. Localiza y modifica las siguientes líneas con los detalles de tu WiFi, reemplazando ``<SSID>`` y ``<PASSWORD>``:
+#. Localiza y modifica las siguientes líneas con los detalles de tu WiFi, reemplazando ``SSID`` y ``PASSWORD``:
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
-5. Actualiza la siguiente línea, reemplazando ``<CHATID>`` con tu ID de Telegram, que obtuviste de @IDBot.
+5. Actualiza la siguiente línea, reemplazando ``CHATID`` con tu ID de Telegram, que obtuviste de @IDBot.
 
     .. code-block:: Arduino
 
         // Use @myidbot to find out the chat ID of an individual or a group
         // Also note that you need to click "start" on a bot before it can
         // message you
-        String chatId = "<CHATID>";
+        String chatId = "CHATID";
 
-#. Actualiza la siguiente línea, sustituyendo ``<BOTTOKEN>`` con el token de tu BOT de Telegram, que fue proporcionado por @BotFather.
+#. Actualiza la siguiente línea, sustituyendo ``BOTTOKEN`` con el token de tu BOT de Telegram, que fue proporcionado por @BotFather.
 
     .. code-block:: Arduino
 
         // Initialize Telegram BOT
-        String BOTtoken = "<BOTTOKEN>";
+        String BOTtoken = "BOTTOKEN";
 
 #. Después de seleccionar la placa correcta (ESP32 Dev Module) y el puerto, haz clic en el botón **Subir**.
 #. Abre el Monitor Serial. Si se imprime una dirección IP, esto indica una ejecución exitosa.

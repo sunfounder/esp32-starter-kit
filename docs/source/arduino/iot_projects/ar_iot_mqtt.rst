@@ -90,13 +90,13 @@ También puedes comprarlos por separado desde los siguientes enlaces.
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/e45a4bd6-9b35-47f0-af5e-92d802004087/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Localiza las siguientes líneas y modifícalas con tu ``<SSID>`` y ``<PASSWORD>``.
+#. Localiza las siguientes líneas y modifícalas con tu ``SSID`` y ``PASSWORD``.
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. Encuentra la siguiente línea y modifica tu ``unique_identifier``. Asegúrate de que tu ``identificador_único`` sea realmente único ya que cualquier ID que sea idéntico intentando iniciar sesión en el mismo broker MQTT puede resultar en un fallo de inicio de sesión.
 

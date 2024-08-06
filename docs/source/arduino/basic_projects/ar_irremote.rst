@@ -91,9 +91,21 @@ Cuando presionas un botón en el control remoto, el receptor infrarrojo detecta 
 
         .. image:: img/receiver_lib.png
 
+    .. warning::
+
+        Si estás utilizando una placa de desarrollo ESP32 versión 3.0.0 o superior, puedes encontrar errores durante el proceso de compilación.
+        Este problema se debe generalmente a que las versiones más recientes de la placa ya no son compatibles con la biblioteca ``IRremoteESP8266``.
+        Para ejecutar correctamente este ejemplo, se recomienda degradar la versión del firmware de tu placa ESP32 a la 2.0.17.
+        Después de completar este ejemplo, actualiza nuevamente a la versión más reciente.
+
+        .. image:: ../../faq/img/version_2.0.17.png
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/463c8894-00bd-4035-a81c-cad99a7f3731/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+
+Recuerda configurar la velocidad de comunicación serial a 115200.
 
 Después de que el código se haya cargado con éxito, presiona los diferentes botones en el control remoto y verás aparecer los nombres de estas teclas en el monitor serie.
 

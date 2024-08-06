@@ -123,11 +123,6 @@ Desglosemos el código paso a paso:
         const int greenPin = 26;
         const int bluePin = 25;
 
-        // Define PWM channels
-        const int redChannel = 0;
-        const int greenChannel = 1;
-        const int blueChannel = 2;
-
         ...
 
 * Dentro de la función ``setup()``, los canales PWM se inicializan con la frecuencia y resolución predefinidas. Los pines del LED RGB se conectan luego a sus respectivos canales PWM.
@@ -138,14 +133,9 @@ Desglosemos el código paso a paso:
             ...
 
             // Set up PWM channels
-            ledcSetup(redChannel, freq, resolution);
-            ledcSetup(greenChannel, freq, resolution);
-            ledcSetup(blueChannel, freq, resolution);
-            
-            // Attach pins to corresponding PWM channels
-            ledcAttachPin(redPin, redChannel);
-            ledcAttachPin(greenPin, greenChannel);
-            ledcAttachPin(bluePin, blueChannel);
+            ledcAttach(redPin, freq, resolution);
+            ledcAttach(greenPin, freq, resolution);
+            ledcAttach(bluePin, freq, resolution);
 
         }
 
@@ -156,7 +146,7 @@ Desglosemos el código paso a paso:
         // Define the BLE characteristic callbacks
         class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
             void onWrite(BLECharacteristic *pCharacteristic) {
-                std::string value = pCharacteristic->getValue();
+                std::string value = std::string(pCharacteristic->getValue().c_str());
                 if (value == "led_off") {
                     setColor(0, 0, 0); // turn the RGB LED off
                     Serial.println("RGB LED turned off");
@@ -189,9 +179,9 @@ Desglosemos el código paso a paso:
 
         void setColor(int red, int green, int blue) {
             // For common-anode RGB LEDs, use 255 minus the color value
-            ledcWrite(redChannel, red);
-            ledcWrite(greenChannel, green);
-            ledcWrite(blueChannel, blue);
+            ledcWrite(redPin, red);
+            ledcWrite(greenPin, green);
+            ledcWrite(bluePin, blue);
         }
 
 En resumen, este script habilita un modelo de interacción de control remoto, donde el ESP32 opera como un servidor de Energía Baja de Bluetooth (BLE).

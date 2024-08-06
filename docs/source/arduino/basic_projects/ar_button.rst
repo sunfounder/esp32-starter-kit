@@ -131,6 +131,8 @@ Para asegurar una funcionalidad adecuada, conecta un lado del pin del botón a 3
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/702c5a70-78e7-4a8b-a0c7-10c0acebfc12/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Recuerda configurar la velocidad de comunicación serial a 115200.
+
 Una vez que el código se ha subido con éxito, el LED se ilumina cuando presionas el botón y se apaga cuando lo sueltas.
 
 Al mismo tiempo, puedes abrir el Monitor Serial en la esquina superior derecha para observar el valor del botón, cuando el botón está presionado, se imprimirá "1", de lo contrario se imprimirá "0".

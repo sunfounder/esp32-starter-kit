@@ -130,40 +130,34 @@ Después de subir exitosamente el código, escucharás el zumbador pasivo tocar 
 
 3. Crea una función para tocar una frecuencia dada en el zumbador durante una duración especificada.
 
-    .. code-block:: arduino
+  .. code-block:: arduino
 
-        void playFrequency(int frequency, int duration) {
-            ledcWriteTone(0, frequency); // Start the tone
-            delay(duration); // Wait for the specified duration
-            ledcWriteTone(0, 0); // Stop the buzzer
-        }
+    void playFrequency(int frequency, int duration) {
+      ledcWriteTone(buzzerPin, frequency); // Start the tone
+      delay(duration); // Wait for the specified duration
+      ledcWriteTone(buzzerPin, 0); // Stop the buzzer
+    }
     
-    * ``uint32_t ledcWriteTone(uint8_t chan, uint32_t freq);``: Esta función se usa para configurar el canal LEDC al tono PWM del 50% en la frecuencia seleccionada.
+  * ``uint32_t ledcWriteTone(uint8_t pin, uint32_t freq);``: Esta función se utiliza para configurar el pin con un tono PWM del 50 % en la frecuencia seleccionada.
 
-        * ``chan`` selecciona el canal LEDC.
-        * ``freq`` selecciona la frecuencia de la señal pwm.
+      * ``pin`` selecciona el pin LEDC.
+      * ``freq`` selecciona la frecuencia de la señal PWM.
 
-    Esta función retornará la ``frecuencia`` configurada para el canal. Si retorna ``0``, ocurre un error y el canal ledc no fue configurado.
+      Esta función devolverá la ``frequency`` configurada para el canal. Si se devuelve ``0``, se produce un error y el canal LEDC no se configuró.
 
 4. Configura el canal PWM y adjunta el pin del zumbador en la función ``setup()``.
 
     .. code-block:: arduino
 
         void setup() {
-            ledcSetup(0, 2000, resolution); // Set up the PWM channel
-            ledcAttachPin(buzzerPin, 0); // Attach the buzzer pin to the PWM channel
+            ledcAttach(buzzerPin, 2000, resolution); // Set up the PWM pin
         }
 
-    * ``uint32_t ledcSetup(uint8_t channel, uint32_t freq, uint8_t resolution_bits);``: Esta función se usa para configurar la frecuencia y resolución del canal LEDC. Retornará la ``frecuencia`` configurada para el canal LEDC. Si retorna ``0``, ocurre un error y el canal ledc no fue configurado.
-            
-        * ``channel`` selecciona el canal LEDC a configurar.
-        * ``freq`` selecciona la frecuencia del pwm.
-        * ``resolution_bits`` selecciona la resolución para el canal ledc. El rango es de 1-14 bits (1-20 bits para ESP32).
-
-    * ``void ledcAttachPin(uint8_t pin, uint8_t chan);``: Esta función se usa para adjuntar el pin al canal LEDC.
-
-        * ``pin`` selecciona el pin GPIO.
-        * ``chan`` selecciona el canal LEDC.
+  * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: Esta función se utiliza para configurar el pin LEDC con la frecuencia y resolución dadas. El canal LEDC se seleccionará automáticamente.
+              
+      * ``pin`` selecciona el pin GPIO.
+      * ``freq`` selecciona la frecuencia de la PWM.
+      * ``resolution_bits`` selecciona la resolución para el canal LEDC. El rango es de 1 a 14 bits (1 a 20 bits para ESP32).
 
 5. En la función ``loop()``, toca la secuencia de 7 notas con una breve pausa entre cada nota y una pausa de 1 segundo antes de repetir la secuencia.
 

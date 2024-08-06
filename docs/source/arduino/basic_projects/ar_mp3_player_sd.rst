@@ -95,6 +95,15 @@ También puedes comprarlos por separado en los siguientes enlaces.
         * :ref:`unknown_com_port`
         * La biblioteca ``ESP8266Audio`` se utiliza aquí, consulta :ref:`install_lib_man` para un tutorial de instalación.
 
+    .. warning::
+
+        Si estás utilizando una placa de desarrollo ESP32 versión 3.0.0 o superior, puedes encontrar errores durante el proceso de compilación.
+        Este problema se debe generalmente a que las versiones más recientes de la placa ya no son compatibles con la biblioteca ``IRremoteESP8266``.
+        Para ejecutar correctamente este ejemplo, se recomienda degradar la versión del firmware de tu placa ESP32 a la 2.0.17.
+        Después de completar este ejemplo, actualiza nuevamente a la versión más reciente.
+
+        .. image:: ../../faq/img/version_2.0.17.png
+
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/13f5c757-9622-4735-aa1a-fdbe6fc46273/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

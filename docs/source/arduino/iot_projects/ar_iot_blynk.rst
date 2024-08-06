@@ -67,161 +67,171 @@ También puedes comprarlos por separado en los enlaces a continuación.
     :align: center
 
 2. Configuración de Blynk
-----------------------------
+------------------------------------
 
-**2.1 Inicialización de Blynk**
+**2.1 Inicializando Blynk**
 
-#. Navega a |link_blynk| y selecciona **EMPEZAR GRATIS**.
+1. Ve a la página de |link_blynk| y selecciona **Sign Up FREE** o **Enterprise Solution**.
 
-   .. image:: img/09_blynk_access.png
-        :width: 90%
-
-#. Ingresa tu correo electrónico para iniciar el proceso de registro.
-
-   .. image:: img/09_blynk_sign_in.png
-        :width: 70%
+    .. image:: img/09_blynk_access.png
+        :width: 600
         :align: center
 
-#. Confirma tu registro a través de tu correo electrónico.
+2. Ingresa tu correo electrónico para comenzar el proceso de registro.
+
+    .. image:: img/09_blynk_sign_in.png
+        :align: center
+
+3. Revisa tu correo electrónico para ver un mensaje, y haz clic en el enlace **Create Password** en el correo para establecer tu contraseña.
 
     .. image:: img/09_blynk_password.png
-        :width: 90%
+        :align: center
 
-#. Después de la confirmación, aparecerá **Tour de Blynk**. Se recomienda seleccionar "Omitir". Si también aparece **Inicio Rápido**, considera omitirlo igualmente.
-   
+4. Después de la confirmación, comenzará un **Blynk Tour** donde podrás aprender rápidamente sobre algunas de las características clave de Blynk.
+
     .. image:: img/09_blynk_tour.png
-        :width: 90%
+        :width: 600
+        :align: center
 
-**2.2 Creación de Plantilla**
+5. Después de completar el Blynk Tour, aparecerá una ventana donde podrás elegir explorar Blueprints o hacer clic en Quick Start para conectar rápidamente tu dispositivo. Sin embargo, en este caso, seleccionaremos "Have a look around first".
 
-#. Primero, crea una plantilla en Blynk. Sigue las instrucciones subsiguientes para crear la plantilla **Sistema de Alerta de Intrusión**.
+    .. image:: img/09_blynk_skip.png
+        :align: center
+
+**2.2 Creación de Plantillas**
+
+1. Comienza creando una plantilla en Blynk. Sigue los pasos para configurar la plantilla **Intrusion Alert System**.
 
     .. image:: img/09_create_template_1_shadow.png
-        :width: 700
+        :width: 600
         :align: center
 
-#. Asigna un nombre a la plantilla, selecciona **ESP32** como Hardware y **Tipo de Conexión** como **WiFi**, luego selecciona **Hecho**.
+2. Nombra tu plantilla, elige **ESP32** como el Hardware, selecciona **WiFi** como el **Tipo de Conexión**, y luego haz clic en **Done**.
 
-    .. image:: img/09_create_template_2_shadow.png
-        :width: 700
+   .. image:: img/09_create_template_2_shadow.png
+        :width: 600
         :align: center
 
-**2.3 Generación de Flujo de Datos**
+3. Entra en la plantilla, donde se te indicarán los siguientes pasos. Haz clic en **Configure template** para subir una imagen de portada, mejorar la descripción y más. Sigue los tres pasos restantes para completar la configuración.
 
-Abre la plantilla que acabas de configurar, vamos a crear dos flujos de datos.
-
-#. Haz clic en **Nuevo Flujo de Datos**.
-
-    .. image:: img/09_blynk_new_datastream.png
-        :width: 700
+    .. image:: img/09_blynk_temp_steps.png
+        :width: 600
         :align: center
 
-#. En el popup, elige **Pin Virtual**.
+**2.3 Configurar Datastreams**
 
-    .. image:: img/09_blynk_datastream_virtual.png
-        :width: 700
+1. Abre la plantilla recién creada y ve a la página de configuración de datastreams.
+
+   .. image:: img/09_blynk_new_datastream.png
+        :width: 600
         :align: center
 
-#. Nombra el **Pin Virtual V0** como **ModoAusente**. Establece el **TIPO DE DATO** como **Entero** con valores **MIN** y **MAX** como **0** y **1**.
+2. Haz clic en **New Datastream**, y en la ventana emergente, selecciona **Virtual Pin**.
 
-    .. image:: img/09_create_template_shadow.png
-        :width: 700
+   .. image:: img/09_blynk_datastream_virtual.png
+        :width: 600
         :align: center
 
-#. De manera similar, crea otro flujo de datos de **Pin Virtual**. Nómbralo **Estado Actual** y establece el **TIPO DE DATO** a **Cadena**.
+3. Nombra el **Virtual Pin V0** como **AwayMode** y establece el **TIPO DE DATO** en **Integer**, con valores **MIN** y **MAX** de **0** y **1**.
 
-    .. image:: img/09_datastream_1_shadow.png
-        :width: 700
+   .. image:: img/09_create_template_shadow.png
+        :width: 600
         :align: center
 
-**2.4 Configuración de un Evento**
+4. De manera similar, crea otro **Virtual Pin** llamado **Current Status** y establece el **TIPO DE DATO** en **String**.
 
-A continuación, configuraremos un evento que envía una notificación por correo electrónico si se detecta una intrusión.
-
-#. Haz clic en **Añadir Nuevo Evento**.
-
-    .. image:: img/09_blynk_event_add.png
-        
-#. Define el nombre del evento y su código específico. Para **TIPO**, elige **Advertencia** y escribe una breve descripción para el correo que se enviará cuando ocurra el evento. También puedes ajustar con qué frecuencia recibes notificaciones.
-
-    .. note::
-        
-        Asegúrate de que el **CÓDIGO DEL EVENTO** esté establecido como ``intrusion_detected``. Esto está predefinido en el código, por lo que cualquier cambio significaría que necesitas ajustar el código también.
-
-    .. image:: img/09_event_1_shadow.png
-        :width: 700
+   .. image:: img/09_datastream_1_shadow.png
+        :width: 600
         :align: center
 
-#. Ve a la sección de **Notificaciones** para activar las notificaciones y configurar los detalles del correo electrónico.
+**2.4 Configurar el Tablero Web**
 
-    .. image:: img/09_event_2_shadow.png
-        :width: 80%
+1. Arrastra y suelta tanto el **Switch widget** como el **Label widget** en el **Tablero Web**.
+
+   .. image:: img/09_web_dashboard_1_shadow.png
+        :width: 600
         :align: center
 
-.. raw:: html
-    
-    <br/> 
+2. Pasa el cursor sobre un widget para ver tres iconos. Utiliza el icono de **Configuración** para configurar las propiedades del widget.
 
-**2.5 Ajuste Fino del Tablero Web**
-
-Asegurarse de que el **Tablero Web** interactúe perfectamente con el Sistema de Alerta de Intrusión es vital.
-
-#. Simplemente arrastra y coloca tanto el **Widget de Interruptor** como el **Widget de Etiqueta** en el **Tablero Web**.
-
-    .. image:: img/09_web_dashboard_1_shadow.png
-        :width: 100%
+   .. image:: img/09_blynk_dashboard_set.png
+        :width: 600
         :align: center
 
-#. Cuando pases el cursor sobre un widget, aparecerán tres iconos. Usa el icono de configuración para ajustar las propiedades del widget.
+3. Configura el **Switch widget** para que se enlace con el datastream **AwayMode(V0)**, estableciendo las etiquetas **ONLABEL** y **OFFLABEL** para mostrar **"away home"** y **"at home"** respectivamente.
 
-    .. image:: img/09_blynk_dashboard_set.png
-        :width: 100%
+   .. image:: img/09_web_dashboard_2_shadow.png
+        :width: 600
         :align: center
 
-#. En la configuración del **Widget de Interruptor**, selecciona **Flujo de Datos** como **ModoAusente(V0)**. Establece **EtiquetaON** y **EtiquetaOFF** para mostrar **"ausente"** y **"casa"**, respectivamente.
+4. En la configuración del **Label widget**, enlázalo con el datastream **Current Status(V1)**.
 
-    .. image:: img/09_web_dashboard_2_shadow.png
-        :width: 100%
+   .. image:: img/09_web_dashboard_3_shadow.png
+        :width: 600
         :align: center
 
-#. En la configuración del **Widget de Etiqueta**, selecciona **Flujo de Datos** como **Estado Actual(V1)**.
+**2.5 Configuración de un Evento**
 
-    .. image:: img/09_web_dashboard_3_shadow.png
-        :width: 100%
+1. Haz clic en **Events & Notifications** y luego en **Create Event**.
+
+   .. image:: img/09_blynk_event_add.png
+        :width: 600
         :align: center
 
-**2.6 Guardando la Plantilla**
+2. Nombra el evento y especifica su código. Elige **Warning** para **TIPO** y proporciona una breve descripción para el correo electrónico de notificación. Ajusta la frecuencia de notificación según lo desees.
 
-Por último, no olvides guardar tu plantilla.
+   .. note::
 
-    .. image:: img/09_save_template_shadow.png
-        :width: 100%
+      Asegúrate de que el **CÓDIGO DEL EVENTO** esté configurado como ``intrusion_detected``. Cualquier cambio aquí requiere ajustes correspondientes en el código.
+
+   .. image:: img/09_event_1_shadow.png
+        :width: 600
         :align: center
 
-**2.7 Creando un Dispositivo**
+3. Ve a la sección de **Notificaciones** para habilitar las notificaciones y configurar los ajustes de correo electrónico.
 
-#. Es hora de crear un nuevo dispositivo.
-
-    .. image:: img/09_blynk_device_new.png
-        :width: 700
+   .. image:: img/09_event_2_shadow.png
+        :width: 600
         :align: center
 
-#. Haz clic en **Desde plantilla** para comenzar con una nueva configuración.
+4. En **Configuración**, define con qué frecuencia un evento activa las notificaciones y establece los intervalos según tu preferencia. Recuerda hacer clic en **Create** para guardar tus configuraciones.
 
-    .. image:: img/09_blynk_device_template.png
-        :width: 700
+   .. image:: img/09_event_3_shadow.png
+        :width: 600
         :align: center
 
-#. Luego, elige la plantilla **Sistema de Alerta de Intrusión** y haz clic en **Crear**.
+**2.6 Guardar la Plantilla**
 
-    .. image:: img/09_blynk_device_template2.png
-        :width: 700
+1. Recuerda guardar tus cambios en la plantilla.
+
+   .. image:: img/09_save_template_shadow.png
+        :width: 600
         :align: center
 
-#. Aquí, verás el ``ID de la Plantilla``, ``Nombre del Dispositivo`` y ``AuthToken``. Necesitas copiar estos en tu código para que el ESP32 pueda trabajar con Blynk.
+**2.7 Crear un Dispositivo**
 
-    .. image:: img/09_blynk_device_code.png
-        :width: 700
+1. Es hora de crear un nuevo dispositivo a partir de la plantilla.
+
+   .. image:: img/09_blynk_device_new.png
+        :width: 600
+        :align: center
+
+2. Selecciona **From template** para comenzar.
+
+   .. image:: img/09_blynk_device_template.png
+        :width: 600
+        :align: center
+
+3. Elige la plantilla **Intrusion Alert System** y haz clic en **Create**.
+
+   .. image:: img/09_blynk_device_template2.png
+        :width: 600
+        :align: center
+
+4. Anota el **Template ID**, **Device Name** y **AuthToken** para la integración con tu ESP32.
+
+   .. image:: img/09_blynk_device_code.png
+        :width: 600
         :align: center
 
 3. Ejecución del Código

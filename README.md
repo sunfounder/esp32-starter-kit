@@ -17,7 +17,11 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 
 <a id="update"></a>
 ## Update:
-2024-3-1:
+2024-08-06：
+- Due to the ESP32 board being upgraded to version 3.0, some functions have had their names and usage modified. Update the code accordingly or add a prompt to downgrade the version.
+- update the project of blynk
+
+2024-03-01:
 - The first release of the Spanish version
 
 <a id="trouble"></a>

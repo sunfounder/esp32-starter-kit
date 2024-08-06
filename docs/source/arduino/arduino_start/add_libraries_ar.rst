@@ -54,6 +54,8 @@ Algunas librerías no están disponibles a través del **Gestor de Librerías** 
 
 #. Navega al directorio donde se encuentran los archivos de la librería, como la carpeta ``esp32-starter-kit\c\libraries``, y selecciona el archivo de librería deseado, como ``ESP32-A2DP.zip``. Luego, haz clic en **Abrir**.
 
+   * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+
    .. image:: img/a2dp_choose.png
 
 #. Después de un corto tiempo, recibirás una notificación indicando una instalación exitosa.

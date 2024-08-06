@@ -113,9 +113,9 @@ Este proyecto se basa en el proyecto :ref:`ar_rgb` añadiendo un potenciómetro 
     .. code-block:: arduino
 
         void setColor(int red, int green, int blue) {
-            ledcWrite(redChannel, red);
-            ledcWrite(greenChannel, green);
-            ledcWrite(blueChannel, blue);
+            ledcWrite(redPin, red);
+            ledcWrite(greenPin, green);
+            ledcWrite(bluePin, blue);
         }
     
 #. La función ``HUEtoRGB`` convierte un valor de tono a valores RGB utilizando el modelo de color HSL.

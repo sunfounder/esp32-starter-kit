@@ -102,6 +102,8 @@ Al insertar el módulo en el suelo y regarlo, el valor leído en I35 disminuirá
     <iframe src=https://create.arduino.cc/editor/sunfounder01/431302c2-3579-4be6-8142-c91d28757004/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
+Recuerda configurar la velocidad de comunicación serial a 115200.
+
 Una vez que el código se haya cargado con éxito, el monitor serie imprimirá el valor de la humedad del suelo.
 
 Al insertar el módulo en el suelo y regarlo, el valor del sensor de humedad del suelo se volverá más pequeño.

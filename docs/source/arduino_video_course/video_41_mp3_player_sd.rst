@@ -13,7 +13,7 @@
     👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 Video 41: Reproductor de MP3 con soporte para tarjeta SD
-====================================================
+===================================================================
 
 Aprende a reproducir archivos de audio desde una tarjeta micro SD utilizando el kit de aprendizaje SunFounder ESP32, conectando el ESP32 con un amplificador de audio y un altavoz para la salida de sonido.
 

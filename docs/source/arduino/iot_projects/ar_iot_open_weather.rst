@@ -100,21 +100,21 @@ También puedes comprarlos por separado desde los enlaces a continuación.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/71b196ce-8a84-4577-af76-43988c7d3f80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
          
 
-#. Localiza las siguientes líneas y modifícalas con tu ``<SSID>`` y ``<PASSWORD>``.
+#. Localiza las siguientes líneas y modifícalas con tu ``SSID`` y ``PASSWORD``.
 
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. Rellena las claves API que copiaste anteriormente en ``openWeatherMapApiKey``.
 
     .. code-block::  Arduino
 
         // Your Domain name with URL path or IP address with path
-        String openWeatherMapApiKey = "<openWeatherMapApiKey>";
+        String openWeatherMapApiKey = "openWeatherMapApiKey";
 
 #. Reemplaza con tu código de país y ciudad.
 
@@ -122,8 +122,8 @@ También puedes comprarlos por separado desde los enlaces a continuación.
 
         // Replace with your country code and city
         // Fine the country code by https://openweathermap.org/find
-        String city = "<CITY>";
-        String countryCode = "<COUNTRY CODE>";
+        String city = "CITY";
+        String countryCode = "COUNTRY CODE";
 
 #. Después de que el código se ejecute, verás la información del tiempo y la hora de tu ubicación en el I2C LCD1602.
 

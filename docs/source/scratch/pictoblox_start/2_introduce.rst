@@ -1,4 +1,4 @@
-.. _.. _sh_introduce:.. note::
+.. note::
 
     ¡Hola, bienvenido a la Comunidad de Aficionados a Raspberry Pi, Arduino y ESP32 de SunFounder en Facebook! Profundiza en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
@@ -12,7 +12,7 @@
 
     👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy!
 
-
+.. _sh_introduce:
 
 1.2 Introducción a la Interfaz
 ================================

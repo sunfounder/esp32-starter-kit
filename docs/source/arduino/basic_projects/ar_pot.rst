@@ -114,13 +114,12 @@ Después de subir el código con éxito, gira el potenciómetro y verás el bril
 
     .. code-block:: arduino
 
-        const int potPin = 14; // Potentiometer connected to GPIO14
-        const int ledPin = 26; // LED connected to GPIO26
+        const int potPin = 35; // Potentiometer connected to
+        const int ledPin = 26; // LED connected to
 
         // PWM settings
         const int freq = 5000; // PWM frequency
         const int resolution = 12; // PWM resolution (bits)
-        const int channel = 0; // PWM channel
 
     Here the PWM resolution is set to 12 bits and the range is 0-4095.
 
@@ -132,12 +131,11 @@ Después de subir el código con éxito, gira el potenciómetro y verás el bril
             Serial.begin(115200);
 
             // Configure PWM
-            ledcSetup(channel, freq, resolution);
-            ledcAttachPin(ledPin, channel);
+            ledcAttach(ledPin, freq, resolution);
         }
 
     * En la función ``setup()``, se inicia la comunicación Serial a una tasa de baudios de 115200. 
-    * La función ``ledcSetup()`` se llama para configurar el canal PWM con la frecuencia y resolución especificadas, y la función ``ledcAttachPin()`` se llama para asociar el pin LED especificado con el canal PWM.
+    * La función ``ledcAttach()`` se llama para configurar el pin LED especificado con la frecuencia y resolución especificadas.
 
 3. Bucle principal (ejecutado repetidamente) en la función loop().
 
@@ -148,7 +146,7 @@ Después de subir el código con éxito, gira el potenciómetro y verás el bril
             int potValue = analogRead(potPin); // read the value of the potentiometer
             uint32_t voltage_mV = analogReadMilliVolts(potPin); // Read the voltage in millivolts
             
-            ledcWrite(channel, potValue);
+            ledcWrite(ledPin, potValue);
             
             Serial.print("Potentiometer Value: ");
             Serial.print(potValue);

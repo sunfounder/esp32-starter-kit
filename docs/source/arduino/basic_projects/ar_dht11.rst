@@ -97,6 +97,9 @@ También puedes comprarlos por separado en los enlaces a continuación.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95bef6dc-a4db-4315-9308-6663b77ddfa0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+
+Recuerda configurar la velocidad de comunicación serial a 115200.
+
 Después de que el código se haya subido con éxito, verás el Monitor Serial imprimiendo continuamente la temperatura y humedad, y a medida que el programa se ejecute de manera estable, estos dos valores se volverán más y más precisos.
 
 **¿Cómo funciona?**

@@ -82,13 +82,13 @@ También puedes comprarlos por separado en los enlaces a continuación.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
 
-#. Localiza las siguientes líneas y modifícalas con tu ``<SSID>`` y ``<CONTRASEÑA>``.
+#. Localiza las siguientes líneas y modifícalas con tu ``SSID`` y ``CONTRASEÑA``.
 
     .. code-block::  Arduino
 
         // Replace the next variables with your SSID/Password combination
-        const char* ssid = "<SSID>";
-        const char* password = "<PASSWORD>";
+        const char* ssid = "SSID";
+        const char* password = "PASSWORD";
 
 #. Ahora, habilita **PSRAM**.
 

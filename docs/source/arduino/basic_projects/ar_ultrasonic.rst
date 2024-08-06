@@ -91,7 +91,7 @@ Registrando el tiempo que tarda desde el envío hasta la recepción de la señal
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/28ded128-62a8-4b2b-b21a-450f03323cd8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
+Recuerda configurar la velocidad de comunicación serial a 115200.
 
 Después de que el código se haya subido exitosamente, el monitor serie imprimirá la distancia entre el sensor ultrasónico y el obstáculo adelante.
 
