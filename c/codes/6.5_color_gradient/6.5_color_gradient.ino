@@ -36,7 +36,6 @@ void loop() {
 }
 
 void setColor(int red, int green, int blue) {
-  // For common-anode RGB LEDs, use 255 minus the color value
   ledcWrite(redPin, red);
   ledcWrite(greenPin, green);
   ledcWrite(bluePin, blue);
