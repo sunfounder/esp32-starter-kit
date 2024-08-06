@@ -79,6 +79,15 @@ IRリモコンを使用して、プレイヤーは0から99の間の数字を入
     * ``6.7_guess_number.ino`` ファイルを ``esp32-starter-kit-main\c\codes\6.7_guess_number`` のパスで直接開けます。
     * こちらでは ``LiquidCrystal_I2C`` と ``IRremoteESP8266`` ライブラリーを使用しています。インストール方法は :ref:`install_lib_man` を参照してください。
 
+.. warning::
+
+    ESP32開発ボードのバージョン3.0.0以上を使用している場合、コンパイルプロセス中にエラーが発生することがあります。
+    この問題は、ボードの新しいバージョンが ``IRremoteESP8266`` ライブラリをサポートしなくなったためです。
+    この例を正しく実行するには、ESP32ボードのファームウェアバージョンを2.0.17にダウングレードすることをお勧めします。
+    この例を完了した後、最新バージョンに再度アップグレードしてください。
+
+    .. image:: ../../faq/img/version_2.0.17.png
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2e4217f5-c1b7-4859-a34d-d791bbc5e57a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
