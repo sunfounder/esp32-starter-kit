@@ -138,7 +138,7 @@ Nachdem der Code erfolgreich hochgeladen wurde, drehen Sie am Potentiometer und 
         }
 
     * In der Funktion ``setup()`` wird die serielle Kommunikation mit einer Baudrate von 115200 gestartet. 
-    * Die Funktion ``ledcSetup()`` wird aufgerufen, um den PWM-Kanal mit der angegebenen Frequenz und Auflösung einzurichten, und die Funktion ``ledcAttachPin()`` wird aufgerufen, um den angegebenen LED-Pin mit dem PWM-Kanal zu verknüpfen.
+    * Die Funktion ``ledcAttach()`` wird aufgerufen, um den angegebenen LED-Pin mit der angegebenen Frequenz und Auflösung einzurichten.
 
 #. Hauptloop (wird wiederholt ausgeführt) in der Funktion ``loop()``.
 
