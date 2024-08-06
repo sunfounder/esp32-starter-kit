@@ -98,7 +98,7 @@ También puedes comprarlos por separado en los siguientes enlaces.
     .. warning::
 
         Si estás utilizando una placa de desarrollo ESP32 versión 3.0.0 o superior, puedes encontrar errores durante el proceso de compilación.
-        Este problema se debe generalmente a que las versiones más recientes de la placa ya no son compatibles con la biblioteca ``IRremoteESP8266``.
+        Este problema se debe generalmente a que las versiones más recientes de la placa ya no son compatibles con la biblioteca ``ESP8266Audio``.
         Para ejecutar correctamente este ejemplo, se recomienda degradar la versión del firmware de tu placa ESP32 a la 2.0.17.
         Después de completar este ejemplo, actualiza nuevamente a la versión más reciente.
 
