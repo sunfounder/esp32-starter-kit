@@ -80,6 +80,15 @@ You can also buy them separately from the links below.
     * You can open the file ``6.7_guess_number.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.7_guess_number`` directly.
     * The ``LiquidCrystal_I2C`` and  ``IRremoteESP8266`` libraries are used here, refer to :ref:`install_lib_man` for a tutorial to install.
 
+.. warning::
+
+    If you are using an ESP32 development board version 3.0.0 or higher, you may encounter errors during the compilation process.
+    This issue is usually because the newer versions of the board no longer support the ``IRremoteESP8266`` library.
+    To properly run this example, it is recommended to downgrade your ESP32 board's firmware version to 2.0.17. 
+    After completing this example, upgrade back to the latest version.
+
+
+    .. image:: ../../faq/img/version_2.0.17.png
 
 .. raw:: html
 
