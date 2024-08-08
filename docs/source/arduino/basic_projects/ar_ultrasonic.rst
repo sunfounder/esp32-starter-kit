@@ -47,7 +47,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_ultrasonic`

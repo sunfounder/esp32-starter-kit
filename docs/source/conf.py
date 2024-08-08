@@ -123,6 +123,10 @@ rst_epilog = """
 
     <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/" target="_blank">English Online-tutorials</a>
 
+.. |link_fr_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/fr/latest/" target="_blank">Tutoriels en ligne en français</a>
+
 .. |link_thonny| raw:: html
 
     <a href="https://thonny.org/" target="_blank">Thonny</a>
@@ -235,10 +239,17 @@ rst_epilog = """
 
 rst_epilog += """
 
+.. |link_esp32_extension_board| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-esp32-camera-pro-kit?_pos=3&_sid=3d56bf6ea&_ss=r" target="_blank">BUY</a>
+
+.. |link_esp32_kit| raw:: html
+
+    <a href="https://www.sunfounder.com/collections/esp32-1/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">Purchase Link for ESP32 Starter Kit</a>
+
 .. |link_esp32_starter_kit| raw:: html
 
     <a href="https://www.sunfounder.com/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">ESP32 Starter Kit</a>
-
 
 
 .. |link_esp32_wroom_32e_buy| raw:: html
