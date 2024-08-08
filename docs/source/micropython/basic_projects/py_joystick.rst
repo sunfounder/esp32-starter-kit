@@ -56,7 +56,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_joystick`
