@@ -52,7 +52,7 @@ ESP32の内部DACを使用する場合、出力電圧レベルは1.1Vに限定�
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`

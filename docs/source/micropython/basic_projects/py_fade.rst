@@ -52,7 +52,7 @@ ESP32 WROOM 32EのPWM機能を使用することで、LEDの明るさを滑ら�
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`

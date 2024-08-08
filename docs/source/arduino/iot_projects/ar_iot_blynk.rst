@@ -50,7 +50,7 @@ Blynkアプリを通じてシステムを「外出」モードに設定すると
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_pir`

@@ -17,7 +17,7 @@ Video 40: Micro SDカードの読み書き
 
 SunFounder ESP32 IoTラーニングキットを使用して、Micro SDカードを効果的に利用する方法を学びます。フォーマット、コード実装、および実際のデモンストレーションを含みます。
 
-* **概要**: SunFounder ESP32ラーニングキットを使用したMicro SDカードの使用を始めましょう。
+* **概要**: SunFounder Esp32-starter-kitを使用したMicro SDカードの使用を始めましょう。
 * **SDカードのフォーマット**: Micro SDカードをフォーマットするための要件とESP32との互換性を確認します。
 * **Arduinoコード**: SDカードへのファイルの読み書きに関するArduinoコードを探ります。
 * **ボードセットアップ**: Arduino IDEでESP32ボードとCOMポートを選択し、シームレスに統合します。
