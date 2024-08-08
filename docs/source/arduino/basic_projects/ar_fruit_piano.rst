@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_fruit_piano:
 
-6.1 Fruit Piano
-====================
+6.1 Piano de Fruits
+========================
 
-Have you ever wanted to play the piano but couldn't afford one? Or maybe you just want to have some fun with diy a fruit piano? Well, this project is for you! 
+Avez-vous déjà voulu jouer du piano mais n'en avez pas les moyens ? Ou peut-être voulez-vous simplement vous amuser avec un piano en fruits DIY ? Eh bien, ce projet est fait pour vous !
 
-With just a few touch sensors on the ESP32 board, you can now play your favorite tunes and enjoy the experience of playing the piano without breaking the bank.
+Avec seulement quelques capteurs tactiles sur la carte ESP32, vous pouvez maintenant jouer vos airs préférés et profiter de l'expérience de jouer du piano sans vous ruiner.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_resistor`
@@ -60,17 +60,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**About the Touch Pins**
+**À propos des broches tactiles**
 
-The ESP32 microcontroller has built-in touch sensor functionality, which allows you to use certain pins on the board 
-as touch-sensitive inputs. The touch sensor works by measuring changes in capacitance on the touch pins, 
-which are caused by the electrical properties of the human body.
+Le microcontrôleur ESP32 dispose de fonctionnalités de capteur tactile intégrées, qui vous permettent d'utiliser certaines broches de la carte comme entrées tactiles. Le capteur tactile fonctionne en mesurant les changements de capacité sur les broches tactiles, causés par les propriétés électriques du corps humain.
 
-Here are some key features of the touch sensor on the ESP32:
+Voici quelques caractéristiques clés du capteur tactile sur l'ESP32 :
 
-* **Number of touch pins**
+* **Nombre de broches tactiles**
 
-    The ESP32 has up to 10 touch pins, depending on the specific board. The touch pins are typically labeled with a "T" followed by a number.
+    L'ESP32 dispose de jusqu'à 10 broches tactiles, selon la carte spécifique. Les broches tactiles sont généralement étiquetées avec un "T" suivi d'un numéro.
 
     * GPIO4: TOUCH0
     * GPIO0：TOUCH1
@@ -84,93 +82,89 @@ Here are some key features of the touch sensor on the ESP32:
     * GPIO32: TOUCH9
 
     .. note::
-        The GPIO0 and GPIO2 pins are used for bootstrapping and flashing firmware to the ESP32, respectively. These pins are also connected to the onboard LED and button. Therefore, it is generally not recommended to use these pins for other purposes, as it could interfere with the normal operation of the board.
+        Les broches GPIO0 et GPIO2 sont utilisées pour le bootstrap et le flashage du firmware sur l'ESP32, respectivement. Ces broches sont également connectées à la LED et au bouton intégrés. Par conséquent, il n'est généralement pas recommandé d'utiliser ces broches à d'autres fins, car cela pourrait interférer avec le fonctionnement normal de la carte.
 
-* **Sensitivity**
+* **Sensibilité**
 
-    The touch sensor on the ESP32 is very sensitive and can detect even small changes in capacitance. The sensitivity can be adjusted using software settings.
+    Le capteur tactile de l'ESP32 est très sensible et peut détecter même de petits changements de capacité. La sensibilité peut être ajustée à l'aide de paramètres logiciels.
 
-* **ESD Protection**
+* **Protection ESD**
 
-    The touch pins on the ESP32 have built-in ESD (Electrostatic Discharge) protection, which helps to prevent damage to the board from static electricity.
+    Les broches tactiles de l'ESP32 disposent d'une protection ESD (décharge électrostatique) intégrée, qui aide à prévenir les dommages à la carte causés par l'électricité statique.
 
 * **Multitouch**
 
-    The touch sensor on the ESP32 supports multitouch, which means that you can detect multiple touch events simultaneously.
+    Le capteur tactile de l'ESP32 prend en charge le multitouch, ce qui signifie que vous pouvez détecter plusieurs événements tactiles simultanément.
 
-
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_6.1_fruit_piano.png
 
-The idea behind this project is to use touch sensors to detect when a user touches a specific pin. 
-Each touch pin is associated with a specific note, and when the user touches a pin, 
-the corresponding note is played on the passive buzzer. 
-The result is a simple and affordable way to enjoy the experience of playing the piano.
+L'idée derrière ce projet est d'utiliser des capteurs tactiles pour détecter quand un utilisateur touche une broche spécifique. 
+Chaque broche tactile est associée à une note spécifique, et lorsque l'utilisateur touche une broche, 
+la note correspondante est jouée sur le buzzer passif. 
+Le résultat est une façon simple et abordable de profiter de l'expérience de jouer du piano.
 
-
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-In this project, you need to remove the ESP32 WROOM 32E from the expansion board and then insert it into the breadboard. This is because some pins on the expansion board are connected to resistors, which will affect the capacitance of the pins.
+Dans ce projet, vous devez retirer l'ESP32 WROOM 32E de la carte d'extension puis l'insérer dans la plaque de montage. 
+C'est parce que certaines broches sur la carte d'extension sont connectées à des résistances, 
+ce qui affectera la capacité des broches.
 
 **Code**
 
-
 .. note::
 
-    * You can open the file ``6.1_fruit_piano.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.1_fruit_piano`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``6.1_fruit_piano.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\6.1_fruit_piano`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/3e06ce6c-268a-4fdc-99d0-6d74f68265e2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-You can connect fruits to these ESP32 pins: 4, 15, 13, 12, 14, 27, 33, 32.
+Vous pouvez connecter des fruits à ces broches ESP32 : 4, 15, 13, 12, 14, 27, 33, 32.
 
-When the script runs, touching these fruits will play the notes C, D, E, F, G, A, B and C5.
+Lorsque le script s'exécute, toucher ces fruits jouera les notes C, D, E, F, G, A, B et C5.
 
-**How it works?**
+**Comment ça marche ?**
 
 * ``touchRead(uint8_t pin);``
 
-    This function gets the touch sensor data. Each touch sensor has a counter to count the number of charge/discharge cycles. 
-    When the pad is **touched**, the value in the counter will change because of the larger equivalent capacitance. 
-    The change of the data determines if the pad has been touched or not.
+    Cette fonction obtient les données du capteur tactile. Chaque capteur tactile a un compteur pour compter le nombre de cycles de charge/décharge. 
+    Lorsque le pad est **touché**, la valeur dans le compteur changera en raison de la capacité équivalente plus grande. 
+    Le changement des données détermine si le pad a été touché ou non.
 
-    * ``pin`` GPIO pin to read TOUCH value
+    * ``pin`` GPIO à lire la valeur TOUCH
 
-    This function returns a value between 0 and 4095, with a lower value indicating a stronger touch input.
+    Cette fonction renvoie une valeur entre 0 et 4095, une valeur plus basse indiquant une entrée tactile plus forte.
 
 .. note::
-    ``threshold`` needs to be adjusted based on the conductivity of different fruits. 
-    
-    You can run the script first to see the values printed by the shell.
+    Le ``seuil`` doit être ajusté en fonction de la conductivité des différents fruits.
+
+    Vous pouvez d'abord exécuter le script pour voir les valeurs imprimées par la console.
 
     .. code-block::
 
-      0: 60
-      1: 62
-      2: 71
-      3: 74
-      4: 73
-      5: 78
-      6: 80
-      7: 82
+      0 : 60
+      1 : 62
+      2 : 71
+      3 : 74
+      4 : 73
+      5 : 78
+      6 : 80
+      7 : 82
 
+    Après avoir touché les fruits sur les broches 12, 14 et 27, les valeurs imprimées sont les suivantes. Par conséquent, j'ai réglé le ``seuil`` à 30, ce qui signifie que lorsqu'une valeur inférieure à 30 est détectée, elle est considérée comme touchée et le buzzer émettra différentes notes.
 
-    After touching the fruits on pins 12, 14, and 27, the printed values are as follows. Therefore, I set the ``threshold`` to 30, which means that when a value less than 30 is detected, it is considered to be touched, and the buzzer will emit different notes.
-    
     .. code-block::
 
-      0: 60
-      1: 62
-      2: 71
-      3: 9
-      4: 12
-      5: 14
-      6: 75
-      7: 78
-
+      0 : 60
+      1 : 62
+      2 : 71
+      3 : 9
+      4 : 12
+      5 : 14
+      6 : 75
+      7 : 78

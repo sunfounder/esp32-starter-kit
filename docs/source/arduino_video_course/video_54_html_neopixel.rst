@@ -1,30 +1,30 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 54: Mastering RGB Color Mixing and IoT Control
-===============================================================
+Vidéo 54 : Maîtriser le mélange de couleurs RVB et le contrôle IoT
+=====================================================================
 
-Learn how to master RGB color mixing principles and leverage the power of ESP32 microcontrollers for IoT applications, controlling LED strips via Wi-Fi connectivity.
+Apprenez à maîtriser les principes de mélange des couleurs RVB et à exploiter la puissance des microcontrôleurs ESP32 pour les applications IoT, en contrôlant les bandes LED via la connectivité Wi-Fi.
 
-* **RGB Color Mixing**: Understand how to create any color using combinations of red, green, and blue (RGB) with a practical demonstration using an RGB Color Picker.
-* **ESP32 IoT Applications**: Explore the versatility of the ESP32 microcontroller for IoT projects, focusing on LED strip control via Wi-Fi.
-* **SunFounder ESP32 Camera Extension Module**: Discover the features of the SunFounder ESP32 camera extension module, including built-in battery and charger for easy power-up.
-* **Wiring and Code Explanation**: Dive deep into the wiring setup and code structure for controlling LED strips with detailed explanations of library installations, color selection, Wi-Fi setup, and client request handling.
-* **Selecting ESP32 Board and Port**: Step-by-step guidance on selecting the ESP32 board and port in the Arduino IDE, along with troubleshooting tips for identifying the correct port.
-* **Practical Demonstration**: Witness a practical demonstration of selecting colors and controlling LED strips using the ESP32 microcontroller through a web interface on various devices like desktops, mobile phones, and tablets.
+* **Mélange de couleurs RVB** : Comprenez comment créer n'importe quelle couleur en utilisant des combinaisons de rouge, vert et bleu (RVB) avec une démonstration pratique utilisant un sélecteur de couleurs RVB.
+* **Applications IoT avec ESP32** : Explorez la polyvalence du microcontrôleur ESP32 pour les projets IoT, en mettant l'accent sur le contrôle des bandes LED via Wi-Fi.
+* **Module d'extension caméra SunFounder ESP32** : Découvrez les fonctionnalités du module d'extension caméra SunFounder ESP32, incluant une batterie intégrée et un chargeur pour une mise sous tension facile.
+* **Explication du câblage et du code** : Plongez dans la configuration du câblage et la structure du code pour contrôler les bandes LED avec des explications détaillées sur l'installation des bibliothèques, la sélection des couleurs, la configuration Wi-Fi et la gestion des requêtes des clients.
+* **Sélection de la carte et du port ESP32** : Guide étape par étape pour sélectionner la carte ESP32 et le port dans l'IDE Arduino, avec des conseils de dépannage pour identifier le port correct.
+* **Démonstration pratique** : Assistez à une démonstration pratique de la sélection des couleurs et du contrôle des bandes LED en utilisant le microcontrôleur ESP32 via une interface web sur divers appareils tels que les ordinateurs de bureau, les téléphones mobiles et les tablettes.
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 

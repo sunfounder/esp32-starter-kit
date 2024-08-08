@@ -1,55 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_tilt:
 
-5.2 Tilt It！
-==========================
-The tilt switch is a simple yet effective 2-pin device that contains a metal ball in its center. When the switch is in an upright position, the two pins are electrically connected, allowing current to flow through. However, when the switch is tilted or tilted at a certain angle, the metal ball moves and breaks the electrical connection between the pins.
+5.2 Interrupteur d'inclinaison
+======================================
 
-In this project, we will utilize the tilt switch to control the illumination of an LED. By positioning the switch in a way that triggers the tilt action, we can toggle the LED on and off based on the switch's orientation. 
+L'interrupteur d'inclinaison est un dispositif simple mais efficace à 2 broches qui contient une bille métallique en son centre. Lorsque l'interrupteur est en position verticale, les deux broches sont électriquement connectées, permettant au courant de passer. Cependant, lorsque l'interrupteur est incliné ou penché à un certain angle, la bille métallique se déplace et rompt la connexion électrique entre les broches.
 
-**Required Components**
+Dans ce projet, nous utiliserons l'interrupteur d'inclinaison pour contrôler l'éclairage d'une LED. En positionnant l'interrupteur de manière à déclencher l'action d'inclinaison, nous pouvons allumer et éteindre la LED en fonction de l'orientation de l'interrupteur.
 
-In this project, we need the following components. 
+**Composants nécessaires**
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Dans ce projet, nous aurons besoin des composants suivants.
+
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -61,66 +62,61 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt`
         - \-
 
-**Available Pins**
+**Broches disponibles**
 
-* **Available Pins**
+* **Broches disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Pour entrée
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Pour sortie
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **Broches d'utilisation conditionnelle (entrée)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
-
+    Les broches suivantes ont des résistances de pull-up ou pull-down intégrées, donc des résistances externes ne sont pas nécessaires lorsque **vous les utilisez comme broches d'entrée** :
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
+        *   - Broches d'utilisation conditionnelle
             - Description
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Tirer vers le haut avec une résistance de 47K par défaut.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Tirer vers le haut avec une résistance de 4.7K par défaut.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Tirer vers le bas avec une résistance de 1K par défaut.
 
-* **Strapping Pins (Input)**
+* **Broches de strap (entrée)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Les broches de strap sont un ensemble spécial de broches utilisées pour déterminer des modes de démarrage spécifiques lors de la mise sous tension de l'appareil 
+    (c'est-à-dire réinitialisation par mise sous tension).
 
-    
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Broches de strap
             - IO5, IO0, IO2, IO12, IO15 
-    
 
-    
-
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    En général, il est **non recommandé de les utiliser comme broches d'entrée**. Si vous souhaitez utiliser ces broches, prenez en compte l'impact potentiel sur le processus de démarrage. Pour plus de détails, veuillez vous référer à la section :ref:`esp32_strapping`.
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.2_tilt.png
 
-When the tilt switch is in an upright position, IO14 will be set to high, resulting in the LED being lit. Conversely, when the tilt switch is tilted, IO14 will be set to low, causing the LED to turn off.
+Lorsque l'interrupteur d'inclinaison est en position verticale, IO14 sera réglé sur haut, ce qui allumera la LED. À l'inverse, lorsque l'interrupteur d'inclinaison est incliné, IO14 sera réglé sur bas, ce qui éteindra la LED.
 
-The purpose of the 10K resistor is to maintain a stable low state for IO14 when the tilt switch is in a tilted position.
+Le but de la résistance de 10K est de maintenir un état bas stable pour IO14 lorsque l'interrupteur d'inclinaison est en position inclinée.
 
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.2_tilt_switch_bb.png
 
@@ -128,28 +124,24 @@ The purpose of the 10K resistor is to maintain a stable low state for IO14 when 
 
 .. note::
 
-    * Open the ``5.2_tilt_switch.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Ouvrez le fichier ``5.2_tilt_switch.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Puis cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit.
 
 .. code-block:: python
 
     import machine
     import time
 
-    switch = machine.Pin(14, machine.Pin.IN) # Tilt switch pin
-    led = machine.Pin(26, machine.Pin.OUT) # LED pin
+    switch = machine.Pin(14, machine.Pin.IN) # Broche de l'interrupteur d'inclinaison
+    led = machine.Pin(26, machine.Pin.OUT) # Broche de la LED
 
     while True:
-        # Check if the switch is tilted by reading its value
+        # Vérifiez si l'interrupteur est incliné en lisant sa valeur
         if switch.value() == 1:
-            # Turn on the LED by setting its value to 1
+            # Allumez la LED en réglant sa valeur sur 1
             led.value(1)
         else:
-            # Turn off the LED
+            # Éteignez la LED
             led.value(0)
 
-When the script is running, the LED will be turned on when the switch is upright, and turned off when the switch is tilted.
-
-
+Lorsque le script est en cours d'exécution, la LED s'allumera lorsque l'interrupteur est en position verticale et s'éteindra lorsque l'interrupteur est incliné.

@@ -1,28 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-For Arduino User
-========================
+Pour les utilisateurs d'Arduino
+======================================
 
-
-Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
+Voici le package complet de code pour le kit de démarrage ESP32. Vous pouvez cliquer sur le lien suivant pour le télécharger :
 
 * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
+Une fois le téléchargement terminé, décompressez le fichier et ouvrez le code exemple ou les fichiers de projet pertinents dans le logiciel correspondant. Cela vous permettra de parcourir et d'utiliser tous les codes et ressources fournis par le kit.
 
-**1. Get Started**
+**1. Commencer**
 
 .. toctree::
     :maxdepth: 1
@@ -32,9 +31,7 @@ Once the download is complete, unzip the file and open the relevant example code
     arduino_start/install_esp32
     arduino_start/add_libraries_ar
 
-
-**2. Displays**
-
+**2. Affichages**
 
 .. toctree::
     :maxdepth: 1
@@ -47,8 +44,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_lcd
     basic_projects/ar_rgb_strip
 
-
-**3. Sounds**
+**3. Sons**
 
 .. toctree::
     :maxdepth: 1
@@ -56,7 +52,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_ac_buz
     basic_projects/ar_pa_buz
 
-**4. Actuators**
+**4. Actionneurs**
 
 .. toctree::
     :maxdepth: 1
@@ -65,7 +61,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_pump
     basic_projects/ar_servo
 
-**5. Sensors**
+**5. Capteurs**
 
 .. toctree::
     :maxdepth: 1
@@ -85,7 +81,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_dht11
     basic_projects/ar_irremote
 
-**6. Funny Projects**
+**6. Projets amusants**
 
 .. toctree::
     :maxdepth: 1
@@ -98,7 +94,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_plant_monitor
     basic_projects/ar_guess_number
 
-**7. Bluetooth&SD Card&Camera&Speaker**
+**7. Bluetooth, Carte SD, Caméra et Haut-parleur**
 
 .. toctree::
     :maxdepth: 1
@@ -110,7 +106,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_mp3_player_sd
     basic_projects/ar_take_photo_sd
 
-**8. Bluetooth&SD Card&Camera&Speaker**
+**8. IoT Projets**
 
 .. toctree::
     :maxdepth: 1

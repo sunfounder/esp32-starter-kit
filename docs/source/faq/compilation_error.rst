@@ -1,24 +1,24 @@
-Some project code fails to compile?
-===============================================
+Certains codes de projet ne se compilent pas ?
+===================================================
 
-Q1: ``'ledcAttach' was not declared in this scope``
------------------------------------------------------
+Q1 : ``'ledcAttach' was not declared in this scope``
+--------------------------------------------------------
 
-When using LEDs, RGB LEDs, or passive buzzers, you will need the ESP32 board's |link_ledc| peripheral to generate PWM signals. However, the ESP32 board was recently upgraded to version 3.0, which caused changes in the function names and usage within the |link_ledc| peripheral.
+Lors de l'utilisation de LEDs, de LEDs RVB ou de buzzers passifs, vous aurez besoin du périphérique |link_ledc| de la carte ESP32 pour générer des signaux PWM. Cependant, la carte ESP32 a récemment été mise à jour vers la version 3.0, ce qui a entraîné des changements dans les noms et l'utilisation des fonctions au sein du périphérique |link_ledc|.
 
-Therefore, we have updated our code accordingly. If you encounter ledc-related issues during compilation, please upgrade your ESP32 board to version 3.0 or higher.
+Par conséquent, nous avons mis à jour notre code en conséquence. Si vous rencontrez des problèmes liés à ledc lors de la compilation, veuillez mettre à niveau votre carte ESP32 vers la version 3.0 ou supérieure.
 
 .. image:: img/version_3.0.3.png
 
 
-Q2: Errors in Bluetooth and IR receiver-related projects after upgrading ESP32 to version 3.0?
---------------------------------------------------------------------------------------------------------
+Q2 : Erreurs dans les projets liés au Bluetooth et au récepteur IR après la mise à jour de l'ESP32 vers la version 3.0 ?
+--------------------------------------------------------------------------------------------------------------------------
 
-The ESP32 board has been upgraded to version 3.0, but the libraries used in Bluetooth and IR receiver-related projects are not yet compatible with version 3.0.
+La carte ESP32 a été mise à jour vers la version 3.0, mais les bibliothèques utilisées dans les projets liés au Bluetooth et au récepteur IR ne sont pas encore compatibles avec la version 3.0.
 
-To run these projects, it is recommended to temporarily downgrade the ESP32 version to 2.0, specifically version 2.0.17.
+Pour exécuter ces projets, il est recommandé de rétrograder temporairement la version de l'ESP32 à 2.0, en particulier la version 2.0.17.
 
-We will continuously monitor the updates of these libraries, and once they are compatible with ESP32 version 3.0, we will promptly update our code and documentation.
+Nous surveillerons continuellement les mises à jour de ces bibliothèques, et une fois qu'elles seront compatibles avec la version 3.0 de l'ESP32, nous mettrons rapidement à jour notre code et notre documentation.
 
 .. image:: img/version_2.0.17.png
 

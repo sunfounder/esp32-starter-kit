@@ -1,88 +1,88 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_rgb_strip:
 
-2.7 RGB LED Strip
-======================
+2.7 Bande LED RGB
+=========================
 
-In this project, we will delve into the mesmerizing world of driving WS2812 LED strips and bring a vibrant display of colors to life. With the ability to individually control each LED on the strip, we can create captivating lighting effects that will dazzle the senses.
+Dans ce projet, nous allons plonger dans le monde fascinant des bandes LED WS2812 et donner vie à un affichage vibrant de couleurs. Avec la capacité de contrôler individuellement chaque LED de la bande, nous pouvons créer des effets lumineux captivants qui éblouiront les sens.
 
-Furthermore, we have included an exciting extension to this project, where we will explore the realm of randomness. By introducing random colors and implementing a flowing light effect, we can create a mesmerizing visual experience that captivates and enchants.
+De plus, nous avons inclus une extension passionnante à ce projet, où nous explorerons le domaine du hasard. En introduisant des couleurs aléatoires et en implémentant un effet de lumière fluide, nous pouvons créer une expérience visuelle envoûtante et captivante.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.7_ws2812.png
     :width: 500
     :align: center
 
 
-**Available Pins**
+**Pins disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des pins disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pins disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
 .. note::
 
-    IO33 is not available for this project.
+    IO33 n'est pas disponible pour ce projet.
 
-    The WS2812 LED strip is a type of LED strip that requires a precise pulse-width modulation (PWM) signal. The PWM signal has precise requirements in both time and voltage. For instance, a "0" bit for the WS2812 corresponds to a high-level pulse of about 0.4 microseconds, while a "1" bit corresponds to a high-level pulse of about 0.8 microseconds. This means the strip needs to receive high-frequency voltage changes.
+    La bande LED WS2812 est un type de bande LED qui nécessite un signal de modulation de largeur d'impulsion (PWM) précis. Le signal PWM a des exigences précises en termes de temps et de tension. Par exemple, un bit "0" pour le WS2812 correspond à une impulsion de niveau haut d'environ 0,4 microsecondes, tandis qu'un bit "1" correspond à une impulsion de niveau haut d'environ 0,8 microsecondes. Cela signifie que la bande doit recevoir des changements de tension à haute fréquence.
 
-    However, with a 4.7K pull-up resistor and a 100nf pull-down capacitor on IO33, a simple low-pass filter is created. This type of circuit "smooths out" high-frequency signals, because the capacitor needs some time to charge and discharge when it receives voltage changes. Therefore, if the signal changes too quickly (i.e., is high-frequency), the capacitor will not be able to keep up. This results in the output signal becoming blurred and unrecognizable to the strip.
+    Cependant, avec une résistance pull-up de 4,7K et un condensateur pull-down de 100nF sur IO33, un simple filtre passe-bas est créé. Ce type de circuit "lisse" les signaux haute fréquence, car le condensateur a besoin de temps pour se charger et se décharger lorsqu'il reçoit des changements de tension. Par conséquent, si le signal change trop rapidement (c'est-à-dire à haute fréquence), le condensateur ne pourra pas suivre. Cela entraîne un flou du signal de sortie et le rend méconnaissable pour la bande.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/2.7_rgb_strip_bb.png
     :width: 800
@@ -91,10 +91,10 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * You can open the file ``2.7_rgb_strip.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.7_rgb_strip``. Or copy this code into **Arduino IDE**.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Vous pouvez ouvrir le fichier ``2.7_rgb_strip.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\2.7_rgb_strip``. Ou copiez ce code dans **Arduino IDE**.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Téléverser**.
     * :ref:`unknown_com_port`
-    * The ``Adafruit NeoPixel`` library is used here, you can install it from the **Library Manager**.
+    * La bibliothèque ``Adafruit NeoPixel`` est utilisée ici, vous pouvez l'installer à partir du **Gestionnaire de Bibliothèques**.
 
         .. image:: img/rgb_strip_lib.png
 
@@ -103,80 +103,81 @@ Here is a list of available pins on the ESP32 board for this project.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/bccd25f6-4e3e-45e2-b9f5-76a1b0866794/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-When the code is successfully uploaded, the LEDs on the strip will sequentially turn on with a yellow color and then turn off, creating a simple chasing effect.
+Lorsque le code est téléversé avec succès, les LED de la bande s'allumeront séquentiellement avec une couleur jaune puis s'éteindront, créant un simple effet de poursuite.
 
 
-**How it works?**
+**Comment ça marche ?**
 
 
-#. Include the Adafruit NeoPixel library: This line imports the Adafruit NeoPixel library so that the sketch can use its functions and classes to control the LED strip.
-
-    .. code-block:: arduino
-
-        #include <Adafruit_NeoPixel.h> // Include the Adafruit NeoPixel library
-
-#. Define constants for the LED strip.
+#. Inclure la bibliothèque Adafruit NeoPixel : Cette ligne importe la bibliothèque Adafruit NeoPixel afin que le croquis puisse utiliser ses fonctions et classes pour contrôler la bande LED.
 
     .. code-block:: arduino
 
-        #define LED_PIN 13 // NeoPixel LED strip
-        #define NUM_LEDS 8 // Number of LEDs
+        #include <Adafruit_NeoPixel.h> // Inclure la bibliothèque Adafruit NeoPixel
 
-#. Create an instance of the Adafruit_NeoPixel class.
+#. Définir les constantes pour la bande LED.
 
     .. code-block:: arduino
 
-       // Create an instance of the Adafruit_NeoPixel class
+        #define LED_PIN 13 // Bande LED NeoPixel
+        #define NUM_LEDS 8 // Nombre de LEDs
+
+#. Créer une instance de la classe Adafruit_NeoPixel.
+
+    .. code-block:: arduino
+
+       // Créer une instance de la classe Adafruit_NeoPixel
         Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
 
-    This line creates an instance of the ``Adafruit_NeoPixel`` class called ``strip`` and configures it with the number of LEDs, the pin connected to the LED strip, and the signal parameters (GRB color order and 800 kHz data rate).
+    Cette ligne crée une instance de la classe ``Adafruit_NeoPixel`` appelée ``strip`` et la configure avec le nombre de LEDs, la pin connectée à la bande LED et les paramètres du signal (ordre des couleurs GRB et fréquence de données de 800 kHz).
 
 
     * ``Adafruit_NeoPixel (uint16_t n, int16_t p = 6, neoPixelType t = NEO_GRB + NEO_KHZ800)``	
 
-    NeoPixel constructor when length, pin and pixel type are known at compile-time. Ruturn Adafruit_NeoPixel object. Call the ``begin()`` function before use.
+    Constructeur NeoPixel lorsque la longueur, la pin et le type de pixel sont connus au moment de la compilation. Retourne un objet Adafruit_NeoPixel. Appelez la fonction ``begin()`` avant utilisation.
 
-        * ``n``: Number of NeoPixels in strand.
-        * ``p``: Arduino pin number which will drive the NeoPixel data in.
-        * ``t``: Pixel type - add together ``NEO_*`` constants defined in ``Adafruit_NeoPixel.h``, for example ``NEO_GRB+NEO_KHZ800`` for NeoPixels expecting an 800 KHz (vs 400 KHz) data stream with color bytes expressed in green, red, blue order per pixel.
+        * ``n``: Nombre de NeoPixels dans la bande.
+        * ``p``: Numéro de la pin Arduino qui pilotera les données NeoPixel.
+        * ``t``: Type de pixel - additionnez les constantes ``NEO_*`` définies dans ``Adafruit_NeoPixel.h``, par exemple ``NEO_GRB+NEO_KHZ800`` pour les NeoPixels nécessitant un flux de données de 800 KHz (vs 400 KHz) avec des octets de couleur exprimés dans l'ordre vert, rouge, bleu par pixel.
 
-#. Initialize the WS2812 RGB strip and sets the initial color of the strip to black (off).
+#. Initialiser la bande RGB WS2812 et définir la couleur initiale de la bande sur noir (éteint).
 
     .. code-block:: arduino
 
         void setup() {
-            strip.begin(); // Initialize the NeoPixel strip
-            strip.show(); // Set initial color to black
+            strip.begin(); // Initialiser la bande NeoPixel
+            strip.show(); // Définir la couleur initiale sur noir
         }
 
-    * ``void begin (void)``: Configure NeoPixel pin for output.
-    * ``void show (void)``: Transmit pixel data in RAM to NeoPixels.
+    * ``void begin (void)``: Configure la pin NeoPixel pour la sortie.
+    * ``void show (void)``: Transmet les données des pixels en RAM aux NeoPixels.
 
-#. In the ``loop()`` function, the LEDs on the strip will sequentially turn on with a yellow color and then turn off, creating a simple chasing effect.
+#. Dans la fonction ``loop()``, les LED de la bande s'allumeront séquentiellement avec une couleur jaune puis s'éteindront, créant un simple effet de poursuite.
 
     .. code-block:: arduino
 
         void loop() {
-        // Turn on LEDs one by one
+        // Allumer les LEDs une par une
         for (int i = 0; i < NUM_LEDS; i++) {
-            strip.setPixelColor(i, 100, 45, 0); // Set the color of the i-th LED to red
-            strip.show(); // Update the LED strip with the new colors
-            delay(100); // Wait for 100 milliseconds
+            strip.setPixelColor(i, 100, 45, 0); // Définir la couleur de la ième LED en rouge
+            strip.show(); // Mettre à jour la bande LED avec les nouvelles couleurs
+            delay(100); // Attendre 100 millisecondes
         }
         
-        // Turn off LEDs one by one
+        // Éteindre les LEDs une par une
         for (int i = 0; i < NUM_LEDS; i++) {
-            strip.setPixelColor(i, 0, 0, 0); // Set the color of the i-th LED to black (turn it off)
-            strip.show(); // Update the LED strip with the new colors
-            delay(100); // Wait for 100 milliseconds
+            strip.setPixelColor(i, 0, 0, 0); // Définir la couleur de la ième LED en noir (éteindre)
+            strip.show(); // Mettre à jour la bande LED avec les nouvelles couleurs
+            delay(100); // Attendre 100 millisecondes
         }
         }
 
     * ``void setPixelColor (uint16_t n, uint8_t r, uint8_t g, uint8_t b)``
 
-    Set a pixel's color using separate red, green and blue components. If using RGBW pixels, white will be set to 0.
+    Définir la couleur d'un pixel en utilisant des composantes rouge, verte et bleue séparées. Si vous utilisez des pixels RGBW, le blanc sera défini sur 0.
 
-        * ``n``: Pixel index, starting from 0.
-        * ``r``: Red brightness, 0 = minimum (off), 255 = maximum.
-        * ``g``: Green brightness, 0 = minimum (off), 255 = maximum.
-        * ``b``: Blue brightness, 0 = minimum (off), 255 = maximum.
+        * ``n``: Index du pixel, en commençant par 0.
+        * ``r``: Luminosité du rouge, 0 = minimum (éteint), 255 = maximum.
+        * ``g``: Luminosité du vert, 0 = minimum (éteint), 255 = maximum.
+        * ``b``: Luminosité du bleu, 0 = minimum (éteint), 255 = maximum.
+

@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_pir:
 
-5.5 Detect Human Movement
+5.5 Détecter les mouvements humains
 ========================================
 
-Passive infrared sensor (PIR sensor) is a common sensor that can measure infrared (IR) light emitted by objects in its field of view.
-Simply put, it will receive infrared radiation emitted from the body, thereby detecting the movement of people and other animals.
-More specifically, it tells the main control board that someone has entered your room.
+Le capteur infrarouge passif (capteur PIR) est un capteur courant qui peut mesurer la lumière infrarouge (IR) émise par les objets dans son champ de vision.
+En termes simples, il détecte le rayonnement infrarouge émis par le corps, permettant ainsi de détecter les mouvements des personnes et autres animaux.
+Plus spécifiquement, il informe la carte de contrôle principale que quelqu'un est entré dans votre pièce.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -62,56 +62,55 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-* **Available Pins**
+* **Broches disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Pour entrée
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Pour sortie
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 .. note::
     
-    IO32 cannot be used **as input pin** in this project because it is internally connected to a 1K pull-down resistor, which sets its default value to 0.
+    IO32 ne peut pas être utilisée **comme broche d'entrée** dans ce projet car elle est connectée en interne à une résistance de tirage vers le bas de 1K, ce qui définit sa valeur par défaut à 0.
 
-* **Strapping Pins (Input)**
+* **Broches de Strapping (entrée)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Les broches de strapping sont un ensemble spécial de broches utilisées pour déterminer des modes de démarrage spécifiques pendant le démarrage de l'appareil 
+    (c'est-à-dire, la réinitialisation lors de la mise sous tension).
 
     
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Broches de Strapping
             - IO5, IO0, IO2, IO12, IO15 
     
 
     
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    En général, il est **déconseillé de les utiliser comme broches d'entrée**. Si vous souhaitez utiliser ces broches, tenez compte de l'impact potentiel sur le processus de démarrage. Pour plus de détails, veuillez vous référer à la section :ref:`esp32_strapping`.
 
-
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.5_pir.png
 
-When the PIR module detects motion, IO14 will go high, and the LED will be lit. Otherwise, when no motion is detected, IO14 will be low, and the LED will turn off.
+Lorsque le module PIR détecte un mouvement, IO14 passe à un niveau haut et la LED s'allume. Sinon, lorsque aucun mouvement n'est détecté, IO14 reste à un niveau bas et la LED s'éteint.
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    Le module PIR dispose de deux potentiomètres : l'un ajuste la sensibilité, l'autre ajuste la distance de détection. Pour optimiser le fonctionnement du module PIR, il est nécessaire de tourner les deux à fond dans le sens antihoraire.
 
     .. image:: ../../components/img/PIR_TTE.png
         :width: 300
         :align: center
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.5_pir_bb.png
 
@@ -119,8 +118,8 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
 
 .. note::
 
-    * Open the ``5.5_detect_human_movement.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Ouvrez le fichier ``5.5_detect_human_movement.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Puis cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 
 
@@ -129,40 +128,40 @@ When the PIR module detects motion, IO14 will go high, and the LED will be lit. 
     import machine
     import time
 
-    # Define pins
-    PIR_PIN = 14    # PIR sensor
+    # Définir les broches
+    PIR_PIN = 14    # Capteur PIR
     LED_PIN = 26    # LED
 
-    # Initialize the PIR sensor pin as an input pin
+    # Initialiser la broche du capteur PIR comme une broche d'entrée
     pir_sensor = machine.Pin(PIR_PIN, machine.Pin.IN, machine.Pin.PULL_DOWN)
-    # Initialize the LED pin as an output pin
+    # Initialiser la broche LED comme une broche de sortie
     led = machine.Pin(LED_PIN, machine.Pin.OUT)
 
-    # Global flag to indicate motion detected
+    # Indicateur global pour détecter un mouvement
     motion_detected_flag = False
 
-    # Function to handle the interrupt
+    # Fonction pour gérer l'interruption
     def motion_detected(pin):
         global motion_detected_flag
         print("Motion detected!")
         motion_detected_flag = True
 
-    # Attach the interrupt to the PIR sensor pin
+    # Attacher l'interruption à la broche du capteur PIR
     pir_sensor.irq(trigger=machine.Pin.IRQ_RISING, handler=motion_detected)
 
-    # Main loop
+    # Boucle principale
     while True:
         if motion_detected_flag:
-            led.value(1)  # Turn on the LED
-            time.sleep(5)  # Keep the LED on for 5 seconds
-            led.value(0)  # Turn off the LED
+            led.value(1)  # Allumer la LED
+            time.sleep(5)  # Garder la LED allumée pendant 5 secondes
+            led.value(0)  # Éteindre la LED
             motion_detected_flag = False
 
-When the script is running, the LED will light up for 5 seconds and then go off when the PIR module detects someone passing.
+Lorsque le script est en cours d'exécution, la LED s'allumera pendant 5 secondes puis s'éteindra lorsque le module PIR détectera quelqu'un qui passe.
 
 .. note::
 
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    Le module PIR dispose de deux potentiomètres : l'un ajuste la sensibilité, l'autre ajuste la distance de détection. Pour optimiser le fonctionnement du module PIR, il est nécessaire de tourner les deux à fond dans le sens antihoraire.
 
     .. image:: ../../components/img/PIR_TTE.png
         :width: 300
@@ -171,14 +170,14 @@ When the script is running, the LED will light up for 5 seconds and then go off 
 
 
 
-**How it work?**
+**Comment ça marche ?**
 
 
-This code sets up a simple motion detection system using a PIR sensor and an LED. When motion is detected, the LED will turn on for 5 seconds. 
+Ce code configure un système de détection de mouvement simple utilisant un capteur PIR et une LED. Lorsqu'un mouvement est détecté, la LED s'allume pendant 5 secondes. 
 
-Here's a breakdown of the code:
+Voici une explication détaillée du code :
 
-#. Define the interrupt handler function that will be executed when motion is detected:
+#. Définir la fonction de gestion de l'interruption qui sera exécutée lorsque le mouvement est détecté :
 
     .. code-block:: python
 
@@ -187,31 +186,32 @@ Here's a breakdown of the code:
             print("Motion detected!")
             motion_detected_flag = True
 
-#. Attach the interrupt to the PIR sensor pin, with the trigger set to "rising" (i.e., when the pin goes from low to high voltage):
+#. Attacher l'interruption à la broche du capteur PIR, avec le déclenchement réglé sur "montée" (c'est-à-dire lorsque la broche passe d'une basse à une haute tension) :
 
     .. code-block:: python
 
         pir_sensor.irq(trigger=machine.Pin.IRQ_RISING, handler=motion_detected)
 
-    This sets up an interrupt on the ``pir_sensor`` pin, which is connected to the PIR motion sensor.
+    Cela configure une interruption sur la broche ``pir_sensor``, qui est connectée au capteur de mouvement PIR.
 
-    Here's a detailed explanation of the parameters:
+    Voici une explication détaillée des paramètres :
 
-    * ``trigger=machine.Pin.IRQ_RISING``: This parameter sets the trigger condition for the interrupt. In this case, the interrupt will be triggered on a rising edge. A rising edge is when the voltage on the pin changes from a low state (0V) to a high state (typically 3.3V or 5V, depending on your hardware). For a PIR motion sensor, when motion is detected, the output pin usually goes from low to high, making the rising edge an appropriate trigger condition.
+    * ``trigger=machine.Pin.IRQ_RISING`` : Ce paramètre définit la condition de déclenchement de l'interruption. Dans ce cas, l'interruption sera déclenchée sur un front montant. Un front montant est lorsque la tension sur la broche passe d'un état bas (0V) à un état haut (typiquement 3,3V ou 5V, selon votre matériel). Pour un capteur de mouvement PIR, lorsque le mouvement est détecté, la broche de sortie passe généralement de bas à haut, ce qui fait du front montant une condition de déclenchement appropriée.
 
-    * ``handler=motion_detected``: This parameter specifies the function that will be executed when the interrupt is triggered. In this case, the ``motion_detected`` function is provided as the interrupt handler. This function will be called automatically when the interrupt condition (rising edge) is detected on the ``pir_sensor`` pin.
+    * ``handler=motion_detected`` : Ce paramètre spécifie la fonction qui sera exécutée lorsque l'interruption est déclenchée. Dans ce cas, la fonction ``motion_detected`` est fournie en tant que gestionnaire d'interruption. Cette fonction sera appelée automatiquement lorsque la condition d'interruption (front montant) est détectée sur la broche ``pir_sensor``.
 
-    So, this line of code configures the PIR sensor to call the ``motion_detected`` function whenever motion is detected by the sensor, due to the output pin going from a low to a high state.
+    Ainsi, cette ligne de code configure le capteur PIR pour appeler la fonction ``motion_detected`` chaque fois qu'un mouvement est détecté par le capteur, en raison du passage de la broche de sortie d'un état bas à un état haut.
 
 
 
-#. In the main loop, if the ``motion_detected_flag`` is set to ``True``, the LED will be turned on for 5 seconds and then turned off. The flag is then reset to ``False`` to wait for the next motion event.
+#. Dans la boucle principale, si le ``motion_detected_flag`` est réglé sur ``True``, la LED sera allumée pendant 5 secondes, puis éteinte. Le drapeau est ensuite réinitialisé à ``False`` pour attendre le prochain événement de mouvement.
 
     .. code-block:: python
 
         while True:
             if motion_detected_flag:
-                led.value(1)  # Turn on the LED
-                time.sleep(5)  # Keep the LED on for 5 seconds
-                led.value(0)  # Turn off the LED
+                led.value(1)  # Allumer la LED
+                time.sleep(5)  # Garder la LED allumée pendant 5 secondes
+                led.value(0)  # Éteindre la LED
                 motion_detected_flag = False
+

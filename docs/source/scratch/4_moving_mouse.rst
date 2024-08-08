@@ -1,59 +1,58 @@
-.. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions et cadeaux festifs** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _sh_moving_mouse:
 
-2.4 Moving Mouse
-===================
+2.4 Souris en Mouvement
+===========================
 
-Today we are going to make a mouse toy controlled by a potentiometer.
+Aujourd'hui, nous allons fabriquer un jouet de souris contrôlé par un potentiomètre.
 
-When the green flag is clicked, the mouse on the stage moves forward, and when you rotate the potentiometer, the mouse will change the direction of movement.
+Lorsque le drapeau vert est cliqué, la souris sur la scène avance, et lorsque vous tournez le potentiomètre, la souris change de direction.
 
 .. image:: img/6_mouse.png
 
-Required Components
----------------------
+Composants nécessaires
+--------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -61,69 +60,64 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-You Will Learn
----------------------
+Vous apprendrez
+------------------
 
-- Potentiometer principle
-- Read analog pin and ranges
-- Mapping one range to another
-- Moving and changing the direction of sprite
+- Principe du potentiomètre
+- Lire la broche analogique et les plages de valeurs
+- Mapper une plage à une autre
+- Déplacer et changer la direction du sprite
 
-Build the Circuit
+Construire le circuit
 -----------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to pin35. After conversion by the ADC converter of the ESP32, the value range is 0-4095.
+Le potentiomètre est un élément résistif à 3 bornes, les 2 broches latérales sont connectées à 5V et GND, et la broche centrale est connectée à la broche 35. Après conversion par le convertisseur ADC de l'ESP32, la plage de valeurs est de 0 à 4095.
 
 .. image:: img/circuit/5_moving_mouse_bb.png
 
-Programming
-------------------
+Programmation
+-------------
 
-**1. Choose a sprite**
+**1. Choisir un sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **mouse** in the search box, and then click to add it.
+Supprimez le sprite par défaut, cliquez sur le bouton **Choisir un sprite** dans le coin inférieur droit de la zone de sprites, entrez **mouse** dans la barre de recherche, puis cliquez pour l'ajouter.
 
 .. image:: img/6_sprite.png
 
-**2. Creating a variable**.
+**2. Créer une variable**
 
-Create a variable called **value** to store the value of the potentiometer read.
+Créez une variable appelée **value** pour stocker la valeur lue par le potentiomètre.
 
-Once created, you will see **value** appear inside the **Variables** palette and in the checked state, which means this variable will appear on the stage.
+Une fois créée, vous verrez **value** apparaître dans la palette **Variables** et en état coché, ce qui signifie que cette variable apparaîtra sur la scène.
 
 .. image:: img/6_value.png
 
-**3. Read the value of pin35**
+**3. Lire la valeur de la broche 35**
 
-Store the value of pin35 read into the variable **value**.
+Stockez la valeur lue de la broche 35 dans la variable **value**.
 
-* [set my variable to 0]: Set the value of the variable.
-* [read analog pin ()]: Read the value of pins in the range of 0-4095.
+* [set my variable to 0] : Définit la valeur de la variable.
+* [read analog pin ()] : Lit la valeur des broches dans la plage de 0 à 4095.
 
 .. image:: img/6_read_a0.png
 
-To be able to read all the way through, you need to use the [forever] block. Click on this script to run it, rotate the potentiometer in both directions, and you will see that the value range is 0-1023.
+Pour pouvoir lire en continu, vous devez utiliser le bloc [forever]. Cliquez sur ce script pour le faire fonctionner, tournez le potentiomètre dans les deux sens, et vous verrez que la plage de valeurs est de 0 à 1023.
 
 .. image:: img/6_1023.png
 
-**4. Move the sprite**
+**4. Déplacer le sprite**
 
-Use the [move steps] block to move the sprite, run the script and you will see the sprite move from the middle to the right.
+Utilisez le bloc [move steps] pour déplacer le sprite, exécutez le script et vous verrez le sprite se déplacer du milieu vers la droite.
 
 .. image:: img/6_move.png
 
-**5. Changing the sprite's direction**
+**5. Changer la direction du sprite**
 
-Now change the direction of the sprite's movement by the value of pin35. Since the value of pin35 ranges from 0-4095, but the sprite's rotation direction is -180~180, a [map] block needs to be used.
+Maintenant, changez la direction du mouvement du sprite en fonction de la valeur de la broche 35. Étant donné que la valeur de la broche 35 varie de 0 à 4095, mais que la direction de rotation du sprite est de -180 à 180, un bloc [map] doit être utilisé.
 
-Also add [when green flag clicked] at the beginning to start the script.
+Ajoutez également [when green flag clicked] au début pour démarrer le script.
 
-* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Set the steering angle of the sprite, from **Motion** palette.
-* [map from to]: Map a range to another range.
+* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_] : Définit l'angle de direction du sprite, de la palette **Mouvement**.
+* [map from to] : Mappe une plage à une autre.
 
 .. image:: img/6_direction.png
-
-
-
-
-

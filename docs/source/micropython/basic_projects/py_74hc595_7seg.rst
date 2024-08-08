@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_7_segment:
 
-2.5 Number Display
-=======================
+2.5 Affichage de Numéros 
+=================================
 
-Welcome to this fascinating project! In this project, we will explore the enchanting world of displaying numbers from 0 to 9 on a seven-segment display.
+Bienvenue dans ce projet fascinant ! Dans ce projet, nous explorerons le monde enchanteur de l'affichage des chiffres de 0 à 9 sur un afficheur à sept segments.
 
-Imagine triggering this project and witnessing a small, compact display glowing brightly with each number from 0 to 9. It's like having a miniature screen that showcases the digits in a captivating way. By controlling the signal pins, you can effortlessly change the displayed number and create various engaging effects.
+Imaginez déclencher ce projet et voir un petit afficheur compact s'illuminer avec chaque chiffre de 0 à 9. C'est comme avoir un mini-écran qui affiche les chiffres de manière captivante. En contrôlant les broches de signal, vous pouvez facilement changer le chiffre affiché et créer divers effets engageants.
 
-Through simple circuit connections and programming, you will learn how to interact with the seven-segment display and bring your desired numbers to life. Whether it's a counter, a clock, or any other intriguing application, the seven-segment display will be your reliable companion, adding a touch of brilliance to your projects.
+Grâce à des connexions de circuit simples et à la programmation, vous apprendrez à interagir avec l'afficheur à sept segments et à donner vie aux chiffres souhaités. Que ce soit pour un compteur, une horloge ou toute autre application intrigante, l'afficheur à sept segments sera votre compagnon fiable, ajoutant une touche de brillance à vos projets.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DU COMPOSANT
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -64,29 +64,28 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Broches Disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.5_74hc595_7_segment.png
 
-Here the wiring principle is basically the same as :ref:`py_74hc595`, the only difference is that Q0-Q7 are connected to the a ~ g pins of the 7 Segment Display.
+Le principe de câblage est essentiellement le même que :ref:`py_74hc595`, la seule différence est que Q0-Q7 sont connectés aux broches a ~ g de l'afficheur à 7 segments.
 
-.. list-table:: Wiring
+.. list-table:: Câblage
     :widths: 15 25
     :header-rows: 1
 
     *   - 74HC595
-        - LED Segment Display
+        - Afficheur à Segment LED
     *   - Q0
         - a
     *   - Q1
@@ -104,7 +103,7 @@ Here the wiring principle is basically the same as :ref:`py_74hc595`, the only d
     *   - Q7
         - dp
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/2.5_segment_bb.png
 
@@ -112,80 +111,81 @@ Here the wiring principle is basically the same as :ref:`py_74hc595`, the only d
 
 .. note::
 
-    * Open the ``2.5_number_display.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Ouvrez le fichier ``2.5_number_display.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Ensuite, cliquez sur "Exécuter le script actuel" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit.
 
 .. code-block:: python
 
     import machine
     import time
 
-    # Define the segment code for a common anode 7-segment display
+    # Définir le code segment pour un afficheur à 7 segments à anode commune
     SEGCODE = [0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f]
 
-    # Initialize the pins for the 74HC595 shift register
+    # Initialiser les broches pour le registre à décalage 74HC595
     sdi = machine.Pin(25, machine.Pin.OUT)  # DS
     rclk = machine.Pin(27, machine.Pin.OUT)  # STcp
     srclk = machine.Pin(26, machine.Pin.OUT)  # SHcp
 
-    # Define the hc595_shift function to shift data into the 74HC595 shift register
+    # Définir la fonction hc595_shift pour décaler les données dans le registre à décalage 74HC595
     def hc595_shift(dat):
-        # Set the RCLK pin to low
+        # Mettre la broche RCLK à bas
         rclk.off()
         
-        # Iterate through each bit (from 7 to 0)
+        # Itérer à travers chaque bit (de 7 à 0)
         for bit in range(7, -1, -1):
-            # Extract the current bit from the input data
+            # Extraire le bit actuel des données d'entrée
             value = 1 & (dat >> bit)
             
-            # Set the SRCLK pin to low
+            # Mettre la broche SRCLK à bas
             srclk.off()
             
-            # Set the value of the SDI pin
+            # Définir la valeur de la broche SDI
             sdi.value(value)
             
-            # Clock the current bit into the shift register by setting the SRCLK pin to high
+            # Envoyer le bit actuel dans le registre à décalage en mettant la broche SRCLK à haut
             srclk.on()
             
-        # Latch the data into the storage register by setting the RCLK pin to high
+        # Verrouiller les données dans le registre de stockage en mettant la broche RCLK à haut
         rclk.on()
 
-    # Continuously loop through the numbers 0 to 9 and display them on the 7-segment display
+    # Boucler continuellement à travers les chiffres de 0 à 9 et les afficher sur l'afficheur à 7 segments
     while True:
         for num in range(10):
             hc595_shift(SEGCODE[num])  # Shift the segment code for the current number into the 74HC595
             time.sleep_ms(500)  # Wait 500 milliseconds before displaying the next number
 
 
-    
+Lorsque le script est en cours d'exécution, vous pourrez voir l'afficheur à segments LED afficher les chiffres de 0 à 9 en séquence.
 
-When the script is running, you will be able to see the LED Segment Display display 0~9 in sequence.
+**Comment ça marche ?**
 
-**How it works?**
+Dans ce projet, nous utilisons la fonction ``hc595_shift()`` pour écrire le nombre binaire dans le registre à décalage.
 
-In this project, we are using the ``hc595_shift()`` function to write the binary number to the shift register. 
+Supposons que l'afficheur à 7 segments affiche le chiffre "2". Ce modèle de bits correspond aux segments **f**, **c** et **dp** éteints (bas), tandis que les segments **a**, **b**, **d**, **e** et **g** sont allumés (haut). Cela correspond à "01011011" en binaire et "0x5b" en notation hexadécimale.
 
-Suppose that the 7-segment Display display the number "2". This bit pattern corresponds to the segments **f**, **c** and **dp** being turned off (low), while the segments **a**, **b**, **d**, **e** and **g** are turned on (high). This is "01011011" in binary and "0x5b" in hexadecimal notation. 
-
-Therefore, you would need to call **hc595_shift(0x5b)** to display the number "2" on the 7-segment display.
+Par conséquent, vous devez appeler **hc595_shift(0x5b)** pour afficher le chiffre "2" sur l'afficheur à 7 segments.
 
 .. image:: img/7_segment2.png
+
 
 
 * `Hexadecimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
 
 * `BinaryHex Converter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
 
-The following table shows the hexadecimal patterns that need to be written to the shift register to display the numbers 0 to 9 on a 7-segment display.
+
+Le tableau suivant montre les motifs hexadécimaux à écrire dans le registre à décalage pour afficher les chiffres de 0 à 9 sur un afficheur à 7 segments.
+
 
 
 .. list-table:: Glyph Code
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Numbers	
-        - Binary Code
-        - Hex Code  
+    *   - Chiffres	
+        - Code Binaire
+        - Code Hexadécimal  
     *   - 0	
         - 00111111	
         - 0x3f
@@ -217,4 +217,4 @@ The following table shows the hexadecimal patterns that need to be written to th
         - 01101111	
         - 0x6f
 
-Write these codes into ``hc595_shift()`` to make the LED Segment Display display the corresponding numbers.
+Écrivez ces codes dans ``hc595_shift()`` pour que l'afficheur à segments LED affiche les chiffres correspondants.

@@ -1,57 +1,56 @@
-.. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions et cadeaux festifs** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _sh_light_alarm:
 
-2.7 Light Alarm Clock
-======================
+2.7 Réveil Lumineux
+========================
 
-In life, there are various kinds of time alarm clocks. Now let's make a light-controlled alarm clock. When morning comes, the brightness of light increases and this light-controlled alarm clock will remind you that it's time to get up.
+Dans ce projet, nous allons créer un réveil contrôlé par la lumière. Lorsque le matin arrive et que la luminosité augmente, ce réveil lumineux vous rappellera qu'il est temps de vous lever.
 
 .. image:: img/10_clock.png
 
-Required Components
----------------------
+Composants nécessaires
+---------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -61,55 +60,57 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-You Will Learn
+
+Vous apprendrez
+---------------
+
+
+- Principe de fonctionnement de la photorésistance
+- Arrêt de la lecture du son et arrêt des scripts en cours
+
+Construire le circuit
 ---------------------
 
-- Photoresistor working principle
-- Stopping sound playback and stopping scripts from running
+Une photorésistance ou cellule photoélectrique est une résistance variable contrôlée 
+par la lumière. La résistance d'une photorésistance diminue avec l'augmentation de l'intensité lumineuse incidente.
 
-Build the Circuit
------------------------
+Construisez le circuit selon le schéma suivant.
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+Connectez une extrémité de la photorésistance à 5V, l'autre extrémité à la broche 35, et connectez une résistance de 10K en série avec la masse (GND) à cette extrémité.
 
-Build the circuit according to the following diagram.
-
-Connect one end of the photoresistor to 5V, the other end to pin35, and connect a 10K resistor in series with GND at this end.
-
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by pin35 becomes larger.
+Ainsi, lorsque l'intensité lumineuse augmente, la résistance de la photorésistance diminue, la division de tension de la résistance de 10K augmente, et la valeur obtenue par la broche 35 devient plus grande.
 
 .. image:: img/circuit/8_light_alarm_bb.png
 
-Programming
-------------------
+Programmation
+-----------------
 
-**1. Select a sprite**
+**1. Sélectionner un sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Supprimez le sprite par défaut, cliquez sur le bouton **Choisir un sprite** dans le coin inférieur droit de la zone des sprites, entrez **cloche** dans la barre de recherche, puis cliquez pour l'ajouter.
 
 .. image:: img/10_sprite.png
 
-**2. Read the value of pin35**
+**2. Lire la valeur de la broche 35**
 
-Create two variables **before** and **current**. When green flag is clicked, read the value of pin35 and store it in variable **before** as a reference value. In [forever], read the value of pin35 again, store it in the variable **current**.
+Créez deux variables **avant** et **actuel**. Lorsque le drapeau vert est cliqué, lisez la valeur de la broche 35 et stockez-la dans la variable **avant** comme valeur de référence. Dans [toujours], lisez à nouveau la valeur de la broche 35 et stockez-la dans la variable **actuel**.
 
 .. image:: img/10_reada0.png
 
-**3. Make a sound**
+**3. Émettre un son**
 
-When the value of current pin35 is greater than the previous 50, which represents the current light intensity is greater than the threshold, then let the sprite make a sound.
+Lorsque la valeur actuelle de la broche 35 est supérieure de 50 à la valeur précédente, ce qui représente une intensité lumineuse actuelle supérieure au seuil, faites émettre un son au sprite.
 
 .. image:: img/10_sound.png
 
-**4. Turning the sprite**
+**4. Faire tourner le sprite**
 
-Use [turn block] to make the **bell** sprite turn left and right to achieve the alarm effect.
+Utilisez le bloc [tourner] pour faire tourner le sprite **cloche** à gauche et à droite afin de créer un effet d'alarme.
 
 .. image:: img/10_turn.png
 
-**5. stop all**
+**5. Tout arrêter**
 
-Stops the alarm when it has been ringing for a while.
+Arrêtez l'alarme lorsqu'elle a sonné pendant un certain temps.
 
 .. image:: img/10_stop.png
-

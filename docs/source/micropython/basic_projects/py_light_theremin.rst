@@ -1,60 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_light_theremin:
 
-6.3 Light Theremin
+6.3 Thérémine lumineux
 =========================
 
-Theremin is an electronic musical instrument that does not require physical contact. Based on the position of the player's hand, it produces different tones.
+Le thérémine est un instrument de musique électronique qui ne nécessite pas de contact physique. En fonction de la position de la main du joueur, il produit différents tons.
 
-Its controlling section is usually made up of two metal antennas that sense the position of the thereminist's hands and control oscillators with one hand and volume with the other. The electric signals from the theremin are amplified and sent to a loudspeaker.
+Sa partie de contrôle est généralement composée de deux antennes métalliques qui détectent la position des mains du théréministe et contrôlent les oscillateurs avec une main et le volume avec l'autre. Les signaux électriques du thérémine sont amplifiés et envoyés à un haut-parleur.
 
-We cannot reproduce the same instrument through ESP32, but we can use photoresistor and passive buzzer to achieve similar gameplay.
+Nous ne pouvons pas reproduire le même instrument avec l'ESP32, mais nous pouvons utiliser une photo-résistance et un buzzer passif pour obtenir un gameplay similaire.
 
 * `Theremin - Wikipedia <https://en.wikipedia.org/wiki/Theremin>`_
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -70,19 +70,20 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_6.3_light_theremin.png
 
-Before starting the project, calibrate the range of light intensity by waving your hand over the photoresistor. The LED connected to IO26 is used as an indicator during the calibration process. When the LED is lit, it signifies the start of calibration, and when it is turned off, it indicates the end of calibration.
+Avant de commencer le projet, calibrez la plage d'intensité lumineuse en agitant votre main au-dessus de la photo-résistance. La LED connectée à IO26 est utilisée comme indicateur pendant le processus de calibration. Lorsque la LED s'allume, cela signifie le début de la calibration, et lorsqu'elle s'éteint, cela indique la fin de la calibration.
 
-As you wave your hand over the photoresistor, the value of the photoresistor will change accordingly. 
-Utilize this change to control the buzzer and play different musical notes. 
-Each variation in the photoresistor's value can be mapped to a specific musical note, allowing 
-the buzzer to produce a melody as you wave your hand over the photoresistor.
+En agitant votre main au-dessus de la photo-résistance, la valeur de cette dernière 
+changera en conséquence. Utilisez ce changement pour contrôler le buzzer et jouer 
+différentes notes de musique. Chaque variation de la valeur de la photo-résistance 
+peut être associée à une note musicale spécifique, permettant au buzzer de produire 
+une mélodie lorsque vous agitez votre main au-dessus de la photo-résistance.
 
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/6.3_theremin_bb.png
 
@@ -90,8 +91,8 @@ the buzzer to produce a melody as you wave your hand over the photoresistor.
 
 .. note::
 
-    * Open the ``6.3_light_theremin.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Ouvrez le fichier ``6.3_light_theremin.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Puis cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 
 .. code-block:: python
@@ -99,42 +100,42 @@ the buzzer to produce a melody as you wave your hand over the photoresistor.
     from machine import Pin, PWM, ADC
     import time
 
-    # Initialize LED pin
+    # Initialiser la broche LED
     led = Pin(26, Pin.OUT)
 
-    # Initialize light sensor
+    # Initialiser le capteur de lumière
     sensor = ADC(Pin(35))
     sensor.atten(ADC.ATTN_11DB)
 
-    # Initialize buzzer
+    # Initialiser le buzzer
     buzzer = PWM(Pin(13), freq=440, duty=0)
 
     light_low=4095
     light_high=0
 
-    # Map the interval of input values to output values
+    # Mapper l'intervalle des valeurs d'entrée aux valeurs de sortie
     def interval_mapping(x, in_min, in_max, out_min, out_max):
         return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
-    # Create a tone using the specified pin, frequency, and duration
+    # Créer une tonalité en utilisant la broche spécifiée, la fréquence et la durée
     def tone(pin,frequency,duration):
         pin.freq(frequency)
         pin.duty(512)
         time.sleep_ms(duration)
         pin.duty(0)
 
-    # Calibrate the photoresistor's maximum and minimum values in 5 seconds.
+    # Calibrer les valeurs maximum et minimum de la photo-résistance en 5 secondes.
     timer_init_start = time.ticks_ms()
-    led.value(1) # turn on the LED   
+    led.value(1) # allumer la LED   
     while time.ticks_diff(time.ticks_ms(), timer_init_start)<5000:
         light_value = sensor.read()
         if light_value > light_high:
             light_high = light_value
         if light_value < light_low:
             light_low = light_value   
-    led.value(0) # turn off the LED 
+    led.value(0) # éteindre la LED 
 
-    # Play the tones based on the light values
+    # Jouer les tonalités en fonction des valeurs de lumière
     while True:
         light_value  = sensor.read()
         pitch = int(interval_mapping(light_value,light_low,light_high,50,6000))
@@ -143,12 +144,16 @@ the buzzer to produce a melody as you wave your hand over the photoresistor.
         time.sleep_ms(10)
 
 
-Upon starting the program, the LED turns on, providing us with a five-second window to calibrate the photoresistor's detection range.
+Au démarrage du programme, la LED s'allume, nous offrant une fenêtre de cinq secondes 
+pour calibrer la plage de détection de la photo-résistance.
 
-Calibration is a crucial step as it accounts for various lighting conditions that we may encounter while using the device, 
-such as varying light intensities during different times of the day. 
-Additionally, the calibration process takes into account the distance between our hands 
-and the photoresistor, which determines the playable range of the instrument.
+La calibration est une étape cruciale car elle prend en compte les diverses conditions 
+d'éclairage que nous pouvons rencontrer lors de l'utilisation de l'appareil, telles que 
+les différentes intensités lumineuses pendant les différentes heures de la journée. De 
+plus, le processus de calibration prend en compte la distance entre nos mains et la 
+photo-résistance, ce qui détermine la plage de jeu de l'instrument.
 
-Once the calibration period is over, the LED turns off, indicating that we can now play the instrument by waving our hands over the photoresistor. 
-This setup enables us to create music by adjusting the height of our hands, providing an interactive and enjoyable experience.
+Une fois la période de calibration terminée, la LED s'éteint, indiquant que nous 
+pouvons maintenant jouer de l'instrument en agitant nos mains au-dessus de la 
+photo-résistance. Cette configuration nous permet de créer de la musique en ajustant 
+la hauteur de nos mains, offrant une expérience interactive et agréable.

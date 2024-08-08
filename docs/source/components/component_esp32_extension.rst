@@ -1,179 +1,178 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_esp32_wroom_32e:
 
 ESP32 WROOM 32E
 =================
 
-The ESP32 WROOM-32E is a versatile and powerful module built around Espressif's ESP32 chipset. It offers dual-core processing, integrated Wi-Fi and Bluetooth connectivity, and boasts a wide range of peripheral interfaces. Known for its low-power consumption, the module is ideal for IoT applications, enabling smart connectivity and robust performance in compact form factors.
+L'ESP32 WROOM-32E est un module polyvalent et puissant basé sur le chipset ESP32 d'Espressif. Il offre un traitement double cœur, une connectivité Wi-Fi et Bluetooth intégrée, et dispose d'un large éventail d'interfaces périphériques. Connu pour sa faible consommation d'énergie, le module est idéal pour les applications IoT, permettant une connectivité intelligente et des performances robustes dans des formats compacts.
 
 .. image:: img/esp32_wroom_32e.jpg
     :width: 600
     :align: center
 
 
-Key features include:
+Les principales caractéristiques incluent :
 
-* **Processing Power**: It's equipped with a dual-core Xtensa® 32-bit LX6 microprocessor, offering scalability and flexibility.
-* **Wireless Capabilities**: With integrated 2.4 GHz Wi-Fi and dual-mode Bluetooth, it's perfectly suited for applications demanding stable wireless communication.
-* **Memory & Storage**: It comes with ample SRAM and high-performance flash storage, catering to user programs and data storage needs.
-* **GPIO**: Offering up to 38 GPIO pins, it supports a variety of external devices and sensors.
-* **Low Power Consumption**: Multiple power-saving modes are available, making it ideal for battery-powered or energy-efficient scenarios.
-* **Security**: Integrated encryption and security features ensure user data and privacy are well-protected.
-* **Versatility**: From simple household appliances to complex industrial machinery, the WROOM-32E delivers consistent, efficient performance.
+* **Puissance de traitement** : Il est équipé d'un microprocesseur Xtensa® 32 bits LX6 double cœur, offrant évolutivité et flexibilité.
+* **Capacités sans fil** : Avec le Wi-Fi 2,4 GHz et le Bluetooth dual-mode intégrés, il est parfaitement adapté aux applications nécessitant une communication sans fil stable.
+* **Mémoire et stockage** : Il est doté de SRAM suffisante et d'un stockage flash haute performance, répondant aux besoins des programmes et du stockage des données des utilisateurs.
+* **GPIO** : Offrant jusqu'à 38 broches GPIO, il prend en charge une variété de dispositifs et capteurs externes.
+* **Faible consommation d'énergie** : Plusieurs modes d'économie d'énergie sont disponibles, le rendant idéal pour les scénarios alimentés par batterie ou économes en énergie.
+* **Sécurité** : Les fonctionnalités de cryptage et de sécurité intégrées assurent la protection des données et de la confidentialité des utilisateurs.
+* **Polyvalence** : Des simples appareils ménagers aux machines industrielles complexes, le WROOM-32E offre des performances constantes et efficaces.
 
-In summary, the ESP32 WROOM-32E not only offers robust processing capabilities and diverse connectivity options but also boasts an array of features making it a preferred choice in the IoT and smart device sectors.
+En résumé, l'ESP32 WROOM-32E offre non seulement des capacités de traitement robustes et des options de connectivité diversifiées, mais il dispose également d'une gamme de fonctionnalités en faisant un choix privilégié dans les secteurs de l'IoT et des dispositifs intelligents.
 
 * |link_esp32_datasheet|
 
 .. _esp32_pinout:
 
-Pinout Diagram
+Schéma des broches
 -------------------------
 
-The ESP32 has some pin usage limitations due to various functionalities sharing certain pins. When designing a project, it's a good practice to carefully plan the pin usage and cross-check for potential conflicts 
-to ensure proper functioning and avoid issues.
-
+L'ESP32 a des limitations d'utilisation des broches en raison de diverses 
+fonctionnalités partageant certaines broches. Lors de la conception d'un projet, 
+il est bon de planifier soigneusement l'utilisation des broches et de vérifier les 
+conflits potentiels pour assurer le bon fonctionnement et éviter les problèmes.
 
 .. image:: img/esp32_pinout.jpg
     :width: 800
     :align: center
 
-Here are some of the key restrictions and considerations:
+Voici quelques-unes des principales restrictions et considérations :
 
-* **ADC1 and ADC2**: ADC2 cannot be used when WiFi or Bluetooth is active. However, ADC1 can be used without any restrictions.
-* **Bootstrapping Pins**: GPIO0, GPIO2, GPIO5, GPIO12, and GPIO15 are used for bootstrapping during the boot process. Care should be taken not to connect external components that could interfere with the boot process on these pins.
-* **JTAG Pins**: GPIO12, GPIO13, GPIO14, and GPIO15 can be used as JTAG pins for debugging purposes. If JTAG debugging is not required, these pins can be used as regular GPIOs.
-* **Touch Pins**: Some pins support touch functionalities. These pins should be used carefully if you intend to use them for touch sensing.
-* **Power Pins**: Some pins are reserved for power-related functions and should be used accordingly. For example, avoid drawing excessive current from power supply pins like 3V3 and GND.
-* **Input-only Pins**: Some pins are input-only and should not be used as outputs.
-
+* **ADC1 et ADC2** : ADC2 ne peut pas être utilisé lorsque le Wi-Fi ou le Bluetooth est actif. Cependant, ADC1 peut être utilisé sans aucune restriction.
+* **Broches de bootstrap** : GPIO0, GPIO2, GPIO5, GPIO12 et GPIO15 sont utilisés pour le bootstrap lors du processus de démarrage. Il faut veiller à ne pas connecter de composants externes qui pourraient interférer avec le processus de démarrage sur ces broches.
+* **Broches JTAG** : GPIO12, GPIO13, GPIO14 et GPIO15 peuvent être utilisés comme broches JTAG pour le débogage. Si le débogage JTAG n'est pas requis, ces broches peuvent être utilisées comme GPIO ordinaires.
+* **Broches tactiles** : Certaines broches prennent en charge les fonctionnalités tactiles. Elles doivent être utilisées avec précaution si vous avez l'intention de les utiliser pour la détection tactile.
+* **Broches d'alimentation** : Certaines broches sont réservées aux fonctions liées à l'alimentation et doivent être utilisées en conséquence. Par exemple, évitez de tirer un courant excessif des broches d'alimentation comme 3V3 et GND.
+* **Broches en entrée uniquement** : Certaines broches sont uniquement en entrée et ne doivent pas être utilisées comme sorties.
 
 .. _esp32_strapping:
 
-**Strapping Pins**
+**Broches de Strapping**
 --------------------------
 
-ESP32 has five strapping pins:
+L'ESP32 a cinq broches de strapping :
 
 .. list-table::
     :widths: 5 15
     :header-rows: 1
 
-    *   - Strapping Pins
+    *   - Broches de Strapping
         - Description
     *   - IO5
-        - Defaults to pull-up, the voltage level of IO5 and IO15 affects the Timing of SDIO Slave.
+        - Par défaut en pull-up, le niveau de tension de IO5 et IO15 affecte le Timing du SDIO Slave.
     *   - IO0
-        - Defaults to pull-up, if pulled low, it enters download mode.
+        - Par défaut en pull-up, si tiré vers le bas, il entre en mode téléchargement.
     *   - IO2
-        - Defaults to pull-down, IO0 and IO2 will make ESP32 enter download mode.
-    *   - IO12(MTDI)
-        - Defaults to pull-down, if pulled high, ESP32 will fail to boot up normally.
-    *   - IO15(MTDO)
-        - Defaults to pull-up, if pulled low, debug log will not be visible. Additionally, the voltage level of IO5 and IO15 affects the Timing of SDIO Slave.
+        - Par défaut en pull-down, IO0 et IO2 feront entrer l'ESP32 en mode téléchargement.
+    *   - IO12 (MTDI)
+        - Par défaut en pull-down, si tiré vers le haut, l'ESP32 ne démarrera pas correctement.
+    *   - IO15 (MTDO)
+        - Par défaut en pull-up, si tiré vers le bas, le journal de débogage ne sera pas visible. De plus, le niveau de tension de IO5 et IO15 affecte le Timing du SDIO Slave.
 
 
-Software can read the values of these five bits from register "GPIO_STRAPPING".
-During the chip's system reset release (power-on-reset, RTC watchdog reset and brownout reset), the latches of
-the strapping pins sample the voltage level as strapping bits of "0" or "1", and hold these bits until the chip is
-powered down or shut down. The strapping bits configure the device's boot mode, the operating voltage of
-VDD_SDIO and other initial system settings.
+Le logiciel peut lire les valeurs de ces cinq bits à partir du registre "GPIO_STRAPPING".
+Lors de la libération de la réinitialisation du système de la puce (power-on-reset, 
+réinitialisation de la surveillance RTC et réinitialisation brownout), les loquets des 
+broches de strapping échantillonnent le niveau de tension en tant que bits de strapping 
+"0" ou "1" et maintiennent ces bits jusqu'à ce que la puce soit éteinte. ou arrêté. Les 
+bits de strapping configurent le mode de démarrage du dispositif, la tension de 
+fonctionnement de VDD_SDIO et d'autres paramètres système initiaux.
 
-Each strapping pin is connected to its internal pull-up/pull-down during the chip reset. Consequently, if a
-strapping pin is unconnected or the connected external circuit is high-impedance, the internal weak
-pull-up/pull-down will determine the default input level of the strapping pins.
+Chaque broche de strapping est connectée à son pull-up/pull-down interne pendant la réinitialisation de la puce. Par conséquent, si une broche de strapping est non connectée ou si le circuit externe connecté est à haute impédance, le pull-up/pull-down interne faible déterminera le niveau d'entrée par défaut des broches de strapping.
 
-To change the strapping bit values, users can apply the external pull-down/pull-up resistances, or use the host
-MCU's GPIOs to control the voltage level of these pins when powering on ESP32.
+Pour changer les valeurs des bits de strapping, les utilisateurs peuvent appliquer les résistances externes pull-down/pull-up ou utiliser les GPIO de l'hôte MCU pour contrôler le niveau de tension de ces broches lors de la mise sous tension de l'ESP32.
 
-After reset release, the strapping pins work as normal-function pins.
-Refer to following table for a detailed boot-mode configuration by strapping pins.
+Après la libération de la réinitialisation, les broches de strapping fonctionnent comme des broches normales.
+Consultez le tableau suivant pour une configuration détaillée du mode de démarrage par broches de strapping.
 
 .. image:: img/esp32_strapping.png
 
-* FE: falling-edge, RE: rising-edge
-* Firmware can configure register bits to change the settings of "Voltage of Internal LDO (VDD_SDIO)" and "Timing of SDIO Slave", after booting.
-* The module integrates a 3.3 V SPI flash, so the pin MTDI cannot be set to 1 when the module is powered up.
+* FE : front descendant, RE : front montant
+* Le firmware peut configurer des bits de registre pour modifier les paramètres de "Tension de l'oscillateur interne (VDD_SDIO)" et "Timing de l'esclave SDIO", après le démarrage.
+* Le module intègre une flash SPI 3,3 V, donc la broche MTDI ne peut pas être réglée sur 1 lorsque le module est alimenté.
 
 .. _cpn_esp32_camera_extension:
 
-ESP32 Camera Extension
---------------------------
+Extension de caméra ESP32
+-------------------------------
 
-We have designed an expansion board that enables you to fully utilize the camera and SD card functionalities of the ESP32 WROOM 32E. By combining the OV2640 camera, Micro SD, and ESP32 WROOM 32E, you get an all-in-one expansion board.
+Nous avons conçu une carte d'extension qui vous permet de profiter pleinement des fonctionnalités de la caméra et de la carte SD de l'ESP32 WROOM 32E. En combinant la caméra OV2640, une Micro SD et l'ESP32 WROOM 32E, vous obtenez une carte d'extension tout-en-un.
 
-The board provides two types of GPIO headers - one with female headers, perfect for quick prototyping projects. The other type features screw terminals, ensuring stable wire connections and making it suitable for IoT projects.
+La carte propose deux types de connecteurs GPIO - l'un avec des connecteurs femelles, parfait pour les projets de prototypage rapide. L'autre type dispose de bornes à vis, assurant des connexions de fils stables et la rendant adaptée aux projets IoT.
 
-Additionally, you can power your project using a single 3.7V 18650 battery. If the battery runs low, you can conveniently charge it by simply plugging in a 5V Micro USB cable. This makes it a great tool for outdoor projects and remote applications.
+De plus, vous pouvez alimenter votre projet avec une seule batterie 3,7V 18650. Si la batterie est faible, vous pouvez la charger simplement en branchant un câble Micro USB 5V. Cela en fait un excellent outil pour les projets en extérieur et les applications à distance.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
     :align: center
 
-Interface Introduction
-----------------------
+Présentation de l'interface
+--------------------------------
 
 .. image:: img/esp32_camera_extension_pinout.jpg
     :width: 800
     :align: center
 
-* **Power Switch**
-    * Controls the battery's power supply, toggling it on and off.
+* **Interrupteur d'alimentation**
+    * Contrôle l'alimentation de la batterie, permettant de l'allumer et de l'éteindre.
 
-* **Charging Port**
-    * Upon connecting a 5V Micro USB cable, the battery can be charged.
+* **Port de charge**
+    * Lorsqu'un câble Micro USB 5V est connecté, la batterie peut être chargée.
 
-* **Battery Port**
-    * Features a PH2.0-2P interface, compatible with 3.7V 18650 lithium batterry.
-    * Provides power to both the ESP32 WROOM 32E and ESP32 Camera Extension.
+* **Port de la batterie**
+    * Dispose d'une interface PH2.0-2P, compatible avec les batteries lithium 3.7V 18650.
+    * Fournit de l'énergie à la fois à l'ESP32 WROOM 32E et à l'extension de caméra ESP32.
 
-* **ESP32 Pin Headers**
-    * Intended for the ESP32 WROOM 32E module. Pay close attention to its orientation; ensure both Micro USB ports face the same side to avoid incorrect placement.
+* **Broches d'en-tête ESP32**
+    * Conçues pour le module ESP32 WROOM 32E. Faites attention à son orientation ; assurez-vous que les deux ports Micro USB soient du même côté pour éviter une mauvaise installation.
 
-* **GPIO Headers**
-    * **Female Headers**: Used to connect various components to the ESP32, perfect for quick prototyping projects.
-    * **Screw Terminal**: 3.5mm pitch 14pin screw terminal, ensuring stable wire connections and making it suitable for IoT projects.
+* **Broches GPIO**
+    * **Connecteurs femelles** : Utilisés pour connecter divers composants à l'ESP32, parfaits pour les projets de prototypage rapide.
+    * **Borne à vis** : Borne à vis 14 broches de 3,5 mm de pas, assurant des connexions de fils stables et la rendant adaptée aux projets IoT.
 
-* **Indicator Lights**
-    * **PWR**: Lights up when the battery is powered or when a Micro USB is directly plugged into the ESP32.
-    * **CHG**: Illuminates upon connecting a Micro USB to the board's charging port, signifying charging onset. It will turn off once the battery is fully charged.
+* **Voyants indicateurs**
+    * **PWR** : S'allume lorsque la batterie est alimentée ou lorsqu'un Micro USB est directement branché à l'ESP32.
+    * **CHG** : S'illumine lors de la connexion d'un Micro USB au port de charge de la carte, signifiant le début de la charge. Il s'éteindra une fois la batterie entièrement chargée.
 
-* **Micro SD Connector**
-    * Spring-loaded slot for the easy insertion and ejection of Micro SD card.
+* **Connecteur Micro SD**
+    * Fente à ressort pour une insertion et un retrait faciles de la carte Micro SD.
 
-* **24-pin 0.5mm FFC / FPC connector**
-    * Designed for the OV2640 camera, making it suitable for various vision-related projects.
+* **Connecteur FFC / FPC 24 broches 0,5 mm**
+    * Conçu pour la caméra OV2640, la rendant adaptée à divers projets liés à la vision.
 
 
-ESP32 Camera Extension Pinout
---------------------------------
+Schéma des broches de l'extension de caméra ESP32
+------------------------------------------------------
 
-The ESP32 WROOM 32E's pinout diagram can be found in :ref:`esp32_pinout`. 
+Le schéma des broches de l'ESP32 WROOM 32E peut être trouvé dans :ref:`esp32_pinout`.
 
-However, when the ESP32 WROOM 32E is inserted into the extension board, some of its pins may also be used to drive the Micro SD card or a camera. 
+Cependant, lorsque l'ESP32 WROOM 32E est inséré dans la carte d'extension, certaines de ses broches peuvent également être utilisées pour piloter la carte Micro SD ou une caméra.
 
-Consequently, pull-up or pull-down resistors have be added to these pins. If you're using these pins as inputs, it's crucial to account for these resistors as they can affect input levels.
+Par conséquent, des résistances pull-up ou pull-down ont été ajoutées à ces broches. Si vous utilisez ces broches comme entrées, il est crucial de tenir compte de ces résistances car elles peuvent affecter les niveaux d'entrée.
 
-Here's the pinout table for the right-side pins:
+Voici le tableau des broches du côté droit :
 
     .. image:: img/esp32_extension_pinout1.jpg
         :width: 100%
         :align: center
 
-Here's the pinout table for the left-side pins:
+Voici le tableau des broches du côté gauche :
 
     .. image:: img/esp32_extension_pinout2.jpg
         :width: 100%
@@ -181,33 +180,32 @@ Here's the pinout table for the left-side pins:
 
     .. note::
 
-        There are some specific constraints:
+        Il y a certaines contraintes spécifiques :
 
-        * **IO33** is connected to a 4.7K pull-up resistor and a filtering capacitor, which prevents it from driving the WS2812 RGB Strip.
+        * **IO33** est connecté à une résistance pull-up de 4,7K et un condensateur de filtrage, ce qui l'empêche de piloter la bande RGB WS2812.
 
-Interface Insertion Guide
--------------------------------
+Guide d'insertion de l'interface
+-------------------------------------
 
-**Upload Code**
+**Téléverser le code**
 
-    When you need to upload code to the ESP32 WROOM 32E, connect it to your computer using a Micro USB cable.
+    Lorsque vous devez téléverser du code sur l'ESP32 WROOM 32E, connectez-le à votre ordinateur à l'aide d'un câble Micro USB.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600
         :align: center
 
-**Inserting the Micro SD Card**
+**Insertion de la carte Micro SD**
 
-    Gently push in the Micro SD card to secure it in place. Pushing it again will eject it.
+    Poussez doucement la carte Micro SD pour la sécuriser en place. La pousser à nouveau la fera sortir.
 
     .. image:: ../img/insert_sd.png
         :width: 600
         :align: center
 
-**Attaching the Camera**
+**Fixation de la caméra**
 
-    When connecting the camera, ensure the black stripe of the FPC cable is facing upwards and is fully inserted 
-    into the connector.
+    Lors de la connexion de la caméra, assurez-vous que la bande noire du câble FPC soit orientée vers le haut et entièrement insérée dans le connecteur.
 
     .. raw:: html
 
@@ -216,15 +214,15 @@ Interface Insertion Guide
             Your browser does not support the video tag.
         </video>
 
-**Battery Power and Charging**
+**Alimentation et charge de la batterie**
 
-    Carefully insert the battery cable into the battery port, avoiding applying too much force to prevent pushing up the battery terminal. If the terminal is pushed up, it's okay as long as the pins are not broken; you can simply press it back into position.
+    Insérez soigneusement le câble de la batterie dans le port de la batterie, en évitant d'appliquer trop de force pour ne pas pousser la borne de la batterie vers le haut. Si la borne est poussée vers le haut, ce n'est pas grave tant que les broches ne sont pas cassées ; vous pouvez simplement la remettre en place.
 
     .. image:: ../img/plugin_battery.png
         :width: 600
         :align: center
 
-    If the battery is drained, plug in a 5V Micro USB to charge it.
+    Si la batterie est épuisée, branchez un Micro USB 5V pour la charger.
 
     .. image:: ../img/battery_charge.png
         :width: 600

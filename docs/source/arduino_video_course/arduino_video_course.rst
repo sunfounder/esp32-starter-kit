@@ -1,23 +1,22 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Arduino Video Course
-====================
-Embark on a journey through the Arduino world with the comprehensive Arduino Video Course, using SunFounder's ESP32 Starter Kit. This series begins with an introduction to the Arduino ecosystem and the capabilities of the ESP32 board, setting the stage for a deep dive into practical applications and programming techniques. You'll learn the basics of controlling LEDs, understanding serial communication, and manipulating various components like RGB LEDs, buttons, and shift registers. The course progresses to more advanced topics, including array handling, interfacing with LCD displays, and utilizing LED strips for visual effects. Towards the latter part of the series, you'll delve into controlling different types of motors, from simple DC motors to servo motors, and even operating a mini water pump, culminating in a well-rounded understanding of Arduino programming and hardware interfacing. Whether you're a beginner or looking to sharpen your skills, this course provides a thorough exploration from foundational concepts to intricate project executions.
+Cours vidéo Arduino
+=============================
+Entamez un voyage à travers le monde d'Arduino avec le cours vidéo complet Arduino, utilisant le kit de démarrage ESP32 de SunFounder. Cette série commence par une introduction à l'écosystème Arduino et aux capacités de la carte ESP32, préparant le terrain pour une plongée approfondie dans les applications pratiques et les techniques de programmation. Vous apprendrez les bases du contrôle des LED, la compréhension de la communication série, et la manipulation de divers composants comme les LED RVB, les boutons et les registres à décalage. Le cours progresse vers des sujets plus avancés, incluant la gestion des tableaux, l'interfaçage avec des affichages LCD et l'utilisation de bandes LED pour des effets visuels. Vers la fin de la série, vous vous pencherez sur le contrôle de différents types de moteurs, des simples moteurs à courant continu aux servomoteurs, et même l'opération d'une mini-pompe à eau, culminant en une compréhension approfondie de la programmation Arduino et de l'interfaçage matériel. Que vous soyez débutant ou que vous cherchiez à affiner vos compétences, ce cours offre une exploration approfondie, des concepts fondamentaux aux exécutions de projets complexes.
 
-**Projects**
-
+**Projets**
 
 .. toctree::
     :maxdepth: 1

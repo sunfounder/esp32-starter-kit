@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_photoresistor:
 
-5.7 Feel the Light
+5.7 Ressentir la Lumière
 =============================
 
-The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
+La photo-résistance est un dispositif couramment utilisé pour les entrées analogiques, similaire à un potentiomètre. Sa valeur de résistance change en fonction de l'intensité lumineuse qu'elle reçoit. Lorsqu'elle est exposée à une forte lumière, la résistance de la photo-résistance diminue, et à mesure que l'intensité lumineuse diminue, la résistance augmente.
 
-By reading the value of the photoresistor, we can gather information about the ambient light conditions. This information can be used for tasks such as controlling the brightness of an LED, adjusting the sensitivity of a sensor, or implementing light-dependent actions in a project.
+En lisant la valeur de la photo-résistance, nous pouvons recueillir des informations sur les conditions de lumière ambiante. Ces informations peuvent être utilisées pour des tâches telles que le contrôle de la luminosité d'une LED, l'ajustement de la sensibilité d'un capteur, ou la mise en œuvre d'actions dépendantes de la lumière dans un projet.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -60,36 +60,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-* **Available Pins**
+* **Broches disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Broches disponibles
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **Broches de Strapping**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Les broches suivantes sont des broches de strapping, qui affectent le processus de démarrage de l'ESP32 lors de la mise sous tension ou de la réinitialisation. Cependant, une fois l'ESP32 démarré avec succès, elles peuvent être utilisées comme des broches régulières.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Broches de Strapping
             - IO0, IO12
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.7_photoresistor.png
 
-As the light intensity increases, the resistance of the light-dependent resistor (LDR) decreases, resulting in a decrease in the value read on I35.
+À mesure que l'intensité lumineuse augmente, la résistance de la photo-résistance (LDR) diminue, entraînant une diminution de la valeur lue sur I35.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
@@ -97,43 +97,43 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
 .. note::
 
-    * Open the ``5.7_feel_the_light.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Ouvrez le fichier ``5.7_feel_the_light.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Puis cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 
 
 .. code-block:: python
 
-    from machine import ADC,Pin
+    from machine import ADC, Pin
     import time
 
-    # create an ADC object acting on a pin
+    # créer un objet ADC agissant sur une broche
     photoresistor = ADC(Pin(35, Pin.IN))
 
-    # Configure the ADC attenuation to 11dB for full range     
+    # Configurer l'atténuation ADC à 11dB pour la pleine échelle     
     photoresistor.atten(photoresistor.ATTN_11DB)
 
     while True:
 
-        # read a raw analog value in the range 0-4095
+        # lire une valeur analogique brute dans la plage 0-4095
         value = photoresistor.read()  
         print(value)
         time.sleep(0.05)
 
 
-After the program runs, the Shell prints out the photoresistor values. You can shine a flashlight on it or cover it up with your hand to see how the value will change.
+Après l'exécution du programme, les valeurs de la photo-résistance seront affichées dans le Shell. Vous pouvez éclairer celle-ci avec une lampe de poche ou la couvrir avec votre main pour voir comment la valeur change.
 
 
-* ``atten(photoresistor.ATTN_11DB)``: Configure the ADC attenuation to 11dB for full range.
+* ``atten(photoresistor.ATTN_11DB)`` : Configurer l'atténuation de l'ADC à 11dB pour la pleine échelle.
 
-    To read voltages above the reference voltage, apply input attenuation with the atten keyword argument. 
+    Pour lire des tensions supérieures à la tension de référence, appliquez une atténuation d'entrée avec l'argument de mot-clé atten. 
 
-    Valid values (and approximate linear measurement ranges) are:
+    Les valeurs valides (et les plages de mesure linéaire approximatives) sont :
 
-    * ADC.ATTN_0DB: No attenuation (100mV - 950mV)
-    * ADC.ATTN_2_5DB: 2.5dB attenuation (100mV - 1250mV)
-    * ADC.ATTN_6DB: 6dB attenuation (150mV - 1750mV)
-    * ADC.ATTN_11DB: 11dB attenuation (150mV - 2450mV)
+    * ADC.ATTN_0DB : Pas d'atténuation (100mV - 950mV)
+    * ADC.ATTN_2_5DB : Atténuation de 2,5 dB (100mV - 1250mV)
+    * ADC.ATTN_6DB : Atténuation de 6 dB (150mV - 1750mV)
+    * ADC.ATTN_11DB : Atténuation de 11 dB (150mV - 2450mV)
 
 * `machine.ADC - MicroPython Docs <https://docs.micropython.org/en/latest/esp32/quickref.html#adc-analog-to-digital-conversion>`_
 

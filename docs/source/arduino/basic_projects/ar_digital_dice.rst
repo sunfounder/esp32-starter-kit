@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_dice:
 
-6.4 Digital Dice
+6.4 Dé numérique
 =============================
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Ce projet s'appuie sur le projet :ref:`py_7_segment` en ajoutant un bouton pour contrôler le chiffre affiché sur l'afficheur à sept segments.
 
-In this project, a random number is generated and displayed on the seven-segment display to simulate a dice roll. When the button is pressed, a stable number (randomly selected from 1 to 6) is displayed on the seven-segment display. Pressing the button again will initiate the simulation of a dice roll, generating random numbers as before. This cycle continues each time the button is pressed.
+Dans ce projet, un nombre aléatoire est généré et affiché sur l'afficheur à sept segments pour simuler un lancer de dé. Lorsque le bouton est enfoncé, un nombre stable (sélectionné aléatoirement de 1 à 6) est affiché sur l'afficheur à sept segments. En appuyant de nouveau sur le bouton, la simulation d'un lancer de dé est relancée, générant à nouveau des nombres aléatoires. Ce cycle se poursuit à chaque fois que le bouton est pressé.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -64,16 +64,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`ar_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Ce projet s'appuie sur le projet :ref:`ar_7_segment` en ajoutant un bouton pour contrôler le chiffre affiché sur l'afficheur à sept segments.
 
-The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
+Le bouton est directement connecté à IO13 sans résistance pull-up ou pull-down externe car IO13 possède une résistance pull-up interne de 47K, éliminant ainsi le besoin d'une résistance externe supplémentaire.
 
-
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
@@ -81,16 +80,15 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. note::
 
-    * Open the ``6.4_digital_dice.ino`` file under the path of ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``6.4_digital_dice.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
-    
     
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ad904f48-cd24-49ce-ad92-91b1fb76364d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-This project is based on :ref:`ar_7_segment` with a button to start/pause the scrolling display on the 7-segment Display.
+Ce projet est basé sur :ref:`ar_7_segment` avec un bouton pour démarrer/mettre en pause l'affichage défilant sur l'afficheur à 7 segments.
 
-When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
+Lorsque le bouton est pressé, l'afficheur à 7 segments défile les chiffres de 1 à 6, et lorsque le bouton est relâché, il affiche un nombre aléatoire.
 

@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté Facebook des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 ! Plongez plus profondément dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_button:
 
-5.1 Reading Button Value
+5.1 Lecture de la valeur du bouton
 ==============================================
 
-In this interactive project, we'll venture into the realm of button controls and LED manipulation.
+Dans ce projet interactif, nous allons explorer le contrôle de boutons et la manipulation de LED.
 
-The concept is straightforward yet effective. We'll be reading the state of a button. When the button is pressed down, it registers a high voltage level, or 'high state'. This action will then trigger an LED to light up.
+Le concept est simple mais efficace. Nous allons lire l'état d'un bouton. Lorsque le bouton est enfoncé, il enregistre un niveau de tension élevé, ou "état haut". Cette action déclenchera ensuite l'allumage d'une LED.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -62,93 +62,86 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-* **Available Pins**
+* **Broches disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Pour l'entrée
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Pour la sortie
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
-    
-* **Conditional Usage Pins (Input)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
+* **Broches à usage conditionnel (entrée)**
 
+    Les broches suivantes possèdent des résistances pull-up ou pull-down intégrées, donc des résistances externes ne sont pas nécessaires lorsqu'elles sont **utilisées comme broches d'entrée** :
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
+        *   - Broches à usage conditionnel
             - Description
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Pull-up avec une résistance de 47K par défaut à un niveau élevé.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Pull-up avec une résistance de 4.7K par défaut à un niveau élevé.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Pull-down avec une résistance de 1K par défaut à un niveau bas.
 
-* **Strapping Pins (Input)**
+* **Broches de démarrage (entrée)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Les broches de démarrage sont un ensemble spécial de broches utilisées pour déterminer les modes de démarrage spécifiques lors du démarrage de l'appareil 
+    (c'est-à-dire, reset à la mise sous tension).
 
-        
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Broches de démarrage
             - IO5, IO0, IO2, IO12, IO15 
-    
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
 
+    En général, il est **non recommandé de les utiliser comme broches d'entrée**. Si vous souhaitez utiliser ces broches, considérez l'impact potentiel sur le processus de démarrage. Pour plus de détails, veuillez consulter la section :ref:`esp32_strapping`.
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.1_button.png
 
-To ensure proper functionality, connect one side of the button pin to 3.3V and the other side to IO14. When the button is pressed, IO14 will be set to high, causing the LED to light up. When the button is released, IO14 will return to its suspended state, which may be either high or low. To ensure a stable low level when the button is not pressed, IO14 should be connected to GND through a 10K pull-down resistor.
+Pour assurer un bon fonctionnement, connectez un côté de la broche du bouton à 3.3V et l'autre côté à IO14. Lorsque le bouton est enfoncé, IO14 sera réglé sur haut, ce qui allumera la LED. Lorsque le bouton est relâché, IO14 reviendra à son état suspendu, qui peut être soit haut soit bas. Pour assurer un niveau bas stable lorsque le bouton n'est pas enfoncé, IO14 doit être connecté à la terre via une résistance pull-down de 10K.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.1_button_bb.png
 
 .. note::
-    
-    A four-pin button is designed in an H shape. When the button is not pressed, the left and right pins are disconnected, and current cannot flow between them. However, when the button is pressed, the left and right pins are connected, creating a pathway for current to flow.
+
+    Un bouton à quatre broches est conçu en forme de H. Lorsque le bouton n'est pas enfoncé, les broches gauche et droite sont déconnectées, et le courant ne peut pas circuler entre elles. Cependant, lorsque le bouton est enfoncé, les broches gauche et droite sont connectées, créant un chemin pour que le courant circule.
 
 **Code**
 
 .. note::
 
-    * Open the ``5.1_read_button_value.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Ouvrez le fichier ``5.1_read_button_value.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Ensuite, cliquez sur "Exécuter le script actuel" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 .. code-block:: python
 
     import machine
     import time
 
-    button = machine.Pin(14, machine.Pin.IN) # Button pin
-    led = machine.Pin(26, machine.Pin.OUT) # LED pin
-
+    button = machine.Pin(14, machine.Pin.IN) # Broche du bouton
+    led = machine.Pin(26, machine.Pin.OUT) # Broche de la LED
 
     while True:
-        # If the button is pressed by reading its value
+        # Si le bouton est enfoncé en lisant sa valeur
         if button.value() == 1:
-            # Turn on the LED by setting its value to 1
+            # Allumer la LED en réglant sa valeur à 1
             led.value(1)
-    #         time.sleep(0.5)
         else:
-            # Turn off the LED
+            # Éteindre la LED
             led.value(0)
 
-During script execution, the LED lights up when you press the button and goes out when you release it.
+Pendant l'exécution du script, la LED s'allume lorsque vous appuyez sur le bouton et s'éteint lorsque vous le relâchez.

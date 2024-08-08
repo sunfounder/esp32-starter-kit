@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté Facebook des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 ! Plongez plus profondément dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_dice:
 
-6.6 Digital Dice
+6.6 Dé numérique
 ================================
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Ce projet est une extension du projet :ref:`py_7_segment` en ajoutant un bouton pour contrôler le chiffre affiché sur l'afficheur à sept segments.
 
-When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
+Lorsque le bouton est pressé, l'afficheur à 7 segments fait défiler les chiffres de 1 à 6, et lorsque le bouton est relâché, il affiche un chiffre aléatoire.
 
-This cycle continues each time the button is pressed.
+Ce cycle se répète à chaque fois que le bouton est pressé.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -64,16 +64,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Ce projet est une extension du projet :ref:`py_7_segment` en ajoutant un bouton pour contrôler le chiffre affiché sur l'afficheur à sept segments.
 
-The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
+Le bouton est directement connecté à IO13 sans résistance de pull-up ou pull-down externe car IO13 a une résistance de pull-up interne de 47K, éliminant ainsi le besoin d'une résistance externe supplémentaire.
 
-
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
@@ -81,11 +80,8 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
 
 .. note::
 
-    * Open the ``6.6_digital_dice.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
-
+    * Ouvrez le fichier ``6.6_digital_dice.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Ensuite, cliquez sur "Exécuter le script actuel" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 .. code-block:: python
 
@@ -93,71 +89,68 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
     import time
     import random
 
-    # Define the segment code for a common anode 7-segment display
+    # Définir le code des segments pour un afficheur à sept segments à anode commune
     SEGCODE = [0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f]
 
-    # Initialize the pins for the 74HC595 shift register
+    # Initialiser les broches pour le registre à décalage 74HC595
     sdi = machine.Pin(25, machine.Pin.OUT)  # DS
     rclk = machine.Pin(27, machine.Pin.OUT)  # STcp
     srclk = machine.Pin(26, machine.Pin.OUT)  # SHcp
 
-    button = machine.Pin(13, machine.Pin.IN) # Button pin
+    button = machine.Pin(13, machine.Pin.IN) # Broche du bouton
 
-    # Define the hc595_shift function to shift data into the 74HC595 shift register
+    # Définir la fonction hc595_shift pour décaler les données dans le registre à décalage 74HC595
     def hc595_shift(dat):
-        # Set the RCLK pin to low
+        # Mettre la broche RCLK à bas
         rclk.off()
         
-        # Iterate through each bit (from 7 to 0)
+        # Itérer à travers chaque bit (de 7 à 0)
         for bit in range(7, -1, -1):
-            # Extract the current bit from the input data
+            # Extraire le bit actuel des données d'entrée
             value = 1 & (dat >> bit)
             
-            # Set the SRCLK pin to low
+            # Mettre la broche SRCLK à bas
             srclk.off()
             
-            # Set the value of the SDI pin
+            # Définir la valeur de la broche SDI
             sdi.value(value)
             
-            # Clock the current bit into the shift register by setting the SRCLK pin to high
+            # Synchroniser le bit actuel dans le registre à décalage en mettant la broche SRCLK à haut
             srclk.on()
             
-        # Latch the data into the storage register by setting the RCLK pin to high
+        # Verrouiller les données dans le registre de stockage en mettant la broche RCLK à haut
         rclk.on()
 
-    # Initialize the random seed
+    # Initialiser la graine aléatoire
     random.seed(time.ticks_us())
-
 
     num = 1
     button_state = False
 
-    # Define the button callback function to toggle the button state
+    # Définir la fonction de rappel du bouton pour basculer l'état du bouton
     def button_callback(pin):
         global button_state
         button_state = not button_state
 
-    # Attach the button callback function to the falling edge of the button pin
+    # Attacher la fonction de rappel du bouton au front descendant de la broche du bouton
     button.irq(trigger=machine.Pin.IRQ_FALLING, handler=button_callback)
 
-    # Continuously display the current digit on the 7-segment display, scrolling if button is not pressed
+    # Afficher continuellement le chiffre actuel sur l'afficheur à 7 segments, défilement si le bouton n'est pas pressé
     while True:
         
-        # Display the current digit on the 7-segment display
+        # Afficher le chiffre actuel sur l'afficheur à 7 segments
         hc595_shift(SEGCODE[num])
         
-        # If the button is pressed and button state is True
+        # Si le bouton est pressé et que l'état du bouton est True
         if button_state:
             pass
 
-        # If the button is pressed again and button state is False, generate a new random digit
+        # Si le bouton est pressé à nouveau et que l'état du bouton est False, générer un nouveau chiffre aléatoire
         if not button_state:
             num = random.randint(1, 6)
-            time.sleep_ms(10) # Adjust this value to control the display refresh rate
+            time.sleep_ms(10) # Ajustez cette valeur pour contrôler la fréquence de rafraîchissement de l'affichage
         
-While the program is running, pressing the button will make the 7-segment display scroll and randomly display a number between 1 and 6. 
+Lorsque le programme est en cours d'exécution, appuyer sur le bouton fera défiler l'afficheur à 7 segments et affichera aléatoirement un chiffre entre 1 et 6. 
 
-Upon pressing the button again, the 7-segment display will stop and reveal a specific number. Press the button once more, and the 7-segment display will resume scrolling through the digits.
-
-
+En appuyant à nouveau sur le bouton, l'afficheur à 7 segments s'arrêtera et révélera un chiffre spécifique. Appuyez une fois de plus sur le bouton, et l'afficheur à 7 segments reprendra le défilement des chiffres.
 

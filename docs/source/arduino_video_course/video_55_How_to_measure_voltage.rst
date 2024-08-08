@@ -1,31 +1,30 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 55: How to measure 12V, 24V or 100V DC voltage 
-===============================================================
+Vidéo 55 : Comment mesurer une tension continue de 12V, 24V ou 100V
+========================================================================
 
-Learn how to use ESP32 to measure DC voltage with this detailed video tutorial from Robojax.
+Apprenez à utiliser l'ESP32 pour mesurer la tension continue avec ce tutoriel vidéo détaillé de Robojax.
 
-* **Introduction to the ESP32 Starter Kit**: An overview of. the ESP32 Starter Kit from SunFounder, highlighting the features of the ESP32 microcontroller with built-in Wi-Fi and Bluetooth.
-* **Project Overview**: Explanation of how to measure any DC voltage using a voltage divider circuit and the ESP32. Includes a discussion on the need for and use of two resistors to create a voltage divider.
-* **Voltage Divider Circuit**: Detailed explanation of how to use two resistors to safely measure higher voltages. Includes calculations for selecting appropriate resistor values.
-* **Arduino Code Explanation**: Comprehensive guide on the Arduino code used for voltage measurement. Covers setting up the code, initializing the serial monitor, and using functions to calculate and display voltage values.
-* **Selecting ESP32 Board and Port**: Step-by-step instructions on how to select the ESP32 board and COM port in the Arduino IDE, along with troubleshooting tips for identifying the correct port.
-* **30V Voltage Measurement Demonstration**: Practical demonstration of measuring 30V using the ESP32. Shows the setup, connection, and reading of voltage values on the serial monitor. Also covers averaging multiple measurements for more stable readings.
+* **Introduction au kit de démarrage ESP32** : Un aperçu du kit de démarrage ESP32 de SunFounder, mettant en avant les fonctionnalités du microcontrôleur ESP32 avec Wi-Fi et Bluetooth intégrés.
+* **Vue d'ensemble du projet** : Explication de la manière de mesurer une tension continue en utilisant un circuit diviseur de tension et l'ESP32. Comprend une discussion sur la nécessité et l'utilisation de deux résistances pour créer un diviseur de tension.
+* **Circuit diviseur de tension** : Explication détaillée de l'utilisation de deux résistances pour mesurer en toute sécurité des tensions plus élevées. Comprend des calculs pour sélectionner les valeurs de résistance appropriées.
+* **Explication du code Arduino** : Guide complet sur le code Arduino utilisé pour la mesure de tension. Couvre la configuration du code, l'initialisation du moniteur série et l'utilisation de fonctions pour calculer et afficher les valeurs de tension.
+* **Sélection de la carte et du port ESP32** : Instructions pas à pas pour sélectionner la carte ESP32 et le port COM dans l'IDE Arduino, avec des conseils de dépannage pour identifier le port correct.
+* **Démonstration de la mesure de tension de 30V** : Démonstration pratique de la mesure de 30V avec l'ESP32. Montre la configuration, la connexion et la lecture des valeurs de tension sur le moniteur série. Couvre également la moyenne de plusieurs mesures pour des lectures plus stables.
 
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 

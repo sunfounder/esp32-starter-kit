@@ -1,59 +1,58 @@
-.. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _sh_fishing:
 
-2.17 GAME - Fishing
-===========================
+2.17 JEU - Pêche
+====================
 
-Here, we play a fishing game with a button.
+Ici, nous jouons à un jeu de pêche avec un bouton.
 
-When the script is running, the fish swim left and right on the stage, you need to press the button when the fish is almost close to the hook (it is recommended to press it for a longer time) to catch the fish, and the number of fish caught will be recorded automatically.
+Lorsque le script est en cours d'exécution, les poissons nagent de gauche à droite sur la scène, vous devez appuyer sur le bouton lorsque le poisson est presque proche de l'hameçon (il est recommandé de l'appuyer plus longtemps) pour attraper le poisson, et le nombre de poissons capturés sera enregistré automatiquement.
 
 .. image:: img/18_fish.png
 
-Required Components
----------------------
+Composants nécessaires
+---------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -63,95 +62,81 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
------------------------
+Construire le circuit
+-------------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Le bouton est un dispositif à 4 broches, puisque la broche 1 est connectée à la broche 2, et la broche 3 à la broche 4, lorsque le bouton est pressé, les 4 broches sont connectées, fermant ainsi le circuit.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construisez le circuit selon le schéma suivant.
 
-* Connect one of the pins on the left side of the button to pin14, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Connectez l'une des broches du côté gauche du bouton à la broche 14, qui est connectée à une résistance pull-down et un condensateur de 0,1uF (104) (pour éliminer les interférences et fournir un niveau stable lorsque le bouton est activé).
+* Connectez l'autre extrémité de la résistance et du condensateur à la masse (GND), et l'une des broches du côté droit du bouton à 5V.
 
 .. image:: img/circuit/6_doorbel_bb.png
 
-Programming
-------------------
+Programmation
+-----------------
 
-We need to select an **Underwater** backdrop first, then add a **Fish** sprite and let it swim back and forth on the stage. Then draw a **Fishhook** sprite and control it by a button to start fishing. When the **Fish** sprite touches the **Fishhook** sprite in the hooked state (turns red), it will be hooked.
+Nous devons d'abord sélectionner un décor **Sous-marin**, puis ajouter un sprite **Poisson** et le faire nager de gauche à droite sur la scène. Ensuite, dessinez un sprite **Hameçon** et contrôlez-le avec un bouton pour commencer à pêcher. Lorsque le sprite **Poisson** touche le sprite **Hameçon** dans l'état de pêche (devient rouge), il sera capturé.
 
-**1. Adding a backdrop**
+**1. Ajout d'un décor**
 
-Use the **Choose a Backdrop** button to add an **Underwater** backdrop.
+Utilisez le bouton **Choisir un décor** pour ajouter un décor **Sous-marin**.
 
 .. image:: img/18_under.png
 
-**2. Fishhook sprite**
+**2. Sprite Hameçon**
 
-The **Fishhook** sprite usually stays underwater in the yellow state; when the button is pressed, it is in the fishing state (red) and moves above the stage.
+Le sprite **Hameçon** reste généralement sous l'eau en état jaune ; lorsque le bouton est pressé, il est en état de pêche (rouge) et se déplace au-dessus de la scène.
 
-There is no **Fishhook** sprite in Pictoblox, we can modify the **Glow-J** sprite to look like a fishhook.
+Il n'y a pas de sprite **Hameçon** dans Pictoblox, nous pouvons modifier le sprite **Glow-J** pour ressembler à un hameçon.
 
-* Add the **Glow-J** sprite via **Choose a Sprite**.
+* Ajoutez le sprite **Glow-J** via **Choisir un Sprite**.
 
 .. image:: img/18_hook.png
 
-* Now go to the **Costumes** page of the **Glow-J** sprite, select Cyan's fill in the screen and remove it. Then change the J color to red and also reduce its width. The most important point to note is that you need to have the top of it just at the center point.
+* Allez maintenant à la page **Costumes** du sprite **Glow-J**, sélectionnez le remplissage cyan à l'écran et supprimez-le. Ensuite, changez la couleur du J en rouge et réduisez également sa largeur. Le point le plus important à noter est que vous devez avoir le sommet juste au point central.
 
 .. image:: img/18_hook1.png
 
-* Use the **Line tool** to draw a line as long as possible from the center point up (line out of the stage). Now that the sprite is drawn, set the sprite name to **Fishhook** and move it to the right position.
+* Utilisez l'outil **Ligne** pour dessiner une ligne aussi longue que possible depuis le point central vers le haut (ligne hors de la scène). Une fois le sprite dessiné, renommez-le **Hameçon** et déplacez-le à la bonne position.
 
 .. image:: img/18_hook2.png
 
-* When the green flag is clicked, set the sprite's color effect to 30 (yellow), and set its initial position.
+* Lorsque le drapeau vert est cliqué, définissez l'effet de couleur du sprite à 30 (jaune) et définissez sa position initiale.
 
 .. image:: img/18_hook3.png
 
-
-* If the button is pressed, set the color effect to 0 (red, start fishing state), wait for 0.1 and then move the **Fishhook** sprite to the top of the stage. Release the button and let the **Fishhook** return to its initial position.
+* Si le bouton est pressé, définissez l'effet de couleur à 0 (rouge, état de pêche), attendez 0,1 seconde puis déplacez le sprite **Hameçon** vers le haut de la scène. Relâchez le bouton et laissez l'**Hameçon** revenir à sa position initiale.
 
 .. image:: img/18_hook4.png
 
-**3. Fish sprite**
+**3. Sprite Poisson**
 
-The effect to be achieved by the **Fish** sprite is to move left and right on the stage, and when it encounters a **Fishhook** sprite in the fishing state, it shrinks and moves to a specific position and then disappears, and then clones a new **fish** sprite again.
+L'effet à obtenir pour le sprite **Poisson** est qu'il se déplace de gauche à droite sur la scène, et lorsqu'il rencontre un sprite **Hameçon** en état de pêche, il rétrécit et se déplace vers une position spécifique avant de disparaître, puis clone un nouveau sprite **Poisson**.
 
-* Now add the **fish** sprite and adjust its size and position.
+* Ajoutez maintenant le sprite **Poisson** et ajustez sa taille et sa position.
 
 .. image:: img/18_fish1.png
 
-* Create a variable **score** to store the number of fish caught, hide this sprite and clone it.
+* Créez une variable **score** pour stocker le nombre de poissons capturés, cachez ce sprite et clonez-le.
 
 .. image:: img/18_fish2.png
 
-
-* Show the clone of the **fish** sprite, switch its costume and finally set the initial position.
-
+* Affichez le clone du sprite **Poisson**, changez son costume et enfin définissez la position initiale.
 
 .. image:: img/18_fish3.png
 
-
-* Make the **fish** sprite's clone move left and right and bounce back when it touches the edge.
-
+* Faites en sorte que le clone du sprite **Poisson** se déplace de gauche à droite et rebondisse lorsqu'il touche le bord.
 
 .. image:: img/18_fish4.png
 
-
-* The **fish** sprite (of the clone) will not react when it passes the **Fishhook** sprite; when it touches the **Fishhook** sprite in the fishing state (turns red), it will be caught, at which point the score (variable score) +1, and it will also show a score animation (shrinks 40%, quickly moves to the position of the scoreboard and disappears). At the same time, a new fish is created (a new fish sprite clone) and the game continues.
+* Le sprite **Poisson** (du clone) ne réagira pas lorsqu'il passe devant le sprite **Hameçon** ; lorsqu'il touche le sprite **Hameçon** en état de pêche (devient rouge), il sera capturé, à ce moment-là, le score (variable score) +1, et il affichera également une animation de score (rétrécit de 40%, se déplace rapidement vers la position du tableau de score et disparaît). En même temps, un nouveau poisson est créé (un nouveau clone de sprite Poisson) et le jeu continue.
 
 .. note::
-    
-    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the red color of the **Fishhook** sprite on the stage. If you choose a color arbitrarily, this [Touch color] block will not work.
 
-
+    Vous devez cliquer sur la zone de couleur dans le bloc [Toucher la couleur], puis sélectionner l'outil pipette pour choisir la couleur rouge du sprite **Hameçon** sur la scène. Si vous choisissez une couleur arbitrairement, ce bloc [Toucher la couleur] ne fonctionnera pas.
 
 .. image:: img/18_fish5.png
-
-
-
-
-
-

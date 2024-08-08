@@ -1,36 +1,34 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 19: Detecting Obstacles
-==============================
+Vidéo 19 : Détection d'obstacles
+=====================================
 
-Learn how to use an ESP32 module and an infrared obstacle avoidance sensor to detect obstacles, with practical demonstrations including buzzer feedback.
+Apprenez à utiliser un module ESP32 et un capteur de détection d'obstacles infrarouge pour détecter les obstacles, avec des démonstrations pratiques incluant un retour sonore par buzzer.
 
-* **Starter Kit Components**: Detailed look at the ESP32 starter kit from SunFounder.
-* **Obstacle Avoidance Module**: Explains the module's operation, wiring, and adjustment.
-* **Arduino Setup**: Setting up the Arduino IDE for ESP32 development.
-* **Coding Walkthrough**: Guide to coding for obstacle detection and buzzer feedback.
-* **Sensitivity Adjustment**: How to adjust the module's sensitivity for reliable detection.
+* **Composants du kit de démarrage** : Présentation détaillée du kit de démarrage ESP32 de SunFounder.
+* **Module de détection d'obstacles** : Explication du fonctionnement, du câblage et des réglages du module.
+* **Configuration d'Arduino** : Configuration de l'IDE Arduino pour le développement avec l'ESP32.
+* **Guide de codage** : Guide de codage pour la détection d'obstacles et le retour sonore par buzzer.
+* **Réglage de la sensibilité** : Comment ajuster la sensibilité du module pour une détection fiable.
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/yMa2FOhpesU?si=80Z-WK_FstxI8DeT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_ir_obstacle`
-
-

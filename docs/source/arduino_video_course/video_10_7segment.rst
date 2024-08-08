@@ -1,36 +1,36 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 10: Digital Counter with Seven-Segment Display
-=====================================================
+Vidéo 10 : Compteur numérique avec affichage à sept segments
+=================================================================
 
-This tutorial is designed for learners who want to explore digital displays and counters using the ESP32 module.
+Ce tutoriel est conçu pour les apprenants qui souhaitent explorer les affichages numériques et les compteurs en utilisant le module ESP32.
 
-* **Project Scope**: Create a 0-9 counter, reverse it, and display letters A-E using ESP32.
-* **Components**: Includes ESP32, seven-segment display, 74HC595 shift register, resistors, and wiring.
-* **Seven-Segment Basics**: Explains segment control for displaying numbers and letters.
-* **Wiring Guide**: Details how to wire the display to the ESP32 and shift register.
-* **Arduino Code**: Describes the code for controlling the counter and display segments.
-* **Demonstrations**: Shows practical applications, including digit and letter display.
+* **Portée du projet** : Créer un compteur de 0 à 9, le faire défiler à l'envers et afficher les lettres de A à E en utilisant l'ESP32.
+* **Composants** : Inclut un ESP32, un affichage à sept segments, un registre à décalage 74HC595, des résistances et des câbles de connexion.
+* **Principes de base des affichages à sept segments** : Explique le contrôle des segments pour afficher des chiffres et des lettres.
+* **Guide de câblage** : Détaille comment connecter l'affichage à l'ESP32 et au registre à décalage.
+* **Code Arduino** : Décrit le code pour contrôler le compteur et les segments de l'affichage.
+* **Démonstrations** : Présente des applications pratiques, y compris l'affichage de chiffres et de lettres.
 
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/6VLU5ODueL0?si=6m12jzuYMoTYUVIF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_7_segment`

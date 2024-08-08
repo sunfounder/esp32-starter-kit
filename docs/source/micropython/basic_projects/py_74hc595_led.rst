@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté Facebook des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 ! Plongez plus profondément dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez & Partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_74hc595:
 
 2.4 Microchip - 74HC595
 ===========================
 
-Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
+Bienvenue dans ce projet passionnant ! Dans ce projet, nous allons utiliser la puce 74HC595 pour contrôler un affichage déroulant de 8 LED.
 
-Imagine triggering this project and witnessing a mesmerizing flow of light, as if a sparkling rainbow is jumping between the 8 LEDs. Each LED will light up one by one and quickly fade away, while the next LED continues to shine, creating a gorgeous and dynamic effect.
+Imaginez déclencher ce projet et assister à un flux de lumière fascinant, comme un arc-en-ciel scintillant sautant entre les 8 LED. Chaque LED s'allumera une par une puis s'éteindra rapidement, tandis que la LED suivante continuera de briller, créant un effet magnifique et dynamique.
 
-By cleverly utilizing the 74HC595 chip, we can control the on and off states of multiple LEDs to achieve the flowing effect. This chip has multiple output pins that can be connected in series to control the sequence of LED illumination. Moreover, thanks to the chip's expandability, we can easily add more LEDs to the flowing display, creating even more spectacular effects.
+En utilisant habilement la puce 74HC595, nous pouvons contrôler l'état de marche et d'arrêt de plusieurs LED pour obtenir cet effet de flux. Cette puce possède plusieurs broches de sortie qui peuvent être connectées en série pour contrôler la séquence d'illumination des LED. De plus, grâce à l'extensibilité de la puce, nous pouvons facilement ajouter plus de LED à l'affichage déroulant, créant ainsi des effets encore plus spectaculaires.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -64,29 +64,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Broches disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.4_74hc595_led.png
     :width: 600
 
-* When MR (pin10) is high level and CE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. 
-* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. 
-* There is a serial shift input pin (DS), a serial output pin (Q7') and an asynchronous reset button (low level) in the memory register. 
-* The memory register outputs a Bus with a parallel 8-bit and in three states. 
-* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+* Lorsque MR (broche 10) est au niveau haut et CE (broche 13) est au niveau bas, les données sont entrées sur le front montant de SHcp et vont au registre de mémoire via le front montant de SHcp. 
+* Si les deux horloges sont connectées ensemble, le registre à décalage est toujours une impulsion en avance sur le registre de mémoire. 
+* Il y a une broche d'entrée de décalage série (DS), une broche de sortie série (Q7') et un bouton de réinitialisation asynchrone (niveau bas) dans le registre de mémoire. 
+* Le registre de mémoire sort un bus avec un parallèle 8 bits et en trois états. 
+* Lorsque OE est activé (niveau bas), les données dans le registre de mémoire sont sorties vers le bus (Q0 ~ Q7).
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/2.4_74hc595_bb.png
     :width: 800
@@ -95,8 +95,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``2.4_microchip_74hc595.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Ouvrez le fichier ``2.4_microchip_74hc595.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Ensuite, cliquez sur "Exécuter le script actuel" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 
 
@@ -105,110 +105,110 @@ Here is a list of available pins on the ESP32 board for this project.
     import machine
     import time
 
-    # Initialize the pins for the 74HC595 shift register
+    # Initialiser les broches pour le registre à décalage 74HC595
     sdi = machine.Pin(25, machine.Pin.OUT)  # DS
     rclk = machine.Pin(27, machine.Pin.OUT)  # STcp
     srclk = machine.Pin(26, machine.Pin.OUT)  # SHcp
 
-    # Define the hc595_shift function to shift data into the 74HC595 shift register
+    # Définir la fonction hc595_shift pour décaler les données dans le registre à décalage 74HC595
     def hc595_shift(dat):
-        # Set the RCLK pin to low
+        # Mettre la broche RCLK à bas
         rclk.off()
         
-        # Iterate through each bit (from 7 to 0)
+        # Itérer à travers chaque bit (de 7 à 0)
         for bit in range(7, -1, -1):
-            # Extract the current bit from the input data
+            # Extraire le bit actuel des données d'entrée
             value = 1 & (dat >> bit)
             
-            # Set the SRCLK pin to low
+            # Mettre la broche SRCLK à bas
             srclk.off()
             
-            # Set the value of the SDI pin
+            # Définir la valeur de la broche SDI
             sdi.value(value)
             
-            # Clock the current bit into the shift register by setting the SRCLK pin to high
+            # Synchroniser le bit actuel dans le registre à décalage en mettant la broche SRCLK à haut
             srclk.on()
             
-        # Latch the data into the storage register by setting the RCLK pin to high
+        # Verrouiller les données dans le registre de stockage en mettant la broche RCLK à haut
         rclk.on()
 
     num = 0
 
-    # Shift data into the 74HC595 to create a moving LED pattern
+    # Décaler les données dans le 74HC595 pour créer un motif de LED en mouvement
     for i in range(16):
         if i < 8:
-            num = (num << 1) + 1  # Shift left and set the least significant bit to 1
+            num = (num << 1) + 1  # Décalage vers la gauche et définir le bit de poids faible à 1
         elif i >= 8:
-            num = (num & 0b01111111) << 1  # Mask the most significant bit and shift left
-        hc595_shift(num)  # Shift the current value into the 74HC595
-        print("{:0>8b}".format(num))  # Print the current value in binary format
-        time.sleep_ms(200)  # Wait 200 milliseconds before shifting the next value
+            num = (num & 0b01111111) << 1  # Masquer le bit de poids fort et décaler vers la gauche
+        hc595_shift(num)  # Décaler la valeur actuelle dans le 74HC595
+        print("{:0>8b}".format(num))  # Afficher la valeur actuelle au format binaire
+        time.sleep_ms(200)  # Attendre 200 millisecondes avant de décaler la valeur suivante
 
 
 
 
-During script execution, you will see the LED light up one by one, and then turn off in the original order.
+Pendant l'exécution du script, vous verrez les LED s'allumer une par une, puis s'éteindre dans l'ordre initial.
 
-**How it works?**
+**Comment ça marche ?**
 
-This code is used to control an 8-bit shift register (74595), and output different binary values to the shift register, with each value displayed on an LED for a certain period of time.
+Ce code est utilisé pour contrôler un registre à décalage 8 bits (74595) et sortir différentes valeurs binaires vers le registre à décalage, chaque valeur étant affichée sur une LED pendant une certaine période de temps.
 
-#. The code imports the ``machine`` and ``time`` modules, where the ``machine`` module is used to control hardware I/O, and the ``time`` module is used for implementing time delays and other functions.
+#. Le code importe les modules ``machine`` et ``time``, où le module ``machine`` est utilisé pour contrôler les E/S matérielles et le module ``time`` est utilisé pour implémenter des délais et d'autres fonctions.
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Three output ports are initialized using the ``machine.Pin()`` function, corresponding to the data port (SDI), storage clock port (RCLK), and shift register clock port (SRCLK) of the shift register.
+#. Trois ports de sortie sont initialisés à l'aide de la fonction ``machine.Pin()``, correspondant au port de données (SDI), au port d'horloge de stockage (RCLK) et au port d'horloge du registre à décalage (SRCLK) du registre à décalage.
 
     .. code-block:: python
 
-        # Initialize the pins for the 74HC595 shift register
+        # Initialiser les broches pour le registre à décalage 74HC595
         sdi = machine.Pin(25, machine.Pin.OUT)  # DS
         rclk = machine.Pin(27, machine.Pin.OUT)  # STcp
         srclk = machine.Pin(26, machine.Pin.OUT)  # SHcp
 
-#. A function called ``hc595_shift()`` is defined to write an 8-bit data to the shift register.
+#. Une fonction appelée ``hc595_shift()`` est définie pour écrire des données de 8 bits dans le registre à décalage.
 
     .. code-block:: python
 
         def hc595_shift(dat):
-            # Set the RCLK pin to low
+            # Mettre la broche RCLK à bas
             rclk.off()
             
-            # Iterate through each bit (from 7 to 0)
+            # Itérer à travers chaque bit (de 7 à 0)
             for bit in range(7, -1, -1):
-                # Extract the current bit from the input data
+                # Extraire le bit actuel des données d'entrée
                 value = 1 & (dat >> bit)
                 
-                # Set the SRCLK pin to low
+                # Mettre la broche SRCLK à bas
                 srclk.off()
                 
-                # Set the value of the SDI pin
+                # Définir la valeur de la broche SDI
                 sdi.value(value)
                 
-                # Clock the current bit into the shift register by setting the SRCLK pin to high
+                # Synchroniser le bit actuel dans le registre à décalage en mettant la broche SRCLK à haut
                 srclk.on()
                 
-            # Latch the data into the storage register by setting the RCLK pin to high
+            # Verrouiller les données dans le registre de stockage en mettant la broche RCLK à haut
             rclk.on()
 
-#. About the ``for`` loop.
+#. À propos de la boucle ``for``.
 
     .. code-block:: python
 
         for i in range(16):
                 if i < 8:
-                    num = (num << 1) + 1  # Shift left and set the least significant bit to 1
+                    num = (num << 1) + 1  # Décalage vers la gauche et définir le bit de poids faible à 1
                 elif i >= 8:
-                    num = (num & 0b01111111) << 1  # Mask the most significant bit and shift left
-                hc595_shift(num)  # Shift the current value into the 74HC595
-                print("{:0>8b}".format(num))  # Print the current value in binary format
-                time.sleep_ms(200)  # Wait 200 milliseconds before shifting the next value
+                    num = (num & 0b01111111) << 1  # Masquer le bit de poids fort et décaler vers la gauche
+                hc595_shift(num)  # Décaler la valeur actuelle dans le 74HC595
+                print("{:0>8b}".format(num))  # Afficher la valeur actuelle au format binaire
+                time.sleep_ms(200)  # Attendre 200 millisecondes avant de décaler la valeur suivante
 
-    * The variable ``i`` is used to control the output binary value. In the first 8 iterations, the value of num will be successively 00000001, 00000011, 00000111, ..., 11111111, which is left-shifted by one bit and then added by 1.
-    * In the 9th to 16th iterations, the highest bit of 1 is first changed to 0, and then left-shifted by one bit, resulting in the output values of 00000010, 00000100, 00001000, ..., 10000000.
-    * In each iteration, the value of ``num`` is passed to the ``hc595_shift()`` function to control the shift register to output the corresponding binary value.
-    * At the same time as outputting the binary value, the ``print()`` function outputs the binary value as a string to the terminal.
-    * After outputting the binary value, the program pauses for 200 milliseconds using the ``time.sleep_ms()`` function, so that the value on the LED remains displayed for a certain period of time.
+    * La variable ``i`` est utilisée pour contrôler la valeur binaire de sortie. Lors des 8 premières itérations, la valeur de num sera successivement 00000001, 00000011, 00000111, ..., 11111111, qui est décalée d'un bit vers la gauche puis ajoutée de 1.
+    * Lors des 9e à 16e itérations, le bit de poids fort de 1 est d'abord changé en 0, puis décalé d'un bit vers la gauche, ce qui donne les valeurs de sortie 00000010, 00000100, 00001000, ..., 10000000.
+    * À chaque itération, la valeur de ``num`` est passée à la fonction ``hc595_shift()`` pour contrôler le registre à décalage afin de sortir la valeur binaire correspondante.
+    * En même temps que la sortie de la valeur binaire, la fonction ``print()`` sort la valeur binaire sous forme de chaîne dans le terminal.
+    * Après avoir sorti la valeur binaire, le programme fait une pause de 200 millisecondes en utilisant la fonction ``time.sleep_ms()``, afin que la valeur sur la LED reste affichée pendant une certaine période de temps.

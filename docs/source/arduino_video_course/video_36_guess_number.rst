@@ -1,38 +1,36 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 36: Guessing Number Game
+Vidéo 36 : Jeu de devinette de nombres
 ====================================================
 
-This tutorial guides you through creating an engaging number guessing game controlled via an infrared remote, utilizing an ESP32 board and an LCD for real-time feedback.
+Ce tutoriel vous guide dans la création d'un jeu de devinette de nombres interactif contrôlé via une télécommande infrarouge, en utilisant une carte ESP32 et un écran LCD pour un retour en temps réel.
 
-* **Component Overview**: Introduction to using the ESP32, infrared receiver and transmitter, and LCD display for building interactive projects.
-* **Wiring Setup**: Detailed instructions on connecting the infrared receiver to the ESP32 and interfacing with the LCD display.
-* **Arduino Coding**: Step-by-step code walkthrough for receiving infrared signals, generating random numbers, and displaying game status on the LCD.
-* **Game Mechanics**: How to use the infrared remote to guess numbers within a range, with the game providing hints towards the correct answer.
-* **Environment Setup**: Configuring the Arduino IDE for ESP32 development, including board and port selection.
-* **Live Demonstration**: Showing the game in action, highlighting the interaction between the infrared remote inputs and LCD feedback.
+* **Présentation des composants** : Introduction à l'utilisation de l'ESP32, du récepteur et émetteur infrarouge, et de l'écran LCD pour construire des projets interactifs.
+* **Configuration du câblage** : Instructions détaillées pour connecter le récepteur infrarouge à l'ESP32 et interfacer avec l'écran LCD.
+* **Codage Arduino** : Guide pas à pas du code pour recevoir les signaux infrarouges, générer des nombres aléatoires et afficher l'état du jeu sur l'écran LCD.
+* **Mécanique du jeu** : Comment utiliser la télécommande infrarouge pour deviner des nombres dans une plage, avec des indices fournis par le jeu pour se rapprocher de la bonne réponse.
+* **Configuration de l'environnement** : Configuration de l'IDE Arduino pour le développement avec l'ESP32, y compris la sélection de la carte et du port.
+* **Démonstration en direct** : Présentation du jeu en action, mettant en évidence l'interaction entre les entrées de la télécommande infrarouge et le retour de l'écran LCD.
 
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/cvq8t23Oe2A?si=Shgb6famqWsaipQu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_guess_number`
-
-

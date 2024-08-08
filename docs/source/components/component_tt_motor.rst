@@ -1,52 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux exclusivités.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de saison.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_tt_motor:
 
-TT Motor
+Moteur TT
 ==============
-
 
 .. image:: img/tt_motor.jpg
     :width: 400
     :align: center
 
-This is a TT DC gearbox motor with a gear ratio of 1:48, it comes with 2 x 200mm wires with 0.1" male connectors that fit into a breadboard. Perfect for plugging into a breadboard or terminal block.
+Il s'agit d'un moteur à engrenages CC TT avec un rapport de réduction de 1:48, équipé de 2 fils de 200 mm avec des connecteurs mâles de 0,1" qui s'insèrent dans une breadboard. Parfait pour être branché dans une breadboard ou un bloc terminal.
 
-You can power these motors with 3 ~ 6VDC, but of course, they will go a little faster at higher voltages.
+Vous pouvez alimenter ces moteurs avec une tension de 3 à 6VDC, mais bien sûr, ils iront un peu plus vite à des tensions plus élevées.
 
-Note that these are very basic motors with no built-in encoder, speed control or position feedback. The voltage goes in and the spin comes out. There will be variation from motor to motor, so if you need precise motion, you'll need a separate feedback system.
+Notez que ce sont des moteurs très basiques sans encodeur intégré, contrôle de vitesse ou retour de position. La tension entre et la rotation sort. Il y aura des variations d'un moteur à l'autre, donc si vous avez besoin d'un mouvement précis, vous aurez besoin d'un système de retour séparé.
 
-**Technical Details**
+**Détails techniques**
 
-* Rated Voltage: 3~6V
-* Continuous No-Load Current: 150mA +/- 10%
-* Min. Operating Speed (3V): 90+/- 10% RPM
-* Min. Operating Speed (6V): 200+/- 10% RPM
-* Stall Torque (3V): 0.4kg.cm
-* Stall Torque (6V): 0.8kg.cm
-* Gear Ratio: 1:48
-* Body Dimensions: 70 x 22 x 18mm
-* Wires Length: 200mm & 28 AWG
-* Weight: 30.6g
+* Tension nominale : 3~6V
+* Courant continu à vide : 150mA +/- 10%
+* Vitesse minimale en fonctionnement (3V) : 90+/- 10% RPM
+* Vitesse minimale en fonctionnement (6V) : 200+/- 10% RPM
+* Couple de blocage (3V) : 0.4kg.cm
+* Couple de blocage (6V) : 0.8kg.cm
+* Rapport de réduction : 1:48
+* Dimensions du corps : 70 x 22 x 18mm
+* Longueur des fils : 200mm & 28 AWG
+* Poids : 30.6g
 
-**Dimensional Drawing**
+**Schéma dimensionnel**
 
 .. image:: img/motor_size.jpg
 
-**Example**
+**Exemple**
 
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Projet Arduino)
+* :ref:`py_motor` (Projet MicroPython)
+* :ref:`sh_rotating_fan` (Projet Scratch)

@@ -1,37 +1,36 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 42: Capturing Photos
+Vidéo 42 : Prendre des photos
 =====================================
 
-Learn how to capture photos using the SunFounder ESP32 camera extension board, from setting up the hardware to understanding the code and retrieving the captured photos.
+Apprenez à capturer des photos en utilisant la carte d'extension caméra SunFounder ESP32, de la configuration du matériel à la compréhension du code et à la récupération des photos capturées.
 
-* **Introduction**: Explore the process of capturing photos with the ESP32 camera extension board.
-* **Camera Extension Board Setup**: Follow instructions for connecting the ESP32 board and camera extension board.
-* **Code Explanation**: Understand the code logic for capturing and saving photos on the micro SD card.
-* **Photo Numbering**: Learn about the numbering system used for saving photos and storing them on the micro SD card.
-* **Camera Resolution**: Discover the resolution capabilities of the OV2640 camera model used in the setup.
-* **Arduino IDE Setup**: Step-by-step guide for configuring the Arduino IDE to upload the code and operate the camera extension board.
+* **Introduction** : Découvrez le processus de capture de photos avec la carte d'extension caméra ESP32.
+* **Configuration de la carte d'extension caméra** : Suivez les instructions pour connecter la carte ESP32 et la carte d'extension caméra.
+* **Explication du code** : Comprenez la logique du code pour capturer et sauvegarder des photos sur la carte micro SD.
+* **Numérotation des photos** : Apprenez le système de numérotation utilisé pour sauvegarder les photos et les stocker sur la carte micro SD.
+* **Résolution de la caméra** : Découvrez les capacités de résolution du modèle de caméra OV2640 utilisé dans la configuration.
+* **Configuration de l'IDE Arduino** : Guide étape par étape pour configurer l'IDE Arduino afin de télécharger le code et de faire fonctionner la carte d'extension caméra.
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/1Sjx9tDOF-k?si=1RYiFu4FB88sRsAR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_take_photo_sd`
-
 

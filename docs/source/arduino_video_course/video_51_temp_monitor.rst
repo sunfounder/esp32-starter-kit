@@ -1,33 +1,30 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 51: IoT Temperature Monitoring System
+Vidéo 51 : Système de surveillance de la température IoT
 =====================================================================================
 
+Apprenez à créer un système de surveillance de la température utilisant un microcontrôleur ESP32 et une connectivité Wi-Fi, couvrant la configuration matérielle, le développement de code et l'accès aux données de température via un serveur web.
 
-Learn how to create a temperature monitoring system using an ESP32 microcontroller and Wi-Fi connectivity, covering hardware setup, code development, and accessing temperature data via a web server.
+* **Introduction à l'IoT** : Comprenez les bases de l'Internet des objets (IoT) et ses applications.
+* **Configuration Wi-Fi** : Configurez le microcontrôleur ESP32 pour fonctionner comme serveur web via Wi-Fi.
+* **Accès aux données de température** : Apprenez à accéder aux données de température en temps réel via un navigateur web ou un appareil mobile.
+* **Vue d'ensemble du code Arduino** : Obtenez des informations sur la structure du code Arduino pour le projet, y compris les paramètres de configuration et la gestion des requêtes clients.
+* **Sélection de la carte et du port COM** : Instructions étape par étape pour sélectionner la carte ESP32 et le port COM dans l'IDE Arduino.
+* **Démonstration pratique** : Regardez une démonstration en direct montrant le système en action, depuis le téléchargement du code jusqu'à l'accès aux données de température à distance.
 
-
-* **IoT Introduction**: Understand the basics of Internet of Things (IoT) and its applications.
-* **Wi-Fi Setup**: Configure the ESP32 microcontroller to function as a web server using Wi-Fi.
-* **Temperature Data Access**: Learn how to access real-time temperature data via a web browser or mobile device.
-* **Arduino Code Overview**: Get insights into the Arduino code structure for the project, including configuration settings and client request handling.
-* **Board and COM Port Selection**: Step-by-step instructions on selecting the ESP32 board and COM port in the Arduino IDE.
-* **Practical Demonstration**: Watch a live demonstration showcasing the system in action, from code uploading to accessing temperature data remotely.
-
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 

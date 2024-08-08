@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_74hc595:
 
@@ -19,79 +19,71 @@
 
 .. image:: img/74HC595.png
 
-Do you ever find yourself wanting to control a lot of LEDs, or just need more I/O pins to control buttons, sensors, and servos all at once? Well, you can connect a few sensors to Arduino pins, but you will soon start to run out of pins on the Arduino.
+Avez-vous déjà souhaité contrôler de nombreuses LED ou simplement avoir besoin de plus de broches I/O pour gérer des boutons, des capteurs et des servos en même temps ? Vous pouvez connecter quelques capteurs aux broches de l'Arduino, mais vous manquerez rapidement de broches disponibles.
 
-The solution is to use "shift registers". Shift registers allow you to expand the number of I/O pins you can use from the Arduino (or any microcontroller). The 74HC595 shift register  is one of the most famous.
+La solution consiste à utiliser des "registres à décalage". Les registres à décalage vous permettent d'augmenter le nombre de broches I/O utilisables sur l'Arduino (ou tout autre microcontrôleur). Le registre à décalage 74HC595 est l'un des plus célèbres.
 
-The  74HC595 basically controls eight independent output pins and uses only three input pins. If you need more than eight additional I/O lines, you can easily cascade any number of shift registers and create a large number of I/O lines. All this is done by so-called shifting.
+Le 74HC595 contrôle essentiellement huit broches de sortie indépendantes en n'utilisant que trois broches d'entrée. Si vous avez besoin de plus de huit lignes I/O supplémentaires, vous pouvez facilement cascader plusieurs registres à décalage et créer un grand nombre de lignes I/O. Tout cela est fait par ce qu'on appelle le décalage.
 
 
-**Features**
+**Caractéristiques**
 
-* 8-Bit serial-in, parallel-out shift
-* Wide operating voltage range of 2 V to 6 V
-* High-current 3-state outputs can drive up to 15LSTTL loads
-* Low power consumption, 80-µA max ICC
-* Typical tPD = 14 ns
-* ±6-mA output drive at 5 V
-* Low input current of 1 µA max
-* Shift register has direct clear
+* Registre à décalage série-entrée, parallèle-sortie 8 bits
+* Large plage de tension de fonctionnement de 2 V à 6 V
+* Les sorties à courant élevé à 3 états peuvent piloter jusqu'à 15 charges LSTTL
+* Faible consommation d'énergie, 80 µA max ICC
+* tPD typique = 14 ns
+* Pilotage de sortie de ±6 mA à 5 V
+* Faible courant d'entrée de 1 µA max
+* Le registre à décalage dispose d'une remise à zéro directe
 
-**Pins of 74HC595 and their functions:**
+**Broches du 74HC595 et leurs fonctions :**
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7'**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7** : Broches de sortie de données parallèles 8 bits, capables de contrôler directement 8 LED ou 8 broches d'affichage 7 segments.
+* **Q7'** : Broche de sortie série, connectée à DS d'un autre 74HC595 pour connecter plusieurs 74HC595 en série
+* **MR** : Broche de réinitialisation, active au niveau bas ;
+* **SHcp** : Entrée de séquence temporelle du registre à décalage. Sur le front montant, les données du registre à décalage se déplacent successivement d'un bit, c'est-à-dire que les données de Q1 passent à Q2, et ainsi de suite. Sur le front descendant, les données du registre à décalage restent inchangées.
+* **STcp** : Entrée de séquence temporelle du registre de stockage. Sur le front montant, les données du registre à décalage passent dans le registre de stockage.
+* **CE** : Broche d'activation de sortie, active au niveau bas.
+* **DS** : Broche d'entrée de données série
+* **VCC** : Tension d'alimentation positive.
+* **GND** : Masse.
 
-**Functional Diagram**
+**Schéma fonctionnel**
 
 .. image:: img/74hc595_functional_diagram.png
 
+**Principe de fonctionnement**
 
-**Working Principle**
+Lorsque MR (broche 10) est au niveau haut et OE (broche 13) est au niveau bas,
+les données sont entrées sur le front montant de SHcp et vont au registre de stockage par le front montant de STcp.
 
-When MR (pin10) is high level and OE (pin13) is low level, 
-data is input in the rising edge of SHcp and goes to the memory register through the rising edge of STcp. 
+* Registre à décalage
 
-
-* Shift Register
-
-    * Suppose, we want to input the binary data 1110 1110 into the shift register of the 74hc595.
-    * The data is input from bit 0 of the shift register.
-    * Whenever the shift register clock is a rising edge, the bits in the shift register are shifted one step. For example, bit 7 accepts the previous value in bit 6, bit 6 gets the value of bit 5, etc.
-
+    * Supposons que nous voulions entrer les données binaires 1110 1110 dans le registre à décalage du 74HC595.
+    * Les données sont entrées à partir du bit 0 du registre à décalage.
+    * Chaque fois que l'horloge du registre à décalage a un front montant, les bits dans le registre à décalage sont décalés d'un pas. Par exemple, le bit 7 accepte la valeur précédente du bit 6, le bit 6 obtient la valeur du bit 5, etc.
 
 .. image:: img/74hc595_shift.png
 
-* Storage Register
+* Registre de stockage
 
-    * When the storage register is in the rising edge state, the data of the shift register will be transferred to the storage register.
-    * The storage register is directly connected to the 8 output pins, Q0 ~ Q7 will be able to receive a byte of data. 
-    * The so-called storage register means that the data can exist in this register and will not disappear with one output. 
-    * The data will remain valid and unchanged as long as the 74HC595 is powered on continuously. 
-    * When new data comes, the data in the storage register will be overwritten and updated.
+    * Lorsque le registre de stockage est en état de front montant, les données du registre à décalage seront transférées au registre de stockage.
+    * Le registre de stockage est directement connecté aux 8 broches de sortie, Q0 ~ Q7 pourront recevoir un octet de données.
+    * Le soi-disant registre de stockage signifie que les données peuvent exister dans ce registre et ne disparaîtront pas avec une seule sortie.
+    * Les données resteront valides et inchangées tant que le 74HC595 est alimenté en continu.
+    * Lorsque de nouvelles données arrivent, les données dans le registre de stockage seront écrasées et mises à jour.
 
 .. image:: img/74hc595_storage.png
 
-**Example**
+**Exemple**
 
-* :ref:`ar_74hc595` (Arduino Project)
-* :ref:`ar_7_segment` (Arduino Project)
-* :ref:`ar_dice` (Arduino Project)
-* :ref:`py_74hc595` (MicroPython Project)
-* :ref:`py_7_segment` (MicroPython Project)
-* :ref:`py_dice` (MicroPython Project)
-
-
-
-
-
+* :ref:`ar_74hc595` (Projet Arduino)
+* :ref:`ar_7_segment` (Projet Arduino)
+* :ref:`ar_dice` (Projet Arduino)
+* :ref:`py_74hc595` (Projet MicroPython)
+* :ref:`py_7_segment` (Projet MicroPython)
+* :ref:`py_dice` (Projet MicroPython)

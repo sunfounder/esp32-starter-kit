@@ -1,60 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_rgb:
 
-2.3 Colorful Light
-==============================================
+2.3 Lumière Colorée
+===========================
 
-In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
+Dans ce projet, nous allons explorer le monde fascinant du mélange de couleurs additives en utilisant une LED RGB.
 
-RGB LED combines three primary colors, namely Red, Green, and Blue, into a single package. These three LEDs share a common cathode pin, while each anode pin controls the intensity of the corresponding color.
+La LED RGB combine trois couleurs primaires, à savoir le rouge, le vert et le bleu, dans un seul boîtier. Ces trois LEDs partagent une broche cathode commune, tandis que chaque broche anode contrôle l'intensité de la couleur correspondante.
 
-By varying the electrical signal intensity applied to each anode, we can create a wide range of colors. For example, mixing high-intensity red and green light will result in yellow light, while combining blue and green light will produce cyan.
+En variant l'intensité du signal électrique appliqué à chaque anode, nous pouvons créer une large gamme de couleurs. Par exemple, le mélange de lumières rouge et verte à haute intensité donnera une lumière jaune, tandis que la combinaison de lumières bleue et verte produira du cyan.
 
-Through this project, we will explore the principles of additive color mixing and unleash our creativity by manipulating the RGB LED to display captivating and vibrant colors.
+À travers ce projet, nous allons explorer les principes du mélange de couleurs additives et libérer notre créativité en manipulant la LED RGB pour afficher des couleurs captivantes et vibrantes.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -65,31 +65,29 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Available Pins**
+**Broches disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Broches disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.3_rgb.png
 
-The PWM pins pin27, pin26 and pin25 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+Les broches PWM pin27, pin26 et pin25 contrôlent respectivement les broches rouge, vert et bleu de la LED RGB, et connectent la broche cathode commune à la masse (GND). Cela permet à la LED RGB d'afficher une couleur spécifique en superposant la lumière sur ces broches avec différentes valeurs PWM.
 
-
-**Wiring**
+**Câblage**
 
 .. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
-The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+La LED RGB a 4 broches : la broche longue est la cathode commune, qui est généralement connectée à la masse (GND) ; la broche gauche à côté de la broche la plus longue est rouge ; et les deux broches à droite sont vert et bleu.
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
@@ -97,28 +95,25 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
 
 .. note::
 
-    * Open the ``2.3_colorful_light.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Ouvrez le fichier ``2.3_colorful_light.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Puis cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 .. code-block:: python
 
     from machine import Pin, PWM
     import time
 
-    # Define the GPIO pins for the RGB LED
+    # Définir les broches GPIO pour la LED RGB
     RED_PIN = 27
     GREEN_PIN = 26
     BLUE_PIN = 25
 
-
-    # Set up the PWM channels
+    # Configurer les canaux PWM
     red = PWM(Pin(RED_PIN))
     green = PWM(Pin(GREEN_PIN))
     blue = PWM(Pin(BLUE_PIN))
 
-    # Set the PWM frequency
+    # Définir la fréquence PWM
     red.freq(1000)
     green.freq(1000)
     blue.freq(1000)
@@ -129,54 +124,52 @@ The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually
         blue.duty(b)
 
     while True:
-        # Set different colors and wait for a while
-        set_color(1023, 0, 0) # Red
+        # Définir différentes couleurs et attendre un moment
+        set_color(1023, 0, 0) # Rouge
         time.sleep(1)
-        set_color(0, 1023, 0) # Green
+        set_color(0, 1023, 0) # Vert
         time.sleep(1)
-        set_color(0, 0, 1023) # Blue
+        set_color(0, 0, 1023) # Bleu
         time.sleep(1)
-        set_color(1023, 0, 1023) # purple
+        set_color(1023, 0, 1023) # Violet
         time.sleep(1)
 
-When the script runs, you will see the RGB LEDs display red, green, blue and purple, and so on.
+Lorsque le script s'exécute, vous verrez les LEDs RGB afficher rouge, vert, bleu, violet, etc.
 
-**Learn More**
+**En savoir plus**
 
-You can also set the color you want with the following code with the familiar color values of 0~255.
+Vous pouvez également définir la couleur que vous souhaitez avec le code suivant avec les valeurs de couleur familières de 0 à 255.
 
 .. note::
 
-    * Open the ``2.3_colorful_light_rgb.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Ouvrez le fichier ``2.3_colorful_light_rgb.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Puis cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 .. code-block:: python
 
     from machine import Pin, PWM
     import time
 
-    # Define the GPIO pins for the RGB LED
+    # Définir les broches GPIO pour la LED RGB
     RED_PIN = 27
     GREEN_PIN = 26
     BLUE_PIN = 25
 
-    # Set up the PWM channels
+    # Configurer les canaux PWM
     red = PWM(Pin(RED_PIN))
     green = PWM(Pin(GREEN_PIN))
     blue = PWM(Pin(BLUE_PIN))
 
-    # Set the PWM frequency
+    # Définir la fréquence PWM
     red.freq(1000)
     green.freq(1000)
     blue.freq(1000)
 
-    # Map input values from one range to another
+    # Mappage des valeurs d'entrée d'une plage à une autre
     def interval_mapping(x, in_min, in_max, out_min, out_max):
         return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
-    # Convert color values (0-255) to duty cycle values (0-1023)
+    # Convertir les valeurs de couleur (0-255) en valeurs de cycle de service (0-1023)
     def color_to_duty(rgb_value):
         rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
         return rgb_value
@@ -187,19 +180,19 @@ You can also set the color you want with the following code with the familiar co
         blue.duty(color_to_duty(blue_value))
 
     while True:
-        # Set different colors and wait for a while
-        set_color(255, 0, 0) # Red
+        # Définir différentes couleurs et attendre un moment
+        set_color(255, 0, 0) # Rouge
         time.sleep(1)
-        set_color(0, 255, 0) # Green
+        set_color(0, 255, 0) # Vert
         time.sleep(1)
-        set_color(0, 0, 255) # Blue
+        set_color(0, 0, 255) # Bleu
         time.sleep(1)
-        set_color(255, 0, 255) # purple
+        set_color(255, 0, 255) # Violet
         time.sleep(1)
 
-This code is based on the previous example, but it maps color values from 0 to 255 to a duty cycle range of 0 to 1023.
+Ce code est basé sur l'exemple précédent, mais il mappe les valeurs de couleur de 0 à 255 à une plage de cycle de service de 0 à 1023.
 
-* The ``interval_mapping`` function is a utility function that maps a value from one range to another. It takes five arguments: the input value, the minimum and maximum values of the input range, and the minimum and maximum values of the output range. It returns the input value mapped to the output range.
+* La fonction ``interval_mapping`` est une fonction utilitaire qui mappe une valeur d'une plage à une autre. Elle prend cinq arguments : la valeur d'entrée, les valeurs minimales et maximales de la plage d'entrée, et les valeurs minimales et maximales de la plage de sortie. Elle renvoie la valeur d'entrée mappée à la plage de sortie.
 
     .. code-block:: python
 
@@ -207,7 +200,7 @@ This code is based on the previous example, but it maps color values from 0 to 2
             rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
             return rgb_value
 
-* The ``color_to_duty`` function takes an integer RGB value (e.g. 255,0,255) and maps it to a duty cycle value suitable for the PWM pins. The input RGB value is first mapped from the range 0-255 to the range 0-1023 using the ``interval_mapping`` function. The output of ``interval_mapping`` is then returned as the duty cycle value.
+* La fonction ``color_to_duty`` prend une valeur RGB entière (par exemple 255,0,255) et la mappe à une valeur de cycle de service adaptée aux broches PWM. La valeur RGB d'entrée est d'abord mappée de la plage 0-255 à la plage 0-1023 en utilisant la fonction ``interval_mapping``. La sortie de ``interval_mapping`` est ensuite renvoyée comme valeur de cycle de service.
 
     .. code-block:: python
 
@@ -215,7 +208,7 @@ This code is based on the previous example, but it maps color values from 0 to 2
             rgb_value = int(interval_mapping(rgb_value,0,255,0,1023))
             return rgb_value
 
-* The ``color_set`` function takes three integer arguments: the red, green, and blue values for the LED. These values are passed to ``color_to_duty`` to obtain the duty cycle values for the PWM pins. The duty cycle values are then set for the corresponding pins using the ``duty`` method.
+* La fonction ``color_set`` prend trois arguments entiers : les valeurs rouge, vert et bleu pour la LED. Ces valeurs sont passées à ``color_to_duty`` pour obtenir les valeurs de cycle de service pour les broches PWM. Les valeurs de cycle de service sont ensuite définies pour les broches correspondantes en utilisant la méthode ``duty``.
 
     .. code-block:: python
 
@@ -223,6 +216,4 @@ This code is based on the previous example, but it maps color values from 0 to 2
             red.duty(color_to_duty(red_value))
             green.duty(color_to_duty(green_value))
             blue.duty(color_to_duty(blue_value))
-
-
 

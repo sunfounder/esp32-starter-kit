@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et des promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_7_segment:
 
-2.5 7 Segment Display
+2.5 Afficheur 7 Segments
 ===================================
 
-Welcome to this fascinating project! In this project, we will explore the enchanting world of displaying numbers from 0 to 9 on a seven-segment display.
+Bienvenue dans ce projet fascinant ! Dans ce projet, nous explorerons le monde enchanteur de l'affichage des chiffres de 0 à 9 sur un afficheur à sept segments.
 
-Imagine triggering this project and witnessing a small, compact display glowing brightly with each number from 0 to 9. It's like having a miniature screen that showcases the digits in a captivating way. By controlling the signal pins, you can effortlessly change the displayed number and create various engaging effects.
+Imaginez déclencher ce projet et voir un petit écran compact briller de mille feux avec chaque chiffre de 0 à 9. C'est comme avoir un écran miniature qui affiche les chiffres de manière captivante. En contrôlant les broches de signal, vous pouvez changer facilement le chiffre affiché et créer divers effets engageants.
 
-Through simple circuit connections and programming, you will learn how to interact with the seven-segment display and bring your desired numbers to life. Whether it's a counter, a clock, or any other intriguing application, the seven-segment display will be your reliable companion, adding a touch of brilliance to your projects.
+Grâce à des connexions de circuit simples et à la programmation, vous apprendrez à interagir avec l'afficheur à sept segments et à donner vie aux chiffres souhaités. Que ce soit un compteur, une horloge ou toute autre application intrigante, l'afficheur à sept segments sera votre compagnon fiable, ajoutant une touche de brillance à vos projets.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément aux liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -64,29 +64,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Broches disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.5_74hc595_7_segment.png
 
-Here the wiring principle is basically the same as :ref:`ar_74hc595`, the only difference is that Q0-Q7 are connected to the a ~ g pins of the 7 Segment Display.
+Le principe de câblage est essentiellement le même que celui de :ref:`ar_74hc595`, la seule différence est que Q0-Q7 sont connectés aux broches a ~ g de l'afficheur 7 segments.
 
-.. list-table:: Wiring
+.. list-table:: Câblage
     :widths: 15 25
     :header-rows: 1
 
     *   - 74HC595
-        - LED Segment Display
+        - Afficheur à segments LED
     *   - Q0
         - a
     *   - Q1
@@ -104,8 +104,7 @@ Here the wiring principle is basically the same as :ref:`ar_74hc595`, the only d
     *   - Q7
         - dp
 
-**Wiring**
-
+**Câblage**
 
 .. image:: ../../img/wiring/2.5_segment_bb.png
     :width: 800
@@ -114,23 +113,24 @@ Here the wiring principle is basically the same as :ref:`ar_74hc595`, the only d
 
 .. note::
 
-    * Open the ``2.5_7segment.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.5_7segment``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``2.5_7segment.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\2.5_7segment``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Téléverser**.
     * :ref:`unknown_com_port`
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/937f5e3f-2d9e-4c75-8331-ace3c0876182/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will be able to see the LED Segment Display display 0~9 in sequence.
+Après avoir téléversé le code avec succès, vous verrez l'afficheur à segments LED afficher 0~9 en séquence.
 
-**How it works?**
+**Comment ça marche ?**
 
-In this project, we are using the ``shiftOut()`` function to write the binary number to the shift register. 
+Dans ce projet, nous utilisons la fonction ``shiftOut()`` pour écrire le nombre binaire dans le registre à décalage. 
 
-Suppose that the 7-segment Display display the number "2". This bit pattern corresponds to the segments **f**, **c** and **dp** being turned off (low), while the segments **a**, **b**, **d**, **e** and **g** are turned on (high). This is "01011011" in binary and "0x5b" in hexadecimal notation. 
+Supposons que l'afficheur 7 segments affiche le chiffre "2". Ce modèle binaire correspond aux segments **f**, **c** et **dp** étant éteints (bas), tandis que les segments **a**, **b**, **d**, **e** et **g** sont allumés (haut). Cela correspond à "01011011" en binaire et "0x5b" en notation hexadécimale. 
 
-Therefore, you would need to call ``shiftOut(DS,SHcp,MSBFIRST,0x5b)`` to display the number "2" on the 7-segment display.
+Par conséquent, vous devez appeler ``shiftOut(DS, SHcp, MSBFIRST, 0x5b)
+```` pour afficher le chiffre "2" sur l'afficheur 7 segments.
 
 .. image:: img/7_segment2.png
 
@@ -138,16 +138,16 @@ Therefore, you would need to call ``shiftOut(DS,SHcp,MSBFIRST,0x5b)`` to display
 
 * `BinaryHex Converter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
 
-The following table shows the hexadecimal patterns that need to be written to the shift register to display the numbers 0 to 9 on a 7-segment display.
+Le tableau suivant montre les modèles hexadécimaux à écrire dans le registre à décalage pour afficher les chiffres de 0 à 9 sur un afficheur 7 segments.
 
 
 .. list-table:: Glyph Code
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Numbers	
-        - Binary Code
-        - Hex Code  
+    *   - Chiffres	
+        - Code binaire
+        - Code hexadécimal  
     *   - 0	
         - 00111111	
         - 0x3f
@@ -179,4 +179,4 @@ The following table shows the hexadecimal patterns that need to be written to th
         - 01101111	
         - 0x6f
 
-Write these codes into ``shiftOut()`` to make the LED Segment Display display the corresponding numbers.
+Écrivez ces codes dans ``shiftOut()`` pour que l'afficheur à segments LED affiche les chiffres correspondants.

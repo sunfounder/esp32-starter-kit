@@ -1,58 +1,57 @@
-
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _iot_html_cam:
 
 
-8.3 Custom Video Streaming Web Server
-========================================
+8.3 Serveur Web de Streaming Vidéo Personnalisé
+=====================================================
 
-The Custom Video Streaming Web Server project offers an opportunity to learn how to create a web page from scratch and customize it to play video streams. Additionally, you can incorporate interactive buttons, such as ON and OFF, to control the LED's brightness.
+Le projet de serveur web de streaming vidéo personnalisé vous offre l'opportunité d'apprendre à créer une page web à partir de zéro et à la personnaliser pour diffuser des flux vidéo. De plus, vous pouvez y intégrer des boutons interactifs, tels que ON et OFF, pour contrôler la luminosité de la LED.
 
-By building this project, you will gain hands-on experience in web development, HTML, CSS, and JavaScript. You will learn how to create a responsive web page that can display video streams in real-time. Moreover, you will discover how to integrate interactive buttons to control the LED's state, providing a dynamic user experience.
+En réalisant ce projet, vous acquerrez une expérience pratique en développement web, HTML, CSS et JavaScript. Vous apprendrez à créer une page web responsive capable d'afficher des flux vidéo en temps réel. De plus, vous découvrirez comment intégrer des boutons interactifs pour contrôler l'état de la LED, offrant ainsi une expérience utilisateur dynamique.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -62,9 +61,9 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**How to do?**
+**Comment faire ?**
 
-#. First plug in the camera.
+#. Branchez d'abord la caméra.
 
     .. raw:: html
 
@@ -73,45 +72,46 @@ You can also buy them separately from the links below.
             Your browser does not support the video tag.
         </video>
 
-#. Build the circuit.
+#. Montez le circuit.
 
     .. image:: ../../img/wiring/iot_3_html_led_bb.png
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Ensuite, connectez l'ESP32-WROOM-32E à l'ordinateur à l'aide du câble USB.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Open the code.
+#. Ouvrez le code.
 
-    * Open the ``iot_3_html_cam_led.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_3_html_cam_led`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``iot_3_html_cam_led.ino`` situé dans le répertoire ``esp32-starter-kit-main\c\codes\iot_3_html_cam_led``, ou copiez le code dans l'Arduino IDE.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
  
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/a5e33c30-63dc-4987-94c3-89bc6a599e24/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Locate the following lines and modify them with your ``SSID`` and ``PASSWORD``.
+#. Trouvez les lignes suivantes et modifiez-les avec votre ``SSID`` et ``PASSWORD``.
 
     .. code-block::  Arduino
 
-        // Replace the next variables with your SSID/Password combination
+        // Remplacez les variables suivantes par votre combinaison SSID/Mot de passe
         const char* ssid = "SSID";
         const char* password = "PASSWORD";
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
+#. Après avoir sélectionné la carte correcte (ESP32 Dev Module) et le port, cliquez sur le bouton **Upload**.
 
-#. You will see a successful WiFi connection message and the assigned IP address in the Serial Monitor.
+#. Vous verrez un message de connexion WiFi réussie et l'adresse IP attribuée dans le moniteur série.
 
     .. code-block:: 
 
         WiFi connected
         Camera Stream Ready! Go to: http://192.168.18.77
 
-#. Enter the IP address in your web browser. You will be directed to the web page shown below, where you can use the customized ON and OFF buttons to control the LED.
+#. Entrez l'adresse IP dans votre navigateur web. Vous serez dirigé vers la page web affichée ci-dessous, où vous pourrez utiliser les boutons personnalisés ON et OFF pour contrôler la LED.
 
     .. image:: img/sp230510_180503.png 
 
-#. Insert a battery into the expansion board and remove the USB cable. Now you can place the device anywhere you desire within the Wi-Fi range.
+#. Insérez une batterie dans la carte d'extension et retirez le câble USB. Vous pouvez maintenant placer l'appareil n'importe où dans la portée du Wi-Fi.
 
     .. image:: ../../img/plugin_battery.png
+

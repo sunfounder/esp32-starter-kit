@@ -1,37 +1,35 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 37: Bluetooth
+Vidéo 37 : Bluetooth
 ====================================================
 
-Learn how to set up Bluetooth Low Energy (BLE) communication between an ESP32 module and a smartphone, including pairing, sending, and receiving messages using the Arduino IDE and the Light Blue app.
+Apprenez à configurer la communication Bluetooth Low Energy (BLE) entre un module ESP32 et un smartphone, y compris l'appairage, l'envoi et la réception de messages en utilisant l'IDE Arduino et l'application Light Blue.
 
-* **BLE Communication Setup**: Introduction to setting up BLE communication using an ESP32 module.
-* **Light Blue App Installation**: Instructions on installing and using the Light Blue app for BLE testing with a smartphone.
-* **UUID Generation**: How to generate a unique UUID for BLE services to ensure unique identification.
-* **Arduino Code Walkthrough**: Detailed explanation of the Arduino code necessary for establishing BLE communication.
-* **Device Pairing and Messaging**: Step-by-step guide on pairing the ESP32 with a smartphone and exchanging messages.
-* **Practical Demonstration**: Real-time demonstration of sending and receiving messages between the ESP32 and a smartphone via BLE.
+* **Configuration de la communication BLE** : Introduction à la configuration de la communication BLE avec un module ESP32.
+* **Installation de l'application Light Blue** : Instructions pour installer et utiliser l'application Light Blue pour tester le BLE avec un smartphone.
+* **Génération de UUID** : Comment générer un UUID unique pour les services BLE afin d'assurer une identification unique.
+* **Explication du code Arduino** : Explication détaillée du code Arduino nécessaire pour établir la communication BLE.
+* **Appairage et messagerie des appareils** : Guide étape par étape pour appairer l'ESP32 avec un smartphone et échanger des messages.
+* **Démonstration pratique** : Démonstration en temps réel de l'envoi et de la réception de messages entre l'ESP32 et un smartphone via BLE.
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/kA_IJtytxbs?si=_N1Xewi0qor7_nib" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_bluetooth`
-
-

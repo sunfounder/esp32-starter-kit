@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_fading:
 
-2.2 Fading
-=================
+2.2 Variation de la luminosité
+==================================
 
-In the previous project, we controlled the LED by turning it on and off using digital output. In this project, we will create a breathing effect on the LED by utilizing Pulse Width Modulation (PWM). PWM is a technique that allows us to control the brightness of an LED or the speed of a motor by varying the duty cycle of a square wave signal.
+Dans le projet précédent, nous avons contrôlé la LED en l'allumant et l'éteignant en utilisant une sortie numérique. Dans ce projet, nous allons créer un effet de respiration sur la LED en utilisant la modulation de largeur d'impulsion (PWM). Le PWM est une technique qui permet de contrôler la luminosité d'une LED ou la vitesse d'un moteur en faisant varier le cycle de travail d'un signal carré.
 
-With PWM, instead of simply turning the LED on or off, we will be adjusting the amount of time the LED is on versus the amount of time it is off within each cycle. By rapidly switching the LED on and off at varying intervals, we can create the illusion of the LED gradually brightening and dimming, simulating a breathing effect.
+Avec le PWM, au lieu de simplement allumer ou éteindre la LED, nous ajusterons la durée pendant laquelle la LED est allumée par rapport à la durée pendant laquelle elle est éteinte dans chaque cycle. En allumant et éteignant rapidement la LED à des intervalles variés, nous pouvons créer l'illusion que la LED s'éclaire et s'assombrit progressivement, simulant un effet de respiration.
 
-By using the PWM capabilities of the ESP32 WROOM 32E, we can achieve smooth and precise control over the LED's brightness. This breathing effect adds a dynamic and visually appealing element to your projects, creating an eye-catching display or ambiance.
+En utilisant les capacités PWM de l'ESP32 WROOM 32E, nous pouvons obtenir un contrôle fluide et précis de la luminosité de la LED. Cet effet de respiration ajoute un élément dynamique et visuellement attrayant à vos projets, créant un affichage accrocheur ou une ambiance agréable.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -62,91 +62,88 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Available Pins**
+**Pins disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des pins disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pins disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This project is the same circuit as the first project :ref:`ar_blink`, but the signal type is different. The first project is to output digital high and low levels (0&1) directly from pin26 to make the LED light up or turn off, this project is to output PWM signal from pin26 to control the brightness of the LED.
+Ce projet utilise le même circuit que le premier projet :ref:`ar_blink`, mais le type de signal est différent. Le premier projet consistait à envoyer directement des niveaux numériques hauts et bas (0&1) à partir du pin 26 pour allumer ou éteindre la LED, ce projet utilise un signal PWM sur le pin 26 pour contrôler la luminosité de la LED.
 
-
-
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
-
 
 **Code**
 
 .. note::
 
-    * You can open the file ``2.2_fading_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.2_fading_led``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Vous pouvez ouvrir le fichier ``2.2_fading_led.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\2.2_fading_led``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
    
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aa898b09-be86-473b-9bfe-317556c696bb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you can see the LED breathing.
+Après avoir téléversé le code avec succès, vous pouvez voir la LED respirer.
 
-**How it works？**
+**Comment ça marche ?**
 
-
-#. Define constants and variables。
+#. Définir les constantes et les variables.
 
     .. code-block:: arduino
 
-        const int ledPin = 26; // The GPIO pin for the LED
+        const int ledPin = 26; // Le pin GPIO pour la LED
         int brightness = 0;
         int fadeAmount = 5;
    
-    * ``ledPin``: The GPIO pin number where the LED is connected (in this case, GPIO 26).
-    * ``brightness``: The current brightness level of the LED (initially set to 0).
-    * ``fadeAmount``: The amount by which the LED's brightness will change in each step (set to 5).
+    * ``ledPin``: Le numéro du pin GPIO où la LED est connectée (dans ce cas, GPIO 26).
+    * ``brightness``: Le niveau de luminosité actuel de la LED (initialement défini à 0).
+    * ``fadeAmount``: Le montant par lequel la luminosité de la LED changera à chaque étape (défini à 5).
 
-#. Initializes the PWM channel and configures the LED pin.
+#. Initialiser le canal PWM et configurer le pin de la LED.
 
     .. code-block:: arduino
 
         void setup() {
-          ledcAttach(ledPin, 5000, 8);  // Attach the LED pin
+          ledcAttach(ledPin, 5000, 8);  // Attacher le pin LED
         }
 
-    Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
+    Ici, nous utilisons le périphérique |link_ledc| (contrôle de LED) qui est principalement conçu pour contrôler l'intensité des LED, bien qu'il puisse également être utilisé pour générer des signaux PWM à d'autres fins.
 
-    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.
+    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: Cette fonction est utilisée pour configurer le pin LEDC avec une fréquence et une résolution données. Le canal LEDC sera sélectionné automatiquement.
             
-        * ``pin`` select GPIO pin.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
+        * ``pin`` sélectionner le pin GPIO.
+        * ``freq`` sélectionner la fréquence du PWM.
+        * ``resolution_bits`` sélectionner la résolution pour le canal LEDC. La plage est de 1 à 14 bits (1-20 bits pour l'ESP32).
 
-#. The ``loop()`` function contains the main logic of the program and runs continuously. It updates the LED's brightness, inverts the fade amount when the brightness reaches the minimum or maximum value, and introduces a delay.
+#. La fonction ``loop()`` contient la logique principale du programme et s'exécute en continu. Elle met à jour la luminosité de la LED, inverse la quantité de déclin lorsque la luminosité atteint la valeur minimale ou maximale, et introduit un délai.
 
     .. code-block:: arduino
 
         void loop() {
-            ledcWrite(ledPin, brightness);  // Write the new brightness value to the PWM pin
+            ledcWrite(ledPin, brightness);  // Écrire la nouvelle valeur de luminosité sur le pin PWM
             brightness = brightness + fadeAmount;
 
             if (brightness <= 0 || brightness >= 255) {
                 fadeAmount = -fadeAmount;
             }
             
-            delay(50); // Wait for 50 milliseconds
-            }
+            delay(50); // Attendre 50 millisecondes
+        }
 
-    * ``bool ledcWrite(uint8_t pin, uint32_t duty);``: This function is used to set duty for the LEDC pin.
+    * ``bool ledcWrite(uint8_t pin, uint32_t duty);``: Cette fonction est utilisée pour définir le cycle de service pour le pin LEDC.
         
-        * ``pin`` select LEDC pin.
-        * ``duty`` select duty to be set for selected channel.
+        * ``pin`` sélectionner le pin LEDC.
+        * ``duty`` sélectionner le cycle de service à définir pour le canal sélectionné.
+

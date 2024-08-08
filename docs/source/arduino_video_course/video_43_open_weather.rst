@@ -1,39 +1,36 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 43: IoT Internet Weather Station
+Vidéo 43 : Station météo IoT Internet
 =================================================
 
-Learn how to create a real-time weather station using the SunFounder ESP32 IoT Learning Kit and the OpenWeatherMap API, from setting up hardware to displaying weather data on an LCD screen.
+Apprenez à créer une station météo en temps réel en utilisant le kit d'apprentissage IoT SunFounder ESP32 et l'API OpenWeatherMap, de la configuration du matériel à l'affichage des données météorologiques sur un écran LCD.
 
+* **API OpenWeatherMap** : Accédez aux données météorologiques comme la température et l'humidité via l'API OpenWeatherMap.
+* **Configuration matérielle** : Connectez la carte ESP32, la carte d'extension, les fils de connexion et l'écran LCD en suivant le schéma de câblage fourni.
+* **Explication du code** : Comprenez le code Arduino pour la configuration Wi-Fi, les requêtes API, l'analyse JSON et l'affichage des données météorologiques sur l'écran LCD.
+* **Sélection de la carte et du port ESP32** : Apprenez à choisir la carte ESP32 et le port correct dans l'IDE Arduino pour télécharger le code.
+* **Modification du code pour l'affichage** : Ajustez le code pour afficher avec précision les informations météorologiques sur l'écran LCD, y compris la gestion des valeurs de température.
+* **Démonstration** : Voyez la station météo en action, affichant les données météorologiques en temps réel sur l'écran LCD.
 
-* **OpenWeatherMap API**: Access weather data like temperature and humidity through the OpenWeatherMap API.
-* **Hardware setup**: Connect the ESP32 board, extension board, jumper wires, and LCD screen following the provided wiring diagram.
-* **Code explanation**: Understand the Arduino code for Wi-Fi setup, API requests, JSON parsing, and displaying weather data on the LCD.
-* **Selecting ESP32 board and port**: Learn how to choose the ESP32 board and the correct port in Arduino IDE for uploading the code.
-* **Modifying code for display**: Adjust the code to accurately display weather information on the LCD screen, including handling temperature values.
-* **Demonstration**: See the weather station in action, displaying real-time weather data on the LCD screen.
-
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/B73KTaBaqhs?si=fPAfiOrDh8geeZks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`iot_owm`
-
 

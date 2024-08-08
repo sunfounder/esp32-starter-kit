@@ -1,38 +1,35 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 50: Temperature and Humidity Monitoring with Adafruit IO
+Vidéo 50 : Surveillance de la température et de l'humidité avec Adafruit IO
 ======================================================================================
 
-Learn how to set up an ESP32 IoT project using MQTT and Adafruit IO, from hardware setup to code uploading and dashboard creation.
+Apprenez à configurer un projet IoT ESP32 en utilisant MQTT et Adafruit IO, de l'installation du matériel au téléversement du code et à la création du tableau de bord.
 
-* **ESP32 Starter Kit Introduction**: Overview of the components needed for the project.
-* **MQTT Explanation**: Understand the significance of MQTT in IoT applications.
-* **Adafruit IO Setup**: Step-by-step guide to creating an account and dashboard on Adafruit IO.
-* **Hardware Wiring Guide**: Detailed instructions on wiring the ESP32, DHT11 temperature sensor, and LED.
-* **Arduino Code Walkthrough**: Explanation of the code including library installation, Wi-Fi setup, and MQTT connection.
-* **Project Demonstration**: Watch the process of uploading the code, monitoring data on Adafruit IO dashboard, and remotely controlling the LED.
+* **Introduction au kit de démarrage ESP32** : Vue d'ensemble des composants nécessaires pour le projet.
+* **Explication de MQTT** : Comprendre l'importance de MQTT dans les applications IoT.
+* **Configuration d'Adafruit IO** : Guide étape par étape pour créer un compte et un tableau de bord sur Adafruit IO.
+* **Guide de câblage matériel** : Instructions détaillées sur le câblage de l'ESP32, du capteur de température DHT11 et de la LED.
+* **Explication du code Arduino** : Explication du code incluant l'installation des bibliothèques, la configuration Wi-Fi et la connexion MQTT.
+* **Démonstration du projet** : Regardez le processus de téléversement du code, de la surveillance des données sur le tableau de bord Adafruit IO et du contrôle à distance de la LED.
 
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/M9BQweAsHJM?si=k2H0AhWg47AvMR1j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_adafruit_io`
-
-

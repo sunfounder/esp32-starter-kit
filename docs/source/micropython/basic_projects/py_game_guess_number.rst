@@ -1,61 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_guess_number:
 
-6.7 Guess Number
+6.7 Devine le Nombre
 ==============================
 
-Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
+Vous vous sentez chanceux ? Voulez-vous tester votre intuition et voir si vous pouvez deviner le bon numéro ? Alors, ne cherchez pas plus loin que le jeu Devine le Nombre ! 
 
-With this project, you can play a fun and exciting game of chance.
+Avec ce projet, vous pouvez jouer à un jeu de hasard amusant et excitant.
 
-Using an IR remote control, players input numbers between 0 and 99 to try and guess the randomly generated lucky point number. 
-The system displays the player's input number on an LCD screen, along with upper and lower limit tips to help guide the 
-player towards the right answer. With every guess, players get closer to the lucky point number, 
-until finally, someone hits the jackpot and wins the game!
+En utilisant une télécommande IR, les joueurs saisissent des chiffres entre 0 et 99 pour essayer de deviner le numéro chanceux généré aléatoirement. 
+Le système affiche le numéro saisi par le joueur sur un écran LCD, avec des indications de limites supérieures et inférieures pour guider le joueur vers la bonne réponse. À chaque tentative, les joueurs se rapprochent du numéro chanceux, 
+jusqu'à ce que finalement, quelqu'un touche le jackpot et gagne la partie !
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -66,11 +65,11 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_6.7_guess_number.png
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
@@ -79,9 +78,9 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``6.7_game_guess_number.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * The ``lcd1602.py`` and ``ir_rx`` libraries are used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
+    * Ouvrez le fichier ``6.7_game_guess_number.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Ensuite, cliquez sur "Exécuter le script actuel" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
+    * Les bibliothèques ``lcd1602.py`` et ``ir_rx`` sont utilisées ici et vérifiez si elles sont téléchargées sur l'ESP32. Reportez-vous à :ref:`add_libraries_py` pour un tutoriel.
 
 .. code-block:: python
 
@@ -93,19 +92,19 @@ You can also buy them separately from the links below.
     from ir_rx.print_error import print_error
     from ir_rx.nec import NEC_8
 
-    # IR receiver configuration
+    # Configuration du récepteur IR
     pin_ir = Pin(14, Pin.IN)
 
-    # Initialize the guessing game variables
+    # Initialisation des variables du jeu de devinettes
     lower = 0
     upper = 99
     pointValue = int(urandom.uniform(lower, upper))
     count = 0
 
-    # Initialize the LCD1602 display
+    # Initialisation de l'affichage LCD1602
     lcd = LCD()
 
-    # Initialize a new random value for the game
+    # Initialiser une nouvelle valeur aléatoire pour le jeu
     def init_new_value():
         global pointValue, upper, lower, count
         pointValue = int(urandom.uniform(lower, upper))
@@ -115,7 +114,7 @@ You can also buy them separately from the links below.
         count = 0
         return False
 
-    # Display messages on the LCD based on the game state
+    # Afficher les messages sur le LCD en fonction de l'état du jeu
     def lcd_show(result):
         global count
         lcd.clear()
@@ -128,7 +127,7 @@ You can also buy them separately from the links below.
         lcd.message(string)
         return
 
-    # Process the entered number and update the game state
+    # Traiter le numéro saisi et mettre à jour l'état du jeu
     def number_processing():
         global upper, count, lower
         if count > pointValue:
@@ -142,7 +141,7 @@ You can also buy them separately from the links below.
         count = 0
         return False
 
-    # Process the key inputs from the IR remote control
+    # Traiter les entrées de touches de la télécommande IR
     def process_key(key):
         global count, lower, upper, pointValue, result
         if key == "Power":
@@ -161,7 +160,7 @@ You can also buy them separately from the links below.
             count = count * 10 + int(key) if count * 10 + int(key) <= 99 else count
             lcd_show(False)
 
-    # Decode the received data and return the corresponding key name
+    # Décoder les données reçues et retourner le nom de la touche correspondante
     def decodeKeyValue(data):       
         if data == 0x16:
             return "0"
@@ -215,15 +214,15 @@ You can also buy them separately from the links below.
             if key != "ERROR":
                 process_key(key)
 
-    # Initialize the IR receiver object with the callback function
+    # Initialiser l'objet récepteur IR avec la fonction de rappel
     ir = NEC_8(pin_ir, callback)
 
     # ir.error_function(print_error)
 
-    # Initialize the game with a new random value
+    # Initialiser le jeu avec une nouvelle valeur aléatoire
     init_new_value()
 
-    # Show the initial game state on the LCD
+    # Afficher l'état initial du jeu sur le LCD
     lcd_show(False)
 
     try:
@@ -234,20 +233,20 @@ You can also buy them separately from the links below.
 
 
 
-* When the code runs, a secret number is produced but not displayed on the LCD, and what you need to do is to guess it. 
-* Press the number you guessed on the remote control, then press the ``+`` key to confirm.
-* Simultaneously, the range shown on the I2C LCD1602 will decrease, and you must press the appropriate number based on this new range.
-* If you got the lucky number luckily or unluckily, there will appear ``GAME OVER!``.
+* Lorsque le code s'exécute, un numéro secret est produit mais non affiché sur le LCD, et ce que vous devez faire est de le deviner. 
+* Appuyez sur le numéro que vous avez deviné sur la télécommande, puis appuyez sur la touche ``+`` pour confirmer.
+* Simultanément, la plage affichée sur le LCD I2C1602 diminuera, et vous devrez appuyer sur le numéro approprié en fonction de cette nouvelle plage.
+* Si vous avez trouvé le numéro chanceux, ``GAME OVER!`` apparaîtra.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Si le code et le câblage sont corrects, mais que le LCD n'affiche toujours aucun contenu, vous pouvez ajuster le potentiomètre à l'arrière pour augmenter le contraste.
 
-**How it works?**
+**Comment ça marche ?**
 
-The following is a detailed analysis of part of the code.
+Voici une analyse détaillée d'une partie du code.
 
-#. Initialize the guessing game variables.
+#. Initialiser les variables du jeu de devinettes.
 
     .. code-block:: python
     
@@ -257,11 +256,11 @@ The following is a detailed analysis of part of the code.
         count = 0
 
 
-    * ``lower`` and ``upper`` bounds for the secret number.
-    * The secret number (``pointValue``) randomly generated between ``lower`` and ``upper`` bounds.
-    * The user's current guess (``count``).
+    * Limites ``lower`` et ``upper`` pour le numéro secret.
+    * Le numéro secret (``pointValue``) généré aléatoirement entre les limites ``lower`` et ``upper``.
+    * La devinette actuelle de l'utilisateur (``count``).
 
-#. This function resets the guessing game values and generates a new secret number.
+#. Cette fonction réinitialise les valeurs du jeu de devinettes et génère un nouveau numéro secret.
 
     .. code-block:: python
     
@@ -274,7 +273,7 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
 
-#. This function displays the current game status on the LCD screen.
+#. Cette fonction affiche l'état actuel du jeu sur l'écran LCD.
 
     .. code-block:: python
 
@@ -290,10 +289,10 @@ The following is a detailed analysis of part of the code.
             lcd.message(string)
             return
 
-    * If the game is over (``result=True``), it shows ``GAME OVER!`` and the secret number.
-    * Otherwise, it shows the current guess (``count``) and the current guessing range (``lower`` to ``upper``)
+    * Si le jeu est terminé (``result=True``), il affiche ``GAME OVER!`` et le numéro secret.
+    * Sinon, il affiche la devinette actuelle (``count``) et la plage de devinettes actuelle (``lower`` à ``upper``)
 
-#. This function processes the user's current guess (``count``) and updates the guessing range.
+#. Cette fonction traite la devinette actuelle de l'utilisateur (``count``) et met à jour la plage de devinettes.
 
     .. code-block:: python
 
@@ -310,11 +309,11 @@ The following is a detailed analysis of part of the code.
             count = 0
             return False
     
-    * If the current guess (``count``) is higher than the secret number, the upper bound is updated.
-    * If the current guess (``count``) is lower than the secret number, the lower bound is updated.
-    * If the current guess (``count``) is equal to the secret number, the function returns ``True`` (game over).
+    * Si la devinette actuelle (``count``) est supérieure au numéro secret, la limite supérieure est mise à jour.
+    * Si la devinette actuelle (``count``) est inférieure au numéro secret, la limite inférieure est mise à jour.
+    * Si la devinette actuelle (``count``) est égale au numéro secret, la fonction retourne ``True`` (jeu terminé).
 
-#. This function processes the key press events received from the IR remote.
+#. Cette fonction traite les événements de touche reçus de la télécommande IR.
 
     .. code-block:: python
 
@@ -336,11 +335,11 @@ The following is a detailed analysis of part of the code.
                 count = count * 10 + int(key) if count * 10 + int(key) <= 99 else count
                 lcd_show(False)
 
-    * If the ``Power`` key is pressed, the game is reset.
-    * If the ``+`` key is pressed, the current guess (``count``) is processed and the game status is updated.
-    * If a digit key is pressed, the current guess (``count``) is updated with the new digit.
+    * Si la touche ``Power`` est pressée, le jeu est réinitialisé.
+    * Si la touche ``+`` est pressée, la devinette actuelle (``count``) est traitée et l'état du jeu est mis à jour.
+    * Si une touche numérique est pressée, la devinette actuelle (``count``) est mise à jour avec le nouveau chiffre.
 
-#. This callback function is triggered when the IR receiver receives
+#. Cette fonction de rappel est déclenchée lorsque le récepteur IR reçoit des données.
 
     .. code-block:: python
 

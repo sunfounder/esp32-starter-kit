@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et des promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_74hc595:
 
 2.4 Microchip - 74HC595
-===========================
+=============================
 
-Welcome to this exciting project! In this project, we will be using the 74HC595 chip to control a flowing display of 8 LEDs.
+Bienvenue dans ce projet excitant ! Dans ce projet, nous utiliserons la puce 74HC595 pour contrôler un affichage défilant de 8 LEDs.
 
-Imagine triggering this project and witnessing a mesmerizing flow of light, as if a sparkling rainbow is jumping between the 8 LEDs. Each LED will light up one by one and quickly fade away, while the next LED continues to shine, creating a gorgeous and dynamic effect.
+Imaginez déclencher ce projet et assister à un flux lumineux captivant, comme un arc-en-ciel scintillant sautant entre les 8 LEDs. Chaque LED s'allume une par une et s'éteint rapidement, tandis que la LED suivante continue de briller, créant un effet dynamique et magnifique.
 
-By cleverly utilizing the 74HC595 chip, we can control the on and off states of multiple LEDs to achieve the flowing effect. This chip has multiple output pins that can be connected in series to control the sequence of LED illumination. Moreover, thanks to the chip's expandability, we can easily add more LEDs to the flowing display, creating even more spectacular effects.
+En utilisant intelligemment la puce 74HC595, nous pouvons contrôler les états de marche et d'arrêt de plusieurs LEDs pour obtenir l'effet de défilement. Cette puce a plusieurs broches de sortie qui peuvent être connectées en série pour contrôler la séquence d'illumination des LEDs. De plus, grâce à l'extensibilité de la puce, nous pouvons facilement ajouter plus de LEDs à l'affichage défilant, créant des effets encore plus spectaculaires.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément aux liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -65,29 +65,29 @@ You can also buy them separately from the links below.
         - |link_74hc595_buy|
 
 
-**Available Pins**
+**Broches disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Broches disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.4_74hc595_led.png
     :width: 600
 
-* When MR (pin10) is high level and CE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. 
-* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. 
-* There is a serial shift input pin (DS), a serial output pin (Q7') and an asynchronous reset button (low level) in the memory register. 
-* The memory register outputs a Bus with a parallel 8-bit and in three states. 
-* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+* Lorsque MR (pin10) est au niveau haut et CE (pin13) est au niveau bas, les données sont entrées sur le front montant de SHcp et vont au registre de mémoire par le front montant de SHcp. 
+* Si les deux horloges sont connectées ensemble, le registre à décalage est toujours une impulsion plus tôt que le registre de mémoire. 
+* Il y a une broche d'entrée de décalage série (DS), une broche de sortie série (Q7') et un bouton de réinitialisation asynchrone (niveau bas) dans le registre de mémoire. 
+* Le registre de mémoire produit un bus avec un parallèle 8 bits et dans trois états. 
+* Lorsque OE est activé (niveau bas), les données du registre de mémoire sont sorties sur le bus (Q0 ~ Q7).
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/2.4_74hc595_bb.png
     :width: 800
@@ -97,25 +97,25 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``2.4_74hc595.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.4_74hc595``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``2.4_74hc595.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\2.4_74hc595``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Téléverser**.
     * :ref:`unknown_com_port`
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/024e20bb-f9c6-4baf-bb27-cdf49eb91e9e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When you finish uploading the codes to the ESP32 board, you can see the LEDs turning on one after another.
+Une fois que vous avez terminé de téléverser le code sur la carte ESP32, vous pouvez voir les LEDs s'allumer une par une.
 
-**How it works?**
+**Comment ça marche ?**
 
-#. Declare an array, store several 8 bit binary numbers that are used to change the working state of the eight LEDs controlled by 74HC595. 
+#. Déclarez un tableau, stockez plusieurs nombres binaires de 8 bits qui sont utilisés pour changer l'état de fonctionnement des huit LEDs contrôlées par 74HC595. 
 
     .. code-block:: arduino
 
         int datArray[] = {B00000000, B00000001, B00000011, B00000111, B00001111, B00011111, B00111111, B01111111, B11111111};
 
-#. ``loop()`` function.
+#. Fonction ``loop()``.
 
     .. code-block:: arduino
 
@@ -123,15 +123,14 @@ When you finish uploading the codes to the ESP32 board, you can see the LEDs tur
             {
                 for(int num = 0; num <10; num++)
                 {
-                    digitalWrite(STcp,LOW); //Set ST_CP and hold low for as long as you are transmitting
+                    digitalWrite(STcp,LOW); //Réglez ST_CP et maintenez-le bas aussi longtemps que vous transmettez
                     shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
-                    digitalWrite(STcp,HIGH); //pull the ST_CPST_CP to save the data
+                    digitalWrite(STcp,HIGH); //Tirez le ST_CP pour sauvegarder les données
                     delay(1000);
                 }
             }
 
-
-    * Iterates through the ``datArray[]``, sequentially sending the binary values to the shift register.
-    * The ``digitalWrite(STcp, LOW)`` and ``digitalWrite(STcp, HIGH)`` commands latch the data into the storage register.
-    * ``shiftOut()`` function sends the binary values from ``datArray[]`` to the shift register using the data pin (DS) and shift register clock pin (SHcp). ``MSBFIRST`` means to move from high bits.
-    * Then create a 1-second pause between each LED pattern update.
+    * Parcourt le tableau ``datArray[]``, en envoyant séquentiellement les valeurs binaires au registre à décalage.
+    * Les commandes ``digitalWrite(STcp, LOW)`` et ``digitalWrite(STcp, HIGH)`` verrouillent les données dans le registre de stockage.
+    * La fonction ``shiftOut()`` envoie les valeurs binaires de ``datArray[]`` au registre à décalage en utilisant la broche de données (DS) et la broche d'horloge du registre à décalage (SHcp). ``MSBFIRST`` signifie déplacer à partir des bits de poids fort.
+    * Ensuite, créez une pause d'une seconde entre chaque mise à jour du motif LED.

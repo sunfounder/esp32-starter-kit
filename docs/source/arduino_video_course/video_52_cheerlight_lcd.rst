@@ -1,33 +1,30 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 52: CheerLights Global Sync with LCD
+Vidéo 52 : Synchronisation mondiale de CheerLights avec écran LCD
 =====================================================================================
 
+Apprenez à synchroniser les couleurs des LED sur plusieurs appareils en utilisant le projet CheerLights, intégré avec un microcontrôleur ESP32 et un écran LCD pour un retour en temps réel.
 
-Learn how to synchronize LED colors across multiple devices using the Cheer Lights project, integrated with an ESP32 microcontroller and an LCD screen for real-time feedback.
+* **Introduction à CheerLights** : Les tutoriels précédents couvraient des sujets essentiels comme l'utilisation des LED RGB et des écrans LCD.
+* **CheerLights avec MQTT** : Synchronisez les couleurs des LED via des abonnements MQTT pour une expérience partagée.
+* **Intégration avec ESP32 et écran LCD** : Connectez CheerLights à un microcontrôleur ESP32 avec un écran LCD pour afficher les couleurs et l'état de la connectivité.
+* **Connexion au Wi-Fi** : L'ESP32 se connecte au Wi-Fi, affichant le SSID lorsqu'il est connecté et tentant de se reconnecter en cas de déconnexion.
+* **Interaction avec le groupe CheerLights** : Interagissez avec le groupe CheerLights sur Discord pour changer les couleurs et participer à l'expérience partagée.
+* **Configuration et codage** : Instructions détaillées pour configurer la carte ESP32, sélectionner le bon port et installer les bibliothèques nécessaires pour intégrer CheerLights avec l'ESP32 et l'écran LCD.
 
-
-* **Introduction to Cheer Lights**: Previous tutorials covered essential topics like RGB LED and LCD screen usage.
-* **Cheer Lights with MQTT**: Synchronize LED colors through MQTT subscriptions for a shared experience.
-* **Integration with ESP32 and LCD Screen**: Connect Cheer Lights to an ESP32 microcontroller with an LCD screen for displaying colors and connectivity status.
-* **Connecting to Wi-Fi**: The ESP32 connects to Wi-Fi, displaying the SSID when connected and attempting to reconnect if disconnected.
-* **Interaction with Cheer Lights Group**: Interact with the Cheer Lights group on Discord to change colors and participate in the shared experience.
-* **Setup and Coding**: Detailed instructions provided on setting up the ESP32 board, selecting the correct port, and installing necessary libraries for integrating Cheer Lights with the ESP32 and LCD screen.
-
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 

@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _format_sd_card:
 
-How to format the SD card?
+Comment formater la carte SD ?
 ====================================
 
-The steps to ensure your SD card is formatted correctly may vary depending on your operating system. Here are simple steps on how to format an SD card in Windows, MacOS, and Linux:
+Les étapes pour s'assurer que votre carte SD est correctement formatée peuvent varier en fonction de votre système d'exploitation. Voici des étapes simples pour formater une carte SD sous Windows, MacOS et Linux :
 
 **Windows**
 
-   #. Insert your SD card into the computer, then open "My Computer" or "This PC." Right-click on your SD card and select "Format."
+   #. Insérez votre carte SD dans l'ordinateur, puis ouvrez "Ordinateur" ou "Ce PC". Faites un clic droit sur votre carte SD et sélectionnez "Formater".
 
         .. image:: img/sd_format_win1.png
 
-   #. In the file system drop-down menu, select the desired file system (usually choose FAT32, or for SD cards larger than 32GB, you may need to choose exFAT). Check "Quick Format" and then click "Start".
+   #. Dans le menu déroulant du système de fichiers, sélectionnez le système de fichiers souhaité (choisissez généralement FAT32, ou pour les cartes SD de plus de 32 Go, vous devrez peut-être choisir exFAT). Cochez "Formatage rapide" puis cliquez sur "Démarrer".
 
         .. image:: img/sd_format_win2.png
 
 **MacOS**
    
-   #. Insert your SD card into the computer. Open the "Disk Utility" application (can be found in the "Utilities" folder).
+   #. Insérez votre carte SD dans l'ordinateur. Ouvrez l'application "Utilitaire de disque" (que vous trouverez dans le dossier "Utilitaires").
 
         .. image:: img/sd_format_mac1.png
     
-   #. Select your SD card from the list on the left and then click "Erase".
+   #. Sélectionnez votre carte SD dans la liste à gauche, puis cliquez sur "Effacer".
 
         .. image:: img/sd_format_mac2.png
 
-   #. From the format drop-down menu, choose your desired file system (usually choose MS-DOS (FAT) for FAT32, or ExFAT for SD cards larger than 32GB) and then click "Erase".
+   #. Dans le menu déroulant du format, choisissez le système de fichiers souhaité (choisissez généralement MS-DOS (FAT) pour FAT32, ou ExFAT pour les cartes SD de plus de 32 Go), puis cliquez sur "Effacer".
 
         .. image:: img/sd_format_mac3.png
 
-   #. Finally, wait for the formatting to complete.
+   #. Enfin, attendez que le formatage soit terminé.
 
         .. image:: img/sd_format_mac3.png
 
 **Linux**
 
-   * First, insert your SD card and then open a terminal.
-   * Type ``lsblk`` and find your SD card's name in the device list (e.g., it may be ``sdb``).
-   * Use the ``umount`` command to unmount the SD card, like ``sudo umount /dev/sdb*``.
-   * Use the ``mkfs`` command to format the SD card. For example, ``sudo mkfs.vfat /dev/sdb1`` will format the SD card to a FAT32 file system (for SD cards larger than 32GB, you might need to use ``mkfs.exfat``).
+   * Tout d'abord, insérez votre carte SD puis ouvrez un terminal.
+   * Tapez ``lsblk`` et trouvez le nom de votre carte SD dans la liste des périphériques (par exemple, il peut s'agir de ``sdb``).
+   * Utilisez la commande ``umount`` pour démonter la carte SD, comme ``sudo umount /dev/sdb*``.
+   * Utilisez la commande ``mkfs`` pour formater la carte SD. Par exemple, ``sudo mkfs.vfat /dev/sdb1`` formatera la carte SD en système de fichiers FAT32 (pour les cartes SD de plus de 32 Go, vous devrez peut-être utiliser ``mkfs.exfat``).
 
-Before formatting your SD card, make sure to back up any important data on the SD card, as the formatting operation will erase all files on the SD card.
+Avant de formater votre carte SD, assurez-vous de sauvegarder toutes les données importantes sur la carte SD, car l'opération de formatage effacera tous les fichiers sur la carte SD.

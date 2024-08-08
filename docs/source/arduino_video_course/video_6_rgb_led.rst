@@ -1,35 +1,35 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 6: Controlling RGB LEDs
+Vidéo 6 : Contrôle des LED RGB
 ======================================
 
-This comprehensive tutorial provides a step-by-step guide to understanding and implementing RGB LED control using the ESP32, from basic concepts to practical applications.
+Ce tutoriel complet fournit un guide étape par étape pour comprendre et mettre en œuvre le contrôle des LED RGB avec l'ESP32, des concepts de base aux applications pratiques.
 
-* **RGB LED Overview**: Describes the structure and functionality of RGB LEDs, including common anode and cathode setups.
-* **Wiring Guide**: Provides details on connecting the RGB LED to the ESP32 module.
-* **Code Explanation**: Discusses the Arduino code necessary for manipulating RGB LED colors through PWM channels.
-* **Color Control Demo**: Demonstrates how to create different colors by adjusting the red, green, and blue values on the ESP32.
+* **Aperçu des LED RGB** : Décrit la structure et le fonctionnement des LED RGB, y compris les configurations à anode commune et cathode commune.
+* **Guide de câblage** : Fournit des détails sur la connexion de la LED RGB au module ESP32.
+* **Explication du code** : Discute du code Arduino nécessaire pour manipuler les couleurs des LED RGB via des canaux PWM.
+* **Démonstration de contrôle des couleurs** : Montre comment créer différentes couleurs en ajustant les valeurs de rouge, vert et bleu sur l'ESP32.
 
-Aimed at beginners, the tutorial offers a comprehensive introduction to using RGB LEDs with the ESP32 module.
+Destiné aux débutants, le tutoriel offre une introduction complète à l'utilisation des LED RGB avec le module ESP32.
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/O_tk0itHccs?si=rO9GmMaJpdHvDuEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_rgb`

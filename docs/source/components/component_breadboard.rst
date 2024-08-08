@@ -1,91 +1,83 @@
-
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_breadboard:
 
-Breadboard
-==============
+Plaque d'essai
+==================
 
-**What is a "solderless" breadboard?**
+**Qu'est-ce qu'une plaque d'essai sans soudure ?**
 
 .. image:: img/breadboard.png
     :width: 600
     :align: center
 
-A breadboard is a rectangular plastic board with many small holes in it. These small holes allow you to easily insert electronic components to build circuits. Technically speaking, these breadboards are known as solderless breadboards because they do not require soldering to make connections.
+Une plaque d'essai est une planche rectangulaire en plastique avec de nombreux petits trous. Ces petits trous vous permettent d'insérer facilement des composants électroniques pour construire des circuits. Techniquement parlant, ces plaques d'essai sont appelées plaques d'essai sans soudure car elles ne nécessitent pas de soudure pour établir des connexions.
 
-**Features**
+**Caractéristiques**
 
-* Size: 163 x 54 x 8 mm
-* 830 tie points breadboards: 630 tie-point ic-circuit area plus 2x100 tie-point distribution strips providing 4 power rails.
-* Wire size: Suitable for 20-29 AWG wires.
-* Material: ABS Plastic Panel, Tin Plated Phosphor Bronze Contact Sheet.
-* Voltage / Current: 300V/3-5A.
-* With Self-Adhesive Tape on the Back
+* Taille : 163 x 54 x 8 mm
+* Plaque d'essai de 830 points de connexion : 630 points de connexion pour les circuits intégrés plus 2x100 points de connexion pour les bandes de distribution fournissant 4 rails d'alimentation.
+* Taille de fil : Convient pour les fils de 20-29 AWG.
+* Matériau : Panneau en plastique ABS, feuille de contact en bronze phosphoreux étamé.
+* Tension / Courant : 300V/3-5A.
+* Avec bande adhésive au dos
 
-**What is in the breadboard?**
+**Que contient la plaque d'essai ?**
 
 .. image:: img/breadboard_internal.png
     :width: 600
     :align: center
 
-The inside of the breadboard is made up of rows of small metal clips. When you insert the leads of a component into the holes of the breadboard, one of the clips catches it. Some breadboards are actually made of clear plastic, so you can see the clips inside.
+L'intérieur de la plaque d'essai est composé de rangées de petits clips métalliques. Lorsque vous insérez les broches d'un composant dans les trous de la plaque d'essai, l'un des clips les attrape. Certaines plaques d'essai sont en plastique transparent, vous pouvez donc voir les clips à l'intérieur.
 
-**What do the letters and numbers on a breadboard mean?**
+**Que signifient les lettres et les chiffres sur une plaque d'essai ?**
 
 .. image:: img/breadboard_internal2.png
     :width: 500
     :align: center
 
-Most breadboards have some numbers, letters and plus and minus signs on them. Although the labels will vary from breadboard to breadboard, the function is basically the same. These labels allow you to find the corresponding holes more quickly when building your circuit.
+La plupart des plaques d'essai ont des chiffres, des lettres et des signes plus et moins. Bien que les étiquettes varient d'une plaque d'essai à l'autre, la fonction est essentiellement la même. Ces étiquettes vous permettent de trouver plus rapidement les trous correspondants lors de la construction de votre circuit.
 
-The row numbers and column letters help you to precisely locate the holes on the breadboard, for example, hole "C12" is where column C intersects row 12.
+Les numéros de rangée et les lettres de colonne vous aident à localiser précisément les trous sur la plaque d'essai, par exemple, le trou "C12" se trouve à l'intersection de la colonne C et de la rangée 12.
 
-
-**What do the colored lines and plus and minus signs mean?**
+**Que signifient les lignes colorées et les signes plus et moins ?**
 
 .. image:: img/breadboard_internal3.png
     :width: 500
     :align: center
 
-The sides of the breadboard are usually distinguished by red and blue (or other colors), as well as plus and minus signs, and are usually used to connect to the power supply, known as the power bus.
+Les côtés de la plaque d'essai sont généralement distingués par des couleurs rouges et bleues (ou d'autres couleurs), ainsi que par des signes plus et moins, et sont généralement utilisés pour se connecter à l'alimentation, appelés bus d'alimentation.
 
-When building a circuit, it is common to connect the negative terminal to the blue (-) column and the positive terminal to the red (+) column.
+Lors de la construction d'un circuit, il est courant de connecter la borne négative à la colonne bleue (-) et la borne positive à la colonne rouge (+).
 
-
-**How are the holes connected?**
+**Comment les trous sont-ils connectés ?**
 
 .. image:: img/breadboard_internal4.png
     :width: 500
     :align: center
 
-As shown in the diagram, each set of five holes in the middle section, columns A-E or F-J, is electrically connected. This means, for example, that hole A1 is electrically connected to holes B1, C1, D1 and E1.
+Comme le montre le diagramme, chaque ensemble de cinq trous dans la section médiane, colonnes A-E ou F-J, est électriquement connecté. Cela signifie, par exemple, que le trou A1 est électriquement connecté aux trous B1, C1, D1 et E1.
 
-It is not connected to hole A2 because that hole is in a different row with a separate set of metal clips. It is also not connected to holes F1, G1, H1, I1 or J1 because they are located in the other "half" of the breadboard - the clips are not connected across the middle gap.
+Il n'est pas connecté au trou A2 car ce trou est dans une rangée différente avec un ensemble de clips métalliques distinct. Il n'est pas non plus connecté aux trous F1, G1, H1, I1 ou J1 car ils sont situés dans l'autre "moitié" de la plaque d'essai - les clips ne sont pas connectés à travers l'espace central.
 
-Unlike the middle section, which is grouped by five holes, the buses on sides are electrically connected separately. For example, the column marked blue (-) is electrically connected as a whole, and the column marked red (+) is also electrically connected.
+Contrairement à la section médiane, qui est regroupée par cinq trous, les bus sur les côtés sont électriquement connectés séparément. Par exemple, la colonne marquée en bleu (-) est électriquement connectée dans son ensemble, et la colonne marquée en rouge (+) est également électriquement connectée.
 
-**Which electronic parts are compatible with breadboards?**
+**Quels composants électroniques sont compatibles avec les plaques d'essai ?**
 
 .. image:: img/breadboard_pins.jpg
     :width: 600
     :align: center
 
-Many electronic components have long metal legs called leads. Almost all components with leads will work with a breadboard. Components such as resistors, capacitors, switches, diodes, etc. can be inserted in any of the rows, but ICs need to be arranged across the middle gap.
-
-
-
-
-
+De nombreux composants électroniques ont de longues pattes métalliques appelées broches. Presque tous les composants avec des broches fonctionneront avec une plaque d'essai. Les composants tels que les résistances, les condensateurs, les interrupteurs, les diodes, etc. peuvent être insérés dans n'importe quelle rangée, mais les CI doivent être disposés de part et d'autre de l'espace central.

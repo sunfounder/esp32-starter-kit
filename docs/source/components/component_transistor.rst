@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux exclusivités.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de saison.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_transistor:
 
 Transistor
-============
+==============
 
 .. image:: img/npn_pnp.png
 
-Transistor is a semiconductor device that controls current by current. It functions by amplifying weak signal to larger amplitude signal and is also used for non-contact switch. 
+Le transistor est un dispositif semi-conducteur qui contrôle le courant par le courant. Il fonctionne en amplifiant un signal faible en un signal de plus grande amplitude et est également utilisé comme interrupteur sans contact.
 
-A transistor is a three-layer structure composed of P-type and N-type semiconductors. They form the three regions internally. The thinner in the middle is the base region; the other two are both N-type or P-type ones - the smaller region with intense majority carriers is the emitter region, when the other one is the collector region. This composition enables the transistor to be an amplifier. 
-From these three regions, three poles are generated respectively, which are base (b), emitter (e), and collector (c). They form two P-N junctions, namely, the emitter junction and collection junction. The direction of the arrow in the transistor circuit symbol indicates that of the emitter junction. 
+Un transistor est une structure à trois couches composée de semi-conducteurs de type P et de type N. Ils forment trois régions internes. La région la plus fine au milieu est la région de base ; les deux autres sont soit de type N, soit de type P - la région plus petite avec une majorité de porteurs est la région de l'émetteur, tandis que l'autre est la région du collecteur. Cette composition permet au transistor d'être un amplificateur.
+À partir de ces trois régions, trois pôles sont générés respectivement, à savoir la base (b), l'émetteur (e) et le collecteur (c). Ils forment deux jonctions P-N, à savoir la jonction de l'émetteur et la jonction du collecteur. La direction de la flèche dans le symbole du circuit du transistor indique celle de la jonction de l'émetteur.
 
 * `P-N junction - Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
 
-Based on the semiconductor type, transistors can be divided into two groups, the NPN and PNP ones. From the abbreviation, we can tell that the former is made of two N-type semiconductors and one P-type and that the latter is the opposite. See the figure below. 
+En fonction du type de semi-conducteur, les transistors peuvent être divisés en deux groupes, les NPN et les PNP. D'après l'abréviation, nous pouvons dire que le premier est constitué de deux semi-conducteurs de type N et d'un de type P, et que le second est l'inverse. Voir la figure ci-dessous.
 
 .. note::
-    s8550 is PNP transistor and the s8050 is the NPN one, They look very similar, and we need to check carefully to see their labels.
+    Le s8550 est un transistor PNP et le s8050 est un NPN. Ils se ressemblent beaucoup, et nous devons vérifier attentivement pour voir leurs étiquettes.
 
 .. image:: img/transistor_symbol.png
 
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+
+Lorsqu'un signal de niveau haut traverse un transistor NPN, il est activé. Mais un transistor PNP nécessite un signal de niveau bas pour le gérer. Les deux types de transistors sont fréquemment utilisés comme interrupteurs sans contact, comme dans cette expérience.
 
 
 * `S8050 Transistor Datasheet <https://components101.com/asset/sites/default/files/component_datasheet/S8050%20Transistor%20Datasheet.pdf>`_
 * `S8550 Transistor Datasheet <https://www.mouser.com/datasheet/2/149/SS8550-118608.pdf>`_
 
-Put the label side facing us and the pins facing down. The pins from left to right are emitter(e), base(b), and collector(c).
+Placez l'étiquette face à nous et les broches vers le bas. Les broches de gauche à droite sont l'émetteur (e), la base (b) et le collecteur (c).
 
 .. image:: img/ebc.png
 
 .. note::
-    * The base is the gate controller device for the larger electrical supply. 
-    * In the NPN transistor, the collector is the larger electrical supply and the emitter is the outlet for that supply, the PNP transistor is just the opposite.
-
+    * La base est le dispositif de contrôle de la porte pour la plus grande alimentation électrique.
+    * Dans le transistor NPN, le collecteur est la plus grande alimentation électrique et l'émetteur est la sortie de cette alimentation, le transistor PNP est juste l'inverse.
 
 .. Example
 .. -------------------
@@ -54,11 +54,12 @@ Put the label side facing us and the pins facing down. The pins from left to rig
 .. :ref:`Two Kinds of Transistors`
 
 
-**Example**
+**Exemple**
 
-* :ref:`ar_transistor` (Arduino Project)
-* :ref:`ar_ac_buz` (Arduino Project)
-* :ref:`ar_fruit_piano` (Arduino Project)
-* :ref:`py_transistor` (MicroPython Project)
-* :ref:`py_pa_buz` (MicroPython Project)
-* :ref:`py_light_theremin` (MicroPython Project)
+* :ref:`ar_transistor` (Projet Arduino)
+* :ref:`ar_ac_buz` (Projet Arduino)
+* :ref:`ar_fruit_piano` (Projet Arduino)
+* :ref:`py_transistor` (Projet MicroPython)
+* :ref:`py_pa_buz` (Projet MicroPython)
+* :ref:`py_light_theremin` (Projet MicroPython)
+

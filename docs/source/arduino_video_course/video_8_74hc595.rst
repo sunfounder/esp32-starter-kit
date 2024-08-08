@@ -1,37 +1,36 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 8: Walking Light with 74HC595 Shift Register
-===========================================================
-This tutorial is designed for learners to understand how to use a shift register with the ESP32 for controlling multiple LEDs, creating a dynamic lighting effect.
+Vidéo 8 : Lumière défilante avec registre à décalage 74HC595
+===================================================================
+Ce tutoriel est conçu pour aider les apprenants à comprendre comment utiliser un registre à décalage avec l'ESP32 pour contrôler plusieurs LED et créer un effet lumineux dynamique.
 
-* **Introduction**: Uses ESP32 microcontroller and 74HC595 shift register.
-* **Components**: Includes ESP32, breadboard, jumper wires, resistors, LEDs, and the 74HC595 chip.
-* **74HC595 Features**: Explains its serial-in, parallel-out functionality.
-* **Wiring Guide**: Provides step-by-step instructions for wiring the components.
-* **Arduino Code**: Discusses code for controlling LED sequences with the shift register.
-* **Demonstration**: Shows how to adjust light patterns and speed using the code.
+* **Introduction** : Utilise le microcontrôleur ESP32 et le registre à décalage 74HC595.
+* **Composants** : Comprend un ESP32, une breadboard, des fils de connexion, des résistances, des LED et la puce 74HC595.
+* **Fonctionnalités du 74HC595** : Explique sa fonctionnalité de série-entrée, parallèle-sortie.
+* **Guide de câblage** : Fournit des instructions étape par étape pour câbler les composants.
+* **Code Arduino** : Discute du code pour contrôler les séquences de LED avec le registre à décalage.
+* **Démonstration** : Montre comment ajuster les motifs lumineux et la vitesse en utilisant le code.
 
 
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/gH2qnsBqApc?si=0R6RzU6K5HOyupO_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_74hc595`

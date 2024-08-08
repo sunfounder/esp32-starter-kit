@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de Raspberry Pi, Arduino et ESP32 de SunFounder sur Facebook ! Plongez plus profondément dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_motor:
 
-4.1 Motor
+4.1 Moteur
 ===========================
 
-In this engaging project, we'll explore how to drive a motor using the L293D.
+Dans ce projet captivant, nous allons explorer comment piloter un moteur en utilisant le L293D.
 
-The L293D is a versatile integrated circuit (IC) commonly used for motor control in electronics and robotics projects. It can drive two motors in both forward and reverse directions, making it a popular choice for applications requiring precise motor control.
+Le L293D est un circuit intégré (IC) polyvalent couramment utilisé pour le contrôle des moteurs dans les projets électroniques et robotiques. Il peut piloter deux moteurs dans les deux sens, ce qui en fait un choix populaire pour les applications nécessitant un contrôle précis des moteurs.
 
-By the end of this captivating project, you will have gained a thorough understanding of how digital signals and PWM signals can effectively be utilized to control motors. This invaluable knowledge will prove to be a solid foundation for your future endeavors in robotics and mechatronics. Buckle up and get ready to dive into the exciting world of motor control with the L293D!
+À la fin de ce projet fascinant, vous aurez acquis une compréhension approfondie de la manière dont les signaux numériques et les signaux PWM peuvent être utilisés efficacement pour contrôler les moteurs. Ces connaissances inestimables constitueront une base solide pour vos futures aventures en robotique et mécatronique. Attachez vos ceintures et préparez-vous à plonger dans le monde passionnant du contrôle des moteurs avec le L293D !
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément aux liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -62,28 +62,28 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**Pins disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des pins disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pins disponibles
       - IO13, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
 
     
-**Wiring**
+**Câblage**
 
 .. note:: 
 
-  Since the motor requires a relatively high current, it is necessary to first insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply. 
+  Comme le moteur nécessite un courant relativement élevé, il est nécessaire d'insérer d'abord la batterie, puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation de la batterie. 
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 
@@ -93,8 +93,8 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note::
 
-    * Open the ``4.1_motor.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.1_motor``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``4.1_motor.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\4.1_motor``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
     
     
@@ -104,17 +104,17 @@ Here is a list of available pins on the ESP32 board for this project.
 
 
 
-Once the code is successfully uploaded, you will observe the motor rotating clockwise for one second, then counter-clockwise for one second, followed by a two-second pause. This sequence of actions will continue in an endless loop.
+Une fois le code téléchargé avec succès, vous observerez le moteur tourner dans le sens horaire pendant une seconde, puis dans le sens antihoraire pendant une seconde, suivi d'une pause de deux secondes. Cette séquence d'actions se poursuivra en boucle infinie.
 
 
-**Learn More**
+**En savoir plus**
 
-In addition to simply making the motor rotate clockwise and counterclockwise, you can also control the speed of the motor's rotation by using pulse-width modulation (PWM) on the control pin, as shown below.
+En plus de simplement faire tourner le moteur dans le sens horaire et antihoraire, vous pouvez également contrôler la vitesse de rotation du moteur en utilisant la modulation de largeur d'impulsion (PWM) sur la broche de contrôle, comme montré ci-dessous.
 
 .. note::
 
-    * Open the ``4.1_motor_pwm.ino`` file under the path of ``esp32-starter-kit-main\c\codes\4.1_motor_pwm``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``4.1_motor_pwm.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\4.1_motor_pwm``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
     
     
@@ -123,10 +123,11 @@ In addition to simply making the motor rotate clockwise and counterclockwise, yo
   <iframe src=https://create.arduino.cc/editor/sunfounder01/32c262fd-9975-4137-9973-8b62d7240fee/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-The previous code directly sets the two pins of the motor to high or low voltage levels to control the motor's rotation and stopping.
+Le code précédent définit directement les deux broches du moteur à des niveaux de tension haut ou bas pour contrôler la rotation et l'arrêt du moteur.
 
-Here we use the |link_ledc| (LED control) peripheral to generate PWM signals to control the motor's speed. Through two ``for`` loops, the duty cycle of channel A is increased or decreased from 0 to 255 while keeping channel B at 0.
+Ici, nous utilisons le périphérique de contrôle des LED (|link_ledc|) pour générer des signaux PWM afin de contrôler la vitesse du moteur. À travers deux boucles ``for``, le cycle de travail du canal A est augmenté ou diminué de 0 à 255 tandis que le canal B reste à 0.
 
-This way, you can observe the motor gradually increasing its speed to 255, then decreasing to 0, infinitely looping like this.
+De cette manière, vous pouvez observer le moteur augmenter progressivement sa vitesse jusqu'à 255, puis la diminuer à 0, en boucle infinie.
 
-If you want the motor to rotate in the opposite direction, simply swap the values of channel A and channel B.
+Si vous voulez que le moteur tourne dans le sens opposé, il vous suffit d'inverser les valeurs du canal A et du canal B.
+

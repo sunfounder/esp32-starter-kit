@@ -1,55 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans le monde du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_button:
 
-5.1 Reading Button Value
+5.1 Lecture de la valeur du bouton
 ==============================================
-In this interactive project, we'll venture into the realm of button controls and LED manipulation.
 
-The concept is straightforward yet effective. We'll be reading the state of a button. When the button is pressed down, it registers a high voltage level, or 'high state'. This action will then trigger an LED to light up.
+Dans ce projet interactif, nous allons explorer le domaine des contrôles de boutons et de la manipulation des LED.
 
-**Required Components**
+Le concept est simple mais efficace. Nous allons lire l'état d'un bouton. Lorsque le bouton est enfoncé, il enregistre un niveau de tension élevé, ou "état haut". Cette action déclenchera ensuite l'allumage d'une LED.
 
-In this project, we need the following components. 
+**Composants nécessaires**
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Dans ce projet, nous avons besoin des composants suivants. 
+
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -61,143 +62,131 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-* **Available Pins**
+* **Broches disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Pour entrée
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Pour sortie
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **Broches à usage conditionnel (entrée)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
-
+    Les broches suivantes ont des résistances pull-up ou pull-down intégrées, donc des résistances externes ne sont pas nécessaires lorsque **vous les utilisez comme broches d'entrée** :
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
+        *   - Broches à usage conditionnel
             - Description
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Tirer vers le haut avec une résistance de 47K par défaut au niveau haut.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Tirer vers le haut avec une résistance de 4.7K par défaut au niveau haut.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Tirer vers le bas avec une résistance de 1K par défaut au niveau bas.
 
-* **Strapping Pins (Input)**
+* **Broches de démarrage (entrée)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    Les broches de démarrage sont un ensemble spécial de broches utilisées pour déterminer des modes de démarrage spécifiques lors du démarrage de l'appareil 
+    (c'est-à-dire, reset à la mise sous tension).
      
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Broches de démarrage
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    En général, il est **non recommandé de les utiliser comme broches d'entrée**. Si vous souhaitez utiliser ces broches, considérez l'impact potentiel sur le processus de démarrage. Pour plus de détails, veuillez vous référer à la section :ref:`esp32_strapping`.
 
-
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.1_button.png
 
-To ensure proper functionality, connect one side of the button pin to 3.3V and the other side to IO14. When the button is pressed, IO14 will be set to high, causing the LED to light up. When the button is released, IO14 will return to its suspended state, which may be either high or low. To ensure a stable low level when the button is not pressed, IO14 should be connected to GND through a 10K pull-down resistor.
+Pour assurer un bon fonctionnement, connectez un côté de la broche du bouton à 3,3V et l'autre côté à IO14. Lorsque le bouton est enfoncé, IO14 sera mis à l'état haut, ce qui fera s'allumer la LED. Lorsque le bouton est relâché, IO14 reviendra à son état de repos, qui peut être soit haut soit bas. Pour garantir un niveau bas stable lorsque le bouton n'est pas enfoncé, IO14 doit être connecté à la masse (GND) via une résistance de tirage vers le bas de 10K.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.1_button_bb.png
 
 .. note::
     
-    A four-pin button is designed in an H shape. When the button is not pressed, the left and right pins are disconnected, and current cannot flow between them. However, when the button is pressed, the left and right pins are connected, creating a pathway for current to flow.
+    Un bouton à quatre broches est conçu en forme de H. Lorsque le bouton n'est pas enfoncé, les broches gauche et droite sont déconnectées, et le courant ne peut pas circuler entre elles. Cependant, lorsque le bouton est enfoncé, les broches gauche et droite sont connectées, créant un chemin pour que le courant puisse circuler.
 
 **Code**
 
 .. note::
 
-    * You can open the file ``5.1_button.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.1_button``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Vous pouvez ouvrir le fichier ``5.1_button.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\5.1_button``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
    
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/702c5a70-78e7-4a8b-a0c7-10c0acebfc12/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Remember to Set the serial communication baud rate to 115200.
+N'oubliez pas de définir le débit de communication série à 115200.
 
-Once the code is uploaded successfully, the LED lights up when you press the button and goes off when you release it.
+Une fois le code téléchargé avec succès, la LED s'allume lorsque vous appuyez sur le bouton et s'éteint lorsque vous le relâchez.
 
-At the same time you can open the Serial Monitor in the upper right corner to observe the value of the button, when the button is pressed, "1" will be printed, otherwise "0" will be printed.
+En même temps, vous pouvez ouvrir le Moniteur Série dans le coin supérieur droit pour observer la valeur du bouton. Lorsque le bouton est enfoncé, "1" sera imprimé, sinon "0" sera imprimé.
 
 .. image:: img/button_serial.png
 
 
-**How it works**
+**Comment ça marche**
 
-The previous projects all involved outputting signals, either in the form of digital or PWM signals.
+Les projets précédents impliquaient tous la sortie de signaux, soit sous forme de signaux numériques ou PWM.
 
-This project involves receiving input signals from external component to the ESP32 board. You can view the input signal through the Serial Monitor in Arduino IDE.
+Ce projet consiste à recevoir des signaux d'entrée d'un composant externe vers la carte ESP32. Vous pouvez visualiser le signal d'entrée via le Moniteur Série dans l'IDE Arduino.
 
-
-#. In the ``setup()`` function, the button pin is initialized as an ``input`` and the LED pin is initialized as an ``output``. The Serial communication is also initiated with a baud rate of 115200.
+#. Dans la fonction ``setup()``, la broche du bouton est initialisée en tant qu'``input`` et la broche de la LED est initialisée en tant qu'``output``. La communication série est également lancée avec un débit de 115200.
 
     .. code-block:: arduino
 
         void setup() {
             Serial.begin(115200);
-            // initialize the button pin as an input
+            // initialise la broche du bouton comme entrée
             pinMode(buttonPin, INPUT);
-            // initialize the LED pin as an output
+            // initialise la broche de la LED comme sortie
             pinMode(ledPin, OUTPUT);
         }
     
-    * ``Serial.begin(speed)``: Sets the data rate in bits per second (baud) for serial data transmission.
+    * ``Serial.begin(speed)`` : Définit le débit en bits par seconde (baud) pour la transmission de données série.
 
-        * ``speed``: in bits per second (baud). Allowed data types: ``long``.
+        * ``speed`` : en bits par seconde (baud). Types de données autorisés : ``long``.
 
-#. In the ``loop()`` function, the state of the button is read and stored in the variable ``buttonState``. The value of ``buttonState`` is printed to the Serial Monitor using ``Serial.println()``.
+#. Dans la fonction ``loop()``, l'état du bouton est lu et stocké dans la variable ``buttonState``. La valeur de ``buttonState`` est imprimée sur le Moniteur Série à l'aide de ``Serial.println()``.
 
     .. code-block:: arduino
 
         void loop() {
-            // read the state of the button value
+            // lire l'état de la valeur du bouton
             buttonState = digitalRead(buttonPin);
             Serial.println(buttonState);
             delay(100);
-            // if the button is pressed, the buttonState is HIGH
+            // si le bouton est enfoncé, l'état du bouton est HAUT
             if (buttonState == HIGH) {
-                // turn LED on
+                // allumer la LED
                 digitalWrite(ledPin, HIGH);
 
             } else {
-                // turn LED off
+                // éteindre la LED
                 digitalWrite(ledPin, LOW);
             }
         }
 
-    If the button is pressed and the ``buttonState`` is HIGH, the LED is turned on by setting the ``ledPin`` to ``HIGH``. Else, turn the LED off.
+    Si le bouton est enfoncé et que l'``buttonState`` est HAUT, la LED est allumée en mettant la broche ``ledPin`` à HAUT. Sinon, la LED est éteinte.
 
-    * ``int digitalRead(uint8_t pin);``: To read the state of a given pin configured as INPUT, the function digitalRead is used. This function will return the logical state of the selected pin as ``HIGH`` or ``LOW``.
+    * ``int digitalRead(uint8_t pin);`` : Pour lire l'état d'une broche donnée configurée comme INPUT, on utilise la fonction digitalRead. Cette fonction renverra l'état logique de la broche sélectionnée comme ``HIGH`` ou ``LOW``.
 
-        * ``pin`` select GPIO
+        * ``pin`` : sélectionne le GPIO.
 
-    * ``Serial.println()``: Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
-
-
-
-
-
-
-
-
-
+    * ``Serial.println()`` : Imprime des données sur le port série sous forme de texte ASCII lisible par l'homme, suivi d'un caractère de retour chariot (ASCII 13, ou '\r') et d'un caractère de nouvelle ligne (ASCII 10, ou '\n').

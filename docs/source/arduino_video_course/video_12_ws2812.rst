@@ -1,37 +1,37 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 12: Using WS2812 RGB Strip
+Vidéo 12 : Utilisation de la bande RGB WS2812
 =============================================================================
 
-This tutorial is perfect to learn how to utilize the WS2812 LED strip with ESP32 for creating various colors and controlling individual LEDs:
+Ce tutoriel est parfait pour apprendre à utiliser la bande LED WS2812 avec l'ESP32 pour créer différentes couleurs et contrôler les LED individuellement :
 
-* **WS2812 LED Strip Introduction**: A flexible strip with adhesive back, 5050 LEDs, and individual control capabilities.
-* **Technical Details**: The WS2812 LEDs support 256 color levels and can be cascaded via a single wire. Each LED is 5mm x 5mm with a specified operating voltage and temperature range.
-* **Color Control**: Learn to create any color with RGB (Red, Green, Blue) combinations. Includes understanding of color codes in both binary and hexadecimal formats.
-* **Wiring Guide**: Simple wiring with power, ground, and data connections. The data line connects to pin 14 of the ESP32.
-* **Arduino Programming**: Detailed explanation of Arduino code for controlling the strip.
-* **Interactive Projects**: Step-by-step instructions for several projects like a walking light LED, back and forth light movement, and controlling individual LEDs with specific colors.
-* **Color Picker Tool**: How to use an RGB color picker to understand and choose specific colors for the LEDs.
+* **Introduction à la bande LED WS2812** : Une bande flexible avec dos adhésif, LEDs 5050 et capacités de contrôle individuel.
+* **Détails techniques** : Les LEDs WS2812 prennent en charge 256 niveaux de couleur et peuvent être enchaînées via un seul fil. Chaque LED mesure 5 mm x 5 mm avec une tension de fonctionnement et une plage de température spécifiées.
+* **Contrôle des couleurs** : Apprenez à créer n'importe quelle couleur avec des combinaisons RVB (Rouge, Vert, Bleu). Comprendre les codes couleur aux formats binaire et hexadécimal.
+* **Guide de câblage** : Câblage simple avec connexions d'alimentation, de masse et de données. La ligne de données se connecte à la broche 14 de l'ESP32.
+* **Programmation Arduino** : Explication détaillée du code Arduino pour contrôler la bande.
+* **Projets interactifs** : Instructions pas à pas pour plusieurs projets comme un éclairage LED défilant, un mouvement de lumière aller-retour et le contrôle des LEDs individuelles avec des couleurs spécifiques.
+* **Outil de sélection des couleurs** : Comment utiliser un sélecteur de couleurs RVB pour comprendre et choisir des couleurs spécifiques pour les LEDs.
 
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/CdYeKW2N-nY?si=9dKvXzDMonp31L0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_rgb_strip`
+

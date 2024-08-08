@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_potentiometer:
 
-5.8 Turn the Knob
-===================
+5.8 Tourner le bouton
+===========================
 
-A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
+Un potentiomètre est un dispositif à trois bornes couramment utilisé pour ajuster la résistance dans un circuit. Il dispose d'un bouton ou d'un levier coulissant qui permet de varier la valeur de résistance du potentiomètre. Dans ce projet, nous l'utiliserons pour contrôler la luminosité d'une LED, de manière similaire à une lampe de bureau dans notre vie quotidienne. En ajustant la position du potentiomètre, nous pouvons changer la résistance dans le circuit, régulant ainsi le courant traversant la LED et ajustant sa luminosité en conséquence. Cela nous permet de créer une expérience d'éclairage personnalisable et réglable, similaire à celle d'une lampe de bureau.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -60,37 +60,37 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-**Available Pins**
+**Pins disponibles**
 
-* **Available Pins**
+* **Pins disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des pins disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Pins disponibles
             - IO14, IO25, I35, I34, I39, I36
 
-* **Strapping Pins**
+* **Pins de strapping**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Les pins suivantes sont des pins de strapping, qui affectent le processus de démarrage de l'ESP32 lors de la mise sous tension ou du réinitialisation. Cependant, une fois l'ESP32 démarré avec succès, elles peuvent être utilisées comme des pins normales.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pins de strapping
             - IO0, IO12
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.8_potentiometer.png
 
-When you rotate the potentiometer, the value of I35 will change. By programming, you can use the value of I35 to control the brightness of the LED. Therefore, as you rotate the potentiometer, the brightness of the LED will also change accordingly.
+Lorsque vous tournez le potentiomètre, la valeur de I35 changera. En programmant, vous pouvez utiliser la valeur de I35 pour contrôler la luminosité de la LED. Ainsi, lorsque vous tournez le potentiomètre, la luminosité de la LED changera en conséquence.
 
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
@@ -99,55 +99,55 @@ When you rotate the potentiometer, the value of I35 will change. By programming,
 
 .. note::
 
-    * You can open the file ``5.8_pot.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.8_pot``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Vous pouvez ouvrir le fichier ``5.8_pot.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\5.8_pot``. 
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Téléverser**.
     * :ref:`unknown_com_port`
    
 .. raw:: html
      
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aadce2e7-fd5d-4608-a557-f1e4d07ba795/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, rotate the potentiometer and you will see the brightness of the LED change accordingly. At the same time you can see the analog and voltage values of the potentiometer in the serial monitor.
+Après avoir téléversé le code avec succès, tournez le potentiomètre et vous verrez la luminosité de la LED changer en conséquence. En même temps, vous pouvez voir les valeurs analogiques et de tension du potentiomètre dans le moniteur série.
 
 
-**How it works?**
+**Comment ça marche ?**
 
-#. Define constants for pin connections and PWM settings.
+#. Définir les constantes pour les connexions des pins et les paramètres PWM.
 
     .. code-block:: arduino
 
-        const int potPin = 35; // Potentiometer connected to
-        const int ledPin = 26; // LED connected to
+        const int potPin = 35; // Potentiomètre connecté à
+        const int ledPin = 26; // LED connectée à
 
-        // PWM settings
-        const int freq = 5000; // PWM frequency
-        const int resolution = 12; // PWM resolution (bits)
+        // Paramètres PWM
+        const int freq = 5000; // Fréquence PWM
+        const int resolution = 12; // Résolution PWM (bits)
 
 
-    Here the PWM resolution is set to 12 bits and the range is 0-4095.
+    Ici, la résolution PWM est définie sur 12 bits et la plage est de 0-4095.
 
-#. Configure the system in the ``setup()`` function.
+#. Configurer le système dans la fonction ``setup()``.
 
     .. code-block:: arduino
 
         void setup() {
             Serial.begin(115200);
 
-            // Configure PWM
+            // Configurer PWM
             ledcAttach(ledPin, freq, resolution);
         }
 
-    * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcAttach()`` function is called to set up the specified LED pin with the specified frequency and resolution.
+    * Dans la fonction ``setup()``, la communication série est démarrée à un débit de 115200 bauds. 
+    * La fonction ``ledcAttach()`` est appelée pour configurer la pin LED spécifiée avec la fréquence et la résolution spécifiées.
 
-#. Main loop (executed repeatedly) in the loop() function.
+#. Boucle principale (exécutée en continu) dans la fonction ``loop()``.
 
     .. code-block:: arduino
 
         void loop() {
 
-            int potValue = analogRead(potPin); // read the value of the potentiometer
-            uint32_t voltage_mV = analogReadMilliVolts(potPin); // Read the voltage in millivolts
+            int potValue = analogRead(potPin); // lire la valeur du potentiomètre
+            uint32_t voltage_mV = analogReadMilliVolts(potPin); // Lire la tension en millivolts
             
             ledcWrite(ledPin, potValue);
             
@@ -160,9 +160,8 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             delay(100);
         }
 
-    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: This function is used to get ADC value for a given pin/ADC channel in millivolts.
+    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: Cette fonction est utilisée pour obtenir la valeur ADC pour une pin/canal ADC donnée en millivolts.
 
-        * ``pin`` GPIO pin to read analog value.
+        * ``pin`` GPIO pin pour lire la valeur analogique.
 
-    The potentiometer value is directly used as the PWM duty cycle for controlling the LED brightness via the ``ledcWrite()`` function, as the range of values is also from 0 to 4095.
-
+    La valeur du potentiomètre est directement utilisée comme cycle de travail PWM pour contrôler la luminosité de la LED via la fonction ``ledcWrite()``, car la plage des valeurs est également de 0 à 4095.

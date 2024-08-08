@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté Facebook des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 ! Plongez plus profondément dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_flowing_light:
 
-6.2 Flowing Light
+6.2 Lumière Défilante
 =================================
 
-Have you ever wanted to add some fun and interactive element to your living space? 
-This project involves creating a running light using WS2812 LED strip and a obstacle avoidance module. 
-The running light changes direction when an obstacle is detected, making it an exciting addition to your home or office decor.
+Avez-vous déjà voulu ajouter un élément amusant et interactif à votre espace de vie ? 
+Ce projet consiste à créer une lumière défilante en utilisant une bande LED WS2812 et un module d'évitement d'obstacles. 
+La lumière défilante change de direction lorsqu'un obstacle est détecté, ce qui en fait un ajout excitant à votre décoration intérieure ou de bureau.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_avoid`
@@ -58,17 +58,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic Diagram**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_6.2_flowing_led.png
     :align: center
 
-The WS2812 LED strip is composed of a series of individual LEDs that can be programmed to display different colors and patterns. 
-In this project, the strip is set up to display a running light that moves in a particular direction and 
-changes direction when an obstacle is detected by the obstacle avoidance module.
+La bande LED WS2812 est composée d'une série de LEDs individuelles qui peuvent être programmées pour afficher différentes couleurs et motifs. 
+Dans ce projet, la bande est configurée pour afficher une lumière défilante qui se déplace dans une direction particulière et 
+change de direction lorsqu'un obstacle est détecté par le module d'évitement d'obstacles.
 
-
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     :width: 800
@@ -77,8 +76,8 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
 
 .. note::
 
-    * Open the ``6.2_flowing_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Ouvrez le fichier ``6.2_flowing_led.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Ensuite, cliquez sur "Exécuter le script actuel" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
     
 .. code-block:: python
@@ -88,48 +87,48 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
       import time
       import random
 
-      # Set the number of pixels for the running light
+      # Définir le nombre de pixels pour la lumière défilante
       num_pixels = 8
 
-      # Set the data pin for the RGB LED strip
+      # Définir la broche de données pour la bande LED RGB
       data_pin = Pin(14, Pin.OUT)
 
-      # Initialize the RGB LED strip object
+      # Initialiser l'objet bande LED RGB
       pixels = neopixel.NeoPixel(data_pin, num_pixels)
 
-      # Initialize the avoid sensor
+      # Initialiser le capteur d'évitement
       avoid = Pin(25, Pin.IN)
 
-      # Initialize the direction variable
+      # Initialiser la variable de direction
       direction_forward = True
 
-      # Initialize the reverse direction flag
+      # Initialiser le drapeau de direction inverse
       reverse_direction = False
 
-      # Continuously loop the running light
+      # Boucle continue de la lumière défilante
       while True:
       
-      # Read the input from the infrared sensor
+      # Lire l'entrée du capteur infrarouge
       avoid_value = avoid.value()
       
-      # Generate a random color for the current pixel
+      # Générer une couleur aléatoire pour le pixel actuel
       color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
                   
-      # If no obstacle is detected
+      # Si aucun obstacle n'est détecté
       if avoid_value:
             for i in range(num_pixels):
                   
-                  # Turn on the current pixel with the random color
+                  # Allumer le pixel actuel avec la couleur aléatoire
                   pixels[i] = color
                   
-                  # Update the RGB LED strip display
+                  # Mettre à jour l'affichage de la bande LED RGB
                   pixels.write()
                   
-                  # Turn off the current pixel
+                  # Éteindre le pixel actuel
                   pixels[i] = (0, 0, 0)
                   time.sleep_ms(100)
                   
-      # If detects an obstacle, change the direction of the LED strip
+      # Si un obstacle est détecté, changer la direction de la bande LED
       else:
             for i in range(num_pixels-1, -1, -1):
                   
@@ -138,4 +137,4 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
                   pixels[i] = (0, 0, 0)
                   time.sleep_ms(100)
 
-LEDs on the RGB Strip light up one by one when the script runs. As soon as an object is placed in front of the obstacle avoidance module, the LEDs on the RGB Strip light up one by one in the opposite direction.
+Les LEDs de la bande RGB s'allument une par une lorsque le script s'exécute. Dès qu'un objet est placé devant le module d'évitement d'obstacles, les LEDs de la bande RGB s'allument une par une dans la direction opposée.

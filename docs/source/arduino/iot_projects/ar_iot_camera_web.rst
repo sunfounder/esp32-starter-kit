@@ -1,66 +1,64 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _iot_camera_web:
 
-
-
-8.2 Camera Web Server
+8.2 Serveur Web de Caméra
 =============================
 
-This project combines the ESP32 board with a camera module to stream high-quality video over a local network. 
-Set up your own camera system effortlessly and monitor any location in real-time.
+Ce projet combine la carte ESP32 avec un module caméra pour diffuser une vidéo de haute qualité sur un réseau local.
+Configurez facilement votre propre système de caméra et surveillez n'importe quel endroit en temps réel.
 
-With the project's web interface, you can access and control the camera feed from any device connected to the network. 
-Customize camera settings to optimize the streaming experience and easily adjust settings with the user-friendly interface.
+Avec l'interface web du projet, vous pouvez accéder et contrôler le flux de la caméra depuis n'importe quel appareil connecté au réseau.
+Personnalisez les paramètres de la caméra pour optimiser l'expérience de streaming et ajustez facilement les réglages grâce à l'interface conviviale.
 
-Enhance your surveillance or live streaming capabilities with the versatile ESP32 Camera Streaming project. Monitor your home, office, or any desired location with ease and reliability.
+Améliorez vos capacités de surveillance ou de streaming en direct avec le projet polyvalent ESP32 Camera Streaming. Surveillez votre maison, bureau ou tout autre lieu souhaité avec aisance et fiabilité.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
 
-**How to do?**
+**Comment faire ?**
 
-#. First plug in the camera.
+#. Branchez d'abord la caméra.
 
     .. raw:: html
 
@@ -69,14 +67,14 @@ You can also buy them separately from the links below.
             Your browser does not support the video tag.
         </video>
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Ensuite, connectez l'ESP32-WROOM-32E à l'ordinateur à l'aide du câble USB.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Open the code.
+#. Ouvrez le code.
 
-    * Open the ``iot_2_camera_server.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_2_camera_server`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``iot_2_camera_server.ino`` situé dans le répertoire ``esp32-starter-kit-main\c\codes\iot_2_camera_server``, ou copiez le code dans l'IDE Arduino.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
 
     .. raw:: html
@@ -84,25 +82,25 @@ You can also buy them separately from the links below.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
 
-#. Locate the following lines and modify them with your ``SSID`` and ``PASSWORD``.
+#. Trouvez les lignes suivantes et modifiez-les avec votre ``SSID`` et ``PASSWORD``.
 
     .. code-block::  Arduino
 
-        // Replace the next variables with your SSID/Password combination
+        // Remplacez les variables suivantes par votre combinaison SSID/Mot de passe
         const char* ssid = "SSID";
         const char* password = "PASSWORD";
 
-#. Now, enable **PSRAM**.
+#. Maintenant, activez **PSRAM**.
 
     .. image:: img/sp230516_150554.png
 
-#. Set the partition scheme to **Huge APP (3MB No OTA/1MB SPIFFS)**.
+#. Réglez le schéma de partition sur **Huge APP (3MB No OTA/1MB SPIFFS)**.
 
     .. image:: img/sp230516_150840.png
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the "Upload" button.
+#. Après avoir sélectionné la carte correcte (ESP32 Dev Module) et le port, cliquez sur le bouton "Upload".
 
-#. You will see a successful WiFi connection message and the assigned IP address in the Serial Monitor.
+#. Vous verrez un message de connexion WiFi réussie et l'adresse IP assignée dans le moniteur série.
 
     .. code-block::
 
@@ -112,15 +110,15 @@ You can also buy them separately from the links below.
         Starting stream server on port: '81'
         Camera Ready! Use 'http://192.168.18.77' to connect
 
-#. Enter the IP address in your web browser. You will see a web interface where you can click **Start Stream** to view the camera feed.
+#. Entrez l'adresse IP dans votre navigateur web. Vous verrez une interface web où vous pourrez cliquer sur **Start Stream** pour voir le flux de la caméra.
 
     .. image:: img/sp230516_151521.png
 
-#. Scroll back to the top of the page, where you will see the live camera feed. You can adjust the settings on the left side of the interface.
+#. Faites défiler vers le haut de la page, où vous verrez le flux de la caméra en direct. Vous pouvez ajuster les paramètres sur le côté gauche de l'interface.
 
     .. image:: img/sp230516_180520.png
 
 .. note:: 
 
-    * This ESP32 module supports Face Detection. To enable it, set the resolution to 240x240 and toggle the Face Detection option at the bottom of the interface.
-    * This ESP32 module does not support Face Recognition.
+    * Ce module ESP32 prend en charge la détection de visages. Pour l'activer, réglez la résolution sur 240x240 et activez l'option de détection de visages en bas de l'interface.
+    * Ce module ESP32 ne prend pas en charge la reconnaissance faciale.

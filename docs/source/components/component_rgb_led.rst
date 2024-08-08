@@ -1,77 +1,75 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux exclusivités.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de saison.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_rgb:
 
-RGB LED
+LED RVB
 =================
 
 .. image:: img/rgb_led.png
     :width: 200
     :align: center
 
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+Les LED RVB émettent de la lumière dans diverses couleurs. Une LED RVB regroupe trois LED rouge, vert et bleu dans une coque en plastique transparent ou semi-transparent. Elle peut afficher différentes couleurs en modifiant la tension d'entrée des trois broches et en les superposant, ce qui, selon les statistiques, peut créer 16 777 216 couleurs différentes.
 
-**Features**
+**Caractéristiques**
 
-* Color: Tri-Color (Red/Green/Blue)
-* Common Cathode
-* 5mm Clear Round Lens
-* Forward Voltage: Red: DC 2.0 - 2.2V; Blue&Green: DC 3.0 - 3.2V (IF=20mA) 
-* 0.06 Watts DIP RGB LED
-* Luminance Brighter Up To +20%
-* Viewing Angle: 30°
+* Couleur : Tri-couleur (Rouge/Vert/Bleu)
+* Cathode commune
+* Lentille ronde claire de 5 mm
+* Tension directe : Rouge : DC 2,0 - 2,2V ; Bleu et Vert : DC 3,0 - 3,2V (IF=20mA) 
+* LED RVB DIP de 0,06 Watts
+* Luminosité augmentée jusqu'à +20%
+* Angle de vision : 30°
 
-**Common Anode and Common Cathode**
+**Anode commune et cathode commune**
 
-RGB LEDs can be categorized into common anode and common cathode ones. 
+Les LED RVB peuvent être catégorisées en anode commune et cathode commune. 
 
-* In a common cathode RGB LED, all three LEDs share a negative connection (cathode).
-* In a common anode RGB LED, the three LEDs share a positive connection (anode).
+* Dans une LED RVB à cathode commune, les trois LED partagent une connexion négative (cathode).
+* Dans une LED RVB à anode commune, les trois LED partagent une connexion positive (anode).
 
 .. image:: img/rgb_cc_ca.jpg
 
 .. note::
-    We use the common cathode one.
+    Nous utilisons le modèle à cathode commune.
 
-**RGB LED Pins**
+**Broches de la LED RVB**
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Place the RGB LEDs as shown, so that the longest lead is second from the left. Then the pin numbers of the RGB LEDs should be Red, GND, Green and Blue.
+Une LED RVB a 4 broches : la plus longue est la GND ; les autres sont Rouge, Vert et Bleu. Placez les LED RVB comme indiqué, de sorte que la plus longue patte soit la deuxième à partir de la gauche. Ensuite, les numéros des broches de la LED RVB devraient être Rouge, GND, Vert et Bleu.
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-You can also use the multimeter to select Diode Test mode, and then connect as shown below to measure the color of each pin.
+Vous pouvez également utiliser le multimètre en mode Test de diode, puis connecter comme indiqué ci-dessous pour mesurer la couleur de chaque broche.
 
 .. image:: img/rgb_test.png
 
-**Mix colors**
+**Mélange de couleurs**
 
-To generate additional colors, you can combine the three colors at different intensities. To adjust the intensity of each LED, you can use a PWM signal.
+Pour générer des couleurs supplémentaires, vous pouvez combiner les trois couleurs à différentes intensités. Pour ajuster l'intensité de chaque LED, vous pouvez utiliser un signal PWM.
 
-Because the LEDs are so close to each other, our eyes see the result of the color combination rather than the three colors individually.
+Parce que les LED sont si proches les unes des autres, nos yeux voient le résultat de la combinaison des couleurs plutôt que les trois couleurs individuellement.
 
-Check out the table below to see how the colors are combined. It will give you an idea of how the color mixing chart works and how different colors are produced.
+Consultez le tableau ci-dessous pour voir comment les couleurs sont combinées. Cela vous donnera une idée de comment fonctionne le mélange des couleurs et comment différentes couleurs sont produites.
 
 .. image:: img/rgb_mix.png
 
+**Exemple**
 
-
-**Example**
-
-* :ref:`ar_rgb` (Arduino Project)
-* :ref:`ar_color_gradient` (Arduino Project)
-* :ref:`py_rgb` (MicroPython Project)
-* :ref:`sh_colorful_ball` (Scratch Project)
+* :ref:`ar_rgb` (Projet Arduino)
+* :ref:`ar_color_gradient` (Projet Arduino)
+* :ref:`py_rgb` (Projet MicroPython)
+* :ref:`sh_colorful_ball` (Projet Scratch)
 

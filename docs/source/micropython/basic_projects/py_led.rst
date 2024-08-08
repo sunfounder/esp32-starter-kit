@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_blink:
 
-2.1 Hello, LED! 
+2.1 Bonjour, LED ! 
 =======================================
 
-Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+Tout comme imprimer "Hello, world!" est la première étape pour apprendre à programmer, utiliser un programme pour contrôler une LED est l'introduction traditionnelle à la programmation physique.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -58,108 +58,105 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Broches disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This circuit works on a simple principle, and the current direction is shown in the figure. The LED will light up after the 220ohm current limiting resistor when pin26 outputs high level. The LED will turn off when pin26 outputs low level.
+Ce circuit fonctionne sur un principe simple, et la direction du courant est montrée sur la figure. La LED s'allumera après la résistance de limitation de courant de 220 ohms lorsque la broche 26 sort un niveau haut. La LED s'éteindra lorsque la broche 26 sort un niveau bas.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-**Run the Code**
+**Exécuter le code**
 
-#. Open the ``2.1_hello_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. 
+#. Ouvrez le fichier ``2.1_hello_led.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. 
 
     .. code-block:: python
 
-        # Import the necessary libraries
+        # Importer les bibliothèques nécessaires
         import machine
         import time
 
-        # Set up the LED on pin 26 as an output pin
+        # Configurer la LED sur la broche 26 comme broche de sortie
         led = machine.Pin(26, machine.Pin.OUT)
 
-        # Start an infinite loop
+        # Démarrer une boucle infinie
         while True:
-            # Turn on the LED by setting its value to 1 (HIGH)
+            # Allumer la LED en réglant sa valeur à 1 (HAUT)
             led.value(1)
-            # Wait for 1 second (1000 milliseconds) while the LED is on
+            # Attendre 1 seconde (1000 millisecondes) pendant que la LED est allumée
             time.sleep(1)
 
-            # Turn off the LED by setting its value to 0 (LOW)
+            # Éteindre la LED en réglant sa valeur à 0 (BAS)
             led.value(0)
-            # Wait for 0.5 seconds (500 milliseconds) while the LED is off
+            # Attendre 0,5 seconde (500 millisecondes) pendant que la LED est éteinte
             time.sleep(0.5)
 
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Connectez l'ESP32 WROOM 32E à votre ordinateur à l'aide d'un câble Micro USB. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Then click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+#. Ensuite, cliquez sur l'interpréteur "MicroPython (ESP32).COMXX" dans le coin inférieur droit.
 
     .. image:: ../python_start/img/sec_inter.png
 
-#. Finally, click "Run Current Script" or press F5 to execute it.
+#. Enfin, cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
 
     .. image:: ../python_start/img/quick_guide2.png
 
-#. After the code runs, you will see the LED blinking.
+#. Après l'exécution du code, vous verrez la LED clignoter.
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-#. It imports two modules, ``machine`` and ``time``. The ``machine`` module provides low-level access to the microcontroller's hardware, while the ``time`` module provides functions for time-related operations.
+#. Il importe deux modules, ``machine`` et ``time``. Le module ``machine`` fournit un accès de bas niveau au matériel du microcontrôleur, tandis que le module ``time`` fournit des fonctions pour les opérations liées au temps.
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Then set up the pin26 as an output pin using the ``machine.Pin()`` function with the ``machine.Pin.OUT`` argument. 
+#. Ensuite, configurez la broche 26 comme broche de sortie en utilisant la fonction ``machine.Pin()`` avec l'argument ``machine.Pin.OUT``. 
 
     .. code-block:: python
 
         led = machine.Pin(26, machine.Pin.OUT)
 
-#. In the ``While True`` loop, the LED is turned on for one second by setting the value of the pin26 to 1 using ``led.value(1)`` and then set to 0(``led.value(0)``) to turn it off for one second, and so on in an infinite loop.
+#. Dans la boucle ``While True``, la LED est allumée pendant une seconde en réglant la valeur de la broche 26 à 1 en utilisant ``led.value(1)`` et ensuite réglée à 0 (``led.value(0)``) pour l'éteindre pendant une seconde, et ainsi de suite dans une boucle infinie.
 
     .. code-block:: python
         
         while True:
-            # Turn on the LED by setting its value to 1 (HIGH)
+            # Allumer la LED en réglant sa valeur à 1 (HAUT)
             led.value(1)
-            # Wait for 1 second (1000 milliseconds) while the LED is on
+            # Attendre 1 seconde (1000 millisecondes) pendant que la LED est allumée
             time.sleep(1)
 
-            # Turn off the LED by setting its value to 0 (LOW)
+            # Éteindre la LED en réglant sa valeur à 0 (BAS)
             led.value(0)
-            # Wait for 0.5 seconds (500 milliseconds) while the LED is off
+            # Attendre 0,5 seconde (500 millisecondes) pendant que la LED est éteinte
             time.sleep(0.5)
 
 
 
 
-**Learn More**
+**En savoir plus**
 
-In this project, we used MicroPython's ``machine`` and ``time`` module, we can find more ways to use them here.
+Dans ce projet, nous avons utilisé les modules ``machine`` et ``time`` de MicroPython, vous pouvez trouver plus de façons de les utiliser ici.
 
 * `machine.Pin <https://docs.micropython.org/en/latest/library/machine.Pin.html>`_
 
 * `time <https://docs.micropython.org/en/latest/library/time.html>`_
-
-
-

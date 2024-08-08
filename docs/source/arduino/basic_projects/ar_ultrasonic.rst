@@ -1,81 +1,81 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_ultrasonic:
 
-5.12 Measuring Distance
+5.12 Mesure de distance
 ======================================
-The ultrasonic module is used for distance measurement or object detection. In this project, we will program the module to obtain obstacle distances. By sending ultrasonic pulses and measuring the time it takes for them to bounce back, we can calculate distances. This enables us to implement distance-based actions or obstacle avoidance behaviors.
+Le module ultrasonique est utilisé pour la mesure de distance ou la détection d'objets. Dans ce projet, nous allons programmer le module pour obtenir les distances des obstacles. En envoyant des impulsions ultrasoniques et en mesurant le temps qu'il faut pour qu'elles rebondissent, nous pouvons calculer les distances. Cela nous permet de mettre en œuvre des actions basées sur la distance ou des comportements d'évitement d'obstacles.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Available Pins**
+**Pins disponibles**
 
-* **Available Pins**
+* **Pins disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Pour l'entrée
             - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Pour la sortie
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.12_ultrasonic.png
 
-The ESP32 sends a set of square wave signals to the Trig pin of the ultrasonic sensor every 10 seconds. This prompts the ultrasonic sensor to emit a 40kHz ultrasound signal outward. If there is an obstacle in front, the ultrasound waves will be reflected back.
+L'ESP32 envoie un ensemble de signaux carrés à la broche Trig du capteur ultrasonique toutes les 10 secondes. Cela incite le capteur ultrasonique à émettre un signal ultrasonore de 40kHz. S'il y a un obstacle devant, les ondes ultrasonores seront réfléchies.
 
-By recording the time it takes from sending to receiving the signal, dividing it by 2, and multiplying it by the speed of light, you can determine the distance to the obstacle.
+En enregistrant le temps écoulé entre l'envoi et la réception du signal, en le divisant par 2 et en le multipliant par la vitesse du son, vous pouvez déterminer la distance jusqu'à l'obstacle.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.12_ultrasonic_bb.png
 
@@ -83,8 +83,8 @@ By recording the time it takes from sending to receiving the signal, dividing it
 
 .. note::
 
-    * Open the ``5.12_ultrasonic.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``5.12_ultrasonic.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Téléverser**.
     * :ref:`unknown_com_port`
     
 .. raw:: html
@@ -92,43 +92,42 @@ By recording the time it takes from sending to receiving the signal, dividing it
     <iframe src=https://create.arduino.cc/editor/sunfounder01/28ded128-62a8-4b2b-b21a-450f03323cd8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Remember to Set the serial communication baud rate to 115200.
+N'oubliez pas de définir le taux de communication série à 115200 baud.
 
-After the code is successfully uploaded, the serial monitor will print out the distance between the ultrasonic sensor and the obstacle ahead.
+Après le téléversement réussi du code, le moniteur série affichera la distance entre le capteur ultrasonique et l'obstacle devant.
 
-**How it works?**
+**Comment ça marche ?**
 
-About the application of ultrasonic sensor, we can directly check the subfunction.
+Concernant l'application du capteur ultrasonique, nous pouvons vérifier directement la sous-fonction.
 
 .. code-block:: arduino
 
     float readSensorData(){// ...}
 
-* The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal every 2us.
+* La broche ``trigPin`` du module ultrasonique transmet un signal carré de 10µs toutes les 2µs.
 
     .. code-block:: arduino
 
-        // Trigger a low signal before sending a high signal
+        // Déclencher un signal bas avant d'envoyer un signal haut
         digitalWrite(trigPin, LOW); 
         delayMicroseconds(2);
-        // Send a 10-microsecond high signal to the trigPin
+        // Envoyer un signal haut de 10 microsecondes à la broche trigPin
         digitalWrite(trigPin, HIGH); 
         delayMicroseconds(10);
-        // Return to low signal
+        // Retourner au signal bas
         digitalWrite(trigPin, LOW);
 
-
-* The ``echoPin`` receives a high level signal if there is an obstacle within the range and use the ``pulseIn()`` function to record the time from sending to receiving.
+* La broche ``echoPin`` reçoit un signal de niveau haut s'il y a un obstacle dans la portée et utilise la fonction ``pulseIn()`` pour enregistrer le temps écoulé entre l'envoi et la réception.
 
     .. code-block:: arduino
 
         unsigned long microsecond = pulseIn(echoPin, HIGH);
 
-* The speed of sound is 340 meters per second, which is equivalent to 29 microseconds per centimeter. By measuring the time it takes for a square wave to travel to an obstacle and return, we can calculate the distance traveled by dividing the total time by 2. This gives us the distance of the obstacle from the source of the sound wave.
+* La vitesse du son est de 340 mètres par seconde, ce qui équivaut à 29 microsecondes par centimètre. En mesurant le temps qu'il faut pour qu'une onde carrée atteigne un obstacle et revienne, nous pouvons calculer la distance parcourue en divisant le temps total par 2. Cela nous donne la distance de l'obstacle à la source de l'onde sonore.
 
     .. code-block:: arduino
 
         float distance = microsecond / 29.00 / 2;  
 
+Notez que le capteur ultrasonique mettra en pause le programme lorsqu'il est en fonctionnement, ce qui peut causer des retards lors de l'écriture de projets complexes.
 
-Note that the ultrasonic sensor will pause the program when it is working, which may cause some lagging when writing complex projects.

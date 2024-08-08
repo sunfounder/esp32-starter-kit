@@ -1,60 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_rgb:
 
-2.3 Colorful Light
+2.3 Lumière Colorée
 ==============================================
 
-In this project, we will delve into the fascinating world of additive color mixing using an RGB LED.
+Dans ce projet, nous allons plonger dans le monde fascinant du mélange de couleurs additives en utilisant une LED RGB.
 
-RGB LED combines three primary colors, namely Red, Green, and Blue, into a single package. These three LEDs share a common cathode pin, while each anode pin controls the intensity of the corresponding color.
+La LED RGB combine trois couleurs primaires, à savoir le rouge, le vert et le bleu, dans un seul boîtier. Ces trois LED partagent une broche cathode commune, tandis que chaque broche anode contrôle l'intensité de la couleur correspondante.
 
-By varying the electrical signal intensity applied to each anode, we can create a wide range of colors. For example, mixing high-intensity red and green light will result in yellow light, while combining blue and green light will produce cyan.
+En variant l'intensité du signal électrique appliqué à chaque anode, nous pouvons créer une large gamme de couleurs. Par exemple, en mélangeant une lumière rouge et verte à haute intensité, nous obtiendrons une lumière jaune, tandis qu'en combinant la lumière bleue et verte, nous produirons du cyan.
 
-Through this project, we will explore the principles of additive color mixing and unleash our creativity by manipulating the RGB LED to display captivating and vibrant colors.
+À travers ce projet, nous allons explorer les principes du mélange de couleurs additives et libérer notre créativité en manipulant la LED RGB pour afficher des couleurs captivantes et vibrantes.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -65,43 +65,43 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Available Pins**
+**Pins disponibles**
 
-Here is a list of available pins on the ESP32 board for this project.
+Voici une liste des pins disponibles sur la carte ESP32 pour ce projet.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pins disponibles
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_2.3_rgb.png
 
-The PWM pins pin27, pin26 and pin25 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+Les pins PWM pin27, pin26 et pin25 contrôlent respectivement les broches Rouge, Vert et Bleu de la LED RGB et connectent la broche cathode commune à la masse. Cela permet à la LED RGB d'afficher une couleur spécifique en superposant la lumière sur ces broches avec différentes valeurs PWM.
 
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../components/img/rgb_pin.jpg
     :width: 200
     :align: center
 
-The RGB LED has 4 pins: the long pin is the common cathode pin, which is usually connected to GND; the left pin next to the longest pin is Red; and the two pins on the right are Green and Blue.
+La LED RGB a 4 broches : la broche la plus longue est la broche cathode commune, qui est généralement connectée à la masse ; la broche gauche à côté de la plus longue est rouge ; et les deux broches à droite sont vert et bleu.
 
 .. image:: ../../img/wiring/2.3_color_light_bb.png
 
 
 **Code**
 
-Here, we can choose our favorite color in drawing software (such as paint) and display it with RGB LED.
+Ici, nous pouvons choisir notre couleur préférée dans un logiciel de dessin (tel que paint) et l'afficher avec la LED RGB.
 
 .. note::
 
-    * You can open the file ``2.3_rgb_led.ino`` under the path of ``esp32-starter-kit-main\c\codes\2.3_rgb_led``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Vous pouvez ouvrir le fichier ``2.3_rgb_led.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\2.3_rgb_led``. 
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Téléverser**.
     * :ref:`unknown_com_port`
 
 .. raw:: html
@@ -111,66 +111,66 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. image:: img/edit_colors.png
 
-Write the RGB value into ``color_set()``, you will be able to see the RGB light up the colors you want.
+Écrivez la valeur RGB dans ``color_set()``, vous pourrez voir la LED RGB afficher les couleurs que vous souhaitez.
 
 
-**How it works?**
+**Comment ça marche ?**
 
-#. Define the GPIO pins, the PWM channels and the frequency (in Hz) and resolution (in bits).
+#. Définir les broches GPIO, les canaux PWM et la fréquence (en Hz) et la résolution (en bits).
 
     .. code-block:: arduino
 
-        // Define RGB LED pins
+        // Définir les broches de la LED RGB
         const int redPin = 27;
         const int greenPin = 26;
         const int bluePin = 25;
 
-        // Define PWM frequency and resolution
+        // Définir la fréquence PWM et la résolution
         const int freq = 5000;
         const int resolution = 8;
 
 
-#. The ``setup()`` function initializes the PWM channels with the specified frequency and resolution, and then attaches the LED pins to their corresponding PWM channels.
+#. La fonction ``setup()`` initialise les canaux PWM avec la fréquence et la résolution spécifiées, puis attache les broches LED à leurs canaux PWM correspondants.
 
     .. code-block:: arduino
 
         void setup() {
-          // Set up PWM pins
+          // Configurer les broches PWM
           ledcAttach(redPin, freq, resolution);
           ledcAttach(greenPin, freq, resolution);
           ledcAttach(bluePin, freq, resolution);
         }
     
-    Here we use the |link_ledc| (LED control) peripheral which is primarly designed to control the intensity of LEDs, although it can also be used to generate PWM signals for other purposes.
+    Ici, nous utilisons le |link_ledc| (contrôle LED) périphérique qui est principalement conçu pour contrôler l'intensité des LED, bien qu'il puisse également être utilisé pour générer des signaux PWM à d'autres fins.
 
-    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: This function is used to setup LEDC pin with given frequency and resolution. LEDC channel will be selected automatically.
+    * ``bool ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);``: Cette fonction est utilisée pour configurer la broche LEDC avec la fréquence et la résolution données. Le canal LEDC sera sélectionné automatiquement.
 
-        * ``pin`` select GPIO pin.
-        * ``freq`` select frequency of pwm.
-        * ``resolution_bits`` select resolution for ledc channel. Range is 1-14 bits (1-20 bits for ESP32).
+        * ``pin`` sélectionner la broche GPIO.
+        * ``freq`` sélectionner la fréquence du pwm.
+        * ``resolution_bits`` sélectionner la résolution pour le canal ledc. La plage est de 1 à 14 bits (1 à 20 bits pour ESP32).
 
 
-#. The ``loop()`` function cycles through various colors (red, green, blue, yellow, purple, and cyan) with one-second intervals between each color change.
+#. La fonction ``loop()`` parcourt diverses couleurs (rouge, vert, bleu, jaune, violet et cyan) avec des intervalles d'une seconde entre chaque changement de couleur.
 
     .. code-block:: arduino
 
         void loop() {
-            setColor(255, 0, 0); // Red
+            setColor(255, 0, 0); // Rouge
             delay(1000);
-            setColor(0, 255, 0); // Green
+            setColor(0, 255, 0); // Vert
             delay(1000);
-            setColor(0, 0, 255); // Blue
+            setColor(0, 0, 255); // Bleu
             delay(1000);
-            setColor(255, 255, 0); // Yellow
+            setColor(255, 255, 0); // Jaune
             delay(1000);
-            setColor(80, 0, 80); // Purple
+            setColor(80, 0, 80); // Violet
             delay(1000);
             setColor(0, 255, 255); // Cyan
             delay(1000);
         }
 
 
-#. The ``setColor()`` function sets the desired color by writing the appropriate duty cycle values to each PWM channel. The function takes in three integer arguments for red, green, and blue color values.
+#. La fonction ``setColor()`` définit la couleur désirée en écrivant les valeurs de cycle de service appropriées à chaque canal PWM. La fonction prend trois arguments entiers pour les valeurs des couleurs rouge, verte et bleue.
 
     .. code-block:: arduino
 
@@ -180,12 +180,7 @@ Write the RGB value into ``color_set()``, you will be able to see the RGB light 
           ledcWrite(bluePin, blue);
         }
     
-    * ``bool ledcWrite(uint8_t pin, uint32_t duty);``: This function is used to set duty for the LEDC pin.
+    * ``bool ledcWrite(uint8_t pin, uint32_t duty);``: Cette fonction est utilisée pour définir le cycle de service pour la broche LEDC.
         
-        * ``pin`` select LEDC pin.
-        * ``duty`` select duty to be set for selected channel.
-
-
-
-
-
+        * ``pin`` sélectionner la broche LEDC.
+        * ``duty`` sélectionner le cycle de service à définir pour le canal sélectionné.

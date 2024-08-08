@@ -1,91 +1,91 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder des passionnés de Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _py_moisture:
 
-5.9 Measure Soil Moisture
-==========================
+5.9 Mesurer l'humidité du sol
+===================================
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture.
+Ce capteur capacitif d'humidité du sol est différent de la plupart des capteurs résistifs du marché, utilisant le principe de l'induction capacitive pour détecter l'humidité du sol.
 
-By visually reading the values from the soil moisture sensor, we can gather information about the moisture level in the soil. This information is useful for various applications, such as automatic irrigation systems, plant health monitoring, or environmental sensing projects.
+En lisant visuellement les valeurs du capteur d'humidité du sol, nous pouvons recueillir des informations sur le niveau d'humidité du sol. Ces informations sont utiles pour diverses applications, telles que les systèmes d'irrigation automatique, la surveillance de la santé des plantes ou les projets de détection environnementale.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Available Pins**
+**Broches disponibles**
 
-* **Available Pins**
+* **Broches disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Broches disponibles
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **Broches de configuration**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    Les broches suivantes sont des broches de configuration, qui affectent le processus de démarrage de l'ESP32 lors de la mise sous tension ou de la réinitialisation. Cependant, une fois que l'ESP32 a démarré avec succès, elles peuvent être utilisées comme des broches normales.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Broches de configuration
             - IO0, IO12
 
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.9_soil_moisture.png
 
-By inserting the module into the soil and watering it, the value read on I35 will decrease.
+En insérant le module dans le sol et en l'arrosant, la valeur lue sur I35 diminuera.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.9_moisture_bb.png
 
@@ -93,32 +93,28 @@ By inserting the module into the soil and watering it, the value read on I35 wil
 
 .. note::
 
-    * Open the ``5.9_moisture.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Ouvrez le fichier ``5.9_moisture.py`` situé dans le chemin ``esp32-starter-kit-main\micropython\codes``, ou copiez et collez le code dans Thonny. Puis cliquez sur "Run Current Script" ou appuyez sur F5 pour l'exécuter.
+    * Assurez-vous de sélectionner l'interpréteur "MicroPython (ESP32).COMxx" dans le coin inférieur droit. 
 
 .. code-block:: python
 
-
-    from machine import ADC,Pin
+    from machine import ADC, Pin
     import time
 
-    # create an ADC object acting on a pin
+    # créer un objet ADC agissant sur une broche
     moisture = ADC(Pin(35, Pin.IN))
 
-    # Configure the ADC attenuation to 11dB for full range     
+    # Configurer l'atténuation de l'ADC à 11dB pour une plage complète     
     moisture.atten(moisture.ATTN_11DB)
 
     while True:
-
-        # read a raw analog value in the range 0-4095
+        # lire une valeur analogique brute dans la plage de 0 à 4095
         value = moisture.read()  
         print(value)
         time.sleep(0.05)
 
 
 
-When the script runs, you will see the soil moisture value in the Shell.
+Lorsque le script s'exécute, vous verrez la valeur de l'humidité du sol dans le Shell.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+En insérant le module dans le sol et en l'arrosant, la valeur du capteur d'humidité du sol deviendra plus petite.

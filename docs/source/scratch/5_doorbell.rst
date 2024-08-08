@@ -1,59 +1,58 @@
-.. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions et cadeaux festifs** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _sh_doorbell:
 
-2.5 Doorbell
+2.5 Sonnette
 ======================
 
-Here, we will use the button and the bell on the stage to make a doorbell.
+Ici, nous allons utiliser le bouton et la cloche sur la scène pour fabriquer une sonnette.
 
-After the green flag is clicked, you can press the button and the bell on the stage will make a sound.
+Après avoir cliqué sur le drapeau vert, vous pouvez appuyer sur le bouton et la cloche sur la scène émettra un son.
 
 .. image:: img/7_doorbell.png
 
-Required Components
----------------------
+Composants nécessaires
+-------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -63,59 +62,58 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-You Will Learn
----------------------
+Vous apprendrez
+-------------------
 
-- How the button work
-- Reading digital pin and ranges
-- Creating a conditional loop
-- Adding a backdrop
-- Playing sound
+- Fonctionnement du bouton
+- Lecture des broches numériques et plages de valeurs
+- Création d'une boucle conditionnelle
+- Ajout d'un décor
+- Lecture d'un son
 
-Build the Circuit
+Construire le circuit
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Le bouton est un dispositif à 4 broches, puisque la broche 1 est connectée à la broche 2, et la broche 3 à la broche 4, lorsque le bouton est pressé, les 4 broches sont connectées, fermant ainsi le circuit.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construisez le circuit selon le schéma suivant.
 
-* Connect one of the pins on the left side of the button to pin14, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Connectez l'une des broches du côté gauche du bouton à la broche 14, qui est connectée à une résistance de tirage et à un condensateur de 0,1uF (104) (pour éliminer le jitter et obtenir un niveau stable lorsque le bouton fonctionne).
+* Connectez l'autre extrémité de la résistance et du condensateur à la masse, et l'une des broches du côté droit du bouton à 5V.
 
 .. image:: img/circuit/6_doorbel_bb.png
 
-Programming
-------------------
+Programmation
+-----------------
 
-**1. Add a Backdrop**
+**1. Ajouter un décor**
 
-Click the **Choose a Backdrop** button in the lower right corner.
+Cliquez sur le bouton **Choisir un décor** dans le coin inférieur droit.
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 1**.
+Choisissez **Chambre 1**.
 
 .. image:: img/7_bedroom2.png
 
-**2. Select the sprite**
+**2. Sélectionner le sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Supprimez le sprite par défaut, cliquez sur le bouton **Choisir un sprite** dans le coin inférieur droit de la zone des sprites, entrez **cloche** dans la barre de recherche, puis cliquez pour l'ajouter.
 
 .. image:: img/7_sprite.png
 
-Then select the **bell** sprite on the stage and move it to the right position.
+Ensuite, sélectionnez le sprite **cloche** sur la scène et déplacez-le à la position souhaitée.
 
 .. image:: img/7_doorbell.png
 
-**3. Press the button and the bell makes a sound**
+**3. Appuyer sur le bouton et la cloche émet un son**
 
+Utilisez [si alors] pour créer une instruction conditionnelle indiquant que lorsque la valeur de la broche 14 lue est égale à 1 (le bouton est pressé), le son **xylo1** sera joué.
 
-Use [if then] to make a conditional statement that when the value of the pin14 read is equal to 1 (the key is pressed), the sound **xylo1** will be played.
-
-* [read status of digital pin]: This block is from the **ESP32** palette and used to read the value of a digital pin, the result is 0 or 1.
-* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: This block is a control block and from **Control** palette. If its boolean condition is true, the blocks held inside it will run, and then the script involved will continue. If the condition is false, the scripts inside the block will be ignored. The condition is only checked once; if the condition turns to false while the script inside the block is running, it will keep running until it has finished.
-* [play sound until done]: This block is from the Sound palette, used to play specific sounds.
+* [lire le statut de la broche numérique] : Ce bloc provient de la palette **ESP32** et est utilisé pour lire la valeur d'une broche numérique, le résultat est 0 ou 1.
+* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_] : Ce bloc est un bloc de contrôle provenant de la palette **Contrôle**. Si sa condition booléenne est vraie, les blocs contenus à l'intérieur s'exécuteront, puis le script impliqué continuera. Si la condition est fausse, les scripts à l'intérieur du bloc seront ignorés. La condition n'est vérifiée qu'une seule fois ; si la condition devient fausse pendant l'exécution du script à l'intérieur du bloc, celui-ci continuera à s'exécuter jusqu'à ce qu'il soit terminé.
+* [jouer le son jusqu'à la fin] : Ce bloc provient de la palette Son, utilisé pour jouer des sons spécifiques.
 
 .. image:: img/7_bell.png

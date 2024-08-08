@@ -1,59 +1,58 @@
-.. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _sh_balloon:
 
-2.12 GAME - Inflating the Balloon
+2.12 JEU - Gonfler le Ballon
 =========================================
 
-Here, we will play a game of ballooning.
+Ici, nous allons jouer à un jeu de gonflage de ballon.
 
-After clicking the green flag, the balloon will become bigger and bigger. If the balloon is too big, it will be blown up; if the balloon is too small, it will fall down; you need to judge when to press the button to make it fly upwards.
+Après avoir cliqué sur le drapeau vert, le ballon deviendra de plus en plus gros. Si le ballon devient trop gros, il éclatera ; si le ballon est trop petit, il tombera. Vous devez juger quand appuyer sur le bouton pour le faire monter.
 
 .. image:: img/13_balloon0.png
 
-Required Components
----------------------
+Composants nécessaires
+--------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
@@ -63,79 +62,76 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-You Will Learn
----------------------
+Ce que vous apprendrez
+--------------------------
 
-- Paint costume for the sprite
+- Peindre un costume pour le sprite
 
 
-Build the Circuit
------------------------
+Construire le circuit
+--------------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Le bouton est un dispositif à 4 broches, puisque la broche 1 est connectée à la broche 2, et la broche 3 à la broche 4, lorsque le bouton est enfoncé, les 4 broches sont connectées, fermant ainsi le circuit.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construisez le circuit selon le schéma suivant.
 
-* Connect one of the pins on the left side of the button to pin14, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Connectez l'une des broches du côté gauche du bouton à la broche 14, qui est connectée à une résistance de tirage vers le bas et à un condensateur de 0,1uF (104) (pour éliminer les interférences et obtenir un niveau stable lorsque le bouton fonctionne).
+* Connectez l'autre extrémité de la résistance et du condensateur à la masse, et l'une des broches du côté droit du bouton à 5V.
 
 .. image:: img/circuit/6_doorbel_bb.png
 
-Programming
-------------------
+Programmation
+-----------------
 
-**1. Add a sprite and a backdrop**
+**1. Ajouter un sprite et un arrière-plan**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, then select the **Balloon1** sprite.
+Supprimez le sprite par défaut, cliquez sur le bouton **Choisir un Sprite** dans le coin inférieur droit de la zone des sprites, puis sélectionnez le sprite **Balloon1**.
 
 .. image:: img/13_balloon1.png
 
-Add a **Boardwalk** backdrop via the **Choose a backdrop** button, or other backbackdrops you like.
+Ajoutez un arrière-plan **Boardwalk** via le bouton **Choisir un arrière-plan**, ou un autre arrière-plan de votre choix.
 
 .. image:: img/13_balloon2.png
 
-**2. Paint a costume for the Balloon1 sprite**
+**2. Peindre un costume pour le sprite Balloon1**
 
-Now let's draw an exploding effect costume for the balloon sprite.
+Nous allons maintenant dessiner un costume d'effet d'explosion pour le sprite du ballon.
 
-Go to the **Costumes** page for the **Balloon1** sprite, click the **Choose a Costume** button in the bottom left corner, and select **Paint** to bring up a blank **Costume**.
+Allez à la page **Costumes** pour le sprite **Balloon1**, cliquez sur le bouton **Choisir un Costume** dans le coin inférieur gauche et sélectionnez **Peindre** pour afficher un **Costume** vierge.
 
 .. image:: img/13_balloon7.png
 
-Select a color and then use the **Brush** tool to draw a pattern.
+Sélectionnez une couleur, puis utilisez l'outil **Pinceau** pour dessiner un motif.
 
 .. image:: img/13_balloon3.png
 
-Select a color again, click the Fill tool, and move the mouse inside the pattern to fill it with a color.
+Sélectionnez à nouveau une couleur, cliquez sur l'outil Remplir et déplacez la souris à l'intérieur du motif pour le remplir de couleur.
 
 .. image:: img/13_balloon4.png
 
-Finally, write the text BOOM, so that an explosion effect costume is complete.
+Enfin, écrivez le texte BOOM, pour créer un costume d'effet d'explosion complet.
 
 .. image:: img/13_balloon5.png
 
-**3. Scripting the Balloon sprite**
+**3. Programmer le sprite du ballon**
 
-Set the initial position and size of the **Balloon1** sprite.
+Définissez la position initiale et la taille du sprite **Balloon1**.
 
 .. image:: img/13_balloon6.png
 
-Then let the **Balloon** sprite slowly get bigger.
+Ensuite, laissez le sprite **Balloon** grossir lentement.
 
 .. image:: img/13_balloon8.png
 
-When the button is pressed (value is 1), the size of the **Balloon1** sprite stops getting bigger.
+Lorsque le bouton est enfoncé (valeur égale à 1), la taille du sprite **Balloon1** cesse d'augmenter.
 
-* When the size is less than 90, it will fall (y coordinate decreases).
-* When the size is bigger than 90 and smaller than 120, it will fly to the sky (y coordinate increases).
+* Lorsque la taille est inférieure à 90, il tombera (la coordonnée y diminue).
+* Lorsque la taille est supérieure à 90 et inférieure à 120, il montera dans le ciel (la coordonnée y augmente).
 
 .. image:: img/13_balloon9.png
 
-If the button has not been pressed, the balloon slowly gets bigger and when the size is bigger than 120, it will explode (switch to the explode effect costume).
+Si le bouton n'a pas été enfoncé, le ballon grossit lentement et lorsque la taille dépasse 120, il éclatera (changer de costume pour l'effet d'explosion).
 
 .. image:: img/13_balloon10.png
-
-
-

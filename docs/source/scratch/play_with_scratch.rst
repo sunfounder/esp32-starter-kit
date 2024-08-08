@@ -1,38 +1,36 @@
-.. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _play_with_scratch:
 
-Play with Scratch
+Jouer avec Scratch
 ========================
 
-Besides programming on the Arduino IDE or Thonny IDE, we can also use graphical programming.
+En plus de programmer sur l'Arduino IDE ou Thonny IDE, nous pouvons également utiliser la programmation graphique.
 
-Here we recommend programming with Scratch, but the official Scratch is currently only compatible with Raspberry Pi, so we have partnered with a company, STEMPedia, who has developed a Scratch 3 based graphical programming software for many boards - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
+Nous recommandons ici de programmer avec Scratch, mais le Scratch officiel n'est actuellement compatible qu'avec Raspberry Pi. Nous avons donc collaboré avec une entreprise, STEMPedia, qui a développé un logiciel de programmation graphique basé sur Scratch 3 pour de nombreuses cartes - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
 
 .. image:: img/1_pictoblox.png
 
-It keeps the basic functions of Scratch 3, but also adds control boards, such as Arduino Uno, Mega, Nano, ESP32, Microbit and STEAMPedia homemade main boards, which can use external sensors, robots to control the sprites on the stage, with strong hardware interaction capabilities.
+Il conserve les fonctions de base de Scratch 3, mais ajoute également des cartes de contrôle, telles que Arduino Uno, Mega, Nano, ESP32, Microbit et les cartes principales fabriquées par STEAMPedia, qui peuvent utiliser des capteurs externes, des robots pour contrôler les sprites sur la scène, avec de fortes capacités d'interaction matérielle.
 
-In addition, it has AI and machine learning, even if you do not have much programming foundation, you can learn and use these popular and high-tech.
+De plus, il intègre l'IA et l'apprentissage automatique, même si vous n'avez pas beaucoup de bases en programmation, vous pouvez apprendre et utiliser ces technologies populaires et de pointe.
 
-Just drag and drop the Scratch coding blocks and make cool games, animations, interactive projects, and even control robots the way you want!
+Il suffit de faire glisser et de déposer les blocs de code Scratch pour créer des jeux cools, des animations, des projets interactifs et même contrôler des robots comme vous le souhaitez !
 
+Commençons maintenant notre voyage de découverte !
 
-Now let's start the journey of discovery!
-
-**1. Get Started**
+**1. Pour commencer**
 
 .. toctree::
     :maxdepth: 2
@@ -41,17 +39,17 @@ Now let's start the journey of discovery!
     pictoblox_start/2_introduce
     pictoblox_start/3_quick_guide
 
-**2. Projects**
+**2. Projets**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Les projets suivants sont classés par ordre de difficulté de programmation, il est recommandé de les lire dans cet ordre.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+Chaque projet contient des étapes très détaillées pour vous apprendre à construire le circuit et à programmer étape par étape pour atteindre le résultat final.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
+Bien sûr, vous pouvez également ouvrir directement le script pour l'exécuter, mais vous devez vous assurer d'avoir téléchargé le matériel pertinent depuis `github <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_.
 
-Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
+Une fois le téléchargement terminé, décompressez-le. Référez-vous à :ref:`stage_mode` pour exécuter les scripts individuels directement.
 
-But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
+Mais le :ref:`sh_humiture` utilise le :ref:`upload_mode`.
 
 
 .. toctree::

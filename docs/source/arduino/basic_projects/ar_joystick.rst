@@ -1,87 +1,90 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et à des promotions spéciales pour les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_joystick:
 
-5.11 Toggle the Joystick
+5.11 Utiliser le Joystick
 ================================
-If you play a lot of video games, then you should be very familiar with the Joystick.
-It is usually used to move the character around, rotate the screen, etc.
+Si vous jouez beaucoup aux jeux vidéo, alors vous devriez être très familier 
+avec le Joystick. Il est généralement utilisé pour déplacer le personnage, 
+faire pivoter l'écran, etc.
 
-The principle behind Joystick's ability to allow the computer to read our actions is very simple.
-It can be thought of as consisting of two potentiometers that are perpendicular to each other.
-These two potentiometers measure the analog value of the joystick vertically and horizontally, resulting in a value (x,y) in a planar right-angle coordinate system.
+Le principe qui permet au Joystick de transmettre nos actions à l'ordinateur est 
+très simple. Il peut être considéré comme constitué de deux potentiomètres perpendiculaires 
+l'un à l'autre. Ces deux potentiomètres mesurent la valeur analogique du joystick 
+verticalement et horizontalement, résultant en une valeur (x,y) dans un système de 
+coordonnées cartésiennes.
 
+Le joystick de ce kit possède également une entrée numérique, activée lorsque le joystick 
+est pressé.
 
-The joystick of this kit also has a digital input, which is activated when the joystick is pressed.
+**Composants nécessaires**
 
-**Required Components**
+Pour ce projet, nous avons besoin des composants suivants.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - ESP32 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-* **Available Pins**
+* **Broches disponibles**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
     .. list-table::
         :widths: 5 15
 
-        *   - For Analog Input
+        *   - Pour entrée analogique
             - IO14, IO25, I35, I34, I39, I36
-        *   - For Digital Input
+        *   - Pour entrée numérique
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
             
-**Schematic**
+**Schéma**
 
 .. image:: ../../img/circuit/circuit_5.11_joystick.png
 
-The SW (Z-axis) pin is connected to IO33, which has a built-in 4.7K pull-up resistor. Therefore, when the SW button is not pressed, it will output a high level. When the button is pressed, it will output a low level.
+La broche SW (axe Z) est connectée à IO33, qui possède une résistance pull-up intégrée de 4.7K. Par conséquent, lorsque le bouton SW n'est pas pressé, il produira un niveau haut. Lorsqu'il est pressé, il produira un niveau bas.
 
-I34 and I35 will change their values as you manipulate the joystick. The range of values is from 0 to 4095.
+I34 et I35 changeront leurs valeurs au fur et à mesure que vous manipulez le joystick. La plage des valeurs est de 0 à 4095.
 
-**Wiring**
+**Câblage**
 
 .. image:: ../../img/wiring/5.11_joystick_bb.png
 
@@ -89,8 +92,8 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
 
 .. note::
 
-    * Open the ``5.11_joystick.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.11_joystick``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Ouvrez le fichier ``5.11_joystick.ino`` sous le chemin ``esp32-starter-kit-main\c\codes\5.11_joystick``.
+    * Après avoir sélectionné la carte (ESP32 Dev Module) et le port approprié, cliquez sur le bouton **Upload**.
     * :ref:`unknown_com_port`
     
     
@@ -99,9 +102,9 @@ I34 and I35 will change their values as you manipulate the joystick. The range o
     <iframe src=https://create.arduino.cc/editor/sunfounder01/a2065d70-d207-4e51-b03e-ffd2a26597ef/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Open the serial monitor after the code has been uploaded successfully to see the x,y,z values of the joystick.
+Ouvrez le moniteur série après le téléchargement réussi du code pour voir les valeurs x,y,z du joystick.
 
-Remember to Set the serial communication baud rate to 115200.
+N'oubliez pas de régler le taux de communication série à 115200 bauds.
 
-* The x-axis and y-axis values are analog values that vary from 0 to 4095.
-* The Z-axis is a digital value with a status of 1 or 0 ( when pressed, it is 0 ).
+* Les valeurs de l'axe x et de l'axe y sont des valeurs analogiques variant de 0 à 4095.
+* L'axe Z est une valeur numérique avec un statut de 1 ou 0 (lorsqu'il est pressé, il est à 0).

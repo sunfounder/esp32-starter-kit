@@ -1,37 +1,35 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Video 3: "Hello LED" Project
+Vidéo 3 : Projet "Hello LED"
 ======================================================
 
-In Tutorial 3, we delve into the "Hello LED" project, providing a comprehensive overview of the project:
+Dans le tutoriel 3, nous explorons le projet "Hello LED", offrant un aperçu complet du projet :
 
+* **Composants** : Un examen détaillé des composants impliqués dans le projet, y compris les résistances, les LED et les breadboards, expliquant leurs rôles et fonctions.
+* **Montage du circuit** : Des instructions étape par étape pour monter le circuit LED, y compris l'utilisation correcte des résistances et les connexions sur le breadboard.
+* **Code Arduino** : Une explication approfondie du code Arduino utilisé dans le projet, mettant en évidence les éléments clés et le processus de téléchargement vers l'ESP32.
+* **Test** : Des instructions pratiques sur la façon de tester la démonstration de clignotement de la LED, garantissant que le projet fonctionne comme prévu.
 
-* **Components**: A detailed look at the components involved in the project, including resistors, LEDs, and breadboards, explaining their roles and functions.
-* **Circuit Setup**: Step-by-step guidance on setting up the LED circuit, including proper resistor usage and connections on the breadboard.
-* **Arduino Code**: An in-depth explanation of the Arduino code used in the project, highlighting key elements and the upload process to the ESP32.
-* **Testing**: Practical instructions on how to test the LED blink demonstration, ensuring that the project works as intended.
+Ce tutoriel vous fournit non seulement les connaissances nécessaires pour réaliser le projet "Hello LED", mais aussi une compréhension fondamentale des résistances, des LED et des breadboards dans les applications électroniques et IoT.
 
-This tutorial not only equips you with the knowledge needed to complete the "Hello LED" project but also provides a foundational understanding of resistors, LEDs, and breadboards in electronics and IoT applications.
-
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/jTJ-JL2gEuQ?si=zyEet96mvJ2KDrzR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutoriels en ligne associés**
 
 * :ref:`ar_blink`
