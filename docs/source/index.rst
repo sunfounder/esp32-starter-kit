@@ -12,10 +12,12 @@
 
     👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy!
 
-Kit de Inicio ESP32 de SunFounder
+SunFounder |link_esp32_starter_kit|
 ==================================================
 
-Gracias por elegir nuestro Kit de Inicio ESP32.
+Gracias por elegir nuestro |link_esp32_starter_kit|.
+
+* |link_esp32_kit|
 
 .. note::
     Este documento está disponible en los siguientes idiomas.
@@ -24,6 +26,7 @@ Gracias por elegir nuestro Kit de Inicio ESP32.
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
+        * |link_fr_tutorials|
 
     
     Por favor, haz clic en los enlaces respectivos para acceder al documento en tu idioma preferido.

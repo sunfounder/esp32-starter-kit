@@ -58,7 +58,7 @@ También puedes comprarlos por separado en los siguientes enlaces.
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
     *   - :ref:`cpn_esp32_camera_extension`
-        - \-
+        - |link_esp32_extension_board|
 
 
 **1. Configuración en ESP Home**
