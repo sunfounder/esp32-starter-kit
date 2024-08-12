@@ -1,30 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anteprime esclusive.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 33: Digital Dice
+Video 33: Dado Digitale
 ====================================================
 
+Questo tutorial mostra come costruire un dado digitale utilizzando una scheda ESP32 e un display a 7 segmenti, con un pulsante per lanciare il dado e visualizzare numeri da 1 a 6 in modo casuale.
 
-This tutorial shows how to build a digital dice using an ESP32 board and a 7-segment display, featuring a push button to roll the dice and display numbers 1 through 6 randomly.
-
-* **Digital Dice Concept**: Introduction to the project and its electronic components.
-* **Wiring Setup**: Step-by-step guide to connecting the ESP32 board with the 7-segment display and push button.
-* **Code Walkthrough**: Detailed explanation of the Arduino code for number generation and display management.
-* **Random Number Generation**: Methodology for creating random dice outcomes with a push button.
-* **Display Initialization**: Tips for ensuring the 7-segment display shows a clear screen upon startup.
-* **Project Assembly**: Instructions for assembling and troubleshooting the digital dice project for optimal performance.
-
+* **Concetto di Dado Digitale**: Introduzione al progetto e ai suoi componenti elettronici.
+* **Configurazione dei Collegamenti**: Guida passo-passo per collegare la scheda ESP32 al display a 7 segmenti e al pulsante.
+* **Spiegazione del Codice**: Dettagliata spiegazione del codice Arduino per la generazione dei numeri e la gestione del display.
+* **Generazione di Numeri Casuali**: Metodologia per creare risultati casuali del dado tramite il pulsante.
+* **Inizializzazione del Display**: Suggerimenti per garantire che il display a 7 segmenti mostri uno schermo chiaro all'avvio.
+* **Assemblaggio del Progetto**: Istruzioni per assemblare e risolvere i problemi del progetto del dado digitale per un funzionamento ottimale.
 
 **Video**
 
@@ -32,8 +30,6 @@ This tutorial shows how to build a digital dice using an ESP32 board and a 7-seg
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/9mpHQWvZ0WI?si=WxNtw7uIJddDzE-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`ar_dice`
-
-

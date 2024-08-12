@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_thermistor:
 
-5.10 Thermometer
+5.10 Termometro
 ===========================
 
-A thermistor is a temperature sensor that exhibits a strong dependence on temperature, and it can be classified into two types: Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC). The resistance of an NTC thermistor decreases with increasing temperature, while the resistance of a PTC thermistor increases with increasing temperature.
+Un termistore è un sensore di temperatura che mostra una forte dipendenza dalla temperatura e può essere classificato in due tipi: Coefficiente di Temperatura Negativo (NTC) e Coefficiente di Temperatura Positivo (PTC). La resistenza di un termistore NTC diminuisce con l'aumentare della temperatura, mentre quella di un termistore PTC aumenta con l'aumentare della temperatura.
 
-In this project, we will be using an NTC thermistor. By connecting the NTC thermistor to an analog input pin of the ESP32 microcontroller, we can measure its resistance, which is directly proportional to the temperature.
+In questo progetto, utilizzeremo un termistore NTC. Collegando il termistore NTC a un pin di ingresso analogico del microcontrollore ESP32, possiamo misurare la sua resistenza, che è direttamente proporzionale alla temperatura.
 
-By incorporating the NTC thermistor and performing the necessary calculations, we can accurately measure the temperature and display it on the I2C LCD1602 module. This project enables real-time temperature monitoring and provides a visual interface for temperature display.
+Incorporando il termistore NTC e eseguendo i calcoli necessari, possiamo misurare accuratamente la temperatura e visualizzarla sul modulo I2C LCD1602. Questo progetto consente il monitoraggio in tempo reale della temperatura e fornisce un'interfaccia visiva per la visualizzazione della temperatura.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -63,51 +63,51 @@ You can also buy them separately from the links below.
         - |link_thermistor_buy|
 
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Pin Disponibili
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **Pin di Strapping**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    I seguenti pin sono pin di strapping, che influenzano il processo di avvio dell'ESP32 durante l'accensione o il reset. Tuttavia, una volta avviato correttamente l'ESP32, possono essere utilizzati come pin regolari.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pin di Strapping
             - IO0, IO12
 
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.10_thermistor.png
 
-When the temperature rises, the resistance of the thermistor decreases, causing the value read on I35 to decrease. Additionally, by using a formula, you can convert the analog value into temperature and then print it out.
+Quando la temperatura aumenta, la resistenza del termistore diminuisce, causando una diminuzione del valore letto su I35. Inoltre, utilizzando una formula, è possibile convertire il valore analogico in temperatura e stamparlo.
 
-**Wiring**
+**Cablatura**
 
 .. image:: ../../img/wiring/5.10_thermistor_bb.png
 
 
 .. note::
-    * The thermistor is black and marked 103.
-    * The color ring of the 10K ohm resistor is red, black, black, red and brown.
+    * Il termistore è nero e marcato 103.
+    * L'anello colorato della resistenza da 10K ohm è rosso, nero, nero, rosso e marrone.
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.10_thermistor.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.10_thermistor``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Apri il file ``5.10_thermistor.ino`` nel percorso ``esp32-starter-kit-main\c\codes\5.10_thermistor``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
     * :ref:`unknown_com_port`
 
 .. raw:: html
@@ -115,42 +115,42 @@ When the temperature rises, the resistance of the thermistor decreases, causing 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d0407e3b-cd1e-4f5e-a7b6-391da394339b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is successfully uploaded, the Serial Monitor will print out the Celsius and Fahrenheit temperatures.
+Dopo che il codice è stato caricato con successo, il Serial Monitor stamperà le temperature in Celsius e Fahrenheit.
 
-**How it works?**
+**Come funziona?**
 
-Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius. 
+Ogni termistore ha una resistenza normale. Qui è di 10k ohm, che viene misurata a 25 gradi Celsius. 
 
-When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. 
+Quando la temperatura aumenta, la resistenza del termistore diminuisce. Quindi i dati di tensione vengono convertiti in quantità digitali dall'adattatore A/D. 
 
-The temperature in Celsius or Fahrenheit is output via programming. 
+La temperatura in Celsius o Fahrenheit viene quindi visualizzata tramite programmazione. 
 
-Here is the relation between the resistance and temperature: 
+Ecco la relazione tra resistenza e temperatura:
 
     **RT =RN expB(1/TK - 1/TN)** 
 
-    * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
-    * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``273.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``273.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``3950``. 
-    * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
+    * **RT** è la resistenza del termistore NTC quando la temperatura è **TK**. 
+    * **RN** è la resistenza del termistore NTC alla temperatura nominale TN. Qui, il valore numerico di RN è 10k. 
+    * **TK** è una temperatura Kelvin e l'unità è K. Qui, il valore numerico di **TK** è ``273,15 + gradi Celsius``. 
+    * **TN** è una temperatura nominale in Kelvin; anche l'unità è K. Qui, il valore numerico di TN è ``273,15+25``.
+    * E **B(beta)**, la costante del materiale del termistore NTC, è anche chiamata indice di sensibilità al calore con un valore numerico ``3950``. 
+    * **exp** è l'abbreviazione di esponenziale, e il numero base ``e`` è un numero naturale e uguale a 2,7 circa. 
 
-    Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
+    Converti questa formula ``TK=1/(ln(RT/RN)/B+1/TN)`` per ottenere la temperatura Kelvin che, sottraendo 273,15, equivale ai gradi Celsius. 
 
-    This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+    Questa relazione è una formula empirica. È accurata solo quando la temperatura e la resistenza rientrano nell'intervallo efficace.
 
-**Learn More**
+**Per Saperne di Più**
 
-You can also display the calculated Celsius and Fahrenheit temperatures on the I2C LCD1602.
+Puoi anche visualizzare le temperature calcolate in Celsius e Fahrenheit sull'I2C LCD1602.
 
 
 .. note::
 
-    * You can open the file ``5.10_thermistor_lcd.ino`` under the path of ``euler-kit/arduino/5.10_thermistor_lcd``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puoi aprire il file ``5.10_thermistor_lcd.ino`` nel percorso ``euler-kit/arduino/5.10_thermistor_lcd``. 
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * Qui viene utilizzata la libreria ``LiquidCrystal I2C``, che puoi installare dal **Library Manager**.
 
 .. raw:: html
 

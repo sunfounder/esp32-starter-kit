@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché Unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto da Esperti**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_ultrasonic:
 
-5.12 Measuring Distance
+5.12 Misurazione della Distanza
 ======================================
 
-The ultrasonic module is used for distance measurement or object detection. In this project, we will program the module to obtain obstacle distances. By sending ultrasonic pulses and measuring the time it takes for them to bounce back, we can calculate distances. This enables us to implement distance-based actions or obstacle avoidance behaviors.
+Il modulo ultrasonico viene utilizzato per la misurazione della distanza o per il rilevamento di oggetti. In questo progetto, programmeremo il modulo per ottenere le distanze dagli ostacoli. Inviando impulsi ultrasonici e misurando il tempo necessario affinché rimbalzino indietro, possiamo calcolare le distanze. Questo ci consente di implementare azioni basate sulla distanza o comportamenti di evitamento degli ostacoli.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -54,87 +54,84 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Per Ingresso
             - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Per Uscita
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.12_ultrasonic.png
 
-The ESP32 sends a set of square wave signals to the Trig pin of the ultrasonic sensor every 10 seconds. This prompts the ultrasonic sensor to emit a 40kHz ultrasound signal outward. If there is an obstacle in front, the ultrasound waves will be reflected back.
+L'ESP32 invia un set di segnali a onda quadra al pin Trig del sensore ultrasonico ogni 10 secondi. Questo provoca l'emissione di un segnale ultrasonico a 40kHz. Se c'è un ostacolo davanti, le onde ultrasoniche verranno riflesse indietro.
 
-By recording the time it takes from sending to receiving the signal, dividing it by 2, and multiplying it by the speed of light, you can determine the distance to the obstacle.
+Registrando il tempo che intercorre tra l'invio e la ricezione del segnale, dividendo per 2 e moltiplicando per la velocità della luce, è possibile determinare la distanza dall'ostacolo.
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/5.12_ultrasonic_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.12_ultrasonic.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Apri il file ``5.12_ultrasonic.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Successivamente, fai clic su "Esegui lo script corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra.
 
 .. code-block:: python
 
     import machine
     import time
 
-    # Define the trigger and echo pins for the distance sensor
+    # Definisci i pin di trigger ed echo per il sensore di distanza
     TRIG = machine.Pin(26, machine.Pin.OUT)
     ECHO = machine.Pin(25, machine.Pin.IN)
 
-    # Calculate the distance using the ultrasonic sensor
+    # Calcola la distanza utilizzando il sensore ultrasonico
     def distance():
-        # Ensure trigger is off initially
+        # Assicurati che il trigger sia inizialmente spento
         TRIG.off()
-        time.sleep_us(2)  # Wait for 2 microseconds
+        time.sleep_us(2)  # Attendi 2 microsecondi
 
-        # Send a 10-microsecond pulse to the trigger pin
+        # Invia un impulso di 10 microsecondi al pin di trigger
         TRIG.on()
         time.sleep_us(10)
         TRIG.off()
 
-        # Wait for the echo pin to go high
+        # Attendi che il pin di echo diventi alto
         while not ECHO.value():
             pass
 
-        # Record the time when the echo pin goes high
+        # Registra il tempo in cui il pin di echo diventa alto
         time1 = time.ticks_us()
 
-        # Wait for the echo pin to go low
+        # Attendi che il pin di echo diventi basso
         while ECHO.value():
             pass
 
-        # Record the time when the echo pin goes low
+        # Registra il tempo in cui il pin di echo diventa basso
         time2 = time.ticks_us()
 
-        # Calculate the time difference between the two recorded times
+        # Calcola la differenza di tempo tra i due tempi registrati
         during = time.ticks_diff(time2, time1)
 
-        # Calculate and return the distance (in cm) using the speed of sound (340 m/s)
+        # Calcola e restituisci la distanza (in cm) utilizzando la velocità del suono (340 m/s)
         return during * 340 / 2 / 10000
 
-    # Continuously measure and print the distance
+    # Misura e stampa continuamente la distanza
     while True:
         dis = distance()
         print('Distance: %.2f' % dis)
-        time.sleep_ms(300)  # Wait for 300 milliseconds before repeating
+        time.sleep_ms(300)  # Attendi 300 millisecondi prima di ripetere
 
 
-Once the program is running, the Shell will print out the distance of the ultrasonic sensor from the obstacle ahead.
-
+Una volta che il programma è in esecuzione, la Shell stamperà la distanza rilevata dal sensore ultrasonico dall'ostacolo davanti.

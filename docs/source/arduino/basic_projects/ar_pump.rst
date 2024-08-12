@@ -1,50 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_pump:
 
-4.2 Pumping
-===================
-In this intriguing project, we will delve into controlling a water pump using the L293D.
+4.2 Pompa dell'acqua
+============================
 
-In the realm of water pump control, things are a bit simpler compared to controlling other motors. The beauty of this project lies in its simplicity - there's no need to worry about the direction of rotation. Our primary goal is to successfully activate the water pump and keep it running.
+In questo interessante progetto, ci immergeremo nel controllo di una pompa dell'acqua utilizzando il L293D.
 
-**Required Components**
+Nel controllo delle pompe dell'acqua, le cose sono un po' più semplici rispetto al controllo di altri motori. La bellezza di questo progetto risiede nella sua semplicità: non è necessario preoccuparsi della direzione di rotazione. Il nostro obiettivo principale è attivare con successo la pompa dell'acqua e mantenerla in funzione.
 
-In this project, we need the following components. 
+**Componenti Necessari**
 
-It's definitely convenient to buy a whole kit, here's the link: 
+In questo progetto, avremo bisogno dei seguenti componenti.
+
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -59,40 +60,41 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**Pin Disponibili**
 
-Here is a list of available pins on the ESP32 board for this project.
+Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pin Disponibili
       - IO13, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
 
-**Wiring**
+**Collegamento**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    È consigliato inserire la batteria e poi far scorrere l'interruttore sulla scheda di espansione in posizione ON per attivare l'alimentazione della batteria.
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-  * You can open the file ``4.2_pump.ino`` under the path of ``esp32-starter-kit-main\c\codes\4.2_pump``. 
-  * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+  * Puoi aprire il file ``4.2_pump.ino`` nel percorso ``esp32-starter-kit-main\c\codes\4.2_pump``. 
+  * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
   * :ref:`unknown_com_port`
    
 .. raw:: html
 
   <iframe src=https://create.arduino.cc/editor/sunfounder01/a56216f9-eba8-4fdc-8bbb-91337095e543/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Connect the tubing to the pump and place it inside the water-filled container. Once the code has been successfully uploaded, you will observe the water in the container gradually being drained. During this experiment, please ensure that the electrical circuit is kept away from water to prevent short-circuiting!
+Collega il tubo alla pompa e posizionalo all'interno del contenitore riempito d'acqua. Una volta caricato con successo il codice, vedrai l'acqua nel contenitore drenarsi gradualmente. Durante questo esperimento, assicurati che il circuito elettrico sia tenuto lontano dall'acqua per evitare cortocircuiti!
+

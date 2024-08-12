@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella comunità SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni per le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_lcd1602:
 
-2.6 Display Characters
+2.6 Visualizzare Caratteri
 ==================================================
 
-Now, we will explore the fascinating world of character display using the I2C LCD1602 module.
+Ora esploreremo il mondo affascinante della visualizzazione dei caratteri utilizzando il modulo LCD1602 con interfaccia I2C.
 
-Through this project, we will learn how to initialize the LCD module, set the desired display parameters, and send character data to be displayed on the screen. We can showcase custom messages, display sensor readings, or create interactive menus. The possibilities are endless!
+In questo progetto impareremo come inizializzare il modulo LCD, impostare i parametri di visualizzazione desiderati e inviare i dati dei caratteri da visualizzare sullo schermo. Possiamo mostrare messaggi personalizzati, visualizzare letture di sensori o creare menu interattivi. Le possibilità sono infinite!
 
-By mastering the art of character display on the I2C LCD1602, we will unlock new avenues for communication and information display in our projects. Let's dive into this exciting journey and bring our characters to life on the LCD screen
+Padroneggiando l'arte della visualizzazione dei caratteri sull'I2C LCD1602, sbloccheremo nuove vie per la comunicazione e la visualizzazione delle informazioni nei nostri progetti. Immergiamoci in questo emozionante viaggio e diamo vita ai nostri caratteri sullo schermo LCD!
 
-**Required Components**
+**Componenti richiesti**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTE
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,98 +58,94 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Available Pins**
+**Pin disponibili**
 
-Here is a list of available pins on the ESP32 board for this project.
+Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. list-table::
     :widths: 5 15
     :header-rows: 1
 
-    *   - Available Pins
-        - Usage Description
+    *   - Pin Disponibili
+        - Descrizione Uso
 
     *   - IO21
         - SDA
     *   - IO22
         - SCL
     
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_2.6_lcd.png
 
-**Wiring**
+**Collegamenti**
 
 .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
     :width: 800
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``2.6_liquid_crystal_display.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * The ``lcd1602.py`` library is used here and check if it's uploaded to ESP32. Refer to :ref:`add_libraries_py` for a tutorial.
+    * Apri il file ``2.6_liquid_crystal_display.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Quindi, fai clic su "Esegui script corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
+    * Qui viene utilizzata la libreria ``lcd1602.py``, verifica che sia stata caricata sull'ESP32. Per un tutorial completo, fai riferimento a :ref:`add_libraries_py`.
 
 .. code-block:: python
 
-    # Import the LCD class from the lcd1602 module
+    # Importa la classe LCD dal modulo lcd1602
     from lcd1602 import LCD
 
     import time
 
-    # Create an instance of the LCD class and assign it to the lcd variable
+    # Crea un'istanza della classe LCD e assegnala alla variabile lcd
     lcd = LCD()
-    # Set the string " Hello!\n"
+    # Imposta la stringa " Hello!\n"
     string = " Hello!\n"
-    # Display the string on the LCD screen
+    # Visualizza la stringa sullo schermo LCD
     lcd.message(string)
 
     time.sleep(2)
-    # Set the string "    Sunfounder!"
+    # Imposta la stringa "    Sunfounder!"
     string = "    Sunfounder!"
-    # Display the string on the LCD screen
+    # Visualizza la stringa sullo schermo LCD
     lcd.message(string)
 
     time.sleep(2)
-    # Clear the LCD screen
+    # Cancella lo schermo LCD
     lcd.clear()
 
-
-After the script runs, you will be able to see two lines of text will appear on the LCD screen in turn and then disappear.
-
+Dopo l'esecuzione dello script, vedrai apparire due righe di testo sullo schermo LCD a turno e poi scomparire.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Se il codice e i collegamenti sono corretti ma l'LCD non riesce ancora a visualizzare alcun contenuto, puoi regolare il potenziometro sul retro per aumentare il contrasto.
 
+**Come funziona?**
 
-**How it works?**
+Nella libreria ``lcd1602``, integriamo le funzioni rilevanti del display lcd1602 nella classe LCD.
 
-In the ``lcd1602`` library, we integrate the relevant functions of lcd1602 into the LCD class.
-
-#. Import ``lcd1602`` module.
+#. Importa il modulo ``lcd1602``.
 
     .. code-block:: python
 
         from lcd1602 import LCD    
 
-#. Declare an object of the ``LCD`` class and name it ``lcd``.
+#. Dichiara un oggetto della classe ``LCD`` e chiamalo ``lcd``.
 
     .. code-block:: python
 
         lcd = LCD()
 
-#. This statement will display the text on the LCD. It should be noted that the argument must be a string type. If we want to pass an integer or float, we must use the forced conversion statement ``str()``.
+#. Questa istruzione visualizzerà il testo sul display LCD. È importante notare che l'argomento deve essere di tipo stringa. Se desideriamo passare un intero o un float, dobbiamo usare l'istruzione di conversione forzata ``str()``.
 
     .. code-block:: python
 
         lcd.message(string)
 
 
-#. If you call this statement multiple times, lcd will superimpose the texts. This requires the use of the following statement to clear the display.
+#. Se chiami questa istruzione più volte, lcd sovrapporrà i testi. Questo richiede l'uso dell'istruzione seguente per cancellare il display.
 
     .. code-block:: python
 
         lcd.clear()
-

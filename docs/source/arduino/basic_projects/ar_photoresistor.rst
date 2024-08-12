@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_photoresistor:
 
-5.7 Feel the Light
+5.7 Rileva la Luce
 ===========================
 
-The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
+Il fotorilevatore è un dispositivo comunemente utilizzato per gli ingressi analogici, simile a un potenziometro. Il suo valore di resistenza cambia in base all'intensità della luce che riceve. Quando esposto a luce intensa, la resistenza del fotorilevatore diminuisce, mentre con una minore intensità luminosa, la resistenza aumenta.
 
-By reading the value of the photoresistor, we can gather information about the ambient light conditions. This information can be used for tasks such as controlling the brightness of an LED, adjusting the sensitivity of a sensor, or implementing light-dependent actions in a project.
+Leggendo il valore del fotorilevatore, possiamo ottenere informazioni sulle condizioni di illuminazione ambientale. Queste informazioni possono essere utilizzate per compiti come il controllo della luminosità di un LED, la regolazione della sensibilità di un sensore o l'implementazione di azioni dipendenti dalla luce in un progetto.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -60,45 +60,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Pin Disponibili
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **Pin Strapping**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    I seguenti pin sono pin strapping, che influenzano il processo di avvio dell'ESP32 durante l'accensione o il reset. Tuttavia, una volta che l'ESP32 è stato avviato con successo, possono essere utilizzati come pin normali.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pin Strapping
             - IO0, IO12
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.7_photoresistor.png
 
-As the light intensity increases, the resistance of the light-dependent resistor (LDR) decreases, resulting in a decrease in the value read on I35.
+Con l'aumentare dell'intensità luminosa, la resistenza del fotorilevatore (LDR) diminuisce, comportando una diminuzione del valore letto su I35.
 
-**Wiring**
+**Cablatura**
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.7_feel_the_light.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.7_feel_the_light``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Apri il file ``5.7_feel_the_light.ino`` nel percorso ``esp32-starter-kit-main\c\codes\5.7_feel_the_light``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
     * :ref:`unknown_com_port`
     
     
@@ -106,14 +106,13 @@ As the light intensity increases, the resistance of the light-dependent resistor
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/58b494c7-eef4-4476-af65-4823cef13f90/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, the Serial Monitor prints out the photoresistor values from 0 ~ 4095. 
-The stronger the current ambient brightness, the larger the value displayed on the serial monitor.
+Dopo che il codice è stato caricato con successo, il Monitor Seriale stamperà i valori del fotorilevatore da 0 a 4095. 
+Maggiore è la luminosità ambientale, maggiore sarà il valore visualizzato nel monitor seriale.
 
 .. note::
-    For the ESP32, the resolution is between 9 to 12 and it will change the ADC hardware resolution. Else value will be shifted.
+    Per l'ESP32, la risoluzione è compresa tra 9 e 12 bit e cambierà la risoluzione hardware dell'ADC. In caso contrario, il valore verrà spostato.
 
-    Default is 12 bits (range from 0 to 4096) for all chips except ESP32S3 where default is 13 bits (range from 0 to 8192).
+    Il valore predefinito è di 12 bit (intervallo da 0 a 4096) per tutti i chip tranne ESP32S3, dove il valore predefinito è di 13 bit (intervallo da 0 a 8192).
 
-    You can add ``analogReadResolution(10);`` to ``setup()`` function to set a different resolution, such as ``20``.
+    Puoi aggiungere ``analogReadResolution(10);`` alla funzione ``setup()`` per impostare una risoluzione diversa, come ad esempio ``10``.
 
-    

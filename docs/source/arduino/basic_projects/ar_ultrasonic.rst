@@ -1,48 +1,48 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_ultrasonic:
 
-5.12 Measuring Distance
+5.12 Misurare la Distanza
 ======================================
-The ultrasonic module is used for distance measurement or object detection. In this project, we will program the module to obtain obstacle distances. By sending ultrasonic pulses and measuring the time it takes for them to bounce back, we can calculate distances. This enables us to implement distance-based actions or obstacle avoidance behaviors.
+Il modulo ultrasonico viene utilizzato per la misurazione della distanza o per il rilevamento degli oggetti. In questo progetto, programmeremo il modulo per ottenere le distanze degli ostacoli. Inviando impulsi ultrasonici e misurando il tempo necessario affinché questi rimbalzino, possiamo calcolare le distanze. Questo ci permette di implementare azioni basate sulla distanza o comportamenti di evitamento degli ostacoli.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -53,38 +53,38 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Per Ingresso
             - IO13, IO14, IO27, IO26, IO25, IO33, IO32, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Per Uscita
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.12_ultrasonic.png
 
-The ESP32 sends a set of square wave signals to the Trig pin of the ultrasonic sensor every 10 seconds. This prompts the ultrasonic sensor to emit a 40kHz ultrasound signal outward. If there is an obstacle in front, the ultrasound waves will be reflected back.
+L'ESP32 invia una serie di segnali a onda quadra al pin Trig del sensore ultrasonico ogni 10 secondi. Questo induce il sensore ultrasonico a emettere un segnale ultrasonico a 40kHz verso l'esterno. Se c'è un ostacolo davanti, le onde ultrasoniche verranno riflesse.
 
-By recording the time it takes from sending to receiving the signal, dividing it by 2, and multiplying it by the speed of light, you can determine the distance to the obstacle.
+Registrando il tempo che passa dall'invio alla ricezione del segnale, dividendo per 2 e moltiplicando per la velocità del suono, è possibile determinare la distanza dall'ostacolo.
 
-**Wiring**
+**Collegamenti**
 
 .. image:: ../../img/wiring/5.12_ultrasonic_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.12_ultrasonic.ino`` file under the path of ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Apri il file ``5.12_ultrasonic.ino`` nel percorso ``esp32-starter-kit-main\c\codes\5.12_ultrasonic``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
     * :ref:`unknown_com_port`
     
 .. raw:: html
@@ -92,43 +92,44 @@ By recording the time it takes from sending to receiving the signal, dividing it
     <iframe src=https://create.arduino.cc/editor/sunfounder01/28ded128-62a8-4b2b-b21a-450f03323cd8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Remember to Set the serial communication baud rate to 115200.
+Ricorda di impostare la velocità di comunicazione seriale a 115200 baud.
 
-After the code is successfully uploaded, the serial monitor will print out the distance between the ultrasonic sensor and the obstacle ahead.
+Dopo che il codice è stato caricato con successo, il monitor seriale stamperà la distanza tra il sensore ultrasonico e l'ostacolo di fronte.
 
-**How it works?**
+**Come funziona?**
 
-About the application of ultrasonic sensor, we can directly check the subfunction.
+Per l'applicazione del sensore ultrasonico, possiamo controllare direttamente la sottofunzione.
 
 .. code-block:: arduino
 
     float readSensorData(){// ...}
 
-* The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal every 2us.
+* Il ``trigPin`` del modulo ultrasonico trasmette un segnale a onda quadra di 10us ogni 2us.
 
     .. code-block:: arduino
 
-        // Trigger a low signal before sending a high signal
+        // Invia un segnale basso prima di inviare un segnale alto
         digitalWrite(trigPin, LOW); 
         delayMicroseconds(2);
-        // Send a 10-microsecond high signal to the trigPin
+        // Invia un segnale alto di 10 microsecondi al trigPin
         digitalWrite(trigPin, HIGH); 
         delayMicroseconds(10);
-        // Return to low signal
+        // Ritorna al segnale basso
         digitalWrite(trigPin, LOW);
 
 
-* The ``echoPin`` receives a high level signal if there is an obstacle within the range and use the ``pulseIn()`` function to record the time from sending to receiving.
+* Il ``echoPin`` riceve un segnale di livello alto se c'è un ostacolo nel raggio e utilizza la funzione ``pulseIn()`` per registrare il tempo dall'invio alla ricezione.
 
     .. code-block:: arduino
 
         unsigned long microsecond = pulseIn(echoPin, HIGH);
 
-* The speed of sound is 340 meters per second, which is equivalent to 29 microseconds per centimeter. By measuring the time it takes for a square wave to travel to an obstacle and return, we can calculate the distance traveled by dividing the total time by 2. This gives us the distance of the obstacle from the source of the sound wave.
+* La velocità del suono è di 340 metri al secondo, equivalente a 29 microsecondi per centimetro. Misurando il tempo impiegato da un'onda quadra per raggiungere un ostacolo e tornare, possiamo calcolare la distanza percorsa dividendo il tempo totale per 2. Questo ci dà la distanza dell'ostacolo dalla sorgente dell'onda sonora.
 
     .. code-block:: arduino
 
         float distance = microsecond / 29.00 / 2;  
 
 
-Note that the ultrasonic sensor will pause the program when it is working, which may cause some lagging when writing complex projects.
+Nota che il sensore ultrasonico interromperà il programma quando è in funzione, il che potrebbe causare alcuni ritardi quando si scrivono progetti complessi.
+

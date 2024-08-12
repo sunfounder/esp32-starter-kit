@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime speciali.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_button:
 
-5.1 Reading Button Value
+5.1 Lettura del Valore del Pulsante
 ==============================================
 
-In this interactive project, we'll venture into the realm of button controls and LED manipulation.
+In questo progetto interattivo, esploreremo il controllo dei pulsanti e la manipolazione degli LED.
 
-The concept is straightforward yet effective. We'll be reading the state of a button. When the button is pressed down, it registers a high voltage level, or 'high state'. This action will then trigger an LED to light up.
+Il concetto è semplice ma efficace. Leggeremo lo stato di un pulsante. Quando il pulsante viene premuto, registra un livello di tensione alto, o 'stato alto'. Questa azione attiverà l'accensione di un LED.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - ESP32 Starter Kit
+    *   - Kit di Partenza ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -62,73 +62,73 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Per Input
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Per Output
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **Pin ad Uso Condizionale (Input)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
+    I seguenti pin hanno resistori di pull-up o pull-down integrati, quindi non sono necessari resistori esterni quando **vengono utilizzati come pin di ingresso**:
 
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - Pin ad Uso Condizionale
+            - Descrizione
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Il pull-up con un resistore da 47K imposta il valore su alto di default.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Il pull-up con un resistore da 4.7K imposta il valore su alto di default.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Il pull-down con un resistore da 1K imposta il valore su basso di default.
 
-* **Strapping Pins (Input)**
+* **Pin Strapping (Input)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    I pin Strapping sono un set speciale di pin utilizzati per determinare specifiche modalità di avvio durante l'accensione del dispositivo 
+    (ad es. reset all'accensione).
 
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pin Strapping
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    In generale, **non è consigliato utilizzarli come pin di ingresso**. Se desideri utilizzare questi pin, considera il potenziale impatto sul processo di avvio. Per ulteriori dettagli, consulta la sezione :ref:`esp32_strapping`.
 
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_5.1_button.png
 
-To ensure proper functionality, connect one side of the button pin to 3.3V and the other side to IO14. When the button is pressed, IO14 will be set to high, causing the LED to light up. When the button is released, IO14 will return to its suspended state, which may be either high or low. To ensure a stable low level when the button is not pressed, IO14 should be connected to GND through a 10K pull-down resistor.
+Per garantire un funzionamento corretto, collega un lato del pin del pulsante a 3.3V e l'altro lato a IO14. Quando il pulsante viene premuto, IO14 verrà impostato su alto, facendo accendere il LED. Quando il pulsante viene rilasciato, IO14 tornerà al suo stato sospeso, che può essere alto o basso. Per garantire un livello basso stabile quando il pulsante non è premuto, IO14 dovrebbe essere collegato a GND tramite un resistore pull-down da 10K.
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/5.1_button_bb.png
 
 .. note::
     
-    A four-pin button is designed in an H shape. When the button is not pressed, the left and right pins are disconnected, and current cannot flow between them. However, when the button is pressed, the left and right pins are connected, creating a pathway for current to flow.
+    Un pulsante a quattro pin è progettato a forma di H. Quando il pulsante non viene premuto, i pin sinistro e destro sono scollegati e la corrente non può fluire tra di essi. Tuttavia, quando il pulsante viene premuto, i pin sinistro e destro sono collegati, creando un percorso per il flusso di corrente.
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.1_read_button_value.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Apri il file ``5.1_read_button_value.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Poi, clicca su "Esegui Script Corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
 
 
 
@@ -137,18 +137,19 @@ To ensure proper functionality, connect one side of the button pin to 3.3V and t
     import machine
     import time
 
-    button = machine.Pin(14, machine.Pin.IN) # Button pin
-    led = machine.Pin(26, machine.Pin.OUT) # LED pin
+    button = machine.Pin(14, machine.Pin.IN) # Pin del pulsante
+    led = machine.Pin(26, machine.Pin.OUT) # Pin del LED
 
 
     while True:
-        # If the button is pressed by reading its value
+        # Se il pulsante viene premuto leggendo il suo valore
         if button.value() == 1:
-            # Turn on the LED by setting its value to 1
+            # Accendi il LED impostando il suo valore a 1
             led.value(1)
     #         time.sleep(0.5)
         else:
-            # Turn off the LED
+            # Spegni il LED
             led.value(0)
 
-During script execution, the LED lights up when you press the button and goes out when you release it.
+Durante l'esecuzione dello script, il LED si accende quando premi il pulsante e si spegne quando lo rilasci.
+

@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_moving_mouse:
 
-2.4 Moving Mouse
-===================
+2.4 Topolino in Movimento
+=============================
 
-Today we are going to make a mouse toy controlled by a potentiometer.
+Oggi realizzeremo un giocattolo a forma di topolino controllato da un potenziometro.
 
-When the green flag is clicked, the mouse on the stage moves forward, and when you rotate the potentiometer, the mouse will change the direction of movement.
+Quando viene cliccata la bandiera verde, il topolino sul palco si muove in avanti e, ruotando il potenziometro, il topolino cambierà direzione di movimento.
 
 .. image:: img/6_mouse.png
 
-Required Components
----------------------
+Componenti Necessari
+-----------------------
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -61,69 +61,64 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-You Will Learn
+Cosa Imparerai
 ---------------------
 
-- Potentiometer principle
-- Read analog pin and ranges
-- Mapping one range to another
-- Moving and changing the direction of sprite
+- Principio del potenziometro
+- Lettura del pin analogico e intervalli
+- Mappatura di un intervallo su un altro
+- Movimento e cambio di direzione dello sprite
 
-Build the Circuit
------------------------
+Costruire il Circuito
+-------------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to pin35. After conversion by the ADC converter of the ESP32, the value range is 0-4095.
+Il potenziometro è un elemento resistivo con 3 terminali: i 2 pin laterali sono collegati a 5V e GND, mentre il pin centrale è collegato al pin 35. Dopo la conversione tramite il convertitore ADC dell'ESP32, l'intervallo di valori è 0-4095.
 
 .. image:: img/circuit/5_moving_mouse_bb.png
 
-Programming
+Programmazione
 ------------------
 
-**1. Choose a sprite**
+**1. Scegli uno sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **mouse** in the search box, and then click to add it.
+Elimina lo sprite predefinito, fai clic sul pulsante **Scegli uno Sprite** nell'angolo in basso a destra dell'area degli sprite, inserisci **mouse** nella casella di ricerca e poi clicca per aggiungerlo.
 
 .. image:: img/6_sprite.png
 
-**2. Creating a variable**.
+**2. Creazione di una variabile**
 
-Create a variable called **value** to store the value of the potentiometer read.
+Crea una variabile chiamata **value** per memorizzare il valore letto dal potenziometro.
 
-Once created, you will see **value** appear inside the **Variables** palette and in the checked state, which means this variable will appear on the stage.
+Una volta creata, vedrai **value** apparire all'interno della tavolozza **Variabili** e in stato selezionato, il che significa che questa variabile apparirà sul palco.
 
 .. image:: img/6_value.png
 
-**3. Read the value of pin35**
+**3. Leggere il valore del pin 35**
 
-Store the value of pin35 read into the variable **value**.
+Memorizza il valore letto dal pin 35 nella variabile **value**.
 
-* [set my variable to 0]: Set the value of the variable.
-* [read analog pin ()]: Read the value of pins in the range of 0-4095.
+* [imposta la mia variabile a 0]: Imposta il valore della variabile.
+* [leggi pin analogico ()]: Legge il valore dei pin nell'intervallo 0-4095.
 
 .. image:: img/6_read_a0.png
 
-To be able to read all the way through, you need to use the [forever] block. Click on this script to run it, rotate the potentiometer in both directions, and you will see that the value range is 0-1023.
+Per poter leggere in modo continuo, è necessario utilizzare il blocco [per sempre]. Clicca su questo script per eseguirlo, ruota il potenziometro in entrambe le direzioni e vedrai che l'intervallo di valori è 0-1023.
 
 .. image:: img/6_1023.png
 
-**4. Move the sprite**
+**4. Muovi lo sprite**
 
-Use the [move steps] block to move the sprite, run the script and you will see the sprite move from the middle to the right.
+Usa il blocco [muovi passi] per muovere lo sprite, esegui lo script e vedrai lo sprite muoversi dal centro verso destra.
 
 .. image:: img/6_move.png
 
-**5. Changing the sprite's direction**
+**5. Cambiare la direzione dello sprite**
 
-Now change the direction of the sprite's movement by the value of pin35. Since the value of pin35 ranges from 0-4095, but the sprite's rotation direction is -180~180, a [map] block needs to be used.
+Ora cambia la direzione di movimento dello sprite in base al valore del pin 35. Poiché il valore del pin 35 varia da 0 a 4095, mentre la direzione di rotazione dello sprite va da -180 a 180, è necessario utilizzare un blocco [mappa].
 
-Also add [when green flag clicked] at the beginning to start the script.
+Aggiungi anche [quando si clicca la bandiera verde] all'inizio per avviare lo script.
 
-* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Set the steering angle of the sprite, from **Motion** palette.
-* [map from to]: Map a range to another range.
+* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Imposta l'angolo di rotazione dello sprite, dalla tavolozza **Movimento**.
+* [mappa da a]: Mappa un intervallo su un altro intervallo.
 
 .. image:: img/6_direction.png
-
-
-
-
-

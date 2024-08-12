@@ -1,27 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle preview.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 20: Line Tracking
-==============================
+Video 20: Rilevamento della Linea
+====================================
 
-This tutorial demonstrates how to use the ESP32 module with a line detection module for robotics applications, including real-time line following and auditory feedback via a buzzer.
+Questo tutorial dimostra come utilizzare il modulo ESP32 con un modulo di rilevamento della linea per applicazioni robotiche, inclusi il tracciamento in tempo reale della linea e il feedback sonoro tramite un buzzer.
 
-* **Starter Kit Overview**: Components and capabilities of the SunFounder ESP32 starter kit.
-* **Line Detection Mechanism**: How the line detection module uses infrared to distinguish between different colored lines on surfaces.
-* **Setup Instructions**: Step-by-step guide on wiring and coding the ESP32 with the line detection module and buzzer.
-* **Sensitivity Adjustment**: Tips for adjusting the line detection module's sensitivity for optimal performance.
-* **Practical Demonstration**: Showcasing the module's ability to follow a line and provide auditory feedback when detecting lines.
+* **Panoramica del Kit Iniziale**: Componenti e funzionalità del kit di avvio SunFounder ESP32.
+* **Meccanismo di Rilevamento della Linea**: Come il modulo di rilevamento utilizza l'infrarosso per distinguere tra linee di colori diversi sulle superfici.
+* **Istruzioni per l'Installazione**: Guida passo-passo per il cablaggio e la programmazione dell'ESP32 con il modulo di rilevamento della linea e il buzzer.
+* **Regolazione della Sensibilità**: Suggerimenti per regolare la sensibilità del modulo di rilevamento della linea per prestazioni ottimali.
+* **Dimostrazione Pratica**: Mostra la capacità del modulo di seguire una linea e fornire feedback sonoro quando rileva le linee.
 
 **Video**
 
@@ -29,8 +29,7 @@ This tutorial demonstrates how to use the ESP32 module with a line detection mod
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/BSPkTJqxnVc?si=d4wIHGeyoZjsSn2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_line_track`
-
 

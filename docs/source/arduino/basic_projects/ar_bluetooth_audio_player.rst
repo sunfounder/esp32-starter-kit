@@ -1,61 +1,63 @@
-
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato a nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _bluetooth_audio_player:
 
-7.3 Bluetooth Audio Player
+7.3 Lettore Audio Bluetooth
 ==============================
 
-The aim of the project is to provide a simple solution for playing audio from a Bluetooth-enabled 
-device using the built-in DAC of the ESP32.
+L'obiettivo del progetto è fornire una soluzione semplice per riprodurre audio 
+da un dispositivo con Bluetooth utilizzando il DAC integrato dell'ESP32.
 
-The project involves the use of the ``ESP32-A2DP`` library to receive audio data 
-from a Bluetooth-enabled device. The received audio data is then transmitted to the internal 
-DAC of the ESP32 using the I2S interface. The I2S interface is configured to operate in master mode, 
-transmit mode, and DAC built-in mode. The audio data is then played back through the speaker connected to the DAC.
+Il progetto prevede l'uso della libreria ``ESP32-A2DP`` per ricevere dati audio 
+da un dispositivo Bluetooth. I dati audio ricevuti vengono poi trasmessi al DAC 
+interno dell'ESP32 tramite l'interfaccia I2S. L'interfaccia I2S è configurata 
+per operare in modalità master, modalità trasmissione e modalità DAC integrata. 
+I dati audio vengono poi riprodotti attraverso l'altoparlante collegato al DAC.
 
-When using the internal DAC of the ESP32, it is important to note that the output voltage level is limited to 1.1V. 
-Therefore, it is recommended to use an external amplifier to boost the output voltage level to the desired level. 
-It is also important to ensure that the audio data is in the correct format and sample rate to prevent distortion 
-or noise during playback.
+Quando si utilizza il DAC interno dell'ESP32, è importante notare che il livello 
+di tensione in uscita è limitato a 1,1 V. Pertanto, si consiglia di utilizzare un 
+amplificatore esterno per aumentare il livello di tensione di uscita al livello 
+desiderato. È inoltre importante assicurarsi che i dati audio siano nel formato 
+corretto e con la frequenza di campionamento adeguata per evitare distorsioni o 
+rumori durante la riproduzione.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -71,52 +73,50 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Operating Steps**
+**Passaggi Operativi**
 
-#. Build the circuit.
+#. Costruisci il circuito.
 
-    As this is a mono amplifier, you can connect IO25 to the L or R pin of the audio amplifier module.
+    Poiché questo è un amplificatore mono, puoi collegare IO25 al pin L o R del modulo amplificatore audio.
 
-    The 10K resistor is used to reduce high-frequency noise and lower the audio volume. It forms an RC low-pass filter with the parasitic capacitance of the DAC and audio amplifier. This filter decreases the amplitude of high-frequency signals, effectively reducing high-frequency noise. So, adding the 10K resistor makes the music sound softer and eliminates unwanted high-frequency noise.
+    Il resistore da 10K viene utilizzato per ridurre il rumore ad alta frequenza e abbassare il volume audio. Forma un filtro passa-basso RC con la capacità parassita del DAC e dell'amplificatore audio. Questo filtro diminuisce l'ampiezza dei segnali ad alta frequenza, riducendo efficacemente il rumore ad alta frequenza. Quindi, aggiungere il resistore da 10K rende la musica più morbida ed elimina i rumori indesiderati ad alta frequenza.
 
-    If your SD card's music is already soft, you can remove or replace the resistor with a smaller value.
+    Se la musica della tua scheda SD è già morbida, puoi rimuovere o sostituire il resistore con un valore più basso.
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
-#. Open the code.
+#. Apri il codice.
 
-    * Open the ``7.3_bluetooth_audio_player.ino`` file under the path of ``esp32-starter-kit-main\c\codes\7.3_bluetooth_audio_player``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Apri il file ``7.3_bluetooth_audio_player.ino`` nel percorso ``esp32-starter-kit-main\c\codes\7.3_bluetooth_audio_player``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, clicca sul pulsante **Carica**.
     * :ref:`unknown_com_port`
-    * The ``ESP32-A2DP`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
+    * Qui viene utilizzata la libreria ``ESP32-A2DP``, fai riferimento a :ref:`install_lib_man` per un tutorial sull'installazione.
 
     .. warning::
 
-        If you are using an ESP32 development board version 3.0.0 or higher, you may encounter errors during the compilation process.
-        This issue is usually because the newer versions of the board no longer support the ``ESP32-A2DP`` library.
-        To properly run this example, it is recommended to downgrade your ESP32 board's firmware version to 2.0.17. 
-        After completing this example, upgrade back to the latest version.
+        Se stai usando una scheda di sviluppo ESP32 versione 3.0.0 o superiore, potresti riscontrare errori durante il processo di compilazione.
+        Questo problema è di solito dovuto al fatto che le versioni più recenti della scheda non supportano più la libreria ``ESP32-A2DP``.
+        Per eseguire correttamente questo esempio, si consiglia di eseguire il downgrade del firmware della tua scheda ESP32 alla versione 2.0.17. 
+        Dopo aver completato questo esempio, aggiorna nuovamente all'ultima versione.
 
         .. image:: ../../faq/img/version_2.0.17.png
-
-
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/7bb7d6dd-72d4-4529-bb42-033b38558347/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
-#. After selecting the correct board and port, click on the Upload button.
+#. Dopo aver selezionato la scheda e la porta corrette, clicca sul pulsante Carica.
 
-#. Once the code is uploaded successfully, turn on the Bluetooth-enabled device and search for available devices, then connect to the ``ESP32_Bluetooth``.
+#. Una volta che il codice è stato caricato con successo, accendi il dispositivo con Bluetooth e cerca i dispositivi disponibili, quindi connettiti a ``ESP32_Bluetooth``.
 
     .. image:: img/connect_bluetooth.png
 
-#. Play audio on the device and the audio should be played through the speaker connected to the ESP32.
+#. Riproduci audio sul dispositivo e l'audio dovrebbe essere riprodotto attraverso l'altoparlante collegato all'ESP32.
 
 
-**Code Explanation**
+**Spiegazione del Codice**
 
-#. The code starts by including the ``BluetoothA2DPSink.h`` library, which is used to receive audio data from the Bluetooth-enabled device. The ``BluetoothA2DPSink`` object is then created and configured with the I2S interface settings. 
+#. Il codice inizia includendo la libreria ``BluetoothA2DPSink.h``, che viene utilizzata per ricevere dati audio dal dispositivo Bluetooth. L'oggetto ``BluetoothA2DPSink`` viene poi creato e configurato con le impostazioni dell'interfaccia I2S.
 
     .. code-block:: arduino
 
@@ -125,18 +125,18 @@ You can also buy them separately from the links below.
         BluetoothA2DPSink a2dp_sink;
 
 
-#. In the setup function, the code initializes an ``i2s_config_t struct`` with the desired configuration for the I2S (Inter-IC Sound) interface. 
+#. Nella funzione setup, il codice inizializza una ``struct i2s_config_t`` con la configurazione desiderata per l'interfaccia I2S (Inter-IC Sound).
 
     .. code-block:: arduino
 
         void setup() {
         const i2s_config_t i2s_config = {
             .mode = (i2s_mode_t) (I2S_MODE_MASTER | I2S_MODE_TX | I2S_MODE_DAC_BUILT_IN),
-            .sample_rate = 44100, // corrected by info from bluetooth
-            .bits_per_sample = (i2s_bits_per_sample_t) 16, // the DAC module will only take the 8bits from MSB
+            .sample_rate = 44100, // corretto dall'informazione dal bluetooth
+            .bits_per_sample = (i2s_bits_per_sample_t) 16, // il modulo DAC prenderà solo gli 8 bit dal MSB
             .channel_format =  I2S_CHANNEL_FMT_RIGHT_LEFT,
             .communication_format = (i2s_comm_format_t)I2S_COMM_FORMAT_STAND_MSB,
-            .intr_alloc_flags = 0, // default interrupt priority
+            .intr_alloc_flags = 0, // priorità interrupt predefinita
             .dma_buf_count = 8,
             .dma_buf_len = 64,
             .use_apll = false
@@ -147,7 +147,7 @@ You can also buy them separately from the links below.
 
         }
 
-    * The I2S interface is used to transfer digital audio data between devices. 
-    * The configuration includes the ``I2S mode``, ``sample rate``, ``bits per sample``, ``channel format``, ``communication format``, ``interrupt allocation flags``, ``DMA buffer count``, ``DMA buffer length``, and whether to use the APLL (Audio PLL) or not.
-    * The ``i2s_config_t struct`` is then passed as an argument to the ``set_i2s_config`` function of the ``BluetoothA2DPSink`` object to configure the I2S interface for audio playback.
-    * The ``start`` function of the ``BluetoothA2DPSink`` object is called to start the Bluetooth audio sink and begin playing audio through the built-in DAC.
+    * L'interfaccia I2S viene utilizzata per trasferire dati audio digitali tra dispositivi.
+    * La configurazione include ``modalità I2S``, ``frequenza di campionamento``, ``bit per campione``, ``formato del canale``, ``formato di comunicazione``, ``flag di allocazione degli interrupt``, ``conteggio buffer DMA``, ``lunghezza buffer DMA`` e se usare o meno l'APLL (Audio PLL).
+    * La ``struct i2s_config_t`` viene poi passata come argomento alla funzione ``set_i2s_config`` dell'oggetto ``BluetoothA2DPSink`` per configurare l'interfaccia I2S per la riproduzione audio.
+    * La funzione ``start`` dell'oggetto ``BluetoothA2DPSink`` viene chiamata per avviare il sink audio Bluetooth e iniziare a riprodurre audio tramite il DAC integrato.

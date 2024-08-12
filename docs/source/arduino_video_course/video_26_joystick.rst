@@ -1,26 +1,26 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 26: Using Joystick
+Video 26: Uso del Joystick
 ====================================================
 
-Learn how to wire a joystick to an ESP32 microcontroller, covering detailed explanations, wiring configurations, code implementation, and testing.
+Scopri come collegare un joystick a un microcontrollore ESP32, con spiegazioni dettagliate, configurazioni di cablaggio, implementazione del codice e test.
 
-* **Joystick components**: Understand the components of the joystick, including variable resistors and switches.
-* **Wiring configuration**: Follow step-by-step instructions on how to wire the joystick to the ESP32 microcontroller, covering connections for analog pins, switches, power, and ground.
-* **Code implementation**: Learn how to write and upload code to the ESP32 microcontroller using the Arduino IDE, including code for reading joystick values and taking actions based on those values.
-* **Testing and troubleshooting**: Discover how to test the joystick setup using the serial monitor and troubleshoot common issues, such as incorrect wiring or code errors.
+* **Componenti del joystick**: Comprendi i componenti del joystick, inclusi i resistori variabili e gli interruttori.
+* **Configurazione del cablaggio**: Segui istruzioni passo passo su come collegare il joystick al microcontrollore ESP32, coprendo le connessioni per i pin analogici, gli interruttori, l'alimentazione e la massa.
+* **Implementazione del codice**: Impara a scrivere e caricare il codice sul microcontrollore ESP32 utilizzando l'Arduino IDE, incluso il codice per leggere i valori del joystick e agire in base a tali valori.
+* **Test e risoluzione dei problemi**: Scopri come testare l'installazione del joystick utilizzando il monitor seriale e risolvere problemi comuni, come cablaggi errati o errori nel codice.
 
 **Video**
 
@@ -28,8 +28,7 @@ Learn how to wire a joystick to an ESP32 microcontroller, covering detailed expl
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/ViDQ11bsvSw?si=CbfzwFRY6bbYub9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_joystick`
-
 

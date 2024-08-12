@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato a nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_dice:
 
-6.4 Digital Dice
+6.4 Dado Digitale
 =============================
 
-This project builds upon the :ref:`py_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Questo progetto si basa sul progetto :ref:`py_7_segment`, aggiungendo un pulsante per controllare il numero visualizzato sul display a sette segmenti.
 
-In this project, a random number is generated and displayed on the seven-segment display to simulate a dice roll. When the button is pressed, a stable number (randomly selected from 1 to 6) is displayed on the seven-segment display. Pressing the button again will initiate the simulation of a dice roll, generating random numbers as before. This cycle continues each time the button is pressed.
+In questo progetto, viene generato un numero casuale e visualizzato sul display a sette segmenti per simulare il lancio di un dado. Quando il pulsante viene premuto, viene visualizzato un numero stabile (selezionato casualmente tra 1 e 6) sul display a sette segmenti. Premendo nuovamente il pulsante, si avvia la simulazione del lancio del dado, generando numeri casuali come in precedenza. Questo ciclo continua ogni volta che il pulsante viene premuto.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -64,25 +64,25 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_6.6_electronic_dice.png
 
-This project builds upon the :ref:`ar_7_segment` project by adding a button to control the digit displayed on the seven-segment display.
+Questo progetto si basa sul progetto :ref:`ar_7_segment`, aggiungendo un pulsante per controllare il numero visualizzato sul display a sette segmenti.
 
-The button is directly connected to IO13 without an external pull-up or pull-down resistor because IO13 has an internal pull-up resistor of 47K, eliminating the need for an additional external resistor.
+Il pulsante è direttamente collegato a IO13 senza un resistore di pull-up o pull-down esterno perché IO13 ha un resistore di pull-up interno da 47K, eliminando la necessità di un resistore esterno aggiuntivo.
 
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/6.6_DICE_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``6.4_digital_dice.ino`` file under the path of ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Apri il file ``6.4_digital_dice.ino`` nel percorso ``esp32-starter-kit-main\c\codes\6.4_digital_dice``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, clicca sul pulsante **Carica**.
     * :ref:`unknown_com_port`
     
     
@@ -90,7 +90,6 @@ The button is directly connected to IO13 without an external pull-up or pull-dow
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ad904f48-cd24-49ce-ad92-91b1fb76364d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-This project is based on :ref:`ar_7_segment` with a button to start/pause the scrolling display on the 7-segment Display.
+Questo progetto si basa su :ref:`ar_7_segment` con un pulsante per avviare/fermare la visualizzazione a scorrimento sul display a 7 segmenti.
 
-When the button is pressed, the 7-segment display scrolls through the numbers 1-6, and when the button is released, it displays a random number.
-
+Quando il pulsante viene premuto, il display a 7 segmenti scorre i numeri da 1 a 6, e quando il pulsante viene rilasciato, viene visualizzato un numero casuale.

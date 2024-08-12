@@ -1,60 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e giveaway festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_protect_heart:
 
-2.19 GAME -  Protect Your Heart
-=====================================
+2.19 GIOCO - Proteggi il tuo Cuore
+=========================================
 
-In this project, let's make a game that tests reaction speed.
+In questo progetto, realizziamo un gioco che testa la velocità di reazione.
 
-In the stage, there is a heart protected in a rectangular box, and there are arrows flying towards this heart from any position on the stage. The color of the arrow will alternate between black and white at random and the arrow will fly faster and faster.
+Sul palco, c'è un cuore protetto in una scatola rettangolare, e ci sono frecce che volano verso questo cuore da qualsiasi posizione sul palco. Il colore della freccia alterna casualmente tra nero e bianco e la freccia volerà sempre più velocemente.
 
-If the color of the rectangular box and the arrow color are the same, the arrow is blocked outside and level is added 1; if the color of both is not the same, the arrow will shoot through the heart and the game is over.
+Se il colore della scatola rettangolare e il colore della freccia sono gli stessi, la freccia viene bloccata all'esterno e il livello aumenta di 1; se i colori sono diversi, la freccia attraverserà il cuore e il gioco è finito.
 
-Here the color of the rectangle box is controlled by the Line Tracking module. When the module is placed on a black surface (a surface that is reflective), the color of the rectangle box is black, otherwise it is white.
+Qui il colore della scatola rettangolare è controllato dal modulo Line Tracking. Quando il modulo viene posizionato su una superficie nera (una superficie riflettente), il colore della scatola rettangolare è nero, altrimenti è bianco.
 
-So you need to decide whether to put the Line Tracking module on a white surface or a black surface according to the arrow color.
+Quindi devi decidere se posizionare il modulo Line Tracking su una superficie bianca o su una superficie nera in base al colore della freccia.
 
 .. image:: img/22_heart.png
 
-Required Components
----------------------
+Componenti Necessari
+--------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - OGGETTI IN QUESTO KIT
         - LINK
-    *   - ESP32 Starter Kit
+    *   - Kit di avvio ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AL COMPONENTE
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -65,136 +65,134 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_line_track`
         - |link_line_track_buy|
 
-Build the Circuit
------------------------
+Costruisci il Circuito
+-----------------------------
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+Questo è un modulo Line Tracking digitale, quando rileva una linea nera, emette 1; quando rileva una linea bianca, emette un valore di 0. Inoltre, puoi regolare la sua distanza di rilevamento tramite il potenziometro sul modulo.
 
-Now build the circuit according to the diagram below.
+Ora costruisci il circuito secondo lo schema sotto.
 
 .. image:: img/circuit/20_protect_heart_bb.png
 
 .. note::
 
-    Before starting the project, you need to adjust the sensitivity of the module.
+    Prima di iniziare il progetto, devi regolare la sensibilità del modulo.
 
-    Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+    Collega i cavi secondo lo schema sopra, quindi alimenta la scheda R3 (inserendo direttamente il cavo USB o il cavo con pulsante della batteria da 9V), senza caricare il codice.
 
-    Now stick a black electrical tape on the desktop, put the Line Track module at a height of 2cm from the desktop.
+    Ora incolla un nastro elettrico nero sulla scrivania, posiziona il modulo Line Track a un'altezza di 2 cm dalla scrivania.
 
-    With the sensor facing down, observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
+    Con il sensore rivolto verso il basso, osserva il LED di segnalazione sul modulo per assicurarti che si accenda sul tavolo bianco e si spenga sul nastro nero.
 
-    If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+    In caso contrario, è necessario regolare il potenziometro sul modulo in modo che possa ottenere l'effetto sopra descritto.
 
+Programmazione
+-------------------
 
-Programming
-------------------
+Qui dobbiamo creare 3 sprite: **Cuore**, **Scatola Rettangolare** e **Freccia1**.
 
-Here we need to create 3 sprites, **Heart**, **Square Box** and **Arrow1**.
+* **Cuore**: resta fermo al centro del palco, se viene toccato dallo sprite **Freccia1**, il gioco è finito.
+* **Scatola Rettangolare**: Ha due tipi di costumi, nero e bianco, e cambierà costume in base al valore del modulo Line Tracking.
+* **Freccia**: vola verso il centro del palco da qualsiasi posizione in nero/bianco; se il suo colore corrisponde al colore dello sprite **Scatola Rettangolare**, viene bloccato e ri-vola verso il centro del palco da una posizione casuale; se il suo colore non corrisponde al colore dello sprite **Scatola Rettangolare**, passa attraverso lo sprite **Cuore** e il gioco è finito.
 
-* **Heart**: stops in the middle of the stage, if touched by **Arrow1** sprite, the game is over.
-* **Square Box**: There are two types of costumes, black and white, and will switch costumes according to the value of Line Tracking module.
-* **Arrow**: flies towards the middle of the stage from any position in black/white; if its color matches the color of the **Square Box** sprite, it is blocked and re-flies towards the middle of the stage from a random position; if its color does not match the color of the **Square Box** sprite, it passes through the **Heart** sprite and the game is over.
+**1. Aggiungi lo sprite Scatola Rettangolare**
 
-**1. Add Square Box sprite**
+Poiché lo sprite Freccia1 e lo sprite Scatola Rettangolare hanno entrambi costumi bianchi, per farli apparire sul palco, ora riempi lo sfondo con un colore che può essere qualsiasi colore tranne nero, bianco e rosso.
 
-Since the Arrow1 and Square Box sprite both have white costumes, in order for them to be displayed on the stage, now fill the background with a color that can be any color except black, white, and red.
-
-* Click on **Backdrop1** to go to its **Backdrops** page.
-* Select the color you want to fill.
-* Use the **Rectangle** tool to draw a rectangle the same size as the drawing board.
+* Clicca su **Backdrop1** per andare alla sua pagina **Backdrops**.
+* Seleziona il colore che vuoi riempire.
+* Usa lo strumento **Rettangolo** per disegnare un rettangolo delle stesse dimensioni della tavola da disegno.
 
 .. image:: img/22_heart0.png
 
-Delete the default sprite, use the **Choose a Sprite** button to add the **Square Box** sprite, and set its x and y to (0, 0).
+Elimina lo sprite predefinito, usa il pulsante **Scegli uno Sprite** per aggiungere lo sprite **Scatola Rettangolare** e imposta le sue coordinate x e y su (0, 0).
 
 .. image:: img/22_heart1.png
 
-Go to the **Square Box** sprite's **Costumes** page and set the black and white costumes.
+Vai alla pagina **Costumi** dello sprite **Scatola Rettangolare** e imposta i costumi nero e bianco.
 
-* Click the selection tool
-* Select the rectangle on the canvas
-* Select the fill color as black
-* and name the costume **Black**
+* Clicca sullo strumento selezione
+* Seleziona il rettangolo sulla tela
+* Seleziona il colore di riempimento come nero
+* e nomina il costume **Nero**
 
 .. image:: img/22_heart2.png
 
-Select the second costume, set the fill color to white, name it White, and delete the rest of the costume.
+Seleziona il secondo costume, imposta il colore di riempimento su bianco, nomina il costume **Bianco** ed elimina il resto dei costumi.
 
 .. image:: img/22_heart3.png
 
-**2. Add Heart sprite**
+**2. Aggiungi lo sprite Cuore**
 
-Also add a **Heart** sprite, set its position to (0, 0), and shrink its size so that it appears to be located inside the Square Box.
+Aggiungi anche uno sprite **Cuore**, imposta la sua posizione su (0, 0) e riduci le sue dimensioni in modo che appaia situato all'interno della Scatola Rettangolare.
 
 .. image:: img/22_heart5.png
 
-On the **Costumes** page, adjust the heart purple costume so that it appears to be broken.
+Nella pagina **Costumi**, modifica il costume viola del cuore in modo che appaia spezzato.
 
 .. image:: img/22_heart6.png
 
-**3. Add Arrow1 sprite**
+**3. Aggiungi lo sprite Freccia1**
 
-Add an **Arrow1** sprite.
+Aggiungi uno sprite **Freccia1**.
 
 .. image:: img/22_heart7.png
 
-On the **Costumes** page, keep and copy the rightward facing costume and set its color to black and white.
+Nella pagina **Costumi**, conserva e copia il costume rivolto verso destra e imposta il suo colore su nero e bianco.
 
 .. image:: img/22_heart8.png
 
+**4. Script per lo sprite Scatola Rettangolare**
 
-**4. Scripting for Square Box sprite**
+Torna alla pagina **Blocks** e scrivi lo script per lo sprite **Scatola Rettangolare**.
 
-Go back to the **Blocks** page and script **Square Box** sprite.
-
-* So when the value of the digital pin 2 (Line Following module) is 1 (black line detected), then switch the costume to **Black**.
-* Otherwise toggle the costume to **White**.
+* Quindi, quando il valore del pin digitale 2 (modulo Line Tracking) è 1 (linea nera rilevata), cambia il costume in **Nero**.
+* Altrimenti, cambia il costume in **Bianco**.
 
 .. image:: img/22_heart4.png
 
 
-**5. Scripting for Heart sprite**
+**5. Script per lo sprite Cuore**
 
-**Heart** sprite is protected inside **Square Box**, and by default is a red costume. When the Arrow1 sprite is touched, the game ends.
+Lo sprite **Cuore** è protetto all'interno della **Scatola Rettangolare** e di default ha un costume rosso. Quando lo sprite Freccia1 viene toccato, il gioco finisce.
 
 .. image:: img/22_heart9.png
 
-**6. Scripting for Arrow1 sprite**
+**6. Script per lo sprite Freccia1**
 
-Make the **Arrow1** sprite hide and create a clone when the green flag is clicked.
+Fai nascondere lo sprite **Freccia1** e crea un clone quando viene cliccata la bandiera verde.
 
 .. image:: img/22_heart10.png
 
-Create an [init] block to initialize the **Arrow1** sprite's position, orientation and color.
+Crea un blocco [init] per inizializzare la posizione, l'orientamento e il colore dello sprite **Freccia1**.
 
-It appears at a random location, and if the distance between it and the **Heart** sprite is less than 200, it moves outward until the distance is greater than 200.
+Appare in una posizione casuale, e se la distanza tra esso e lo sprite **Cuore** è inferiore a 200, si muove verso l'esterno fino a quando la distanza non supera i 200.
 
 .. image:: img/22_heart11.png
 
-Set its direction to face the **Heart** sprite.
+Imposta la sua direzione per affrontare lo sprite **Cuore**.
 
 .. image:: img/22_heart12.png
 
-Make its color alternate randomly between black/white.
+Fai in modo che il suo colore alterni casualmente tra nero e bianco.
 
-* Variable color is 0, toggle costume to **White**.
-* Variable color is 1, toggles the outfit to **Black**.
+* La variabile color è 0, cambia il costume in **Bianco**.
+* La variabile color è 1, cambia il costume in **Nero**.
 
 .. image:: img/22_heart14.png
 
-Now let it start moving, it will move faster as the value of the variable **level** increases.
+Ora fai iniziare il movimento, si muoverà più velocemente man mano che il valore della variabile **level** aumenta.
 
 .. image:: img/22_heart13.png
 
-Now set its collision effect with the **Square Box** sprite.
+Ora imposta il suo effetto di collisione con lo sprite **Scatola Rettangolare**.
 
-* If the **Arrow1** sprite and the **Square Box** sprite have the same color (which will be modified according to the value of the Line Track module), either black or white, a new clone is created and the game continues.
-* If their colors do not match, the **Arrow1** sprite continues to move and the game ends when it hits the **Heart** sprite.
+* Se lo sprite **Freccia1** e lo sprite **Scatola Rettangolare** hanno lo stesso colore (che sarà modificato in base al valore del modulo Line Track), sia nero che bianco, viene creato un nuovo clone e il gioco continua.
+* Se i loro colori non corrispondono, lo sprite **Freccia1** continua a muoversi e il gioco finisce quando colpisce lo sprite **Cuore**.
 
 .. image:: img/22_heart15.png
 
 .. note::
-    The two [touch color()] blocks need to pick up the black/white costumes of Square Box separately.
+    I due blocchi [touch color()] devono rilevare i costumi neri/bianchi di Square Box separatamente.
 
     .. image:: img/22_heart16.png

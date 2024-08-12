@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_guess_number:
 
-6.7 Guess Number
-==================
-Are you feeling lucky? Want to test your intuition and see if you can guess the right number? Then look no further than the Guess Number game! 
+6.7 Indovina il Numero
+===============================
+Ti senti fortunato? Vuoi mettere alla prova la tua intuizione e vedere se riesci a indovinare il numero giusto? Allora il gioco "Indovina il Numero" fa al caso tuo! 
 
-With this project, you can play a fun and exciting game of chance.
+Con questo progetto, puoi giocare a un divertente e appassionante gioco di fortuna.
 
-Using an IR remote control, players input numbers between 0 and 99 to try and guess the randomly generated lucky point number. 
-The system displays the player's input number on an LCD screen, along with upper and lower limit tips to help guide the 
-player towards the right answer. With every guess, players get closer to the lucky point number, 
-until finally, someone hits the jackpot and wins the game!
+Utilizzando un telecomando IR, i giocatori inseriscono numeri compresi tra 0 e 99 per cercare di indovinare il numero fortunato generato casualmente. 
+Il sistema mostra il numero inserito dal giocatore su uno schermo LCD, insieme a suggerimenti sul limite superiore e inferiore per aiutare 
+il giocatore a trovare la risposta giusta. Con ogni tentativo, i giocatori si avvicinano sempre di più al numero fortunato, 
+fino a quando finalmente qualcuno colpisce il jackpot e vince il gioco!
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -64,29 +64,28 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_6.7_guess_number.png
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/6.7_guess_receiver_bb.png
     :width: 800
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``6.7_guess_number.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.7_guess_number`` directly.
-    * The ``LiquidCrystal_I2C`` and  ``IRremoteESP8266`` libraries are used here, refer to :ref:`install_lib_man` for a tutorial to install.
+    * Puoi aprire direttamente il file ``6.7_guess_number.ino`` nel percorso ``esp32-starter-kit-main\c\codes\6.7_guess_number``.
+    * Le librerie ``LiquidCrystal_I2C`` e ``IRremoteESP8266`` sono utilizzate qui, fai riferimento a :ref:`install_lib_man` per un tutorial sull'installazione.
 
 .. warning::
 
-    If you are using an ESP32 development board version 3.0.0 or higher, you may encounter errors during the compilation process.
-    This issue is usually because the newer versions of the board no longer support the ``IRremoteESP8266`` library.
-    To properly run this example, it is recommended to downgrade your ESP32 board's firmware version to 2.0.17. 
-    After completing this example, upgrade back to the latest version.
-
+    Se stai utilizzando una scheda di sviluppo ESP32 versione 3.0.0 o superiore, potresti incontrare errori durante il processo di compilazione.
+    Questo problema è generalmente dovuto al fatto che le versioni più recenti della scheda non supportano più la libreria ``IRremoteESP8266``.
+    Per eseguire correttamente questo esempio, si consiglia di effettuare il downgrade del firmware della tua scheda ESP32 alla versione 2.0.17. 
+    Dopo aver completato questo esempio, aggiorna nuovamente all'ultima versione.
 
     .. image:: ../../faq/img/version_2.0.17.png
 
@@ -96,62 +95,62 @@ You can also buy them separately from the links below.
     
 
     
-* After the code is successfully uploaded, press any number button on the remote control to start the game.
-* Input a number using the number buttons on the remote control. To input a single digit, you need to press the **cycle** key to confirm.
-* The system will show the input number and the upper and lower limit tips on the LCD screen.
-* Keep guessing until you correctly guess the lucky point number.
-* After a successful guess, the system will show a success message and generate a new lucky point number.
+* Dopo che il codice è stato caricato con successo, premi un qualsiasi tasto numerico sul telecomando per avviare il gioco.
+* Inserisci un numero utilizzando i tasti numerici sul telecomando. Per inserire una singola cifra, devi premere il tasto **ciclo** per confermare.
+* Il sistema mostrerà il numero inserito e i suggerimenti sul limite superiore e inferiore sullo schermo LCD.
+* Continua a indovinare finché non indovini correttamente il numero fortunato.
+* Dopo un indovinello riuscito, il sistema mostrerà un messaggio di successo e genererà un nuovo numero fortunato.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Se il codice e il cablaggio sono corretti, ma l'LCD non visualizza ancora alcun contenuto, puoi regolare il potenziometro sul retro per aumentare il contrasto.
 
 
-**How it works?**
+**Come funziona?**
 
-#. In the ``setup()`` function, the I2C LCD screen and IR receiver are initialized. Then call the ``initNewValue()`` function to generate a new random lucky number, and a welcome message is displayed on the LCD screen.
+#. Nella funzione ``setup()``, vengono inizializzati lo schermo LCD I2C e il ricevitore IR. Quindi viene chiamata la funzione ``initNewValue()`` per generare un nuovo numero fortunato casuale, e un messaggio di benvenuto viene visualizzato sullo schermo LCD.
 
     .. code-block:: arduino
 
         void setup() {
-            // Initialize the LCD screen
+            // Inizializza lo schermo LCD
             lcd.init();
             lcd.backlight();
 
-            // Start the serial communication
+            // Avvia la comunicazione seriale
             Serial.begin(9600);
 
-            // Enable the IR receiver
+            // Abilita il ricevitore IR
             irrecv.enableIRIn();
 
-            // Initialize a new lucky point value
+            // Inizializza un nuovo valore fortunato
             initNewValue();
         }
 
-#. In the ``loop`` function, the code waits for a signal from the IR receiver. When a signal is received, the ``decodeKeyValue`` function is called to decode the signal and get the corresponding button value.
+#. Nella funzione ``loop``, il codice attende un segnale dal ricevitore IR. Quando viene ricevuto un segnale, viene chiamata la funzione ``decodeKeyValue`` per decodificare il segnale e ottenere il valore del pulsante corrispondente.
 
     .. code-block:: arduino
 
         void loop() {
-        // If a signal is received from the IR receiver
+        // Se viene ricevuto un segnale dal ricevitore IR
         if (irrecv.decode(&results)) {
             bool result = 0;
             String num = decodeKeyValue(results.value);
 
-            // If the POWER button is pressed
+            // Se viene premuto il tasto POWER
             if (num == "POWER") {
-                initNewValue(); // Initialize a new lucky point value
+                initNewValue(); // Inizializza un nuovo valore fortunato
             }
 
-            // If the CYCLE button is pressed
+            // Se viene premuto il tasto CYCLE
             else if (num == "CYCLE") {
-                result = detectPoint(); // Detect the input number
-                lcdShowInput(result); // Show the result on the LCD screen
+                result = detectPoint(); // Rileva il numero inserito
+                lcdShowInput(result); // Mostra il risultato sullo schermo LCD
             }
 
-            // If a number button (0-9) is pressed, 
-            //add the digit to the input number 
-            //and detect the number if it is greater than or equal to 10
+            // Se viene premuto un tasto numerico (0-9), 
+            //aggiungi la cifra al numero inserito 
+            //e rileva il numero se è maggiore o uguale a 10
             else if (num >= "0" && num <= "9") {
                 count = count * 10;
                 count += num.toInt();
@@ -164,7 +163,7 @@ You can also buy them separately from the links below.
         }
         }
 
-    * Depending on the button value, the appropriate function is called. If a number button is pressed, the ``count`` variable is updated, and the ``detectPoint`` function is called to detect if the input number is correct. The ``lcdShowInput`` function is called to show the input number and the upper and lower limit tips on the LCD screen.
-    * If the ``POWER`` button is pressed, the ``initNewValue`` function is called to generate a new lucky point number and show the welcome message on the LCD screen.
-    * If the ``CYCLE`` button is pressed, the ``detectPoint`` function is called to detect if the input number is correct. The ``lcdShowInput`` function is called to show the input number and the upper and lower limit tips on the LCD screen.
+    * A seconda del valore del pulsante, viene chiamata la funzione appropriata. Se viene premuto un tasto numerico, la variabile ``count`` viene aggiornata, e viene chiamata la funzione ``detectPoint`` per rilevare se il numero inserito è corretto. La funzione ``lcdShowInput`` viene chiamata per mostrare il numero inserito e i suggerimenti sul limite superiore e inferiore sullo schermo LCD.
+    * Se viene premuto il tasto ``POWER``, viene chiamata la funzione ``initNewValue`` per generare un nuovo numero fortunato e mostrare il messaggio di benvenuto sullo schermo LCD.
+    * Se viene premuto il tasto ``CYCLE``, viene chiamata la funzione ``detectPoint`` per rilevare se il numero inserito è corretto. La funzione ``lcdShowInput`` viene chiamata per mostrare il numero inserito e i suggerimenti sul limite superiore e inferiore sullo schermo LCD.
 

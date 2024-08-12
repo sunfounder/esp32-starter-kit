@@ -1,50 +1,50 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché Unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperti**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa ai giveaway e alle promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_tilt:
 
-5.2 Tilt It！
+5.2 Inclinazione！
 ==========================
-The tilt switch is a simple yet effective 2-pin device that contains a metal ball in its center. When the switch is in an upright position, the two pins are electrically connected, allowing current to flow through. However, when the switch is tilted or tilted at a certain angle, the metal ball moves and breaks the electrical connection between the pins.
+L'interruttore a inclinazione è un dispositivo semplice ma efficace a 2 pin che contiene una sfera metallica al centro. Quando l'interruttore è in posizione verticale, i due pin sono elettricamente collegati, consentendo il flusso di corrente. Tuttavia, quando l'interruttore è inclinato o inclinato a un certo angolo, la sfera metallica si sposta e interrompe la connessione elettrica tra i pin.
 
-In this project, we will utilize the tilt switch to control the illumination of an LED. By positioning the switch in a way that triggers the tilt action, we can toggle the LED on and off based on the switch's orientation. 
+In questo progetto, utilizzeremo l'interruttore a inclinazione per controllare l'illuminazione di un LED. Posizionando l'interruttore in modo da attivare l'azione di inclinazione, possiamo accendere e spegnere il LED in base all'orientamento dell'interruttore.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -61,95 +61,85 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt`
         - \-
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Per Ingresso
             - IO14, IO25, I35, I34, I39, I36, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Per Uscita
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
     
-* **Conditional Usage Pins (Input)**
+* **Pin a Uso Condizionale (Ingresso)**
 
-    The following pins have built-in pull-up or pull-down resistors, so external resistors are not required when **using them as input pins**:
-
+    I seguenti pin hanno resistori pull-up o pull-down integrati, quindi non sono necessari resistori esterni quando **utilizzati come pin di ingresso**:
 
     .. list-table::
         :widths: 5 15
         :header-rows: 1
 
-        *   - Conditional Usage Pins
-            - Description
+        *   - Pin a Uso Condizionale
+            - Descrizione
         *   - IO13, IO15, IO2, IO4
-            - Pulling up with a 47K resistor defaults the value to high.
+            - Pull-up con resistore da 47K, valore predefinito su alto.
         *   - IO27, IO26, IO33
-            - Pulling up with a 4.7K resistor defaults the value to high.
+            - Pull-up con resistore da 4.7K, valore predefinito su alto.
         *   - IO32
-            - Pulling down with a 1K resistor defaults the value to low.
+            - Pull-down con resistore da 1K, valore predefinito su basso.
 
-* **Strapping Pins (Input)**
+* **Pin di Strapping (Ingresso)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    I pin di strapping sono un insieme speciale di pin utilizzati per determinare modalità di avvio specifiche durante l'avvio del dispositivo 
+    (cioè, reset all'accensione).
 
-    
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
-            - IO5, IO0, IO2, IO12, IO15 
+        *   - Pin di Strapping
+            - IO5, IO0, IO2, IO12, IO15
     
 
-    
+    Generalmente, **non è consigliato utilizzarli come pin di ingresso**. Se desideri utilizzare questi pin, considera l'impatto potenziale sul processo di avvio. Per maggiori dettagli, fai riferimento alla sezione :ref:`esp32_strapping`.
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
-
-
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.2_tilt.png
 
-When the tilt switch is in an upright position, IO14 will be set to high, resulting in the LED being lit. Conversely, when the tilt switch is tilted, IO14 will be set to low, causing the LED to turn off.
+Quando l'interruttore a inclinazione è in posizione verticale, IO14 sarà impostato su alto, facendo accendere il LED. Al contrario, quando l'interruttore è inclinato, IO14 sarà impostato su basso, facendo spegnere il LED.
 
-The purpose of the 10K resistor is to maintain a stable low state for IO14 when the tilt switch is in a tilted position.
+Lo scopo del resistore da 10K è di mantenere uno stato basso stabile per IO14 quando l'interruttore a inclinazione è in posizione inclinata.
 
-
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/5.2_tilt_switch_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.2_tilt_switch.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Apri il file ``5.2_tilt_switch.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Successivamente, fai clic su "Esegui lo script corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra.
 
 .. code-block:: python
 
     import machine
     import time
 
-    switch = machine.Pin(14, machine.Pin.IN) # Tilt switch pin
-    led = machine.Pin(26, machine.Pin.OUT) # LED pin
+    switch = machine.Pin(14, machine.Pin.IN) # Pin interruttore a inclinazione
+    led = machine.Pin(26, machine.Pin.OUT) # Pin LED
 
     while True:
-        # Check if the switch is tilted by reading its value
+        # Verifica se l'interruttore è inclinato leggendo il suo valore
         if switch.value() == 1:
-            # Turn on the LED by setting its value to 1
+            # Accendi il LED impostando il suo valore su 1
             led.value(1)
         else:
-            # Turn off the LED
+            # Spegni il LED
             led.value(0)
 
-When the script is running, the LED will be turned on when the switch is upright, and turned off when the switch is tilted.
-
-
+Quando lo script è in esecuzione, il LED si accenderà quando l'interruttore è in posizione verticale e si spegnerà quando l'interruttore è inclinato.

@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché Unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperti**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa ai giveaway e alle promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_reversing_aid:
 
-6.4 Reversing Aid
-======================
+6.4 Ausilio al Parcheggio
+================================
 
-Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
+Immagina questo: sei in auto, pronto a fare retromarcia per entrare in un parcheggio stretto. Con il nostro progetto, avrai un modulo ultrasonico montato sul retro del veicolo che fungerà da occhio digitale. Quando innesti la retromarcia, il modulo si attiva emettendo impulsi ultrasonici che rimbalzano sugli ostacoli dietro di te.
 
-The magic happens when these pulses return to the module. It swiftly calculates the distance between your car and the objects, transforming this data into real-time visual feedback displayed on a vibrant LCD screen. You'll witness dynamic, color-coded indicators depicting the proximity of obstacles, ensuring you have a crystal-clear understanding of the surrounding environment.
+La magia avviene quando questi impulsi tornano al modulo. Esso calcola rapidamente la distanza tra la tua auto e gli oggetti circostanti, trasformando questi dati in un feedback visivo in tempo reale visualizzato su un vivace schermo LCD. Vedrai indicatori dinamici a colori che rappresentano la vicinanza degli ostacoli, garantendo una comprensione chiara dell'ambiente circostante.
 
-But we didn't stop there. To immerse you further into this driving experience, we incorporated a lively buzzer. As your car inches closer to an obstacle, the buzzer's tempo intensifies, creating an auditory symphony of warnings. It's like having a personal orchestra guiding you through the complexities of reverse parking.
+Ma non ci siamo fermati qui. Per immergerti ulteriormente nell'esperienza di guida, abbiamo incorporato un vivace cicalino. Mentre la tua auto si avvicina a un ostacolo, il ritmo del cicalino aumenta, creando una sinfonia uditiva di avvertimenti. È come avere un'orchestra personale che ti guida attraverso le complessità del parcheggio in retromarcia.
 
-This innovative project combines cutting-edge technology with an interactive user interface, making your reversing experience safe and stress-free. With the ultrasonic module, LCD display, and lively buzzer working harmoniously, you'll feel empowered and confident while maneuvering in tight spaces, leaving you free to focus on the joy of driving.
+Questo progetto innovativo combina tecnologia all'avanguardia con un'interfaccia utente interattiva, rendendo la tua esperienza di retromarcia sicura e senza stress. Con il modulo ultrasonico, il display LCD e il vivace cicalino che lavorano in armonia, ti sentirai sicuro e a tuo agio mentre manovri in spazi ristretti, permettendoti di concentrarti sul piacere della guida.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -70,110 +70,110 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_6.4_reversing_aid.png
     :width: 800
     :align: center
 
 
-The ultrasonic sensor in the project emits high-frequency sound waves and measures the time it takes for the waves to bounce back after hitting an object. By analyzing this data, the distance between the sensor and the object can be calculated. To provide a warning when the object is too close, a buzzer is used to produce an audible signal. Additionally, the measured distance is displayed on an LCD screen for easy visualization.
+Il sensore ultrasonico nel progetto emette onde sonore ad alta frequenza e misura il tempo impiegato dalle onde per rimbalzare dopo aver colpito un oggetto. Analizzando questi dati, è possibile calcolare la distanza tra il sensore e l'oggetto. Per fornire un avviso quando l'oggetto è troppo vicino, viene utilizzato un cicalino per produrre un segnale acustico. Inoltre, la distanza misurata viene visualizzata su uno schermo LCD per una facile visualizzazione.
 
-**Wiring**
+**Cablatura**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
     :width: 800
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``6.4_reversing_aid.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Apri il file ``6.4_reversing_aid.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Successivamente, fai clic su "Esegui lo script corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
 
 .. code-block:: python
 
-    # Import required libraries
+    # Importa le librerie necessarie
     from machine import Pin
     import time
     from lcd1602 import LCD
     import _thread
 
-    # Initialize the buzzer
+    # Inizializza il cicalino
     buzzer = Pin(14, Pin.OUT)
 
-    # Initialize the ultrasonic module
+    # Inizializza il modulo ultrasonico
     TRIG = Pin(26, Pin.OUT)
     ECHO = Pin(25, Pin.IN)
 
-    # Initialize the LCD1602 display
+    # Inizializza il display LCD1602
     lcd = LCD()
 
     dis = 100
 
-    # Calculate the distance
+    # Calcola la distanza
     def distance():
-        # Ensure trigger is off initially
+        # Assicurati che il trigger sia inizialmente spento
         TRIG.off()
-        time.sleep_us(2)  # Wait for 2 microseconds
+        time.sleep_us(2)  # Attendi 2 microsecondi
 
-        # Send a 10-microsecond pulse to the trigger pin
+        # Invia un impulso di 10 microsecondi al pin di trigger
         TRIG.on()
         time.sleep_us(10)
         TRIG.off()
 
-        # Wait for the echo pin to go high
+        # Attendi che il pin di echo si attivi
         while not ECHO.value():
             pass
 
-        # Record the time when the echo pin goes high
+        # Registra il tempo in cui il pin di echo si attiva
         time1 = time.ticks_us()
 
-        # Wait for the echo pin to go low
+        # Attendi che il pin di echo si disattivi
         while ECHO.value():
             pass
 
-        # Record the time when the echo pin goes low
+        # Registra il tempo in cui il pin di echo si disattiva
         time2 = time.ticks_us()
 
-        # Calculate the time difference between the two recorded times
+        # Calcola la differenza di tempo tra i due tempi registrati
         during = time.ticks_diff(time2, time1)
 
-        # Calculate and return the distance (in cm) using the speed of sound (340 m/s)
+        # Calcola e restituisci la distanza (in cm) utilizzando la velocità del suono (340 m/s)
         return during * 340 / 2 / 10000
 
-    # Thread to continuously update the ultrasonic sensor reading
+    # Thread per aggiornare continuamente la lettura del sensore ultrasonico
     def ultrasonic_thread():
         global dis
         while True:
             dis = distance()
             
-            # Clear the LCD screen
+            # Pulisci lo schermo LCD
             lcd.clear()
             
-            # Display the distance
+            # Visualizza la distanza
             lcd.write(0, 0, 'Dis: %.2f cm' % dis)
             time.sleep(0.5)
 
-    # Start the ultrasonic sensor reading thread
+    # Avvia il thread di lettura del sensore ultrasonico
     _thread.start_new_thread(ultrasonic_thread, ())
 
-    # Beep function for the buzzer
+    # Funzione per emettere un beep con il cicalino
     def beep():
         buzzer.value(1)
         time.sleep(0.1)
         buzzer.value(0)
         time.sleep(0.1)
 
-    # Initialize the intervals variable
+    # Inizializza la variabile degli intervalli
     intervals = 10000000
     previousMills = time.ticks_ms()
     time.sleep(1)
 
-    # Main loop
+    # Ciclo principale
     while True:
-        # Update intervals based on distance
+        # Aggiorna gli intervalli in base alla distanza
         if dis < 0 and dis > 500:
             pass
         elif dis <= 10:
@@ -185,22 +185,23 @@ The ultrasonic sensor in the project emits high-frequency sound waves and measur
         else:
             intervals = 2000
 
-        # Print the distance if it's not -1
+        # Stampa la distanza se non è -1
         if dis != -1:
             print('Distance: %.2f' % dis)
         time.sleep_ms(100)
 
-        # Check if it's time to beep
+        # Controlla se è il momento di emettere un beep
         currentMills = time.ticks_ms()
         if time.ticks_diff(currentMills, previousMills) >= intervals:
             beep()
             previousMills = currentMills
 
 
-* When the script is running, the ultrasonic module will continuously detect the distance of obstacles in front of it, and display the distance on the Shell and I2C LCD1602. 
-* As the obstacle gets closer, the beeping frequency of the buzzer will become more rapid.
-* The ``ultrasonic_thread()`` function runs in a separate thread so that it can update the distance measurement continuously without blocking the main loop.
+* Quando lo script è in esecuzione, il modulo ultrasonico rileverà continuamente la distanza degli ostacoli davanti a esso e visualizzerà la distanza sul Shell e sull'I2C LCD1602.
+* Man mano che l'ostacolo si avvicina, la frequenza dei beep del cicalino diventerà più rapida.
+* La funzione ``ultrasonic_thread()`` viene eseguita in un thread separato in modo da poter aggiornare continuamente la misurazione della distanza senza bloccare il ciclo principale.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Se il codice e il cablaggio sono corretti, ma l'LCD non riesce a visualizzare alcun contenuto, puoi regolare il potenziometro sul retro per aumentare il contrasto.
+

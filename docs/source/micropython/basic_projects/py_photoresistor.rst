@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché Unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperti**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa ai giveaway e alle promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_photoresistor:
 
-5.7 Feel the Light
+5.7 Sentire la Luce
 =============================
 
-The photoresistor is a commonly used device for analog inputs, similar to a potentiometer. Its resistance value changes based on the intensity of the light it receives. When exposed to strong light, the resistance of the photoresistor decreases, and as the light intensity decreases, the resistance increases.
+Il fotoresistore è un dispositivo comunemente utilizzato per gli input analogici, simile a un potenziometro. Il suo valore di resistenza cambia in base all'intensità della luce che riceve. Quando esposto a luce intensa, la resistenza del fotoresistore diminuisce, mentre con l'abbassarsi dell'intensità luminosa, la resistenza aumenta.
 
-By reading the value of the photoresistor, we can gather information about the ambient light conditions. This information can be used for tasks such as controlling the brightness of an LED, adjusting the sensitivity of a sensor, or implementing light-dependent actions in a project.
+Leggendo il valore del fotoresistore, possiamo raccogliere informazioni sulle condizioni di luce ambientale. Queste informazioni possono essere utilizzate per compiti come controllare la luminosità di un LED, regolare la sensibilità di un sensore o implementare azioni dipendenti dalla luce in un progetto.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -60,80 +60,76 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Pin Disponibili
             - IO14, IO25, I35, I34, I39, I36
 
 
-* **Strapping Pins**
+* **Pin di Strapping**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    I seguenti pin sono pin di strapping, che influenzano il processo di avvio dell'ESP32 durante l'accensione o il reset. Tuttavia, una volta che l'ESP32 è stato avviato correttamente, possono essere utilizzati come pin regolari.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pin di Strapping
             - IO0, IO12
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.7_photoresistor.png
 
-As the light intensity increases, the resistance of the light-dependent resistor (LDR) decreases, resulting in a decrease in the value read on I35.
+All'aumentare dell'intensità della luce, la resistenza del fotoresistore (LDR) diminuisce, provocando una diminuzione del valore letto su I35.
 
-**Wiring**
+**Cablatura**
 
 .. image:: ../../img/wiring/5.7_photoresistor_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.7_feel_the_light.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
-
+    * Apri il file ``5.7_feel_the_light.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Successivamente, fai clic su "Esegui lo script corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra.
 
 .. code-block:: python
 
     from machine import ADC,Pin
     import time
 
-    # create an ADC object acting on a pin
+    # crea un oggetto ADC che opera su un pin
     photoresistor = ADC(Pin(35, Pin.IN))
 
-    # Configure the ADC attenuation to 11dB for full range     
+    # Configura l'attenuazione dell'ADC a 11dB per l'intera gamma     
     photoresistor.atten(photoresistor.ATTN_11DB)
 
     while True:
 
-        # read a raw analog value in the range 0-4095
+        # leggi un valore analogico grezzo nell'intervallo 0-4095
         value = photoresistor.read()  
         print(value)
         time.sleep(0.05)
 
+Dopo l'esecuzione del programma, la Shell stamperà i valori del fotoresistore. Puoi illuminare il sensore con una torcia o coprirlo con la mano per vedere come cambia il valore.
 
-After the program runs, the Shell prints out the photoresistor values. You can shine a flashlight on it or cover it up with your hand to see how the value will change.
+* ``atten(photoresistor.ATTN_11DB)``: Configura l'attenuazione dell'ADC a 11dB per l'intera gamma.
 
+    Per leggere tensioni superiori alla tensione di riferimento, applica l'attenuazione dell'ingresso con l'argomento chiave atten.
 
-* ``atten(photoresistor.ATTN_11DB)``: Configure the ADC attenuation to 11dB for full range.
+    Valori validi (e intervalli di misurazione lineari approssimativi) sono:
 
-    To read voltages above the reference voltage, apply input attenuation with the atten keyword argument. 
-
-    Valid values (and approximate linear measurement ranges) are:
-
-    * ADC.ATTN_0DB: No attenuation (100mV - 950mV)
-    * ADC.ATTN_2_5DB: 2.5dB attenuation (100mV - 1250mV)
-    * ADC.ATTN_6DB: 6dB attenuation (150mV - 1750mV)
-    * ADC.ATTN_11DB: 11dB attenuation (150mV - 2450mV)
+    * ADC.ATTN_0DB: Nessuna attenuazione (100mV - 950mV)
+    * ADC.ATTN_2_5DB: Attenuazione di 2,5dB (100mV - 1250mV)
+    * ADC.ATTN_6DB: Attenuazione di 6dB (150mV - 1750mV)
+    * ADC.ATTN_11DB: Attenuazione di 11dB (150mV - 2450mV)
 
 * `machine.ADC - MicroPython Docs <https://docs.micropython.org/en/latest/esp32/quickref.html#adc-analog-to-digital-conversion>`_
 

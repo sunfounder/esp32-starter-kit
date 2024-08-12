@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri entusiasti.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 14: Playing Custom Music Note
-==========================================
+Video 14: Suonare Note Musicali Personalizzate
+==================================================
 
-In this tutorial, you'll learn how to use the SunFounder ESP32 IoT Learning Kit to play custom musical notes:
+In questo tutorial, imparerai a utilizzare il SunFounder ESP32 IoT Learning Kit per suonare note musicali personalizzate:
 
-* **Passive Buzzer Introduction**: Unlike the previous tutorial with an active buzzer, this one uses a passive buzzer which requires an external signal for sound generation.
-* **Wiring Guide**: Detailed instructions to correctly wire the passive buzzer to the ESP32 module.
-* **Buzzer Specifications**: The passive buzzer operates on 3 to 5 volts and can produce varying tones based on the input signal frequency.
-* **Arduino Code Overview**: The tutorial explains how to write and upload code to ESP32 for generating different musical notes through PWM signals.
-* **Musical Note Project**: Create a setup to play a series of musical notes with the passive buzzer controlled by ESP32.
-* **Project Execution**: Demonstrates the playing of musical notes once the code is successfully uploaded to the ESP32 module.
+* **Introduzione al Buzzer Passivo**: A differenza del tutorial precedente con un buzzer attivo, questo utilizza un buzzer passivo che richiede un segnale esterno per generare suoni.
+* **Guida al Cablaggio**: Istruzioni dettagliate per collegare correttamente il buzzer passivo al modulo ESP32.
+* **Specifiche del Buzzer**: Il buzzer passivo funziona a 3-5 volt e può produrre toni variabili in base alla frequenza del segnale di ingresso.
+* **Panoramica del Codice Arduino**: Il tutorial spiega come scrivere e caricare il codice sull'ESP32 per generare diverse note musicali tramite segnali PWM.
+* **Progetto di Note Musicali**: Crea un setup per suonare una serie di note musicali con il buzzer passivo controllato dall'ESP32.
+* **Esecuzione del Progetto**: Dimostrazione delle note musicali suonate una volta caricato correttamente il codice sul modulo ESP32.
 
 
 **Video**
@@ -31,6 +31,6 @@ In this tutorial, you'll learn how to use the SunFounder ESP32 IoT Learning Kit 
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/0IFBAF6gSAo?si=35LADAAA_xJsDejw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_pa_buz`

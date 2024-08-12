@@ -1,174 +1,173 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-1.5 Quick Guide on Thonny
-==================================
+1.5 Guida Rapida a Thonny
+=============================
 
 .. _open_run_code_py:
 
-Open and Run Code Directly
----------------------------------------------
+Apri ed Esegui Codice Direttamente
+--------------------------------------
 
-The code section in the projects tells you exactly which code is used, so double-click on the ``.py`` file with the serial number in the ``esp32-starter-kit-main\micropython\codes\`` path to open it. 
+La sezione del progetto ti indica esattamente quale codice viene utilizzato, quindi fai doppio clic sul file ``.py`` con il numero di serie nel percorso ``esp32-starter-kit-main\micropython\codes\`` per aprirlo.
 
-However, you must first download the package and upload the libraries, as described in :ref:`add_libraries_py`.
+Tuttavia, devi prima scaricare il pacchetto e caricare le librerie, come descritto in :ref:`add_libraries_py`.
 
-#. Open code.
+#. Apri il codice.
 
-    For example, ``1.1_hello_led.py``.
+    Ad esempio, ``1.1_hello_led.py``.
 
-    If you double click on it, a new window will open on the right. You can open more than one code at the same time.
+    Se fai doppio clic su di esso, si aprirà una nuova finestra sulla destra. Puoi aprire più di un codice contemporaneamente.
 
     .. image:: img/quick_guide1.png
 
-#. Plug the esp32 into your computer with a micro USB cable.
+#. Collega l'esp32 al computer con un cavo micro USB.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Select correct interpreter
+#. Seleziona l'interprete corretto
 
-    Select the "MicroPython (ESP32).COMxx" interpreter.
+    Seleziona l'interprete "MicroPython (ESP32).COMxx".
 
     .. image:: img/sec_inter.png
 
-#. Run the code
+#. Esegui il codice
 
-    To run the script, click the **Run current script** button or press F5.
+    Per eseguire lo script, fai clic sul pulsante **Esegui script corrente** o premi F5.
 
     .. image:: img/quick_guide2.png
 
-    If the code contains any information that needs to be printed, it will appear in the Shell; otherwise, only the following information will appear.
+    Se il codice contiene informazioni da stampare, appariranno nella Shell; altrimenti, verranno visualizzate solo le seguenti informazioni.
 
-    Click **View** -> **Edit** to open the Shell window if it doesn't appear on your Thonny.
+    Fai clic su **Visualizza** -> **Modifica** per aprire la finestra Shell se non appare in Thonny.
 
         .. code-block::
 
-            MicroPython v1.19.1 on 2022-06-18; ESP32 module with ESP32
+            MicroPython v1.19.1 on 2022-06-18; modulo ESP32 con ESP32
 
-            Type "help()" for more information.
+            Digita "help()" per maggiori informazioni.
 
             >>> %Run -c $EDITOR_CONTENT
 
-    * The first line shows the version of MicroPython, the date, and your device information.
-    * The second line prompts you to enter "help()" to get some help.
-    * The third line is a command from Thonny telling the MicroPython interpreter on your Pico W to run the contents of the script area - "EDITOR_CONTENT".
-    * If there is any message after the third line, it is usually a message that you tell MicroPython to print, or an error message for the code.
+    * La prima riga mostra la versione di MicroPython, la data e le informazioni sul tuo dispositivo.
+    * La seconda riga ti invita a digitare "help()" per ottenere assistenza.
+    * La terza riga è un comando di Thonny che dice all'interprete MicroPython sul tuo Pico W di eseguire il contenuto dell'area script - "EDITOR_CONTENT".
+    * Se c'è un messaggio dopo la terza riga, è solitamente un messaggio che hai detto a MicroPython di stampare o un messaggio di errore per il codice.
 
 
-#. Stop running
+#. Interrompi l'esecuzione
 
     .. image:: img/quick_guide3.png
 
-    To stop the running code, click the **Stop/Restart backend** button. The **%RUN -c $EDITOR_CONTENT** command will disappear after stopping.
+    Per interrompere l'esecuzione del codice, fai clic sul pulsante **Interrompi/Riavvia backend**. Il comando **%RUN -c $EDITOR_CONTENT** scomparirà dopo l'interruzione.
 
-#. Save or save as
+#. Salva o salva come
 
-    You can save changes made to the open example by pressing **Ctrl+S** or clicking the **Save** button on Thonny.
+    Puoi salvare le modifiche apportate all'esempio aperto premendo **Ctrl+S** o facendo clic sul pulsante **Salva** in Thonny.
 
-    The code can be saved as a separate file within the **MicroPython drive(ESP32)** by clicking on **File** -> **Save As**.
+    Il codice può essere salvato come file separato all'interno dell'**unità MicroPython (ESP32)** facendo clic su **File** -> **Salva come**.
 
     .. image:: img/quick_guide4.png
 
-    Select **MicroPython drive**.
+    Seleziona **unità MicroPython**.
 
     .. image:: img/quick_guide5.png
         
-    Then click **OK** after entering the file name and extension **.py**. On the MicroPython drive, you will see your saved file.
+    Quindi fai clic su **OK** dopo aver inserito il nome del file e l'estensione **.py**. Nell'unità MicroPython, vedrai il tuo file salvato.
 
     .. image:: img/quick_guide6.png
 
     .. note::
-        Regardless of what name you give your code, it's best to describe what type of code it is, and not give it a meaningless name like ``abc.py``.
-        When you save the code as ``main.py``, it will run automatically when the power is turned on.
+        Indipendentemente dal nome che dai al tuo codice, è meglio descrivere il tipo di codice e non dare un nome senza senso come ``abc.py``.
+        Quando salvi il codice come ``main.py``, verrà eseguito automaticamente all'accensione.
 
 
-Create File and Run it
----------------------------
+Crea un File ed Eseguilo
+------------------------------
 
 
-The code is shown directly in the code section. You can copy it to Thonny and run it as follows.
+Il codice viene mostrato direttamente nella sezione del codice. Puoi copiarlo in Thonny ed eseguirlo come segue.
 
-#. Create a new file
+#. Crea un nuovo file
 
-    Open Thonny IDE, click **New** button to create a new blank file.
+    Apri Thonny IDE, fai clic sul pulsante **Nuovo** per creare un nuovo file vuoto.
 
     .. image:: img/quick_guide7.png
 
-#. Copy code
+#. Copia il codice
 
-    Copy the code from the project to the Thonny IDE.
+    Copia il codice dal progetto in Thonny IDE.
 
     .. image:: img/quick_guide8.png
 
-#. Plug the esp32 into your computer with a micro USB cable.
+#. Collega l'esp32 al computer con un cavo micro USB.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Select correct interpreter
+#. Seleziona l'interprete corretto
 
-    Select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner.
+    Seleziona l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra.
 
     .. image:: img/sec_inter.png
 
-#. Run the code
+#. Esegui il codice
 
-    You need click **Run Current Script** or simply press ``F5`` to run it.
+    Devi fare clic su **Esegui script corrente** o semplicemente premere ``F5`` per eseguirlo.
 
     .. image:: img/quick_guide9.png
 
-    If the code contains any information that needs to be printed, it will appear in the Shell; otherwise, only the following information will appear.
+    Se il codice contiene informazioni da stampare, appariranno nella Shell; altrimenti, verranno visualizzate solo le seguenti informazioni.
 
-    Click **View** -> **Edit** to open the Shell window if it doesn't appear on your Thonny.
+    Fai clic su **Visualizza** -> **Modifica** per aprire la finestra Shell se non appare in Thonny.
 
         .. code-block::
 
-            MicroPython v1.19.1 on 2022-06-18; ESP32 module with ESP32
+            MicroPython v1.19.1 on 2022-06-18; modulo ESP32 con ESP32
 
-            Type "help()" for more information.
+            Digita "help()" per maggiori informazioni.
 
             >>> %Run -c $EDITOR_CONTENT
 
-    * The first line shows the version of MicroPython, the date, and your device information.
-    * The second line prompts you to enter "help()" to get some help.
-    * The third line is a command from Thonny telling the MicroPython interpreter on your Pico W to run the contents of the script area - "EDITOR_CONTENT".
-    * If there is any message after the third line, it is usually a message that you tell MicroPython to print, or an error message for the code.
+    * La prima riga mostra la versione di MicroPython, la data e le informazioni sul tuo dispositivo.
+    * La seconda riga ti invita a digitare "help()" per ottenere assistenza.
+    * La terza riga è un comando di Thonny che dice all'interprete MicroPython sul tuo Pico W di eseguire il contenuto dell'area script - "EDITOR_CONTENT".
+    * Se c'è un messaggio dopo la terza riga, è solitamente un messaggio che hai detto a MicroPython di stampare o un messaggio di errore per il codice.
 
 
-#. Stop running
+#. Interrompi l'esecuzione
 
     .. image:: img/quick_guide3.png
 
-    To stop the running code, click the **Stop/Restart backend** button. The **%RUN -c $EDITOR_CONTENT** command will disappear after stopping.
+    Per interrompere l'esecuzione del codice, fai clic sul pulsante **Interrompi/Riavvia backend**. Il comando **%RUN -c $EDITOR_CONTENT** scomparirà dopo l'interruzione.
 
-#. Save or save as
+#. Salva o salva come
 
-    You can save the code by pressing **Ctrl+S** or clicking the **Save** button on Thonny. In the pop-up window, select the location where you want to save the file.
+    Puoi salvare il codice premendo **Ctrl+S** o facendo clic sul pulsante **Salva** in Thonny. Nella finestra pop-up, seleziona la posizione in cui desideri salvare il file.
 
     .. image:: img/quick_guide5.png
         
-    Then click **OK** or **Save** after entering the file name and extension **.py**.
+    Quindi fai clic su **OK** o **Salva** dopo aver inserito il nome del file e l'estensione **.py**.
 
     .. image:: img/quick_guide6.png
 
     .. note::
-        Regardless of what name you give your code, it's best to describe what type of code it is, and not give it a meaningless name like ``abc.py``.
-        When you save the code as ``main.py``, it will run automatically when the power is turned on.
+        Indipendentemente dal nome che dai al tuo codice, è meglio descrivere il tipo di codice e non dare un nome senza senso come ``abc.py``.
+        Quando salvi il codice come ``main.py``, verrà eseguito automaticamente all'accensione.
 
-#. Open file
+#. Apri il file
 
-    Here are two ways to open a saved code file.
+    Ecco due modi per aprire un file di codice salvato.
 
-    * The first method is to click the open icon on the Thonny toolbar, just like when you save a program, you will be asked if you want to open it from **this computer** or **MicroPython device**, for example, click **MicroPython device** and you will see a list of all the programs you have saved on the ESP32.
-    * The second is to open the file preview directly by clicking **View** -> **Files** -> and then double-clicking on the corresponding ``.py`` file to open it.
-
+    * Il primo metodo è fare clic sull'icona di apertura sulla barra degli strumenti di Thonny, proprio come quando salvi un programma, ti verrà chiesto se desideri aprirlo da **questo computer** o **dispositivo MicroPython**, ad esempio, fai clic su **dispositivo MicroPython** e vedrai un elenco di tutti i programmi che hai salvato sull'ESP32.
+    * Il secondo è aprire direttamente l'anteprima del file facendo clic su **Visualizza** -> **File** -> e poi facendo doppio clic sul file ``.py`` corrispondente per aprirlo.

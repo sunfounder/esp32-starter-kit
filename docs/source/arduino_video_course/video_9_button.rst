@@ -1,28 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri entusiasti.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 9: Toggle LED with Push Button
-=============================================
+Video 9: Accendere e Spegnere un LED con un Pulsante
+==========================================================
 
-This tutorial is aimed at beginners, providing a practical guide to using a push button to control an LED with the ESP32.
+Questo tutorial è rivolto ai principianti e offre una guida pratica per utilizzare un pulsante per controllare un LED con l'ESP32.
 
-* **Project Focus**: Teaches how to read a push button's state and toggle an LED on and off.
-* **Components**: Includes ESP32, breadboard, jumper wires, resistors, LED, and push button.
-* **Wiring and Setup**: Provides wiring instructions for connecting the push button and LED to ESP32.
-* **Arduino Code**: Explains the code for button state reading and LED toggling.
-* **Practical Demonstration**: Showcases the LED being toggled using the push button.
-
+* **Obiettivo del progetto**: Insegna come leggere lo stato di un pulsante e accendere o spegnere un LED.
+* **Componenti**: Include ESP32, breadboard, fili jumper, resistori, LED e pulsante.
+* **Collegamenti e configurazione**: Fornisce istruzioni di cablaggio per collegare il pulsante e il LED all'ESP32.
+* **Codice Arduino**: Spiega il codice per leggere lo stato del pulsante e accendere o spegnere il LED.
+* **Dimostrazione pratica**: Mostra come utilizzare il pulsante per accendere e spegnere il LED.
 
 **Video**
 
@@ -31,6 +30,6 @@ This tutorial is aimed at beginners, providing a practical guide to using a push
     <iframe width="700" height="500" src="https://www.youtube.com/embed/_tLesIbpB8U?si=5vzXjAwNdHTgWEgx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_button`

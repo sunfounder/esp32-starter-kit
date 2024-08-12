@@ -1,27 +1,26 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 2: What's ESP32, Camera Extension Board?
-================================================
+Video 2: Cos'è l'ESP32 e la Scheda di Estensione per la Fotocamera?
+========================================================================
 
-This video introduces the SunFounder ESP32 IoT Learning Kit and its components, providing a solid foundation for further exploration and projects.
+Questo video introduce il Kit di Apprendimento IoT ESP32 di SunFounder e i suoi componenti, fornendo una solida base per ulteriori esplorazioni e progetti.
 
-* **Introduction**: Unboxing and overview of the kit.
-* **ESP32 Microcontroller**: Explaining the ESP32 microcontroller with Wi-Fi and Bluetooth.
-* **Camera Extension Board**: Details about the camera expansion board and its features.
-* **Kit Components**: A comprehensive list of all the components included in the kit.
-
+* **Introduzione**: Unboxing e panoramica del kit.
+* **Microcontrollore ESP32**: Spiegazione del microcontrollore ESP32 con Wi-Fi e Bluetooth.
+* **Scheda di Estensione per la Fotocamera**: Dettagli sulla scheda di espansione per la fotocamera e le sue caratteristiche.
+* **Componenti del Kit**: Un elenco completo di tutti i componenti inclusi nel kit.
 
 **Video**
 

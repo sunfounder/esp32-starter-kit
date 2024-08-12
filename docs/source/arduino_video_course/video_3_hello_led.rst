@@ -1,30 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 3: "Hello LED" Project
+Video 3: Progetto "Hello LED"
 ======================================================
 
-In Tutorial 3, we delve into the "Hello LED" project, providing a comprehensive overview of the project:
+Nel Tutorial 3, esploriamo il progetto "Hello LED", fornendo una panoramica completa del progetto:
 
+* **Componenti**: Uno sguardo dettagliato ai componenti coinvolti nel progetto, inclusi resistori, LED e breadboard, spiegando i loro ruoli e funzioni.
+* **Configurazione del Circuito**: Guida passo-passo per configurare il circuito LED, inclusa la corretta utilizzo dei resistori e le connessioni sulla breadboard.
+* **Codice Arduino**: Una spiegazione approfondita del codice Arduino utilizzato nel progetto, evidenziando gli elementi chiave e il processo di caricamento sull'ESP32.
+* **Test**: Istruzioni pratiche su come testare la dimostrazione del lampeggio del LED, assicurandosi che il progetto funzioni come previsto.
 
-* **Components**: A detailed look at the components involved in the project, including resistors, LEDs, and breadboards, explaining their roles and functions.
-* **Circuit Setup**: Step-by-step guidance on setting up the LED circuit, including proper resistor usage and connections on the breadboard.
-* **Arduino Code**: An in-depth explanation of the Arduino code used in the project, highlighting key elements and the upload process to the ESP32.
-* **Testing**: Practical instructions on how to test the LED blink demonstration, ensuring that the project works as intended.
-
-This tutorial not only equips you with the knowledge needed to complete the "Hello LED" project but also provides a foundational understanding of resistors, LEDs, and breadboards in electronics and IoT applications.
-
+Questo tutorial non solo ti fornisce le conoscenze necessarie per completare il progetto "Hello LED", ma offre anche una comprensione di base dei resistori, dei LED e delle breadboard nelle applicazioni elettroniche e IoT.
 
 **Video**
 
@@ -32,6 +30,6 @@ This tutorial not only equips you with the knowledge needed to complete the "Hel
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/jTJ-JL2gEuQ?si=zyEet96mvJ2KDrzR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_blink`

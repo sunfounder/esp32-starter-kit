@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 Video 47: CheerLights
 =================================================
 
-Learn how to create an IoT CheerLights system using an ESP32 microcontroller, enabling synchronized color changes globally through MQTT communication.
+Scopri come creare un sistema IoT CheerLights utilizzando un microcontrollore ESP32, che consente di sincronizzare i cambiamenti di colore a livello globale tramite comunicazione MQTT.
 
-* **MQTT Communication**: Understand how MQTT works for subscribing to feeds and receiving information, demonstrated with the CheerLights feed.
-* **Hardware Setup**: Learn how to connect the ESP32 microcontroller with the camera extension module and WS2812 LED lights.
-* **Library Installation**: Install necessary libraries for MQTT communication and controlling WS2812 LEDs in the Arduino IDE.
-* **Coding**: Explore the code for setting up Wi-Fi, connecting to MQTT server, handling messages, and changing LED colors accordingly.
-* **Board and Port Selection**: Get instructions on selecting the ESP32 Dev board and the correct port in the Arduino IDE.
-* **Demonstration**: See a demo of the CheerLights system in action, including local and global color changes through MQTT and monitoring via the serial monitor.
+* **Comunicazione MQTT**: Comprendi come funziona MQTT per l'iscrizione ai feed e la ricezione delle informazioni, dimostrato con il feed CheerLights.
+* **Configurazione hardware**: Impara a collegare il microcontrollore ESP32 con il modulo di estensione della fotocamera e le luci LED WS2812.
+* **Installazione delle librerie**: Installa le librerie necessarie per la comunicazione MQTT e il controllo dei LED WS2812 nell'IDE Arduino.
+* **Codifica**: Esplora il codice per configurare il Wi-Fi, collegarsi al server MQTT, gestire i messaggi e cambiare di conseguenza i colori dei LED.
+* **Selezione della scheda e della porta**: Ricevi istruzioni su come selezionare la scheda ESP32 Dev e la porta corretta nell'IDE Arduino.
+* **Dimostrazione**: Guarda una demo del sistema CheerLights in azione, inclusi i cambiamenti di colore locali e globali tramite MQTT e il monitoraggio tramite il serial monitor.
 
 **Video**
 
@@ -30,8 +30,7 @@ Learn how to create an IoT CheerLights system using an ESP32 microcontroller, en
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/DFznGiD61g4?si=Hh8IuUVNnsotEBIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`iot_cheerlights`
-
 

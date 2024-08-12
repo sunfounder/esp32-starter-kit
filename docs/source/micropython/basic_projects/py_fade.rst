@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime speciali.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_fading:
 
-2.2 Fading LED
+2.2 LED con Effetto Fading
 ===================================
 
-In the previous project, we controlled the LED by turning it on and off using digital output. In this project, we will create a breathing effect on the LED by utilizing Pulse Width Modulation (PWM). PWM is a technique that allows us to control the brightness of an LED or the speed of a motor by varying the duty cycle of a square wave signal.
+Nel progetto precedente, abbiamo controllato l'accensione e lo spegnimento del LED utilizzando l'uscita digitale. In questo progetto, creeremo un effetto di respirazione sul LED utilizzando la modulazione di larghezza di impulso (PWM). La PWM è una tecnica che ci permette di controllare la luminosità di un LED o la velocità di un motore variando il ciclo di lavoro di un segnale a onda quadra.
 
-With PWM, instead of simply turning the LED on or off, we will be adjusting the amount of time the LED is on versus the amount of time it is off within each cycle. By rapidly switching the LED on and off at varying intervals, we can create the illusion of the LED gradually brightening and dimming, simulating a breathing effect.
+Con la PWM, invece di accendere o spegnere semplicemente il LED, regoleremo la quantità di tempo in cui il LED è acceso rispetto al tempo in cui è spento all'interno di ciascun ciclo. Commutando rapidamente il LED tra acceso e spento a intervalli variabili, possiamo creare l'illusione che il LED si illumini e si attenui gradualmente, simulando un effetto di respirazione.
 
-By using the PWM capabilities of the ESP32 WROOM 32E, we can achieve smooth and precise control over the LED's brightness. This breathing effect adds a dynamic and visually appealing element to your projects, creating an eye-catching display or ambiance.
+Utilizzando le capacità PWM dell'ESP32 WROOM 32E, possiamo ottenere un controllo fluido e preciso sulla luminosità del LED. Questo effetto di respirazione aggiunge un elemento dinamico e visivamente accattivante ai tuoi progetti, creando un display o un'atmosfera coinvolgente.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - ESP32 Starter Kit
+    *   - Kit di Partenza ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -62,99 +62,99 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-Here is a list of available pins on the ESP32 board for this project.
+Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pin Disponibili
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This project is the same circuit as the first project :ref:`py_blink`, but the signal type is different. The first project is to output digital high and low levels (0&1) directly from pin26 to make the LED light up or turn off, this project is to output PWM signal from pin26 to control the brightness of the LED.
+Questo progetto utilizza lo stesso circuito del primo progetto :ref:`py_blink`, ma il tipo di segnale è diverso. Nel primo progetto, il segnale digitale ad alta e bassa tensione (0&1) viene emesso direttamente dal pin 26 per accendere o spegnere il LED, mentre in questo progetto viene emesso un segnale PWM dal pin 26 per controllare la luminosità del LED.
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``2.2_fading_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Apri il file ``2.2_fading_led.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Poi, clicca su "Esegui Script Corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
 
 .. code-block:: python
 
-    # Import the necessary libraries
+    # Importa le librerie necessarie
     from machine import Pin, PWM
     import time
 
-    # Create a PWM object
+    # Crea un oggetto PWM
     led = PWM(Pin(26), freq=1000)
 
     while True:
-        # Gradually increase brightness
+        # Aumenta gradualmente la luminosità
         for duty_cycle in range(0, 1024, 1):
             led.duty(duty_cycle)
             time.sleep(0.01)
 
-        # Gradually decrease brightness
+        # Riduci gradualmente la luminosità
         for duty_cycle in range(1023, -1, -1):
             led.duty(duty_cycle)
             time.sleep(0.01)
 
 
-The LED will gradually become brighter as the code runs.
+Il LED si illuminerà gradualmente man mano che il codice viene eseguito.
 
-**How it works?**
+**Come funziona?**
 
-Overall, this code demonstrates how to use PWM signals to control the brightness of an LED.
+In generale, questo codice dimostra come utilizzare i segnali PWM per controllare la luminosità di un LED.
 
 
-#. It imports two modules, ``machine`` and ``time``. The ``machine`` module provides low-level access to the microcontroller's hardware, while the ``time`` module provides functions for time-related operations.
+#. Importa due moduli, ``machine`` e ``time``. Il modulo ``machine`` fornisce l'accesso a basso livello all'hardware del microcontrollore, mentre il modulo ``time`` fornisce funzioni per le operazioni correlate al tempo.
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Then initializes a ``PWM`` object for controlling the LED connected to pin 26 and sets the frequency of the PWM signal to 1000 Hz.
+#. Quindi, inizializza un oggetto ``PWM`` per controllare il LED collegato al pin 26 e imposta la frequenza del segnale PWM a 1000 Hz.
 
     .. code-block:: python
 
         led = PWM(Pin(26), freq=1000)
 
-#. Fade the LED in and out using a loop: The outer ``while True`` loop runs indefinitely. Two nested ``for`` loops are used to gradually increase and decrease the LED's brightness. The duty cycle ranges from 0 to 1023, representing a 0% to 100% duty cycle.
+#. Sfuma il LED dentro e fuori utilizzando un ciclo: il ciclo esterno ``while True`` viene eseguito indefinitamente. Due cicli ``for`` nidificati vengono utilizzati per aumentare e diminuire gradualmente la luminosità del LED. Il ciclo di lavoro varia da 0 a 1023, rappresentando un ciclo di lavoro dal 0% al 100%.
 
     .. code-block:: python
 
-        # Import the necessary libraries
+        # Importa le librerie necessarie
         from machine import Pin, PWM
         import time
 
-        # Create a PWM object
+        # Crea un oggetto PWM
         led = PWM(Pin(26), freq=1000)
 
         while True:
-            # Gradually increase brightness
+            # Aumenta gradualmente la luminosità
             for duty_cycle in range(0, 1024, 2):
                 led.duty(duty_cycle)
                 time.sleep(0.01)
 
-            # Gradually decrease brightness
+            # Riduci gradualmente la luminosità
             for duty_cycle in range(1023, -1, -2):
                 led.duty(duty_cycle)
                 time.sleep(0.01)
 
 
-    * ``range()``: Create a sequence of integers from 0 to 1023. 
-    * The duty cycle of the PWM signal is set to each value in the sequence using the ``duty()`` method of the ``PWM`` object. 
-    * ``time.sleep()``: Pause the execution of the program for 10 milliseconds between each iteration of the loop, creating a gradual increase in brightness over time.
+    * ``range()``: Crea una sequenza di numeri interi da 0 a 1023. 
+    * Il ciclo di lavoro del segnale PWM è impostato su ciascun valore nella sequenza utilizzando il metodo ``duty()`` dell'oggetto ``PWM``. 
+    * ``time.sleep()``: Interrompe l'esecuzione del programma per 10 millisecondi tra ogni iterazione del ciclo, creando un aumento graduale della luminosità nel tempo.
 
     

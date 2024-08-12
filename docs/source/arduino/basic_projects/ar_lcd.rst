@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_lcd1602:
 
-2.6 Display Characters
-===============================
+2.6 Visualizzazione dei Caratteri
+=========================================
 
-Now, we will explore the fascinating world of character display using the I2C LCD1602 module.
+Ora esploreremo il mondo affascinante della visualizzazione dei caratteri utilizzando il modulo I2C LCD1602.
 
-Through this project, we will learn how to initialize the LCD module, set the desired display parameters, and send character data to be displayed on the screen. We can showcase custom messages, display sensor readings, or create interactive menus. The possibilities are endless!
+Attraverso questo progetto, impareremo come inizializzare il modulo LCD, impostare i parametri di visualizzazione desiderati e inviare dati di caratteri da visualizzare sullo schermo. Potremo mostrare messaggi personalizzati, visualizzare le letture dei sensori o creare menu interattivi. Le possibilità sono infinite!
 
-By mastering the art of character display on the I2C LCD1602, we will unlock new avenues for communication and information display in our projects. Let's dive into this exciting journey and bring our characters to life on the LCD screen
+Padroneggiando l'arte della visualizzazione dei caratteri sul I2C LCD1602, apriremo nuove strade per la comunicazione e la visualizzazione delle informazioni nei nostri progetti. Iniziamo questo emozionante viaggio e diamo vita ai nostri caratteri sullo schermo LCD.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -59,39 +59,39 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-**Available Pins**
+**Pin Disponibili**
 
-Here is a list of available pins on the ESP32 board for this project.
+Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. list-table::
     :widths: 5 15
     :header-rows: 1
 
-    *   - Available Pins
-        - Usage Description
+    *   - Pin Disponibili
+        - Descrizione dell'Uso
 
     *   - IO21
         - SDA
     *   - IO22
         - SCL
     
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_2.6_lcd.png
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/2.6_i2clcd1602_bb.png
     :width: 800
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``2.6_lcd1602.ino`` file under the path of ``esp32-starter-kit-main\c\codes\2.6_lcd1602``.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Apri il file ``2.6_lcd1602.ino`` nel percorso ``esp32-starter-kit-main\c\codes\2.6_lcd1602``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
     * :ref:`unknown_com_port`
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * La libreria ``LiquidCrystal I2C`` viene utilizzata qui, puoi installarla dal **Library Manager**.
 
         .. image:: img/lcd_lib.png
 
@@ -99,86 +99,86 @@ Here is a list of available pins on the ESP32 board for this project.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/31e33e53-67b2-4e29-b78b-f647fd45fb0b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When this program is uploaded, the I2C LCD1602 will display the welcome message, "Hello, Sunfounder!", for 3 seconds. After that, the screen will show a "COUNT:" label and the count value, which increments every second.
+Quando questo programma viene caricato, l'I2C LCD1602 visualizzerà il messaggio di benvenuto, "Hello, Sunfounder!", per 3 secondi. Dopodiché, lo schermo mostrerà un'etichetta "COUNT:" e il valore del conteggio, che si incrementa ogni secondo.
 
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Se il codice e il cablaggio sono corretti, ma l'LCD non riesce a visualizzare alcun contenuto, puoi regolare il potenziometro sul retro per aumentare il contrasto.
 
-**How it works?**
+**Come funziona?**
 
-By calling the library ``LiquidCrystal_I2C.h``, you can easily drive the LCD. 
+Richiamando la libreria ``LiquidCrystal_I2C.h``, puoi facilmente pilotare l'LCD. 
 
 .. code-block:: arduino
 
     #include <LiquidCrystal_I2C.h>
 
-Library Functions：
+Funzioni della Libreria：
 
 
-* Creates a new instance of the ``LiquidCrystal_I2C`` class that represents a particular LCD attached to your Arduino board.
+* Crea una nuova istanza della classe ``LiquidCrystal_I2C`` che rappresenta un particolare LCD collegato alla tua scheda Arduino.
 
     .. code-block:: arduino
 
         LiquidCrystal_I2C(uint8_t lcd_Addr,uint8_t lcd_cols,uint8_t lcd_rows)
 
-    * ``lcd_AddR``: The address of the LCD defaults to 0x27.
-    * ``lcd_cols``: The LCD1602 has 16 columns.
-    * ``lcd_rows``: The LCD1602 has 2 rows.
+    * ``lcd_AddR``: L'indirizzo dell'LCD è di default 0x27.
+    * ``lcd_cols``: L'LCD1602 ha 16 colonne.
+    * ``lcd_rows``: L'LCD1602 ha 2 righe.
 
-* Initialize the lcd.
+* Inizializza l'LCD.
 
     .. code-block:: arduino
 
         void init()
 
-* Turn the (optional) backlight on.
+* Accende la retroilluminazione (opzionale).
 
     .. code-block:: arduino
 
         void backlight()
 
-* Turn the (optional) backlight off.
+* Spegne la retroilluminazione (opzionale).
 
     .. code-block:: arduino
 
         void nobacklight()
 
-* Turn the LCD display on.
+* Accende rapidamente il display LCD.
 
     .. code-block:: arduino
 
         void display()
 
-* Turn the LCD display off quickly.
+* Spegne rapidamente il display LCD.
 
     .. code-block:: arduino
 
         void nodisplay()
 
-* Clear display, set cursor position to zero.
+* Cancella il display, imposta la posizione del cursore su zero.
 
     .. code-block:: arduino
 
         void clear()
 
-* Set the cursor position to col,row.
+* Imposta la posizione del cursore su colonna, riga.
 
     .. code-block:: arduino
 
         void setCursor(uint8_t col,uint8_t row)
 
-* Prints text to the LCD.
+* Stampa il testo sull'LCD.
 
     .. code-block:: arduino
 
         void print(data,BASE)
 
-    * ``data``: The data to print (char, byte, int, long, or string).
-    * ``BASE (optional)``: The base in which to print numbers.
+    * ``data``: I dati da stampare (char, byte, int, long, o stringa).
+    * ``BASE (optional)``: La base in cui stampare i numeri.
 
-        * ``BIN`` for binary (base 2)
-        * ``DEC`` for decimal (base 10)
-        * ``OCT`` for octal (base 8)
-        * ``HEX`` for hexadecimal (base 16).
+        * ``BIN`` per binario (base 2)
+        * ``DEC`` per decimale (base 10)
+        * ``OCT`` per ottale (base 8)
+        * ``HEX`` per esadecimale (base 16).

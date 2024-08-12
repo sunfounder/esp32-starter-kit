@@ -1,29 +1,29 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri entusiasti.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 13: Arduino Beep with Active Buzzer
+Video 13: Beep con Arduino e Buzzer Attivo
 ========================================================================================
 
-Here, you will learn how to use an active buzzer with the ESP32 module for generating sound:
+Qui imparerai a utilizzare un buzzer attivo con il modulo ESP32 per generare suoni:
 
-* **Active Buzzer Introduction**: Learn to control an active buzzer using a transistor. The buzzer emits sound when powered up.
-* **Buzzer Components**: The tutorial uses an active buzzer, a 1K resistor, jumper wires, and an S8050 transistor.
-* **Wiring and Schematic**: Understand the wiring schematic for connecting the buzzer to the ESP32.
-* **Buzzer Specifications**: The active buzzer operates within a voltage range of 3 to 8 volts and has an internal oscillating frequency of around 2700 Hz.
-* **Arduino Programming**: The tutorial covers the setup, loop functions, and how to control the buzzer using digital signals.
-* **Interactive Project**: The project demonstrates how to generate a beeping sound with the buzzer, controlled by the ESP32.
-* **Demonstration**: Once the code is uploaded, the ESP32 module activates the buzzer, producing a beeping sound.
+* **Introduzione al Buzzer Attivo**: Impara a controllare un buzzer attivo utilizzando un transistor. Il buzzer emette un suono quando viene alimentato.
+* **Componenti del Buzzer**: Il tutorial utilizza un buzzer attivo, una resistenza da 1K, fili jumper e un transistor S8050.
+* **Cablaggio e Schema**: Comprendi lo schema di collegamento per connettere il buzzer all'ESP32.
+* **Specifiche del Buzzer**: Il buzzer attivo opera in un intervallo di tensione da 3 a 8 volt e ha una frequenza di oscillazione interna di circa 2700 Hz.
+* **Programmazione Arduino**: Il tutorial copre le funzioni di setup, loop e come controllare il buzzer usando segnali digitali.
+* **Progetto Interattivo**: Il progetto dimostra come generare un suono intermittente con il buzzer, controllato dall'ESP32.
+* **Dimostrazione**: Una volta caricato il codice, il modulo ESP32 attiva il buzzer, producendo un suono intermittente.
 
 **Video**
 
@@ -31,6 +31,6 @@ Here, you will learn how to use an active buzzer with the ESP32 module for gener
 
     <iframe width="600" height="300" src="https://www.youtube.com/embed/TcH8Bx9yC7Q?si=3ewcYvDMR5onTkra" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_ac_buz`

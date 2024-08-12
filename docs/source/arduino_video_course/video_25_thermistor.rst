@@ -1,30 +1,29 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle preview.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 25: Measuring Temperature
+Video 25: Misurazione della Temperatura
 ====================================================
 
-Learn how to measure temperature accurately using an NTC thermistor with an ESP32 microcontroller, including wiring, coding, and demonstrations with an LCD display.
+Scopri come misurare la temperatura con precisione utilizzando un termistore NTC con un microcontrollore ESP32, inclusi cablaggio, programmazione e dimostrazioni con un display LCD.
 
 
-
-* **NTC Thermistors**: Understand how Negative Temperature Coefficient thermistors work for temperature measurement.
-* **ESP32 Microcontroller**: Explore the features of the ESP32 microcontroller, including Wi-Fi and Bluetooth capabilities.
-* **Wiring Setup**: Learn the proper wiring setup to connect the NTC thermistor and other components to the ESP32.
-* **Temperature Calculation**: Discover the formula used to calculate temperature from the resistance measured by the NTC thermistor.
-* **LCD Display**: Connect an LCD display to the ESP32 to visualize temperature values in Celsius and Fahrenheit.
-* **SunFounder Extension Module**: Utilize the SunFounder ESP32 camera extension module for standalone operation, complete with a built-in battery and charger.
+* **Termistori NTC**: Comprendi il funzionamento dei termistori a coefficiente di temperatura negativo per la misurazione della temperatura.
+* **Microcontrollore ESP32**: Esplora le caratteristiche del microcontrollore ESP32, incluse le funzionalità Wi-Fi e Bluetooth.
+* **Configurazione del cablaggio**: Impara a collegare correttamente il termistore NTC e altri componenti all'ESP32.
+* **Calcolo della temperatura**: Scopri la formula utilizzata per calcolare la temperatura dalla resistenza misurata dal termistore NTC.
+* **Display LCD**: Collega un display LCD all'ESP32 per visualizzare i valori della temperatura in gradi Celsius e Fahrenheit.
+* **Modulo di Estensione SunFounder**: Utilizza il modulo di estensione della fotocamera ESP32 di SunFounder per un funzionamento autonomo, completo di batteria integrata e caricatore.
 
 **Video**
 
@@ -32,8 +31,7 @@ Learn how to measure temperature accurately using an NTC thermistor with an ESP3
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/zJh-gWY0DmE?si=Kp72PpqBiEWpluIf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_thermistor`
-
 

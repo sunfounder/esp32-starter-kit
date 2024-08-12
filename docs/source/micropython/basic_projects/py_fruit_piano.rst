@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime speciali.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_fruit_piano:
 
-6.1 Fruit Piano
+6.1 Pianoforte di Frutta
 ============================
 
-Have you ever wanted to play the piano but couldn't afford one? Or maybe you just want to have some fun with diy a fruit piano? Well, this project is for you! 
+Hai mai desiderato suonare il pianoforte ma non potevi permettertelo? O forse vuoi solo divertirti a creare un pianoforte di frutta fai-da-te? Bene, questo progetto fa per te!
 
-With just a few touch sensors on the ESP32 board, you can now play your favorite tunes and enjoy the experience of playing the piano without breaking the bank.
+Con solo alcuni sensori tattili sulla scheda ESP32, ora puoi suonare i tuoi brani preferiti e goderti l'esperienza di suonare il pianoforte senza spendere una fortuna.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - ESP32 Starter Kit
+    *   - Kit di Partenza ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -62,17 +62,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**About the Touch Pins**
+**Informazioni sui Pin Touch**
 
-The ESP32 microcontroller has built-in touch sensor functionality, which allows you to use certain pins on the board 
-as touch-sensitive inputs. The touch sensor works by measuring changes in capacitance on the touch pins, 
-which are caused by the electrical properties of the human body.
+Il microcontrollore ESP32 dispone di funzionalità touch integrata, che ti consente 
+di utilizzare alcuni pin della scheda come ingressi sensibili al tocco. Il sensore 
+touch funziona misurando le variazioni di capacità sui pin touch, causate dalle 
+proprietà elettriche del corpo umano.
 
-Here are some key features of the touch sensor on the ESP32:
+Ecco alcune caratteristiche principali del sensore touch sull'ESP32:
 
-* **Number of touch pins**
+* **Numero di pin touch**
 
-    The ESP32 has up to 10 touch pins, depending on the specific board. The touch pins are typically labeled with a "T" followed by a number.
+    L'ESP32 ha fino a 10 pin touch, a seconda della scheda specifica. I pin touch sono generalmente etichettati con una "T" seguita da un numero.
 
     * GPIO4: TOUCH0
     * GPIO0：TOUCH1
@@ -86,60 +87,60 @@ Here are some key features of the touch sensor on the ESP32:
     * GPIO32: TOUCH9
 
     .. note::
-        The GPIO0 and GPIO2 pins are used for bootstrapping and flashing firmware to the ESP32, respectively. These pins are also connected to the onboard LED and button. Therefore, it is generally not recommended to use these pins for other purposes, as it could interfere with the normal operation of the board.
+        I pin GPIO0 e GPIO2 sono utilizzati rispettivamente per il bootstrapping e il flashing del firmware sull'ESP32. Questi pin sono anche collegati al LED e al pulsante integrati. Pertanto, non è generalmente consigliato utilizzare questi pin per altri scopi, poiché potrebbe interferire con il normale funzionamento della scheda.
 
-* **Sensitivity**
+* **Sensibilità**
 
-    The touch sensor on the ESP32 is very sensitive and can detect even small changes in capacitance. The sensitivity can be adjusted using software settings.
+    Il sensore touch sull'ESP32 è molto sensibile e può rilevare anche piccoli cambiamenti di capacità. La sensibilità può essere regolata tramite impostazioni software.
 
-* **ESD Protection**
+* **Protezione ESD**
 
-    The touch pins on the ESP32 have built-in ESD (Electrostatic Discharge) protection, which helps to prevent damage to the board from static electricity.
+    I pin touch sull'ESP32 hanno una protezione ESD (Electrostatic Discharge) integrata, che aiuta a prevenire danni alla scheda dovuti all'elettricità statica.
 
 * **Multitouch**
 
-    The touch sensor on the ESP32 supports multitouch, which means that you can detect multiple touch events simultaneously.
+    Il sensore touch sull'ESP32 supporta il multitouch, il che significa che puoi rilevare più eventi di tocco contemporaneamente.
 
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_6.1_fruit_piano.png
 
-The idea behind this project is to use touch sensors to detect when a user touches a specific pin. 
-Each touch pin is associated with a specific note, and when the user touches a pin, 
-the corresponding note is played on the passive buzzer. 
-The result is a simple and affordable way to enjoy the experience of playing the piano.
+L'idea alla base di questo progetto è utilizzare i sensori touch per rilevare quando un utente tocca un pin specifico. 
+Ogni pin touch è associato a una nota specifica e, quando l'utente tocca un pin, 
+la nota corrispondente viene riprodotta sul buzzer passivo. 
+Il risultato è un modo semplice ed economico per godersi l'esperienza di suonare il pianoforte.
 
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-In this project, you need to remove the ESP32 WROOM 32E from the expansion board and then insert it into the breadboard. This is because some pins on the expansion board are connected to resistors, which will affect the capacitance of the pins.
+In questo progetto, è necessario rimuovere l'ESP32 WROOM 32E dalla scheda di espansione e inserirlo nella breadboard. Questo perché alcuni pin sulla scheda di espansione sono collegati a resistori, il che influirà sulla capacità dei pin.
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``6.1_fruit_piano.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Apri il file ``6.1_fruit_piano.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Poi, clicca su "Esegui Script Corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
 
 .. code-block:: python
 
     from machine import Pin, PWM, TouchPad
     import time
 
-    # Define the touch pins and their corresponding notes
-    touch_pins = [4, 15, 13, 12, 14, 27, 33, 32]  # Use valid touch-capable pins
+    # Definisci i pin touch e le loro note corrispondenti
+    touch_pins = [4, 15, 13, 12, 14, 27, 33, 32]  # Usa pin validi con capacità touch
     notes = [262, 294, 330, 349, 392, 440, 494, 523]
 
-    # Initialize the touch sensors
+    # Inizializza i sensori touch
     touch_sensors = [TouchPad(Pin(pin)) for pin in touch_pins]
 
-    # Initialize the buzzer
+    # Inizializza il buzzer
     buzzer = PWM(Pin(25), duty=0)
 
-    # Function to play a tone
+    # Funzione per riprodurre un tono
     def play_tone(frequency, duration):
         buzzer.freq(frequency)
         buzzer.duty(512)
@@ -148,7 +149,7 @@ In this project, you need to remove the ESP32 WROOM 32E from the expansion board
 
     touch_threshold = 200
 
-    # Main loop to check for touch inputs and play the corresponding note
+    # Loop principale per controllare gli input touch e riprodurre la nota corrispondente
     while True:
         for i, touch_sensor in enumerate(touch_sensors):
             value = touch_sensor.read()
@@ -159,14 +160,14 @@ In this project, you need to remove the ESP32 WROOM 32E from the expansion board
             time.sleep(0.01)
 
 
-You can connect fruits to these ESP32 pins: 4, 15, 13, 12, 14, 27, 33, 32.
+Puoi collegare frutti a questi pin ESP32: 4, 15, 13, 12, 14, 27, 33, 32.
 
-When the script runs, touching these fruits will play the notes C, D, E, F, G, A, B and C5.
+Quando lo script è in esecuzione, toccando questi frutti verranno riprodotte le note C, D, E, F, G, A, B e C5.
 
 .. note::
-    ``Touch_threshold`` needs to be adjusted based on the conductivity of different fruits. 
+    ``Touch_threshold`` deve essere regolato in base alla conduttività dei diversi frutti.
     
-    You can run the script first to see the values printed by the shell.
+    Puoi eseguire prima lo script per vedere i valori stampati dalla shell.
 
     .. code-block::
 
@@ -179,7 +180,7 @@ When the script runs, touching these fruits will play the notes C, D, E, F, G, A
         6 1072
         7 1058
 
-    After touching the fruits on pins 12, 14, and 27, the printed values are as follows. Therefore, I set the ``touch_threshold`` to 200, which means that when a value less than 200 is detected, it is considered to be touched, and the buzzer will emit different notes.
+    Dopo aver toccato i frutti sui pin 12, 14 e 27, i valori stampati sono i seguenti. Pertanto, ho impostato ``touch_threshold`` a 200, il che significa che quando viene rilevato un valore inferiore a 200, si considera che sia stato toccato, e il buzzer emetterà note diverse.
     
     .. code-block::
 

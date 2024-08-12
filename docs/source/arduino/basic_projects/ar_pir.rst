@@ -1,51 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_pir:
 
-5.5 Detect Human Movement
+5.5 Rileva il Movimento Umano
 ========================================
 
-Passive infrared sensor (PIR sensor) is a common sensor that can measure infrared (IR) light emitted by objects in its field of view.
-Simply put, it will receive infrared radiation emitted from the body, thereby detecting the movement of people and other animals.
-More specifically, it tells the main control board that someone has entered your room.
+Il sensore a infrarossi passivo (sensore PIR) è un sensore comune che può misurare 
+la luce infrarossa (IR) emessa dagli oggetti nel suo campo visivo. In poche parole, 
+riceve la radiazione infrarossa emessa dal corpo, rilevando così il movimento di 
+persone e altri animali. Più specificamente, informa la scheda di controllo principale 
+che qualcuno è entrato nella stanza.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -62,77 +64,73 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - For Input
+        *   - Per Ingresso
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
-        *   - For Output
+        *   - Per Uscita
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 .. note::
-    
-    IO32 cannot be used **as input pin** in this project because it is internally connected to a 1K pull-down resistor, which sets its default value to 0.
 
-* **Strapping Pins (Input)**
+    IO32 non può essere utilizzato **come pin di ingresso** in questo progetto perché è internamente collegato a una resistenza di pull-down da 1K, che imposta il suo valore predefinito a 0.
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+* **Pin Strapping (Ingresso)**
+
+    I pin strapping sono un insieme speciale di pin utilizzati per determinare specifiche modalità di avvio durante l'accensione del dispositivo (reset).
 
     
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
-            - IO5, IO0, IO2, IO12, IO15 
+        *   - Pin Strapping
+            - IO5, IO0, IO2, IO12, IO15
+
+
     
 
-    
+    Generalmente, **non è consigliato utilizzarli come pin di ingresso**. Se desideri utilizzare questi pin, considera il potenziale impatto sul processo di avvio. Per ulteriori dettagli, consulta la sezione :ref:`esp32_strapping`.
 
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
-
-
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.5_pir.png
 
-When the PIR module detects motion, IO14 will go high, and the LED will be lit. Otherwise, when no motion is detected, IO14 will be low, and the LED will turn off.
+Quando il modulo PIR rileva un movimento, IO14 passerà a livello alto e il LED si accenderà. Altrimenti, quando non viene rilevato alcun movimento, IO14 rimarrà basso e il LED si spegnerà.
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    Il modulo PIR ha due potenziometri: uno regola la sensibilità, l'altro la distanza di rilevamento. Per far funzionare meglio il modulo PIR, è necessario ruotarli entrambi completamente in senso antiorario.
 
     .. image:: ../../components/img/PIR_TTE.png
         :width: 300
         :align: center
 
-**Wiring**
+**Cablatura**
 
 .. image:: ../../img/wiring/5.5_pir_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``5.5_pir.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.5_pir``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
-    * :ref:`unknown_com_port`  
+    * Puoi aprire il file ``5.5_pir.ino`` nel percorso ``esp32-starter-kit-main\c\codes\5.5_pir``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
+    * :ref:`unknown_com_port`
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8b5f0cc8-b732-4ed2-b68e-bb7d0a73a1b8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code has been uploaded successfully, the LED will light up and then go off when the PIR module detects someone passing.
+Dopo che il codice è stato caricato correttamente, il LED si accenderà e poi si spegnerà quando il modulo PIR rileva il passaggio di qualcuno.
 
 .. note::
-    The PIR module has two potentiometers: one adjusts sensitivity, the other adjusts detection distance. To make the PIR module work better, you need to turn both of them counterclockwise to the end.
+    Il modulo PIR ha due potenziometri: uno regola la sensibilità, l'altro la distanza di rilevamento. Per far funzionare meglio il modulo PIR, è necessario ruotarli entrambi completamente in senso antiorario.
 
     .. image:: img/pir_back.png
-
-
 

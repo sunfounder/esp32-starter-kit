@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_breathing_led:
 
-2.2 Breathing LED
-========================
+2.2 LED a Respirazione
+==============================
 
-Now use another method to control the brightness of the LED. Unlike the previous project, here the brightness of the LED is made to slowly diminish until it disappears.
+Ora utilizziamo un altro metodo per controllare la luminosità del LED. A differenza del progetto precedente, qui la luminosità del LED diminuisce lentamente fino a scomparire.
 
-When the sprite on the stage is clicked, the brightness of the LED slowly increases and then goes out instantly.
+Quando lo sprite sul palco viene cliccato, la luminosità del LED aumenta lentamente per poi spegnersi istantaneamente.
 
 .. image:: img/3_ap.png
 
-Required Components
----------------------
+Componenti Necessari
+----------------------------
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -63,65 +63,69 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-You Will Learn
+
+Cosa Imparerai
 ---------------------
 
-- Set the output value of the PWM pin
-- Create variables
-- Change the brightness of the sprite
 
-Build the Circuit
------------------------
 
-This project uses the same circuit as the previous project :ref:`sh_table_lamp`, but instead of using HIGH/LOW to make the LEDs light up or turn off, this project uses the `PWM - Wikipedia <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_ signal to slowly light up or dim down the LED.
+- Impostare il valore di uscita del pin PWM
+- Creare variabili
+- Cambiare la luminosità dello sprite
 
-The PWM signal range is 0-255, on the ESP32 board, 2, 5, 12~15, 18, 19, 21, 22, 25, 26 and 27 can output PWM signal.
+
+
+Costruire il Circuito
+------------------------
+
+Questo progetto utilizza lo stesso circuito del progetto precedente :ref:`sh_table_lamp`, ma invece di utilizzare HIGH/LOW per accendere o spegnere i LED, questo progetto utilizza il segnale `PWM - Wikipedia <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_ per accendere lentamente o spegnere il LED.
+
+L'intervallo del segnale PWM è 0-255, sulla scheda ESP32, i pin 2, 5, 12~15, 18, 19, 21, 22, 25, 26 e 27 possono emettere segnali PWM.
 
 .. image:: img/circuit/1_hello_led_bb.png
 
-Programming
-------------------
+Programmazione
+--------------------
 
-**1. Select a sprite**
+**1. Seleziona uno sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **button3** in the search box, and then click to add it.
+Elimina lo sprite predefinito, fai clic sul pulsante **Scegli uno Sprite** nell'angolo in basso a destra dell'area degli sprite, inserisci **button3** nella casella di ricerca e poi clicca per aggiungerlo.
 
 .. image:: img/3_sprite.png
 
-**2. Creating a variable**.
+**2. Creazione di una variabile**
 
-Create a variable called **pwm** to store the value of the pwm change.
+Crea una variabile chiamata **pwm** per memorizzare il valore della modifica del pwm.
 
-Click on the **Variables** palette and select **Make a Variable**.
+Clicca sulla tavolozza **Variabili** e seleziona **Crea una Variabile**.
 
 .. image:: img/3_ap_va.png
 
-Enter the name of the variable, it can be any name, but it is recommended to describe its function. The data type is number and For all sprites.
+Inserisci il nome della variabile, può essere qualsiasi nome, ma è consigliabile descrivere la sua funzione. Il tipo di dato è numero e per tutti gli sprite.
 
 .. image:: img/3_ap_pwm.png
 
-Once created, you will see **pwm** inside the **Variables** palette and in the checked state, which means this variable will appear on the stage. You can try unchecking it to see if pwm is still present on the stage.
+Una volta creata, vedrai **pwm** all'interno della tavolozza **Variabili** e in stato selezionato, il che significa che questa variabile apparirà sul palco. Puoi provare a deselezionarla per vedere se pwm è ancora presente sul palco.
 
 .. image:: img/3_ap_0.png
 
-**3. Set the initial state**
+**3. Impostare lo stato iniziale**
 
-When the **button3** sprite is clicked, switch the costume to **button-b** (clicked state), and set the initial value of the variable **pwm** to 0.
+Quando lo sprite **button3** viene cliccato, passa al costume **button-b** (stato cliccato) e imposta il valore iniziale della variabile **pwm** a 0.
 
-* [set pwm to 0]: from **Variables** palette, used to set the value of the variable.
+* [imposta pwm a 0]: dalla tavolozza **Variabili**, utilizzato per impostare il valore della variabile.
 
 .. image:: img/3_ap_brightness.png
 
-**4. Make the LED brighter and brighter**
+**4. Far diventare il LED sempre più luminoso**
 
-Since the range of pwm is 255, so by [repeat] block, the variable **pwm** is accumulated to 255 by 5, and then put into [set PWM pin] block, so you can see the LED slowly light up.
+Poiché l'intervallo di pwm è 255, quindi tramite il blocco [ripeti], la variabile **pwm** viene accumulata fino a 255 di 5 in 5, e poi inserita nel blocco [imposta pin PWM], in modo che il LED si accenda lentamente.
 
-* [change pwm by 5]: from **Variables** palette, let the variable change a specific number each time. It can be a positive or negative number, positive is increasing each time, negative is decreasing each time, for example, here the variable pwm is increased by 5 each time.
-* [set PWM pin]: from the **ESP32** palette, used to set the output value of the pwm pin.
+* [cambia pwm di 5]: dalla tavolozza **Variabili**, lascia che la variabile cambi di un numero specifico ogni volta. Può essere un numero positivo o negativo, positivo aumenta ogni volta, negativo diminuisce ogni volta, ad esempio, qui la variabile pwm aumenta di 5 ogni volta.
+* [imposta pin PWM]: dalla tavolozza **ESP32**, utilizzato per impostare il valore di uscita del pin pwm.
 
 .. image:: img/3_ap_1.png
 
-
-Finally, switch the costume of button3 back to **button-a** and make the PWM pin value 0, so that the LED will light up slowly and then turn off again.
+Infine, cambia di nuovo il costume di button3 a **button-a** e imposta il valore del pin PWM a 0, in modo che il LED si accenda lentamente e poi si spenga di nuovo.
 
 .. image:: img/3_ap_2.png

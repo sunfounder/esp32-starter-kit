@@ -1,28 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-
-Video 15: DC Motor Speed Control with ESP32 L293D
+Video 15: Controllo della velocità di un motore DC con ESP32 e L293D
 =============================================================================================
 
-This tutorial covers controlling a DC motor using ESP32 and the L293D motor driver:
+Questo tutorial tratta il controllo di un motore DC utilizzando ESP32 e il driver per motori L293D:
 
-* **Motor Control Basics**: Learn how to control a DC motor's direction and speed with ESP32.
-* **L293D Motor Driver**: Introduction to the L293D driver, essential for interfacing the motor with ESP32.
-* **Two Projects**: The first project controls motor direction, and the second adjusts the motor's speed.
-* **Arduino Code Explanation**: Detailed walkthrough of the Arduino code for motor speed and direction control.
-* **Practical Demonstration**: See the motor in action, demonstrating speed variation and directional change.
+* **Nozioni di base sul controllo del motore**: Scopri come controllare la direzione e la velocità di un motore DC con ESP32.
+* **Driver per motori L293D**: Introduzione al driver L293D, essenziale per l'interfacciamento del motore con ESP32.
+* **Due progetti**: Il primo progetto controlla la direzione del motore, mentre il secondo ne regola la velocità.
+* **Spiegazione del codice Arduino**: Dettagliato walkthrough del codice Arduino per il controllo della velocità e della direzione del motore.
+* **Dimostrazione pratica**: Vedi il motore in azione, con variazioni di velocità e cambi di direzione.
 
 
 **Video**
@@ -31,6 +30,6 @@ This tutorial covers controlling a DC motor using ESP32 and the L293D motor driv
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/ei_SIh1xH1U?si=m4yPixL2KD-_fO_z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_motor`

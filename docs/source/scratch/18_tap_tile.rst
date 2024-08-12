@@ -1,60 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti Esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Omaggi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_tap_tile:
 
-2.18 GAME - Don't Tap on The White Tile
-==========================================
+2.18 GIOCO - Non Toccare la Piastrella Bianca
+==================================================
 
-I'm sure many of you have played this game on your cell phones. This game is played by tapping on randomly appearing black to add points, the speed will get faster and faster, tap on white blocks or miss black blocks game over.
+Sono sicuro che molti di voi abbiano già giocato a questo gioco sui vostri telefoni. Si gioca toccando le piastrelle nere che appaiono casualmente per aggiungere punti; la velocità aumenterà sempre di più e, se si toccano le piastrelle bianche o si mancano quelle nere, il gioco termina.
 
-Now we use PictoBlox to replicate it.
+Ora utilizziamo PictoBlox per replicarlo.
 
-Insert two IR obstacle avoidance modules vertically on the breadboard, when your hand is placed above one of the IR modules, a blink dot will appear on the stage, representing a tap was made.
+Inserisci due moduli di evitamento ostacoli IR verticalmente sulla breadboard. Quando la tua mano viene posizionata sopra uno dei moduli IR, apparirà un punto lampeggiante sul palco, che rappresenta un tocco effettuato.
 
-If the tap to the black block, the score plus 1, touch the white block, the score minus 1.
+Se il tocco avviene sulla piastrella nera, il punteggio aumenta di 1, se tocca la piastrella bianca, il punteggio diminuisce di 1.
 
-You need to decide whether to place your hand on top of the IR module on the left or on top of the IR module on the right, depending on the position of the black block on the stage.
+Devi decidere se posizionare la mano sopra il modulo IR a sinistra o sopra quello a destra, a seconda della posizione della piastrella nera sul palco.
 
 .. image:: img/21_tile.png
 
-Required Components
----------------------
+Componenti Necessari
+-------------------------
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistare i componenti separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -67,121 +67,119 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_avoid_buy|
 
-Build the Circuit
------------------------
+Costruire il Circuito
+-----------------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Il modulo di evitamento ostacoli è un sensore di prossimità a infrarossi con distanza regolabile, il cui output è normalmente alto e basso quando viene rilevato un ostacolo.
 
-Now build the circuit according to the diagram below.
+Ora costruisci il circuito secondo lo schema seguente.
 
 .. image:: img/circuit/19_tap_tile_bb.png
 
-Programming
-------------------
+Programmazione
+---------------------------
 
-Here we need to have 3 sprites, **Tile** , **Left IR** and **Right IR**.
+Qui abbiamo bisogno di 3 sprite, **Tile** , **Left IR** e **Right IR**.
 
-* **Tile** sprite: used to achieve the effect of alternating black and white tiles downward, in the cell phone this game is generally 4 columns, here we only do two columns.
-* **Left IR** sprite: used to achieve the click effect, when the left IR module senses your hand, it will send a message - **left** to **Left IR** sprite, let it start working. If it touches the black tile on the stage, the score will be increased by 1, otherwise the score will be decreased by 1.
-* **Right IR** sprite: The function is basically the same as **Left IR**, except that it receives **Right** information.
+* Sprite **Tile**: utilizzato per ottenere l'effetto di piastrelle nere e bianche che scendono alternativamente, su un cellulare questo gioco ha generalmente 4 colonne, qui ne facciamo solo due.
+* Sprite **Left IR**: utilizzato per ottenere l'effetto di clic, quando il modulo IR sinistro rileva la tua mano, invia un messaggio - **left** allo sprite **Left IR**, che inizia a funzionare. Se tocca la piastrella nera sul palco, il punteggio aumenta di 1, altrimenti diminuisce di 1.
+* Sprite **Right IR**: la funzione è sostanzialmente la stessa di **Left IR**, tranne per il fatto che riceve informazioni **Right**.
 
-**1. Paint a Tile sprite**.
+**1. Disegna uno sprite Tile**.
 
-Delete the default sprite, mouse over the **Add Sprite** icon, select **Paint** and a blank sprite will appear and name it **Tile**.
+Elimina lo sprite predefinito, passa con il mouse sopra l'icona **Aggiungi Sprite**, seleziona **Disegna** e apparirà uno sprite vuoto chiamato **Tile**.
 
 .. image:: img/21_tile1.png
 
-Go to the **Costumes** page and use the **Rectangle** tool to draw a rectangle.
+Vai alla pagina **Costumi** e utilizza lo strumento **Rettangolo** per disegnare un rettangolo.
 
 .. image:: img/21_tile2.png
 
-Select the rectangle and click **Copy** -> **Paste** to make an identical rectangle, then move the two rectangles to a flush position.
+Seleziona il rettangolo e fai clic su **Copia** -> **Incolla** per creare un rettangolo identico, quindi sposta i due rettangoli in posizione allineata.
 
 .. image:: img/21_tile01.png
 
-Select one of the rectangles and choose a fill color of black.
+Seleziona uno dei rettangoli e scegli un colore di riempimento nero.
 
 .. image:: img/21_tile02.png
 
-Now select both rectangles and move them so that their center points match the center of the canvas.
+Ora seleziona entrambi i rettangoli e spostali in modo che i loro punti centrali corrispondano al centro del canvas.
 
 .. image:: img/21_tile0.png
 
-Duplicate costume1, alternating the fill colors of the two rectangles. For example, the fill color of costume1 is white on the left and black on the right, and the fill color of costume2 is black on the left and white on the right.
+Duplica il costume1, alternando i colori di riempimento dei due rettangoli. Ad esempio, il colore di riempimento del costume1 è bianco a sinistra e nero a destra, e il colore di riempimento del costume2 è nero a sinistra e bianco a destra.
 
 .. image:: img/21_tile3.png
 
-**2. Scripting the Tile sprite**
+**2. Scrivere lo script per lo sprite Tile**
 
-Now go back to the **Blocks** page and set the initial position of the **Tile** sprite so that it is at the top of the stage.
+Ora torna alla pagina **Blocchi** e imposta la posizione iniziale dello sprite **Tile** in modo che si trovi nella parte superiore del palco.
 
 .. image:: img/21_tile4.png
 
-Create a variable -**blocks** and give it an initial value to determine the number of times the **Tile** sprite will appear. Use the [repeat until] block to make the variable **blocks** gradually decrease until **blocks** is 0. During this time, have the sprite **Tile** randomly switch its costume.
+Crea una variabile - **blocks** e assegnagli un valore iniziale per determinare il numero di volte in cui lo sprite **Tile** apparirà. Utilizza il blocco [ripeti fino a] per far diminuire gradualmente la variabile **blocks** fino a che **blocks** è 0. Durante questo tempo, fai in modo che lo sprite **Tile** cambi costume in modo casuale.
 
-After clicking on the green flag, you will see the **Tile** sprite on the stage quickly switch costumes.
+Dopo aver cliccato sulla bandiera verde, vedrai lo sprite **Tile** sul palco cambiare costume rapidamente.
 
 .. image:: img/21_tile5.png
 
-Create clones of the **Tile** sprite while the variable **blocks** is decreasing, and stop the script from running when blocks is 0. Two [wait () seconds] blocks are used here, the first to limit the interval between **Tile's** clones and the second is to let the variable blocks decrease to 0 without stopping the program immediately, giving the last tile sprite enough time to move.
-
+Crea cloni dello sprite **Tile** mentre la variabile **blocks** diminuisce, e interrompi l'esecuzione dello script quando blocks è 0. Qui vengono utilizzati due blocchi [attendi () secondi], il primo per limitare l'intervallo tra i cloni di **Tile** e il secondo per far diminuire la variabile blocks fino a 0 senza interrompere immediatamente il programma, dando all'ultimo sprite tile abbastanza tempo per muoversi.
 
 .. image:: img/21_tile6.png
 
-Now script the clone of the **Tile** sprite to move down slowly and delete it when it reaches the bottom of the stage. The change in the y coordinate affects the drop speed, the larger the value, the faster the drop speed.
+Ora script il clone dello sprite **Tile** per farlo muovere lentamente verso il basso e cancellarlo quando raggiunge il fondo del palco. La variazione della coordinata y influenza la velocità di caduta, maggiore è il valore, più veloce sarà la velocità di caduta.
 
 .. image:: img/21_tile7.png
 
-Hide the body and show the clone.
+Nascondi il corpo e mostra il clone.
 
 .. image:: img/21_tile8.png
 
-**3. Read the values of the 2 IR modules**
+**3. Leggere i valori dei 2 moduli IR**
 
-In the backdrop, read the values of the 2 IR modules and make the corresponding actions.
+Nello sfondo, leggi i valori dei 2 moduli IR e esegui le azioni corrispondenti.
 
-* If the left IR obstacle avoidance module senses your hand, broadcast a message - **left**.
-* If the left IR avoidance module senses your hand, broadcast a message - **right**.
+* Se il modulo IR sinistro rileva la tua mano, trasmetti un messaggio - **left**.
+* Se il modulo IR destro rileva la tua mano, trasmetti un messaggio - **right**.
 
 .. image:: img/21_tile9.png
     :width: 800
 
-**4. Left IR sprite**
+**4. Sprite Left IR**
 
-Again, mouse over the **Add sprite** icon and select **Paint** to create a new sprite called **Left IR**.
+Ancora una volta, passa con il mouse sopra l'icona **Aggiungi sprite** e seleziona **Disegna** per creare un nuovo sprite chiamato **Left IR**.
 
 .. image:: img/21_tile10.png
 
-Go to the **Costumes** page of the **Left IR** sprite, select the fill color (any color out of black and white) and draw a circle.
+Vai alla pagina **Costumi** dello sprite **Left IR**, seleziona il colore di riempimento (qualsiasi colore diverso dal nero e dal bianco) e disegna un cerchio.
 
 .. image:: img/21_tile11.png
 
-Now start scripting the **Left IR** sprite. When the message - **left** is received (the IR receiver module on the left detects an obstacle), then determine if the black block of the **Tile** sprite is touched, and if it is, let the variable **count** add 1, otherwise subtract 1.
+Ora inizia a scrivere lo script per lo sprite **Left IR**. Quando viene ricevuto il messaggio - **left** (il modulo IR ricevitore sinistro rileva un ostacolo), determina se il blocco nero dello sprite **Tile** viene toccato, e se lo è, lascia che la variabile **count** aumenti di 1, altrimenti diminuisce di 1.
 
 .. image:: img/21_tile12.png
-
 .. note::
 
-    You need to make the **Tile** sprite appear on the stage, and then absorb the color of the black block in the **Tile** sprite.
+    Devi fare in modo che lo sprite **Tile** appaia sul palco e poi assorba il colore del blocco nero nello sprite **Tile**.
 
     .. image:: img/21_tile13.png
 
-Now let's do the sensing effect (zoom in and out) for **Left IR**.
+Ora realizziamo l'effetto di rilevamento (zoom in e out) per **Left IR**.
 
 .. image:: img/21_tile14.png
 
-Make the **Left IR** sprite hide when the green flag is clicked, show when the message - **left** is received, and finally hide again.
+Fai nascondere lo sprite **Left IR** quando viene cliccata la bandiera verde, mostralo quando viene ricevuto il messaggio - **left** e infine nascondilo di nuovo.
 
 .. image:: img/21_tile15.png
 
-**5. Right IR sprite**
+**5. Sprite Right IR**
 
-Copy the **Left IR** sprite and rename it to **Right IR**.
+Copia lo sprite **Left IR** e rinominalo in **Right IR**.
 
 .. image:: img/21_tile16.png
 
-Then change the receive message to - **right**.
+Poi cambia il messaggio ricevuto in - **right**.
 
 .. image:: img/21_tile17.png
 
-Now all the scripting is done and you can click on the green flag to run the script.
+Ora tutto lo scripting è terminato e puoi cliccare sulla bandiera verde per eseguire lo script.

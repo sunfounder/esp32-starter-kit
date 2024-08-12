@@ -1,48 +1,48 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato a nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_ac_buz:
 
 3.1 Beep
 ==================
-This is a simple project to make an active buzzer beep quickly four times every second.
+Questo è un semplice progetto per far emettere un bip rapido a un buzzer attivo quattro volte al secondo.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -59,53 +59,50 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-Here is a list of available pins on the ESP32 board for this project.
+Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pin Disponibili
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_3.1_buzzer.png
     :width: 500
     :align: center
 
-When the IO14 output is high, after the 1K current limiting resistor (to protect the transistor), the S8050 (NPN transistor) will conduct, so that the buzzer will sound.
+Quando l'uscita IO14 è a livello alto, dopo il resistore limitatore di corrente da 1K (per proteggere il transistor), il S8050 (transistor NPN) condurrà, facendo suonare il buzzer.
 
-The role of S8050 (NPN transistor) is to amplify the current and make the buzzer sound louder. In fact, you can also connect the buzzer directly to IO14, but you will find that the buzzer sound is smaller.
-
-**Wiring**
+Il ruolo del S8050 (transistor NPN) è quello di amplificare la corrente e rendere il suono del buzzer più forte. In realtà, puoi anche collegare il buzzer direttamente a IO14, ma noterai che il suono del buzzer sarà più debole.
 
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+**Cablaggio**
+
+Il kit include due tipi di buzzer.
+Dobbiamo utilizzare un buzzer attivo. Giralo, il retro sigillato (non il PCB esposto) è quello che vogliamo usare.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
     :align: center
 
-The buzzer needs to use a transistor when working, here we use S8050 (NPN Transistor).
+Il buzzer necessita di un transistor per funzionare, qui utilizziamo l'S8050 (Transistor NPN).
 
 .. image:: ../../img/wiring/3.1_buzzer_bb.png
 
-
-**Code**
-
+**Codice**
 
 .. note::
 
-    * You can open the file ``3.1_beep.ino`` under the path of ``esp32-starter-kit-main\c\codes\3.1_beep``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puoi aprire il file ``3.1_beep.ino`` nel percorso ``esp32-starter-kit-main\c\codes\3.1_beep``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, clicca sul pulsante **Carica**.
     * :ref:`unknown_com_port`
-   
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f17a663c-2941-407e-9137-6f6eacd28c23/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+Dopo che il codice è stato caricato con successo, sentirai un bip ogni secondo.

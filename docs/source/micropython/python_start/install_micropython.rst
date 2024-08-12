@@ -1,48 +1,48 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _install_micropython_on_esp32:
 
-1.3 Install MicroPython on the ESP32(Important)
-==================================================
+1.3 Installare MicroPython su ESP32 (Importante)
+=====================================================
 
-#. Download the |link_esp32_micropython_download| from the MicroPython official website and then download the latest version of the firmware.
+#. Scarica il |link_esp32_micropython_download| dal sito ufficiale di MicroPython e successivamente scarica l'ultima versione del firmware.
 
     .. image:: img/dowload_micropython_uf2.png
 
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Collega l'ESP32 WROOM 32E al computer utilizzando un cavo Micro USB. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Click on the bottom right corner of Thonny IDE, select **"MicroPython(ESP32).COMXX"** from the pop-up menu, and then select **"Configure interpreter"**.
+#. Clicca nell'angolo in basso a destra di Thonny IDE, seleziona **"MicroPython(ESP32).COMXX"** dal menu a comparsa e poi seleziona **"Configura interprete"**.
 
     .. image:: img/install_micropython1.png
 
-#. Click **"Install or Update MicroPython"** in the new pop-up window.
+#. Nella nuova finestra pop-up, clicca su **"Installa o aggiorna MicroPython"**.
 
     .. image:: img/install_micropython2.png
 
-#. Select the correct port and the firmware you downloaded earlier, and click **"Install"**.
+#. Seleziona la porta corretta e il firmware che hai scaricato in precedenza, quindi clicca su **"Installa"**.
 
     .. image:: img/install_micropython3.png
 
-#. After a successful installation, you can close this page.
+#. Dopo un'installazione riuscita, puoi chiudere questa pagina.
 
     .. image:: img/install_micropython4.png
 
-#. When you return to the Thonny homepage, you will see MicroPython version and ESP32-related prompts, instead of red error prompts.
+#. Quando torni alla homepage di Thonny, vedrai la versione di MicroPython e i prompt relativi all'ESP32, invece di messaggi di errore in rosso.
 
     .. image:: img/install_micropython5.png

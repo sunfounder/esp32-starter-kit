@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_motor:
 
-DC Motor
+Motore DC
 ===================
 
 .. image:: img/image114.jpeg
     :align: center
 
-This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
+Questo è un motore DC da 3V. Quando si applica un livello alto e un livello basso ai due terminali, il motore inizierà a ruotare.
 
-* **Length**: 25mm
-* **Diameter**: 21mm
-* **Shaft Diameter**: 2mm
-* **Shaft Length**: 8mm
-* **Voltage**: 3-6V
-* **Current**: 0.35-0.4A
-* **Speed at 3V**: 19000 RPM (Rotations Per Minute)
-* **Weight**: Approximately 14g (for one unit)
+* **Lunghezza**: 25mm
+* **Diametro**: 21mm
+* **Diametro dell'albero**: 2mm
+* **Lunghezza dell'albero**: 8mm
+* **Tensione**: 3-6V
+* **Corrente**: 0.35-0.4A
+* **Velocità a 3V**: 19000 RPM (rotazioni per minuto)
+* **Peso**: Circa 14g (per unità)
 
-Direct current (DC) motor is a continuous actuator that converts electrical energy into mechanical energy. DC motors make rotary pumps, fans, compressors, impellers, and other devices work by producing continuous angular rotation.
+Il motore a corrente continua (DC) è un attuatore continuo che converte l'energia elettrica in energia meccanica. I motori DC fanno funzionare pompe rotative, ventilatori, compressori, giranti e altri dispositivi producendo una rotazione angolare continua.
 
-A DC motor consists of two parts, the fixed part of the motor called the **stator** and the internal part of the motor called the **rotor** (or **armature** of a DC motor) that rotates to produce motion.
-The key to generating motion is to position the armature within the magnetic field of the permanent magnet (whose field extends from the north pole to the south pole). The interaction of the magnetic field and the moving charged particles (the current-carrying wire generates the magnetic field) produces the torque that rotates the armature.
+Un motore DC è costituito da due parti: la parte fissa del motore chiamata **statore** e la parte interna del motore chiamata **rotore** (o **ancora** di un motore DC) che ruota per produrre movimento.
+Il segreto per generare movimento è posizionare l'armatura all'interno del campo magnetico del magnete permanente (il cui campo si estende dal polo nord al polo sud). L'interazione tra il campo magnetico e le particelle cariche in movimento (il filo che trasporta corrente genera il campo magnetico) produce la coppia che fa ruotare l'armatura.
 
 .. image:: img/motor_sche.png
     :align: center
 
-Current flows from the positive terminal of the battery through the circuit, through the copper brushes to the commutator, and then to the armature.
-But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
+La corrente fluisce dal terminale positivo della batteria attraverso il circuito, passando attraverso le spazzole di rame fino al commutatore, e poi all'armatura.
+Ma a causa delle due interruzioni nel commutatore, questo flusso si inverte a metà di ogni rotazione completa.
 
-This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
+Questa continua inversione essenzialmente converte la corrente continua della batteria in corrente alternata, permettendo all'armatura di sperimentare la coppia nella direzione giusta al momento giusto per mantenere la rotazione.
 
 .. image:: img/motor_rotate.gif
     :align: center
 
-**Example**
+**Esempio**
 
-* :ref:`ar_motor` (Arduino Project)
-* :ref:`py_motor` (MicroPython Project)
-* :ref:`sh_rotating_fan` (Scratch Project)
+* :ref:`ar_motor` (Progetto Arduino)
+* :ref:`py_motor` (Progetto MicroPython)
+* :ref:`sh_rotating_fan` (Progetto Scratch)

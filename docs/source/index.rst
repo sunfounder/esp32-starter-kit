@@ -1,46 +1,47 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni speciali.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 SunFounder |link_esp32_starter_kit|
 ==================================================
 
-Thanks for choosing our |link_esp32_starter_kit|.
+Grazie per aver scelto il nostro |link_esp32_starter_kit|.
 
 * |link_esp32_kit|
 
 .. note::
-    This document is available in the following languages.
+    Questo documento è disponibile nelle seguenti lingue.
 
         * |link_spanish_tutorials|
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
+        * |link_it_tutorials|
 
-    Please click on the respective links to access the document in your preferred language.
+    Clicca sui rispettivi link per accedere al documento nella tua lingua preferita.
 
 .. image:: img/esp32_ultimate_kit.png
 
-Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
+Benvenuto nel Kit di Apprendimento ESP32! Questo pacchetto completo è progettato per offrire sia ai principianti che agli sviluppatori esperti un'immersione profonda nel versatile mondo del microcontrollore ESP32. Con l'ESP32 WROOM 32E al suo cuore e una gamma di componenti accessori come LED, sensori, motori e altro ancora, gli utenti possono esplorare una vasta gamma di progetti.
 
-Whether you're keen on basic electronics, IoT integrations, this kit has it all. For MicroPython enthusiasts, we provide a structured introduction to MicroPython, complete with IDE setups and basic syntax lessons. Arduino users are not left behind, with a dedicated section on getting started with Arduino, and a suite of basic projects to jumpstart the learning process.
+Che tu sia interessato all'elettronica di base o alle integrazioni IoT, questo kit ha tutto ciò che serve. Per gli appassionati di MicroPython, offriamo un'introduzione strutturata a MicroPython, completa di configurazioni IDE e lezioni di sintassi di base. Gli utenti di Arduino non sono lasciati indietro, con una sezione dedicata all'inizio con Arduino e una suite di progetti base per avviare il processo di apprendimento.
 
-For the creatives, there's a delightful section on integrating with Scratch, allowing for a blend of programming and storytelling. Each project in the kit is meticulously outlined, ensuring you understand the objectives, the circuit assembly, and the programming aspects.
+Per i creativi, c'è una sezione dedicata all'integrazione con Scratch, permettendo una fusione tra programmazione e narrazione. Ogni progetto nel kit è meticolosamente delineato, assicurando che tu comprenda gli obiettivi, l'assemblaggio del circuito e gli aspetti di programmazione.
 
-With a myriad of game projects, practical applications, and troubleshooting FAQs, this kit promises an enriching learning experience for all. Dive in and let the ESP32 adventure begin!
+Con una miriade di progetti di gioco, applicazioni pratiche e FAQ per la risoluzione dei problemi, questo kit promette un'esperienza di apprendimento arricchente per tutti. Immergiti e lascia che l'avventura ESP32 abbia inizio!
 
-If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
+Se hai domande o altre idee interessanti, non esitare a inviare un'email a service@sunfounder.com.
 
 .. toctree::
     :maxdepth: 2
@@ -55,7 +56,8 @@ If you have any questions or other interesting ideas, feel free to send an email
     faq/faq
     thank-learning
 
-Copyright Notice
+Nota sul Copyright
 -----------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+Tutti i contenuti, inclusi ma non limitati a testi, immagini e codice in questo manuale, sono di proprietà della SunFounder Company. Dovresti usarli solo per studio personale, indagine, divertimento o altri scopi non commerciali o senza scopo di lucro, secondo le normative e le leggi sul copyright, senza violare i diritti legali dell'autore e dei relativi titolari dei diritti. Per qualsiasi individuo o organizzazione che utilizza questi contenuti a scopo di lucro senza autorizzazione, l'Azienda si riserva il diritto di intraprendere azioni legali.
+

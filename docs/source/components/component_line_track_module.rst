@@ -1,65 +1,66 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_line_track:
 
-Line Tracking Module
+Modulo di Tracciamento Linea
 ================================
 
 .. image:: img/line_track.png
     :width: 400
     :align: center
 
-* S: Usually low level, high level when the black line is detected.
-* V+：Power supply, 3.3v~5V
-* G: Ground
+* S: Solitamente livello basso, livello alto quando viene rilevata la linea nera.
+* V+: Alimentazione, 3.3v~5V
+* G: Terra
 
-This is a 1-channel Line Tracking module which, as the name suggests, tracks black lines on a white background or white lines against a black background.
+Questo è un modulo di tracciamento linea a 1 canale che, come suggerisce il nome, traccia linee nere su uno sfondo bianco o linee bianche su uno sfondo nero.
 
 .. image:: img/tcrt5000.jpg
     :width: 200
     :align: center
 
-The module uses a TCRT500 infrared sensor, which consists of an infrared LED (blue) and a photosensitive triplet (black).
+Il modulo utilizza un sensore a infrarossi TCRT5000, che è composto da un LED a infrarossi (blu) e un triplet fotosensibile (nero).
 
-* The blue infrared LED, when powered on, emits infrared light that is invisible to the human eye.
-* The black phototransistor, which is used to receive infrared light, has an internal resistor whose resistance varies with the infrared light received; the more infrared light received, the lower its resistance decreases and vice versa.
+* Il LED a infrarossi blu, quando alimentato, emette luce infrarossa che è invisibile all'occhio umano.
+* Il fototransistor nero, che viene utilizzato per ricevere la luce infrarossa, ha una resistenza interna che varia con la luce infrarossa ricevuta; più luce infrarossa riceve, più la sua resistenza diminuisce e viceversa.
 
-There is a LM393 comparator on the module, which is used to compare the voltage of the phototransistor with the set voltage (adjusted by potentiometer), if it is greater than the set voltage, the output is 1; otherwise the output is 0.
+Sul modulo è presente un comparatore LM393, che viene utilizzato per confrontare la tensione del fototransistor con la tensione impostata (regolata tramite potenziometro); se è superiore alla tensione impostata, l'uscita è 1; altrimenti l'uscita è 0.
 
-Therefore, when the infrared emitter tube shines on a black surface, because the black will absorb light, the photosensitive transistor receives less infrared light, its resistance will increase (voltage increase), after LM393 comparator, the output high level.
+Pertanto, quando il tubo emettitore a infrarossi illumina una superficie nera, poiché il nero assorbe la luce, il transistor fotosensibile riceve meno luce infrarossa, la sua resistenza aumenterà (aumento della tensione), e dopo il comparatore LM393, l'uscita sarà a livello alto.
 
-Similarly, when it shines on a white surface, the reflected light will become more and the resistance of the photosensitive transistor will decrease (voltage decreases); therefore, the comparator outputs a low level and the indicator LED lights up.
+Analogamente, quando illumina una superficie bianca, la luce riflessa aumenterà e la resistenza del transistor fotosensibile diminuirà (diminuzione della tensione); quindi, il comparatore emette un livello basso e il LED indicatore si accende.
 
 
 
 * `TCRT5000 <https://www.vishay.com/docs/83760/tcrt5000.pdf>`_
 
-**Features**
+**Caratteristiche**
 
-* Using infrared emission sensor TCRT5000
-* Detection distance: 1-8mm, focal length of 2.5mm
-* Comparator output signal clean, good waveform, driving capacity greater than 15mA
-* Using potentiometer for sensitivity adjustment
-* Operating voltage: 3.3V-5V
-* Digital output: 0 (white) and 1 (black)
-* Uses wide voltage LM393 comparator.
-* Size: 42mmx10mm
+* Utilizzo del sensore di emissione a infrarossi TCRT5000
+* Distanza di rilevamento: 1-8mm, lunghezza focale di 2.5mm
+* Segnale di uscita del comparatore pulito, buona forma d'onda, capacità di pilotaggio superiore a 15mA
+* Regolazione della sensibilità tramite potenziometro
+* Tensione di funzionamento: 3.3V-5V
+* Uscita digitale: 0 (bianco) e 1 (nero)
+* Utilizzo del comparatore LM393 a larga tensione.
+* Dimensioni: 42mmx10mm
 
 
-**Example**
+**Esempio**
 
-* :ref:`ar_line_track` (Arduino Project)
-* :ref:`py_line_track` (MicroPython Project)
-* :ref:`sh_protect_heart` (Scratch Project)
+* :ref:`ar_line_track` (Progetto Arduino)
+* :ref:`py_line_track` (Progetto MicroPython)
+* :ref:`sh_protect_heart` (Progetto Scratch)
+

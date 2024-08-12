@@ -1,48 +1,47 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_joystick:
 
-Joystick Module
-=======================
+Modulo Joystick
+=========================
 
 .. image:: img/joystick_pic.png
     :align: center
     :width: 600
 
-* **GND**: Ground.
-* **+5V**: Power supply, accepts 3.3V to 5V.
-* **VRX**: Analog output corresponding to the joystick's horizontal (X-axis) position.
-* **VRY**: Analog output corresponding to the joystick's vertical (Y-axis) position.
-* **SW**: Button switch output, activated when the joystick is pressed down. For proper operation, an external pull-up resistor is required. With the resistor in place, the SW pin outputs a high level when idle and goes low when the joystick is pressed.
+* **GND**: Massa.
+* **+5V**: Alimentazione, accetta da 3.3V a 5V.
+* **VRX**: Uscita analogica corrispondente alla posizione orizzontale del joystick (asse X).
+* **VRY**: Uscita analogica corrispondente alla posizione verticale del joystick (asse Y).
+* **SW**: Uscita del pulsante, attivata quando il joystick viene premuto. Per un funzionamento corretto è necessaria una resistenza di pull-up esterna. Con la resistenza in posizione, il pin SW emette un segnale alto quando è inattivo e va basso quando il joystick viene premuto.
 
+L'idea di base di un joystick è quella di tradurre il movimento di un'asta in informazioni elettroniche che un computer può elaborare.
 
-The basic idea of a joystick is to translate the movement of a stick into electronic information that a computer can process.
+Per comunicare un'intera gamma di movimenti al computer, un joystick deve misurare la posizione dell'asta su due assi: l'asse X (da sinistra a destra) e l'asse Y (su e giù). Proprio come nella geometria di base, le coordinate X-Y individuano esattamente la posizione dell'asta.
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick's position on two axes - the X-axis (left to right) and the Y-axis (up and down). Just as in basic geometry, the X-Y coordinates pinpoint the stick's position exactly.
+Per determinare la posizione dell'asta, il sistema di controllo del joystick monitora semplicemente la posizione di ciascun asse. Il design convenzionale del joystick analogico lo fa con due potenziometri, o resistori variabili.
 
-To determine the location of the stick, the joystick control system simply monitors the position of each shaft. The conventional analog joystick design does this with two potentiometers, or variable resistors.
-
-The joystick also has a digital input that is actuated when the joystick is pressed down.
+Il joystick ha anche un ingresso digitale che si attiva quando il joystick viene premuto.
 
 .. image:: img/joystick318.png
     :align: center
     :width: 600
 	
-**Example**
+**Esempio**
 
-* :ref:`ar_joystick` (Arduino Project)
-* :ref:`py_joystick` (MicroPython Project)
-* :ref:`sh_star_crossed` (Scratch Project)
-* :ref:`sh_dragon` (Scratch Project)
+* :ref:`ar_joystick` (Progetto Arduino)
+* :ref:`py_joystick` (Progetto MicroPython)
+* :ref:`sh_star_crossed` (Progetto Scratch)
+* :ref:`sh_dragon` (Progetto Scratch)

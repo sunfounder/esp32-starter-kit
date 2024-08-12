@@ -1,29 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anteprime esclusive.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 35: Plant Monitor
+Video 35: Monitoraggio delle Piante
 ====================================================
 
-This tutorial demonstrates how to build a smart plant monitoring system using an ESP32 board, which measures temperature, humidity, soil moisture, and light, and displays the data on an LCD. It also includes a manual water pump control feature.
+Questo tutorial dimostra come costruire un sistema di monitoraggio intelligente per le piante utilizzando una scheda ESP32, che misura temperatura, umidità, umidità del suolo e luce, visualizzando i dati su un display LCD. Include anche una funzione di controllo manuale della pompa dell'acqua.
 
-* **Comprehensive Monitoring**: Utilizes DHT11, soil moisture sensor, and LDR to monitor plant health indicators.
-* **LCD Display Integration**: Shows real-time data readings on an LCD screen for easy monitoring.
-* **Water Pump Control**: Includes a manual push button to activate a water pump for plant watering.
-* **ESP32 and Component Overview**: Explains the functionality of each component and their integration.
-* **Practical Demonstration**: Shows the system in action, providing a clear example of its capabilities.
-* **Arduino Code and Setup**: Walks through the Arduino code required for the project, including setup and sensor readings.
-
+* **Monitoraggio Completo**: Utilizza DHT11, sensore di umidità del suolo e LDR per monitorare gli indicatori di salute delle piante.
+* **Integrazione Display LCD**: Mostra le letture dei dati in tempo reale su uno schermo LCD per un monitoraggio semplice.
+* **Controllo della Pompa dell'Acqua**: Include un pulsante manuale per attivare una pompa dell'acqua per l'irrigazione delle piante.
+* **Panoramica su ESP32 e Componenti**: Spiega la funzionalità di ogni componente e la loro integrazione.
+* **Dimostrazione Pratica**: Mostra il sistema in azione, fornendo un chiaro esempio delle sue capacità.
+* **Codice Arduino e Configurazione**: Guida attraverso il codice Arduino necessario per il progetto, inclusa la configurazione e la lettura dei sensori.
 
 **Video**
 
@@ -31,8 +30,6 @@ This tutorial demonstrates how to build a smart plant monitoring system using an
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/SdgvQlIllPA?si=DcM2kaQfjW2bM1eQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`ar_plant_monitor`
-
-

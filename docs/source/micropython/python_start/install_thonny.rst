@@ -1,33 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _thonny_ide:
 
-1.2 Install Thonny IDE
-=======================================
+1.2 Installare Thonny IDE
+==============================
 
-Before you can start to program ESP32 with MicroPython, you need an integrated development environment (IDE), here we recommend Thonny. Thonny comes with Python 3.7 built in, just one simple installer is needed and you're ready to learn programming.
+Prima di iniziare a programmare ESP32 con MicroPython, hai bisogno di un ambiente di sviluppo integrato (IDE), e qui ti consigliamo Thonny. Thonny include Python 3.7 integrato, basta un semplice installer e sei pronto per imparare a programmare.
 
-#. You can download it by visiting the |link_thonny| website. Once open the page, you will see a light gray box in the upper right corner, click on the link that applies to your operating system.
+#. Puoi scaricarlo visitando il sito |link_thonny|. Una volta aperta la pagina, vedrai una casella grigia chiara nell'angolo in alto a destra, clicca sul link che corrisponde al tuo sistema operativo.
 
     .. image:: img/download_thonny.png
 
-
-#. The installers have been signed with a new certificate which hasn't built up its reputation yet. You may need to click through your browser warning (e.g. choose "Keep" instead of "Discard" in Chrome) and Windows Defender warning (**More info** ⇒ **Run anyway**).
+#. Gli installer sono stati firmati con un nuovo certificato che non ha ancora acquisito una buona reputazione. Potresti dover cliccare attraverso l'avviso del tuo browser (ad esempio, scegliendo "Mantieni" invece di "Scarta" in Chrome) e l'avviso di Windows Defender (**Maggiori informazioni** ⇒ **Esegui comunque**).
 
     .. image:: img/install_thonny1.png
 
-#. Next, click **Next** and **Install** to finish installing Thonny.
+#. Successivamente, clicca su **Next** e **Installa** per completare l'installazione di Thonny.
 
     .. image:: img/install_thonny6.png

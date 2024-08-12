@@ -1,51 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato a nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_ir_obstacle:
 
-5.3 Detect the Obstacle
-===================================
+5.3 Rilevamento Ostacoli
+=============================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+Questo modulo è comunemente installato su automobili e robot per rilevare la presenza di ostacoli davanti. È anche ampiamente utilizzato in dispositivi portatili, rubinetti e così via.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -56,55 +54,52 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_avoid_buy|
 
+**Pin Disponibili**
 
-**Available Pins**
+* **Pin Disponibili**
 
-* **Available Pins**
-
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Pin Disponibili
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **Pin di Strapping (Input)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    I pin di strapping sono un set speciale di pin utilizzati per determinare modalità di avvio specifiche durante l'avvio del dispositivo 
+    (cioè, reset all'accensione).
         
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pin di Strapping
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    In generale, **non è consigliabile utilizzarli come pin di input**. Se desideri utilizzare questi pin, considera l'impatto potenziale sul processo di avvio. Per maggiori dettagli, consulta la sezione :ref:`esp32_strapping`.
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_5.3_avoid.png
 
-When the obstacle avoidance module does not detect any obstacles, IO14 returns a high level. However, when it detects an obstacle, it returns a low level. You can adjust the blue potentiometer to modify the detection distance of this module.
+Quando il modulo di evitamento ostacoli non rileva alcun ostacolo, IO14 ritorna a livello alto. Tuttavia, quando rileva un ostacolo, ritorna a livello basso. Puoi regolare il potenziometro blu per modificare la distanza di rilevamento di questo modulo.
 
-**Wiring**
-
+**Cablaggio**
 
 .. image:: ../../img/wiring/5.3_avoid_bb.png
 
-
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``5.3.detect_the_obstacle.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.3.detect_the_obstacle``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puoi aprire il file ``5.3.detect_the_obstacle.ino`` nel percorso ``esp32-starter-kit-main\c\codes\5.3.detect_the_obstacle``. 
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, clicca sul pulsante **Carica**.
     * :ref:`unknown_com_port`
-   
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b0f22caa-3c77-4dc1-9a33-20ff23d04a5e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Set the serial communication baud rate to 115200.
-After the code is uploaded successfully, if the IR obstacle avoidance module detects something blocking in front of it, "0" will appear on the serial monitor, otherwise "1" will be displayed.
+Imposta la velocità di comunicazione seriale a 115200 baud.
+Dopo che il codice è stato caricato con successo, se il modulo di evitamento ostacoli IR rileva qualcosa che blocca davanti a sé, sul monitor seriale apparirà "0", altrimenti verrà visualizzato "1".

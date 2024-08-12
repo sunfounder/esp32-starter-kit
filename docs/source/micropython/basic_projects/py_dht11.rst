@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime speciali.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_dht11:
 
-5.13 Temperature - Humidity
+5.13 Temperatura - Umidità
 =======================================
-The DHT11 is a temperature and humidity sensor commonly used for environmental measurements. It is a digital sensor that communicates with a microcontroller to provide temperature and humidity readings.
+Il DHT11 è un sensore di temperatura e umidità comunemente utilizzato per le misurazioni ambientali. Si tratta di un sensore digitale che comunica con un microcontrollore per fornire letture di temperatura e umidità.
 
-In this project, we will be reading the DHT11 sensor and printing out the temperature and humidity values it detects.
+In questo progetto, leggeremo il sensore DHT11 e stamperemo i valori di temperatura e umidità rilevati.
 
-By reading the data provided by the sensor, we can obtain the current temperature and humidity values in the environment. These values can be used for real-time monitoring of environmental conditions, weather observations, indoor climate control, humidity reports, and more.
+Leggendo i dati forniti dal sensore, possiamo ottenere i valori attuali di temperatura e umidità nell'ambiente. Questi valori possono essere utilizzati per il monitoraggio in tempo reale delle condizioni ambientali, osservazioni meteorologiche, controllo del clima interno, report sull'umidità e altro ancora.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - ESP32 Starter Kit
+    *   - Kit di Partenza ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -59,32 +59,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_dht11_buy|
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Pin Disponibili
             - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_5.13_dht11.png
 
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/5.13_dht11_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.13_dht11.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Apri il file ``5.13_dht11.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Poi, clicca su "Esegui Script Corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
 
 .. code-block:: python
 
@@ -92,44 +92,43 @@ You can also buy them separately from the links below.
     import machine
     import time
 
-    # Initialize the DHT11 sensor and connect it to pin 14
+    # Inizializza il sensore DHT11 e collegalo al pin 14
     sensor = dht.DHT11(machine.Pin(14))
 
-    # Loop indefinitely to continuously measure temperature and humidity
+    # Ciclo infinito per misurare continuamente temperatura e umidità
     while True:
         try:
-            # Measure temperature and humidity
+            # Misura la temperatura e l'umidità
             sensor.measure()
 
-            # Get temperature and humidity values
+            # Ottieni i valori di temperatura e umidità
             temp = sensor.temperature()
             humi = sensor.humidity()
 
-            # Print temperature and humidity
+            # Stampa la temperatura e l'umidità
             print("Temperature: {}, Humidity: {}".format(temp, humi))
 
-            # Wait for 1 second between measurements
+            # Attendi 1 secondo tra una misurazione e l'altra
             time.sleep(1)
         except Exception as e:
             print("Error: ", e)
             time.sleep(1)
 
 
-When the code is running, you will see the Shell continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+Quando il codice è in esecuzione, vedrai che la Shell stampa continuamente la temperatura e l'umidità, e man mano che il programma continua a funzionare, questi due valori diventeranno sempre più precisi.
 
 
-**Learn More**
+**Approfondisci**
 
-You can also display the temperature and humidity on the I2C LCD1602.
+Puoi anche visualizzare la temperatura e l'umidità sul display LCD1602 I2C.
 
 .. image:: ../../img/wiring/5.13_dht11_lcd_bb.png
 
 .. note::
 
-    * Open the ``5.13_dht11_lcd.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-    * Here you need to use the library called ``lcd1602.py``, please check if it has been uploaded to ESP32, for a detailed tutorial refer to :ref:`add_libraries_py`.
-
+    * Apri il file ``5.13_dht11_lcd.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Poi, clicca su "Esegui Script Corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
+    * Qui devi utilizzare la libreria chiamata ``lcd1602.py``, verifica se è stata caricata su ESP32, per un tutorial dettagliato fai riferimento a :ref:`add_libraries_py`.
 
 .. code-block:: python
 
@@ -138,33 +137,33 @@ You can also display the temperature and humidity on the I2C LCD1602.
     import time
     from lcd1602 import LCD
 
-    # Initialize the DHT11 sensor and connect it to pin 14
+    # Inizializza il sensore DHT11 e collegalo al pin 14
     sensor = dht.DHT11(machine.Pin(14))
 
-    # Initialize the LCD1602 display
+    # Inizializza il display LCD1602
     lcd = LCD()
 
-    # Loop to measure temperature and humidity
+    # Ciclo per misurare temperatura e umidità
     while True:
         try:
-            # Measure temperature and humidity
+            # Misura la temperatura e l'umidità
             sensor.measure()
 
-            # Get temperature and humidity values
+            # Ottieni i valori di temperatura e umidità
             temp = sensor.temperature()
             humi = sensor.humidity()
 
-            # Print temperature and humidity
+            # Stampa la temperatura e l'umidità
             print("Temperature: {}, Humidity: {}".format(temp, humi))
 
-            # Clear the LCD display
+            # Cancella il display LCD
             lcd.clear()
 
-            # Display temperature and humidity on the LCD1602 screen
+            # Visualizza la temperatura e l'umidità sullo schermo LCD1602
             lcd.write(0, 0, "Temp: {}\xDFC".format(temp))
             lcd.write(0, 1, "Humi: {}%".format(humi))
 
-            # Wait for 2 seconds before measuring again
+            # Attendi 2 secondi prima di misurare nuovamente
             time.sleep(2)
 
         except Exception as e:

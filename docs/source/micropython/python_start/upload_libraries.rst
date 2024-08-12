@@ -1,52 +1,51 @@
-
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _add_libraries_py:
 
-1.4 Upload the Libraries (Important)
-======================================
+1.4 Carica le Librerie (Importante)
+========================================
 
-In some projects, you will need additional libraries. So here we upload these libraries to ESP32 first, and then we can run the code directly later.
+In alcuni progetti, avrai bisogno di librerie aggiuntive. Quindi, per prima cosa, carichiamo queste librerie su ESP32 e successivamente potremo eseguire il codice direttamente.
 
-#. Download the relevant code from the link below.
+#. Scarica il codice rilevante dal link qui sotto.
 
 
    * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Collega l'ESP32 WROOM 32E al computer utilizzando un cavo Micro USB. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Open Thonny IDE and click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+#. Apri Thonny IDE e fai clic sull'interprete "MicroPython (ESP32).COMXX" nell'angolo in basso a destra.
 
     .. image:: img/sec_inter.png
 
-#. In the top navigation bar, click **View** -> **Files**.
+#. Nella barra di navigazione in alto, fai clic su **Visualizza** -> **File**.
 
     .. image:: img/th_files.png
 
-#. Switch the path to the folder where you downloaded the `code package <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ before, and then go to the ``esp32-starter-kit-main\micropython\libs`` folder.
+#. Cambia il percorso nella cartella in cui hai scaricato in precedenza il `code package <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_, quindi vai alla cartella ``esp32-starter-kit-main\micropython\libs``.
 
     .. image:: img/th_path.png
 
-#. Select all the files or folders in the ``libs/`` folder, right-click and click **Upload to**, it will take a while to upload.
+#. Seleziona tutti i file o cartelle nella cartella ``libs/``, fai clic destro e seleziona **Carica su**, ci vorrà un po' di tempo per caricarli.
 
     .. image:: img/th_upload.png
 
-#. Now you will see the files you just uploaded inside your drive ``MicroPython device``.
+#. Ora vedrai i file che hai appena caricato all'interno della tua unità ``MicroPython device``.
 
     .. image:: img/th_done.png

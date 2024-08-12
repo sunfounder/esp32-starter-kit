@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_reversing_aid:
 
-6.3 Reversing Aid
-===================
-Imagine this: You're in your car, about to reverse into a tight parking spot. With our project, you will have an ultrasonic module mounted on the rear of your vehicle, acting as a digital eye. As you engage the reverse gear, the module springs to life, emitting ultrasonic pulses that bounce off obstacles behind you.
+6.3 Sistema di Assistenza al Parcheggio
+===============================================
+Immagina questo: sei in auto, pronto per fare retromarcia in un parcheggio stretto. Con il nostro progetto, avrai un modulo ultrasonico montato sul retro del veicolo, che funge da occhio digitale. Quando inserisci la retromarcia, il modulo si attiva, emettendo impulsi ultrasonici che rimbalzano sugli ostacoli dietro di te.
 
-The magic happens when these pulses return to the module. It swiftly calculates the distance between your car and the objects, transforming this data into real-time visual feedback displayed on a vibrant LCD screen. You'll witness dynamic, color-coded indicators depicting the proximity of obstacles, ensuring you have a crystal-clear understanding of the surrounding environment.
+La magia avviene quando questi impulsi tornano al modulo. Esso calcola rapidamente la distanza tra la tua auto e gli oggetti, trasformando questi dati in un feedback visivo in tempo reale visualizzato su un vivace schermo LCD. Potrai vedere indicatori dinamici a colori che rappresentano la vicinanza degli ostacoli, garantendoti una comprensione chiara dell'ambiente circostante.
 
-But we didn't stop there. To immerse you further into this driving experience, we incorporated a lively buzzer. As your car inches closer to an obstacle, the buzzer's tempo intensifies, creating an auditory symphony of warnings. It's like having a personal orchestra guiding you through the complexities of reverse parking.
+Ma non ci siamo fermati qui. Per immergerti ulteriormente in questa esperienza di guida, abbiamo incorporato un cicalino. Man mano che la tua auto si avvicina a un ostacolo, il ritmo del cicalino si intensifica, creando una sinfonia sonora di avvertimenti. È come avere un'orchestra personale che ti guida nelle manovre di parcheggio in retromarcia.
 
-This innovative project combines cutting-edge technology with an interactive user interface, making your reversing experience safe and stress-free. With the ultrasonic module, LCD display, and lively buzzer working harmoniously, you'll feel empowered and confident while maneuvering in tight spaces, leaving you free to focus on the joy of driving.
+Questo progetto innovativo combina tecnologia all'avanguardia con un'interfaccia utente interattiva, rendendo la tua esperienza di retromarcia sicura e senza stress. Con il modulo ultrasonico, il display LCD e il cicalino che lavorano armoniosamente, ti sentirai sicuro e fiducioso mentre manovri in spazi ristretti, lasciandoti libero di concentrarti sul piacere di guidare.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -69,58 +69,54 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_lcd`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_6.4_reversing_aid.png
     :width: 800
     :align: center
 
+Il sensore ultrasonico nel progetto emette onde sonore ad alta frequenza e misura il tempo necessario affinché le onde rimbalzino dopo aver colpito un oggetto. Analizzando questi dati, è possibile calcolare la distanza tra il sensore e l'oggetto. Per fornire un avviso quando l'oggetto è troppo vicino, viene utilizzato un cicalino per produrre un segnale acustico. Inoltre, la distanza misurata viene visualizzata su uno schermo LCD per una facile visualizzazione.
 
-The ultrasonic sensor in the project emits high-frequency sound waves and measures the time it takes for the waves to bounce back after hitting an object. By analyzing this data, the distance between the sensor and the object can be calculated. To provide a warning when the object is too close, a buzzer is used to produce an audible signal. Additionally, the measured distance is displayed on an LCD screen for easy visualization.
 
-**Wiring**
+**Collegamento**
 
 .. image:: ../../img/wiring/6.4_aid_ultrasonic_bb.png
 
-**Code**
-
+**Codice**
 
 .. note::
 
-    * You can open the file ``6.3_reversing_aid.ino`` under the path of ``esp32-starter-kit-main\c\codes\6.3_reversing_aid`` directly.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
-    * :ref:`unknown_com_port`
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
-
+    * Puoi aprire direttamente il file ``6.3_reversing_aid.ino`` nel percorso ``esp32-starter-kit-main\c\codes\6.3_reversing_aid``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
+    * La libreria ``LiquidCrystal I2C`` è utilizzata qui, puoi installarla dal **Library Manager**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c06deba0-36fd-4f17-8290-c7a39202e089/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+Dopo che il codice è stato caricato con successo, la distanza rilevata attualmente verrà visualizzata sul display LCD. Il cicalino cambierà quindi la frequenza del suono in base alle diverse distanze.
 
 .. note:: 
 
-    If the code and wiring are correct, but the LCD still fails to display any content, you can adjust the potentiometer on the back to increase the contrast.
+    Se il codice e i collegamenti sono corretti, ma l'LCD non visualizza ancora alcun contenuto, puoi regolare il potenziometro sul retro per aumentare il contrasto.
 
 
-**How it works?**
+**Come funziona?**
 
-This code helps us create a simple distance measuring device that can measure the distance between objects and provide feedback through an LCD display and a buzzer.
+Questo codice ci aiuta a creare un semplice dispositivo di misurazione della distanza che può misurare la distanza tra oggetti e fornire un feedback tramite un display LCD e un cicalino.
 
-The ``loop()`` function contains the main logic of the program and runs continuously. Let's take a closer look at the ``loop()`` function.
+La funzione ``loop()`` contiene la logica principale del programma e viene eseguita continuamente. Diamo un'occhiata più da vicino alla funzione ``loop()``.
 
-#. Loop to read distance and update parameters
+#. Ciclo per leggere la distanza e aggiornare i parametri
 
-    In the ``loop``, the code first reads the distance measured by the ultrasonic module and updates the interval parameter based on the distance. 
+    Nel ``loop``, il codice legge prima la distanza misurata dal modulo ultrasonico e aggiorna il parametro dell'intervallo in base alla distanza.
 
     .. code-block:: arduino
 
-        // Update the distance
+        // Aggiorna la distanza
         distance = readDistance();
 
-        // Update intervals based on distance
+        // Aggiorna gli intervalli in base alla distanza
         if (distance <= 10) {
             intervals = 300;
         } else if (distance <= 20) {
@@ -131,9 +127,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             intervals = 2000;
         }
 
-#. Check if it's time to beep
+#. Verifica se è il momento di suonare il cicalino
 
-    The code calculates the difference between the current time and the previous beep time, and if the difference is greater than or equal to the interval time, it triggers the buzzer and updates the previous beep time.
+    Il codice calcola la differenza tra l'ora corrente e l'ultima volta che il cicalino ha suonato e, se la differenza è maggiore o uguale al tempo dell'intervallo, attiva il cicalino e aggiorna l'ora precedente.
 
     .. code-block:: arduino
 
@@ -144,9 +140,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             previousMillis = currentMillis;
         }
 
-#. Update LCD display
+#. Aggiorna il display LCD
 
-    The code clears the LCD display and then displays "Dis:" and the current distance in centimeters on the first line.
+    Il codice cancella il display LCD e poi visualizza "Dis:" e la distanza corrente in centimetri sulla prima riga.
 
     .. code-block:: arduino
 

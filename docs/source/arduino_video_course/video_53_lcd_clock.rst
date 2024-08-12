@@ -1,29 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 53: Internet Clock
+Video 53: Orologio Internet
 =====================================
 
-Learn how to build an Internet clock using ESP32 microcontroller, NTP server, and Wi-Fi connectivity, allowing for automatic time adjustment without the need for a real-time module.
+Impara come costruire un orologio Internet utilizzando un microcontrollore ESP32, un server NTP e la connessione Wi-Fi, permettendo la regolazione automatica dell'ora senza la necessità di un modulo di tempo reale.
 
-* **Introduction**: Discover how to create an Internet clock without requiring a real-time module.
-* **ESP32 Microcontroller**: Understand the role of ESP32 with Wi-Fi in automatically adjusting the time.
-* **NTP Server**: Learn about NTP servers and their function in synchronizing time over the internet.
-* **Setting up**: Follow the steps to set up the ESP32 board in Arduino IDE and select the appropriate COM port.
-* **Arduino code explanation**: Dive into the Arduino code for the Internet clock project, including Wi-Fi setup, NTP server configuration, and LCD screen time display.
-* **Demonstration**: See the Internet clock in action with customizable time format and settings.
-
+* **Introduzione**: Scopri come creare un orologio Internet senza richiedere un modulo di tempo reale.
+* **Microcontrollore ESP32**: Comprendi il ruolo dell'ESP32 con Wi-Fi nella regolazione automatica dell'ora.
+* **Server NTP**: Scopri i server NTP e la loro funzione nella sincronizzazione dell'ora tramite Internet.
+* **Configurazione**: Segui i passaggi per configurare la scheda ESP32 nell'Arduino IDE e selezionare la porta COM appropriata.
+* **Spiegazione del codice Arduino**: Approfondisci il codice Arduino per il progetto dell'orologio Internet, inclusa la configurazione del Wi-Fi, del server NTP e la visualizzazione dell'ora sullo schermo LCD.
+* **Dimostrazione**: Guarda l'orologio Internet in azione con formato e impostazioni dell'ora personalizzabili.
 
 **Video**
 

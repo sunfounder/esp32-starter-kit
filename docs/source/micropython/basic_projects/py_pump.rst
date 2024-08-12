@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché Unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperti**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa ai giveaway e alle promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_pump:
 
-4.2 Pumping
+4.2 Pompa
 =======================
 
-In this intriguing project, we will delve into controlling a water pump using the L293D.
+In questo interessante progetto, ci addentreremo nel controllo di una pompa d'acqua utilizzando il L293D.
 
-In the realm of water pump control, things are a bit simpler compared to controlling other motors. The beauty of this project lies in its simplicity - there's no need to worry about the direction of rotation. Our primary goal is to successfully activate the water pump and keep it running.
+Nel campo del controllo delle pompe d'acqua, le cose sono un po' più semplici rispetto al controllo di altri motori. La bellezza di questo progetto risiede nella sua semplicità: non c'è bisogno di preoccuparsi della direzione di rotazione. Il nostro obiettivo principale è attivare con successo la pompa d'acqua e mantenerla in funzione.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -60,37 +60,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l293d`
         - \-
 
-**Available Pins**
+**Pin Disponibili**
 
-Here is a list of available pins on the ESP32 board for this project.
+Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pin Disponibili
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_4.1_motor_l293d.png
 
 
-**Wiring**
+**Cablatura**
 
 .. note::
 
-    It is recommended here to insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply.
+    È consigliabile inserire la batteria e poi spostare l'interruttore sulla scheda di espansione in posizione ON per attivare l'alimentazione della batteria.
 
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``4.2_pumping.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
+    * Apri il file ``4.2_pumping.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Successivamente, fai clic su "Esegui lo script corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra.
 
 
 .. code-block:: python
@@ -98,31 +97,31 @@ Here is a list of available pins on the ESP32 board for this project.
     import machine
     import time
 
-    # Create Pin objects representing the motor control pins and set them to output mode
+    # Crea oggetti Pin che rappresentano i pin di controllo del motore e impostali in modalità output
     motor1A = machine.Pin(13, machine.Pin.OUT)
     motor2A = machine.Pin(14, machine.Pin.OUT)
 
-    # Define a function to rotate the pump
+    # Definisci una funzione per attivare la pompa
     def rotate():
         motor1A.value(1)
         motor2A.value(0)
 
-    # Define a function to stop the pump
+    # Definisci una funzione per fermare la pompa
     def stop():
         motor1A.value(0)
         motor2A.value(0)
 
     try:
         while True:
-            rotate()  # Rotate the motor clockwise
-            time.sleep(5)  # Pause for 5 seconds
-            stop()  # Stop the motor
+            rotate()  # Attiva la pompa
+            time.sleep(5)  # Pausa di 5 secondi
+            stop()  # Ferma la pompa
             time.sleep(2)
 
     except KeyboardInterrupt:
-        stop()  # Stop the motor when KeyboardInterrupt is caught
+        stop()  # Ferma la pompa quando viene catturata una KeyboardInterrupt
 
 
 
+Durante l'esecuzione dello script, vedrai la pompa in funzione con l'acqua che esce dal tubo, quindi si fermerà per 2 secondi prima di iniziare a funzionare nuovamente.
 
-During the script execution, you will see the pump working and water coming out of the tube, then stopping for 2 seconds before starting to work again.

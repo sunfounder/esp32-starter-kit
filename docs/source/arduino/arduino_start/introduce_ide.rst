@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato a nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-1.2 Introduce of Arduino IDE
-=================================
+1.2 Introduzione all'Arduino IDE
+=====================================
 
 .. image:: img/sp_ide_2.png
 
-1. **Verify**: Compile your code. Any syntax problem will be prompted with errors.
+1. **Verifica**: Compila il tuo codice. Qualsiasi problema di sintassi verrà segnalato con errori.
 
-2. **Upload**: Upload the code to your board. When you click the button, the RX and TX LEDs on the board will flicker fast and won't stop until the upload is done.
+2. **Carica**: Carica il codice sulla tua scheda. Quando clicchi sul pulsante, i LED RX e TX sulla scheda lampeggeranno rapidamente e continueranno fino al termine del caricamento.
 
-3. **Debug**: For line-by-line error checking.
+3. **Debug**: Per il controllo degli errori riga per riga.
 
-4. **Select Board**: Quick setup board and port.
+4. **Seleziona Scheda**: Configurazione rapida della scheda e della porta.
 
-5. **Serial Plotter**: Check the change of reading value.
+5. **Serial Plotter**: Controlla la variazione del valore letto.
 
-6. **Serial Monitor**: Click the button and a window will appear. It receives the data sent from your control board. It is very useful for debugging.
+6. **Monitor Seriale**: Clicca sul pulsante e apparirà una finestra. Riceve i dati inviati dalla tua scheda di controllo. È molto utile per il debugging.
 
-7. **File**: Click the menu and a drop-down list will appear, including file creating, opening, saving, closing, some parameter configuring, etc.
+7. **File**: Clicca sul menu e apparirà una lista a discesa, che include la creazione, apertura, salvataggio, chiusura di file, configurazione di alcuni parametri, ecc.
 
-8. **Edit**: Click the menu. On the drop-down list, there are some editing operations like **Cut**, **Copy**, **Paste**, **Find**, and so on, with their corresponding shortcuts.
+8. **Modifica**: Clicca sul menu. Nella lista a discesa, ci sono alcune operazioni di modifica come **Taglia**, **Copia**, **Incolla**, **Trova** e così via, con i relativi tasti di scelta rapida.
 
-9. **Sketch**: Includes operations like **Verify**, **Upload**, **Add** files, etc. More important function is **Include Library** - where you can add libraries.
+9. **Sketch**: Include operazioni come **Verifica**, **Carica**, **Aggiungi** file, ecc. La funzione più importante è **Includi Libreria** - dove puoi aggiungere librerie.
 
-10. **Tool**: Includes some tools - the most frequently used Board (the board you use) and Port (the port your board is at). Every time you want to upload the code, you need to select or check them.
+10. **Strumenti**: Include alcuni strumenti - i più utilizzati sono Scheda (la scheda che usi) e Porta (la porta a cui è collegata la tua scheda). Ogni volta che vuoi caricare il codice, devi selezionare o controllare questi.
 
-11. **Help**: If you're a beginner, you may check the options under the menu and get the help you need, including operations in IDE, introduction information, troubleshooting, code explanation, etc.
+11. **Aiuto**: Se sei un principiante, puoi controllare le opzioni nel menu e ottenere l'aiuto di cui hai bisogno, comprese operazioni nell'IDE, informazioni introduttive, risoluzione dei problemi, spiegazioni del codice, ecc.
 
-12. **Output Bar**: Switch the output tab here.
+12. **Barra di Output**: Passa alla scheda di output qui.
 
-13. **Output Window**: Print information.
+13. **Finestra di Output**: Stampa le informazioni.
 
-14. **Board and Port**: Here you can preview the board and port selected for code upload. You can select them again by **Tools** -> **Board** / **Port** if any is incorrect.
+14. **Scheda e Porta**: Qui puoi visualizzare in anteprima la scheda e la porta selezionate per il caricamento del codice. Puoi selezionarle di nuovo tramite **Strumenti** -> **Scheda** / **Porta** se qualcosa non è corretto.
 
-15. The editing area of the IDE. You can write code here.
+15. L'area di modifica dell'IDE. Qui puoi scrivere il codice.
 
-16. **Sketchbook**: For managing sketch files.
+16. **Sketchbook**: Per gestire i file degli sketch.
 
-17. **Board Manager**: For managing board driver.
+17. **Gestore Schede**: Per gestire i driver delle schede.
 
-18. **Library Manager**: For managing your library files.
+18. **Gestore Librerie**: Per gestire i tuoi file di libreria.
 
-19. **Debug**: Help debugging code.
+19. **Debug**: Aiuta a fare il debugging del codice.
 
-20. **Search**: Search the codes from your sketches.
+20. **Ricerca**: Cerca il codice nei tuoi sketch.

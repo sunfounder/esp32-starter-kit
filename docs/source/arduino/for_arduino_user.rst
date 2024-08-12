@@ -1,28 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-For Arduino User
+Per Utenti Arduino
 ========================
 
-
-Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
+Ecco il pacchetto completo del codice per il Kit Iniziale ESP32. Puoi cliccare sul seguente link per scaricarlo:
 
 * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
+Una volta completato il download, decomprimi il file e apri il codice esempio o i file di progetto rilevanti nel software corrispondente. Questo ti permetterà di esplorare e utilizzare tutto il codice e le risorse fornite dal kit.
 
-**1. Get Started**
+**1. Inizia**
 
 .. toctree::
     :maxdepth: 1
@@ -33,7 +32,7 @@ Once the download is complete, unzip the file and open the relevant example code
     arduino_start/add_libraries_ar
 
 
-**2. Displays**
+**2. Display**
 
 
 .. toctree::
@@ -48,7 +47,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_rgb_strip
 
 
-**3. Sounds**
+**3. Suoni**
 
 .. toctree::
     :maxdepth: 1
@@ -56,7 +55,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_ac_buz
     basic_projects/ar_pa_buz
 
-**4. Actuators**
+**4. Attuatori**
 
 .. toctree::
     :maxdepth: 1
@@ -65,7 +64,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_pump
     basic_projects/ar_servo
 
-**5. Sensors**
+**5. Sensori**
 
 .. toctree::
     :maxdepth: 1
@@ -85,7 +84,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_dht11
     basic_projects/ar_irremote
 
-**6. Funny Projects**
+**6. Progetti Divertenti**
 
 .. toctree::
     :maxdepth: 1
@@ -98,7 +97,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_plant_monitor
     basic_projects/ar_guess_number
 
-**7. Bluetooth&SD Card&Camera&Speaker**
+**7. Bluetooth & SD Card & Camera & Speaker**
 
 .. toctree::
     :maxdepth: 1
@@ -110,7 +109,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/ar_mp3_player_sd
     basic_projects/ar_take_photo_sd
 
-**8. Bluetooth&SD Card&Camera&Speaker**
+**8. Bluetooth & SD Card & Camera & Speaker**
 
 .. toctree::
     :maxdepth: 1

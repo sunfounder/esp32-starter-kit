@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime speciali.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_flowing_light:
 
-6.2 Flowing Light
+6.2 Luce Scorrevole
 =================================
 
-Have you ever wanted to add some fun and interactive element to your living space? 
-This project involves creating a running light using WS2812 LED strip and a obstacle avoidance module. 
-The running light changes direction when an obstacle is detected, making it an exciting addition to your home or office decor.
+Hai mai desiderato aggiungere un elemento divertente e interattivo al tuo spazio abitativo? 
+Questo progetto prevede la creazione di una luce scorrevole utilizzando una striscia LED WS2812 e un modulo di evitamento ostacoli. 
+La luce scorrevole cambia direzione quando viene rilevato un ostacolo, rendendola un'aggiunta entusiasmante all'arredamento della tua casa o del tuo ufficio.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - ESP32 Starter Kit
+    *   - Kit di Partenza ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,27 +58,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Schematic Diagram**
+**Schema Elettrico**
 
 .. image:: ../../img/circuit/circuit_6.2_flowing_led.png
     :align: center
 
-The WS2812 LED strip is composed of a series of individual LEDs that can be programmed to display different colors and patterns. 
-In this project, the strip is set up to display a running light that moves in a particular direction and 
-changes direction when an obstacle is detected by the obstacle avoidance module.
+La striscia LED WS2812 è composta da una serie di LED individuali che possono essere programmati per visualizzare diversi colori e schemi. 
+In questo progetto, la striscia è configurata per visualizzare una luce scorrevole che si muove in una direzione specifica e 
+cambia direzione quando un ostacolo viene rilevato dal modulo di evitamento ostacoli.
 
 
-**Wiring**
+**Cablaggio**
 
 .. image:: ../../img/wiring/6.2_flowing_light_bb.png
     :width: 800
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``6.2_flowing_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
+    * Apri il file ``6.2_flowing_led.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Poi, clicca su "Esegui Script Corrente" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
 
     
 .. code-block:: python
@@ -88,48 +88,48 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
       import time
       import random
 
-      # Set the number of pixels for the running light
+      # Imposta il numero di pixel per la luce scorrevole
       num_pixels = 8
 
-      # Set the data pin for the RGB LED strip
+      # Imposta il pin dati per la striscia LED RGB
       data_pin = Pin(14, Pin.OUT)
 
-      # Initialize the RGB LED strip object
+      # Inizializza l'oggetto striscia LED RGB
       pixels = neopixel.NeoPixel(data_pin, num_pixels)
 
-      # Initialize the avoid sensor
+      # Inizializza il sensore di evitamento
       avoid = Pin(25, Pin.IN)
 
-      # Initialize the direction variable
+      # Inizializza la variabile di direzione
       direction_forward = True
 
-      # Initialize the reverse direction flag
+      # Inizializza il flag di direzione inversa
       reverse_direction = False
 
-      # Continuously loop the running light
+      # Ciclo continuo della luce scorrevole
       while True:
       
-      # Read the input from the infrared sensor
+      # Leggi l'input dal sensore a infrarossi
       avoid_value = avoid.value()
       
-      # Generate a random color for the current pixel
+      # Genera un colore casuale per il pixel corrente
       color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
                   
-      # If no obstacle is detected
+      # Se non viene rilevato alcun ostacolo
       if avoid_value:
             for i in range(num_pixels):
                   
-                  # Turn on the current pixel with the random color
+                  # Accendi il pixel corrente con il colore casuale
                   pixels[i] = color
                   
-                  # Update the RGB LED strip display
+                  # Aggiorna il display della striscia LED RGB
                   pixels.write()
                   
-                  # Turn off the current pixel
+                  # Spegni il pixel corrente
                   pixels[i] = (0, 0, 0)
                   time.sleep_ms(100)
                   
-      # If detects an obstacle, change the direction of the LED strip
+      # Se viene rilevato un ostacolo, cambia la direzione della striscia LED
       else:
             for i in range(num_pixels-1, -1, -1):
                   
@@ -138,4 +138,4 @@ changes direction when an obstacle is detected by the obstacle avoidance module.
                   pixels[i] = (0, 0, 0)
                   time.sleep_ms(100)
 
-LEDs on the RGB Strip light up one by one when the script runs. As soon as an object is placed in front of the obstacle avoidance module, the LEDs on the RGB Strip light up one by one in the opposite direction.
+I LED sulla striscia RGB si accendono uno per uno quando lo script è in esecuzione. Non appena un oggetto viene posizionato davanti al modulo di evitamento ostacoli, i LED sulla striscia RGB si accendono uno per uno nella direzione opposta.

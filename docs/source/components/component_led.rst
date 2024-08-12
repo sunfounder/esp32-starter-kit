@@ -1,23 +1,23 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_led:
 
 LED
 ==========
 
-**What's LED?**
+**Cos'è un LED?**
 
 .. image:: img/led_pin.jpg
     :width: 200
@@ -25,38 +25,38 @@ LED
 .. image:: img/led_polarity.jpg
     :width: 400
 
-LEDs are very common electronic devices that can be used to decorate your room during the festival, and you can also use them as indicators for various things, such as whether the power to your home appliances is on or off. They come in dozens of different shapes and sizes, and the most common are LEDs with through hole LEDs, which generally have long leads and can be plugged into a breadboard.
+I LED sono dispositivi elettronici molto comuni che possono essere utilizzati per decorare la tua stanza durante le festività, oppure come indicatori per varie funzioni, come ad esempio indicare se un elettrodomestico è acceso o spento. Esistono in una vasta gamma di forme e dimensioni, ma i più comuni sono i LED con terminali a foro passante, che generalmente hanno gambe lunghe e possono essere inseriti in una breadboard.
 
-The full name of LED is light-emitting diode, so it has the characteristics of a diode, where current flows in one direction, from the anode (positive) to the cathode (negative).
+Il nome completo del LED è diodo emettitore di luce, quindi ha le caratteristiche di un diodo, in cui la corrente fluisce in una sola direzione, dall'anodo (positivo) al catodo (negativo).
 
-Here are the electrical symbols for LEDs.
+Ecco i simboli elettrici dei LED.
 
 .. image:: img/led_symbol.png
 
 
-**Various sizes and colors**
+**Varie dimensioni e colori**
 
 .. image:: img/led_color.png
 
-Red, yellow, blue, green, and white are the most common LED colors, and the light emitted is usually the same color as the appearance.
+Rosso, giallo, blu, verde e bianco sono i colori più comuni dei LED, e la luce emessa solitamente corrisponde al colore dell'aspetto.
 
-We rarely use LEDs that are transparent or matte in appearance, but the light emitted may be a color other than white.
+Raramente utilizziamo LED che sono trasparenti o opachi nell'aspetto, ma la luce emessa potrebbe essere di un colore diverso dal bianco.
 
-LEDs come in four sizes: 3mm, 5mm, 8mm and 10mm, with 5mm being the most common size.
+I LED sono disponibili in quattro dimensioni: 3mm, 5mm, 8mm e 10mm, con 5mm come dimensione più comune.
 
 .. image:: img/led_type.jpg
 
-Below is the LED size of 5mm in mm.
+Di seguito è riportata la dimensione del LED da 5mm espressa in mm.
 
 .. image:: img/led_size.png
 
 
 
-**Forward Voltage**
+**Tensione diretta**
 
-The Forward Voltage is a very important parameter to know when using LEDs, as it determines how much power you use and how large the current limiting resistor should be.
+La Tensione Diretta è un parametro molto importante da conoscere quando si utilizzano i LED, poiché determina quanta energia viene utilizzata e quanto deve essere grande la resistenza limitatrice di corrente.
 
-The Forward Voltage is the voltage that the LED needs to use when it lights up. For most red, yellow, orange and light green LEDs, they generally use a voltage between 1.9V and 2.1V.
+La Tensione Diretta è la tensione che il LED richiede per accendersi. Per la maggior parte dei LED rossi, gialli, arancioni e verde chiaro, la tensione generalmente varia tra 1.9V e 2.1V.
 
 
 .. image:: img/led_voltage.jpg
@@ -64,55 +64,56 @@ The Forward Voltage is the voltage that the LED needs to use when it lights up. 
     :align: center
 
 
-According to Ohm's law, the current through this circuit decreases as the resistance increases, which causes the LED to dim.
+Secondo la legge di Ohm, la corrente che attraversa questo circuito diminuisce man mano che aumenta la resistenza, il che provoca l'attenuazione della luminosità del LED.
 
     I = (Vp-Vl)/R
 
-To get the LEDs to light up safely and with the right brightness, how much resistance should we use in the circuit?
+Per far accendere i LED in modo sicuro e con la giusta luminosità, quale resistenza dovremmo utilizzare nel circuito?
 
-For 99% of 5mm LEDs, the recommended current is 20mA, as you can see from the Conditions column of its data sheet.
+Per il 99% dei LED da 5mm, la corrente raccomandata è 20mA, come puoi vedere nella colonna Condizioni del suo datasheet.
 
 .. image:: img/led_datasheet.png
 
-Now convert the above formula as shown below.
+Ora converti la formula sopra come mostrato di seguito.
 
     R = (Vp-Vl)/I
 
 
-If ``Vp`` is 5V, ``Vl`` (Forward Voltage) is 2V, and ``I`` is 20mA, then ``R`` is 150Ω.
+Se ``Vp`` è 5V, ``Vl`` (Tensione Diretta) è 2V e ``I`` è 20mA, allora ``R`` è 150Ω.
 
-So we can make the LED brighter by reducing the resistance of the resistor, but it is not recommended to go below 150Ω (this resistance may not be very accurate, because different suppliers provide LEDs have differences).
+Quindi possiamo aumentare la luminosità del LED riducendo la resistenza del resistore, ma non è consigliabile scendere sotto i 150Ω (questa resistenza potrebbe non essere molto precisa, poiché diversi fornitori di LED possono avere differenze).
 
-Below are the forward voltages and wavelengths of different color LEDs that you can use as reference.
+Di seguito sono riportate le tensioni dirette e le lunghezze d'onda dei diversi colori di LED che puoi utilizzare come riferimento.
 
 .. list-table::
    :widths: 25 25 50
    :header-rows: 1
 
-   * - LED Color
-     - Forward Voltage
-     - Wavelength
-   * - Red
+   * - Colore del LED
+     - Tensione Diretta
+     - Lunghezza d'onda
+   * - Rosso
      - 1.8V ~ 2.1V
-     - 620 ~ 625
-   * - Yellow
+     - 620 ~ 625 nm
+   * - Giallo
      - 1.9V ~ 2.2V
-     - 580 ~ 590
-   * - Green
+     - 580 ~ 590 nm
+   * - Verde
      - 1.9V ~ 2.2V
-     - 520 ~ 530
-   * - Blue
+     - 520 ~ 530 nm
+   * - Blu
      - 3.0V ~ 3.2V
-     - 460 ~ 465
-   * - White
+     - 460 ~ 465 nm
+   * - Bianco
      - 3.0V ~ 3.2V
-     - 8000 ~ 9000
+     - 8000 ~ 9000 K
 
-**Example**
+**Esempio**
 
-* :ref:`ar_blink` (Arduino Project)
-* :ref:`ar_fading` (Arduino Project)
-* :ref:`py_blink` (MicroPython Project)
-* :ref:`py_fading` (MicroPython Project)
-* :ref:`sh_breathing_led` (Scratch Project)
-* :ref:`sh_table_lamp` (Scratch Project)
+* :ref:`ar_blink` (Progetto Arduino)
+* :ref:`ar_fading` (Progetto Arduino)
+* :ref:`py_blink` (Progetto MicroPython)
+* :ref:`py_fading` (Progetto MicroPython)
+* :ref:`sh_breathing_led` (Progetto Scratch)
+* :ref:`sh_table_lamp` (Progetto Scratch)
+

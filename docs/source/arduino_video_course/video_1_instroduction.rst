@@ -1,31 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-
-Video 1: Introduce this Kit
+Video 1: Introduzione a questo Kit
 =====================================
 
-This video serves as an introduction to SunFounder's ESP32 IoT Learning Kit. It covers various aspects of the kit, highlighting its features and capabilities:
+Questo video serve come introduzione al Kit di Apprendimento IoT ESP32 di SunFounder. Copre vari aspetti del kit, mettendo in evidenza le sue caratteristiche e capacità:
 
-
-* **ESP32 Microcontroller**: Features the ESP32 microcontroller with built-in Wi-Fi and Bluetooth.
-* **Arduino IDE Installation**: Guides viewers through installing the Arduino IDE.
-* **ESP32 Board Setup**: Demonstrates board setup and driver installation.
-* **Selecting the ESP32 Dev Module**: Explains board selection in Arduino IDE.
-* **Library Installation**: Shows how to install necessary libraries.
-* **Project Examples**: Introduces various project examples for Arduino and MicroPython.
-
+* **Microcontrollore ESP32**: Presenta il microcontrollore ESP32 con Wi-Fi e Bluetooth integrati.
+* **Installazione dell'IDE di Arduino**: Guida gli spettatori attraverso l'installazione dell'IDE di Arduino.
+* **Configurazione della scheda ESP32**: Dimostra la configurazione della scheda e l'installazione dei driver.
+* **Selezione del modulo ESP32 Dev**: Spiega la selezione della scheda nell'IDE di Arduino.
+* **Installazione delle librerie**: Mostra come installare le librerie necessarie.
+* **Esempi di progetti**: Introduce vari esempi di progetti per Arduino e MicroPython.
 
 **Video**
 

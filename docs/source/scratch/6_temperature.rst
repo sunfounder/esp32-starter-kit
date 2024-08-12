@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_low_temperature:
 
-2.6 Low Temperature Alarm
-=========================
+2.6 Allarme Bassa Temperatura
+==================================
 
-In this project, we will make a low temperature alarm system, when the temperature is below the threshold, the **Snowflake** sprite will appear on the stage.
+In questo progetto, realizzeremo un sistema di allarme per bassa temperatura: quando la temperatura scende sotto la soglia, lo sprite **Fiocco di Neve** apparirà sul palco.
 
 .. image:: img/9_tem.png
 
-Required Components
----------------------
+Componenti Necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -61,56 +61,56 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-You Will Learn
+Cosa Imparerai
 ---------------------
 
-- Thermistor working principle
-- Multivariable and Subtractive Operations
+- Principio di funzionamento del termistore
+- Operazioni multivariabili e sottrattive
 
-Build the Circuit
------------------------
+Costruire il Circuito
+-------------------------
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors, and there are two types of resistors, PTC (resistance increases as temperature increases) and PTC (resistance decreases as temperature increases).
+Un termistore è un tipo di resistore la cui resistenza dipende fortemente dalla temperatura, molto più che nei resistori standard. Esistono due tipi di resistori: PTC (la resistenza aumenta con l'aumentare della temperatura) e NTC (la resistenza diminuisce con l'aumentare della temperatura).
 
-Build the circuit according to the following diagram.
+Costruisci il circuito seguendo il diagramma seguente.
 
-One end of the thermistor is connected to GND, the other end is connected to pin35, and a 10K resistor is connected in series to 5V.
+Un'estremità del termistore è collegata a GND, l'altra estremità è collegata al pin 35 e una resistenza da 10K è collegata in serie a 5V.
 
-The NTC thermistor is used here, so when the temperature rises, the resistance of the thermistor decreases, the voltage division of pin35 decreases, and the value obtained from pin35 decreases, and vice versa increases.
+Qui viene utilizzato un termistore NTC, quindi quando la temperatura aumenta, la resistenza del termistore diminuisce, la divisione di tensione del pin 35 diminuisce e il valore ottenuto dal pin 35 diminuisce, e viceversa aumenta.
 
 .. image:: img/circuit/7_low_temp_bb.png
 
-Programming
-------------------
+Programmazione
+----------------------
 
-**1. Select a sprite**
+**1. Seleziona uno sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **Snowflake** in the search box, and then click to add it.
+Elimina lo sprite predefinito, fai clic sul pulsante **Scegli uno Sprite** nell'angolo in basso a destra dell'area degli sprite, inserisci **Fiocco di Neve** nella casella di ricerca e poi clicca per aggiungerlo.
 
 .. image:: img/9_snow.png
 
-**2. Create 2 variables**
+**2. Crea 2 variabili**
 
-Create two variables, **before** and **current**, to store the value of pin35 in different cases.
+Crea due variabili, **prima** e **attuale**, per memorizzare il valore del pin 35 in diverse situazioni.
 
 .. image:: img/9_va.png
 
-**3. Read the value of pin35**
+**3. Leggi il valore del pin 35**
 
-When the green flag is clicked, the value of pin35 is read and stored in the variable **before**.
+Quando viene cliccata la bandiera verde, il valore del pin 35 viene letto e memorizzato nella variabile **prima**.
 
 .. image:: img/9_before.png
 
-**4. Read the value of pin35 again**
+**4. Leggi di nuovo il valore del pin 35**
 
-In [forever], read the value of pin35 again and store it in the variable **current**.
+In [per sempre], leggi di nuovo il valore del pin 35 e memorizzalo nella variabile **attuale**.
 
 .. image:: img/9_current.png
 
-**5. Determining temperature changes**
+**5. Determinare i cambiamenti di temperatura**
 
-Using the [if else] block, determine if the current value of pin35 is 200 greater than before, which represents a decrease in temperature. At this point let **Snowflake** sprite show, otherwise hide.
+Utilizzando il blocco [se altrimenti], determina se il valore attuale del pin 35 è superiore di 200 rispetto a prima, il che rappresenta una diminuzione della temperatura. A questo punto, fai apparire lo sprite **Fiocco di Neve**, altrimenti nascondilo.
 
-* [-] & [>]: subtraction and comparison operators from **Operators** platette.
+* [-] & [>]: operatori di sottrazione e confronto dalla tavolozza **Operatori**.
 
 .. image:: img/9_show.png

@@ -1,37 +1,38 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_tilt:
 
-Tilt Switch
-=============================
-
+Interruttore a inclinazione
+=================================
 
 .. image:: img/tilt_switch.png
     :width: 80
     :align: center
 
-The tilt switch used here is a ball one with a metal ball inside. It is used to detect inclinations of a small angle.
+L'interruttore a inclinazione utilizzato qui è di tipo a sfera con una pallina metallica all'interno. È impiegato per rilevare inclinazioni di piccoli angoli.
 
-The principle is very simple. When the switch is tilted in a certain angle, the ball inside rolls down and touches the two contacts connected to the pins outside, thus triggering circuits. Otherwise the ball will stay away from the contacts, thus breaking the circuits.
+Il principio è molto semplice. Quando l'interruttore viene inclinato a un certo angolo, la pallina all'interno rotola e tocca i due contatti collegati ai pin esterni, chiudendo così il circuito. Altrimenti, la pallina rimarrà lontana dai contatti, interrompendo il circuito.
 
 .. image:: img/tilt_symbol.png
     :width: 600
 
 * `SW520D Tilt Switch Datasheet <https://www.tme.com/Document/f1e6cedd8cb7feeb250b353b6213ec6c/SW-520D.pdf>`_
 
-**Example**
 
-* :ref:`ar_tilt` (Arduino Project)
-* :ref:`py_tilt` (MicroPython Project)
+**Esempio**
+
+* :ref:`ar_tilt` (Progetto Arduino)
+* :ref:`py_tilt` (Progetto MicroPython)
+

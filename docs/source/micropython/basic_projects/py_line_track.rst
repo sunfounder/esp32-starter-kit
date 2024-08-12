@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _py_line_track:
 
-5.4 Detect the Line
+5.4 Rilevamento della Linea
 ===================================
 
-The line-tracking module is used to detect the presence of black areas on the ground, such as black lines taped with electrical tape.
+Il modulo di tracciamento delle linee viene utilizzato per rilevare la presenza di aree nere sul terreno, come linee nere nastrate con nastro isolante.
 
-Its emitter emits appropriate infrared light into the ground, which is relatively absorbed and weakly reflected by black surfaces. The opposite is true for white surfaces. If reflected light is detected, the ground is currently indicated as white. If it is not detected, it is indicated as black.
+Il suo emettitore emette luce infrarossa appropriata verso il terreno, che viene relativamente assorbita e debolmente riflessa dalle superfici nere. L'opposto avviene per le superfici bianche. Se viene rilevata luce riflessa, il terreno è attualmente indicato come bianco. Se non viene rilevata, è indicato come nero.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTE
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -56,74 +56,68 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_line_track`
         - |link_line_track_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 20
 
-        *   - Available Pins
+        *   - Pin Disponibili
             - IO13, IO14, IO27, IO26, IO25, IO33, I35, I34, I39, I36, IO4, IO18, IO19, IO21, IO22, IO23
 
-* **Strapping Pins (Input)**
+* **Pin di Strapping (Input)**
 
-    Strapping pins are a special set of pins that are used to determine specific boot modes during device startup 
-    (i.e., power-on reset).
+    I pin di strapping sono un insieme speciale di pin che vengono utilizzati per determinare specifiche modalità di avvio durante l'avvio del dispositivo 
+    (cioè, il reset all'accensione).
 
-        
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pin di Strapping
             - IO5, IO0, IO2, IO12, IO15 
     
-    Generally, it is **not recommended to use them as input pins**. If you wish to use these pins, consider the potential impact on the booting process. For more details, please refer to the :ref:`esp32_strapping` section.
+    In generale, non è **raccomandato usarli come pin di input**. Se desideri utilizzare questi pin, considera l'impatto potenziale sul processo di avvio. Per ulteriori dettagli, fai riferimento alla sezione :ref:`esp32_strapping`.
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.4_line.png
 
-When the line tracking module detects a black line, IO14 returns a high level. On the other hand, when it detects a white line, IO14 returns a low level. You can adjust the blue potentiometer to modify the sensitivity of this module's detection.
+Quando il modulo di tracciamento delle linee rileva una linea nera, IO14 restituisce un livello alto. D'altra parte, quando rileva una linea bianca, IO14 restituisce un livello basso. Puoi regolare il potenziometro blu per modificare la sensibilità della rilevazione di questo modulo.
 
-
-**Wiring**
+**Collegamenti**
 
 .. image:: ../../img/wiring/5.4_line_bb.png
     :align: center
     :width: 600
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.4_detect_the_line.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. Then, click "Run Current Script" or press F5 to execute it.
-    * Make sure to select the "MicroPython (ESP32).COMxx" interpreter in the bottom right corner. 
-
+    * Apri il file ``5.4_detect_the_line.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. Poi clicca su "Run Current Script" o premi F5 per eseguirlo.
+    * Assicurati di selezionare l'interprete "MicroPython (ESP32).COMxx" nell'angolo in basso a destra. 
 
 .. code-block:: python
 
     import machine
     import time
 
-    # Create a pin object named greyscale, set pin number 14 as input
+    # Crea un oggetto pin chiamato line, imposta il pin numero 14 come input
     line = machine.Pin(14, machine.Pin.IN)
 
-
     while True:
-        # Check if the value is 1 (black)
+        # Controlla se il valore è 1 (nero)
         if line.value() == 1:
-            # Print "black"
+            # Stampa "nero"
             print("black")
             time.sleep(0.5)
-        # If the value is not 1 (it's 0, which means white)
+        # Se il valore non è 1 (è 0, il che significa bianco)
         else :
-            # Print "white"
+            # Stampa "bianco"
             print("white")
             time.sleep(0.5)
 
-
-
-When the line tracking module detects there is black line, there appears "black" on the Shell; otherwise, "white" is displayed.
+Quando il modulo di tracciamento delle linee rileva una linea nera, appare "nero" nella Shell; altrimenti, viene visualizzato "bianco".

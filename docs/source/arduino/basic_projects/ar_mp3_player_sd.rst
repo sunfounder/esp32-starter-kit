@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato a nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_mp3_player_sd:
 
-7.5 MP3 Player with SD Card Support
-==============================================
+7.5 Lettore MP3 con Supporto per Scheda SD
+===============================================
 
-Welcome to the exciting world of music with your ESP32! This project brings the power of audio processing to your fingertips, making your ESP32 not just an amazing microcontroller for computing but also your personalized music player. Imagine walking into your room and having your favorite track playing right from this tiny device. That's the power we're bringing to your hands today.
+Benvenuto nel mondo entusiasmante della musica con il tuo ESP32! Questo progetto porta la potenza dell'elaborazione audio a portata di mano, trasformando il tuo ESP32 non solo in un incredibile microcontrollore, ma anche nel tuo lettore musicale personalizzato. Immagina di entrare nella tua stanza e ascoltare il tuo brano preferito suonato direttamente da questo minuscolo dispositivo. Questa è la potenza che oggi ti mettiamo a disposizione.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,49 +58,49 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_audio_speaker`
         - \-
 
-**Operating Steps**
+**Passaggi Operativi**
 
-#. Insert your SD card into the computer using a card reader, and then format it. You can refer to the tutorial at :ref:`format_sd_card`.
+#. Inserisci la tua scheda SD nel computer utilizzando un lettore di schede, quindi formattala. Puoi fare riferimento al tutorial su :ref:`format_sd_card`.
 
-#. Copy your favorite MP3 file to your SD card.
+#. Copia il tuo file MP3 preferito sulla scheda SD.
 
     .. image:: img/mp3_music.png
 
-#. Insert the SD card into the SD card slot of the extension board.
+#. Inserisci la scheda SD nello slot della scheda di espansione.
 
     .. image:: ../../img/insert_sd.png
 
-#. Build the circuit.
+#. Costruisci il circuito.
 
-    As this is a mono amplifier, you can connect IO25 to the L or R pin of the audio amplifier module.
+    Poiché si tratta di un amplificatore mono, puoi collegare IO25 al pin L o R del modulo amplificatore audio.
 
-    The 10K resistor is used to reduce high-frequency noise and lower the audio volume. It forms an RC low-pass filter with the parasitic capacitance of the DAC and audio amplifier. This filter decreases the amplitude of high-frequency signals, effectively reducing high-frequency noise. So, adding the 10K resistor makes the music sound softer and eliminates unwanted high-frequency noise.
+    La resistenza da 10K è utilizzata per ridurre il rumore ad alta frequenza e abbassare il volume audio. Forma un filtro passa-basso RC con la capacità parassita del DAC e dell'amplificatore audio. Questo filtro riduce l'ampiezza dei segnali ad alta frequenza, diminuendo efficacemente il rumore ad alta frequenza. Quindi, aggiungendo la resistenza da 10K, la musica risulterà più morbida ed eliminerà il rumore ad alta frequenza indesiderato.
 
-    If your SD card's music is already soft, you can remove or replace the resistor with a smaller value.
+    Se la musica sulla tua scheda SD è già morbida, puoi rimuovere o sostituire la resistenza con un valore inferiore.
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
-#. Connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Collega l'ESP32-WROOM-32E al computer utilizzando il cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Modify the code.
+#. Modifica il codice.
 
-    Modify the line of code ``file = new AudioFileSourceSD_MMC("/To Alice.mp3")``; to reflect your file's name and path.
+    Modifica la riga di codice ``file = new AudioFileSourceSD_MMC("/To Alice.mp3")``; per riflettere il nome e il percorso del tuo file.
 
     .. note::
 
-        * Open the ``7.5_mp3_player_sd.ino`` file under the path of ``esp32-starter-kit-main\c\codes\7.5_mp3_player_sd``. Or copy this code into **Arduino IDE**.
-        * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+        * Apri il file ``7.5_mp3_player_sd.ino`` nel percorso ``esp32-starter-kit-main\c\codes\7.5_mp3_player_sd``. Oppure copia questo codice nell'**Arduino IDE**.
+        * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
         * :ref:`unknown_com_port`
-        * The ``ESP8266Audio`` library is used here, refer to :ref:`install_lib_man` for a tutorial to install.
+        * La libreria ``ESP8266Audio`` è utilizzata qui, fai riferimento a :ref:`install_lib_man` per un tutorial sull'installazione.
         
     .. warning::
 
-        If you are using an ESP32 development board version 3.0.0 or higher, you may encounter errors during the compilation process.
-        This issue is usually because the newer versions of the board no longer support the ``ESP8266Audio`` library.
-        To properly run this example, it is recommended to downgrade your ESP32 board's firmware version to 2.0.17. 
-        After completing this example, upgrade back to the latest version.
+        Se stai utilizzando una scheda di sviluppo ESP32 versione 3.0.0 o superiore, potresti incontrare errori durante il processo di compilazione.
+        Questo problema è solitamente dovuto al fatto che le versioni più recenti della scheda non supportano più la libreria ``ESP8266Audio``.
+        Per eseguire correttamente questo esempio, si consiglia di eseguire il downgrade del firmware della tua scheda ESP32 alla versione 2.0.17. 
+        Dopo aver completato questo esempio, esegui l'aggiornamento all'ultima versione.
 
         .. image:: ../../faq/img/version_2.0.17.png
 
@@ -109,14 +109,14 @@ You can also buy them separately from the links below.
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/13f5c757-9622-4735-aa1a-fdbe6fc46273/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
         
-#. Select the appropriate port and board in the Arduino IDE and upload the code to your ESP32.
+#. Seleziona la porta e la scheda appropriate nell'Arduino IDE e carica il codice sul tuo ESP32.
 
-#. After successfully uploading the code, you will hear your favorite music playing.
+#. Dopo aver caricato correttamente il codice, sentirai suonare la tua musica preferita.
 
 
-**How it works?**
+**Come funziona?**
 
-* The code uses several classes from the ``ESP8266Audio`` library to play an MP3 file from an SD card through I2S:
+* Il codice utilizza diverse classi dalla libreria ``ESP8266Audio`` per riprodurre un file MP3 da una scheda SD tramite I2S:
 
     .. code-block:: arduino
 
@@ -126,49 +126,49 @@ You can also buy them separately from the links below.
         #include "SD_MMC.h"
         #include "FS.h"
 
-    * ``AudioGeneratorMP3`` is a class that decodes MP3 audio.
-    * ``AudioFileSourceSD_MMC`` is a class that reads audio data from an SD card.
-    * ``AudioOutputI2S`` is a class that sends audio data to the I2S interface.
+    * ``AudioGeneratorMP3`` è una classe che decodifica l'audio MP3.
+    * ``AudioFileSourceSD_MMC`` è una classe che legge i dati audio da una scheda SD.
+    * ``AudioOutputI2S`` è una classe che invia i dati audio all'interfaccia I2S.
 
-* In the ``setup()`` function, we initialize the SD card, open the MP3 file from the SD card, set up the I2S output on the ESP32's internal DAC, set the output to mono, and start the MP3 generator.
+* Nella funzione ``setup()``, inizializziamo la scheda SD, apriamo il file MP3 dalla scheda SD, configuriamo l'uscita I2S sul DAC interno dell'ESP32, impostiamo l'uscita su mono e avviamo il generatore MP3.
 
     .. code-block:: arduino
 
         void setup() {
-            // Start the serial communication.
+            // Avvia la comunicazione seriale.
             Serial.begin(115200);
             delay(1000);
 
-            // Initialize the SD card. If it fails, print an error message.
+            // Inizializza la scheda SD. Se fallisce, stampa un messaggio di errore.
             if (!SD_MMC.begin()) {
                 Serial.println("SD card mount failed!");
             }
 
-            // Open the MP3 file from the SD card. Replace "/To Alice.mp3" with your own MP3 file name.
+            // Apri il file MP3 dalla scheda SD. Sostituisci "/To Alice.mp3" con il nome del tuo file MP3.
             file = new AudioFileSourceSD_MMC("/To Alice.mp3");
             
-            // Set up the I2S output on ESP32's internal DAC.
+            // Configura l'uscita I2S sul DAC interno dell'ESP32.
             out = new AudioOutputI2S(0, 1);
             
-            // Set the output to mono.
+            // Imposta l'uscita su mono.
             out->SetOutputModeMono(true);
 
-            // Initialize the MP3 generator with the file and output.
+            // Inizializza il generatore MP3 con il file e l'uscita.
             mp3 = new AudioGeneratorMP3();
             mp3->begin(file, out);
         }
 
 
-* In the ``loop()`` function, we check if the MP3 generator is running. If it is, we continue looping it; otherwise, we stop it and print "MP3 done" to the serial monitor.
+* Nella funzione ``loop()``, controlliamo se il generatore MP3 è in esecuzione. Se lo è, continuiamo a farlo funzionare; altrimenti, lo fermiamo e stampiamo "MP3 done" sul monitor seriale.
 
     .. code-block:: arduino
 
         void loop() {
-            // If the MP3 is running, loop it. Otherwise, stop it.
+            // Se l'MP3 è in esecuzione, continua a looparlo. Altrimenti, fermalo.
             if (mp3->isRunning()) {
                 if (!mp3->loop()) mp3->stop();
             } 
-            // If the MP3 is not running, print a message and wait for 1 second.
+            // Se l'MP3 non è in esecuzione, stampa un messaggio e attendi 1 secondo.
             else {
                 Serial.println("MP3 done");
                 delay(1000);

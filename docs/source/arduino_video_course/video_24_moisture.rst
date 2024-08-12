@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle preview.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 24: Measuring Soil Mositure
+Video 24: Misurazione dell'Umidità del Terreno
 ====================================================
 
-Learn how to measure soil moisture accurately using a capacitive soil moisture sensor with an ESP32 microcontroller, including wiring, coding, and practical demonstrations.
+Scopri come misurare accuratamente l'umidità del terreno utilizzando un sensore capacitivo di umidità con un microcontrollore ESP32, con istruzioni su cablaggio, programmazione e dimostrazioni pratiche.
 
-* **Introduction**: Discover how to utilize a capacitive soil moisture sensor with an ESP32 microcontroller for applications like irrigation automation and environmental sensing.
-* **Components**: Understand the essential components needed for the project, including the ESP32 microcontroller, camera extension board, jumper wires, and soil moisture sensor module.
-* **Sensor Operation**: Gain insights into how the soil moisture sensor module operates, including its circuitry and the principle behind capacitance measurement.
-* **Wiring Setup**: Learn how to properly wire the soil moisture sensor to the ESP32 microcontroller, both directly and using the SunFounder ESP32 camera extension module.
-* **Arduino Code**: Explore the process of uploading and configuring Arduino code to read analog values from the sensor and display them on the serial monitor.
-* **Buzzer Implementation**: Discover how to implement a buzzer to provide alerts based on predefined moisture thresholds, demonstrated through practical testing with different soil moisture levels.
+* **Introduzione**: Impara a utilizzare un sensore capacitivo di umidità del terreno con un microcontrollore ESP32 per applicazioni come l'automazione dell'irrigazione e il monitoraggio ambientale.
+* **Componenti**: Scopri i componenti essenziali necessari per il progetto, tra cui il microcontrollore ESP32, la scheda di estensione della fotocamera, i fili di collegamento e il modulo sensore di umidità del terreno.
+* **Funzionamento del Sensore**: Approfondisci il funzionamento del modulo sensore di umidità del terreno, inclusi il suo circuito e il principio di misurazione della capacità.
+* **Configurazione del Cablaggio**: Scopri come collegare correttamente il sensore di umidità del terreno al microcontrollore ESP32, sia direttamente che utilizzando il modulo di estensione della fotocamera SunFounder ESP32.
+* **Codice Arduino**: Esplora il processo di caricamento e configurazione del codice Arduino per leggere i valori analogici dal sensore e visualizzarli sul monitor seriale.
+* **Implementazione del Buzzer**: Scopri come implementare un buzzer per fornire avvisi basati su soglie di umidità predefinite, dimostrato attraverso test pratici con diversi livelli di umidità del terreno.
 
 
 **Video**
@@ -31,8 +31,6 @@ Learn how to measure soil moisture accurately using a capacitive soil moisture s
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/MW-7a5Z0IT0?si=yq4MWeZ_z8Ucwt0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_moisture`
-
-

@@ -1,26 +1,26 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle preview.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 23: Reading Voltage of potentiometer
-====================================================
+Video 23: Lettura della Tensione del Potenziometro
+======================================================
 
-Learn how to use the ESP32 module to read DC voltage from a potentiometer and adjust LED brightness through analog to digital conversion and PWM.
+Impara a utilizzare il modulo ESP32 per leggere la tensione continua da un potenziometro e regolare la luminosità di un LED attraverso la conversione analogico-digitale e PWM.
 
-* **Potentiometer Basics**: Understanding how potentiometers measure voltage and their role in controlling LED brightness.
-* **Analog to Digital Conversion**: How to set up the ESP32 to convert analog signals from a potentiometer to digital values.
-* **PWM for LED Dimming**: Implementing pulse-width modulation on the ESP32 to adjust LED brightness based on potentiometer readings.
-* **Project Setup**: Detailed guide on wiring, coding, and troubleshooting for effective voltage measurement and LED control.
+* **Basi del Potenziometro**: Comprendere come i potenziometri misurano la tensione e il loro ruolo nel controllo della luminosità del LED.
+* **Conversione Analogico-Digitale**: Come configurare l'ESP32 per convertire i segnali analogici da un potenziometro in valori digitali.
+* **PWM per la Dimmerazione del LED**: Implementazione della modulazione di larghezza di impulso sull'ESP32 per regolare la luminosità del LED in base alle letture del potenziometro.
+* **Impostazione del Progetto**: Guida dettagliata su cablaggio, codifica e risoluzione dei problemi per una misurazione della tensione efficace e un controllo del LED.
 
 **Video**
 
@@ -28,8 +28,6 @@ Learn how to use the ESP32 module to read DC voltage from a potentiometer and ad
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/QSYTEytRKHI?si=0pX6U4YBnnTNMBSJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`ar_potentiometer`
-
-

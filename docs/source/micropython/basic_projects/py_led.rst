@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella comunità SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni per le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _py_blink:
 
-2.1 Hello, LED! 
+2.1 Ciao, LED! 
 =======================================
 
-Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+Così come stampare "Ciao, mondo!" è il primo passo per imparare a programmare, usare un programma per accendere un LED è l'introduzione tradizionale alla programmazione fisica.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTE
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -58,104 +58,101 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Available Pins**
+**Pin disponibili**
 
-Here is a list of available pins on the ESP32 board for this project.
+Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. list-table::
     :widths: 5 20 
 
-    * - Available Pins
+    * - Pin Disponibili
       - IO13, IO12, IO14, IO27, IO26, IO25, IO33, IO32, IO15, IO2, IO0, IO4, IO5, IO18, IO19, IO21, IO22, IO23
 
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_2.1_led.png
 
-This circuit works on a simple principle, and the current direction is shown in the figure. The LED will light up after the 220ohm current limiting resistor when pin26 outputs high level. The LED will turn off when pin26 outputs low level.
+Questo circuito funziona su un principio semplice, e la direzione della corrente è mostrata nella figura. Il LED si accenderà dopo il resistore limitatore di corrente da 220ohm quando il pin26 emetterà un livello alto. Il LED si spegnerà quando il pin26 emetterà un livello basso.
 
-**Wiring**
+**Collegamenti**
 
 .. image:: ../../img/wiring/2.1_hello_led_bb.png
 
-**Run the Code**
+**Esegui il codice**
 
-#. Open the ``2.1_hello_led.py`` file located in the ``esp32-starter-kit-main\micropython\codes`` path, or copy and paste the code into Thonny. 
+#. Apri il file ``2.1_hello_led.py`` situato nel percorso ``esp32-starter-kit-main\micropython\codes``, oppure copia e incolla il codice in Thonny. 
 
     .. code-block:: python
 
-        # Import the necessary libraries
+        # Importa le librerie necessarie
         import machine
         import time
 
-        # Set up the LED on pin 26 as an output pin
+        # Configura il LED sul pin 26 come pin di uscita
         led = machine.Pin(26, machine.Pin.OUT)
 
-        # Start an infinite loop
+        # Avvia un ciclo infinito
         while True:
-            # Turn on the LED by setting its value to 1 (HIGH)
+            # Accendi il LED impostando il suo valore a 1 (HIGH)
             led.value(1)
-            # Wait for 1 second (1000 milliseconds) while the LED is on
+            # Attendi 1 secondo (1000 millisecondi) mentre il LED è acceso
             time.sleep(1)
 
-            # Turn off the LED by setting its value to 0 (LOW)
+            # Spegni il LED impostando il suo valore a 0 (LOW)
             led.value(0)
-            # Wait for 0.5 seconds (500 milliseconds) while the LED is off
+            # Attendi 0,5 secondi (500 millisecondi) mentre il LED è spento
             time.sleep(0.5)
 
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Collega l'ESP32 WROOM 32E al tuo computer utilizzando un cavo Micro USB.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Then click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+#. Quindi, fai clic sull'interprete "MicroPython (ESP32).COMXX" nell'angolo in basso a destra.
 
     .. image:: ../python_start/img/sec_inter.png
 
-#. Finally, click "Run Current Script" or press F5 to execute it.
+#. Infine, fai clic su "Esegui script corrente" o premi F5 per eseguirlo.
 
     .. image:: ../python_start/img/quick_guide2.png
 
-#. After the code runs, you will see the LED blinking.
+#. Dopo l'esecuzione del codice, vedrai il LED lampeggiare.
 
 
-**How it works?**
+**Come funziona?**
 
-#. It imports two modules, ``machine`` and ``time``. The ``machine`` module provides low-level access to the microcontroller's hardware, while the ``time`` module provides functions for time-related operations.
+#. Importa due moduli, ``machine`` e ``time``. Il modulo ``machine`` fornisce l'accesso a basso livello all'hardware del microcontrollore, mentre il modulo ``time`` fornisce funzioni per le operazioni relative al tempo.
 
     .. code-block:: python
 
         import machine
         import time
 
-#. Then set up the pin26 as an output pin using the ``machine.Pin()`` function with the ``machine.Pin.OUT`` argument. 
+#. Configura il pin26 come pin di uscita utilizzando la funzione ``machine.Pin()`` con l'argomento ``machine.Pin.OUT``.
 
     .. code-block:: python
 
         led = machine.Pin(26, machine.Pin.OUT)
 
-#. In the ``While True`` loop, the LED is turned on for one second by setting the value of the pin26 to 1 using ``led.value(1)`` and then set to 0(``led.value(0)``) to turn it off for one second, and so on in an infinite loop.
+#. Nel ciclo ``While True``, il LED viene acceso per un secondo impostando il valore del pin26 a 1 utilizzando ``led.value(1)`` e poi impostato a 0 (``led.value(0)``) per spegnerlo per un secondo, e così via in un ciclo infinito.
 
     .. code-block:: python
         
         while True:
-            # Turn on the LED by setting its value to 1 (HIGH)
+            # Accendi il LED impostando il suo valore a 1 (HIGH)
             led.value(1)
-            # Wait for 1 second (1000 milliseconds) while the LED is on
+            # Attendi 1 secondo (1000 millisecondi) mentre il LED è acceso
             time.sleep(1)
 
-            # Turn off the LED by setting its value to 0 (LOW)
+            # Spegni il LED impostando il suo valore a 0 (LOW)
             led.value(0)
-            # Wait for 0.5 seconds (500 milliseconds) while the LED is off
+            # Attendi 0,5 secondi (500 millisecondi) mentre il LED è spento
             time.sleep(0.5)
 
+**Per saperne di più**
 
-
-
-**Learn More**
-
-In this project, we used MicroPython's ``machine`` and ``time`` module, we can find more ways to use them here.
+In questo progetto, abbiamo utilizzato i moduli ``machine`` e ``time`` di MicroPython, possiamo trovare altri modi per usarli qui.
 
 * `machine.Pin <https://docs.micropython.org/en/latest/library/machine.Pin.html>`_
 

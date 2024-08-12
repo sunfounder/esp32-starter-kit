@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_iot_mqtt:
 
-8.4 IoT Communication with MQTT
+8.4 Comunicazione IoT con MQTT
 =======================================
 
-This project focuses on utilizing MQTT, a popular communication protocol in the Internet of Things (IoT) domain. MQTT enables IoT devices to exchange data using a publish/subscribe model, where devices communicate through topics.
+Questo progetto si concentra sull'utilizzo di MQTT, un popolare protocollo di comunicazione nel dominio dell'Internet of Things (IoT). MQTT consente ai dispositivi IoT di scambiarsi dati utilizzando un modello publish/subscribe, in cui i dispositivi comunicano attraverso argomenti (topics).
 
-In this project, we explore the implementation of MQTT by building a circuit that includes an LED, a button, and a thermistor. The ESP32-WROOM-32E microcontroller is used to establish a connection to WiFi and communicate with an MQTT broker. The code allows the microcontroller to subscribe to specific topics, receive messages, and control the LED based on the received information. Additionally, the project demonstrates publishing temperature data from the thermistor to a designated topic when the button is pressed.
+In questo progetto, esploreremo l'implementazione di MQTT costruendo un circuito che include un LED, un pulsante e un termistore. Il microcontrollore ESP32-WROOM-32E viene utilizzato per stabilire una connessione WiFi e comunicare con un broker MQTT. Il codice consente al microcontrollore di iscriversi a specifici argomenti, ricevere messaggi e controllare il LED in base alle informazioni ricevute. Inoltre, il progetto dimostra come pubblicare i dati di temperatura dal termistore a un argomento designato quando viene premuto il pulsante.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+Per questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - ESP32 Starter Kit
+    *   - Kit Iniziale ESP32
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -64,25 +64,25 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-**Code Upload**
+**Caricamento del Codice**
 
-#. Build the circuit.
+#. Assembla il circuito.
 
     .. note:: 
-        When establishing a connection to WiFi, only the 36, 39, 34, 35, 32, 33 pins can be employed for analog reading. Please ensure the thermistor is connected to these designated pins.
+        Durante la connessione al WiFi, solo i pin 36, 39, 34, 35, 32, 33 possono essere utilizzati per la lettura analogica. Assicurati che il termistore sia collegato a questi pin designati.
 
     .. image:: ../../img/wiring/iot_4_matt_bb.png
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Poi, collega l'ESP32-WROOM-32E al computer utilizzando il cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
 
-#. Open the code.
+#. Apri il codice.
 
-    * Open the ``iot_4_mqtt.ino`` file located in the ``esp32-starter-kit-main\c\codes\iot_4_mqtt`` directory, or copy the code into the Arduino IDE.
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Apri il file ``iot_4_mqtt.ino`` situato nella directory ``esp32-starter-kit-main\c\codes\iot_4_mqtt``, oppure copia il codice nell'IDE di Arduino.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriate, clicca sul pulsante **Upload**.
     * :ref:`unknown_com_port`
-    * The ``PubSubClient`` library is used here, you can install it from the **Library Manager**.
+    * Qui viene utilizzata la libreria ``PubSubClient``, che puoi installare dal **Library Manager**.
 
         .. image:: img/mqtt_lib.png
  
@@ -90,55 +90,55 @@ You can also buy them separately from the links below.
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/e45a4bd6-9b35-47f0-af5e-92d802004087/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Locate the following lines and modify them with your ``SSID`` and ``PASSWORD``.
+#. Individua le seguenti righe e modificale con il tuo ``SSID`` e ``PASSWORD``.
 
     .. code-block::  Arduino
 
-        // Replace the next variables with your SSID/Password combination
+        // Sostituisci le prossime variabili con la combinazione SSID/Password
         const char* ssid = "SSID";
         const char* password = "PASSWORD";
 
-#. Find the next line and modify your ``unique_identifier``. Guarantee that your ``unique_identifier`` is truly unique as any IDs that are identical trying to log in to the same MQTT Broker may result in a login failure.
+#. Trova la seguente riga e modifica il tuo ``unique_identifier``. Assicurati che il tuo ``unique_identifier`` sia davvero unico, poiché qualsiasi ID identico che tenta di accedere allo stesso MQTT Broker potrebbe causare un fallimento del login.
 
     .. code-block::  Arduino
 
-        // Add your MQTT Broker address, example:
+        // Aggiungi l'indirizzo del tuo Broker MQTT, esempio:
         const char* mqtt_server = "broker.hivemq.com";
         const char* unique_identifier = "sunfounder-client-sdgvsda";  
 
-**Topic Subscription**
+**Sottoscrizione a un Topic**
 
-#. To avoid interference from messages sent by other participants, you can set it as an obscure or uncommon string. Simply replace the current topic ``SF/LED`` with your desired topic name.
+#. Per evitare interferenze con i messaggi inviati da altri partecipanti, puoi impostarlo come una stringa oscura o poco comune. Sostituisci semplicemente l'attuale topic ``SF/LED`` con il nome dell'argomento che desideri.
 
     .. note:: 
-        You have the freedom to set the Topic as any character you desire. Any MQTT device that has subscribed to the identical Topic will be able to receive the same message. You can also simultaneously subscribe to multiple Topics.
+        Hai la libertà di impostare il Topic con qualsiasi carattere desideri. Qualsiasi dispositivo MQTT che si è iscritto allo stesso Topic sarà in grado di ricevere lo stesso messaggio. Puoi anche iscriverti contemporaneamente a più Topic.
 
     .. code-block::  Arduino
         :emphasize-lines: 9
 
         void reconnect() {
-            // Loop until we're reconnected
+            // Cicla finché non siamo riconnessi
             while (!client.connected()) {
                 Serial.print("Attempting MQTT connection...");
-                // Attempt to connect
+                // Tentativo di connessione
                 if (client.connect(unique_identifier)) {
                     Serial.println("connected");
-                    // Subscribe
+                    // Sottoscrizione
                     client.subscribe("SF/LED");
                 } else {
                     Serial.print("failed, rc=");
                     Serial.print(client.state());
                     Serial.println(" try again in 5 seconds");
-                    // Wait 5 seconds before retrying
+                    // Attendi 5 secondi prima di riprovare
                     delay(5000);
                 }
             }
         }
 
-#. Modify the functionality to respond to the subscribed topic. In the provided code, if a message is received on the topic ``SF/LED``, it checks whether the message is ``on`` or ``off``. Depending on the received message, it changes the output state to control the LED's on or off status.
+#. Modifica la funzionalità per rispondere al topic sottoscritto. Nel codice fornito, se viene ricevuto un messaggio sul topic ``SF/LED``, verifica se il messaggio è ``on`` o ``off``. A seconda del messaggio ricevuto, cambia lo stato di output per controllare l'accensione o lo spegnimento del LED.
 
     .. note::
-       You can modify it for any topic you are subscribed to, and you can write multiple if statements to respond to multiple topics.
+       Puoi modificarlo per qualsiasi topic a cui sei iscritto, e puoi scrivere più istruzioni if per rispondere a più topic.
 
     .. code-block::  arduino
         :emphasize-lines: 15
@@ -155,8 +155,8 @@ You can also buy them separately from the links below.
             }
             Serial.println();
 
-            // If a message is received on the topic "SF/LED", you check if the message is either "on" or "off".
-            // Changes the output state according to the message
+            // Se viene ricevuto un messaggio sul topic "SF/LED", controlla se il messaggio è "on" o "off".
+            // Cambia lo stato dell'output in base al messaggio
             if (String(topic) == "SF/LED") {
                 Serial.print("Changing state to ");
                 if (messageTemp == "on") {
@@ -169,48 +169,47 @@ You can also buy them separately from the links below.
             }
         }
 
-#. After selecting the correct board (ESP32 Dev Module) and port, click the **Upload** button.
+#. Dopo aver selezionato la scheda corretta (ESP32 Dev Module) e la porta, clicca sul pulsante **Upload**.
 
-#. Open the serial monitor and if the following information is printed, it indicates a successful connection to the MQTT server.
+#. Apri il monitor seriale e se viene stampata la seguente informazione, indica che la connessione al server MQTT è avvenuta con successo.
 
     .. code-block:: 
 
-        WiFi connected
-        IP address: 
+        WiFi connesso
+        Indirizzo IP: 
         192.168.18.77
-        Attempting MQTT connection...connected
+        Tentativo di connessione MQTT...connesso
 
-**Message Publication via HiveMQ**
+**Pubblicazione di Messaggi tramite HiveMQ**
 
-HiveMQ is a messaging platform that functions as an MQTT broker, facilitating fast, efficient, and reliable data transfer to IoT devices.
+HiveMQ è una piattaforma di messaggistica che funziona come un broker MQTT, facilitando un trasferimento dati veloce, efficiente e affidabile ai dispositivi IoT.
 
-Our code specifically utilizes the MQTT broker provided by HiveMQ. We have included the address of the HiveMQ MQTT broker in the code as follows:
-
+Il nostro codice utilizza specificamente il broker MQTT fornito da HiveMQ. Abbiamo incluso l'indirizzo del broker MQTT di HiveMQ nel codice come segue:
 
     .. code-block::  Arduino
 
-        // Add your MQTT Broker address, example:
+        // Aggiungi l'indirizzo del tuo Broker MQTT, esempio:
         const char* mqtt_server = "broker.hivemq.com";
 
-#. At present, open the |link_hivemq| in your web browser.
+#. Ora, apri il |link_hivemq| nel tuo browser web.
 
-#. Connect the client to the default public proxy.
+#. Connetti il client al proxy pubblico di default.
 
     .. image:: img/sp230512_092258.png
 
-#. Publish a message in the Topic you have subscribed to. In this project, you can publish ``on`` or ``off`` to control your LED.
+#. Pubblica un messaggio nel Topic a cui ti sei iscritto. In questo progetto, puoi pubblicare ``on`` o ``off`` per controllare il tuo LED.
 
     .. image:: img/sp230512_140234.png
 
-**Message Publication to MQTT**
+**Pubblicazione di Messaggi su MQTT**
 
-We can also utilize the code to publish information to the Topic. In this demonstration, we have coded a feature that sends the temperature measured by the thermistor to the Topic when you press the button.
+Possiamo anche utilizzare il codice per pubblicare informazioni sul Topic. In questa dimostrazione, abbiamo codificato una funzione che invia la temperatura misurata dal termistore al Topic quando premi il pulsante.
 
-#. Click on **Add New Topic Subscription**.
+#. Clicca su **Add New Topic Subscription**.
 
     .. image:: img/sp230512_092341.png
 
-#. Fill in the topics you desire to follow and click **Subscribe**. In the code, we send temperature information to the topic ``SF/TEMP``.
+#. Compila i topic che desideri seguire e clicca su **Subscribe**. Nel codice, inviamo le informazioni sulla temperatura al topic ``SF/TEMP``.
 
     .. code-block::  Arduino
         :emphasize-lines: 14
@@ -221,7 +220,7 @@ We can also utilize the code to publish information to the Topic. In this demons
             }
             client.loop();
 
-            // if the button pressed, publish the temperature to topic "SF/TEMP"
+            // se il pulsante è premuto, pubblica la temperatura sul topic "SF/TEMP"
             if (digitalRead(buttonPin)) {
                     long now = millis();
                     if (now - lastMsg > 5000) {
@@ -233,6 +232,7 @@ We can also utilize the code to publish information to the Topic. In this demons
             }
         }
 
-#. Hence, we can monitor this Topic on HiveMQ, allowing us to view the information you have published.
+#. Pertanto, possiamo monitorare questo Topic su HiveMQ, permettendoci di visualizzare le informazioni che hai pubblicato.
 
     .. image:: img/sp230512_154342.png
+

@@ -1,38 +1,38 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime speciali.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _unknown_com_port:
 
-Always displaying "Unknown COMxx"?
+Vedi sempre "COMxx sconosciuto"?
 =======================================
 
-When plugging the ESP32 into the computer, the Arduino IDE often displays ``Unknown COMxx``. Why does this happen?
+Quando colleghi l'ESP32 al computer, l'Arduino IDE spesso mostra ``COMxx sconosciuto``. Perché accade questo?
 
 .. image:: img/unknown_device.png
 
-This is because the USB driver for ESP32 is different from the regular Arduino Boards. The Arduino IDE can't automatically recognize this board. 
+Questo succede perché il driver USB per ESP32 è diverso da quello delle schede Arduino regolari. L'Arduino IDE non può riconoscere automaticamente questa scheda.
 
-In such a scenario, you need to manually select the correct board by following these steps:
+In questo caso, è necessario selezionare manualmente la scheda corretta seguendo questi passaggi:
 
-#. Click on **"Select the other board and port"**.
+#. Clicca su **"Seleziona un'altra scheda e porta"**.
 
     .. image:: img/unknown_select.png
 
-#. In the search, type **"esp32 dev module"**, then select the board that appears. Afterward, select the correct port and click **OK**.
+#. Nella ricerca, digita **"esp32 dev module"**, quindi seleziona la scheda che appare. Successivamente, seleziona la porta corretta e clicca su **OK**.
 
     .. image:: img/unknown_board.png
 
-#. Now, you should be able to see your board and port in this quick view window.
+#. Ora dovresti essere in grado di vedere la tua scheda e porta in questa finestra di visualizzazione rapida.
 
     .. image:: img/unknown_correct.png

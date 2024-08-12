@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_potentiometer:
 
-5.8 Turn the Knob
-===================
+5.8 Regola la Manopola
+============================
 
-A potentiometer is a three-terminal device that is commonly used to adjust the resistance in a circuit. It features a knob or a sliding lever that can be used to vary the resistance value of the potentiometer. In this project, we will utilize it to control the brightness of an LED, similar to a desk lamp in our daily life. By adjusting the position of the potentiometer, we can change the resistance in the circuit, thereby regulating the current flowing through the LED and adjusting its brightness accordingly. This allows us to create a customizable and adjustable lighting experience, similar to that of a desk lamp.
+Un potenziometro è un dispositivo a tre terminali comunemente utilizzato per regolare la resistenza in un circuito. Dispone di una manopola o di una leva scorrevole che può essere utilizzata per variare il valore di resistenza del potenziometro. In questo progetto, lo utilizzeremo per controllare la luminosità di un LED, simile a una lampada da scrivania nella nostra vita quotidiana. Regolando la posizione del potenziometro, possiamo cambiare la resistenza nel circuito, regolando così la corrente che scorre attraverso il LED e adattandone la luminosità di conseguenza. Questo ci permette di creare un'esperienza di illuminazione personalizzabile e regolabile, simile a quella di una lampada da scrivania.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -60,94 +60,89 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pot`
         - |link_potentiometer_buy|
 
-**Available Pins**
+**Pin Disponibili**
 
-* **Available Pins**
+* **Pin Disponibili**
 
-    Here is a list of available pins on the ESP32 board for this project.
+    Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Available Pins
+        *   - Pin Disponibili
             - IO14, IO25, I35, I34, I39, I36
 
-* **Strapping Pins**
+* **Pin Strapping**
 
-    The following pins are strapping pins, which affect the startup process of the ESP32 during power on or reset. However, once the ESP32 is booted up successfully, they can be used as regular pins.
+    I seguenti pin sono pin di strapping, che influenzano il processo di avvio dell'ESP32 durante l'accensione o il reset. Tuttavia, una volta che l'ESP32 è avviato correttamente, possono essere utilizzati come pin normali.
 
     .. list-table::
         :widths: 5 15
 
-        *   - Strapping Pins
+        *   - Pin Strapping
             - IO0, IO12
 
-
-**Schematic**
+**Schema**
 
 .. image:: ../../img/circuit/circuit_5.8_potentiometer.png
 
-When you rotate the potentiometer, the value of I35 will change. By programming, you can use the value of I35 to control the brightness of the LED. Therefore, as you rotate the potentiometer, the brightness of the LED will also change accordingly.
+Ruotando il potenziometro, il valore di I35 cambierà. Attraverso la programmazione, puoi utilizzare il valore di I35 per controllare la luminosità del LED. Pertanto, ruotando il potenziometro, la luminosità del LED cambierà di conseguenza.
 
-
-**Wiring**
+**Collegamento**
 
 .. image:: ../../img/wiring/5.8_potentiometer_bb.png
 
-**Code**
-
+**Codice**
 
 .. note::
 
-    * You can open the file ``5.8_pot.ino`` under the path of ``esp32-starter-kit-main\c\codes\5.8_pot``. 
-    * After selecting the board (ESP32 Dev Module) and the appropriate port, click the **Upload** button.
+    * Puoi aprire il file ``5.8_pot.ino`` nel percorso ``esp32-starter-kit-main\c\codes\5.8_pot``.
+    * Dopo aver selezionato la scheda (ESP32 Dev Module) e la porta appropriata, fai clic sul pulsante **Upload**.
     * :ref:`unknown_com_port`
-   
+
 .. raw:: html
      
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aadce2e7-fd5d-4608-a557-f1e4d07ba795/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, rotate the potentiometer and you will see the brightness of the LED change accordingly. At the same time you can see the analog and voltage values of the potentiometer in the serial monitor.
+Dopo che il codice è stato caricato con successo, ruota il potenziometro e vedrai la luminosità del LED cambiare di conseguenza. Allo stesso tempo, puoi vedere i valori analogici e di tensione del potenziometro nel monitor seriale.
 
+**Come funziona?**
 
-**How it works?**
-
-#. Define constants for pin connections and PWM settings.
+#. Definisci le costanti per le connessioni dei pin e le impostazioni PWM.
 
     .. code-block:: arduino
 
-        const int potPin = 35; // Potentiometer connected to
-        const int ledPin = 26; // LED connected to
+        const int potPin = 35; // Potenziometro collegato a
+        const int ledPin = 26; // LED collegato a
 
-        // PWM settings
-        const int freq = 5000; // PWM frequency
-        const int resolution = 12; // PWM resolution (bits)
+        // Impostazioni PWM
+        const int freq = 5000; // Frequenza PWM
+        const int resolution = 12; // Risoluzione PWM (bit)
 
+    Qui la risoluzione PWM è impostata a 12 bit e l'intervallo è 0-4095.
 
-    Here the PWM resolution is set to 12 bits and the range is 0-4095.
-
-#. Configure the system in the ``setup()`` function.
+#. Configura il sistema nella funzione ``setup()``.
 
     .. code-block:: arduino
 
         void setup() {
             Serial.begin(115200);
 
-            // Configure PWM
+            // Configura PWM
             ledcAttach(ledPin, freq, resolution);
         }
 
-    * In the ``setup()`` function, the Serial communication is started at a baud rate of 115200. 
-    * The ``ledcAttach()`` function is called to set up the specified LED pin with the specified frequency and resolution.
+    * Nella funzione ``setup()``, la comunicazione seriale viene avviata a una velocità di 115200 baud.
+    * La funzione ``ledcAttach()`` viene chiamata per configurare il pin LED specificato con la frequenza e la risoluzione specificate.
 
-#. Main loop (executed repeatedly) in the loop() function.
+#. Loop principale (eseguito ripetutamente) nella funzione ``loop()``.
 
     .. code-block:: arduino
 
         void loop() {
 
-            int potValue = analogRead(potPin); // read the value of the potentiometer
-            uint32_t voltage_mV = analogReadMilliVolts(potPin); // Read the voltage in millivolts
+            int potValue = analogRead(potPin); // leggi il valore del potenziometro
+            uint32_t voltage_mV = analogReadMilliVolts(potPin); // Leggi la tensione in millivolt
             
             ledcWrite(ledPin, potValue);
             
@@ -160,9 +155,9 @@ After the code is uploaded successfully, rotate the potentiometer and you will s
             delay(100);
         }
 
-    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: This function is used to get ADC value for a given pin/ADC channel in millivolts.
+    * ``uint32_t analogReadMilliVolts(uint8_t pin);``: Questa funzione viene utilizzata per ottenere il valore ADC per un determinato pin/canale ADC in millivolt.
 
-        * ``pin`` GPIO pin to read analog value.
+        * ``pin`` seleziona il pin GPIO per leggere il valore analogico.
 
-    The potentiometer value is directly used as the PWM duty cycle for controlling the LED brightness via the ``ledcWrite()`` function, as the range of values is also from 0 to 4095.
+    Il valore del potenziometro viene utilizzato direttamente come ciclo di lavoro PWM per controllare la luminosità del LED tramite la funzione ``ledcWrite()``, poiché l'intervallo di valori è anch'esso compreso tra 0 e 4095.
 

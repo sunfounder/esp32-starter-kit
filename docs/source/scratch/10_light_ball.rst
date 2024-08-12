@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_light_ball:
 
-2.10 Light Sensitive Ball
-==============================
+2.10 Palla Sensibile alla Luce
+=================================
 
-In this project, we use Photoresistor to make the ball on the stage fly upwards. Place your hand on top of the photoresistor to control the light intensity it receives. The closer your hand is to the photoresistor, the smaller its value and the higher the ball flies on the stage, otherwise it will fall. When the ball touches the string, it makes a nice sound as well as a twinkling starlight.
+In questo progetto, utilizziamo un fotoresistore per far volare la palla sullo schermo verso l'alto. Posiziona la mano sopra il fotoresistore per controllare l'intensità della luce che riceve. Più la tua mano è vicina al fotoresistore, minore sarà il suo valore e più la palla volerà in alto sullo schermo; altrimenti cadrà. Quando la palla tocca la linea, emette un piacevole suono e un bagliore stellare scintillante.
 
 .. image:: img/18_ball.png
 
-Required Components
----------------------
+Componenti Necessari
+----------------------
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - ESP32 Starter Kit
         - 320+
         - |link_esp32_starter_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistare i componenti separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_esp32_wroom_32e`
         - |link_esp32_wroom_32e_buy|
@@ -61,99 +61,98 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-You Will Learn
----------------------
+Cosa Imparerai
+-------------------
 
-- Fill the sprite with colors
-- Touch between the sprites
+- Riempire la sprite con colori
+- Riconoscere il tocco tra le sprite
 
-Build the Circuit
------------------------
+Costruire il Circuito
+---------------------------
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+Un fotoresistore o fotocellula è un resistore variabile controllato dalla luce. La resistenza di un fotoresistore diminuisce con l'aumentare dell'intensità della luce incidente.
 
-Build the circuit according to the following diagram.
+Costruisci il circuito seguendo lo schema seguente.
 
-Connect one end of the photoresistor to 5V, the other end to pin35, and connect a 10K resistor in series with GND at this end.
+Collega un'estremità del fotoresistore a 5V, l'altra estremità al pin 35, e collega un resistore da 10K in serie con il GND a questa estremità.
 
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by pin35 becomes larger.
+Quando l'intensità della luce aumenta, la resistenza del fotoresistore diminuisce, la divisione della tensione del resistore da 10K aumenta e il valore ottenuto dal pin 35 diventa maggiore.
 
 .. image:: img/circuit/8_light_alarm_bb.png
 
-Programming
-------------------
+Programmazione
+--------------------
 
-The effect we want to get is that the closer your hand is to the photoresistor, the ball sprite on the stage keeps going up, otherwise it will fall on the bowl sprite. If it touches the Line sprite while walking up or falling down, it will make a musical sound and emit star sprites in all directions.
+L'effetto che vogliamo ottenere è che più la tua mano è vicina al fotoresistore, più la sprite a forma di palla sullo schermo continuerà a salire; altrimenti cadrà sulla sprite a forma di ciotola. Se tocca la sprite Line mentre sale o scende, emetterà un suono musicale e spruzzerà sprite stellari in tutte le direzioni.
 
 
-**1. Select sprite and backdrop**
+**1. Selezionare sprite e sfondo**
 
-Delete the default sprite, select the **Ball**, **Bowl** and **Star** sprite.
+Elimina la sprite predefinita, seleziona le sprite **Palla**, **Ciotola** e **Stella**.
 
 .. image:: img/18_ball1.png
 
-
-Move the **Bowl** sprite to the bottom center of the stage and enlarge its size.
+Sposta la sprite **Ciotola** al centro inferiore dello schermo e ingrandisci le sue dimensioni.
 
 .. image:: img/18_ball3.png
 
-Because we need to move it upwards, so set direction of **Ball** sprite to 0.
+Poiché dobbiamo spostarla verso l'alto, imposta la direzione della sprite **Palla** su 0.
 
 .. image:: img/18_ball4.png
 
-Set the size and direction of the **Star** sprite to 180 because we need it to fall down, or you can change it to another angle.
+Imposta la dimensione e la direzione della sprite **Stella** su 180 perché dobbiamo farla cadere, oppure puoi cambiarla in un altro angolo.
 
 .. image:: img/18_ball12.png
 
-Now add the **Stars** backdrop.
+Ora aggiungi lo sfondo **Stelle**.
 
 .. image:: img/18_ball2.png
 
-**2. Draw a Line sprite**
+**2. Disegna una sprite Linea**
 
-Add a Line sprite.
+Aggiungi una sprite Linea.
 
 .. image:: img/18_ball7.png
 
-Go to the **Costumes** page of the **Line** sprite, reduce the width of the red line on the canvas slightly, then copy it 5 times and align the lines.
+Vai alla pagina **Costumi** della sprite **Linea**, riduci leggermente la larghezza della linea rossa sulla tela, quindi copiala 5 volte e allinea le linee.
 
 .. image:: img/18_ball8.png
 
-Now fill the lines with different colors. First choose a color you like, then click on the **Fill** tool and move the mouse over the line to fill it with color.
+Ora riempi le linee con colori diversi. Scegli prima un colore che ti piace, quindi clicca sullo strumento **Riempimento** e sposta il mouse sulla linea per riempirla di colore.
 
 .. image:: img/18_ball9.png
 
-Follow the same method to change the color of the other lines.
+Segui lo stesso metodo per cambiare il colore delle altre linee.
 
 .. image:: img/18_ball10.png
 
 
-**3. Scripting the Ball sprite**
+**3. Scrivere lo script per la sprite Palla**
 
-Set the initial position of the **Ball** sprite, then when the light value is less than 1500 (it can be any other value, depending on your current environment.), let the Ball move up.
+Imposta la posizione iniziale della sprite **Palla**, poi quando il valore della luce è inferiore a 1500 (può essere qualsiasi altro valore, a seconda del tuo ambiente attuale), fai in modo che la Palla si muova verso l'alto.
 
-You can make the variable light_value show up on the stage to observe the change of light intensity at any time.
+Puoi fare in modo che la variabile light_value appaia sullo schermo per osservare il cambiamento dell'intensità della luce in qualsiasi momento.
 
 .. image:: img/18_ball5.png
 
-Otherwise, the **Ball** sprite will fall and limit its Y coordinate to a minimum of -100. This can be modified to make it look like it is falling on the **Bowl** sprite.
+Altrimenti, la sprite **Palla** cadrà e limiterà la sua coordinata Y a un minimo di -100. Questo può essere modificato per farla sembrare che cada sulla sprite **Ciotola**.
 
 .. image:: img/18_ball6.png
 
-When the **Line** sprite is hit, the current Y coordinate is saved to the variable **ball_coor** and a **Bling** message is broadcast.
+Quando la sprite **Linea** viene colpita, la coordinata Y corrente viene salvata nella variabile **ball_coor** e viene trasmesso un messaggio **Bling**.
 
 .. image:: img/18_ball11.png
 
-**4. Scripting the Star sprite**
+**4. Scrivere lo script per la sprite Stella**
 
-When the script starts, first hide the **Star** sprite. When the **Bling** message is received, clone the **Star** sprite.
+Quando lo script inizia, nascondi la sprite **Stella**. Quando viene ricevuto il messaggio **Bling**, clona la sprite **Stella**.
 
 .. image:: img/18_ball13.png
 
-When the **Star** sprite appears as a clone, play the sound effect and set its coordinates to be in sync with the **Ball** sprite.
+Quando la sprite **Stella** appare come clone, riproduci l'effetto sonoro e imposta le sue coordinate per sincronizzarle con la sprite **Palla**.
 
 .. image:: img/18_ball14.png
 
-Create the effect of the **Star** sprite appearing, and adjust it as needed.
+Crea l'effetto della sprite **Stella** che appare e regola come necessario.
 
 .. image:: img/18_ball15.png
