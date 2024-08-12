@@ -27,6 +27,7 @@ Merci d'avoir choisi notre |link_esp32_starter_kit|.
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
+        * |link_it_tutorials|
 
     Veuillez cliquer sur les liens respectifs pour accéder au document dans la langue de votre choix.
 

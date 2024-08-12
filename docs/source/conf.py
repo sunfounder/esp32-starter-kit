@@ -127,6 +127,9 @@ rst_epilog = """
 
     <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/fr/latest/" target="_blank">Tutoriels en ligne en français</a>
 
+.. |link_it_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/esp32-starter-kit/it/latest/" target="_blank">italian Online-tutorials</a>
 
 .. |link_thonny| raw:: html
 
