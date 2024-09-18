@@ -1,10 +1,9 @@
-const int potPin = 35; // Potentiometer connected to GPIO14
-const int ledPin = 26; // LED connected to GPIO26
+const int potPin = 35; // Potentiometer connected to
+const int ledPin = 26; // LED connected to
 
 // PWM settings
 const int freq = 5000; // PWM frequency
 const int resolution = 12; // PWM resolution (bits)
-const int channel = 0; // PWM channel
 
 void setup() {
   Serial.begin(115200);
