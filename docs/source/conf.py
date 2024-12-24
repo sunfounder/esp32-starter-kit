@@ -105,7 +105,7 @@ rst_epilog = """
 
 .. |link_sf_facebook| raw:: html
 
-    <a href="https://bit.ly/raphaelkit" target="_blank">here</a>
+    <a href="https://bit.ly/raphaelkit" target="_blank">Ici</a>
 
 .. |link_spanish_tutorials| raw:: html
 
@@ -145,11 +145,11 @@ rst_epilog = """
 
 .. |link_processing_download| raw:: html
 
-    <a href="https://processing.org/download" target="_blank">Procesing download</a>
+    <a href="https://processing.org/download" target="_blank">Procesing Télécharger</a>
 
 .. |link_processing_tutorial| raw:: html
 
-    <a href="https://processing.org/tutorials/overview/" target="_blank">Processing Overview</a>
+    <a href="https://processing.org/tutorials/overview/" target="_blank">Processing Aperçu</a>
 
 .. |link_esp32_micropython_download| raw:: html
 
@@ -177,7 +177,7 @@ rst_epilog = """
 
 .. |link_discord_server| raw:: html
 
-    <a href="https://discord.com/invite/G7Q5UjDT7K" target="_blank">Discord Server</a>
+    <a href="https://discord.com/invite/G7Q5UjDT7K" target="_blank">Serveur Discord</a>
 
 .. |link_cheerlights| raw:: html
 
@@ -205,11 +205,11 @@ rst_epilog = """
 
 .. |link_blynk_timer_intro| raw:: html
 
-    <a href="https://docs.blynk.io/en/legacy-platform/legacy-articles/keep-your-void-loop-clean" target="_blank">Why we use Blynk timer?</a> 
+    <a href="https://docs.blynk.io/en/legacy-platform/legacy-articles/keep-your-void-loop-clean" target="_blank">Pourquoi utilisons-nous le timer Blynk ?</a> 
 
 .. |link_blynk_quickstart| raw:: html
 
-    <a href="https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/quickstart-device-code-overview" target="_blank">Blynk Quickstart</a> 
+    <a href="https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/quickstart-device-code-overview" target="_blank">Blynk Démarrage rapide</a> 
 
 .. |link_blynk_doc| raw:: html
 
@@ -245,12 +245,12 @@ rst_epilog += """
 
 .. |link_esp32_extension_board| raw:: html
 
-    <a href="https://www.sunfounder.com/products/sunfounder-esp32-camera-pro-kit?_pos=3&_sid=3d56bf6ea&_ss=r" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/sunfounder-esp32-camera-pro-kit?_pos=3&_sid=3d56bf6ea&_ss=r" target="_blank">ACHETER</a>
 
 
 .. |link_esp32_kit| raw:: html
 
-    <a href="https://www.sunfounder.com/collections/esp32-1/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">Purchase Link for ESP32 Starter Kit</a>
+    <a href="https://www.sunfounder.com/collections/esp32-1/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">Lien d'achat pour ESP32 Starter Kit</a>
 
 
 
