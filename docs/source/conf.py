@@ -144,11 +144,11 @@ rst_epilog = """
 
 .. |link_processing_download| raw:: html
 
-    <a href="https://processing.org/download" target="_blank">Procesing download</a>
+    <a href="https://processing.org/download" target="_blank">Procesing descargar</a>
 
 .. |link_processing_tutorial| raw:: html
 
-    <a href="https://processing.org/tutorials/overview/" target="_blank">Processing Overview</a>
+    <a href="https://processing.org/tutorials/overview/" target="_blank">Processing Resumen</a>
 
 .. |link_esp32_micropython_download| raw:: html
 
@@ -176,7 +176,7 @@ rst_epilog = """
 
 .. |link_discord_server| raw:: html
 
-    <a href="https://discord.com/invite/G7Q5UjDT7K" target="_blank">Discord Server</a>
+    <a href="https://discord.com/invite/G7Q5UjDT7K" target="_blank">Servidor de Discord</a>
 
 .. |link_cheerlights| raw:: html
 
@@ -204,19 +204,19 @@ rst_epilog = """
 
 .. |link_blynk_timer_intro| raw:: html
 
-    <a href="https://docs.blynk.io/en/legacy-platform/legacy-articles/keep-your-void-loop-clean" target="_blank">Why we use Blynk timer?</a> 
+    <a href="https://docs.blynk.io/en/legacy-platform/legacy-articles/keep-your-void-loop-clean" target="_blank">Por qué usamos el temporizador de Blynk?</a> 
 
 .. |link_blynk_quickstart| raw:: html
 
-    <a href="https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/quickstart-device-code-overview" target="_blank">Blynk Quickstart</a> 
+    <a href="https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/quickstart-device-code-overview" target="_blank">Blynk Inicio rápido</a> 
 
 .. |link_blynk_doc| raw:: html
 
-    <a href="https://docs.blynk.io/" target="_blank">Blynk Documentation</a> 
+    <a href="https://docs.blynk.io/" target="_blank">Blynk Documentación</a> 
 
 .. |link_blynk_syncing| raw:: html
 
-    <a href="https://docs.blynk.io/en/blynk-library-firmware-api/state-syncing#for-hardware" target="_blank">Blynk - State Syncing</a> 
+    <a href="https://docs.blynk.io/en/blynk-library-firmware-api/state-syncing#for-hardware" target="_blank">Blynk - Sincronización de estado</a> 
 
 .. |link_blynk_write| raw:: html
 
@@ -244,11 +244,11 @@ rst_epilog += """
 
 .. |link_esp32_extension_board| raw:: html
 
-    <a href="https://www.sunfounder.com/products/sunfounder-esp32-camera-pro-kit?_pos=3&_sid=3d56bf6ea&_ss=r" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/sunfounder-esp32-camera-pro-kit?_pos=3&_sid=3d56bf6ea&_ss=r" target="_blank">COMPRAR</a>
 
 .. |link_esp32_kit| raw:: html
 
-    <a href="https://www.sunfounder.com/collections/esp32-1/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">Purchase Link for ESP32 Starter Kit</a>
+    <a href="https://www.sunfounder.com/collections/esp32-1/products/sunfounder-esp32-ultimate-starter-kit-with-esp32-camera-extension-board-battery" target="_blank">Enlace de compra para ESP32 Starter Kit</a>
 
 .. |link_esp32_starter_kit| raw:: html
 
@@ -258,126 +258,126 @@ rst_epilog += """
 
 .. |link_esp32_wroom_32e_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/esp-wroom-32-esp32-esp-32s-development-board" target="_blank">BUY</a>    
+    <a href="https://www.sunfounder.com/products/esp-wroom-32-esp32-esp-32s-development-board" target="_blank">COMPRAR</a>    
 
 .. |link_led_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/500pcs-5-colors-x-100pcs-5mm-leds-with-white-red-yellow-green-blue-colors-kit-box" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/500pcs-5-colors-x-100pcs-5mm-leds-with-white-red-yellow-green-blue-colors-kit-box" target="_blank">COMPRAR</a>
 
 .. |link_resistor_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/1-4w-resistor-assortment-kit-40-values-400pcs" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/1-4w-resistor-assortment-kit-40-values-400pcs" target="_blank">COMPRAR</a>
 
 .. |link_wires_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-with-14-lengths" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/560pcs-jumper-wire-kit-with-14-lengths" target="_blank">COMPRAR</a>
 
 .. |link_breadboard_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/sunfounder-breadboard-kit" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/sunfounder-breadboard-kit" target="_blank">COMPRAR</a>
 
 .. |link_rgb_led_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/100pcs-5mm-4-pin-rgb-common-cathode-led" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/100pcs-5mm-4-pin-rgb-common-cathode-led" target="_blank">COMPRAR</a>
 
 .. |link_button_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/100pcs-6x6x5-mm-miniature-push-button" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/100pcs-6x6x5-mm-miniature-push-button" target="_blank">COMPRAR</a>
 
 .. |link_capacitor_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/ceramic-capacitor-assortment-kit-set-of-600-small-assorted-capacitors" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/ceramic-capacitor-assortment-kit-set-of-600-small-assorted-capacitors" target="_blank">COMPRAR</a>
 
 .. |link_potentiometer_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/10pcs-10k-ohm-trim-potentiometer-breadboard" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/10pcs-10k-ohm-trim-potentiometer-breadboard" target="_blank">COMPRAR</a>
 
 .. |link_photoresistor_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/100pcs-photoresistor-photo-light-sensitive-resistor-5516" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/100pcs-photoresistor-photo-light-sensitive-resistor-5516" target="_blank">COMPRAR</a>
 
 .. |link_thermistor_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/50pcs-ntc-thermistor-mf11-103-10k-ohm" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/50pcs-ntc-thermistor-mf11-103-10k-ohm" target="_blank">COMPRAR</a>
 
 .. |link_transistor_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/10-values-200pcs-power-supply-general-transistor-npn-pnp-assortment-kit-bc337-bc327-2n2222-2n2907-2n3904-2n3906-s8050-s8550-a1015-c1815-set" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/10-values-200pcs-power-supply-general-transistor-npn-pnp-assortment-kit-bc337-bc327-2n2222-2n2907-2n3904-2n3906-s8050-s8550-a1015-c1815-set" target="_blank">COMPRAR</a>
 
 .. |link_relay_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/10pcs-srs-05vdc-sl-c-5v-relay-coil-spdt-6-pin-pcb-electromagnetic-power-relay" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/10pcs-srs-05vdc-sl-c-5v-relay-coil-spdt-6-pin-pcb-electromagnetic-power-relay" target="_blank">COMPRAR</a>
 
 .. |link_passive_buzzer_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/20pcs-3-5v-2-terminals-passive-buzzer" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/20pcs-3-5v-2-terminals-passive-buzzer" target="_blank">COMPRAR</a>
 
 .. |link_ws2812_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/2pcs-8-bit-ws2812b-rgb-led-strip-5050smd-individual-addressable-60pixels-m" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/2pcs-8-bit-ws2812b-rgb-led-strip-5050smd-individual-addressable-60pixels-m" target="_blank">COMPRAR</a>
 
 .. |link_i2clcd1602_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/i2c-lcd1602-module" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/i2c-lcd1602-module" target="_blank">COMPRAR</a>
 
 .. |link_motor_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/5pcs-1-5v-6v-type-miniature-dc-motors" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/5pcs-1-5v-6v-type-miniature-dc-motors" target="_blank">COMPRAR</a>
 
 .. |link_servo_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/sg90-micro-digital-servo" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/sg90-micro-digital-servo" target="_blank">COMPRAR</a>
 
 .. |link_keypad_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/membrane-switch-keypad" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/membrane-switch-keypad" target="_blank">COMPRAR</a>
 
 .. |link_74hc595_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/10-pcs-ic-74hc595-74595-sn74hc595n-8-bit-shift-register-dip-16" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/10-pcs-ic-74hc595-74595-sn74hc595n-8-bit-shift-register-dip-16" target="_blank">COMPRAR</a>
 
 .. |link_7segment_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/30pcs-0-56-7-segment-led" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/30pcs-0-56-7-segment-led" target="_blank">COMPRAR</a>
 
 .. |link_ultrasonic_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/5pcs-hc-sr04-ultrasonic-module-distance-sensor" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/5pcs-hc-sr04-ultrasonic-module-distance-sensor" target="_blank">COMPRAR</a>
 
 .. |link_dht22_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/dht22-am2302-digital-temperature-and-humidity-sensor" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/dht22-am2302-digital-temperature-and-humidity-sensor" target="_blank">COMPRAR</a>
 
 .. |link_receiver_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/infrared-receiver-module" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/infrared-receiver-module" target="_blank">COMPRAR</a>
 
 .. |link_rfid_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/rfid-kit-blue" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/rfid-kit-blue" target="_blank">COMPRAR</a>
 
 .. |link_pir_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/hcsr501-infrared-sensor?_pos=1&_sid=2bd5fd3cc&_ss=r" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/hcsr501-infrared-sensor?_pos=1&_sid=2bd5fd3cc&_ss=r" target="_blank">COMPRAR</a>
 
 .. |link_avoid_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/ir-obstacle-avoidance-sensor-module" target="_blank">BUY</a> 
+    <a href="https://www.sunfounder.com/products/ir-obstacle-avoidance-sensor-module" target="_blank">COMPRAR</a> 
 
 .. |link_line_track_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/tracking-sensor-module" target="_blank">BUY</a> 
+    <a href="https://www.sunfounder.com/products/tracking-sensor-module" target="_blank">COMPRAR</a> 
 
 .. |link_soil_moisture_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/capacitive-soil-moisture-sensor-module" target="_blank">BUY</a>  
+    <a href="https://www.sunfounder.com/products/capacitive-soil-moisture-sensor-module" target="_blank">COMPRAR</a>  
 
 .. |link_joystick_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/dual-axis-button-joystick-module-ps2-game" target="_blank">BUY</a> 
+    <a href="https://www.sunfounder.com/products/dual-axis-button-joystick-module-ps2-game" target="_blank">COMPRAR</a> 
 
 .. |link_dht11_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/dht11-temperature-and-humidity-sensor-module" target="_blank">BUY</a> 
+    <a href="https://www.sunfounder.com/products/dht11-temperature-and-humidity-sensor-module" target="_blank">COMPRAR</a> 
         
 """
