@@ -98,6 +98,14 @@ Puoi anche acquistarli separatamente dai link qui sotto.
         const char* ssid = "SSID";
         const char* password = "PASSWORD";
 
+#. Ora, abilita **PSRAM**.
+
+    .. image:: img/sp230516_150554.png
+
+#. Imposta lo schema di partizione su **Huge APP (3MB No OTA/1MB SPIFFS)**.
+
+    .. image:: img/sp230516_150840.png
+
 #. Dopo aver selezionato la scheda corretta (ESP32 Dev Module) e la porta, clicca sul pulsante **Upload**.
 
 #. Vedrai un messaggio di connessione WiFi avvenuta con successo e l'indirizzo IP assegnato nel Serial Monitor.

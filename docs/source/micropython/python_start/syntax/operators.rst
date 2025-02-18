@@ -23,13 +23,13 @@ Gli operatori sono usati per eseguire operazioni su variabili e valori.
 
 * :ref:`Comparison operators`
 
-* :ref:`Logical operators`
+* :ref:`Operatori logici`
 
-* :ref:`Identity operators`
+* :ref:`Operatori di identità`
 
-* :ref:`Membership operators`
+* :ref:`Operatori di appartenenza`
 
-* :ref:`Bitwise operators`
+* :ref:`Operatori bitwise`
 
 Arithmetic Operators
 -------------------------
@@ -156,6 +156,7 @@ Gli operatori di assegnazione possono essere utilizzati per assegnare valori all
 >>> %Run test.py
 36
 >>> 
+
 Comparison Operators
 ------------------------
 Gli operatori di confronto vengono utilizzati per confrontare due valori.
