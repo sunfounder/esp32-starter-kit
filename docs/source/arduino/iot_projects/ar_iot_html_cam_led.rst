@@ -97,6 +97,14 @@ También puedes comprarlos por separado en los siguientes enlaces.
         const char* ssid = "SSID";
         const char* password = "PASSWORD";
 
+#. Ahora, habilita **PSRAM**.
+
+    .. image:: img/sp230516_150554.png
+
+#. Establece el esquema de partición a **Huge APP (3MB No OTA/1MB SPIFFS)**.
+
+    .. image:: img/sp230516_150840.png
+
 #. Después de seleccionar la placa correcta (ESP32 Dev Module) y el puerto, haz clic en el botón **Subir**.
 
 #. Verás un mensaje de conexión exitosa a WiFi y la dirección IP asignada en el Monitor Serie.
