@@ -97,6 +97,14 @@
         const char* ssid = "SSID";
         const char* password = "PASSWORD";
 
+#. 今度は、 **PSRAM** を有効にします。
+
+    .. image:: img/sp230516_150554.png
+
+#. パーティションスキームを **Huge APP (3MB No OTA/1MB SPIFFS)** に設定します。
+
+    .. image:: img/sp230516_150840.png
+
 #. 正しいボード（ESP32 Dev Module）とポートを選択した後、 **アップロード** ボタンをクリックします。
 
 #. シリアルモニタで成功したWiFi接続のメッセージと割り当てられたIPアドレスが表示されます。
