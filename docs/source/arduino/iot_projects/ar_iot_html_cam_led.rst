@@ -97,6 +97,14 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
         const char* ssid = "SSID";
         const char* password = "PASSWORD";
 
+#. Aktivieren Sie jetzt **PSRAM**.
+
+    .. image:: img/sp230516_150554.png
+
+#. Stellen Sie das Partitionsschema auf **Huge APP (3MB No OTA/1MB SPIFFS)** ein.
+
+    .. image:: img/sp230516_150840.png
+
 #. Nachdem Sie das richtige Board (ESP32 Dev Module) und den Port ausgewählt haben, klicken Sie auf den **Upload**-Knopf.
 
 #. Im seriellen Monitor sehen Sie eine erfolgreiche WLAN-Verbindungsmeldung und die zugewiesene IP-Adresse.
