@@ -52,6 +52,8 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_esp32_camera_extension`
         - |link_esp32_extension_board|
 
+.. note:: The ESP32 camera you received may have either a short FPC cable or a 75mm FPC cable. Regardless of the type, both function identically.
+
 
 **Related Precautions**
 
