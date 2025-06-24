@@ -116,7 +116,7 @@ Nous avons conçu une carte d'extension qui vous permet de profiter pleinement d
 
 La carte propose deux types de connecteurs GPIO - l'un avec des connecteurs femelles, parfait pour les projets de prototypage rapide. L'autre type dispose de bornes à vis, assurant des connexions de fils stables et la rendant adaptée aux projets IoT.
 
-De plus, vous pouvez alimenter votre projet avec une seule batterie 3,7V 18650. Si la batterie est faible, vous pouvez la charger simplement en branchant un câble Micro USB 5V. Cela en fait un excellent outil pour les projets en extérieur et les applications à distance.
+De plus, vous pouvez alimenter votre projet avec une seule batterie 3,7V 18650. Si la batterie est faible, vous pouvez la charger simplement en branchant un câble USB 5V. Cela en fait un excellent outil pour les projets en extérieur et les applications à distance.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -133,22 +133,22 @@ Présentation de l'interface
     * Contrôle l'alimentation de la batterie, permettant de l'allumer et de l'éteindre.
 
 * **Port de charge**
-    * Lorsqu'un câble Micro USB 5V est connecté, la batterie peut être chargée.
+    * Lorsqu'un câble USB 5V est connecté, la batterie peut être chargée.
 
 * **Port de la batterie**
     * Dispose d'une interface PH2.0-2P, compatible avec les batteries lithium 3.7V 18650.
     * Fournit de l'énergie à la fois à l'ESP32 WROOM 32E et à l'extension de caméra ESP32.
 
 * **Broches d'en-tête ESP32**
-    * Conçues pour le module ESP32 WROOM 32E. Faites attention à son orientation ; assurez-vous que les deux ports Micro USB soient du même côté pour éviter une mauvaise installation.
+    * Conçues pour le module ESP32 WROOM 32E. Faites attention à son orientation ; assurez-vous que les deux ports USB soient du même côté pour éviter une mauvaise installation.
 
 * **Broches GPIO**
     * **Connecteurs femelles** : Utilisés pour connecter divers composants à l'ESP32, parfaits pour les projets de prototypage rapide.
     * **Borne à vis** : Borne à vis 14 broches de 3,5 mm de pas, assurant des connexions de fils stables et la rendant adaptée aux projets IoT.
 
 * **Voyants indicateurs**
-    * **PWR** : S'allume lorsque la batterie est alimentée ou lorsqu'un Micro USB est directement branché à l'ESP32.
-    * **CHG** : S'illumine lors de la connexion d'un Micro USB au port de charge de la carte, signifiant le début de la charge. Il s'éteindra une fois la batterie entièrement chargée.
+    * **PWR** : S'allume lorsque la batterie est alimentée ou lorsqu'un USB est directement branché à l'ESP32.
+    * **CHG** : S'illumine lors de la connexion d'un USB au port de charge de la carte, signifiant le début de la charge. Il s'éteindra une fois la batterie entièrement chargée.
 
 * **Connecteur Micro SD**
     * Fente à ressort pour une insertion et un retrait faciles de la carte Micro SD.
@@ -189,7 +189,7 @@ Guide d'insertion de l'interface
 
 **Téléverser le code**
 
-    Lorsque vous devez téléverser du code sur l'ESP32 WROOM 32E, connectez-le à votre ordinateur à l'aide d'un câble Micro USB.
+    Lorsque vous devez téléverser du code sur l'ESP32 WROOM 32E, connectez-le à votre ordinateur à l'aide d'un câble USB.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600
@@ -222,7 +222,7 @@ Guide d'insertion de l'interface
         :width: 600
         :align: center
 
-    Si la batterie est épuisée, branchez un Micro USB 5V pour la charger.
+    Si la batterie est épuisée, branchez un USB 5V pour la charger.
 
     .. image:: ../img/battery_charge.png
         :width: 600

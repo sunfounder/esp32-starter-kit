@@ -1,36 +1,35 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _micropython_user:
 
-For MicroPython User
-======================
+Pour les utilisateurs de MicroPython
+======================================
 
-This chapter is a comprehensive guide tailored specifically for users who prefer working with MicroPython. 
-It covers various topics, including getting started with MicroPython, working with displays, generating sounds, 
-controlling actuators, utilizing sensors, and exploring fun projects. 
-This chapter provides MicroPython users with the necessary knowledge and resources to effectively use 
-this kit and unleash their creativity in building exciting projects.
+Ce chapitre est un guide complet spécialement conçu pour les utilisateurs qui préfèrent travailler avec MicroPython.  
+Il couvre divers sujets, notamment les premiers pas avec MicroPython, l’utilisation d’écrans, la génération de sons,  
+le contrôle d’actionneurs, l’utilisation de capteurs et l’exploration de projets amusants.  
+Ce chapitre fournit aux utilisateurs de MicroPython les connaissances et ressources nécessaires pour utiliser efficacement  
+ce kit et libérer leur créativité dans la réalisation de projets passionnants.
 
+Voici le paquet de code complet pour le Kit de démarrage ESP32. Vous pouvez cliquer sur le lien suivant pour le télécharger :
 
-Here is the complete code package for the ESP32 Starter Kit. You can click on the following link to download it:
+* :download:`Kit de démarrage SunFounder ESP32 <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-* :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
+Une fois le téléchargement terminé, décompressez le fichier et ouvrez les exemples de code ou les fichiers de projet correspondants dans le logiciel adéquat. Cela vous permettra de parcourir et d’utiliser tout le code et les ressources fournis avec le kit.
 
-Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
-
-**1. Get Started**
+**1. Premiers pas**
 
 .. toctree::
     :maxdepth: 1
@@ -43,7 +42,7 @@ Once the download is complete, unzip the file and open the relevant example code
     python_start/syntax/micropython_basic_syntax
 
 
-**2. Displays**
+**2. Affichages**
 
 .. toctree::
     :maxdepth: 2
@@ -57,7 +56,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_rgb_strip
 
 
-**3. Sounds**
+**3. Sons**
 
 .. toctree::
     :maxdepth: 2
@@ -65,7 +64,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_ac_buz
     basic_projects/py_pa_buz
 
-**4. Actuators**
+**4. Actionneurs**
 
 .. toctree::
     :maxdepth: 2
@@ -74,7 +73,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_pump
     basic_projects/py_servo
 
-**5. Sensors**
+**5. Capteurs**
 
 .. toctree::
     :maxdepth: 2
@@ -94,7 +93,7 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_dht11
     basic_projects/py_irremote
 
-**6. Funny Projects**
+**6. Projets ludiques**
 
 .. toctree::
     :maxdepth: 2
@@ -107,8 +106,6 @@ Once the download is complete, unzip the file and open the relevant example code
     basic_projects/py_digital_dice
     basic_projects/py_game_guess_number
     basic_projects/py_plant_monitor
-
-
 
 
 

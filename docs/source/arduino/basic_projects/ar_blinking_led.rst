@@ -89,7 +89,7 @@ Ce circuit fonctionne sur un principe simple, et la direction du courant est mon
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-#. Ensuite, connectez l'ESP32 WROOM 32E à votre ordinateur en utilisant un câble Micro USB. 
+#. Ensuite, connectez l'ESP32 à votre ordinateur en utilisant un câble USB. 
 
     * :ref:`unknown_com_port`
 

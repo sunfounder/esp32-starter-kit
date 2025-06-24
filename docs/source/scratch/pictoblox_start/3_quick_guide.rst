@@ -94,6 +94,10 @@ Par exemple, choisissez **ESP32**.
 
 Une fenêtre de connexion apparaîtra alors pour que vous sélectionniez le port à connecter, et revenez à la page d'accueil lorsque la connexion est terminée. Si vous perdez la connexion pendant l'utilisation, vous pouvez également cliquer sur **Connecter** pour reconnecter.
 
+.. note::
+
+    S'il affiche COM1 ou aucun port, il se peut que votre ordinateur ne reconnaisse pas la carte. Voir :ref:`install_driver`.
+
 .. image:: img/1_connect.png
 
 En même temps, des palettes liées à l'ESP32, telles que ESP32, Actionneurs, etc., apparaîtront dans la **Palette de Blocs**.
@@ -181,6 +185,11 @@ Par exemple, choisissez **ESP32**.
 .. image:: img/1_choose_uno.png
 
 Une fenêtre de connexion apparaîtra alors pour que vous sélectionniez le port à connecter, et revenez à la page d'accueil lorsque la connexion est terminée. Si vous perdez la connexion pendant l'utilisation, vous pouvez également cliquer sur **Connecter** pour reconnecter.
+
+.. note::
+
+    S'il affiche COM1 ou aucun port, il se peut que votre ordinateur ne reconnaisse pas la carte. Voir :ref:`install_driver`.
+
 
 .. image:: img/1_connect.png
 

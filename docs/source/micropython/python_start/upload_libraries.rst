@@ -1,52 +1,50 @@
-
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _add_libraries_py:
 
-1.4 Upload the Libraries (Important)
-======================================
+1.4 Télécharger les bibliothèques (Important)
+==============================================
 
-In some projects, you will need additional libraries. So here we upload these libraries to ESP32 first, and then we can run the code directly later.
+Dans certains projets, des bibliothèques supplémentaires sont nécessaires. Nous allons donc d’abord les transférer vers l’ESP32, ce qui nous permettra d’exécuter le code directement par la suite.
 
-#. Download the relevant code from the link below.
+#. Téléchargez le code correspondant depuis le lien ci-dessous.
 
+   * :download:`Kit de démarrage SunFounder ESP32 <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-   * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
-
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Connectez l’ESP32 WROOM 32E à votre ordinateur à l’aide d’un câble USB.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Open Thonny IDE and click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
+#. Ouvrez l’IDE Thonny et cliquez sur l’interpréteur "MicroPython (ESP32).COMXX" dans le coin inférieur droit.
 
     .. image:: img/sec_inter.png
 
-#. In the top navigation bar, click **View** -> **Files**.
+#. Dans la barre de navigation supérieure, cliquez sur **Affichage** -> **Fichiers**.
 
     .. image:: img/th_files.png
 
-#. Switch the path to the folder where you downloaded the `code package <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_ before, and then go to the ``esp32-starter-kit-main\micropython\libs`` folder.
+#. Accédez au dossier dans lequel vous avez téléchargé le `paquet de code <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`_, puis ouvrez le dossier ``esp32-starter-kit-main\micropython\libs``.
 
     .. image:: img/th_path.png
 
-#. Select all the files or folders in the ``libs/`` folder, right-click and click **Upload to**, it will take a while to upload.
+#. Sélectionnez tous les fichiers ou dossiers dans le dossier ``libs/``, faites un clic droit, puis cliquez sur **Téléverser vers**. Le transfert peut prendre un moment.
 
     .. image:: img/th_upload.png
 
-#. Now you will see the files you just uploaded inside your drive ``MicroPython device``.
+#. Vous verrez maintenant les fichiers que vous venez de téléverser dans le lecteur ``MicroPython device``.
 
     .. image:: img/th_done.png
