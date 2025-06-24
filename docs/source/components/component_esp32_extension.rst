@@ -113,7 +113,7 @@ Wir haben ein Erweiterungsboard entworfen, das Ihnen ermöglicht, die Kamera- un
 
 Das Board bietet zwei Arten von GPIO-Headern – einen mit weiblichen Headern, perfekt für schnelle Prototyping-Projekte. Der andere Typ verfügt über Schraubklemmen, die stabile Drahtverbindungen gewährleisten und sich somit für IoT-Projekte eignen.
 
-Zusätzlich können Sie Ihr Projekt mit einer einzelnen 3,7V 18650-Batterie betreiben. Wenn die Batterie leer ist, können Sie sie bequem aufladen, indem Sie einfach ein 5V Micro-USB-Kabel anschließen. Dies macht es zu einem großartigen Werkzeug für Outdoor-Projekte und Fernanwendungen.
+Zusätzlich können Sie Ihr Projekt mit einer einzelnen 3,7V 18650-Batterie betreiben. Wenn die Batterie leer ist, können Sie sie bequem aufladen, indem Sie einfach ein 5V USB-Kabel anschließen. Dies macht es zu einem großartigen Werkzeug für Outdoor-Projekte und Fernanwendungen.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -130,22 +130,22 @@ Schnittstellen-Einführung
     * Steuert das Ein- und Ausschalten der Batteriestromversorgung.
 
 * **Charging Port**
-    * Beim Anschließen eines 5V Micro-USB-Kabels kann die Batterie aufgeladen werden.
+    * Beim Anschließen eines 5V USB-Kabels kann die Batterie aufgeladen werden.
 
 * **Battery Port**
     * Verfügt über eine PH2.0-2P-Schnittstelle, kompatibel mit 3,7V 18650 Lithium-Batterien.
     * Versorgt sowohl das ESP32 WROOM 32E als auch die ESP32-Kameraerweiterung mit Strom.
 
 * **ESP32 Pin Headers**
-    * Bestimmt für das ESP32 WROOM 32E-Modul. Achten Sie auf die korrekte Orientierung; stellen Sie sicher, dass beide Micro-USB-Ports auf dieselbe Seite zeigen, um eine falsche Platzierung zu vermeiden.
+    * Bestimmt für das ESP32 WROOM 32E-Modul. Achten Sie auf die korrekte Orientierung; stellen Sie sicher, dass beide USB-Ports auf dieselbe Seite zeigen, um eine falsche Platzierung zu vermeiden.
 
 * **GPIO Headers**
     * **Weibliche Header**: Zum Anschließen verschiedener Komponenten an das ESP32, perfekt für schnelle Prototyping-Projekte.
     * **Schraubklemme**: 3,5mm-Pitch 14pin-Schraubklemme, gewährleistet stabile Drahtverbindungen und eignet sich für IoT-Projekte.
 
 * **Indicator Lights**
-    * **PWR**: Leuchtet auf, wenn die Batterie eingeschaltet ist oder wenn ein Micro-USB direkt an das ESP32 angeschlossen ist.
-    * **CHG**: Leuchtet auf, wenn ein Micro-USB an den Ladeanschluss der Platine angeschlossen wird, was den Beginn des Ladevorgangs anzeigt. Es erlischt, sobald die Batterie vollständig aufgeladen ist.
+    * **PWR**: Leuchtet auf, wenn die Batterie eingeschaltet ist oder wenn ein USB direkt an das ESP32 angeschlossen ist.
+    * **CHG**: Leuchtet auf, wenn ein USB an den Ladeanschluss der Platine angeschlossen wird, was den Beginn des Ladevorgangs anzeigt. Es erlischt, sobald die Batterie vollständig aufgeladen ist.
 
 * **Micro SD Connector**
     * Federbeladener Steckplatz für einfaches Einsetzen und Entnehmen der Micro-SD-Karte.
@@ -186,7 +186,7 @@ Anleitung zum Einsetzen der Schnittstellen
 
 **Code hochladen**
 
-    Um Code auf den ESP32 WROOM 32E zu laden, verbinden Sie ihn über ein Micro USB-Kabel mit Ihrem Computer.
+    Um Code auf den ESP32 WROOM 32E zu laden, verbinden Sie ihn über ein USB-Kabel mit Ihrem Computer.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600
@@ -219,7 +219,7 @@ Anleitung zum Einsetzen der Schnittstellen
         :width: 600
         :align: center
 
-    Wenn die Batterie entladen ist, schließen Sie ein 5V Micro USB-Kabel an, um sie aufzuladen.
+    Wenn die Batterie entladen ist, schließen Sie ein 5V USB-Kabel an, um sie aufzuladen.
 
     .. image:: ../img/battery_charge.png
         :width: 600

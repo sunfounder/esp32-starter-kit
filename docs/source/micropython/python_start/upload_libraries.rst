@@ -24,7 +24,7 @@ In manchen Projekten benötigt man zusätzliche Bibliotheken. Daher laden wir di
 
    * :download:`SunFounder ESP32 Starter Kit <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
+#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein USB-Kabel.
     
     .. image:: ../../img/plugin_esp32.png
         :width: 600

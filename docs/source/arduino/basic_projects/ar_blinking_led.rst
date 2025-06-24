@@ -88,7 +88,7 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Verbinden Sie dann das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
+#. Verbinden Sie dann das ESP32 mit Ihrem Computer über ein USB-Kabel.
 
     * :ref:`unknown_com_port`
 

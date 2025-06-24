@@ -94,6 +94,10 @@ Wählen Sie zum Beispiel **ESP32**.
 
 Ein Verbindungsfenster wird dann erscheinen, um den Port für die Verbindung auszuwählen, und zurück zur Startseite gehen, wenn die Verbindung abgeschlossen ist. Wenn Sie während der Nutzung die Verbindung trennen, können Sie auch auf **Connect** klicken, um erneut zu verbinden.
 
+.. note::
+
+    Wenn nur COM1 oder kein Anschluss angezeigt wird, erkennt dein Computer das Board möglicherweise nicht. Siehe :ref:`install_driver`.
+
 .. image:: img/1_connect.png
 
 Gleichzeitig erscheinen ESP32-bezogene Paletten, wie ESP32, Aktuatoren usw., in der **Block Palette**.
@@ -181,6 +185,10 @@ Wählen Sie zum Beispiel **ESP32**.
 .. image:: img/1_choose_uno.png
 
 Ein Verbindungsfenster wird dann erscheinen, um den Port für die Verbindung auszuwählen, und zurück zur Startseite gehen, wenn die Verbindung abgeschlossen ist. Wenn Sie während der Nutzung die Verbindung trennen, können Sie auch auf **Connect** klicken, um erneut zu verbinden.
+
+.. note::
+
+    Wenn nur COM1 oder kein Anschluss angezeigt wird, erkennt dein Computer das Board möglicherweise nicht. Siehe :ref:`install_driver`.
 
 .. image:: img/1_connect.png
 

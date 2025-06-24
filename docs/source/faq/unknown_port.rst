@@ -19,6 +19,10 @@
 
 Wenn Sie den ESP32 an den Computer anschließen, zeigt die Arduino IDE oft ``Unbekanntes COMxx`` an. Warum passiert das?
 
+.. note::
+
+   Wenn ``Unbekanntes COMxx`` oder kein Anschluss angezeigt wird, erkennt dein Computer das Board möglicherweise nicht. Siehe :ref:`install_driver`.
+
 .. image:: img/unknown_device.png
 
 Dies liegt daran, dass der USB-Treiber für den ESP32 anders ist als bei den regulären Arduino-Boards. Die Arduino IDE kann dieses Board nicht automatisch erkennen.

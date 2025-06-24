@@ -32,7 +32,7 @@ Zuvor müssen Sie jedoch das Paket herunterladen und die Bibliotheken hochladen,
 
     .. image:: img/quick_guide1.png
 
-2. Stecken Sie den esp32 mit einem Mikro-USB-Kabel in Ihren Computer.
+2. Stecken Sie den esp32 mit einem USB-Kabel in Ihren Computer.
 
     .. image:: ../../img/plugin_esp32.png
 
@@ -110,7 +110,7 @@ Der Code wird direkt im Codeabschnitt angezeigt. Sie können ihn in Thonny kopie
 
     .. image:: img/quick_guide8.png
 
-3. Stecken Sie den esp32 mit einem Mikro-USB-Kabel in Ihren Computer.
+3. Stecken Sie den esp32 mit einem USB-Kabel in Ihren Computer.
 
     .. image:: ../../img/plugin_esp32.png
 

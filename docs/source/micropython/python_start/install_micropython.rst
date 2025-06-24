@@ -17,32 +17,34 @@
 1.3 Installation von MicroPython auf dem ESP32(Wichtig)
 ========================================================
 
-#. Laden Sie die |link_esp32_micropython_download| von der offiziellen MicroPython-Website herunter und anschließend die neueste Version der Firmware.
+.. #. Laden Sie die |link_esp32_micropython_download| von der offiziellen MicroPython-Website herunter und anschließend die neueste Version der Firmware.
 
-    .. image:: img/dowload_micropython_uf2.png
+..     .. image:: img/dowload_micropython_uf2.png
 
-#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
-    
-    .. image:: ../../img/plugin_esp32.png
+#. Verbinde das ESP32 WROOM 32E mit deinem Computer über ein USB-Kabel.
+
+   .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Klicken Sie in der unteren rechten Ecke der Thonny IDE, wählen Sie im aufklappenden Menü **"MicroPython(ESP32).COMXX"** aus und dann **"Configure interpreter"**.
+#. Klicke in der rechten unteren Ecke der Thonny-IDE und wähle **„MicroPython(ESP32).xxxCOMXX“** aus dem Dropdown-Menü. Danach wähle **„Interpreter konfigurieren“**.
 
-    .. image:: img/install_micropython1.png
+   .. note::
 
-#. Klicken Sie im neuen Popup-Fenster auf **"Install or Update MicroPython"**.
+      Wenn außer „Local Python 3“ keine weiteren Optionen angezeigt werden, wurde dein ESP32-Board möglicherweise nicht vom Computer erkannt.  
+      In diesem Fall musst du eventuell den :ref:`install_driver` installieren.
 
-    .. image:: img/install_micropython2.png
+   .. image:: img/install_micropython1.png
 
-#. Wählen Sie den korrekten Port und die zuvor heruntergeladene Firmware aus und klicken Sie auf **"Install"**.
+#. Klicke im neuen Fenster auf **„MicroPython installieren oder aktualisieren“**.
 
-    .. image:: img/install_micropython3.png
+   .. image:: img/install_micropython2.png
 
-#. Nach einer erfolgreichen Installation können Sie diese Seite schließen.
+#. Wähle den richtigen Port, die MicroPython-Familie, die Variante und das Board aus und klicke dann auf **„Installieren“**.
 
-    .. image:: img/install_micropython4.png
+   .. image:: img/install_micropython3.png
 
-#. Wenn Sie zur Thonny-Startseite zurückkehren, sehen Sie die MicroPython-Version und ESP32-bezogene Hinweise anstelle von roten Fehlermeldungen.
+#. Nach erfolgreicher Installation kehrst du zur Thonny-Startseite zurück.  
+   Dort siehst du nun die MicroPython-Version und ESP32-bezogene Ausgaben anstelle roter Fehlermeldungen.
 
-    .. image:: img/install_micropython5.png
+   .. image:: img/install_micropython5.png

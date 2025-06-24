@@ -103,7 +103,7 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein Micro-USB-Kabel.
+#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -111,7 +111,12 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
 
 #. Klicken Sie dann in der unteren rechten Ecke auf den Interpreter "MicroPython (ESP32).COMXX".
 
-    .. image:: ../python_start/img/sec_inter.png
+   .. note::
+
+      Wenn außer „Local Python 3“ keine weiteren Optionen angezeigt werden, wurde dein ESP32-Board möglicherweise nicht vom Computer erkannt.  
+      In diesem Fall musst du eventuell den :ref:`install_driver` installieren.
+
+   .. image:: ../python_start/img/sec_inter.png
 
 #. Klicken Sie schließlich auf "Aktuelles Skript ausführen" oder drücken Sie F5, um es auszuführen.
 
