@@ -39,7 +39,7 @@ Para programar el microcontrolador ESP32, necesitamos instalar el paquete de la 
 
 **Subir el Código**
 
-#. Ahora, conecta el ESP32 WROOM 32E a tu computadora usando un cable Micro USB.
+#. Ahora, conecta el ESP32 WROOM 32E a tu computadora usando un cable USB.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -51,7 +51,12 @@ Para programar el microcontrolador ESP32, necesitamos instalar el paquete de la 
 
 #. Si tu ESP32 está conectado a la computadora, puedes elegir el puerto correcto haciendo clic en **Herramientas** -> **Puerto**.
 
-    .. image:: img/install_esp326.png
+   .. note::
+
+      Si solo aparece COM1 o ningún puerto, es posible que tu computadora no haya reconocido la placa. Consulta :ref:`install_driver`.
+
+   .. image:: img/install_esp326.png
+
 
 #. Además, Arduino 2.0 introdujo una nueva forma de seleccionar rápidamente la placa y el puerto. Para el ESP32, usualmente no se reconoce automáticamente, por lo que necesitas hacer clic en **Seleccionar otra placa y puerto**.
 

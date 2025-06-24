@@ -32,7 +32,7 @@ Sin embargo, primero debes descargar el paquete y subir las bibliotecas, como se
 
     .. image:: img/quick_guide1.png
 
-#. Conecta el esp32 a tu computadora con un cable micro USB.
+#. Conecta el esp32 a tu computadora con un cable USB.
 
     .. image:: ../../img/plugin_esp32.png
 
@@ -111,7 +111,7 @@ El código se muestra directamente en la sección de código. Puedes copiarlo en
 
     .. image:: img/quick_guide8.png
 
-#. Conecta el esp32 a tu computadora con un cable micro USB.
+#. Conecta el esp32 a tu computadora con un cable USB.
 
     .. image:: ../../img/plugin_esp32.png
 

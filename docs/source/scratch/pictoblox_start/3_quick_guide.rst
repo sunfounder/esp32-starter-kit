@@ -95,6 +95,10 @@ Por ejemplo, elige **ESP32**.
 
 Entonces aparecerá una ventana de conexión para que selecciones el puerto a conectar, y regresarás a la página principal cuando la conexión esté completa. Si rompes la conexión durante el uso, también puedes hacer clic en **Conectar** para reconectar.
 
+.. note::
+
+    Si solo se muestra COM1 o ningún puerto, es posible que tu ordenador no haya reconocido la placa. Consulta :ref:`install_driver`.
+
 .. image:: img/1_connect.png
 
 Al mismo tiempo, aparecerán en la **Paleta de Bloques** paletas relacionadas con ESP32, como ESP32, Actuadores, etc.
@@ -182,6 +186,10 @@ Por ejemplo, elige **ESP32**.
 .. image:: img/1_choose_uno.png
 
 Entonces aparecerá una ventana de conexión para que selecciones el puerto a conectar, y regresarás a la página principal cuando la conexión esté completa. Si rompes la conexión durante el uso, también puedes hacer clic en **Conectar** para reconectar.
+
+.. note::
+
+    Si solo se muestra COM1 o ningún puerto, es posible que tu ordenador no haya reconocido la placa. Consulta :ref:`install_driver`.
 
 .. image:: img/1_connect.png
 

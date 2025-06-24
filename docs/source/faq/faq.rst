@@ -18,6 +18,7 @@ FAQ
 .. toctree::
     :maxdepth: 2
 
+    install_driver
     blynk_mobile
     format_sd_card
     unknown_port

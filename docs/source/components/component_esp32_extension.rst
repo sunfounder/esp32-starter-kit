@@ -110,7 +110,7 @@ Hemos diseñado una placa de expansión que le permite aprovechar al máximo las
 
 La placa proporciona dos tipos de cabeceras GPIO: una con cabeceras hembra, perfecta para proyectos de prototipado rápido. El otro tipo cuenta con terminales de tornillo, asegurando conexiones de cable estables y haciéndolo adecuado para proyectos de IoT.
 
-Además, puede alimentar su proyecto con una sola batería de 3.7V 18650. Si la batería se agota, puede cargarla convenientemente simplemente conectando un cable Micro USB de 5V. Esto lo convierte en una excelente herramienta para proyectos al aire libre y aplicaciones remotas.
+Además, puede alimentar su proyecto con una sola batería de 3.7V 18650. Si la batería se agota, puede cargarla convenientemente simplemente conectando un cable USB de 5V. Esto lo convierte en una excelente herramienta para proyectos al aire libre y aplicaciones remotas.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -127,22 +127,22 @@ Introducción de la Interfaz
     * Controla el suministro de energía de la batería, alternándolo entre encendido y apagado.
 
 * **Puerto de Carga**
-    * Al conectar un cable Micro USB de 5V, la batería puede cargarse.
+    * Al conectar un cable USB de 5V, la batería puede cargarse.
 
 * **Puerto de Batería**
     * Cuenta con una interfaz PH2.0-2P, compatible con baterías de litio 18650 de 3.7V.
     * Proporciona energía tanto al ESP32 WROOM 32E como a la Extensión de Cámara ESP32.
 
 * **Cabeceras de Pines ESP32**
-    * Destinadas para el módulo ESP32 WROOM 32E. Preste atención a su orientación; asegúrese de que ambos puertos Micro USB estén orientados hacia el mismo lado para evitar una colocación incorrecta.
+    * Destinadas para el módulo ESP32 WROOM 32E. Preste atención a su orientación; asegúrese de que ambos puertos USB estén orientados hacia el mismo lado para evitar una colocación incorrecta.
 
 * **Cabeceras GPIO**
     * **Hembras**: Utilizadas para conectar varios componentes al ESP32, perfectas para proyectos de prototipado rápido.
     * **Terminal de Tornillo**: Terminal de tornillo de 14 pines con paso de 3.5mm, asegurando conexiones de cable estables y haciéndolo adecuado para proyectos de IoT.
 
 * **Luces Indicadoras**
-    * **PWR**: Se enciende cuando la batería está alimentada o cuando se conecta un Micro USB directamente al ESP32.
-    * **CHG**: Se ilumina al conectar un Micro USB al puerto de carga de la placa, indicando el inicio de la carga. Se apagará una vez que la batería esté completamente cargada.
+    * **PWR**: Se enciende cuando la batería está alimentada o cuando se conecta un USB directamente al ESP32.
+    * **CHG**: Se ilumina al conectar un USB al puerto de carga de la placa, indicando el inicio de la carga. Se apagará una vez que la batería esté completamente cargada.
 
 * **Conector Micro SD**
     * Ranura de resorte para la inserción y eyección fácil de la tarjeta Micro SD.
@@ -183,7 +183,7 @@ Guía de Inserción de la Interfaz
 
 **Cargar Código**
 
-    Cuando necesite cargar código en el ESP32 WROOM 32E, conéctelo a su computadora usando un cable Micro USB.
+    Cuando necesite cargar código en el ESP32 WROOM 32E, conéctelo a su computadora usando un cable USB.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600
@@ -216,7 +216,7 @@ Guía de Inserción de la Interfaz
         :width: 600
         :align: center
 
-    Si la batería se agota, conecte un cable Micro USB de 5V para cargarla.
+    Si la batería se agota, conecte un cable USB de 5V para cargarla.
 
     .. image:: ../img/battery_charge.png
         :width: 600
