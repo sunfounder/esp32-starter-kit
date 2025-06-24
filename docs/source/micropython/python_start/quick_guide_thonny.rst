@@ -32,7 +32,7 @@ However, you must first download the package and upload the libraries, as descri
 
     .. image:: img/quick_guide1.png
 
-#. Plug the esp32 into your computer with a micro USB cable.
+#. Plug the esp32 into your computer with a USB cable.
 
     .. image:: ../../img/plugin_esp32.png
 
@@ -111,7 +111,7 @@ The code is shown directly in the code section. You can copy it to Thonny and ru
 
     .. image:: img/quick_guide8.png
 
-#. Plug the esp32 into your computer with a micro USB cable.
+#. Plug the esp32 into your computer with a USB cable.
 
     .. image:: ../../img/plugin_esp32.png
 

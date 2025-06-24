@@ -117,7 +117,7 @@ We have designed an expansion board that enables you to fully utilize the camera
 
 The board provides two types of GPIO headers - one with female headers, perfect for quick prototyping projects. The other type features screw terminals, ensuring stable wire connections and making it suitable for IoT projects.
 
-Additionally, you can power your project using a single 3.7V 18650 battery. If the battery runs low, you can conveniently charge it by simply plugging in a 5V Micro USB cable. This makes it a great tool for outdoor projects and remote applications.
+Additionally, you can power your project using a single 3.7V 18650 battery. If the battery runs low, you can conveniently charge it by simply plugging in a 5V USB cable. This makes it a great tool for outdoor projects and remote applications.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -134,22 +134,22 @@ Interface Introduction
     * Controls the battery's power supply, toggling it on and off.
 
 * **Charging Port**
-    * Upon connecting a 5V Micro USB cable, the battery can be charged.
+    * Upon connecting a 5V USB cable, the battery can be charged.
 
 * **Battery Port**
     * Features a PH2.0-2P interface, compatible with 3.7V 18650 lithium batterry.
     * Provides power to both the ESP32 WROOM 32E and ESP32 Camera Extension.
 
 * **ESP32 Pin Headers**
-    * Intended for the ESP32 WROOM 32E module. Pay close attention to its orientation; ensure both Micro USB ports face the same side to avoid incorrect placement.
+    * Intended for the ESP32 WROOM 32E module. Pay close attention to its orientation; ensure both USB ports face the same side to avoid incorrect placement.
 
 * **GPIO Headers**
     * **Female Headers**: Used to connect various components to the ESP32, perfect for quick prototyping projects.
     * **Screw Terminal**: 3.5mm pitch 14pin screw terminal, ensuring stable wire connections and making it suitable for IoT projects.
 
 * **Indicator Lights**
-    * **PWR**: Lights up when the battery is powered or when a Micro USB is directly plugged into the ESP32.
-    * **CHG**: Illuminates upon connecting a Micro USB to the board's charging port, signifying charging onset. It will turn off once the battery is fully charged.
+    * **PWR**: Lights up when the battery is powered or when a USB cable is directly plugged into the ESP32.
+    * **CHG**: Illuminates upon connecting a USB cable to the board's charging port, signifying charging onset. It will turn off once the battery is fully charged.
 
 * **Micro SD Connector**
     * Spring-loaded slot for the easy insertion and ejection of Micro SD card.
@@ -190,7 +190,7 @@ Interface Insertion Guide
 
 **Upload Code**
 
-    When you need to upload code to the ESP32 WROOM 32E, connect it to your computer using a Micro USB cable.
+    When you need to upload code to the ESP32 WROOM 32E, connect it to your computer using a USB cable.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600
@@ -224,7 +224,7 @@ Interface Insertion Guide
         :width: 600
         :align: center
 
-    If the battery is drained, plug in a 5V Micro USB to charge it.
+    If the battery is drained, plug in a 5V USB cable to charge it.
 
     .. image:: ../img/battery_charge.png
         :width: 600

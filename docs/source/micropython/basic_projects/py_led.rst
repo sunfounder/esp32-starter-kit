@@ -103,7 +103,7 @@ This circuit works on a simple principle, and the current direction is shown in 
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. Connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Connect the ESP32 WROOM 32E to your computer using a USB cable. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -111,7 +111,12 @@ This circuit works on a simple principle, and the current direction is shown in 
 
 #. Then click on the "MicroPython (ESP32).COMXX" interpreter in the bottom right corner.
 
-    .. image:: ../python_start/img/sec_inter.png
+   .. note::
+
+      If you don't see any options other than "Local Python 3", your ESP32 board may not have been recognized by your computer.  
+      In that case, you may need to :ref:`install_driver`.
+
+   .. image:: ../python_start/img/sec_inter.png
 
 #. Finally, click "Run Current Script" or press F5 to execute it.
 

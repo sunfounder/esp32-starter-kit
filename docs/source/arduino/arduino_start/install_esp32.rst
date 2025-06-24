@@ -19,18 +19,6 @@ To program the ESP32 microcontroller, we need to install the ESP32 board package
 
 **Install the ESP32 Board**
 
-.. #. Open the Arduino IDE. Go to **File** and select **Preferences** from the drop-down menu.
-
-..     .. image:: img/install_esp321.png
-
-.. #. In the Preferences window, locate the **Additional Board Manager URLs** field. Click on it to activate the text box.
-
-..     .. image:: img/install_esp322.png
-
-.. #. Add the following URL to the **Additional Board Manager URLs** field: https://espressif.github.io/arduino-esp32/package_esp32_index.json. This URL points to the package index file for the ESP32 boards. Click the **OK** button to save the changes.
-
-..     .. image:: img/install_esp323.png
-
 #. In the **Boards Manager** window, type **ESP32** in the search bar. Click the **Install** button to start the installation process. This will download and install the ESP32 board package.
 
     .. image:: img/install_esp324.png
@@ -39,7 +27,7 @@ To program the ESP32 microcontroller, we need to install the ESP32 board package
 
 **Upload the Code**
 
-#. Now, connect the ESP32 WROOM 32E to your computer using a Micro USB cable. 
+#. Now, connect the ESP32 WROOM 32E to your computer using a USB cable. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -51,7 +39,11 @@ To program the ESP32 microcontroller, we need to install the ESP32 board package
 
 #. If your ESP32 is connected to the computer, you can choose the correct port by clicking on **Tools** -> **Port**.
 
-    .. image:: img/install_esp326.png
+   .. note::
+
+      If it shows COM1 or no port, your computer may not recognize the board. See :ref:`install_driver`.
+      
+   .. image:: img/install_esp326.png
 
 #. Additionally, Arduino 2.0 introduced a new way to quickly select the board and port. For ESP32, it is usually not automatically recognized, so you need to click on **Select other board and port**.
 
