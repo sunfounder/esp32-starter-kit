@@ -24,7 +24,7 @@
 
    * :download:`SunFounder ESP32スターターキット <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-#. Micro USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
+#. USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600

@@ -103,7 +103,7 @@
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. Micro USBケーブルを使用してESP32 WROOM 32Eをコンピューターに接続します。
+#. USBケーブルを使用してESP32 WROOM 32Eをコンピューターに接続します。
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -111,7 +111,13 @@
 
 #. その後、右下隅にある「MicroPython (ESP32).COMXX」インタープリタをクリックします。
 
-    .. image:: ../python_start/img/sec_inter.png
+   .. note::
+   
+      「Local Python 3」以外のオプションが表示されない場合は、ESP32ボードがコンピューターに認識されていない可能性があります。  
+      その場合は、:ref:`install_driver` を実行する必要があるかもしれません。
+   
+   .. image:: ../python_start/img/sec_inter.png
+
 
 #. 最後に、「現在のスクリプトを実行」をクリックするか、F5キーを押して実行します。
 

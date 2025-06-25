@@ -40,7 +40,7 @@ ESP32マイクロコントローラをプログラムするためには、Arduin
 
 **コードをアップロードする**
 
-#. まず、Micro USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
+#. まず、 USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -52,7 +52,12 @@ ESP32マイクロコントローラをプログラムするためには、Arduin
 
 #. ESP32がコンピュータに接続されている場合は、 **Tools** -> **Port** に進んで正しいポートを選択できます。
 
-    .. image:: img/install_esp326.png
+   .. note::
+   
+       COM1と表示される、またはポートが表示されない場合は、コンピューターがボードを認識していない可能性があります。 :ref:`install_driver` を参照してください。
+   
+   .. image:: img/install_esp326.png
+
 
 #. さらに、Arduino 2.0では、ボードとポートを迅速に選択する新しい方法が導入されました。ESP32の場合、通常は自動的に認識されないため、 **Select other board and port** をクリックする必要があります。
 

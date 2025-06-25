@@ -32,7 +32,7 @@
 
     .. image:: img/quick_guide1.png
 
-#. マイクロUSBケーブルでESP32をコンピュータに接続します。
+#. USBケーブルを使って ESP32 をコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 
@@ -110,7 +110,7 @@
 
     .. image:: img/quick_guide8.png
 
-#. マイクロUSBケーブルでESP32をコンピュータに接続します。
+#. USBケーブルを使って ESP32 をコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 
