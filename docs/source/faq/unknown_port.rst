@@ -19,6 +19,10 @@ Vedi sempre "COMxx sconosciuto"?
 
 Quando colleghi l'ESP32 al computer, l'Arduino IDE spesso mostra ``COMxx sconosciuto``. Perché accade questo?
 
+.. note::
+
+   Se viene visualizzato ``COMxx sconosciuto`` o nessuna porta, è possibile che il computer non abbia riconosciuto la scheda. Consulta :ref:`install_driver`.
+
 .. image:: img/unknown_device.png
 
 Questo succede perché il driver USB per ESP32 è diverso da quello delle schede Arduino regolari. L'Arduino IDE non può riconoscere automaticamente questa scheda.

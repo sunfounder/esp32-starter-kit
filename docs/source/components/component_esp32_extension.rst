@@ -115,7 +115,7 @@ Abbiamo progettato una scheda di espansione che ti consente di sfruttare appieno
 
 La scheda offre due tipi di intestazioni GPIO - uno con intestazioni femmina, perfetto per progetti di prototipazione rapida. L'altro tipo presenta terminali a vite, garantendo connessioni stabili e rendendolo adatto per progetti IoT.
 
-Inoltre, puoi alimentare il tuo progetto utilizzando una singola batteria 18650 da 3,7V. Se la batteria si scarica, puoi comodamente ricaricarla semplicemente collegando un cavo Micro USB da 5V. Questo lo rende uno strumento ideale per progetti all'aperto e applicazioni remote.
+Inoltre, puoi alimentare il tuo progetto utilizzando una singola batteria 18650 da 3,7V. Se la batteria si scarica, puoi comodamente ricaricarla semplicemente collegando un cavo USB da 5V. Questo lo rende uno strumento ideale per progetti all'aperto e applicazioni remote.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -132,22 +132,22 @@ Introduzione alle Interfacce
     * Controlla l'alimentazione della batteria, accendendola e spegnendola.
 
 * **Porta di Ricarica**
-    * Collegando un cavo Micro USB da 5V, la batteria può essere ricaricata.
+    * Collegando un cavo USB da 5V, la batteria può essere ricaricata.
 
 * **Porta della Batteria**
     * Presenta un'interfaccia PH2.0-2P, compatibile con batteria al litio da 3,7V 18650.
     * Fornisce energia sia all'ESP32 WROOM 32E che all'Estensione Fotocamera ESP32.
 
 * **Intestazioni Pin ESP32**
-    * Destinate al modulo ESP32 WROOM 32E. Presta molta attenzione al suo orientamento; assicurati che entrambe le porte Micro USB siano rivolte dallo stesso lato per evitare un posizionamento errato.
+    * Destinate al modulo ESP32 WROOM 32E. Presta molta attenzione al suo orientamento; assicurati che entrambe le porte USB siano rivolte dallo stesso lato per evitare un posizionamento errato.
 
 * **Intestazioni GPIO**
     * **Intestazioni Femmina**: Utilizzate per collegare vari componenti all'ESP32, perfette per progetti di prototipazione rapida.
     * **Terminale a Vite**: Terminale a vite da 14 pin con passo di 3,5mm, garantendo connessioni stabili e rendendolo adatto per progetti IoT.
 
 * **Indicatori Luminosi**
-    * **PWR**: Si illumina quando la batteria è alimentata o quando un Micro USB è direttamente collegato all'ESP32.
-    * **CHG**: Si illumina quando si collega un Micro USB alla porta di ricarica della scheda, segnalando l'inizio della carica. Si spegnerà una volta che la batteria sarà completamente carica.
+    * **PWR**: Si illumina quando la batteria è alimentata o quando un USB è direttamente collegato all'ESP32.
+    * **CHG**: Si illumina quando si collega un USB alla porta di ricarica della scheda, segnalando l'inizio della carica. Si spegnerà una volta che la batteria sarà completamente carica.
 
 * **Connettore Micro SD**
     * Slot a molla per l'inserimento e l'espulsione facile della scheda Micro SD.
@@ -188,7 +188,7 @@ Guida all'Inserimento delle Interfacce
 
 **Caricamento del Codice**
 
-    Quando hai bisogno di caricare il codice sull'ESP32 WROOM 32E, collegalo al tuo computer utilizzando un cavo Micro USB.
+    Quando hai bisogno di caricare il codice sull'ESP32 WROOM 32E, collegalo al tuo computer utilizzando un cavo USB.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600
@@ -222,7 +222,7 @@ Guida all'Inserimento delle Interfacce
         :width: 600
         :align: center
 
-    Se la batteria è scarica, collega un cavo Micro USB da 5V per ricaricarla.
+    Se la batteria è scarica, collega un cavo USB da 5V per ricaricarla.
 
     .. image:: ../img/battery_charge.png
         :width: 600

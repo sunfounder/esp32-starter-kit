@@ -94,6 +94,10 @@ For example, choose **ESP32**.
 
 A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
 
+.. note::
+
+    Si aparece COM1 o ningún puerto, es posible que tu computadora no reconozca la placa. Consulta :ref:`install_driver`.
+
 .. image:: img/1_connect.png
 
 At the same time, ESP32 related palettes, such as ESP32, Actuators, etc., will appear in the **Block Palette**.
@@ -181,6 +185,10 @@ For example, choose **ESP32**.
 .. image:: img/1_choose_uno.png
 
 A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+
+.. note::
+
+    Si aparece COM1 o ningún puerto, es posible que tu computadora no reconozca la placa. Consulta :ref:`install_driver`.
 
 .. image:: img/1_connect.png
 

@@ -103,7 +103,7 @@ Questo circuito funziona su un principio semplice, e la direzione della corrente
             # Attendi 0,5 secondi (500 millisecondi) mentre il LED è spento
             time.sleep(0.5)
 
-#. Collega l'ESP32 WROOM 32E al tuo computer utilizzando un cavo Micro USB.
+#. Collega l'ESP32 WROOM 32E al tuo computer utilizzando un cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -111,7 +111,12 @@ Questo circuito funziona su un principio semplice, e la direzione della corrente
 
 #. Quindi, fai clic sull'interprete "MicroPython (ESP32).COMXX" nell'angolo in basso a destra.
 
-    .. image:: ../python_start/img/sec_inter.png
+   .. note::
+   
+      Se non vedi alcuna opzione oltre a "Local Python 3", è possibile che la tua scheda ESP32 non sia stata riconosciuta dal computer.  
+      In tal caso, potresti dover :ref:`install_driver`.
+   
+   .. image:: ../python_start/img/sec_inter.png
 
 #. Infine, fai clic su "Esegui script corrente" o premi F5 per eseguirlo.
 

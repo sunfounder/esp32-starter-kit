@@ -32,7 +32,7 @@ Tuttavia, devi prima scaricare il pacchetto e caricare le librerie, come descrit
 
     .. image:: img/quick_guide1.png
 
-#. Collega l'esp32 al computer con un cavo micro USB.
+#. Collega l'esp32 al computer con un cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
 
@@ -111,7 +111,7 @@ Il codice viene mostrato direttamente nella sezione del codice. Puoi copiarlo in
 
     .. image:: img/quick_guide8.png
 
-#. Collega l'esp32 al computer con un cavo micro USB.
+#. Collega l'esp32 al computer con un cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
 

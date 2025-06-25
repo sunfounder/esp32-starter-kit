@@ -17,32 +17,29 @@
 1.3 Installare MicroPython su ESP32 (Importante)
 =====================================================
 
-#. Scarica il |link_esp32_micropython_download| dal sito ufficiale di MicroPython e successivamente scarica l'ultima versione del firmware.
+#. Collega l'ESP32 WROOM 32E al tuo computer utilizzando un cavo USB.
 
-    .. image:: img/dowload_micropython_uf2.png
-
-#. Collega l'ESP32 WROOM 32E al computer utilizzando un cavo Micro USB. 
-
-    .. image:: ../../img/plugin_esp32.png
+   .. image:: ../../img/plugin_esp32.png
         :width: 600
         :align: center
 
-#. Clicca nell'angolo in basso a destra di Thonny IDE, seleziona **"MicroPython(ESP32).COMXX"** dal menu a comparsa e poi seleziona **"Configura interprete"**.
+#. Clicca nell'angolo in basso a destra dell'IDE Thonny, seleziona **"MicroPython(ESP32).xxxCOMXX"** dal menu a comparsa, quindi seleziona **"Configura interprete"**.
 
-    .. image:: img/install_micropython1.png
+   .. note::
 
-#. Nella nuova finestra pop-up, clicca su **"Installa o aggiorna MicroPython"**.
+      Se non vedi alcuna opzione oltre a "Local Python 3", è possibile che la tua scheda ESP32 non sia stata riconosciuta dal computer.  
+      In tal caso, potresti dover :ref:`install_driver`.
 
-    .. image:: img/install_micropython2.png
+   .. image:: img/install_micropython1.png
 
-#. Seleziona la porta corretta e il firmware che hai scaricato in precedenza, quindi clicca su **"Installa"**.
+#. Clicca su **"Install or Update MicroPython"** nella nuova finestra popup.
 
-    .. image:: img/install_micropython3.png
+   .. image:: img/install_micropython2.png
 
-#. Dopo un'installazione riuscita, puoi chiudere questa pagina.
+#. Seleziona la porta corretta, la famiglia MicroPython, la variante e la scheda, quindi clicca su **"Install"**.
 
-    .. image:: img/install_micropython4.png
+   .. image:: img/install_micropython3.png
 
-#. Quando torni alla homepage di Thonny, vedrai la versione di MicroPython e i prompt relativi all'ESP32, invece di messaggi di errore in rosso.
+#. Dopo un'installazione riuscita, torna alla schermata principale di Thonny; vedrai la versione di MicroPython e messaggi relativi all'ESP32, invece di errori in rosso.
 
-    .. image:: img/install_micropython5.png
+   .. image:: img/install_micropython5.png
