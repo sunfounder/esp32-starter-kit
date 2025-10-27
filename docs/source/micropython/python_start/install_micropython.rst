@@ -42,6 +42,8 @@
 
 #. Wähle den richtigen Port, die MicroPython-Familie, die Variante und das Board aus und klicke dann auf **„Installieren“**.
 
+   * :ref:`download_mode`
+
    .. image:: img/install_micropython3.png
 
 #. Nach erfolgreicher Installation kehrst du zur Thonny-Startseite zurück.  
