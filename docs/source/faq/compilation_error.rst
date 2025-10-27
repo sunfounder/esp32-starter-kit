@@ -22,3 +22,39 @@ Monitoreremo continuamente gli aggiornamenti di queste librerie e, non appena sa
 
 .. image:: img/version_2.0.17.png
 
+.. _download_mode:
+
+Q3: Errore “Wrong boot mode detected (0x13)” durante il flashing del firmware ESP32
+--------------------------------------------------------------------------------------
+
+Quando si esegue il flashing del firmware ESP32 con Thonny o si carica il codice sull’ESP32 utilizzando l’Arduino IDE, potrebbe comparire il seguente errore:
+
+.. code-block:: text
+
+    A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode.
+
+Questo errore **non** indica un problema hardware con la scheda ESP32.  
+Può verificarsi quando il computer non riesce a mettere automaticamente l’ESP32 in **modalità download** durante il processo di flashing.
+
+**Causa**
+
+L’ESP32 deve essere in **modalità download** per poter eseguire correttamente il flashing del firmware.  
+In alcuni ambienti, il trigger automatico per entrare in download mode potrebbe non funzionare correttamente a causa di differenze di temporizzazione nei driver USB, nel comportamento della porta USB o nel modo in cui il sistema operativo gestisce i segnali DTR/RTS.  
+Di conseguenza, l’ESP32 rimane in modalità di esecuzione normale e il flashing fallisce.
+
+**Soluzione**
+
+Se si verifica questo errore, è possibile entrare manualmente in modalità download prima del flashing:
+
+* **Utilizzando i pulsanti (BOOT + EN/RST):**  
+  Tenere premuto il pulsante ``BOOT``, premere brevemente ``EN`` (o ``RST``), quindi rilasciare ``BOOT``.  
+  Questo forza l’ESP32 a entrare in modalità download.
+
+* **Utilizzando un cavallotto (jumper wire):**  
+  Collegare ``GPIO0`` a ``GND`` con un jumper, quindi premere ``EN`` (o riavviare la scheda) per entrare in modalità download.  
+  Dopo il flashing, rimuovere il jumper per consentire l’avvio normale.
+
+**Note**
+
+* Assicurarsi di utilizzare un **cavo dati** (non solo di ricarica).  
+* Se il problema persiste, provare a cambiare porta USB, aggiornare il driver USB-seriale oppure ridurre la velocità in baud (ad es. ``115200``).

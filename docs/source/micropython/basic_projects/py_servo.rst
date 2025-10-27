@@ -168,7 +168,7 @@ Quando esegui questo codice, il servo si muoverà continuamente avanti e indietr
             pin.duty(duty) # Imposta il ciclo di lavoro del segnale PWM
 
     * In questa funzione, viene chiamata ``interval_mapping()`` per mappare l'intervallo di angoli 0 ~ 180 all'intervallo di larghezza dell'impulso 0,5 ~ 2,5ms.
-    * Perché è 0,5~2,5? Questo è determinato dal modo di funzionamento del :ref:`Servo`. 
+    * Perché è 0,5~2,5? Questo è determinato dal modo di funzionamento del :ref:`cpn_servo`. 
     * Successivamente, converti la larghezza dell'impulso da periodo a duty.
     * Poiché ``duty()`` non può avere decimali quando utilizzato (il valore non può essere di tipo float), abbiamo utilizzato ``int()`` per forzare il duty ad essere convertito in un tipo int.
 
