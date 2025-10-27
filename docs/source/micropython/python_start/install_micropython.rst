@@ -38,6 +38,8 @@
 
 #. 正しいポート、MicroPython ファミリー、バリアント、ボードを選択し、**"Install"** をクリックします。
 
+   * :ref:`download_mode`
+   
    .. image:: img/install_micropython3.png
 
 #. インストールが成功したら、Thonny のホーム画面に戻ります。赤いエラーメッセージの代わりに、MicroPython のバージョンや ESP32 に関するプロンプトが表示されます。
