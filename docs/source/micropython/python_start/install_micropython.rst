@@ -42,6 +42,8 @@
 
 #. Select the correct port, MicroPython family, variant, and board, then click **"Install"**.
 
+   * :ref:`download_mode`
+   
    .. image:: img/install_micropython3.png
 
 #. After a successful installation, return to the Thonny homepage, you will see MicroPython version and ESP32-related prompts, instead of red error prompts.
