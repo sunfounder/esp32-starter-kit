@@ -65,7 +65,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 * **Verfügbare Pins**
 
-    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
@@ -146,7 +146,7 @@ Gleichzeitig können Sie den Seriellen Monitor in der oberen rechten Ecke öffne
 
 Die vorherigen Projekte beinhalteten alle das Ausgeben von Signalen, entweder in Form von digitalen oder PWM-Signalen.
 
-Dieses Projekt beinhaltet das Empfangen von Eingangssignalen von externen Komponenten zum ESP32-Board. Sie können das Eingangssignal über den Seriellen Monitor in der Arduino IDE einsehen.
+Dieses Projekt beinhaltet das Empfangen von Eingangssignalen von externen Komponenten zum ESP32-Platine. Sie können das Eingangssignal über den Seriellen Monitor in der Arduino IDE einsehen.
 
 
 #. In der ``setup()`` Funktion wird der Taster-Pin als ``input`` und der LED-Pin als ``output`` initialisiert. Die serielle Kommunikation wird ebenfalls mit einer Baudrate von 115200 gestartet.

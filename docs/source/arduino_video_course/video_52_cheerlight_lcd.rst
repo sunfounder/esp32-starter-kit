@@ -22,7 +22,7 @@ Lerne, wie du LED-Farben über mehrere Geräte hinweg synchronisierst, indem du 
 * **Integration mit ESP32 und LCD-Bildschirm**: Verbinde CheerLights mit einem ESP32-Mikrocontroller und einem LCD-Bildschirm, um Farben und den Verbindungsstatus anzuzeigen.
 * **Verbindung zum WLAN**: Der ESP32 verbindet sich mit dem WLAN und zeigt die SSID bei Verbindung an. Bei einer Unterbrechung wird versucht, die Verbindung erneut herzustellen.
 * **Interaktion mit der CheerLights-Gruppe**: Interagiere mit der CheerLights-Gruppe auf Discord, um Farben zu ändern und an der gemeinsamen Erfahrung teilzunehmen.
-* **Einrichtung und Programmierung**: Ausführliche Anweisungen zur Einrichtung des ESP32-Boards, zur Auswahl des richtigen Ports und zur Installation der notwendigen Bibliotheken für die Integration von CheerLights mit dem ESP32 und dem LCD-Bildschirm.
+* **Einrichtung und Programmierung**: Ausführliche Anweisungen zur Einrichtung des ESP32-Platines, zur Auswahl des richtigen Ports und zur Installation der notwendigen Bibliotheken für die Integration von CheerLights mit dem ESP32 und dem LCD-Bildschirm.
 
 **Video**
 

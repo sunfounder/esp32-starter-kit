@@ -13,7 +13,7 @@ Quick Links:
 <a id="about_this_kit"></a>
 ## About this kit:
 
-Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 board at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
+Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32-Platine at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
 
 <a id="update"></a>
 ## Update:
@@ -21,7 +21,7 @@ Welcome to the ESP32 Learning Kit! This comprehensive package is designed to off
 - Update the blynk project
 
 2024-08-02:
-- Due to the ESP32 board being upgraded to version 3.0, some functions have had their names and usage modified. Update the code accordingly or add a prompt to downgrade the version.
+- Due to the ESP32-Platine being upgraded to version 3.0, some functions have had their names and usage modified. Update the code accordingly or add a prompt to downgrade the version.
 
 2023-11-28:
 - Add images of inserting a USB cable into an ESP32 for various programming language projects.

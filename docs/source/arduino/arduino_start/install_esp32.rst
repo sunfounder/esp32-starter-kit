@@ -12,12 +12,12 @@
 
     👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
 
-1.3 ESP32-Board installieren (Wichtig)
+1.3 ESP32-Platine installieren (Wichtig)
 ===========================================
 
-Um den ESP32-Mikrocontroller zu programmieren, müssen wir das ESP32-Board-Paket in der Arduino-IDE installieren. Befolgen Sie die folgende Schritt-für-Schritt-Anleitung:
+Um den ESP32-Mikrocontroller zu programmieren, müssen wir das ESP32-Platine-Paket in der Arduino-IDE installieren. Befolgen Sie die folgende Schritt-für-Schritt-Anleitung:
 
-**ESP32-Board installieren**
+**ESP32-Platine installieren**
 
 .. #. Öffnen Sie die Arduino-IDE. Gehen Sie zu **File** und wählen Sie **Preferences** aus dem Dropdown-Menü.
 
@@ -27,15 +27,15 @@ Um den ESP32-Mikrocontroller zu programmieren, müssen wir das ESP32-Board-Paket
 
 ..     .. image:: img/install_esp322.png
 
-.. #. Fügen Sie die folgende URL in das Feld **Additional Board Manager URLs** ein: https://espressif.github.io/arduino-esp32/package_esp32_index.json. Diese URL verweist auf die Paketindexdatei für die ESP32-Boards. Klicken Sie auf die Schaltfläche **OK**, um die Änderungen zu speichern.
+.. #. Fügen Sie die folgende URL in das Feld **Additional Board Manager URLs** ein: https://espressif.github.io/arduino-esp32/package_esp32_index.json. Diese URL verweist auf die Paketindexdatei für die ESP32-Platines. Klicken Sie auf die Schaltfläche **OK**, um die Änderungen zu speichern.
 
 ..     .. image:: img/install_esp323.png
 
-#. Geben Sie im **Boards Manager**-Fenster **ESP32** in die Suchleiste ein. Klicken Sie auf die Schaltfläche **Install**, um den Installationsprozess zu starten. Dadurch wird das ESP32-Board-Paket heruntergeladen und installiert.
+#. Geben Sie im **Boards Manager**-Fenster **ESP32** in die Suchleiste ein. Klicken Sie auf die Schaltfläche **Install**, um den Installationsprozess zu starten. Dadurch wird das ESP32-Platine-Paket heruntergeladen und installiert.
 
     .. image:: img/install_esp324.png
 
-#. Herzlichen Glückwunsch! Sie haben das ESP32-Board-Paket erfolgreich in der Arduino-IDE installiert. 
+#. Herzlichen Glückwunsch! Sie haben das ESP32-Platine-Paket erfolgreich in der Arduino-IDE installiert. 
 
 
 **Laden Sie den Code hoch**

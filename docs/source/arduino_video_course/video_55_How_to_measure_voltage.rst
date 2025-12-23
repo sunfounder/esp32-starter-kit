@@ -21,7 +21,7 @@ Lerne, wie man mit dem ESP32 Gleichspannung misst, in diesem ausführlichen Vide
 * **Projektübersicht**: Erklärung, wie man jede Gleichspannung mit einem Spannungsteiler und dem ESP32 misst. Beinhaltet eine Diskussion über die Notwendigkeit und den Einsatz von zwei Widerständen zur Erstellung eines Spannungsteilers.
 * **Spannungsteiler-Schaltung**: Detaillierte Erklärung, wie man mit zwei Widerständen sicher höhere Spannungen misst. Beinhaltet Berechnungen zur Auswahl geeigneter Widerstandswerte.
 * **Arduino Code Erklärung**: Umfassende Anleitung zum Arduino Code zur Spannungsmessung. Behandelt das Einrichten des Codes, das Initialisieren des seriellen Monitors und die Verwendung von Funktionen zur Berechnung und Anzeige von Spannungswerten.
-* **Auswahl des ESP32 Boards und Ports**: Schritt-für-Schritt-Anleitung zur Auswahl des ESP32 Boards und des COM-Ports in der Arduino IDE, zusammen mit Tipps zur Fehlerbehebung bei der Identifizierung des richtigen Ports.
+* **Auswahl des ESP32-Platines und Ports**: Schritt-für-Schritt-Anleitung zur Auswahl des ESP32-Platines und des COM-Ports in der Arduino IDE, zusammen mit Tipps zur Fehlerbehebung bei der Identifizierung des richtigen Ports.
 * **Demonstration der Messung von 30V Spannung**: Praktische Demonstration der Messung von 30V mit dem ESP32. Zeigt den Aufbau, die Verbindung und das Ablesen der Spannungswerte auf dem seriellen Monitor. Behandelt auch das Mitteln mehrerer Messungen für stabilere Ergebnisse.
 
 **Video**

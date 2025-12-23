@@ -19,7 +19,7 @@
 
 Willkommen beim Pflanzenüberwachungsprojekt!
 
-In diesem Projekt werden wir ein ESP32-Board verwenden, um ein System zu entwickeln, das uns hilft, unsere Pflanzen zu pflegen. Mit diesem System können wir Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtverhältnisse unserer Pflanzen überwachen und sicherstellen, dass sie die notwendige Pflege und Aufmerksamkeit erhalten, um zu gedeihen.
+In diesem Projekt werden wir ein ESP32-Platine verwenden, um ein System zu entwickeln, das uns hilft, unsere Pflanzen zu pflegen. Mit diesem System können wir Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtverhältnisse unserer Pflanzen überwachen und sicherstellen, dass sie die notwendige Pflege und Aufmerksamkeit erhalten, um zu gedeihen.
 
 **Benötigte Komponenten**
 

@@ -67,7 +67,7 @@ Sie können sie auch separat über die unten stehenden Links kaufen.
 
 **Verfügbare Pins**
 
-Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 

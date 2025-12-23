@@ -20,7 +20,7 @@ Dieses Video dient als Einführung in das SunFounder ESP32 IoT Lernkit. Es behan
 
 * **ESP32 Mikrocontroller**: Beinhaltet den ESP32 Mikrocontroller mit integriertem Wi-Fi und Bluetooth.
 * **Installation der Arduino IDE**: Führt die Zuschauer durch die Installation der Arduino IDE.
-* **Einrichtung des ESP32 Boards**: Zeigt die Einrichtung des Boards und die Installation der Treiber.
+* **Einrichtung des ESP32-Platines**: Zeigt die Einrichtung des Boards und die Installation der Treiber.
 * **Auswahl des ESP32 Dev Moduls**: Erklärt die Auswahl des Boards in der Arduino IDE.
 * **Installation von Bibliotheken**: Zeigt, wie die notwendigen Bibliotheken installiert werden.
 * **Projektbeispiele**: Stellt verschiedene Projektbeispiele für Arduino und MicroPython vor.

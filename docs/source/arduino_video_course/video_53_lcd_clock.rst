@@ -20,7 +20,7 @@ Lerne, wie du eine Internet-Uhr mit einem ESP32-Mikrocontroller, einem NTP-Serve
 * **Einführung**: Erfahre, wie du eine Internet-Uhr ohne Echtzeitmodul erstellst.
 * **ESP32 Mikrocontroller**: Verstehe die Rolle des ESP32 mit WLAN bei der automatischen Zeiteinstellung.
 * **NTP-Server**: Lerne die Funktion von NTP-Servern zur Zeitsynchronisierung über das Internet kennen.
-* **Einrichtung**: Befolge die Schritte zur Einrichtung des ESP32-Boards in der Arduino-IDE und zur Auswahl des richtigen COM-Ports.
+* **Einrichtung**: Befolge die Schritte zur Einrichtung des ESP32-Platines in der Arduino-IDE und zur Auswahl des richtigen COM-Ports.
 * **Arduino Code-Erklärung**: Tauche ein in den Arduino-Code für das Internet-Uhr-Projekt, einschließlich WLAN-Einrichtung, NTP-Server-Konfiguration und Zeitdarstellung auf dem LCD-Bildschirm.
 * **Demonstration**: Sieh die Internet-Uhr in Aktion mit anpassbarem Zeitformat und Einstellungen.
 

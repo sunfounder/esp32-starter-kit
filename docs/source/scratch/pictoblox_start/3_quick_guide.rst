@@ -68,9 +68,9 @@ Außerdem bauen wir eine einfache Schaltung, um diese LED in 2 verschiedenen Mod
 Bühnenmodus
 ---------------
 
-**1. Verbindung mit dem ESP32-Board herstellen**
+**1. Verbindung mit dem ESP32-Platine herstellen**
 
-Verbinden Sie Ihr ESP32-Board mit einem USB-Kabel mit dem Computer, normalerweise wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
+Verbinden Sie Ihr ESP32-Platine mit einem USB-Kabel mit dem Computer, normalerweise wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
 
     .. image:: ../../img/plugin_esp32.png
        :width: 600
@@ -168,9 +168,9 @@ Um den Effekt einer kontinuierlich blinkenden LED zu sehen, benötigen Sie die B
 Upload-Modus
 ---------------
 
-**1. Verbindung mit dem ESP32-Board herstellen**
+**1. Verbindung mit dem ESP32-Platine herstellen**
 
-Verbinden Sie Ihr ESP32-Board mit einem USB-Kabel mit dem Computer, normalerweise wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
+Verbinden Sie Ihr ESP32-Platine mit einem USB-Kabel mit dem Computer, normalerweise wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
 
     .. image:: ../../img/plugin_esp32.png
        :width: 600

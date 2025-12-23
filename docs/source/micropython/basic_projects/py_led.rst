@@ -60,7 +60,7 @@ Sie können sie auch separat über die unten stehenden Links kaufen.
 
 **Verfügbare Pins**
 
-Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
@@ -103,7 +103,7 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. Verbinden Sie das ESP32 board mit Ihrem Computer über ein USB-Kabel.
+#. Verbinden Sie das ESP32-Platine mit Ihrem Computer über ein USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -113,7 +113,7 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
 
    .. note::
 
-      Wenn außer „Local Python 3“ keine weiteren Optionen angezeigt werden, wurde dein ESP32-Board möglicherweise nicht vom Computer erkannt.  
+      Wenn außer „Local Python 3“ keine weiteren Optionen angezeigt werden, wurde dein ESP32-Platine möglicherweise nicht vom Computer erkannt.  
       In diesem Fall musst du eventuell den :ref:`install_driver` installieren.
 
    .. image:: ../python_start/img/sec_inter.png

@@ -17,10 +17,10 @@
 Manuelle Treiberinstallation für ESP32
 ======================================
 
-Wenn Sie Ihr ESP32-Board per USB an den Computer angeschlossen haben, aber **kein Port** in der Arduino-IDE oder Thonny-IDE angezeigt wird (oder nur **COM1**), erkennt Ihr Computer das Board wahrscheinlich nicht.  
+Wenn Sie Ihr ESP32-Platine per USB an den Computer angeschlossen haben, aber **kein Port** in der Arduino-IDE oder Thonny-IDE angezeigt wird (oder nur **COM1**), erkennt Ihr Computer das Board wahrscheinlich nicht.  
 In diesem Fall müssen Sie den USB-Treiber manuell installieren.
 
-Wir bieten zwei Arten von ESP32-Boards an, die sich nur durch den USB-zu-Seriell-Chip unterscheiden:
+Wir bieten zwei Arten von ESP32-Platines an, die sich nur durch den USB-zu-Seriell-Chip unterscheiden:
 
 - **CP2102**  
 - **CH340**
@@ -31,11 +31,11 @@ Funktionsmäßig sind sie identisch – der einzige Unterschied liegt im benöti
    :width: 400
    :align: center
 
-* Wenn Ihr ESP32-Board den **CH340**-USB-Chip verwendet, folgen Sie dieser Anleitung zur Treiberinstallation:
+* Wenn Ihr ESP32-Platine den **CH340**-USB-Chip verwendet, folgen Sie dieser Anleitung zur Treiberinstallation:
 
   * :ref:`driver_ch340`
 
-* Wenn Ihr ESP32-Board den **CP2102**-USB-Chip verwendet, folgen Sie dieser Anleitung:
+* Wenn Ihr ESP32-Platine den **CP2102**-USB-Chip verwendet, folgen Sie dieser Anleitung:
 
   * :ref:`driver_cp2102`
 
@@ -135,7 +135,7 @@ Linux
 
    * `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ – Treiber v1.5 (24.10.2024)
 
-#. Schließen Sie das ESP32-Board erneut an und führen Sie im Terminal aus:
+#. Schließen Sie das ESP32-Platine erneut an und führen Sie im Terminal aus:
 
    .. code-block::
 

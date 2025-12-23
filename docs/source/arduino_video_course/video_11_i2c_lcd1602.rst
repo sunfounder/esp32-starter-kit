@@ -19,7 +19,7 @@ Lerne, wie du LCD-Bildschirme mit dem ESP32 zur Anzeige von Text und anderen Inf
 
 * **LCD-Typen**: Das Tutorial behandelt sowohl LCD1602 (16 Zeichen, 2 Zeilen) als auch LCD2004 (20 Zeichen, 4 Zeilen).
 * **Hauptmerkmale**: Erklärt, wie man den Kontrast einstellt und die I2C-Kommunikation für eine einfachere Verkabelung nutzt.
-* **Komponenten**: Verwendet das ESP32-Board, den LCD-Bildschirm und die notwendigen Kabel.
+* **Komponenten**: Verwendet das ESP32-Platine, den LCD-Bildschirm und die notwendigen Kabel.
 * **Verkabelungsanleitung**: Schritt-für-Schritt-Anleitung zum Anschließen des LCD an das ESP32, einschließlich Stromanschlüssen und Datenleitungen.
 * **Arduino-Code**: Detaillierte Erklärung des Arduino-Codes zur Anzeige von Text auf dem LCD.
 * **Demonstrationen**: Zeigt praktische Anwendungen wie die Anzeige eines Zählers und benutzerdefinierten Texts auf dem LCD.

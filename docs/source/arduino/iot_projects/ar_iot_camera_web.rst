@@ -17,7 +17,7 @@
 8.2 Kamera-Webserver
 =============================
 
-Dieses Projekt kombiniert das ESP32-Board mit einem Kameramodul, um hochwertiges Video über ein lokales Netzwerk zu streamen. 
+Dieses Projekt kombiniert das ESP32-Platine mit einem Kameramodul, um hochwertiges Video über ein lokales Netzwerk zu streamen. 
 Richten Sie mühelos Ihr eigenes Kamerasystem ein und überwachen Sie jeden Ort in Echtzeit.
 
 Mit der Web-Oberfläche des Projekts können Sie auf den Kamerastream zugreifen und ihn von jedem mit dem Netzwerk verbundenen Gerät aus steuern. 
@@ -67,7 +67,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
             Ihr Browser unterstützt das Video-Tag nicht.
         </video>
 
-#. Verbinden Sie dann ESP32-board mit dem Computer über das USB-Kabel.
+#. Verbinden Sie dann ESP32-Platine mit dem Computer über das USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
 

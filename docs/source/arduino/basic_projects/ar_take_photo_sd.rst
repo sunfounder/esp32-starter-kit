@@ -75,7 +75,7 @@ Es ist auch wichtig sicherzustellen, dass die SD-Karte korrekt eingebunden ist, 
             Ihr Browser unterstützt das Video-Tag nicht.
         </video>
 
-#. Verbinden Sie ESP32-board mit dem Computer über das USB-Kabel.
+#. Verbinden Sie ESP32-Platine mit dem Computer über das USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
 

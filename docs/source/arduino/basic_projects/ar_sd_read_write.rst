@@ -59,7 +59,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
     .. image:: ../../img/insert_sd.png
 
-#. Verbinden Sie ESP32-board mit dem Computer über das USB-Kabel.
+#. Verbinden Sie ESP32-Platine mit dem Computer über das USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
 
@@ -98,7 +98,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 **Wie funktioniert das?**
 
-Der Zweck dieses Projekts ist es, die Verwendung einer SD-Karte mit dem ESP32-Board zu demonstrieren. Das eingebaute SDMMC-Host-Peripheriegerät des ESP32 wird verwendet, um eine Verbindung mit der SD-Karte herzustellen.
+Der Zweck dieses Projekts ist es, die Verwendung einer SD-Karte mit dem ESP32-Platine zu demonstrieren. Das eingebaute SDMMC-Host-Peripheriegerät des ESP32 wird verwendet, um eine Verbindung mit der SD-Karte herzustellen.
 
 Das Projekt beginnt mit der Initialisierung der seriellen Kommunikation und versucht dann, die SD-Karte einzubinden. Wenn das Einbinden der SD-Karte nicht erfolgreich ist, druckt das Programm eine Fehlermeldung und beendet die Setup-Funktion.
 

@@ -20,7 +20,7 @@ Lerne, wie du Micro-SD-Karten effektiv mit dem SunFounder ESP32 IoT Learning Kit
 * **Einführung**: Erhalte eine Einführung in die Verwendung von Micro-SD-Karten in Verbindung mit dem SunFounder ESP32 Learning Kit.
 * **Formatierung der SD-Karte**: Verstehe die Anforderungen zur Formatierung von Micro-SD-Karten und stelle die Kompatibilität mit dem ESP32 sicher.
 * **Arduino-Code**: Erforsche den bereitgestellten Arduino-Code zum Lesen und Schreiben von Dateien auf der SD-Karte.
-* **Board-Einrichtung**: Lerne, wie du das ESP32-Board und den COM-Port in der Arduino IDE für eine nahtlose Integration auswählst.
+* **Board-Einrichtung**: Lerne, wie du das ESP32-Platine und den COM-Port in der Arduino IDE für eine nahtlose Integration auswählst.
 * **Hochladen und Testen**: Folge dem Prozess des Hochladens des Codes auf den ESP32 und überwache die serielle Ausgabe für Dateioperationen.
 
 **Video**

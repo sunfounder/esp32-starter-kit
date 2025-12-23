@@ -14,10 +14,10 @@
 
 .. _cpn_esp32_wroom_32e:
 
-ESP32 Board
+ESP32-Platine
 =================
 
-Der ESP32 board ist ein vielseitiges und leistungsstarkes Modul, basierend auf dem ESP32-Chipsatz von Espressif. Es bietet Dual-Core-Verarbeitung, integrierte Wi-Fi- und Bluetooth-Konnektivität und verfügt über eine breite Palette an Schnittstellen für Peripheriegeräte. Bekannt für seinen geringen Stromverbrauch, ist das Modul ideal für IoT-Anwendungen, da es intelligente Konnektivität und robuste Leistung in kompakten Formfaktoren ermöglicht.
+Der ESP32 ist ein leistungsstarker und vielseitiger Mikrocontroller mit Dual-Core-Verarbeitung, integriertem WLAN und Bluetooth sowie umfangreicher Peripherieunterstützung. Sein energiesparendes Design macht ihn ideal für kompakte und leistungsstarke IoT-Anwendungen.
 
 .. image:: img/esp32_board.png
     :align: center
@@ -33,7 +33,7 @@ Wesentliche Merkmale:
 * **Sicherheit**: Integrierte Verschlüsselungs- und Sicherheitsfunktionen gewährleisten den Schutz von Benutzerdaten und Privatsphäre.
 * **Vielseitigkeit**: Vom einfachen Haushaltsgerät bis hin zu komplexer Industriemaschinerie bietet der board durchgehend konsistente, effiziente Leistung.
 
-Zusammenfassend bietet der ESP32 board nicht nur robuste Verarbeitungskapazitäten und vielfältige Konnektivitätsoptionen, sondern zeichnet sich auch durch eine Reihe von Merkmalen aus, die ihn zu einer bevorzugten Wahl im IoT- und Smart-Device-Sektor machen.
+Zusammenfassend bietet der ESP32-Platine nicht nur robuste Verarbeitungskapazitäten und vielfältige Konnektivitätsoptionen, sondern zeichnet sich auch durch eine Reihe von Merkmalen aus, die ihn zu einer bevorzugten Wahl im IoT- und Smart-Device-Sektor machen.
 
 .. * |link_esp32_datasheet|
 
@@ -108,7 +108,7 @@ Die folgende Tabelle gibt detaillierte Informationen zur Boot-Modus-Konfiguratio
 ESP32-Kameraerweiterung
 --------------------------
 
-Wir haben ein Erweiterungsboard entworfen, das Ihnen ermöglicht, die Kamera- und SD-Karten-Funktionen des ESP32 board vollständig zu nutzen. Mit der Kombination aus der OV2640-Kamera, Micro-SD und ESP32 board erhalten Sie ein All-in-One-Erweiterungsboard.
+Wir haben ein Erweiterungsboard entworfen, das Ihnen ermöglicht, die Kamera- und SD-Karten-Funktionen des ESP32-Platine vollständig zu nutzen. Mit der Kombination aus der OV2640-Kamera, Micro-SD und ESP32-Platine erhalten Sie ein All-in-One-Erweiterungsboard.
 
 Das Board bietet zwei Arten von GPIO-Headern – einen mit weiblichen Headern, perfekt für schnelle Prototyping-Projekte. Der andere Typ verfügt über Schraubklemmen, die stabile Drahtverbindungen gewährleisten und sich somit für IoT-Projekte eignen.
 
@@ -133,10 +133,10 @@ Schnittstellen-Einführung
 
 * **Battery Port**
     * Verfügt über eine PH2.0-2P-Schnittstelle, kompatibel mit 3,7V 18650 Lithium-Batterien.
-    * Versorgt sowohl das ESP32 board als auch die ESP32-Kameraerweiterung mit Strom.
+    * Versorgt sowohl das ESP32-Platine als auch die ESP32-Kameraerweiterung mit Strom.
 
 * **ESP32 Pin Headers**
-    * Bestimmt für das ESP32 board. Achten Sie auf die korrekte Orientierung; stellen Sie sicher, dass beide USB-Ports auf dieselbe Seite zeigen, um eine falsche Platzierung zu vermeiden.
+    * Bestimmt für das ESP32-Platine. Achten Sie auf die korrekte Orientierung; stellen Sie sicher, dass beide USB-Ports auf dieselbe Seite zeigen, um eine falsche Platzierung zu vermeiden.
 
 * **GPIO Headers**
     * **Weibliche Header**: Zum Anschließen verschiedener Komponenten an das ESP32, perfekt für schnelle Prototyping-Projekte.
@@ -156,9 +156,9 @@ Schnittstellen-Einführung
 ESP32 Kameraerweiterung Anschlussplan
 -------------------------------------
 
-Der Anschlussplan des ESP32 board ist unter :ref:`esp32_pinout` zu finden.
+Der Anschlussplan des ESP32-Platine ist unter :ref:`esp32_pinout` zu finden.
 
-Wenn der ESP32 board jedoch auf das Erweiterungsboard gesteckt wird, können einige seiner Pins auch zur Steuerung der Micro SD-Karte oder einer Kamera verwendet werden.
+Wenn der ESP32-Platine jedoch auf das Erweiterungsboard gesteckt wird, können einige seiner Pins auch zur Steuerung der Micro SD-Karte oder einer Kamera verwendet werden.
 
 Daher wurden diesen Pins Pull-up- oder Pull-down-Widerstände hinzugefügt. Wenn Sie diese Pins als Eingänge verwenden, ist es entscheidend, diese Widerstände zu berücksichtigen, da sie die Eingangspegel beeinflussen können.
 
@@ -185,7 +185,7 @@ Anleitung zum Einsetzen der Schnittstellen
 
 **Code hochladen**
 
-    Um Code auf den ESP32 board zu laden, verbinden Sie ihn über ein USB-Kabel mit Ihrem Computer.
+    Um Code auf den ESP32-Platine zu laden, verbinden Sie ihn über ein USB-Kabel mit Ihrem Computer.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600

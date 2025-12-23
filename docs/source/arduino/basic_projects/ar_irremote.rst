@@ -62,7 +62,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 **Verfügbare Pins**
 
-    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
+    Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Projekt.
 
     .. list-table::
         :widths: 5 20
@@ -95,7 +95,7 @@ Wenn Sie einen Knopf auf der Fernbedienung drücken, erkennt der Infrarotempfän
 
     Wenn Sie ein ESP32-Entwicklungsboard Version 3.0.0 oder höher verwenden, können während des Kompilierungsprozesses Fehler auftreten.
     Dieses Problem tritt normalerweise auf, weil neuere Versionen des Boards die ``IRremoteESP8266``-Bibliothek nicht mehr unterstützen.
-    Um dieses Beispiel ordnungsgemäß auszuführen, wird empfohlen, die Firmware-Version Ihres ESP32-Boards auf 2.0.17 herunterzustufen.
+    Um dieses Beispiel ordnungsgemäß auszuführen, wird empfohlen, die Firmware-Version Ihres ESP32-Platines auf 2.0.17 herunterzustufen.
     Nachdem Sie dieses Beispiel abgeschlossen haben, aktualisieren Sie wieder auf die neueste Version.
 
     .. image:: ../../faq/img/version_2.0.17.png

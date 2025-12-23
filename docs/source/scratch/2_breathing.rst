@@ -75,7 +75,7 @@ Schaltung Aufbauen
 
 Dieses Projekt verwendet dieselbe Schaltung wie das vorherige Projekt :ref:`sh_table_lamp`, verwendet jedoch statt HIGH/LOW, um die LEDs zum Leuchten oder Ausschalten zu bringen, das `PWM-Signal - Wikipedia <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_, um die LED langsam aufleuchten oder dimmen zu lassen.
 
-Der PWM-Signalbereich ist 0-255, auf dem ESP32-Board können die Pins 2, 5, 12~15, 18, 19, 21, 22, 25, 26 und 27 ein PWM-Signal ausgeben.
+Der PWM-Signalbereich ist 0-255, auf dem ESP32-Platine können die Pins 2, 5, 12~15, 18, 19, 21, 22, 25, 26 und 27 ein PWM-Signal ausgeben.
 
 .. image:: img/circuit/1_hello_led_bb.png
 

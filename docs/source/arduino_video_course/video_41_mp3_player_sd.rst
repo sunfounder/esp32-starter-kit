@@ -20,9 +20,9 @@ Lerne, wie du Audiodateien von einer Micro-SD-Karte mit dem SunFounder ESP32 Lea
 * **Einführung**: Erfahre, wie du die Funktionalität der Micro-SD-Karte mit dem ESP32 für die Audiowiedergabe kombinierst.
 * **Audioverstärker**: Verstehe die Bedeutung der Verwendung eines Audioverstärkers, um die Lautsprecherausgabe effektiv zu steuern.
 * **MP3-Player mit SD-Kartenunterstützung**: Greife auf Dokumentation und Codebeispiele zu, um einen MP3-Player mit Micro-SD-Kartenunterstützung zu implementieren.
-* **Hardware-Einrichtung**: Befolge die Schritt-für-Schritt-Anleitung zum Anschließen des Audioverstärkers, Lautsprechers und des ESP32-Boards.
+* **Hardware-Einrichtung**: Befolge die Schritt-für-Schritt-Anleitung zum Anschließen des Audioverstärkers, Lautsprechers und des ESP32-Platines.
 * **Dateiformatierung**: Stelle sicher, dass die Micro-SD-Karte auf FAT32 mit einer maximalen Kapazität von 32 GB formatiert ist, um die Kompatibilität zu gewährleisten.
-* **Arduino IDE Setup**: Lerne, wie du das ESP32-Board und den COM-Port in der Arduino IDE auswählst sowie die notwendigen Bibliotheken für die Audiowiedergabe installierst.
+* **Arduino IDE Setup**: Lerne, wie du das ESP32-Platine und den COM-Port in der Arduino IDE auswählst sowie die notwendigen Bibliotheken für die Audiowiedergabe installierst.
 
 **Video**
 

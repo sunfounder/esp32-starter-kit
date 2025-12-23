@@ -21,7 +21,7 @@ Im vorherigen Projekt steuerten wir die LED, indem wir sie durch digitalen Ausga
 
 Mit PWM wird die LED nicht einfach ein- oder ausgeschaltet, sondern wir passen die Zeit an, in der die LED eingeschaltet ist, im Vergleich zur Zeit, in der sie ausgeschaltet ist, innerhalb jedes Zyklus an. Durch schnelles Ein- und Ausschalten der LED in unterschiedlichen Intervallen können wir die Illusion erzeugen, dass die LED allmählich heller und dunkler wird, was einen Atmungseffekt simuliert.
 
-Durch die Nutzung der PWM-Fähigkeiten des ESP32 board können wir eine reibungslose und präzise Steuerung der LED-Helligkeit erreichen. Dieser Atmungseffekt fügt Ihren Projekten ein dynamisches und visuell ansprechendes Element hinzu und schafft ein auffälliges Display oder Ambiente.
+Durch die Nutzung der PWM-Fähigkeiten des ESP32-Platine können wir eine reibungslose und präzise Steuerung der LED-Helligkeit erreichen. Dieser Atmungseffekt fügt Ihren Projekten ein dynamisches und visuell ansprechendes Element hinzu und schafft ein auffälliges Display oder Ambiente.
 
 **Benötigte Komponenten**
 
@@ -64,7 +64,7 @@ Sie können sie auch separat über die unten stehenden Links kaufen.
 
 **Verfügbare Pins**
 
-Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 

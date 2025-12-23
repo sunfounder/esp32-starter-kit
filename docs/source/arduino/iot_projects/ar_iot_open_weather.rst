@@ -17,9 +17,9 @@
 8.1 Echtzeit-Wetter von @OpenWeatherMap
 ====================================================
 
-Das IoT Open Weather Display-Projekt nutzt das ESP32-Board und ein I2C LCD1602-Modul, um eine Wetterinformationsanzeige zu erstellen, die Daten von der OpenWeatherMap-API abruft.
+Das IoT Open Weather Display-Projekt nutzt das ESP32-Platine und ein I2C LCD1602-Modul, um eine Wetterinformationsanzeige zu erstellen, die Daten von der OpenWeatherMap-API abruft.
 
-Dieses Projekt dient als hervorragende Einführung in die Arbeit mit APIs, Wi-Fi-Konnektivität und Datenanzeige auf einem LCD-Modul mit dem ESP32-Board. Mit dem IoT Open Weather Display können Sie bequem Echtzeit-Wetteraktualisierungen auf einen Blick abrufen, was es zu einer idealen Lösung für Heim- oder Büroumgebungen macht.
+Dieses Projekt dient als hervorragende Einführung in die Arbeit mit APIs, Wi-Fi-Konnektivität und Datenanzeige auf einem LCD-Modul mit dem ESP32-Platine. Mit dem IoT Open Weather Display können Sie bequem Echtzeit-Wetteraktualisierungen auf einen Blick abrufen, was es zu einer idealen Lösung für Heim- oder Büroumgebungen macht.
 
 **Benötigte Komponenten**
 

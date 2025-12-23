@@ -66,7 +66,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
     .. image:: ../../img/wiring/iot_5_cheerlight_bb.png
 
-#. Verbinden Sie dann ESP32-board mit dem Computer über das USB-Kabel.
+#. Verbinden Sie dann ESP32-Platine mit dem Computer über das USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
 

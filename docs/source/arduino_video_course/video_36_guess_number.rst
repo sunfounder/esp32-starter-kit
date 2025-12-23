@@ -15,7 +15,7 @@
 Video 36: Zahlenratespiel
 ====================================================
 
-Dieses Tutorial führt dich durch die Erstellung eines spannenden Zahlenratespiels, das über eine Infrarotfernbedienung gesteuert wird. Dabei kommen ein ESP32-Board und ein LCD-Display für Echtzeit-Feedback zum Einsatz.
+Dieses Tutorial führt dich durch die Erstellung eines spannenden Zahlenratespiels, das über eine Infrarotfernbedienung gesteuert wird. Dabei kommen ein ESP32-Platine und ein LCD-Display für Echtzeit-Feedback zum Einsatz.
 
 * **Komponentenübersicht**: Einführung in die Verwendung von ESP32, Infrarotempfänger und -sender sowie LCD-Display für interaktive Projekte.
 * **Verkabelungsaufbau**: Detaillierte Anweisungen zum Anschließen des Infrarotempfängers an das ESP32 und zur Schnittstelle mit dem LCD-Display.

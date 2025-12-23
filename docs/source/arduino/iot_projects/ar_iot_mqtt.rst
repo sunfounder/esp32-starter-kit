@@ -19,7 +19,7 @@
 
 Dieses Projekt konzentriert sich auf die Nutzung von MQTT, einem beliebten Kommunikationsprotokoll im Bereich des Internets der Dinge (IoT). MQTT ermöglicht es IoT-Geräten, Daten über ein Publish/Subscribe-Modell auszutauschen, bei dem Geräte über Themen kommunizieren.
 
-In diesem Projekt erforschen wir die Implementierung von MQTT, indem wir einen Schaltkreis aufbauen, der eine LED, einen Knopf und einen Thermistor umfasst. Der ESP32-board-Mikrocontroller wird verwendet, um eine Verbindung zum WLAN herzustellen und mit einem MQTT-Broker zu kommunizieren. Der Code ermöglicht es dem Mikrocontroller, sich für bestimmte Themen zu abonnieren, Nachrichten zu empfangen und die LED basierend auf den empfangenen Informationen zu steuern. Zusätzlich demonstriert das Projekt das Veröffentlichen von Temperaturdaten vom Thermistor zu einem festgelegten Thema, wenn der Knopf gedrückt wird.
+In diesem Projekt erforschen wir die Implementierung von MQTT, indem wir einen Schaltkreis aufbauen, der eine LED, einen Knopf und einen Thermistor umfasst. Der ESP32-Platine-Mikrocontroller wird verwendet, um eine Verbindung zum WLAN herzustellen und mit einem MQTT-Broker zu kommunizieren. Der Code ermöglicht es dem Mikrocontroller, sich für bestimmte Themen zu abonnieren, Nachrichten zu empfangen und die LED basierend auf den empfangenen Informationen zu steuern. Zusätzlich demonstriert das Projekt das Veröffentlichen von Temperaturdaten vom Thermistor zu einem festgelegten Thema, wenn der Knopf gedrückt wird.
 
 **Benötigte Komponenten**
 
@@ -73,7 +73,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
     .. image:: ../../img/wiring/iot_4_matt_bb.png
 
-#. Verbinden Sie dann ESP32-board mit dem Computer über das USB-Kabel.
+#. Verbinden Sie dann ESP32-Platine mit dem Computer über das USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
 

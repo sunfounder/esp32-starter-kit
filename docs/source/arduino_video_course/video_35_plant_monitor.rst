@@ -15,7 +15,7 @@
 Video 35: Pflanzenmonitor
 ====================================================
 
-In diesem Tutorial wird gezeigt, wie man ein intelligentes Pflanzenüberwachungssystem mit einem ESP32-Board baut, das Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Licht misst und die Daten auf einem LCD anzeigt. Es umfasst auch eine manuelle Wasserpumpensteuerung.
+In diesem Tutorial wird gezeigt, wie man ein intelligentes Pflanzenüberwachungssystem mit einem ESP32-Platine baut, das Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Licht misst und die Daten auf einem LCD anzeigt. Es umfasst auch eine manuelle Wasserpumpensteuerung.
 
 * **Umfassende Überwachung**: Verwendet DHT11, Bodenfeuchtesensor und LDR, um Gesundheitsindikatoren der Pflanzen zu überwachen.
 * **Integration des LCD-Displays**: Zeigt Echtzeit-Datenmessungen auf einem LCD-Bildschirm zur einfachen Überwachung an.

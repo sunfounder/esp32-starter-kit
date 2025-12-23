@@ -61,7 +61,7 @@ Du kannst sie auch einzeln über die folgenden Links kaufen.
 
 **Verfügbare Pins**
 
-Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
@@ -100,7 +100,7 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
 
     .. image:: img/choose_board.png
 
-#. Klicken Sie jetzt auf den **Hochladen**-Knopf, um den Code auf das ESP32-Board zu laden.
+#. Klicken Sie jetzt auf den **Hochladen**-Knopf, um den Code auf das ESP32-Platine zu laden.
 
     .. image:: img/click_upload.png
 

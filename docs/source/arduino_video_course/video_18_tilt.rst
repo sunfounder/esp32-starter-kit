@@ -22,7 +22,7 @@ Dieses Video-Tutorial zeigt, wie man einen ESP32-Mikrocontroller mit einem Neigu
 * **Verkabelungssetup**: Schritt-für-Schritt-Anleitung zum Anschließen des Neigungsschalters und der LED an den ESP32, einschließlich eines Schaltplanüberblicks.
 * **Codierungstutorial**: Detaillierte Anleitung zum Arduino-Code, der zum Lesen des Neigungsschalterzustands und zur Steuerung der LED erforderlich ist.
 * **Praktische Demonstration**: Echtzeit-Test, um zu zeigen, wie sich der Zustand der LED in Abhängigkeit von der Position des Neigungsschalters ändert.
-* **Auswahl von Board und Port**: Anweisungen zur Auswahl des ESP32-Boards und des richtigen Ports in der Arduino-IDE vor dem Hochladen des Codes.
+* **Auswahl von Board und Port**: Anweisungen zur Auswahl des ESP32-Platines und des richtigen Ports in der Arduino-IDE vor dem Hochladen des Codes.
 
 **Video**
 

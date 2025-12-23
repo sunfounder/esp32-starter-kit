@@ -15,10 +15,10 @@
 Video 33: Digitaler Würfel
 ====================================================
 
-In diesem Tutorial wird gezeigt, wie man einen digitalen Würfel mit einem ESP32-Board und einer 7-Segment-Anzeige baut, wobei eine Taste verwendet wird, um die Würfel zu rollen und zufällig die Zahlen 1 bis 6 anzuzeigen.
+In diesem Tutorial wird gezeigt, wie man einen digitalen Würfel mit einem ESP32-Platine und einer 7-Segment-Anzeige baut, wobei eine Taste verwendet wird, um die Würfel zu rollen und zufällig die Zahlen 1 bis 6 anzuzeigen.
 
 * **Konzept des digitalen Würfels**: Einführung in das Projekt und seine elektronischen Komponenten.
-* **Verkabelungsaufbau**: Schritt-für-Schritt-Anleitung zum Verbinden des ESP32-Boards mit der 7-Segment-Anzeige und der Taste.
+* **Verkabelungsaufbau**: Schritt-für-Schritt-Anleitung zum Verbinden des ESP32-Platines mit der 7-Segment-Anzeige und der Taste.
 * **Code-Erklärung**: Detaillierte Erklärung des Arduino-Codes zur Zahlengenerierung und Anzeigesteuerung.
 * **Zufallszahlengenerierung**: Methode zur Erstellung zufälliger Würfelergebnisse mit einer Taste.
 * **Anzeigeinitialisierung**: Tipps zur Sicherstellung, dass die 7-Segment-Anzeige beim Start einen klaren Bildschirm zeigt.

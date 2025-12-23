@@ -21,7 +21,7 @@ Lerne, wie du einen ESP32-Mikrocontroller mit einem Temperatursensor, einer LED 
 * **MQTT-Protokoll**: Verstehe die leichtgewichtige, bidirektionale und skalierbare Natur von MQTT sowie dessen Zuverlässigkeits- und Sicherheitsmerkmale.
 * **Verkabelung**: Erhalte Einblicke in die erforderlichen Verkabelungsverbindungen für den Temperatursensor, die LED und den Taster.
 * **Erläuterung des Arduino-Codes**: Tauche in die Einrichtung des Arduino-Codes ein, einschließlich Wi-Fi-Konfiguration, MQTT-Client-Setup und Nachrichtenverarbeitung.
-* **Auswahl von Board und COM-Port**: Lerne, wie du das ESP32-Board und den COM-Port in der Arduino-IDE auswählst.
+* **Auswahl von Board und COM-Port**: Lerne, wie du das ESP32-Platine und den COM-Port in der Arduino-IDE auswählst.
 * **Demonstration des HiveMQ Free Brokers**: Sieh dir eine Schritt-für-Schritt-Demonstration zur Nutzung des HiveMQ Free Brokers für die MQTT-Kommunikation an, einschließlich der Veröffentlichung von Temperaturdaten und der Fernsteuerung der LED.
 
 **Video**

@@ -64,7 +64,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 Schaltung Aufbauen
 -----------------------
 
-Der Potentiometer ist ein resistives Element mit 3 Anschlüssen, die beiden seitlichen Pins sind mit 5V und GND verbunden und der mittlere Pin mit Pin35. Nach der Umwandlung durch den ADC-Konverter des ESP32-Boards liegt der Wertebereich bei 0-4095.
+Der Potentiometer ist ein resistives Element mit 3 Anschlüssen, die beiden seitlichen Pins sind mit 5V und GND verbunden und der mittlere Pin mit Pin35. Nach der Umwandlung durch den ADC-Konverter des ESP32-Platines liegt der Wertebereich bei 0-4095.
 
 .. image:: img/circuit/5_moving_mouse_bb.png
 

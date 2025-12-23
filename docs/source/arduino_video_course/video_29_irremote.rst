@@ -15,9 +15,9 @@
 Video 29: Infrarot-Fernbedienungstasten auslesen
 ====================================================
 
-Lerne, wie man ein ESP32-Board anschließt und programmiert, um Infrarotsignale einer Fernbedienung zu dekodieren, einschließlich der Einrichtung eines Summers für akustisches Feedback bei bestimmten Tastendrücken.
+Lerne, wie man ein ESP32-Platine anschließt und programmiert, um Infrarotsignale einer Fernbedienung zu dekodieren, einschließlich der Einrichtung eines Summers für akustisches Feedback bei bestimmten Tastendrücken.
 
-* **IR-Empfänger Einrichtung**: Anweisungen zur Verdrahtung des IR-Empfängers an das ESP32-Board und die notwendigen Komponenten für die Einrichtung.
+* **IR-Empfänger Einrichtung**: Anweisungen zur Verdrahtung des IR-Empfängers an das ESP32-Platine und die notwendigen Komponenten für die Einrichtung.
 * **Bibliotheksinstallation**: Anleitung zur Installation der IRremote ESP8266 Library zur Verarbeitung von Infrarotsignalen in der Arduino IDE.
 * **Signaldekodierung**: Wie man Infrarotsignale einer Fernbedienung dekodiert und sie mit spezifischen Aktionen auf dem ESP32 verknüpft.
 * **Summer-Feedback**: Demonstration, wie ein Summer aktiviert wird, wenn eine bestimmte Taste der Fernbedienung gedrückt wird.

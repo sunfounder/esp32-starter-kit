@@ -15,7 +15,7 @@
 Video 34: Farbverlauf
 ====================================================
 
-Lerne, wie du mit einem ESP32-Board, einer RGB-LED und einem Potentiometer lebendige Farbverläufe erstellst. Erfahre, wie du die Komponenten für dynamische Farbwechsel verdrahtest und programmierst.
+Lerne, wie du mit einem ESP32-Platine, einer RGB-LED und einem Potentiometer lebendige Farbverläufe erstellst. Erfahre, wie du die Komponenten für dynamische Farbwechsel verdrahtest und programmierst.
 
 * **Grundlagen der RGB-LED**: Einführung in die Funktionsweise von RGB-LEDs, einschließlich Anoden-/Kathodenkonfigurationen.
 * **Verkabelungsaufbau**: Schritt-für-Schritt-Anleitung zum Anschließen der RGB-LED und des Potentiometers an den ESP32.

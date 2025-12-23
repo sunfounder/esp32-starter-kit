@@ -15,7 +15,7 @@
 Video 31: Fließendes Licht
 ====================================================
 
-Lerne, wie man einen interaktiven Fließlichteffekt mit einem WS2812-LED-Streifen erstellt, der von einem ESP32-Board gesteuert wird und auf Hindernisse mit Farbänderungen reagiert.
+Lerne, wie man einen interaktiven Fließlichteffekt mit einem WS2812-LED-Streifen erstellt, der von einem ESP32-Platine gesteuert wird und auf Hindernisse mit Farbänderungen reagiert.
 
 * **WS2812-LED-Streifensteuerung**: Verwendung des ESP32 zur individuellen Steuerung der Farben und Muster eines LED-Streifens.
 * **Infrarot-Hinderniserkennung**: Integration eines Hindernissensors, um das Lichtmuster bei Hinderniserkennung dynamisch zu ändern.

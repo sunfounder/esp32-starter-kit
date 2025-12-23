@@ -67,7 +67,7 @@ Sie können sie auch einzeln über die unten stehenden Links kaufen.
 
 **Verfügbare Pins**
 
-Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projekt.
+Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Projekt.
 
 .. list-table::
     :widths: 5 20 
@@ -105,7 +105,7 @@ Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Board für dieses Projek
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/024e20bb-f9c6-4baf-bb27-cdf49eb91e9e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Nachdem Sie den Code auf das ESP32-Board hochgeladen haben, können Sie sehen, wie die LEDs nacheinander eingeschaltet werden.
+Nachdem Sie den Code auf das ESP32-Platine hochgeladen haben, können Sie sehen, wie die LEDs nacheinander eingeschaltet werden.
 
 **Wie funktioniert das?**
 

@@ -4,9 +4,9 @@ Einige Projektcodes lassen sich nicht kompilieren?
 Q1: ``'ledcAttach' was not declared in this scope``
 -----------------------------------------------------
 
-Beim Verwenden von LEDs, RGB-LEDs oder passiven Summern benötigen Sie das |link_ledc| Peripheriegerät des ESP32-Boards, um PWM-Signale zu erzeugen. Das ESP32-Board wurde jedoch kürzlich auf Version 3.0 aktualisiert, was Änderungen an den Funktionsnamen und der Nutzung innerhalb des |link_ledc| Peripheriegeräts verursacht hat.
+Beim Verwenden von LEDs, RGB-LEDs oder passiven Summern benötigen Sie das |link_ledc| Peripheriegerät des ESP32-Platines, um PWM-Signale zu erzeugen. Das ESP32-Platine wurde jedoch kürzlich auf Version 3.0 aktualisiert, was Änderungen an den Funktionsnamen und der Nutzung innerhalb des |link_ledc| Peripheriegeräts verursacht hat.
 
-Daher haben wir unseren Code entsprechend aktualisiert. Wenn Sie beim Kompilieren auf ledc-bezogene Probleme stoßen, aktualisieren Sie bitte Ihr ESP32-Board auf Version 3.0 oder höher.
+Daher haben wir unseren Code entsprechend aktualisiert. Wenn Sie beim Kompilieren auf ledc-bezogene Probleme stoßen, aktualisieren Sie bitte Ihr ESP32-Platine auf Version 3.0 oder höher.
 
 .. image:: img/version_3.0.3.png
 
@@ -14,7 +14,7 @@ Daher haben wir unseren Code entsprechend aktualisiert. Wenn Sie beim Kompiliere
 Q2: Fehler in Bluetooth- und IR-Empfänger-bezogenen Projekten nach dem Upgrade des ESP32 auf Version 3.0?
 -----------------------------------------------------------------------------------------------------------------
 
-Das ESP32-Board wurde auf Version 3.0 aktualisiert, aber die in Bluetooth- und IR-Empfänger-bezogenen Projekten verwendeten Bibliotheken sind noch nicht mit Version 3.0 kompatibel.
+Das ESP32-Platine wurde auf Version 3.0 aktualisiert, aber die in Bluetooth- und IR-Empfänger-bezogenen Projekten verwendeten Bibliotheken sind noch nicht mit Version 3.0 kompatibel.
 
 Um diese Projekte auszuführen, wird empfohlen, die ESP32-Version vorübergehend auf Version 2.0 herunterzustufen, speziell auf Version 2.0.17.
 
@@ -33,7 +33,7 @@ Beim Flashen der ESP32-Firmware mit Thonny oder beim Hochladen von Code auf den 
 
     A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode.
 
-Dies weist nicht auf ein Hardwareproblem mit Ihrem ESP32-Board hin.  
+Dies weist nicht auf ein Hardwareproblem mit Ihrem ESP32-Platine hin.  
 Dieses Problem kann auftreten, wenn der Computer den ESP32 während des Flasch-Vorgangs nicht automatisch in den **Download-Modus** versetzt.
 
 **Ursache**

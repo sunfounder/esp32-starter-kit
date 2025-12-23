@@ -21,7 +21,7 @@
 
 ..     .. image:: img/dowload_micropython_uf2.png
 
-#. Verbinde das ESP32 board mit deinem Computer über ein USB-Kabel.
+#. Verbinde das ESP32-Platine mit deinem Computer über ein USB-Kabel.
 
    .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -31,7 +31,7 @@
 
    .. note::
 
-      Wenn außer „Local Python 3“ keine weiteren Optionen angezeigt werden, wurde dein ESP32-Board möglicherweise nicht vom Computer erkannt.  
+      Wenn außer „Local Python 3“ keine weiteren Optionen angezeigt werden, wurde dein ESP32-Platine möglicherweise nicht vom Computer erkannt.  
       In diesem Fall musst du eventuell den :ref:`install_driver` installieren.
 
    .. image:: img/install_micropython1.png

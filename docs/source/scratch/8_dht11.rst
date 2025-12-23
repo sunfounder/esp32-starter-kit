@@ -108,7 +108,7 @@ Schreiben Sie die gelesene Temperatur und Luftfeuchtigkeit auf den Serial Monito
 
 **5. Code hochladen**
 
-Im Gegensatz zum **Stage**-Modus muss der Code im **Upload**-Modus auf das ESP32-Board hochgeladen werden, um den Effekt zu sehen, indem Sie den Button **Upload Code** verwenden. So können Sie auch das USB-Kabel abziehen und das Programm weiterlaufen lassen.
+Im Gegensatz zum **Stage**-Modus muss der Code im **Upload**-Modus auf das ESP32-Platine hochgeladen werden, um den Effekt zu sehen, indem Sie den Button **Upload Code** verwenden. So können Sie auch das USB-Kabel abziehen und das Programm weiterlaufen lassen.
 
 .. image:: img/11_upload.png
 

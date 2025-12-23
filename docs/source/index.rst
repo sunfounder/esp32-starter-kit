@@ -34,7 +34,7 @@ Danke, dass Sie sich für unser |link_esp32_starter_kit| entschieden haben.
 .. image:: img/esp32_ultimate_kit.png
 
 
-Willkommen beim ESP32 Lernkit! Dieses umfassende Paket ist sowohl für Anfänger als auch für erfahrene Entwickler konzipiert, um einen tiefen Einblick in die vielseitige Welt des ESP32-Mikrocontrollers zu erhalten. Mit dem ESP32 board als Herzstück und einer Reihe von begleitenden Komponenten wie LEDs, Sensoren, Motoren und mehr können Benutzer eine Vielzahl von Projekten erkunden.
+Willkommen beim ESP32 Lernkit! Dieses umfassende Paket ist sowohl für Anfänger als auch für erfahrene Entwickler konzipiert, um einen tiefen Einblick in die vielseitige Welt des ESP32-Mikrocontrollers zu erhalten. Mit dem ESP32-Platine als Herzstück und einer Reihe von begleitenden Komponenten wie LEDs, Sensoren, Motoren und mehr können Benutzer eine Vielzahl von Projekten erkunden.
 
 Ob Sie sich für Grundlagen der Elektronik oder IoT-Integrationen interessieren, dieses Kit bietet alles. Für MicroPython-Begeisterte bieten wir eine strukturierte Einführung in MicroPython, komplett mit Einrichtungen der IDE und Grundlagen der Syntax. Auch Arduino-Anwender kommen nicht zu kurz, mit einem eigenen Abschnitt zum Einstieg in Arduino und einer Sammlung von Grundprojekten, um den Lernprozess zu starten.
 

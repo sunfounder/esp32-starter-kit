@@ -19,7 +19,7 @@
 
 Haben Sie jemals davon geträumt, Klavier zu spielen, konnten sich aber keines leisten? Oder möchten Sie einfach nur Spaß haben und ein Fruchtpiano basteln? Dann ist dieses Projekt genau das Richtige für Sie!
 
-Mit nur wenigen Berührungssensoren auf dem ESP32-Board können Sie jetzt Ihre Lieblingsmelodien spielen und das Klavierspielen genießen, ohne viel Geld ausgeben zu müssen.
+Mit nur wenigen Berührungssensoren auf dem ESP32-Platine können Sie jetzt Ihre Lieblingsmelodien spielen und das Klavierspielen genießen, ohne viel Geld ausgeben zu müssen.
 
 **Benötigte Komponenten**
 
@@ -112,7 +112,7 @@ Das Ergebnis ist eine einfache und erschwingliche Möglichkeit, das Klavierspiel
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-In diesem Projekt müssen Sie das ESP32 board von der Erweiterungsplatine entfernen und dann in das Steckbrett einsetzen. Dies liegt daran, dass einige Pins auf der Erweiterungsplatine mit Widerständen verbunden sind, was die Kapazität der Pins beeinflusst.
+In diesem Projekt müssen Sie das ESP32-Platine von der Erweiterungsplatine entfernen und dann in das Steckbrett einsetzen. Dies liegt daran, dass einige Pins auf der Erweiterungsplatine mit Widerständen verbunden sind, was die Kapazität der Pins beeinflusst.
 
 **Code**
 
