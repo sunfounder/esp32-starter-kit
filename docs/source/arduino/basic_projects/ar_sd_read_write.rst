@@ -59,7 +59,7 @@ SDカードのマウント、ファイルの作成、データのファイルへ
 
     .. image:: ../../img/insert_sd.png
 
-#. USBケーブルを使ってESP32-WROOM-32Eをコンピュータに接続します。
+#. USBケーブルを使ってESP32ボードをコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 

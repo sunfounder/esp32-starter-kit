@@ -89,7 +89,7 @@
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. 次に、 USBケーブルを使用して、ESP32 WROOM 32Eをコンピューターに接続します。
+#. 次に、 USBケーブルを使用して、ESP32ボードをコンピューターに接続します。
 
     * :ref:`unknown_com_port`
 

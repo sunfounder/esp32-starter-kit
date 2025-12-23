@@ -66,7 +66,7 @@ CheerLightsは、誰でも制御できる同期したライトのグローバル
 
     .. image:: ../../img/wiring/iot_5_cheerlight_bb.png
 
-#. 次に、USBケーブルを使ってESP32-WROOM-32Eをコンピュータに接続します。
+#. 次に、USBケーブルを使ってESP32ボードをコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 

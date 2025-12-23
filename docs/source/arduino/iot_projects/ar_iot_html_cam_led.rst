@@ -75,7 +75,7 @@
 
     .. image:: ../../img/wiring/iot_3_html_led_bb.png
 
-#. 次に、USBケーブルを使ってESP32-WROOM-32Eをコンピュータに接続します。
+#. 次に、USBケーブルを使ってESP32ボードをコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 

@@ -67,7 +67,7 @@
             Your browser does not support the video tag.
         </video>
 
-#. 次に、USBケーブルを使ってESP32-WROOM-32Eをコンピューターに接続します。
+#. 次に、USBケーブルを使ってESP32ボードをコンピューターに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 

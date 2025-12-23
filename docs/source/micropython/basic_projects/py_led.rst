@@ -103,7 +103,7 @@
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. USBケーブルを使用してESP32 WROOM 32Eをコンピューターに接続します。
+#. USBケーブルを使用してESP32ボードをコンピューターに接続します。
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
@@ -155,9 +155,6 @@
             led.value(0)
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
-
-
-
 
 **もっと学ぶ**
 

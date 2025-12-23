@@ -80,7 +80,7 @@ ESP32で音楽の世界へようこそ！このプロジェクトでは、あな
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
-#. USBケーブルを使ってESP32-WROOM-32Eをコンピュータに接続します。
+#. USBケーブルを使ってESP32ボードをコンピュータに接続します。
 
     .. image:: ../../img/plugin_esp32.png
 

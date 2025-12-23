@@ -22,15 +22,15 @@
 
 **Bluetooth機能について**
 
-ESP32 WROOM 32Eは、Wi-FiとBluetoothの接続機能を一つのチップに統合するモジュールです。これはBLEおよびクラシックBluetoothプロトコルをサポートしています。
+ESP32ボードは、Wi-FiとBluetoothの接続機能を一つのチップに統合するモジュールです。これはBLEおよびクラシックBluetoothプロトコルをサポートしています。
 
 このモジュールはBluetoothクライアントまたはサーバーとして使用することができます。Bluetoothクライアントとして、他のBluetoothデバイスに接続し、データの交換を行うことができます。Bluetoothサーバーとしては、他のBluetoothデバイスにサービスを提供します。
 
-ESP32 WROOM 32Eは、Generic Access Profile（GAP）、Generic Attribute Profile（GATT）、Serial Port Profile（SPP）など、さまざまなBluetoothプロファイルをサポートしています。SPPプロファイルを使用すると、モジュールはBluetooth経由でシリアルポートをエミュレートし、他のBluetoothデバイスとのシリアル通信を可能にします。
+ESP32ボードは、Generic Access Profile（GAP）、Generic Attribute Profile（GATT）、Serial Port Profile（SPP）など、さまざまなBluetoothプロファイルをサポートしています。SPPプロファイルを使用すると、モジュールはBluetooth経由でシリアルポートをエミュレートし、他のBluetoothデバイスとのシリアル通信を可能にします。
 
-ESP32 WROOM 32EのBluetooth機能を使用するには、適切なソフトウェア開発キット（SDK）を使うか、Arduino IDEとESP32 BLEライブラリを使ってプログラムする必要があります。ESP32 BLEライブラリはBLE作業を容易にするための高レベルインターフェースを提供し、モジュールをBLEクライアントおよびサーバーとして使用する方法を示す例を含んでいます。
+ESP32ボードのBluetooth機能を使用するには、適切なソフトウェア開発キット（SDK）を使うか、Arduino IDEとESP32 BLEライブラリを使ってプログラムする必要があります。ESP32 BLEライブラリはBLE作業を容易にするための高レベルインターフェースを提供し、モジュールをBLEクライアントおよびサーバーとして使用する方法を示す例を含んでいます。
 
-全体として、ESP32 WROOM 32EのBluetooth機能は、プロジェクトで無線通信を容易かつ低電力で可能にする便利な方法を提供します。
+全体として、ESP32ボードのBluetooth機能は、プロジェクトで無線通信を容易かつ低電力で可能にする便利な方法を提供します。
 
 **操作手順**
 
