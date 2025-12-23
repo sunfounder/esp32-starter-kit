@@ -118,7 +118,7 @@ Now, let's begin.
 
    .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-#. Subsequently, connect the ESP32-WROOM-32E to your computer using a USB cable.
+#. Subsequently, connect the ESP32 board to your computer using a USB cable.
 
    .. image:: ../../img/plugin_esp32.png
 

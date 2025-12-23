@@ -19,7 +19,7 @@
 
 This project focuses on utilizing MQTT, a popular communication protocol in the Internet of Things (IoT) domain. MQTT enables IoT devices to exchange data using a publish/subscribe model, where devices communicate through topics.
 
-In this project, we explore the implementation of MQTT by building a circuit that includes an LED, a button, and a thermistor. The ESP32-WROOM-32E microcontroller is used to establish a connection to WiFi and communicate with an MQTT broker. The code allows the microcontroller to subscribe to specific topics, receive messages, and control the LED based on the received information. Additionally, the project demonstrates publishing temperature data from the thermistor to a designated topic when the button is pressed.
+In this project, we explore the implementation of MQTT by building a circuit that includes an LED, a button, and a thermistor. The ESP32 board microcontroller is used to establish a connection to WiFi and communicate with an MQTT broker. The code allows the microcontroller to subscribe to specific topics, receive messages, and control the LED based on the received information. Additionally, the project demonstrates publishing temperature data from the thermistor to a designated topic when the button is pressed.
 
 **Required Components**
 
@@ -73,7 +73,7 @@ You can also buy them separately from the links below.
 
     .. image:: ../../img/wiring/iot_4_matt_bb.png
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Then, connect ESP32 board to the computer using the USB cable.
 
     .. image:: ../../img/plugin_esp32.png
 

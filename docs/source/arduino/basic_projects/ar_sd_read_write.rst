@@ -59,7 +59,7 @@ You can also buy them separately from the links below.
 
     .. image:: ../../img/insert_sd.png
 
-#. Connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Connect ESP32 board to the computer using the USB cable.
 
     .. image:: ../../img/plugin_esp32.png
 

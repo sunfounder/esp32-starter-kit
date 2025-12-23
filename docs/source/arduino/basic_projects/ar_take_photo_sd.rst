@@ -78,7 +78,7 @@ It is also important to ensure that the SD card is properly mounted before savin
             Your browser does not support the video tag.
         </video>
 
-#. Connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Connect ESP32 board to the computer using the USB cable.
 
     .. image:: ../../img/plugin_esp32.png
 

@@ -77,7 +77,7 @@ You can also buy them separately from the links below.
 
     .. image:: ../../img/wiring/iot_3_html_led_bb.png
 
-#. Then, connect ESP32-WROOM-32E to the computer using the USB cable.
+#. Then, connect ESP32 board to the computer using the USB cable.
 
     .. image:: ../../img/plugin_esp32.png
 
