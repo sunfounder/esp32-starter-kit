@@ -33,7 +33,7 @@ Gracias por elegir nuestro |link_esp32_starter_kit|.
 
 .. image:: img/esp32_ultimate_kit.png
 
-¡Bienvenido al Kit de Aprendizaje ESP32! Este paquete integral está diseñado para ofrecer tanto a principiantes como a desarrolladores experimentados una inmersión profunda en el versátil mundo del microcontrolador ESP32. Con el ESP32 WROOM 32E en su núcleo, y una gama de componentes acompañantes como LEDs, sensores, motores y más, los usuarios pueden explorar una amplia variedad de proyectos.
+¡Bienvenido al Kit de Aprendizaje ESP32! Este paquete integral está diseñado para ofrecer tanto a principiantes como a desarrolladores experimentados una inmersión profunda en el versátil mundo del microcontrolador ESP32. Con el ESP32 board en su núcleo, y una gama de componentes acompañantes como LEDs, sensores, motores y más, los usuarios pueden explorar una amplia variedad de proyectos.
 
 Ya sea que estés interesado en electrónica básica, integraciones IoT, este kit lo tiene todo. Para los entusiastas de MicroPython, proporcionamos una introducción estructurada a MicroPython, completa con configuraciones de IDE y lecciones básicas de sintaxis. Los usuarios de Arduino no se quedan atrás, con una sección dedicada a comenzar con Arduino y una serie de proyectos básicos para iniciar el proceso de aprendizaje.
 

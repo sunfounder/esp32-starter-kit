@@ -103,7 +103,7 @@ Este circuito funciona bajo un principio simple, y la dirección de la corriente
             # Esperar 0.5 segundos (500 milisegundos) mientras el LED está apagado
             time.sleep(0.5)
 
-#. Conecta la placa ESP32 WROOM 32E a tu computadora usando un cable USB.
+#. Conecta la placa ESP32 board a tu computadora usando un cable USB.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600

@@ -21,7 +21,7 @@ En el proyecto anterior, controlamos el LED encendiéndolo y apagándolo mediant
 
 Con PWM, en lugar de simplemente encender o apagar el LED, ajustaremos la cantidad de tiempo que el LED está encendido versus la cantidad de tiempo que está apagado en cada ciclo. Al cambiar rápidamente el LED de encendido a apagado en intervalos variables, podemos crear la ilusión de que el LED se ilumina y se atenúa gradualmente, simulando un efecto de respiración.
 
-Utilizando las capacidades de PWM del ESP32 WROOM 32E, podemos lograr un control suave y preciso sobre el brillo del LED. Este efecto de respiración agrega un elemento dinámico y visualmente atractivo a tus proyectos, creando una exhibición llamativa o ambiente.
+Utilizando las capacidades de PWM del ESP32 board, podemos lograr un control suave y preciso sobre el brillo del LED. Este efecto de respiración agrega un elemento dinámico y visualmente atractivo a tus proyectos, creando una exhibición llamativa o ambiente.
 
 **Componentes Necesarios**
 
