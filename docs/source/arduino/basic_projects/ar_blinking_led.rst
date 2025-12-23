@@ -89,7 +89,7 @@ This circuit works on a simple principle, and the current direction is shown in 
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1bff2463-40ad-43c1-8815-9f448bab3735/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-#. Then connect the ESP32 WROOM 32E to your computer using a USB cable. 
+#. Then connect the ESP32 board to your computer using a USB cable. 
 
     * :ref:`unknown_com_port`
 

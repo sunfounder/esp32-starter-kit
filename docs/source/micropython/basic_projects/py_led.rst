@@ -103,7 +103,7 @@ This circuit works on a simple principle, and the current direction is shown in 
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. Connect the ESP32 WROOM 32E to your computer using a USB cable. 
+#. Connect the ESP32 board to your computer using a USB cable. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600

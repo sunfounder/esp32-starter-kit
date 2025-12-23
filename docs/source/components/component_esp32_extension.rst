@@ -14,13 +14,12 @@
 
 .. _cpn_esp32_wroom_32e:
 
-ESP32 WROOM 32E
+ESP32 Board
 =================
 
-The ESP32 WROOM-32E is a versatile and powerful module built around Espressif's ESP32 chipset. It offers dual-core processing, integrated Wi-Fi and Bluetooth connectivity, and boasts a wide range of peripheral interfaces. Known for its low-power consumption, the module is ideal for IoT applications, enabling smart connectivity and robust performance in compact form factors.
+The ESP32 is a powerful and versatile microcontroller featuring dual-core processing, built-in Wi-Fi and Bluetooth, and extensive peripheral support. Its low-power design makes it well suited for compact and high-performance IoT applications.
 
-.. image:: img/esp32_wroom_32e.jpg
-    :width: 600
+.. image:: img/esp32_board.png
     :align: center
 
 
@@ -32,11 +31,11 @@ Key features include:
 * **GPIO**: Offering up to 38 GPIO pins, it supports a variety of external devices and sensors.
 * **Low Power Consumption**: Multiple power-saving modes are available, making it ideal for battery-powered or energy-efficient scenarios.
 * **Security**: Integrated encryption and security features ensure user data and privacy are well-protected.
-* **Versatility**: From simple household appliances to complex industrial machinery, the WROOM-32E delivers consistent, efficient performance.
+* **Versatility**: From simple household appliances to complex industrial machinery, the board delivers consistent, efficient performance.
 
-In summary, the ESP32 WROOM-32E not only offers robust processing capabilities and diverse connectivity options but also boasts an array of features making it a preferred choice in the IoT and smart device sectors.
+In summary, the ESP32 board not only offers robust processing capabilities and diverse connectivity options but also boasts an array of features making it a preferred choice in the IoT and smart device sectors.
 
-* |link_esp32_datasheet|
+.. * |link_esp32_datasheet|
 
 .. _esp32_pinout:
 
@@ -59,7 +58,6 @@ Here are some of the key restrictions and considerations:
 * **Touch Pins**: Some pins support touch functionalities. These pins should be used carefully if you intend to use them for touch sensing.
 * **Power Pins**: Some pins are reserved for power-related functions and should be used accordingly. For example, avoid drawing excessive current from power supply pins like 3V3 and GND.
 * **Input-only Pins**: Some pins are input-only and should not be used as outputs.
-
 
 .. _esp32_strapping:
 
@@ -113,7 +111,7 @@ Refer to following table for a detailed boot-mode configuration by strapping pin
 ESP32 Camera Extension
 --------------------------
 
-We have designed an expansion board that enables you to fully utilize the camera and SD card functionalities of the ESP32 WROOM 32E. By combining the OV2640 camera, Micro SD, and ESP32 WROOM 32E, you get an all-in-one expansion board.
+We have designed an expansion board that enables you to fully utilize the camera and SD card functionalities of the ESP32 board. By combining the OV2640 camera, Micro SD, and ESP32 board, you get an all-in-one expansion board.
 
 The board provides two types of GPIO headers - one with female headers, perfect for quick prototyping projects. The other type features screw terminals, ensuring stable wire connections and making it suitable for IoT projects.
 
@@ -138,10 +136,10 @@ Interface Introduction
 
 * **Battery Port**
     * Features a PH2.0-2P interface, compatible with 3.7V 18650 lithium batterry.
-    * Provides power to both the ESP32 WROOM 32E and ESP32 Camera Extension.
+    * Provides power to both the ESP32 board and ESP32 Camera Extension.
 
 * **ESP32 Pin Headers**
-    * Intended for the ESP32 WROOM 32E module. Pay close attention to its orientation; ensure both USB ports face the same side to avoid incorrect placement.
+    * Intended for the ESP32 board module. Pay close attention to its orientation; ensure both USB ports face the same side to avoid incorrect placement.
 
 * **GPIO Headers**
     * **Female Headers**: Used to connect various components to the ESP32, perfect for quick prototyping projects.
@@ -161,9 +159,9 @@ Interface Introduction
 ESP32 Camera Extension Pinout
 --------------------------------
 
-The ESP32 WROOM 32E's pinout diagram can be found in :ref:`esp32_pinout`. 
+The ESP32 board's pinout diagram can be found in :ref:`esp32_pinout`. 
 
-However, when the ESP32 WROOM 32E is inserted into the extension board, some of its pins may also be used to drive the Micro SD card or a camera. 
+However, when the ESP32 board is inserted into the extension board, some of its pins may also be used to drive the Micro SD card or a camera. 
 
 Consequently, pull-up or pull-down resistors have be added to these pins. If you're using these pins as inputs, it's crucial to account for these resistors as they can affect input levels.
 
@@ -190,7 +188,7 @@ Interface Insertion Guide
 
 **Upload Code**
 
-    When you need to upload code to the ESP32 WROOM 32E, connect it to your computer using a USB cable.
+    When you need to upload code to the ESP32 board, connect it to your computer using a USB cable.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600

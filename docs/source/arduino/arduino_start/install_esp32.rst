@@ -27,7 +27,7 @@ To program the ESP32 microcontroller, we need to install the ESP32 board package
 
 **Upload the Code**
 
-#. Now, connect the ESP32 WROOM 32E to your computer using a USB cable. 
+#. Now, connect the ESP32 board to your computer using a USB cable. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600

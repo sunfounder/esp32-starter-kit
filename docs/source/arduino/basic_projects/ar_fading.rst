@@ -21,7 +21,7 @@ In the previous project, we controlled the LED by turning it on and off using di
 
 With PWM, instead of simply turning the LED on or off, we will be adjusting the amount of time the LED is on versus the amount of time it is off within each cycle. By rapidly switching the LED on and off at varying intervals, we can create the illusion of the LED gradually brightening and dimming, simulating a breathing effect.
 
-By using the PWM capabilities of the ESP32 WROOM 32E, we can achieve smooth and precise control over the LED's brightness. This breathing effect adds a dynamic and visually appealing element to your projects, creating an eye-catching display or ambiance.
+By using the PWM capabilities of the ESP32 board, we can achieve smooth and precise control over the LED's brightness. This breathing effect adds a dynamic and visually appealing element to your projects, creating an eye-catching display or ambiance.
 
 **Required Components**
 
