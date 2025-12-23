@@ -103,7 +103,7 @@ Dieser Schaltkreis funktioniert nach einem einfachen Prinzip, und die Stromricht
             # Wait for 0.5 seconds (500 milliseconds) while the LED is off
             time.sleep(0.5)
 
-#. Verbinden Sie das ESP32 WROOM 32E mit Ihrem Computer über ein USB-Kabel.
+#. Verbinden Sie das ESP32 board mit Ihrem Computer über ein USB-Kabel.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600

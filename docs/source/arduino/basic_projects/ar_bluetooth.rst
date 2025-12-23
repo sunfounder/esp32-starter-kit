@@ -26,23 +26,23 @@ Dieses Dokument beschreibt die Schritte zur Einrichtung des ESP32 als BLE-Server
 
 **Über die Bluetooth-Funktion**
 
-Das ESP32 WROOM 32E ist ein Modul, das Wi-Fi und Bluetooth Konnektivität in einem einzigen Chip integriert. 
+Das ESP32 board ist ein Modul, das Wi-Fi und Bluetooth Konnektivität in einem einzigen Chip integriert. 
 Es unterstützt sowohl das Bluetooth Low Energy (BLE) als auch das klassische Bluetooth-Protokoll.
 
 Das Modul kann sowohl als Bluetooth-Client als auch als Server verwendet werden. Als Bluetooth-Client kann das Modul sich mit 
 anderen Bluetooth-Geräten verbinden und Daten mit ihnen austauschen. Als Bluetooth-Server kann das Modul 
 Dienste für andere Bluetooth-Geräte bereitstellen.
 
-Das ESP32 WROOM 32E unterstützt verschiedene Bluetooth-Profile, einschließlich des Generic Access Profile (GAP), Generic Attribute Profile (GATT) 
+Das ESP32 board unterstützt verschiedene Bluetooth-Profile, einschließlich des Generic Access Profile (GAP), Generic Attribute Profile (GATT) 
 und Serial Port Profile (SPP). Das SPP-Profil ermöglicht es dem Modul, einen seriellen Port über Bluetooth zu emulieren, 
 wodurch eine serielle Kommunikation mit anderen Bluetooth-Geräten ermöglicht wird.
 
-Um die Bluetooth-Funktion des ESP32 WROOM 32E zu nutzen, muss es mit einem geeigneten Software 
+Um die Bluetooth-Funktion des ESP32 board zu nutzen, muss es mit einem geeigneten Software 
 Entwicklungskit (SDK) oder mit der Arduino IDE und der ESP32 BLE-Bibliothek programmiert werden. 
 Die ESP32 BLE-Bibliothek bietet eine hochrangige Schnittstelle für die Arbeit mit BLE. Sie enthält Beispiele, die demonstrieren, 
 wie man das Modul als BLE-Client und -Server verwendet.
 
-Insgesamt bietet die Bluetooth-Funktion des ESP32 WROOM 32E eine bequeme und energiesparende Möglichkeit, drahtlose 
+Insgesamt bietet die Bluetooth-Funktion des ESP32 board eine bequeme und energiesparende Möglichkeit, drahtlose 
 Kommunikation in Ihren Projekten zu ermöglichen.
 
 **Bedienungsschritte**

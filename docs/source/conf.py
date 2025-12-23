@@ -231,7 +231,7 @@ rst_epilog = """
 
 .. |link_esp32_datasheet| raw:: html
 
-    <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf" target="_blank">ESP32-WROOM-32E Datasheet</a> 
+    <a href="https://www.espressif.com/sites/default/files/documentation/esp32-board_esp32-wroom-32ue_datasheet_en.pdf" target="_blank">ESP32-board Datasheet</a> 
 
 
 

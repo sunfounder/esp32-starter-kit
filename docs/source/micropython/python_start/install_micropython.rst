@@ -21,7 +21,7 @@
 
 ..     .. image:: img/dowload_micropython_uf2.png
 
-#. Verbinde das ESP32 WROOM 32E mit deinem Computer über ein USB-Kabel.
+#. Verbinde das ESP32 board mit deinem Computer über ein USB-Kabel.
 
    .. image:: ../../img/plugin_esp32.png
         :width: 600

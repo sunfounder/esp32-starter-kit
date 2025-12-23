@@ -21,7 +21,7 @@ Im vorherigen Projekt haben wir die LED durch Ein- und Ausschalten mit digitaler
 
 Mit PWM werden wir anstelle des einfachen Ein- oder Ausschaltens der LED die Dauer einstellen, während der die LED pro Zyklus eingeschaltet ist im Vergleich zur Dauer, während der sie ausgeschaltet ist. Durch schnelles Umschalten der LED ein und aus in variablen Intervallen können wir den Eindruck erwecken, dass die LED allmählich heller und dunkler wird und einen Atemeffekt simuliert.
 
-Durch die Verwendung der PWM-Funktionen des ESP32 WROOM 32E können wir eine sanfte und präzise Kontrolle über die Helligkeit der LED erreichen. Dieser Atemeffekt verleiht Ihren Projekten eine dynamische und visuell ansprechende Komponente und schafft eine auffällige Anzeige oder Atmosphäre.
+Durch die Verwendung der PWM-Funktionen des ESP32 board können wir eine sanfte und präzise Kontrolle über die Helligkeit der LED erreichen. Dieser Atemeffekt verleiht Ihren Projekten eine dynamische und visuell ansprechende Komponente und schafft eine auffällige Anzeige oder Atmosphäre.
 
 **Benötigte Komponenten**
 
