@@ -80,7 +80,7 @@ Puoi anche acquistarli separatamente dai link sottostanti.
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
-#. Collega l'ESP32-WROOM-32E al computer utilizzando il cavo USB.
+#. Collega l'ESP32 scheda al computer utilizzando il cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
 

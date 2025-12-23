@@ -13,7 +13,7 @@ Quick Links:
 <a id="about_this_kit"></a>
 ## About this kit:
 
-Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 WROOM 32E at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
+Welcome to the ESP32 Learning Kit! This comprehensive package is designed to offer both beginners and seasoned developers a deep dive into the versatile world of the ESP32 microcontroller. With the ESP32 scheda at its core, and a range of accompanying components like LEDs, sensors, motors, and more, users can explore a vast array of projects.
 
 <a id="update"></a>
 ## Update:

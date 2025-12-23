@@ -67,7 +67,7 @@ Puoi anche acquistarli separatamente dai link qui sotto.
 
     .. image:: ../../img/wiring/iot_5_cheerlight_bb.png
 
-#. Poi, collega l'ESP32-WROOM-32E al computer utilizzando il cavo USB.
+#. Poi, collega l'ESP32 scheda al computer utilizzando il cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
 

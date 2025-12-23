@@ -76,7 +76,7 @@ Inoltre, dopo aver collegato GPIO 0 a GND, è necessario premere il pulsante di 
             Il tuo browser non supporta il tag video.
         </video>
 
-#. Collega ESP32-WROOM-32E al computer utilizzando il cavo USB.
+#. Collega ESP32 scheda al computer utilizzando il cavo USB.
 
     .. image:: ../../img/plugin_esp32.png
 

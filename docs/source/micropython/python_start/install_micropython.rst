@@ -17,7 +17,7 @@
 1.3 Installare MicroPython su ESP32 (Importante)
 =====================================================
 
-#. Collega l'ESP32 WROOM 32E al tuo computer utilizzando un cavo USB.
+#. Collega l'ESP32 scheda al tuo computer utilizzando un cavo USB.
 
    .. image:: ../../img/plugin_esp32.png
         :width: 600

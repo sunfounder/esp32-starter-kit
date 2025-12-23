@@ -113,7 +113,7 @@ Il risultato è un modo semplice ed economico per godersi l'esperienza di suonar
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-In questo progetto, è necessario rimuovere l'ESP32 WROOM 32E dalla scheda di espansione e poi inserirlo nella breadboard. Questo perché alcuni pin sulla scheda di espansione sono collegati a resistori, che influenzeranno la capacità dei pin.
+In questo progetto, è necessario rimuovere l'ESP32 scheda dalla scheda di espansione e poi inserirlo nella breadboard. Questo perché alcuni pin sulla scheda di espansione sono collegati a resistori, che influenzeranno la capacità dei pin.
 
 **Codice**
 

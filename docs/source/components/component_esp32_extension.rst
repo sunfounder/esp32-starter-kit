@@ -14,13 +14,12 @@
 
 .. _cpn_esp32_wroom_32e:
 
-ESP32 WROOM 32E
+ESP32 Scheda
 =====================
 
-L'ESP32 WROOM-32E è un modulo versatile e potente basato sul chipset ESP32 di Espressif. Offre un'elaborazione a doppio core, connettività Wi-Fi e Bluetooth integrata, e vanta un'ampia gamma di interfacce periferiche. Conosciuto per il suo basso consumo energetico, il modulo è ideale per applicazioni IoT, abilitando connettività intelligente e prestazioni robuste in formati compatti.
+L'ESP32 scheda è un modulo versatile e potente basato sul chipset ESP32 di Espressif. Offre un'elaborazione a doppio core, connettività Wi-Fi e Bluetooth integrata, e vanta un'ampia gamma di interfacce periferiche. Conosciuto per il suo basso consumo energetico, il modulo è ideale per applicazioni IoT, abilitando connettività intelligente e prestazioni robuste in formati compatti.
 
-.. image:: img/esp32_wroom_32e.jpg
-    :width: 600
+.. image:: img/esp32_board.png
     :align: center
 
 
@@ -32,11 +31,11 @@ Caratteristiche principali:
 * **GPIO**: Con fino a 38 pin GPIO, supporta una varietà di dispositivi esterni e sensori.
 * **Basso consumo energetico**: Sono disponibili diverse modalità di risparmio energetico, che lo rendono ideale per scenari a batteria o ad alta efficienza energetica.
 * **Sicurezza**: Le funzionalità di crittografia e sicurezza integrate garantiscono la protezione dei dati e della privacy degli utenti.
-* **Versatilità**: Dai semplici elettrodomestici alle complesse macchine industriali, il WROOM-32E offre prestazioni costanti ed efficienti.
+* **Versatilità**: Dai semplici elettrodomestici alle complesse macchine industriali, il ESP32 scheda offre prestazioni costanti ed efficienti.
 
-In sintesi, l'ESP32 WROOM-32E non solo offre robuste capacità di elaborazione e opzioni di connettività diversificate, ma vanta anche una serie di caratteristiche che lo rendono una scelta preferita nei settori IoT e dei dispositivi intelligenti.
+In sintesi, l'ESP32 scheda non solo offre robuste capacità di elaborazione e opzioni di connettività diversificate, ma vanta anche una serie di caratteristiche che lo rendono una scelta preferita nei settori IoT e dei dispositivi intelligenti.
 
-* |link_esp32_datasheet|
+.. * |link_esp32_datasheet|
 
 .. _esp32_pinout:
 
@@ -111,7 +110,7 @@ Consultare la seguente tabella per una configurazione dettagliata della modalit�
 Estensione Fotocamera ESP32
 -------------------------------
 
-Abbiamo progettato una scheda di espansione che ti consente di sfruttare appieno le funzionalità della fotocamera e della scheda SD dell'ESP32 WROOM 32E. Combinando la fotocamera OV2640, la Micro SD e l'ESP32 WROOM 32E, ottieni una scheda di espansione tutto-in-uno.
+Abbiamo progettato una scheda di espansione che ti consente di sfruttare appieno le funzionalità della fotocamera e della scheda SD dell'ESP32 scheda. Combinando la fotocamera OV2640, la Micro SD e l'ESP32 scheda, ottieni una scheda di espansione tutto-in-uno.
 
 La scheda offre due tipi di intestazioni GPIO - uno con intestazioni femmina, perfetto per progetti di prototipazione rapida. L'altro tipo presenta terminali a vite, garantendo connessioni stabili e rendendolo adatto per progetti IoT.
 
@@ -136,10 +135,10 @@ Introduzione alle Interfacce
 
 * **Porta della Batteria**
     * Presenta un'interfaccia PH2.0-2P, compatibile con batteria al litio da 3,7V 18650.
-    * Fornisce energia sia all'ESP32 WROOM 32E che all'Estensione Fotocamera ESP32.
+    * Fornisce energia sia all'ESP32 scheda che all'Estensione Fotocamera ESP32.
 
 * **Intestazioni Pin ESP32**
-    * Destinate al modulo ESP32 WROOM 32E. Presta molta attenzione al suo orientamento; assicurati che entrambe le porte USB siano rivolte dallo stesso lato per evitare un posizionamento errato.
+    * Destinate al modulo ESP32 scheda. Presta molta attenzione al suo orientamento; assicurati che entrambe le porte USB siano rivolte dallo stesso lato per evitare un posizionamento errato.
 
 * **Intestazioni GPIO**
     * **Intestazioni Femmina**: Utilizzate per collegare vari componenti all'ESP32, perfette per progetti di prototipazione rapida.
@@ -159,9 +158,9 @@ Introduzione alle Interfacce
 Pinout Estensione Fotocamera ESP32
 ----------------------------------------
 
-Il diagramma dei pin dell'ESP32 WROOM 32E può essere trovato in :ref:`esp32_pinout`. 
+Il diagramma dei pin dell'ESP32 scheda può essere trovato in :ref:`esp32_pinout`. 
 
-Tuttavia, quando l'ESP32 WROOM 32E è inserito nella scheda di estensione, alcuni dei suoi pin possono anche essere utilizzati per pilotare la scheda Micro SD o una fotocamera. 
+Tuttavia, quando l'ESP32 scheda è inserito nella scheda di estensione, alcuni dei suoi pin possono anche essere utilizzati per pilotare la scheda Micro SD o una fotocamera. 
 
 Di conseguenza, sono state aggiunte resistenze di pull-up o pull-down a questi pin. Se stai usando questi pin come ingressi, è cruciale tenere conto di queste resistenze poiché possono influenzare i livelli di ingresso.
 
@@ -188,7 +187,7 @@ Guida all'Inserimento delle Interfacce
 
 **Caricamento del Codice**
 
-    Quando hai bisogno di caricare il codice sull'ESP32 WROOM 32E, collegalo al tuo computer utilizzando un cavo USB.
+    Quando hai bisogno di caricare il codice sull'ESP32 scheda, collegalo al tuo computer utilizzando un cavo USB.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600
