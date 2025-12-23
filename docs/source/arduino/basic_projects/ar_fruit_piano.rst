@@ -109,7 +109,7 @@ Le résultat est une façon simple et abordable de profiter de l'expérience de 
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-Dans ce projet, vous devez retirer l'ESP32 board de la carte d'extension puis l'insérer dans la plaque de montage. 
+Dans ce projet, vous devez retirer l'ESP32 carte de la carte d'extension puis l'insérer dans la plaque de montage. 
 C'est parce que certaines broches sur la carte d'extension sont connectées à des résistances, 
 ce qui affectera la capacité des broches.
 

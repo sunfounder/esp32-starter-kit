@@ -103,7 +103,7 @@ Ce circuit fonctionne sur un principe simple, et la direction du courant est mon
             # Attendre 0,5 seconde (500 millisecondes) pendant que la LED est éteinte
             time.sleep(0.5)
 
-#. Connectez l'ESP32 board à votre ordinateur à l'aide d'un câble USB. 
+#. Connectez l'ESP32 carte à votre ordinateur à l'aide d'un câble USB. 
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600

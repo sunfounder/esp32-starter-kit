@@ -14,10 +14,10 @@
 
 .. _cpn_esp32_wroom_32e:
 
-ESP32 Board
+ESP32 carte
 =================
 
-L'ESP32 board est un module polyvalent et puissant basé sur le chipset ESP32 d'Espressif. Il offre un traitement double cœur, une connectivité Wi-Fi et Bluetooth intégrée, et dispose d'un large éventail d'interfaces périphériques. Connu pour sa faible consommation d'énergie, le module est idéal pour les applications IoT, permettant une connectivité intelligente et des performances robustes dans des formats compacts.
+L’ESP32 est un microcontrôleur puissant et polyvalent, doté d’un traitement double cœur, du Wi-Fi et du Bluetooth intégrés, ainsi que d’un large support de périphériques. Sa conception à faible consommation d’énergie le rend idéal pour des applications IoT compactes et performantes.
 
 .. image:: img/esp32_board.png
     :align: center
@@ -32,7 +32,7 @@ Les principales caractéristiques incluent :
 * **Sécurité** : Les fonctionnalités de cryptage et de sécurité intégrées assurent la protection des données et de la confidentialité des utilisateurs.
 * **Polyvalence** : Des simples appareils ménagers aux machines industrielles complexes, le board offre des performances constantes et efficaces.
 
-En résumé, l'ESP32 board offre non seulement des capacités de traitement robustes et des options de connectivité diversifiées, mais il dispose également d'une gamme de fonctionnalités en faisant un choix privilégié dans les secteurs de l'IoT et des dispositifs intelligents.
+En résumé, l'ESP32 carte offre non seulement des capacités de traitement robustes et des options de connectivité diversifiées, mais il dispose également d'une gamme de fonctionnalités en faisant un choix privilégié dans les secteurs de l'IoT et des dispositifs intelligents.
 
 .. * |link_esp32_datasheet|
 
@@ -110,7 +110,7 @@ Consultez le tableau suivant pour une configuration détaillée du mode de déma
 Extension de caméra ESP32
 -------------------------------
 
-Nous avons conçu une carte d'extension qui vous permet de profiter pleinement des fonctionnalités de la caméra et de la carte SD de l'ESP32 board. En combinant la caméra OV2640, une Micro SD et l'ESP32 board, vous obtenez une carte d'extension tout-en-un.
+Nous avons conçu une carte d'extension qui vous permet de profiter pleinement des fonctionnalités de la caméra et de la carte SD de l'ESP32 carte. En combinant la caméra OV2640, une Micro SD et l'ESP32 carte, vous obtenez une carte d'extension tout-en-un.
 
 La carte propose deux types de connecteurs GPIO - l'un avec des connecteurs femelles, parfait pour les projets de prototypage rapide. L'autre type dispose de bornes à vis, assurant des connexions de fils stables et la rendant adaptée aux projets IoT.
 
@@ -135,10 +135,10 @@ Présentation de l'interface
 
 * **Port de la batterie**
     * Dispose d'une interface PH2.0-2P, compatible avec les batteries lithium 3.7V 18650.
-    * Fournit de l'énergie à la fois à l'ESP32 board et à l'extension de caméra ESP32.
+    * Fournit de l'énergie à la fois à l'ESP32 carte et à l'extension de caméra ESP32.
 
 * **Broches d'en-tête ESP32**
-    * Conçues pour le module ESP32 board. Faites attention à son orientation ; assurez-vous que les deux ports USB soient du même côté pour éviter une mauvaise installation.
+    * Conçues pour le module ESP32 carte. Faites attention à son orientation ; assurez-vous que les deux ports USB soient du même côté pour éviter une mauvaise installation.
 
 * **Broches GPIO**
     * **Connecteurs femelles** : Utilisés pour connecter divers composants à l'ESP32, parfaits pour les projets de prototypage rapide.
@@ -158,9 +158,9 @@ Présentation de l'interface
 Schéma des broches de l'extension de caméra ESP32
 ------------------------------------------------------
 
-Le schéma des broches de l'ESP32 board peut être trouvé dans :ref:`esp32_pinout`.
+Le schéma des broches de l'ESP32 carte peut être trouvé dans :ref:`esp32_pinout`.
 
-Cependant, lorsque l'ESP32 board est inséré dans la carte d'extension, certaines de ses broches peuvent également être utilisées pour piloter la carte Micro SD ou une caméra.
+Cependant, lorsque l'ESP32 carte est inséré dans la carte d'extension, certaines de ses broches peuvent également être utilisées pour piloter la carte Micro SD ou une caméra.
 
 Par conséquent, des résistances pull-up ou pull-down ont été ajoutées à ces broches. Si vous utilisez ces broches comme entrées, il est crucial de tenir compte de ces résistances car elles peuvent affecter les niveaux d'entrée.
 
@@ -187,7 +187,7 @@ Guide d'insertion de l'interface
 
 **Téléverser le code**
 
-    Lorsque vous devez téléverser du code sur l'ESP32 board, connectez-le à votre ordinateur à l'aide d'un câble USB.
+    Lorsque vous devez téléverser du code sur l'ESP32 carte, connectez-le à votre ordinateur à l'aide d'un câble USB.
 
     .. image:: ../img/plugin_esp32.png
         :width: 600

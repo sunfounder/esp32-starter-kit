@@ -80,7 +80,7 @@ Vous pouvez également les acheter séparément aux liens ci-dessous.
 
     .. image:: ../../img/wiring/7.3_bluetooth_audio_player_bb.png
 
-#. Connectez l'ESP32-board à l'ordinateur à l'aide du câble USB.
+#. Connectez l'ESP32 carte à l'ordinateur à l'aide du câble USB.
 
     .. image:: ../../img/plugin_esp32.png
 

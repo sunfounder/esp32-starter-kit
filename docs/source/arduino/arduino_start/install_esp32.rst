@@ -27,7 +27,7 @@ Pour programmer le microcontrôleur ESP32, nous devons installer le package de l
 
 ..     .. image:: img/install_esp322.png
 
-.. #. Add the following URL to the **Additional Board Manager URLs** field: https://espressif.github.io/arduino-esp32/package_esp32_index.json. This URL points to the package index file for the ESP32 boards. Click the **OK** button to save the changes.
+.. #. Add the following URL to the **Additional Board Manager URLs** field: https://espressif.github.io/arduino-esp32/package_esp32_index.json. This URL points to the package index file for the ESP32 cartes. Click the **OK** button to save the changes.
 
 ..     .. image:: img/install_esp323.png
 

@@ -19,7 +19,7 @@
 
 Ce projet se concentre sur l'utilisation de MQTT, un protocole de communication populaire dans le domaine de l'Internet des Objets (IoT). MQTT permet aux appareils IoT d'échanger des données en utilisant un modèle de publication/abonnement, où les appareils communiquent via des sujets.
 
-Dans ce projet, nous explorons la mise en œuvre de MQTT en construisant un circuit incluant une LED, un bouton et un thermistor. Le microcontrôleur ESP32-board est utilisé pour établir une connexion WiFi et communiquer avec un courtier MQTT. Le code permet au microcontrôleur de s'abonner à des sujets spécifiques, de recevoir des messages et de contrôler la LED en fonction des informations reçues. De plus, le projet montre comment publier des données de température du thermistor sur un sujet désigné lorsque le bouton est pressé.
+Dans ce projet, nous explorons la mise en œuvre de MQTT en construisant un circuit incluant une LED, un bouton et un thermistor. Le microcontrôleur ESP32 carte est utilisé pour établir une connexion WiFi et communiquer avec un courtier MQTT. Le code permet au microcontrôleur de s'abonner à des sujets spécifiques, de recevoir des messages et de contrôler la LED en fonction des informations reçues. De plus, le projet montre comment publier des données de température du thermistor sur un sujet désigné lorsque le bouton est pressé.
 
 **Composants requis**
 
@@ -73,7 +73,7 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
     .. image:: ../../img/wiring/iot_4_matt_bb.png
 
-#. Ensuite, connectez l'ESP32-board à l'ordinateur à l'aide du câble USB.
+#. Ensuite, connectez l'ESP32 carte à l'ordinateur à l'aide du câble USB.
 
     .. image:: ../../img/plugin_esp32.png
 

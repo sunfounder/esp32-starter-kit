@@ -117,7 +117,7 @@ Commençons.
 
    .. image:: ../../img/wiring/2.3_color_light_bb.png
 
-#. Ensuite, connectez l'ESP32-board à votre ordinateur à l'aide d'un câble USB.
+#. Ensuite, connectez l'ESP32 carte à votre ordinateur à l'aide d'un câble USB.
 
    .. image:: ../../img/plugin_esp32.png
 

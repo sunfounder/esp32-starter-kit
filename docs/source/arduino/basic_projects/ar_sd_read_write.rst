@@ -58,7 +58,7 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
     .. image:: ../../img/insert_sd.png
 
-#. Connectez l'ESP32-board à l'ordinateur à l'aide du câble USB.
+#. Connectez l'ESP32 carte à l'ordinateur à l'aide du câble USB.
 
     .. image:: ../../img/plugin_esp32.png
 

@@ -26,22 +26,22 @@ Ce document couvrira les étapes de configuration de l'ESP32 pour agir en tant q
 
 **À propos de la fonction Bluetooth**
 
-L'ESP32 board est un module qui intègre la connectivité Wi-Fi et Bluetooth dans une seule puce. 
+L'ESP32 carte est un module qui intègre la connectivité Wi-Fi et Bluetooth dans une seule puce. 
 Il prend en charge les protocoles Bluetooth Low Energy (BLE) et Bluetooth classique.
 
 Le module peut être utilisé comme client ou serveur Bluetooth. En tant que client Bluetooth, le module peut se connecter à 
 d'autres appareils Bluetooth et échanger des données avec eux. En tant que serveur Bluetooth, le module peut fournir 
 des services à d'autres appareils Bluetooth.
 
-L'ESP32 board prend en charge divers profils Bluetooth, y compris le profil d'accès générique (GAP), le profil d'attribut générique (GATT), 
+L'ESP32 carte prend en charge divers profils Bluetooth, y compris le profil d'accès générique (GAP), le profil d'attribut générique (GATT), 
 et le profil de port série (SPP). Le profil SPP permet au module d'émuler un port série via Bluetooth, 
 permettant une communication série avec d'autres appareils Bluetooth.
 
-Pour utiliser la fonction Bluetooth de l'ESP32 board, vous devez le programmer en utilisant un kit de développement logiciel approprié (SDK) ou en utilisant l'IDE Arduino avec la bibliothèque ESP32 BLE. 
+Pour utiliser la fonction Bluetooth de l'ESP32 carte, vous devez le programmer en utilisant un kit de développement logiciel approprié (SDK) ou en utilisant l'IDE Arduino avec la bibliothèque ESP32 BLE. 
 La bibliothèque ESP32 BLE fournit une interface de haut niveau pour travailler avec le BLE. Elle comprend des exemples qui démontrent 
 comment utiliser le module en tant que client et serveur BLE.
 
-Dans l'ensemble, la fonction Bluetooth de l'ESP32 board offre un moyen pratique et à faible consommation pour permettre la communication sans fil dans vos projets.
+Dans l'ensemble, la fonction Bluetooth de l'ESP32 carte offre un moyen pratique et à faible consommation pour permettre la communication sans fil dans vos projets.
 
 **Étapes de fonctionnement**
 
