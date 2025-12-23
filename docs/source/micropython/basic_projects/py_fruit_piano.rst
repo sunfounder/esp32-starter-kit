@@ -113,7 +113,7 @@ Le résultat est une manière simple et abordable de profiter de l'expérience d
 
 .. image:: ../../img/wiring/6.1_fruit_piano_bb.png
 
-Dans ce projet, vous devez retirer l'ESP32 WROOM 32E de la carte d'extension, puis l'insérer dans la plaque d'expérimentation. En effet, certaines broches de la carte d'extension sont connectées à des résistances, ce qui affectera la capacitance des broches.
+Dans ce projet, vous devez retirer l'ESP32 board de la carte d'extension, puis l'insérer dans la plaque d'expérimentation. En effet, certaines broches de la carte d'extension sont connectées à des résistances, ce qui affectera la capacitance des broches.
 
 **Code**
 

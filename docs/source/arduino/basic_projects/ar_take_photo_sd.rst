@@ -76,7 +76,7 @@ Il est également important de s'assurer que la carte SD est correctement monté
             Your browser does not support the video tag.
         </video>
 
-#. Connectez l'ESP32-WROOM-32E à l'ordinateur à l'aide du câble USB.
+#. Connectez l'ESP32-board à l'ordinateur à l'aide du câble USB.
 
     .. image:: ../../img/plugin_esp32.png
 

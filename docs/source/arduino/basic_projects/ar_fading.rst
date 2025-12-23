@@ -21,7 +21,7 @@ Dans le projet précédent, nous avons contrôlé la LED en l'allumant et l'éte
 
 Avec le PWM, au lieu de simplement allumer ou éteindre la LED, nous ajusterons la durée pendant laquelle la LED est allumée par rapport à la durée pendant laquelle elle est éteinte dans chaque cycle. En allumant et éteignant rapidement la LED à des intervalles variés, nous pouvons créer l'illusion que la LED s'éclaire et s'assombrit progressivement, simulant un effet de respiration.
 
-En utilisant les capacités PWM de l'ESP32 WROOM 32E, nous pouvons obtenir un contrôle fluide et précis de la luminosité de la LED. Cet effet de respiration ajoute un élément dynamique et visuellement attrayant à vos projets, créant un affichage accrocheur ou une ambiance agréable.
+En utilisant les capacités PWM de l'ESP32 board, nous pouvons obtenir un contrôle fluide et précis de la luminosité de la LED. Cet effet de respiration ajoute un élément dynamique et visuellement attrayant à vos projets, créant un affichage accrocheur ou une ambiance agréable.
 
 **Composants nécessaires**
 
