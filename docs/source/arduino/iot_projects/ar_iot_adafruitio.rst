@@ -122,7 +122,7 @@ También puedes comprarlos por separado desde los enlaces a continuación.
 
     .. image:: ../../img/wiring/iot_6_adafruit_io_bb.png
 
-#. Luego, conecta el ESP32-board al ordenador mediante el cable USB.
+#. Luego, conecta el ESP32 placa al ordenador mediante el cable USB.
 
     .. image:: ../../img/plugin_esp32.png
 

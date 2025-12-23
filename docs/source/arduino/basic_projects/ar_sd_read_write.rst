@@ -58,7 +58,7 @@ También puedes comprarlos por separado en los siguientes enlaces.
 
     .. image:: ../../img/insert_sd.png
 
-#. Conecta ESP32-board al ordenador usando el cable USB.
+#. Conecta ESP32 placa al ordenador usando el cable USB.
 
     .. image:: ../../img/plugin_esp32.png
 

@@ -75,7 +75,7 @@ También es importante asegurarse de que la tarjeta SD esté correctamente monta
             Tu navegador no soporta la etiqueta de video.
         </video>
 
-#. Conecta el ESP32-board a la computadora usando el cable USB.
+#. Conecta el ESP32 placa a la computadora usando el cable USB.
 
     .. image:: ../../img/plugin_esp32.png
 

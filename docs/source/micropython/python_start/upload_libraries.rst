@@ -24,7 +24,7 @@ En algunos proyectos, necesitarás bibliotecas adicionales. Así que aquí subim
 
    * :download:`Kit de inicio ESP32 de SunFounder <https://github.com/sunfounder/esp32-starter-kit/archive/refs/heads/main.zip>`
 
-#. Conecta el ESP32 board a tu computadora usando un cable Micro USB.
+#. Conecta el ESP32 placa a tu computadora usando un cable Micro USB.
 
     .. image:: ../../img/plugin_esp32.png
         :width: 600
