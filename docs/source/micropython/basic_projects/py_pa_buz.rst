@@ -87,10 +87,11 @@ Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 Quando l'uscita di IO14 è alta, dopo il resistore limitatore di corrente da 1K (per proteggere il transistor), l'S8050 (transistor NPN) condurrà, facendo suonare il buzzer.
 
 Il ruolo dell'S8050 (transistor NPN) è di amplificare la corrente e rendere il suono del buzzer più forte. In realtà, puoi anche collegare direttamente il buzzer a IO14, ma noterai che il suono del buzzer sarà più debole.
+
 **Cablaggio**
 
 Nel kit sono inclusi due tipi di buzzer. 
-Dobbiamo utilizzare il buzzer attivo. Girateli, quello con il retro sigillato (non il PCB esposto) è quello che ci serve.
+Dobbiamo utilizzare il buzzer passivo. Girali e noterai che il PCB esposto è quello che vogliamo usare.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
