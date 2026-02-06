@@ -87,8 +87,8 @@ El papel de S8050 (transistor NPN) es amplificar la corriente y hacer que el zum
 
 **Conexión**
 
-El kit incluye dos tipos de zumbadores.
-Necesitamos usar el zumbador activo. Voltéalos, el lado sellado (no el PCB expuesto) es el que queremos.
+Dos tipos de zumbadores están incluidos en el kit. 
+Necesitamos usar el zumbador pasivo. Dale la vuelta, el PCB expuesto es el que queremos.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
