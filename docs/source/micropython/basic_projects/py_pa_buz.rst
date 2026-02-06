@@ -87,7 +87,7 @@ Le rôle du S8050 (transistor NPN) est d'amplifier le courant et de rendre le so
 **Câblage**
 
 Deux types de buzzers sont inclus dans le kit. 
-Nous devons utiliser le buzzer passif. Retournez-les, le dos scellé (et non le PCB exposé) est celui que nous voulons.
+Nous devons utiliser le buzzer passif. Tournez-les, le PCB exposé est celui que nous voulons.
 
 .. image:: ../../components/img/buzzer.png
     :width: 500
