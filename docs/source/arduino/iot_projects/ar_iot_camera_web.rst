@@ -79,16 +79,18 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
     .. raw:: html
 
-        <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-        
+        <iframe src="https://app.arduino.cc/sketches/a69c31b8-3990-4f87-8bef-e7ba7c263dd5?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
 
 #. Trouvez les lignes suivantes et modifiez-les avec votre ``SSID`` et ``PASSWORD``.
 
     .. code-block::  Arduino
 
-        // Remplacez les variables suivantes par votre combinaison SSID/Mot de passe
-        const char* ssid = "SSID";
-        const char* password = "PASSWORD";
+        // ===========================
+        // Enter your WiFi credentials
+        // ===========================
+        const char *ssid = "*****************";
+        const char *password = "*************";
 
 #. Maintenant, activez **PSRAM**.
 
@@ -117,8 +119,3 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 #. Faites défiler vers le haut de la page, où vous verrez le flux de la caméra en direct. Vous pouvez ajuster les paramètres sur le côté gauche de l'interface.
 
     .. image:: img/sp230516_180520.png
-
-.. note:: 
-
-    * Ce module ESP32 prend en charge la détection de visages. Pour l'activer, réglez la résolution sur 240x240 et activez l'option de détection de visages en bas de l'interface.
-    * Ce module ESP32 ne prend pas en charge la reconnaissance faciale.
