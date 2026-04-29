@@ -79,16 +79,17 @@ También puedes comprarlos por separado en los enlaces a continuación.
 
     .. raw:: html
 
-        <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-        
+        <iframe src="https://app.arduino.cc/sketches/a69c31b8-3990-4f87-8bef-e7ba7c263dd5?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 #. Localiza las siguientes líneas y modifícalas con tu ``SSID`` y ``CONTRASEÑA``.
 
     .. code-block::  Arduino
 
-        // Replace the next variables with your SSID/Password combination
-        const char* ssid = "SSID";
-        const char* password = "PASSWORD";
+        // ===========================
+        // Enter your WiFi credentials
+        // ===========================
+        const char *ssid = "*****************";
+        const char *password = "*************";
 
 #. Ahora, habilita **PSRAM**.
 
@@ -117,8 +118,3 @@ También puedes comprarlos por separado en los enlaces a continuación.
 #. Desplázate de vuelta al inicio de la página, donde verás el flujo de la cámara en vivo. Puedes ajustar la configuración en el lado izquierdo de la interfaz.
 
     .. image:: img/sp230516_180520.png
-
-.. note:: 
-
-    * Este módulo ESP32 soporta Detección de Rostros. Para habilitarlo, ajusta la resolución a 240x240 y activa la opción de Detección de Rostros en la parte inferior de la interfaz.
-    * Este módulo ESP32 no soporta Reconocimiento de Rostros.
