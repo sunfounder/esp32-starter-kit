@@ -79,16 +79,18 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
     .. raw:: html
 
-        <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-        
+        <iframe src="https://app.arduino.cc/sketches/a69c31b8-3990-4f87-8bef-e7ba7c263dd5?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
 
 #. Suchen Sie die folgenden Zeilen und ändern Sie sie mit Ihrem ``SSID`` und ``PASSWORD``.
 
     .. code-block::  Arduino
 
-        // Ersetzen Sie die nächsten Variablen mit Ihrer SSID/Passwort-Kombination
-        const char* ssid = "SSID";
-        const char* password = "PASSWORD";
+        // ===========================
+        // Enter your WiFi credentials
+        // ===========================
+        const char *ssid = "*****************";
+        const char *password = "*************";
 
 #. Aktivieren Sie jetzt **PSRAM**.
 
@@ -117,8 +119,3 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 #. Scrollen Sie zurück nach oben auf der Seite, wo Sie den Live-Kamerastream sehen. Sie können die Einstellungen auf der linken Seite der Oberfläche anpassen.
 
     .. image:: img/sp230516_180520.png
-
-.. note:: 
-
-    * Dieses ESP32-Modul unterstützt Gesichtserkennung. Um es zu aktivieren, stellen Sie die Auflösung auf 240x240 ein und schalten Sie die Option für die Gesichtserkennung am unteren Rand der Oberfläche um.
-    * Dieses ESP32-Modul unterstützt keine Gesichtserkennung.
