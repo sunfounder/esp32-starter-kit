@@ -1,3 +1,6 @@
+
+
+
 /*********
   Permission is hereby granted, free of charge, 
   to any person obtaining a copy of this software and associated documentation files.
@@ -16,8 +19,8 @@
 #include "esp_http_server.h"
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "SSID";
-const char* password = "PASSWORD";
+const char* ssid = "MakerStarsHall";
+const char* password = "sunfounder";
 
 #define PART_BOUNDARY "123456789000000000000987654321"
 
