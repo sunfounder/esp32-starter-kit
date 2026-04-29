@@ -79,16 +79,18 @@ Puoi anche acquistarli separatamente dai link qui sotto.
 
     .. raw:: html
 
-        <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-        
+        <iframe src="https://app.arduino.cc/sketches/a69c31b8-3990-4f87-8bef-e7ba7c263dd5?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
 
 #. Trova le seguenti righe e modificale con il tuo ``SSID`` e ``PASSWORD``.
 
     .. code-block::  Arduino
 
-        // Sostituisci le prossime variabili con la tua combinazione SSID/Password
-        const char* ssid = "SSID";
-        const char* password = "PASSWORD";
+        // ===========================
+        // Enter your WiFi credentials
+        // ===========================
+        const char *ssid = "*****************";
+        const char *password = "*************";
 
 #. Ora, abilita **PSRAM**.
 
@@ -117,8 +119,3 @@ Puoi anche acquistarli separatamente dai link qui sotto.
 #. Scorri verso l'alto della pagina, dove vedrai il feed live della fotocamera. Puoi regolare le impostazioni sul lato sinistro dell'interfaccia.
 
     .. image:: img/sp230516_180520.png
-
-.. note:: 
-
-    * Questo modulo ESP32 supporta il Rilevamento del Viso. Per abilitarlo, imposta la risoluzione su 240x240 e attiva l'opzione Rilevamento del Viso in fondo all'interfaccia.
-    * Questo modulo ESP32 non supporta il Riconoscimento del Viso.
