@@ -79,16 +79,17 @@
 
     .. raw:: html
 
-        <iframe src=https://create.arduino.cc/editor/sunfounder01/15e00b39-34e1-49f9-b039-f10053d31407/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-        
+        <iframe src="https://app.arduino.cc/sketches/a69c31b8-3990-4f87-8bef-e7ba7c263dd5?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 #. 次の行を見つけて、あなたの ``SSID`` と ``PASSWORD`` で修正してください。
 
     .. code-block::  Arduino
 
-        // Replace the next variables with your SSID/Password combination
-        const char* ssid = "SSID";
-        const char* password = "PASSWORD";
+        // ===========================
+        // Enter your WiFi credentials
+        // ===========================
+        const char *ssid = "*****************";
+        const char *password = "*************";
 
 #. 今度は、 **PSRAM** を有効にします。
 
@@ -117,8 +118,3 @@
 #. ページの一番上までスクロールバックします。そこでは、ライブカメラフィードが見られます。インターフェイスの左側で設定を調整できます。
 
     .. image:: img/sp230516_180520.png
-
-.. note:: 
-
-    * このESP32モジュールは顔検出をサポートしています。有効にするには、解像度を240x240に設定し、インターフェイスの下部にある顔検出オプションを切り替えます。
-    * このESP32モジュールは顔認識をサポートしていません。
