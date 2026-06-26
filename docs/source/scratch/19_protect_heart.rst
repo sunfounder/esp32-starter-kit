@@ -78,7 +78,7 @@ Bauen Sie den Schaltkreis nun gemäß der untenstehenden Abbildung auf.
 
     Bevor Sie mit dem Projekt beginnen, müssen Sie die Empfindlichkeit des Moduls einstellen.
 
-    Verkabeln Sie gemäß der obigen Abbildung und schalten Sie dann das R3-Board ein (entweder direkt in das USB-Kabel oder das 9V-Batterieknopfkabel), ohne den Code hochzuladen.
+    Verkabeln Sie gemäß der obigen Abbildung und schalten Sie dann das R3-Board ein, ohne den Code hochzuladen.
 
     Kleben Sie nun ein schwarzes Isolierband auf den Schreibtisch, platzieren Sie das Linienverfolgungsmodul in einer Höhe von 2 cm über dem Schreibtisch.
 

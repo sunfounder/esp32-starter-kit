@@ -88,7 +88,7 @@ IO32 hat einen internen Pull-Down-Widerstand von 1K und ist standardmäßig auf 
 
 .. note::
 
-    Es wird empfohlen, hier die Batterie einzulegen und dann den Schalter auf dem Erweiterungsboard auf die ON-Position zu schieben, um die Batterieversorgung zu aktivieren.
+    Es wird empfohlen, hier den Power Pack einzusetzen und dann den Schalter auf dem Erweiterungsboard auf die ON-Position zu schieben, um die Stromversorgung zu aktivieren.
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800

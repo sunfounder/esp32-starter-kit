@@ -22,7 +22,7 @@ Lerne, wie man die Temperatur genau mit einem NTC-Thermistor und einem ESP32-Mik
 * **Verkabelungssetup**: Lerne den richtigen Verkabelungsaufbau, um den NTC-Thermistor und andere Komponenten an den ESP32 anzuschließen.
 * **Temperaturberechnung**: Entdecke die Formel zur Berechnung der Temperatur aus dem Widerstand, der vom NTC-Thermistor gemessen wird.
 * **LCD-Display**: Schließe ein LCD-Display an den ESP32 an, um die Temperaturwerte in Celsius und Fahrenheit anzuzeigen.
-* **SunFounder Erweiterungsmodul**: Nutze das SunFounder ESP32 Kamera-Erweiterungsmodul für den eigenständigen Betrieb, komplett mit eingebautem Akku und Ladegerät.
+* **SunFounder Erweiterungsmodul**: Nutze das SunFounder ESP32 Kamera-Erweiterungsmodul für den eigenständigen Betrieb, komplett mit eingebautem Power Pack und Ladegerät.
 
 **Video**
 

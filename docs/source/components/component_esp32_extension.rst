@@ -112,7 +112,7 @@ Wir haben ein Erweiterungsboard entworfen, das Ihnen ermöglicht, die Kamera- un
 
 Das Board bietet zwei Arten von GPIO-Headern – einen mit weiblichen Headern, perfekt für schnelle Prototyping-Projekte. Der andere Typ verfügt über Schraubklemmen, die stabile Drahtverbindungen gewährleisten und sich somit für IoT-Projekte eignen.
 
-Zusätzlich können Sie Ihr Projekt mit einer einzelnen 3,7V 18650-Batterie betreiben. Wenn die Batterie leer ist, können Sie sie bequem aufladen, indem Sie einfach ein 5V USB-Kabel anschließen. Dies macht es zu einem großartigen Werkzeug für Outdoor-Projekte und Fernanwendungen.
+Zusätzlich können Sie Ihr Projekt mit einem Power Pack betreiben. Wenn der Power Pack leer ist, können Sie ihn bequem aufladen, indem Sie einfach ein 5V USB-Kabel anschließen. Dies macht es zu einem großartigen Werkzeug für Outdoor-Projekte und Fernanwendungen.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -126,13 +126,13 @@ Schnittstellen-Einführung
     :align: center
 
 * **Power Switch**
-    * Steuert das Ein- und Ausschalten der Batteriestromversorgung.
+    * Steuert das Ein- und Ausschalten der Stromversorgung des Power Packs.
 
 * **Charging Port**
-    * Beim Anschließen eines 5V USB-Kabels kann die Batterie aufgeladen werden.
+    * Beim Anschließen eines 5V USB-Kabels kann der Power Pack aufgeladen werden.
 
-* **Battery Port**
-    * Verfügt über eine PH2.0-2P-Schnittstelle, kompatibel mit 3,7V 18650 Lithium-Batterien.
+* **Power Pack Port**
+    * Verfügt über eine PH2.0-2P-Schnittstelle, kompatibel mit Power Pack.
     * Versorgt sowohl das ESP32-Platine als auch die ESP32-Kameraerweiterung mit Strom.
 
 * **ESP32 Pin Headers**
@@ -143,8 +143,8 @@ Schnittstellen-Einführung
     * **Schraubklemme**: 3,5mm-Pitch 14pin-Schraubklemme, gewährleistet stabile Drahtverbindungen und eignet sich für IoT-Projekte.
 
 * **Indicator Lights**
-    * **PWR**: Leuchtet auf, wenn die Batterie eingeschaltet ist oder wenn ein USB direkt an das ESP32 angeschlossen ist.
-    * **CHG**: Leuchtet auf, wenn ein USB an den Ladeanschluss der Platine angeschlossen wird, was den Beginn des Ladevorgangs anzeigt. Es erlischt, sobald die Batterie vollständig aufgeladen ist.
+    * **PWR**: Leuchtet auf, wenn der Power Pack eingeschaltet ist oder wenn ein USB direkt an das ESP32 angeschlossen ist.
+    * **CHG**: Leuchtet auf, wenn ein USB an den Ladeanschluss der Platine angeschlossen wird, was den Beginn des Ladevorgangs anzeigt. Es erlischt, sobald der Power Pack vollständig aufgeladen ist.
 
 * **Micro SD Connector**
     * Federbeladener Steckplatz für einfaches Einsetzen und Entnehmen der Micro-SD-Karte.
@@ -210,17 +210,17 @@ Anleitung zum Einsetzen der Schnittstellen
             Ihr Browser unterstützt das Video-Tag nicht.
         </video>
 
-**Batteriebetrieb und Aufladen**
+.. **Power Pack und Aufladen**
 
-    Stecken Sie das Batteriekabel vorsichtig in den Batterieanschluss, um zu vermeiden, dass Sie zu viel Kraft aufwenden und das Batterieterminal nach oben drücken. Wenn das Terminal nach oben gedrückt wird, ist es in Ordnung, solange die Stifte nicht gebrochen sind; Sie können es einfach wieder in Position drücken.
+..     Stecken Sie das Power-Pack-Kabel vorsichtig in den Power-Pack-Anschluss, um zu vermeiden, dass Sie zu viel Kraft aufwenden und das Batterieterminal nach oben drücken. Wenn das Terminal nach oben gedrückt wird, ist es in Ordnung, solange die Stifte nicht gebrochen sind; Sie können es einfach wieder in Position drücken.
 
-    .. image:: ../img/plugin_battery.png
-        :width: 600
-        :align: center
+..     .. image:: ../img/plugin_battery.png
+..         :width: 600
+..         :align: center
 
-    Wenn die Batterie entladen ist, schließen Sie ein 5V USB-Kabel an, um sie aufzuladen.
+..     Wenn der Power Pack entladen ist, schließen Sie ein 5V USB-Kabel an, um ihn aufzuladen.
 
-    .. image:: ../img/battery_charge.png
-        :width: 600
-        :align: center
+..     .. image:: ../img/battery_charge.png
+..         :width: 600
+..         :align: center
 

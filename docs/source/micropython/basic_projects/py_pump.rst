@@ -79,7 +79,7 @@ Hier ist eine Liste der verfügbaren Pins auf dem ESP32-Platine für dieses Proj
 
 .. note::
 
-    Hier wird empfohlen, zuerst die Batterie einzulegen und dann den Schalter auf dem Erweiterungsboard auf die Position ON zu schieben, um die Batterieversorgung zu aktivieren.
+    Hier wird empfohlen, zuerst den Power Pack einzusetzen und dann den Schalter auf dem Erweiterungsboard auf die Position ON zu schieben, um die Stromversorgung zu aktivieren.
 
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png

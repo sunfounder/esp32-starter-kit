@@ -39,10 +39,10 @@ Der Schlüssel zur Bewegungserzeugung ist die Positionierung des Ankers innerhal
 .. image:: img/motor_sche.png
     :align: center
 
-Der Strom fließt vom positiven Pol der Batterie durch den Schaltkreis, über die Kupferbürsten zum Kommutator und dann zum Anker.
+Der Strom fließt vom positiven Pol des Power Packs durch den Schaltkreis, über die Kupferbürsten zum Kommutator und dann zum Anker.
 Durch die beiden Lücken im Kommutator kehrt sich dieser Fluss jedoch bei jeder vollständigen Drehung zur Hälfte um.
 
-Diese kontinuierliche Umkehrung wandelt die Gleichstromleistung der Batterie im Wesentlichen in Wechselstrom um, wodurch der Anker das Drehmoment in der richtigen Richtung zur richtigen Zeit erfährt, um die Drehung aufrechtzuerhalten.
+Diese kontinuierliche Umkehrung wandelt die Gleichstromleistung des Power Packs im Wesentlichen in Wechselstrom um, wodurch der Anker das Drehmoment in der richtigen Richtung zur richtigen Zeit erfährt, um die Drehung aufrechtzuerhalten.
 
 .. image:: img/motor_rotate.gif
     :align: center

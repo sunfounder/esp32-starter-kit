@@ -118,7 +118,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
     .. image:: img/sp230510_180503.png 
 
-#. Legen Sie einen Akku in das Erweiterungsboard ein und entfernen Sie das USB-Kabel. Jetzt können Sie das Gerät überall innerhalb der WLAN-Reichweite platzieren.
+#. Legen Sie einen Power Pack in das Erweiterungsboard ein und entfernen Sie das USB-Kabel. Jetzt können Sie das Gerät überall innerhalb der WLAN-Reichweite platzieren.
 
     .. image:: ../../img/plugin_battery.png
 
