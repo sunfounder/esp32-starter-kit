@@ -83,7 +83,7 @@ Here is a list of available pins on the ESP32 board for this project.
 
 .. note:: 
 
-  Since the motor requires a relatively high current, it is necessary to first insert the battery and then slide the switch on the expansion board to the ON position to activate the battery supply. 
+  Since the motor requires a relatively high current, it is necessary to first insert the Power Pack and then slide the switch on the expansion board to the ON position to activate the power supply. 
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 

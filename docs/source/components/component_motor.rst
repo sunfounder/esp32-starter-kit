@@ -39,10 +39,10 @@ The key to generating motion is to position the armature within the magnetic fie
 .. image:: img/motor_sche.png
     :align: center
 
-Current flows from the positive terminal of the battery through the circuit, through the copper brushes to the commutator, and then to the armature.
+Current flows from the positive terminal of the Power Pack through the circuit, through the copper brushes to the commutator, and then to the armature.
 But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
 
-This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
+This continuous reversal essentially converts the DC power from the Power Pack to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
 
 .. image:: img/motor_rotate.gif
     :align: center

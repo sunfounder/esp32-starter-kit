@@ -78,7 +78,7 @@ Now build the circuit according to the diagram below.
 
     Before starting the project, you need to adjust the sensitivity of the module.
 
-    Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+    Wiring according to the above diagram, then power up the R3 board, without uploading the code.
 
     Now stick a black electrical tape on the desktop, put the Line Track module at a height of 2cm from the desktop.
 

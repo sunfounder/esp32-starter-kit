@@ -19,7 +19,7 @@ Learn how to master RGB color mixing principles and leverage the power of ESP32 
 
 * **RGB Color Mixing**: Understand how to create any color using combinations of red, green, and blue (RGB) with a practical demonstration using an RGB Color Picker.
 * **ESP32 IoT Applications**: Explore the versatility of the ESP32 microcontroller for IoT projects, focusing on LED strip control via Wi-Fi.
-* **SunFounder ESP32 Camera Extension Module**: Discover the features of the SunFounder ESP32 camera extension module, including built-in battery and charger for easy power-up.
+* **SunFounder ESP32 Camera Extension Module**: Discover the features of the SunFounder ESP32 camera extension module, including built-in Power Pack and charger for easy power-up.
 * **Wiring and Code Explanation**: Dive deep into the wiring setup and code structure for controlling LED strips with detailed explanations of library installations, color selection, Wi-Fi setup, and client request handling.
 * **Selecting ESP32 Board and Port**: Step-by-step guidance on selecting the ESP32 board and port in the Arduino IDE, along with troubleshooting tips for identifying the correct port.
 * **Practical Demonstration**: Witness a practical demonstration of selecting colors and controlling LED strips using the ESP32 microcontroller through a web interface on various devices like desktops, mobile phones, and tablets.

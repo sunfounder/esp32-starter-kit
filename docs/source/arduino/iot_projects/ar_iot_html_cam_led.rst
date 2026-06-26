@@ -120,6 +120,6 @@ You can also buy them separately from the links below.
 
     .. image:: img/sp230510_180503.png 
 
-#. Insert a battery into the expansion board and remove the USB cable. Now you can place the device anywhere you desire within the Wi-Fi range.
+#. Insert a Power Pack into the expansion board and remove the USB cable. Now you can place the device anywhere you desire within the Wi-Fi range.
 
     .. image:: ../../img/plugin_battery.png

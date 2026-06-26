@@ -24,7 +24,7 @@ Learn how to measure temperature accurately using an NTC thermistor with an ESP3
 * **Wiring Setup**: Learn the proper wiring setup to connect the NTC thermistor and other components to the ESP32.
 * **Temperature Calculation**: Discover the formula used to calculate temperature from the resistance measured by the NTC thermistor.
 * **LCD Display**: Connect an LCD display to the ESP32 to visualize temperature values in Celsius and Fahrenheit.
-* **SunFounder Extension Module**: Utilize the SunFounder ESP32 camera extension module for standalone operation, complete with a built-in battery and charger.
+* **SunFounder Extension Module**: Utilize the SunFounder ESP32 camera extension module for standalone operation, complete with a built-in Power Pack and charger.
 
 **Video**
 
