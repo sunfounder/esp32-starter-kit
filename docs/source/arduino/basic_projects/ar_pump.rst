@@ -79,7 +79,7 @@ Voici une liste des pins disponibles sur la carte ESP32 pour ce projet.
 
 .. note::
 
-    Il est recommandé ici d'insérer la batterie puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation par batterie.
+    Il est recommandé ici d'insérer le Power Pack puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation électrique.
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
 

@@ -119,7 +119,7 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
     .. image:: img/sp230510_180503.png 
 
-#. Insérez une batterie dans la carte d'extension et retirez le câble USB. Vous pouvez maintenant placer l'appareil n'importe où dans la portée du Wi-Fi.
+#. Insérez un Power Pack dans la carte d'extension et retirez le câble USB. Vous pouvez maintenant placer l'appareil n'importe où dans la portée du Wi-Fi.
 
     .. image:: ../../img/plugin_battery.png
 

@@ -114,7 +114,7 @@ Nous avons conçu une carte d'extension qui vous permet de profiter pleinement d
 
 La carte propose deux types de connecteurs GPIO - l'un avec des connecteurs femelles, parfait pour les projets de prototypage rapide. L'autre type dispose de bornes à vis, assurant des connexions de fils stables et la rendant adaptée aux projets IoT.
 
-De plus, vous pouvez alimenter votre projet avec une seule batterie 3,7V 18650. Si la batterie est faible, vous pouvez la charger simplement en branchant un câble USB 5V. Cela en fait un excellent outil pour les projets en extérieur et les applications à distance.
+De plus, vous pouvez alimenter votre projet avec un Power Pack. Si le Power Pack est faible, vous pouvez le charger simplement en branchant un câble USB 5V. Cela en fait un excellent outil pour les projets en extérieur et les applications à distance.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -128,13 +128,13 @@ Présentation de l'interface
     :align: center
 
 * **Interrupteur d'alimentation**
-    * Contrôle l'alimentation de la batterie, permettant de l'allumer et de l'éteindre.
+    * Contrôle l'alimentation du Power Pack, permettant de l'allumer et de l'éteindre.
 
 * **Port de charge**
-    * Lorsqu'un câble USB 5V est connecté, la batterie peut être chargée.
+    * Lorsqu'un câble USB 5V est connecté, le Power Pack peut être chargé.
 
-* **Port de la batterie**
-    * Dispose d'une interface PH2.0-2P, compatible avec les batteries lithium 3.7V 18650.
+* **Port Power Pack**
+    * Dispose d'une interface PH2.0-2P, compatible avec Power Pack.
     * Fournit de l'énergie à la fois à l'ESP32 carte et à l'extension de caméra ESP32.
 
 * **Broches d'en-tête ESP32**
@@ -145,8 +145,8 @@ Présentation de l'interface
     * **Borne à vis** : Borne à vis 14 broches de 3,5 mm de pas, assurant des connexions de fils stables et la rendant adaptée aux projets IoT.
 
 * **Voyants indicateurs**
-    * **PWR** : S'allume lorsque la batterie est alimentée ou lorsqu'un USB est directement branché à l'ESP32.
-    * **CHG** : S'illumine lors de la connexion d'un USB au port de charge de la carte, signifiant le début de la charge. Il s'éteindra une fois la batterie entièrement chargée.
+    * **PWR** : S'allume lorsque le Power Pack est alimenté ou lorsqu'un USB est directement branché à l'ESP32.
+    * **CHG** : S'illumine lors de la connexion d'un USB au port de charge de la carte, signifiant le début de la charge. Il s'éteindra une fois le Power Pack entièrement chargé.
 
 * **Connecteur Micro SD**
     * Fente à ressort pour une insertion et un retrait faciles de la carte Micro SD.
@@ -212,16 +212,16 @@ Guide d'insertion de l'interface
             Your browser does not support the video tag.
         </video>
 
-**Alimentation et charge de la batterie**
+.. **Alimentation et charge du Power Pack**
 
-    Insérez soigneusement le câble de la batterie dans le port de la batterie, en évitant d'appliquer trop de force pour ne pas pousser la borne de la batterie vers le haut. Si la borne est poussée vers le haut, ce n'est pas grave tant que les broches ne sont pas cassées ; vous pouvez simplement la remettre en place.
+..     Insérez soigneusement le câble du Power Pack dans le port du Power Pack, en évitant d'appliquer trop de force pour ne pas pousser la borne de la batterie vers le haut. Si la borne est poussée vers le haut, ce n'est pas grave tant que les broches ne sont pas cassées ; vous pouvez simplement la remettre en place.
 
-    .. image:: ../img/plugin_battery.png
-        :width: 600
-        :align: center
+..     .. image:: ../img/plugin_battery.png
+..         :width: 600
+..         :align: center
 
-    Si la batterie est épuisée, branchez un USB 5V pour la charger.
+..     Si le Power Pack est épuisé, branchez un USB 5V pour le charger.
 
-    .. image:: ../img/battery_charge.png
-        :width: 600
-        :align: center
+..     .. image:: ../img/battery_charge.png
+..         :width: 600
+..         :align: center

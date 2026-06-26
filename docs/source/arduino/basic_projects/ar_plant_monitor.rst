@@ -87,7 +87,7 @@ IO32 dispose d'une résistance de tirage vers le bas de 1K, et par défaut, il e
 
 .. note::
 
-    Il est recommandé ici d'insérer la batterie puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation par batterie.
+    Il est recommandé ici d'insérer le Power Pack puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation électrique.
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800

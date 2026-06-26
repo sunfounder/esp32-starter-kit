@@ -88,7 +88,7 @@ Lorsque le bouton est pressé, il établit une connexion avec VCC (haute tension
 
 .. note::
 
-    Il est recommandé ici d'insérer la batterie puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation de la batterie.
+    Il est recommandé ici d'insérer le Power Pack puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation électrique.
 
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png

@@ -39,10 +39,10 @@ La clé de la génération de mouvement est de positionner l'induit dans le cham
 .. image:: img/motor_sche.png
     :align: center
 
-Le courant circule de la borne positive de la batterie à travers le circuit, à travers les balais de cuivre jusqu'au collecteur, puis à l'induit.
+Le courant circule de la borne positive du Power Pack à travers le circuit, à travers les balais de cuivre jusqu'au collecteur, puis à l'induit.
 Mais en raison des deux lacunes dans le collecteur, ce flux s'inverse à mi-parcours de chaque rotation complète.
 
-Cette inversion continue convertit essentiellement la puissance DC de la batterie en AC, permettant à l'induit de subir un couple dans la bonne direction au bon moment pour maintenir la rotation.
+Cette inversion continue convertit essentiellement la puissance DC du Power Pack en AC, permettant à l'induit de subir un couple dans la bonne direction au bon moment pour maintenir la rotation.
 
 .. image:: img/motor_rotate.gif
     :align: center

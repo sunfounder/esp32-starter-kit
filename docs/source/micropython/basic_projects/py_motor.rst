@@ -80,7 +80,7 @@ Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. note:: 
 
-    Comme le moteur nécessite un courant relativement élevé, il est nécessaire d'insérer d'abord la batterie, puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation de la batterie. 
+    Comme le moteur nécessite un courant relativement élevé, il est nécessaire d'insérer d'abord le Power Pack, puis de faire glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation électrique. 
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 

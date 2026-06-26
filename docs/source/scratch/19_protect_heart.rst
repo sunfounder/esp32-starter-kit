@@ -77,7 +77,7 @@ Construisez maintenant le circuit selon le schéma ci-dessous.
 
     Avant de commencer le projet, vous devez ajuster la sensibilité du module.
 
-    Branchez le câblage selon le schéma ci-dessus, puis alimentez la carte R3 (soit directement via le câble USB, soit via le câble du bouton de la batterie 9V), sans télécharger le code.
+    Branchez le câblage selon le schéma ci-dessus, puis alimentez la carte R3, sans télécharger le code.
 
     Collez maintenant un ruban adhésif noir sur le bureau, placez le module de suivi de ligne à une hauteur de 2 cm du bureau.
 

@@ -22,7 +22,7 @@ Apprenez à mesurer la température avec précision en utilisant une thermistanc
 * **Configuration du câblage** : Apprenez la configuration correcte du câblage pour connecter la thermistance NTC et d'autres composants à l'ESP32.
 * **Calcul de la température** : Découvrez la formule utilisée pour calculer la température à partir de la résistance mesurée par la thermistance NTC.
 * **Affichage LCD** : Connectez un écran LCD à l'ESP32 pour visualiser les valeurs de température en Celsius et Fahrenheit.
-* **Module d'extension SunFounder** : Utilisez le module d'extension caméra ESP32 de SunFounder pour une utilisation autonome, avec batterie et chargeur intégrés.
+* **Module d'extension SunFounder** : Utilisez le module d'extension caméra ESP32 de SunFounder pour une utilisation autonome, avec Power Pack et chargeur intégrés.
 
 **Vidéo**
 

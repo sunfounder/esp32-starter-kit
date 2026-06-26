@@ -79,7 +79,7 @@ Voici une liste des broches disponibles sur la carte ESP32 pour ce projet.
 
 .. note::
 
-    Il est recommandé ici d'insérer la batterie puis de glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation de la batterie.
+    Il est recommandé ici d'insérer le Power Pack puis de glisser l'interrupteur sur la carte d'extension en position ON pour activer l'alimentation électrique.
 
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
