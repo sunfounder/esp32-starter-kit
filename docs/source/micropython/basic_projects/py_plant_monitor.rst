@@ -92,7 +92,7 @@ una connessione a VCC (alta tensione), risultando in un livello logico alto su I
 
 .. note::
 
-    Si consiglia di inserire la batteria e poi far scorrere l'interruttore sulla scheda di espansione nella posizione ON per attivare l'alimentazione della batteria.
+    Si consiglia di inserire il Power Pack e poi far scorrere l'interruttore sulla scheda di espansione nella posizione ON per attivare l'alimentazione elettrica.
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800

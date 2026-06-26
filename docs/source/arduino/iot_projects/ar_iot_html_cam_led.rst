@@ -119,6 +119,6 @@ Puoi anche acquistarli separatamente dai link qui sotto.
 
     .. image:: img/sp230510_180503.png 
 
-#. Inserisci una batteria nella scheda di espansione e rimuovi il cavo USB. Ora puoi posizionare il dispositivo ovunque desideri all'interno della portata del Wi-Fi.
+#. Inserisci un Power Pack nella scheda di espansione e rimuovi il cavo USB. Ora puoi posizionare il dispositivo ovunque desideri all'interno della portata del Wi-Fi.
 
     .. image:: ../../img/plugin_battery.png

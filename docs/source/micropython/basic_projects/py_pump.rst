@@ -79,7 +79,7 @@ Ecco un elenco dei pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. note::
 
-    È consigliabile inserire la batteria e poi spostare l'interruttore sulla scheda di espansione in posizione ON per attivare l'alimentazione della batteria.
+    È consigliabile inserire il Power Pack e poi spostare l'interruttore sulla scheda di espansione in posizione ON per attivare l'alimentazione elettrica.
 
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png

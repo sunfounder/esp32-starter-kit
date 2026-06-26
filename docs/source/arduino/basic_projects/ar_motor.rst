@@ -83,7 +83,7 @@ Ecco un elenco di pin disponibili sulla scheda ESP32 per questo progetto.
 
 .. note:: 
 
-  Poiché il motore richiede una corrente relativamente alta, è necessario inserire prima la batteria e quindi far scorrere l'interruttore sulla scheda di espansione in posizione ON per attivare l'alimentazione della batteria.
+  Poiché il motore richiede una corrente relativamente alta, è necessario inserire prima il Power Pack e quindi far scorrere l'interruttore sulla scheda di espansione in posizione ON per attivare l'alimentazione elettrica.
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 

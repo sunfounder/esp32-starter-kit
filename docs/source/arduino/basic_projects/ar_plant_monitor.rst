@@ -89,8 +89,8 @@ IO32 ha una resistenza di pull-down interna di 1K e, per impostazione predefinit
 
 .. note::
 
-    Qui è consigliato inserire la batteria e poi spostare l'interruttore sulla 
-    scheda di espansione in posizione ON per attivare l'alimentazione della batteria.
+    Qui è consigliato inserire il Power Pack e poi spostare l'interruttore sulla
+    scheda di espansione in posizione ON per attivare l'alimentazione elettrica.
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800

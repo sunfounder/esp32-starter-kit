@@ -39,10 +39,10 @@ Il segreto per generare movimento è posizionare l'armatura all'interno del camp
 .. image:: img/motor_sche.png
     :align: center
 
-La corrente fluisce dal terminale positivo della batteria attraverso il circuito, passando attraverso le spazzole di rame fino al commutatore, e poi all'armatura.
+La corrente fluisce dal terminale positivo del Power Pack attraverso il circuito, passando attraverso le spazzole di rame fino al commutatore, e poi all'armatura.
 Ma a causa delle due interruzioni nel commutatore, questo flusso si inverte a metà di ogni rotazione completa.
 
-Questa continua inversione essenzialmente converte la corrente continua della batteria in corrente alternata, permettendo all'armatura di sperimentare la coppia nella direzione giusta al momento giusto per mantenere la rotazione.
+Questa continua inversione essenzialmente converte la corrente continua del Power Pack in corrente alternata, permettendo all'armatura di sperimentare la coppia nella direzione giusta al momento giusto per mantenere la rotazione.
 
 .. image:: img/motor_rotate.gif
     :align: center

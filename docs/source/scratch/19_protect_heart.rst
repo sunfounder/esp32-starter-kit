@@ -78,7 +78,7 @@ Ora costruisci il circuito secondo lo schema sotto.
 
     Prima di iniziare il progetto, devi regolare la sensibilità del modulo.
 
-    Collega i cavi secondo lo schema sopra, quindi alimenta la scheda R3 (inserendo direttamente il cavo USB o il cavo con pulsante della batteria da 9V), senza caricare il codice.
+    Collega i cavi secondo lo schema sopra, quindi alimenta la scheda R3, senza caricare il codice.
 
     Ora incolla un nastro elettrico nero sulla scrivania, posiziona il modulo Line Track a un'altezza di 2 cm dalla scrivania.
 
