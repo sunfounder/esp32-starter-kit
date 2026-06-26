@@ -78,7 +78,7 @@ Ahora construye el circuito según el diagrama a continuación.
 
     Antes de empezar el proyecto, necesitas ajustar la sensibilidad del módulo.
 
-    Conecta según el diagrama anterior, luego enciende la placa R3 (ya sea directamente en el cable USB o el cable de botón de batería de 9V), sin subir el código.
+    Conecta según el diagrama anterior, luego enciende la placa R3, sin subir el código.
 
     Ahora pega una cinta eléctrica negra en el escritorio, coloca el módulo de Seguimiento de Línea a una altura de 2cm del escritorio.
 

@@ -79,7 +79,7 @@ Aquí está la lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. note::
 
-    Se recomienda aquí insertar la batería y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de la batería.
+    Se recomienda aquí insertar el Power Pack y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de energía.
 
 .. image:: ../../img/wiring/4.2_pump_l293d_bb.png
 

@@ -110,7 +110,7 @@ Hemos diseñado una placa de expansión que le permite aprovechar al máximo las
 
 La placa proporciona dos tipos de cabeceras GPIO: una con cabeceras hembra, perfecta para proyectos de prototipado rápido. El otro tipo cuenta con terminales de tornillo, asegurando conexiones de cable estables y haciéndolo adecuado para proyectos de IoT.
 
-Además, puede alimentar su proyecto con una sola batería de 3.7V 18650. Si la batería se agota, puede cargarla convenientemente simplemente conectando un cable USB de 5V. Esto lo convierte en una excelente herramienta para proyectos al aire libre y aplicaciones remotas.
+Además, puede alimentar su proyecto con un Power Pack. Si el Power Pack se agota, puede cargarlo convenientemente simplemente conectando un cable USB de 5V. Esto lo convierte en una excelente herramienta para proyectos al aire libre y aplicaciones remotas.
 
 .. image:: img/esp32_camera_extension.jpg
     :width: 600
@@ -124,13 +124,13 @@ Introducción de la Interfaz
     :align: center
 
 * **Interruptor de Encendido**
-    * Controla el suministro de energía de la batería, alternándolo entre encendido y apagado.
+    * Controla el suministro de energía del Power Pack, alternándolo entre encendido y apagado.
 
 * **Puerto de Carga**
-    * Al conectar un cable USB de 5V, la batería puede cargarse.
+    * Al conectar un cable USB de 5V, el Power Pack puede cargarse.
 
-* **Puerto de Batería**
-    * Cuenta con una interfaz PH2.0-2P, compatible con baterías de litio 18650 de 3.7V.
+* **Puerto Power Pack**
+    * Cuenta con una interfaz PH2.0-2P, compatible con Power Pack.
     * Proporciona energía tanto al ESP32 placa como a la Extensión de Cámara ESP32.
 
 * **Cabeceras de Pines ESP32**
@@ -141,8 +141,8 @@ Introducción de la Interfaz
     * **Terminal de Tornillo**: Terminal de tornillo de 14 pines con paso de 3.5mm, asegurando conexiones de cable estables y haciéndolo adecuado para proyectos de IoT.
 
 * **Luces Indicadoras**
-    * **PWR**: Se enciende cuando la batería está alimentada o cuando se conecta un USB directamente al ESP32.
-    * **CHG**: Se ilumina al conectar un USB al puerto de carga de la placa, indicando el inicio de la carga. Se apagará una vez que la batería esté completamente cargada.
+    * **PWR**: Se enciende cuando el Power Pack está alimentado o cuando se conecta un USB directamente al ESP32.
+    * **CHG**: Se ilumina al conectar un USB al puerto de carga de la placa, indicando el inicio de la carga. Se apagará una vez que el Power Pack esté completamente cargado.
 
 * **Conector Micro SD**
     * Ranura de resorte para la inserción y eyección fácil de la tarjeta Micro SD.
@@ -208,17 +208,17 @@ Guía de Inserción de la Interfaz
             Su navegador no admite la etiqueta de video.
         </video>
 
-**Alimentación de la Batería y Carga**
+.. **Alimentación del Power Pack y Carga**
 
-    Inserte cuidadosamente el cable de la batería en el puerto de la batería, evitando aplicar demasiada fuerza para evitar empujar hacia arriba el terminal de la batería. Si el terminal se empuja hacia arriba, está bien siempre y cuando los pines no estén rotos; simplemente puede presionarlo nuevamente hacia abajo.
+..     Inserte cuidadosamente el cable del Power Pack en el puerto del Power Pack, evitando aplicar demasiada fuerza para evitar empujar hacia arriba el terminal de la batería. Si el terminal se empuja hacia arriba, está bien siempre y cuando los pines no estén rotos; simplemente puede presionarlo nuevamente hacia abajo.
 
-    .. image:: ../img/plugin_battery.png
-        :width: 600
-        :align: center
+..     .. image:: ../img/plugin_battery.png
+..         :width: 600
+..         :align: center
 
-    Si la batería se agota, conecte un cable USB de 5V para cargarla.
+..     Si el Power Pack se agota, conecte un cable USB de 5V para cargarlo.
 
-    .. image:: ../img/battery_charge.png
-        :width: 600
-        :align: center
+..     .. image:: ../img/battery_charge.png
+..         :width: 600
+..         :align: center
 

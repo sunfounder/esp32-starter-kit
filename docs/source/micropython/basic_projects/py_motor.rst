@@ -80,7 +80,7 @@ Aquí hay una lista de pines disponibles en la placa ESP32 para este proyecto.
 
 .. note:: 
 
-    Dado que el motor requiere una corriente relativamente alta, es necesario primero insertar la batería y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de batería. 
+    Dado que el motor requiere una corriente relativamente alta, es necesario primero insertar el Power Pack y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de energía. 
 
 .. image:: ../../img/wiring/4.1_motor_l293d_bb.png
 

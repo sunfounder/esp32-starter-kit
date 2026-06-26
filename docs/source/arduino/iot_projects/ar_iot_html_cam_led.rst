@@ -118,6 +118,6 @@ También puedes comprarlos por separado en los siguientes enlaces.
 
     .. image:: img/sp230510_180503.png 
 
-#. Inserta una batería en la placa de expansión y retira el cable USB. Ahora puedes colocar el dispositivo en cualquier lugar que desees dentro del alcance del Wi-Fi.
+#. Inserta un Power Pack en la placa de expansión y retira el cable USB. Ahora puedes colocar el dispositivo en cualquier lugar que desees dentro del alcance del Wi-Fi.
 
     .. image:: ../../img/plugin_battery.png

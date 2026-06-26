@@ -22,7 +22,7 @@ Aprende a medir la temperatura con precisión utilizando un termistor NTC con un
 * **Configuración del Cableado**: Aprende la configuración adecuada del cableado para conectar el termistor NTC y otros componentes al ESP32.
 * **Cálculo de la Temperatura**: Descubre la fórmula utilizada para calcular la temperatura a partir de la resistencia medida por el termistor NTC.
 * **Pantalla LCD**: Conecta una pantalla LCD al ESP32 para visualizar los valores de temperatura en Celsius y Fahrenheit.
-* **Módulo de Extensión SunFounder**: Utiliza el módulo de extensión de cámara ESP32 de SunFounder para una operación independiente, con batería y cargador integrados.
+* **Módulo de Extensión SunFounder**: Utiliza el módulo de extensión de cámara ESP32 de SunFounder para una operación independiente, con Power Pack y cargador integrados.
 
 **Video**
 

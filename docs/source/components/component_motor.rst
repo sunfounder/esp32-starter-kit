@@ -39,10 +39,10 @@ La clave para generar movimiento es posicionar el inducido dentro del campo magn
 .. image:: img/motor_sche.png
     :align: center
 
-La corriente fluye desde el terminal positivo de la batería a través del circuito, pasando por los cepillos de cobre hasta el conmutador, y luego al inducido.
+La corriente fluye desde el terminal positivo del Power Pack a través del circuito, pasando por los cepillos de cobre hasta el conmutador, y luego al inducido.
 Pero debido a las dos brechas en el conmutador, este flujo se invierte a mitad de cada rotación completa.
 
-Esta inversión continua básicamente convierte la energía eléctrica de corriente continua de la batería en corriente alterna, permitiendo que el inducido experimente un par de torsión en la dirección correcta en el momento adecuado para mantener la rotación.
+Esta inversión continua básicamente convierte la energía eléctrica de corriente continua del Power Pack en corriente alterna, permitiendo que el inducido experimente un par de torsión en la dirección correcta en el momento adecuado para mantener la rotación.
 
 .. image:: img/motor_rotate.gif
     :align: center

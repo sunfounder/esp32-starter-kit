@@ -88,7 +88,7 @@ IO32 tiene una resistencia de pull-down interna de 1K, y por defecto, está a un
 
 .. note::
 
-    Aquí se recomienda insertar la batería y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de la batería.
+    Aquí se recomienda insertar el Power Pack y luego deslizar el interruptor en la placa de expansión a la posición ON para activar el suministro de energía.
 
 .. image:: ../../img/wiring/6.8_plant_monitor_l293d_bb.png
     :width: 800

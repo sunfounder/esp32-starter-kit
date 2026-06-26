@@ -19,7 +19,7 @@ Aprende a dominar los principios de la mezcla de colores RGB y aprovecha el pode
 
 * **Mezcla de colores RGB**: Entiende cómo crear cualquier color utilizando combinaciones de rojo, verde y azul (RGB) con una demostración práctica usando un selector de colores RGB.
 * **Aplicaciones de IoT con ESP32**: Explora la versatilidad del microcontrolador ESP32 para proyectos de IoT, enfocándote en el control de tiras LED a través de Wi-Fi.
-* **Módulo de extensión de cámara SunFounder ESP32**: Descubre las características del módulo de extensión de cámara SunFounder ESP32, incluyendo batería incorporada y cargador para facilitar la alimentación.
+* **Módulo de extensión de cámara SunFounder ESP32**: Descubre las características del módulo de extensión de cámara SunFounder ESP32, incluyendo Power Pack incorporado y cargador para facilitar la alimentación.
 * **Explicación del cableado y código**: Profundiza en la configuración del cableado y la estructura del código para controlar tiras LED con explicaciones detalladas sobre la instalación de bibliotecas, selección de colores, configuración de Wi-Fi y manejo de solicitudes de clientes.
 * **Selección de la placa y el puerto ESP32**: Guía paso a paso sobre la selección de la placa y el puerto ESP32 en el IDE de Arduino, junto con consejos para solucionar problemas e identificar el puerto correcto.
 * **Demostración práctica**: Observa una demostración práctica de la selección de colores y el control de tiras LED utilizando el microcontrolador ESP32 a través de una interfaz web en varios dispositivos como ordenadores de escritorio, teléfonos móviles y tabletas.
