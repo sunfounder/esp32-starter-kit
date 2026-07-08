@@ -83,6 +83,8 @@ You can also buy them separately from the links below.
 
         <iframe src="https://app.arduino.cc/sketches/a69c31b8-3990-4f87-8bef-e7ba7c263dd5?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+
+
 #. Locate the following lines and modify them with your ``SSID`` and ``PASSWORD``.
 
     .. code-block::  Arduino
