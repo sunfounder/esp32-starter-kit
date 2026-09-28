@@ -52,14 +52,14 @@ CH340ドライバのインストール方法
 
 CH340チップはWCH社によって製造されています。以下に、公式WCHサイトからダウンロードできる各OS向けドライバのリンクを示します：
 
-* `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ -- バージョン3.4（2024-10-16）
-* `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ -- 実行形式のインストーラ
-* `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ -- バージョン1.5（2025-02-26）
-* `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ -- バージョン1.5（2024-10-24）
+* `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ -- バージョン4.0（2026-06-26）
+* `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ -- 実行形式のインストーラ
+* `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ -- バージョン2.1（2026-08-31）
+* `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ -- バージョン1.8（2024-10-24）
 
 また、最新バージョンはWCHの中国語公式サイトからも確認できます：
 
-* `WCH Driver Download <https://www.wch.cn/downloads/CH343SER_EXE.html>`_
+* `WCH Driver Download <https://www.wch.cn/downloads/CH341SER_EXE.html>`_
 
 Google Chromeを使用している場合は、ページの翻訳機能を利用することができます。
 
@@ -70,8 +70,8 @@ Windows 7/11
 
 #. ドライバをダウンロードします。
 
-   * `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_
-   * `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_
+   * `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_
+   * `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_
 
 #. ``.exe`` ファイルをダブルクリックします。ZIP版を使用する場合は、まず解凍してから ``.exe`` を実行します。
 
@@ -92,7 +92,7 @@ macOS
 
 #. ドライバパッケージをダウンロード・解凍します。
 
-   * `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_
+   * `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_
 
 #. フォルダ内の ``.pkg`` ファイルをダブルクリックしてインストールを開始します。
 
@@ -131,7 +131,7 @@ Linux
 
 #. 手動でLinux用ドライバをインストールする場合は、以下からダウンロードしてください：
 
-   * `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_
+   * `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_
 
 #. ESP32ボードを再接続し、次のコマンドをターミナルで実行します：
 
