@@ -52,14 +52,14 @@ Controladores
 
 El chip CH340 es de WCH. Aquí tienes los enlaces oficiales desde su web:
 
-* `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ – controlador v3.4 (16‑10‑2024)  
-* `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ – instalador ejecutable  
-* `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ – controlador v1.5 (26‑02‑2025)  
-* `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ – controlador v1.5 (24‑10‑2024)
+* `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ – controlador v4.0 (26‑06‑2026)  
+* `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ – instalador ejecutable  
+* `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ – controlador v2.1 (31‑08‑2026)  
+* `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ – controlador v1.8 (24‑10‑2024)
 
 También puedes visitar la web oficial de WCH para descargar la versión más reciente. Actualmente está disponible en esta página en chino:
 
-* `Descarga de controladores WCH <https://www.wch.cn/downloads/CH343SER_EXE.html>`_
+* `Descarga de controladores WCH <https://www.wch.cn/downloads/CH341SER_EXE.html>`_
 
 Si usas Chrome, puedes traducir automáticamente la página.
 
@@ -70,8 +70,8 @@ Windows 7/11
 
 #. Descarga el controlador:
 
-   * `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ – v3.4 (16‑10‑2024)  
-   * `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ – instalador
+   * `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ – v4.0 (26‑06‑2026)  
+   * `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ – instalador
 
 #. Haz doble clic en el archivo ``.exe``. Si descargaste el ZIP, extráelo y ejecuta el ``.exe`` dentro.
 
@@ -92,7 +92,7 @@ macOS
 
 #. Descarga y descomprime el paquete:
 
-   * `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ – v1.5 (26‑02‑2025)
+   * `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ – v2.1 (31‑08‑2026)
 
 #. Abre la carpeta y haz doble clic en el archivo ``.pkg`` para iniciar la instalación.
 
@@ -132,7 +132,7 @@ Linux
 
 #. Para instalar manualmente, descarga:
 
-   * `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ – v1.5 (24‑10‑2024)
+   * `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ – v1.8 (24‑10‑2024)
 
 #. Vuelve a conectar y ejecuta:
 
