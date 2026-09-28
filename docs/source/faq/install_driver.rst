@@ -52,14 +52,14 @@ Pilotes
 
 La puce CH340 est fabriquée par WCH. Voici les liens vers les pilotes officiels disponibles sur leur site :
 
-* `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ – pilote v3.4 (16/10/2024)  
-* `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ – installateur exécutable  
-* `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ – pilote v1.5 (26/02/2025)  
-* `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ – pilote v1.5 (24/10/2024)
+* `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ – pilote v4.0 (26/06/2026)  
+* `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ – installateur exécutable  
+* `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ – pilote v2.1 (31/08/2026)  
+* `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ – pilote v1.8 (24/10/2024)
 
 Vous pouvez également visiter le site officiel de WCH pour télécharger la dernière version. Au moment de la rédaction, elle est accessible sur cette page en chinois :
 
-* `Téléchargement pilote WCH <https://www.wch.cn/downloads/CH343SER_EXE.html>`_
+* `Téléchargement pilote WCH <https://www.wch.cn/downloads/CH341SER_EXE.html>`_
 
 Si vous utilisez Chrome, vous pouvez demander la traduction automatique de la page.
 
@@ -70,8 +70,8 @@ Windows 7/11
 
 #. Téléchargez le pilote :
 
-   * `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ – v3.4 (16/10/2024)  
-   * `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ – installateur
+   * `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ – v4.0 (26/06/2026)  
+   * `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ – installateur
 
 #. Double-cliquez sur le fichier ``.exe``. Si vous avez téléchargé l’archive ZIP, décompressez-la d’abord, puis exécutez l’``.exe``.
 
@@ -92,7 +92,7 @@ macOS
 
 #. Téléchargez et décompressez le paquet :
 
-   * `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ – v1.5 (26/02/2025)
+   * `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ – v2.1 (31/08/2026)
 
 #. Ouvrez le dossier extrait et double-cliquez sur le fichier ``.pkg`` pour lancer l’installation.
 
@@ -132,7 +132,7 @@ Linux
 
 #. Pour une installation manuelle, téléchargez :
 
-   * `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ – v1.5 (24/10/2024)
+   * `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ – v1.8 (24/10/2024)
 
 #. Rebranchez votre ESP32 et exécutez :
 
