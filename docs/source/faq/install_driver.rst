@@ -52,14 +52,14 @@ Drivers
 
 The CH340 chip is manufactured by WCH. Below are links to drivers for various systems from the official WCH website:
 
-* `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ -- Driver v3.4 (2024-10-16)
-* `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ -- Executable installer
-* `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ -- Driver v1.5 (2025-02-26)
-* `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ -- Driver v1.5 (2024-10-24)
+* `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ -- Driver v4.0 (2026-06-26)
+* `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ -- Executable installer
+* `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ -- Driver v2.1 (2026-08-31)
+* `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ -- Driver v1.8 (2024-10-24)
 
 You can also visit the WCH official website to download the latest drivers. As of this writing, the newest version can be found on their Chinese-language page: 
 
-* `WCH Driver Download <https://www.wch.cn/downloads/CH343SER_EXE.html>`_
+* `WCH Driver Download <https://www.wch.cn/downloads/CH341SER_EXE.html>`_
 
 If you're using Google Chrome, you can choose to translate the webpage automatically.
 
@@ -70,8 +70,8 @@ Windows 7/11
 
 #. Download the driver.
 
-   * `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ -- Driver v3.4 (2024-10-16)
-   * `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ -- Executable installer
+   * `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ -- Driver v4.0 (2026-06-26)
+   * `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ -- Executable installer
 
 #. Double-click the ``.exe`` file. If you downloaded the ``.zip`` version, extract it first and then double-click the ``.exe`` inside.
 
@@ -92,7 +92,7 @@ macOS
 
 #. Download and extract the driver package.
 
-   * `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ -- Driver v1.5 (2025-02-26)
+   * `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ -- Driver v2.1 (2026-08-31)
 
 #. Open the extracted folder and double-click the ``.pkg`` file. Follow the prompts to install.
 
@@ -130,7 +130,7 @@ Linux
 
 #. Alternatively, download and install the Linux CH340 driver manually:
 
-   * `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ -- Driver v1.5 (2024-10-24)
+   * `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ -- Driver v1.8 (2024-10-24)
 
 #. Reconnect the ESP32 board to a USB port. Then run the following in your terminal:
 
