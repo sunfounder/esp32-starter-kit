@@ -52,14 +52,14 @@ Pilotes
 
 La puce CH340 est fabriquée par WCH. Voici des liens vers les pilotes pour différents systèmes, depuis le site officiel de WCH :
 
-* `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ -- Pilote v3.4 (2024-10-16)
-* `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ -- Installateur exécutable
-* `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ -- Pilote v1.5 (2025-02-26)
-* `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ -- Pilote v1.5 (2024-10-24)
+* `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ -- Pilote v4.0 (2026-06-26)
+* `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ -- Installateur exécutable
+* `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ -- Pilote v2.1 (2026-08-31)
+* `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ -- Pilote v1.8 (2024-10-24)
 
 Vous pouvez également visiter le site officiel WCH pour télécharger les derniers pilotes. À l’heure actuelle, la dernière version est disponible sur leur page en chinois :
 
-* `Téléchargement des pilotes WCH <https://www.wch.cn/downloads/CH343SER_EXE.html>`_
+* `Téléchargement des pilotes WCH <https://www.wch.cn/downloads/CH341SER_EXE.html>`_
 
 Si vous utilisez Google Chrome, vous pouvez activer la traduction automatique de la page.
 
@@ -70,8 +70,8 @@ Windows 7/11
 
 #. Téléchargez le pilote.
 
-   * `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ -- Pilote v3.4 (2024-10-16)
-   * `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ -- Installateur exécutable
+   * `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ -- Pilote v4.0 (2026-06-26)
+   * `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ -- Installateur exécutable
 
 #. Double-cliquez sur le fichier ``.exe``. Si vous avez téléchargé la version ``.zip``, extrayez-la d’abord puis double-cliquez sur le ``.exe`` à l’intérieur.
 
@@ -92,7 +92,7 @@ macOS
 
 #. Téléchargez et extrayez le paquet du pilote.
 
-   * `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ -- Pilote v1.5 (2025-02-26)
+   * `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ -- Pilote v2.1 (2026-08-31)
 
 #. Ouvrez le dossier extrait et double-cliquez sur le fichier ``.pkg``. Suivez les instructions pour installer.
 
@@ -129,7 +129,7 @@ Linux
 
 #. Vous pouvez aussi télécharger et installer manuellement le pilote CH340 pour Linux :
 
-   * `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ -- Pilote v1.5 (2024-10-24)
+   * `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ -- Pilote v1.8 (2024-10-24)
 
 #. Reconnectez la carte ESP32 à un port USB. Ensuite, exécutez cette commande dans votre terminal :
 
