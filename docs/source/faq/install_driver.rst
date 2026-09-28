@@ -52,14 +52,14 @@ Treiber
 
 Der CH340-Chip stammt von WCH. Unten finden Sie die offiziellen Treiberlinks für verschiedene Systeme von der WCH-Website:
 
-* `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ – Treiber v3.4 (16.10.2024)  
-* `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ – ausführbare Installationsdatei  
-* `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ – Treiber v1.5 (26.02.2025)  
-* `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ – Treiber v1.5 (24.10.2024)
+* `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ – Treiber v4.0 (26.06.2026)  
+* `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ – ausführbare Installationsdatei  
+* `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ – Treiber v2.1 (31.08.2026)  
+* `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ – Treiber v1.8 (24.10.2024)
 
 Besuchen Sie auch die WCH-Website, um die aktuellsten Treiber herunterzuladen. Zum Zeitpunkt der Erstellung finden Sie die neueste Version auf ihrer chinesischsprachigen Seite:
 
-* `WCH Treiber-Download <https://www.wch.cn/downloads/CH343SER_EXE.html>`_
+* `WCH Treiber-Download <https://www.wch.cn/downloads/CH341SER_EXE.html>`_
 
 Wenn Sie Google Chrome nutzen, können Sie die Seite automatisch übersetzen lassen.
 
@@ -70,8 +70,8 @@ Windows 7/11
 
 #. Laden Sie den Treiber herunter:
 
-   * `Windows (ZIP) <https://www.wch.cn/download/file?id=5>`_ – Treiber v3.4 (16.10.2024)  
-   * `Windows (EXE) <https://www.wch.cn/download/file?id=65>`_ – ausführbare Installationsdatei
+   * `Windows (ZIP) <https://www.wch.cn/downloads/CH341SER_ZIP.html>`_ – Treiber v4.0 (26.06.2026)  
+   * `Windows (EXE) <https://www.wch.cn/downloads/CH341SER_EXE.html>`_ – ausführbare Installationsdatei
 
 #. Doppelklicken Sie auf die ``.exe``-Datei. Wenn Sie die ZIP-Version heruntergeladen haben, entpacken Sie sie zuerst und führen dann die ``.exe`` im Inneren aus.
 
@@ -92,7 +92,7 @@ macOS
 
 #. Laden Sie das Treiberpaket herunter und entpacken Sie es:
 
-   * `Mac (ZIP) <https://www.wch.cn/download/file?id=178>`_ – Treiber v1.5 (26.02.2025)
+   * `Mac (ZIP) <https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html>`_ – Treiber v2.1 (31.08.2026)
 
 #. Öffnen Sie den entpackten Ordner und doppelklicken Sie auf die ``.pkg``-Datei. Folgen Sie den Anweisungen zur Installation.
 
@@ -133,7 +133,7 @@ Linux
 
 #. Alternativ können Sie den Linux-Treiber manuell installieren:
 
-   * `Linux (ZIP) <https://www.wch.cn/download/file?id=177>`_ – Treiber v1.5 (24.10.2024)
+   * `Linux (ZIP) <https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html>`_ – Treiber v1.8 (24.10.2024)
 
 #. Schließen Sie das ESP32-Platine erneut an und führen Sie im Terminal aus:
 
